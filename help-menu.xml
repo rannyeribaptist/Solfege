@@ -1,0 +1,20 @@
+<ui>
+ <menubar name='Menubar'>
+    <menu action='HelpMenu'>
+      <menuitem action='HelpIndex' />
+      <placeholder name='PerExerciseHelp' />
+      <menuitem action='HelpShowPathInfo' />
+      <menu action='TheoryMenu'>
+        <menuitem action='TheoryIntervals' />
+      </menu>
+      <menuitem action='SetupPyAlsa'/>
+      <separator />
+      <menuitem action='HelpDonate' />
+      <separator />
+      <menuitem action='HelpOnline' />
+      <menuitem action='HelpReportingBugs' />
+      <menuitem action='ShowBugReports' />
+      <menuitem action='HelpAbout' />
+    </menu>
+  </menubar>
+</ui>

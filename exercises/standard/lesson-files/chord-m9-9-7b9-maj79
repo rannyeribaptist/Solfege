@@ -1,0 +1,18 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "959e40fc-9ac1-4430-a186-9724f48d4006"
+    module = idbyname
+    help = "idbyname-chords"
+    have_music_displayer = yes
+    fillnum = 2
+        random_transpose = accidentals, -5, 5
+        title = _("Chords with 9 in their name")
+        lesson_heading = _("Identify the chord")
+        test = "3x"
+        test_requirement = "90%"
+}
+include("chord-m9-9")
+include("chord-7b9-maj79")

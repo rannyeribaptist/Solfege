@@ -1,0 +1,36 @@
+<sect1 id='rhythm'>
+<title>Rhythm</title>
+<informalfigure id="rhythm-screen1">
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/rhythm.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the program running the chord exercise.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+
+<para>The program play a randomly generated rhythm, and the user should
+reproduce the rhythm. The user enters the rhythm by clicking on buttons
+representing different rhythmic elements.</para>
+
+<para>When you have entered enough rhythm elements, Solfege will check your
+answer. If everything is correct it will display a happy face, otherwise
+a sad face, and all wrong rhythms will be marked.</para>
+
+<para>If some of your answer was wrong, everything from the first wrong
+element will be removed (preserving any correct rhythms in the beginning
+of your answer) when you click on the sad face, or when you click on the
+rhythm buttons on top of the page.</para>
+
+<para>You can click the 'Play' button to hear your suggestion.</para>
+
+<para>The questions made by this exercise are at the moment made by
+selecting rhythm elements randomly. This is not the best way to do it, and
+we hope a more clever way of generating questions will be made in a later
+release.</para>
+
+</sect1>

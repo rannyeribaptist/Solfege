@@ -1,0 +1,74 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "43fae488-3291-47c7-8ef7-dfc46544a0d8"
+    module = idproperty
+    flavour = "chord"
+    random_transpose = accidentals, -5, 5
+    title = _("Minor/major in close and open position")
+}
+question {
+ name = _("minor")
+ toptone = 5
+ inversion = 0
+ chord("c' es' g'")
+}
+question {
+ name = _("minor")
+ toptone = 3
+ inversion = 0
+ chord("c' g' es''")
+}
+question {
+ name = _("minor")
+ toptone = 1 
+ inversion = 1 
+ chord("es' g' c''")
+}
+question {
+ name = _("minor")
+ toptone = 5 
+ inversion = 1 
+ chord("es c' g'")
+}
+question {
+ name = _("minor")
+ toptone = 1
+ inversion = 2 
+ chord("g es' c''")
+}
+
+
+
+question {
+ name = _("major")
+ toptone = 5
+ inversion = 0
+ chord("c' e' g'")
+}
+question {
+ name = _("major")
+ toptone = 3
+ inversion = 0
+ chord("c' g' e''")
+}
+question {
+ name = _("major")
+ toptone = 1 
+ inversion = 1 
+ chord("e' g' c''")
+}
+question {
+ name = _("major")
+ toptone = 5 
+ inversion = 1 
+ chord("e c' g'")
+}
+question {
+ name = _("major")
+ toptone = 1
+ inversion = 2 
+ chord("g e' c''")
+}

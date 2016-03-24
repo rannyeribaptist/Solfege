@@ -1,0 +1,18 @@
+
+# Solfege - ear training for GNOME
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "bb458606-d905-402e-9ae2-907df222d041"
+    module = idproperty
+    random_transpose = accidentals, -5, 5
+    title = "idproperty - score right of buttons"
+    layout_orientation = vertic
+    qprops = "name", "inversion"
+    qprop_labels = "Name", "Inversion"
+}
+question { name=_("major") inversion=0 rvoice("c' e g") }
+question { name=_("minor") inversion=1 chord("e' g' c''") }
+
+

@@ -1,0 +1,37 @@
+# Solfege - ear training for GNOME
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "c54bcd09-a77f-473a-9a9e-e152ae165e45"
+  module = idbyname
+  random_transpose = no
+  title = "rvoice"
+  description = """
+  Use this file to check that entering music with rvoice get the
+  correct octave."""
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+}
+tempo = 240/4
+
+question {
+ name = "The notes c' d' e' f' g'"
+ music = music("c'4 d e f g", rvoice)
+}
+question {
+ name = "The notes c'' d'' e'' f'' g''"
+ music = music("c''4 d e f g", rvoice)
+}
+question {
+ name = "The notes c d e f g"
+ music = music("\clef bass c d e f g", rvoice)
+}
+question {
+ name = "only a bass clef"
+ music = music("\clef bass", rvoice)
+}
+question {
+ name = "first note is a chord"
+ music = rvoice("<c''4 e,> <d f>")
+}

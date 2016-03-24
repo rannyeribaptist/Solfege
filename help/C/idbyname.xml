@@ -1,0 +1,12 @@
+﻿<sect1 id='idbyname'>
+<title>Answer questions by clicking on buttons</title>
+<para>This page is a generic help page for all exercises written using the
+<literal>idbyname</literal> exercise module. Exercises will typically
+write more specialized help text than this.</para>
+
+<para>
+ Click on the button representing the answer of the question played
+ or displayed. Exercises will often display a heading telling the
+ purpose of the exercise.
+</para>
+</sect1>

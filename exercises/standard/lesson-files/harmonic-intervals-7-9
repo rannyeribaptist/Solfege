@@ -1,0 +1,14 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+
+header {
+    module=harmonicinterval
+    intervals=10, 11, 13, 14
+    title = _("Sevenths and ninths")
+    theory = "theory-intervals"
+    lesson_id = "45215ce6-0dbd-46cc-9c9c-abcc195f5584"
+    test = "3x"
+    test_requirement = "90%"
+}

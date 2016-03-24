@@ -1,0 +1,4384 @@
+# Rranslation of Solfege to Hungarian.
+# This file is distributed under the same license as the Solfege package.
+# Szabó Zoltán <szz@freemail.hu>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Solfege\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-04-05 23:43+0200\n"
+"PO-Revision-Date: 2006-01-21 18:38+0100\n"
+"Last-Translator: Szabó Zoltán <szz@freemail.hu>\n"
+"Language-Team: Hungarian <translation-team-hu@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.10.2\n"
+"Plural-Forms:  nplurals=1; plural=0;\n"
+
+#: src/abstract.py:112
+msgid ""
+"The lessonfile contain potentially dangerous code because it run external "
+"programs. Run anyway?"
+msgstr ""
+"A leckefájl használata jelenthet némi veszélyt, mert külsõ program futtatja. "
+"Indítsuk mégis? "
+
+#: src/abstract.py:372 src/configwindow.py:232 src/configwindow.py:234
+#: src/mainwin.py:747
+msgid "Practise"
+msgstr "Gyakorlatot "
+
+#: src/abstract.py:373
+msgid "Config"
+msgstr "Konfiguráció"
+
+#: src/abstract.py:375
+msgid "_Cancel test"
+msgstr "Feladatlap megoldásának törlése "
+
+#: src/abstract.py:387
+#, python-format
+msgid ""
+"Test completed!\n"
+"Your score was %(score).1f%%.\n"
+"The test requirement was %(requirement).1f%%."
+msgstr ""
+"A feladatlap megoldva!\n"
+"Ennyi pontot ért el: %(score).1f%%.\n"
+"A feladatlap követelménye ez volt: %(requirement).1f%%."
+
+#: src/abstract.py:390
+#, python-format
+msgid ""
+"Test failed.\n"
+"Your score was %(score).1f%%.\n"
+"The test requirement was %(requirement).1f%%."
+msgstr ""
+"A feladatlapot nem sikerült megoldani..\n"
+"Ennyi pontot ért el: %(score).1f%%.\n"
+"A feladatlap követelménye ez volt: %(requirement).1f%%."
+
+#: src/abstract.py:429 src/identifybpm.py:136
+msgid "Statistics"
+msgstr "Statisztika"
+
+#: src/abstract.py:447
+msgid "Delay (seconds):"
+msgstr "Késleltetés (másodperc):"
+
+#: src/abstract.py:453
+msgid "_New question automatically."
+msgstr "Automatikusan új kérdés következzen."
+
+#: src/abstract.py:463
+#, fuzzy, python-format
+msgid ""
+"Please check question number %(idx)i in the lesson file \"%(lf)s\".\n"
+"\n"
+msgstr ""
+"Nem értelmezhezõ a zene a  %(idx)i számú kérdéshez, ebben: '%(lf)s':\n"
+"%(ex)s"
+
+#: src/abstract.py:464 src/abstract.py:482 src/mainwin.py:535
+#, python-format
+msgid ""
+"The exception was caught in\n"
+"\"%(filename)s\", line %(lineno)i."
+msgstr "Kivétel lépett fel ebben %(filename)s:%(lineno)i"
+
+#: src/abstract.py:474
+#, fuzzy, python-format
+msgid ""
+"Failed to parse the music in the variable \"%(varname)s\" in question number "
+"%(idx)i in the lesson file \"%(lf)s\"."
+msgstr ""
+"Nem értelmezhezõ a zene a  %(idx)i számú kérdéshez, ebben: '%(lf)s':\n"
+"%(ex)s"
+
+#: src/abstract.py:479
+#, fuzzy, python-format
+msgid ""
+"Failed to parse the music for question number %(idx)i in the lesson file \"%"
+"(lf)s\"."
+msgstr ""
+"Nem értelmezhezõ a zene a  %(idx)i számú kérdéshez, ebben: '%(lf)s':\n"
+"%(ex)s"
+
+#: src/abstract.py:535
+msgid "Rhythms to use in question"
+msgstr "Ritmusfajták a kérdésekben:"
+
+#: src/abstract.py:544
+msgid "Number of beats in question:"
+msgstr "Ütemek száma a kérdésekben"
+
+#: src/abstract.py:551
+msgid "Count in before question:"
+msgstr "\"Beszámoló\" ütemek száma a kérdésekben:"
+
+#: src/abstract.py:617 src/harmonicinterval.py:363 src/melodicinterval.py:286
+#: src/singinterval.py:96 src/singinterval.py:213
+msgid "_New interval"
+msgstr "Új hangköz"
+
+#: src/abstract.py:619 src/chord.py:167 src/chordvoicing.py:142
+#: src/compareintervals.py:134 src/elembuilder.py:108
+#: src/harmonicprogressiondictation.py:51 src/idbyname.py:108
+#: src/idtone.py:140 src/rhythm.py:199 src/rhythmtapping.py:138
+#: src/singanswer.py:55
+msgid "_Repeat"
+msgstr "Ismétlést kérek"
+
+#: src/abstract.py:629
+msgid "Input interface:"
+msgstr "Bemeneti interfész"
+
+#: src/abstract.py:642
+msgid "_Disable unused buttons"
+msgstr "Nem használt gombok kikapcsolása"
+
+#: src/abstract.py:666 src/inputwidgets.py:639
+msgid "Buttons"
+msgstr "Gombok"
+
+#: src/abstract.py:699 src/lessonfile_editor_main.py:221
+msgid "Random transpose:"
+msgstr "Véletlenszerû transzponálás:"
+
+#: src/abstract.py:707
+msgid "Change ..."
+msgstr "Változtatás..."
+
+#: src/abstract.py:717 src/specialwidgets.py:188
+msgid "Yes"
+msgstr "Igen "
+
+#: src/abstract.py:719 src/specialwidgets.py:185
+msgid "No"
+msgstr "Nem"
+
+#: src/app.py:136
+#, fuzzy
+msgid ""
+"You should configure sound from the 'Sound' page of the preferences window."
+msgstr ""
+"Be kell állítania a számítógépes hangjellemzõket a \"Beállítások\" "
+"menüpontban."
+
+#: src/app.py:158
+msgid "Error loading python module:"
+msgstr "Hiba a python modul betöltésekor:"
+
+#: src/app.py:159
+msgid ""
+"You should configure sound from the preferences window, and try to use an "
+"external midi player. Or try to recompile the program and check for error "
+"messages to see why the module is not built."
+msgstr ""
+
+#: src/app.py:267
+msgid ""
+"You have not selected email program. You can do so in the preferences window."
+msgstr ""
+"Nem választott e-mail programot! Tegye meg ezt a \"Beállítások\" menüpontban."
+
+#: src/app.py:294
+#, fuzzy, python-format
+msgid ""
+"Lessonfile not found:\n"
+"%s"
+msgstr "Lecke fájlneve:"
+
+#: src/app.py:306
+#, python-format
+msgid ""
+"Bad url parameter in link: '%s'.\n"
+"Trying to continue anyway."
+msgstr ""
+"Rossz a megadott URL itt: '%s'.\n"
+"Ennek ellenére folytatjuk..."
+
+#: src/chord.py:140 src/chordvoicing.py:176
+msgid "Chord type"
+msgstr "Akkord típusa"
+
+#: src/chord.py:145
+msgid "Inversion"
+msgstr "Megfordítás"
+
+#: src/chord.py:151
+msgid "Toptone"
+msgstr "Tetõponti hang"
+
+#: src/chord.py:165 src/chordvoicing.py:140
+msgid "_New chord"
+msgstr "Új akkord "
+
+#: src/chord.py:170 src/chordvoicing.py:144 src/idbyname.py:111
+#: src/singanswer.py:58
+msgid "Repeat _arpeggio"
+msgstr "Ismételje bontva"
+
+#: src/chord.py:172 src/chordvoicing.py:145 src/compareintervals.py:137
+#: src/elembuilder.py:114 src/harmonicinterval.py:180
+#: src/harmonicprogressiondictation.py:64 src/idbyname.py:116
+#: src/identifybpm.py:127 src/idtone.py:143 src/melodicinterval.py:91
+#: src/rhythm.py:201 src/rhythmtapping.py:140
+msgid "_Give up"
+msgstr "Szabad a gazda"
+
+#: src/chord.py:182
+msgid "Chord types to ask"
+msgstr "A kérendõ akkordtípusok"
+
+#: src/chord.py:220 src/chord.py:485
+msgid "root position"
+msgstr "alaphelyzet"
+
+#: src/chord.py:222 src/chord.py:487
+#, python-format
+msgid "%i. inversion"
+msgstr "%i. inverzió"
+
+#: src/chord.py:248 lesson-files/altered-1:14 lesson-files/chord-7b9-maj79:13
+#: lesson-files/chord-dim-aug:13 lesson-files/chord-dim-aug-min-major:10
+#: lesson-files/chord-m7-7:13 lesson-files/chord-m7-7-maj7-m7b5-dim7:13
+#: lesson-files/chord-m9-9:13 lesson-files/chord-m9-9-7b9-maj79:13
+#: lesson-files/chord-maj7-m7b5-dim7:13 lesson-files/chord-min-major:13
+#: lesson-files/chord-min-major-7:13
+#, fuzzy
+msgid "Identify the chord"
+msgstr "Azonosítsa az akkord típusát"
+
+#: src/chord.py:279 src/chord.py:343 src/chord.py:410 src/chordvoicing.py:281
+#: src/compareintervals.py:236 src/elembuilder.py:166
+#: src/harmonicinterval.py:251 src/harmonicprogressiondictation.py:90
+#: src/idbyname.py:273 src/idtone.py:229 src/melodicinterval.py:202
+#: src/rhythm.py:143
+msgid "Correct"
+msgstr "Ez igen!"
+
+#: src/chord.py:286 src/chord.py:348 src/chord.py:415 src/chordvoicing.py:269
+#: src/chordvoicing.py:288 src/compareintervals.py:242 src/elembuilder.py:77
+#: src/elembuilder.py:176 src/harmonicinterval.py:256
+#: src/harmonicprogressiondictation.py:95 src/idbyname.py:281
+#: src/identifybpm.py:185 src/idtone.py:236 src/melodicinterval.py:208
+#: src/nameinterval.py:182 src/rhythm.py:131
+msgid "Wrong"
+msgstr "Nem talált."
+
+#: src/chord.py:465 src/chord.py:470 src/chordvoicing.py:230
+#: src/chordvoicing.py:261 src/chordvoicing.py:330
+msgid "Click 'New chord' to begin."
+msgstr "Kattintson az \"új akkord\"-ra a kezdéshez."
+
+#: src/chord.py:501
+#, python-format
+msgid "%(one)s, %(two)s and %(three)s"
+msgstr "%(one)s, %(two)s és %(three)s"
+
+#: src/chord.py:503
+#, python-format
+msgid "%(one)s and %(two)s"
+msgstr "%(one)s és %(two)s"
+
+#: src/chordvoicing.py:112
+msgid "Identify chord type"
+msgstr "Azonosítsa az akkord típusát"
+
+#: src/chordvoicing.py:121
+msgid "Chord voicing"
+msgstr "Akkord éneklése"
+
+#: src/chordvoicing.py:179 src/chordvoicing.py:325 src/compareintervals.py:295
+#: src/compareintervals.py:329 src/harmonicinterval.py:311
+#: src/melodicinterval.py:245 src/rhythm.py:296 src/rhythmtapping.py:174
+msgid "You have to solve this question first."
+msgstr "Elõször ezt a kérdést kell megválaszolnia."
+
+#: src/chordvoicing.py:227 src/idbyname.py:230 src/idbyname.py:338
+msgid "Right click is not allowed for this lesson file."
+msgstr "Ebben a leckében nem megengedett a jobb egérgomb használata."
+
+#: src/chordvoicing.py:233 src/idbyname.py:238 src/idbyname.py:242
+#: src/idbyname.py:339 src/idbyname.py:340
+msgid "You should try to guess before right-clicking."
+msgstr "A jobb egérgombbal való kattintás elõtt választani kell."
+
+#: src/chordvoicing.py:265
+msgid "Correct, now stack the tones"
+msgstr "Helyes, most rakja össze a hangokat"
+
+#: src/chordvoicing.py:271 src/chordvoicing.py:326
+msgid "Type is already solved, now specify voicing."
+msgstr "A típust már eltalálta, most határozza meg a hangzásmódot."
+
+#: src/compareintervals.py:124
+msgid ""
+"F_irst interval\n"
+"is largest"
+msgstr ""
+"Az elsõ hangköz\n"
+"a legnagyobb"
+
+#: src/compareintervals.py:127
+msgid ""
+"The intervals\n"
+"are _equal"
+msgstr ""
+"A hangközök \n"
+"megegyeznek"
+
+#: src/compareintervals.py:130
+msgid ""
+"_Last interval\n"
+"is largest"
+msgstr ""
+"Az utolsó hangköz\n"
+"a legnagyobb"
+
+#: src/compareintervals.py:133 src/elembuilder.py:103
+#: src/harmonicprogressiondictation.py:50 src/idbyname.py:103
+#: src/idbyname.py:389 src/nameinterval.py:134 src/rhythm.py:198
+#: src/rhythmtapping.py:132 src/singanswer.py:54 src/singchord.py:47
+#: src/twelvetone.py:68
+msgid "_New"
+msgstr "Új"
+
+#: src/compareintervals.py:150
+msgid "Harmonic"
+msgstr "Összhangzat "
+
+#: src/compareintervals.py:153
+#, fuzzy
+msgid "Melodic"
+msgstr "Hangközfelbontás felfelé "
+
+#: src/compareintervals.py:160
+msgid "First interval:"
+msgstr "Az elsõ hangköz: "
+
+#: src/compareintervals.py:171
+msgid "Last interval:"
+msgstr "Az utolsó hangköz:"
+
+#: src/compareintervals.py:227 src/harmonicinterval.py:246
+#: src/harmonicprogressiondictation.py:85 src/idbyname.py:268
+#: src/idbyname.py:341 src/idtone.py:224 src/idtone.py:265
+msgid "Correct, but you have already solved this question"
+msgstr "Helyes, de már válaszolt erre a kérdésre"
+
+#: src/compareintervals.py:229 src/harmonicinterval.py:248
+#: src/harmonicprogressiondictation.py:87 src/idbyname.py:270
+#: src/idbyname.py:342 src/idtone.py:226 src/idtone.py:266
+msgid "Wrong, but you have already solved this question"
+msgstr "Rossz válasz, de már megválaszolta ezt a kérdést."
+
+#: src/compareintervals.py:254 src/compareintervals.py:327
+msgid "Last interval is largest"
+msgstr "Az utolsó hangköz a legnagyobb"
+
+#: src/compareintervals.py:256
+msgid "The intervals are equal"
+msgstr "A hangközök megegyeznek"
+
+#: src/compareintervals.py:258 src/compareintervals.py:328
+msgid "First interval is largest"
+msgstr "Az elsõ hangköz a legnagyobb"
+
+#: src/compareintervals.py:259 src/compareintervals.py:327
+#: src/compareintervals.py:328 src/harmonicinterval.py:218 src/idbyname.py:215
+#: src/idtone.py:249 src/melodicinterval.py:129
+#, python-format
+msgid "The answer is: %s"
+msgstr "A helyes válasz: %s"
+
+#: src/compareintervals.py:298 src/compareintervals.py:330
+msgid "You have to configure the exercise properly"
+msgstr "Megfelelõen konfigurálni kell a gyakorlatot"
+
+#: src/compareintervals.py:333 src/elembuilder.py:162 src/elembuilder.py:266
+#: src/idbyname.py:235 src/idbyname.py:263 src/idbyname.py:361
+#: src/nameinterval.py:148 src/nameinterval.py:160 src/nameinterval.py:203
+#: src/nameinterval.py:206 src/rhythm.py:260 src/rhythm.py:338
+#: src/singanswer.py:118 src/singanswer.py:121
+msgid "Click 'New' to begin."
+msgstr "Kattintson az \"Új\"-ra a kezdéshez."
+
+#: src/configwindow.py:51
+msgid "GNU Solfege Preferences"
+msgstr "GNU Szolfézs Beállítások"
+
+#: src/configwindow.py:67
+msgid "Midi stuff"
+msgstr "Midi szólam"
+
+#: src/configwindow.py:69
+msgid "Tempo"
+msgstr "Tempó"
+
+#: src/configwindow.py:75
+msgid "_Default bpm:"
+msgstr "Alapértelmezett bpm:"
+
+#: src/configwindow.py:80
+msgid "A_rpeggio bpm:"
+msgstr "Arpeggio bpm:"
+
+#: src/configwindow.py:83
+msgid "Preferred instrument"
+msgstr "Kiválasztott hangszer"
+
+#: src/configwindow.py:89
+msgid "Chord instruments"
+msgstr "Akkordhangszerek"
+
+#: src/configwindow.py:93
+msgid "Use different instruments for chords and harmonic intervals."
+msgstr ""
+"Használjon más hangszert az akkordokhoz, mint az összhangzó hangközökhöz."
+
+#: src/configwindow.py:96
+#, fuzzy
+msgid "Preferred percussion instruments"
+msgstr "Kiválasztott hangszer"
+
+#: src/configwindow.py:99
+#, fuzzy
+msgid "Count in:"
+msgstr "Szám"
+
+#: src/configwindow.py:103
+#, fuzzy
+msgid "Rhythm:"
+msgstr "Ritmus"
+
+#: src/configwindow.py:110
+msgid "User"
+msgstr "Felhasználó"
+
+#: src/configwindow.py:112
+msgid "User's voice"
+msgstr "A felhasználó hangja"
+
+#: src/configwindow.py:118
+msgid "Highest note user can sing:"
+msgstr "A legmagasabb hang, amit a felhasználó ki tud énekelni:"
+
+#: src/configwindow.py:125
+msgid "Lowest note user can sing:"
+msgstr "A legalacsonyabb hang, amit a felhasználó ki tud énekelni:"
+
+#: src/configwindow.py:135
+msgid "Sex"
+msgstr "Neme"
+
+#: src/configwindow.py:137
+msgid "_Male"
+msgstr "Férfi "
+
+#: src/configwindow.py:140
+msgid "_Female or child"
+msgstr "Nõ vagy gyermek"
+
+#: src/configwindow.py:149
+msgid "Gui"
+msgstr "Felhasználói felület "
+
+#: src/configwindow.py:151 src/configwindow.py:256 src/configwindow.py:346
+msgid "External programs"
+msgstr "Külsõ programok"
+
+#: src/configwindow.py:158
+msgid "_Mail program:"
+msgstr "E-mail program:"
+
+#: src/configwindow.py:169
+msgid "MIDI to WAV convertor:"
+msgstr ""
+
+#: src/configwindow.py:180
+msgid "WAV to MP3 convertor:"
+msgstr ""
+
+#: src/configwindow.py:191
+msgid "WAV to OGG convertor:"
+msgstr ""
+
+#: src/configwindow.py:194
+msgid "Misc"
+msgstr "Vegyes"
+
+#: src/configwindow.py:198
+msgid "_User resizeable main window"
+msgstr "Felhasználó által átméretezhetõ fõablak"
+
+#: src/configwindow.py:202
+msgid "E_xpert mode"
+msgstr "Haladó mód"
+
+#: src/configwindow.py:209
+msgid "Select _language:"
+msgstr ""
+
+#: src/configwindow.py:225
+msgid "You have to restart the program for the language change to take effect."
+msgstr ""
+
+#: src/configwindow.py:237
+msgid "_Not allow new question before the old is solved"
+msgstr "Amíg az elõzõ kérdésre nem adott feleletet, nem lehet új kérdést kérni"
+
+#: src/configwindow.py:240
+msgid "_Repeat question if the answer was wrong"
+msgstr "Ismételje meg a kérdést rossz válasz esetén"
+
+#: src/configwindow.py:254 src/configwindow.py:366
+msgid "Sound setup"
+msgstr "Hangbeállítások"
+
+#: src/configwindow.py:267 src/configwindow.py:281 src/configwindow.py:356
+msgid "Test"
+msgstr "Feladatlap"
+
+#: src/configwindow.py:269
+msgid ".wav file player"
+msgstr ".wav fájl lejátszó "
+
+#: src/configwindow.py:283
+msgid ".midi file player"
+msgstr ".midi fájl lejátszó"
+
+#: src/configwindow.py:291 src/configwindow.py:344
+msgid "Midi setup"
+msgstr "Midi beállítások"
+
+#: src/configwindow.py:294 src/configwindow.py:374
+msgid "_No sound"
+msgstr "Nincs hang"
+
+#: src/configwindow.py:299
+msgid "Use _device"
+msgstr "Használandó eszköz"
+
+#: src/configwindow.py:317
+msgid "_My sound card is Sound Blaster AWE32, AWE64 or pnp32"
+msgstr "A hangkártyám Sound Blaster AWE32, AWE64, vagy pnp32"
+
+#: src/configwindow.py:327 src/configwindow.py:388
+msgid "Use _external midiplayer"
+msgstr "Használjunk külsõ MIDI-lejátszót"
+
+#: src/configwindow.py:339 src/configwindow.py:398
+msgid "_Apply changes and play test sound"
+msgstr "Változtatások alkalmazása és próbahang megszólalatása"
+
+#: src/configwindow.py:368
+msgid ""
+"Solfege has two ways to play midi files. It is recommended to use Windows "
+"multimedia output. An external midiplayer can be useful if your soundcard "
+"lacks a hardware synth, in which case you have to use a program like "
+"timidity to play the music."
+msgstr ""
+"A MIDI fájlok lejátszása kétféle módon történhet. Az ajánlott alternatíva a "
+"Windows multimédia kimenet. A külsõ MIDI-lejátszó akkor lehet hasznos, ha a "
+"hangkártya nem képes hardveres szintetizálásra. Ekkor külsõ program, pl. a "
+"\"timidity\" használható zenelejátszásra."
+
+#: src/configwindow.py:379
+msgid "_Windows multimedia output, synth number:"
+msgstr "_Windows multimédia kimenet, synth szám:"
+
+#: src/const.py:31
+msgid "unison"
+msgstr "Egyszólamú"
+
+#: src/const.py:31 mpd/interval.py:39
+msgid "minor second"
+msgstr "Kis szekund"
+
+#: src/const.py:31 mpd/interval.py:40
+msgid "major second"
+msgstr "Nagy szekund"
+
+#: src/const.py:32 mpd/interval.py:44
+msgid "minor third"
+msgstr "Kis terc "
+
+#: src/const.py:32 mpd/interval.py:45
+msgid "major third"
+msgstr "Nagy terc"
+
+#: src/const.py:32 mpd/interval.py:49
+#, fuzzy
+msgid "perfect fourth"
+msgstr ""
+"Tiszta\n"
+"kvart"
+
+#: src/const.py:33 mpd/interval.py:52
+msgid "diminished fifth"
+msgstr "Szûkített kvint"
+
+#: src/const.py:33 mpd/interval.py:53
+msgid "perfect fifth"
+msgstr "Tiszta kvint"
+
+#: src/const.py:34 mpd/interval.py:57
+msgid "minor sixth"
+msgstr "Kis szext"
+
+#: src/const.py:34 mpd/interval.py:58
+msgid "major sixth"
+msgstr "Nagy szext"
+
+#: src/const.py:35 mpd/interval.py:62
+msgid "minor seventh"
+msgstr "Kis szeptim"
+
+#: src/const.py:35 mpd/interval.py:63
+msgid "major seventh"
+msgstr "Nagy szeptim"
+
+#: src/const.py:36 mpd/interval.py:67
+msgid "perfect octave"
+msgstr "Tiszta oktáv"
+
+#: src/const.py:37
+msgid "minor ninth"
+msgstr "Kis nóna"
+
+#: src/const.py:37
+msgid "major ninth"
+msgstr "Nagy nóna"
+
+#: src/const.py:38
+msgid "minor decim"
+msgstr "Kis decima"
+
+#: src/const.py:38
+msgid "major decim"
+msgstr "Nagy decima"
+
+#: src/const.py:40
+msgid "interval|u"
+msgstr "="
+
+#: src/const.py:41
+msgid "interval|m2"
+msgstr "k2"
+
+#: src/const.py:41
+msgid "interval|M2"
+msgstr "N2"
+
+#: src/const.py:42
+msgid "interval|m3"
+msgstr "k3"
+
+#: src/const.py:42
+msgid "interval|M3"
+msgstr "N3"
+
+#: src/const.py:43
+msgid "interval|4"
+msgstr "4"
+
+#: src/const.py:43
+msgid "interval|d5"
+msgstr "sz5"
+
+#: src/const.py:44
+msgid "interval|5"
+msgstr "5"
+
+#: src/const.py:45
+msgid "interval|m6"
+msgstr "k6"
+
+#: src/const.py:45
+msgid "interval|M6"
+msgstr "N6"
+
+#: src/const.py:46
+msgid "interval|m7"
+msgstr "k7"
+
+#: src/const.py:46
+msgid "interval|M7"
+msgstr "n7"
+
+#: src/const.py:47
+msgid "interval|8"
+msgstr "8"
+
+#: src/const.py:48
+msgid "interval|m9"
+msgstr "k9"
+
+#: src/const.py:48
+msgid "interval|M9"
+msgstr "N9"
+
+#: src/const.py:49
+msgid "interval|m10"
+msgstr "k10"
+
+#: src/const.py:49
+msgid "interval|M10"
+msgstr "N10"
+
+#: src/dataparser.py:153
+#, python-format
+msgid "Unknown name \"%(name)s\" in line %(line)i of file \"%(filename)s\":"
+msgstr ""
+
+#: src/dataparser.py:164
+#, python-format
+msgid "Syntax error in file \"%(filename)s\". %(expected)s"
+msgstr ""
+
+#: src/dataparser.py:171
+#, python-format
+msgid "Assignment to the reserved word \"%(word)s in the file \"%(filename)s\""
+msgstr ""
+
+#: src/dataparser.py:189
+#, python-format
+msgid "Unable to tokenize line %(lineno)i of the file \"%(filename)s\""
+msgstr ""
+
+#: src/dataparser.py:279
+#, python-format
+msgid ""
+"Token \"%(nottoken)s\" not found, found \"%(foundtoken)s\" of type %(type)s."
+msgstr ""
+
+#: src/dictation.py:63
+msgid "_Play the whole music"
+msgstr "A teljes dallam lejátszása"
+
+#: src/dictation.py:65 src/harmonicprogressiondictation.py:62
+#: src/idbyname.py:124
+msgid "_Show"
+msgstr "Megmutat"
+
+#: src/dictation.py:187
+#, python-format
+msgid "The lesson file '%s' contains no questions."
+msgstr "A '%s' lecke nem tartalmaz kérdést."
+
+#: src/elembuilder.py:104 src/idbyname.py:104 src/rhythmtapping.py:134
+msgid "P_lay music"
+msgstr "Zene lejátszása"
+
+#: src/elembuilder.py:106 src/idbyname.py:106 src/rhythmtapping.py:136
+msgid "_Display music"
+msgstr "Kotta megmutatása"
+
+#: src/elembuilder.py:110 src/harmonicprogressiondictation.py:58
+msgid "Guess _answer"
+msgstr "Válasz megadása"
+
+#: src/elembuilder.py:112 src/harmonicprogressiondictation.py:55
+msgid "Play _tonic"
+msgstr "Tonika lejátszása"
+
+#: src/elembuilder.py:116 src/rhythm.py:204
+msgid "_Backspace"
+msgstr "Visszatörlés"
+
+#: src/elembuilder.py:124
+msgid "elembuilder"
+msgstr ""
+
+#: src/elembuilder.py:160 src/harmonicinterval.py:231
+#: src/harmonicinterval.py:336 src/idbyname.py:261 src/idbyname.py:358
+#: src/melodicinterval.py:164 src/melodicinterval.py:261
+msgid "Click 'Start test' to begin."
+msgstr "Kattintson a \"Feladat elkezdésé\"-re a kezdéshez."
+
+#: src/harmonicinterval.py:176
+msgid "Repeat _melodic"
+msgstr "Ismételje a hangközfelbontást"
+
+#: src/harmonicinterval.py:185
+msgid "Ask for these intervals"
+msgstr "Ezeket a hangközöket kérdezze"
+
+#: src/harmonicinterval.py:214 src/harmonicinterval.py:332
+msgid "Harmonic interval"
+msgstr "Együtthangzó hangköz"
+
+#: src/harmonicinterval.py:238 src/melodicinterval.py:183
+msgid "Ignoring intervals greater than decim."
+msgstr "Ne vegyük figyelembe a decimánál nagyobb hangközöket"
+
+#: src/harmonicinterval.py:242 src/harmonicinterval.py:339
+#: src/melodicinterval.py:169 src/melodicinterval.py:264
+msgid "Click 'New interval' to begin."
+msgstr "Kattintson az \"Új hangköz\"-höz a kezdéshez."
+
+#: src/harmonicinterval.py:317
+msgid "You have to select some intervals to practise."
+msgstr "Ki kell választania néhány hangközt a gyakorláshoz."
+
+#: src/harmonicinterval.py:326 src/melodicinterval.py:251
+msgid "Identify the interval"
+msgstr "Hangköz azonosítása"
+
+#: src/harmonicinterval.py:354 src/idbyname.py:380 src/melodicinterval.py:278
+#: src/singinterval.py:206
+msgid "_Start test"
+msgstr "Feladatlap elkezdése"
+
+#: src/harmonicprogressiondictation.py:78
+msgid "Harmonic progression dictation"
+msgstr "Fokozatos összhangzat-diktálás"
+
+#: src/helpbrowser.py:38
+msgid "Close the window"
+msgstr ""
+
+#: src/idbyname.py:113
+msgid "Repeat _slowly"
+msgstr "Lassan ismétel"
+
+#: src/idbyname.py:135
+msgid "Questions to ask"
+msgstr "Szóba jövõ kérdések"
+
+#: src/idbyname.py:148
+msgid "Identify by name"
+msgstr "Név alapján történõ azonosítás"
+
+#: src/idbyname.py:324 src/idbyname.py:343
+msgid "You have to select some questions to practise."
+msgstr "Ki kell választania néhány kérdést a gyakorláshoz."
+
+#: src/identifybpm.py:126
+msgid "_New tempo"
+msgstr "Új tempó"
+
+#: src/identifybpm.py:133
+msgid "Bpm"
+msgstr "Bpm"
+
+#: src/identifybpm.py:158
+#, fuzzy
+msgid "You have to select some tempos to practise."
+msgstr "Ki kell választania néhány hangközt a gyakorláshoz."
+
+#: src/identifybpm.py:177 src/identifybpm.py:188
+msgid "Click 'New tempo' to begin."
+msgstr "Kattintson az \"Új tempó\"-ra a kezdéshez."
+
+#: src/identifybpm.py:180
+#, python-format
+msgid "Correct, it is %i"
+msgstr "Helyes, ez %i"
+
+#: src/idtone.py:115
+msgid ""
+"This exercise is disabled because some required features are missing from "
+"your computer. You should install PyGTK 2.8.0 or newer."
+msgstr ""
+
+#: src/idtone.py:138
+msgid "_New tone"
+msgstr "Új hang"
+
+#: src/idtone.py:155
+msgid "Weight"
+msgstr "Mérték"
+
+#: src/idtone.py:178
+msgid "Octave:"
+msgstr "Oktáv:"
+
+#: src/idtone.py:186
+msgid "When you guess wrong"
+msgstr "Ha rosszat tippel"
+
+#: src/idtone.py:191
+msgid "Play warning sound"
+msgstr "Adjon figyelmeztetõ hangot"
+
+#: src/idtone.py:198 src/idtone.py:287 learningtree.txt:360
+msgid "Identify tone"
+msgstr "Hang azonosítása"
+
+#: src/idtone.py:204
+msgid ""
+"You have to select some tones practise. Do this on the config page by "
+"setting the weight of tones to a value greater than zero."
+msgstr ""
+"Legalább egy hangfajtát ki kell választani a gyakorláshoz. A Beállítások "
+"oldalon tehetõ ez meg, oly módon, hogy a hang mértékét nullánál nagyobbra "
+"állítja."
+
+#: src/idtone.py:216
+#, python-format
+msgid "First tone is %s"
+msgstr "Az elsõ hang a %s"
+
+#: src/idtone.py:220 src/idtone.py:264 src/idtone.py:290
+msgid "Click 'New tone' to begin."
+msgstr "Kattintson az \"Új hang\"-ra a kezdéshez."
+
+#: src/inputwidgets.py:225
+msgid ""
+"Minor\n"
+"second"
+msgstr ""
+"Kis\n"
+"Szekund"
+
+#: src/inputwidgets.py:226
+msgid ""
+"Major\n"
+"second"
+msgstr ""
+"Nagy\n"
+"szekund"
+
+#: src/inputwidgets.py:227
+msgid ""
+"Minor\n"
+"third"
+msgstr ""
+"Kis\n"
+"terc"
+
+#: src/inputwidgets.py:228
+msgid ""
+"Major\n"
+"third"
+msgstr ""
+"Nagy\n"
+"terc"
+
+#: src/inputwidgets.py:229
+msgid ""
+"Perfect\n"
+"fourth"
+msgstr ""
+"Tiszta\n"
+"kvart"
+
+#: src/inputwidgets.py:230
+msgid ""
+"Diminished\n"
+"fifth"
+msgstr ""
+"Szûkített\n"
+"kvint"
+
+#: src/inputwidgets.py:231
+msgid ""
+"Perfect\n"
+"fifth"
+msgstr ""
+"Tiszta\n"
+"kvint"
+
+#: src/inputwidgets.py:232
+msgid ""
+"Minor\n"
+"sixth"
+msgstr ""
+"Kis\n"
+"szext"
+
+#: src/inputwidgets.py:233
+msgid ""
+"Major\n"
+"sixth"
+msgstr ""
+"Nagy\n"
+"szext"
+
+#: src/inputwidgets.py:234
+msgid ""
+"Minor\n"
+"seventh"
+msgstr ""
+"Kis\n"
+"szeptim"
+
+#: src/inputwidgets.py:235
+msgid ""
+"Major\n"
+"seventh"
+msgstr ""
+"Nagy\n"
+"szeptim"
+
+#: src/inputwidgets.py:236
+msgid ""
+"Perfect\n"
+"octave"
+msgstr ""
+"Tiszta\n"
+"oktáv"
+
+#: src/inputwidgets.py:237
+msgid ""
+"Minor\n"
+"ninth"
+msgstr ""
+"Kis\n"
+"nóna"
+
+#: src/inputwidgets.py:238
+msgid ""
+"Major\n"
+"ninth"
+msgstr ""
+"Nagy\n"
+"nóna"
+
+#: src/inputwidgets.py:239
+msgid ""
+"Minor\n"
+"decim"
+msgstr ""
+"Kis\n"
+"decima"
+
+#: src/inputwidgets.py:240
+msgid ""
+"Major\n"
+"decim"
+msgstr ""
+"Nagy\n"
+"decima"
+
+#: src/inputwidgets.py:641 src/inputwidgets.py:647
+msgid "Piano"
+msgstr "Zongora"
+
+#: src/inputwidgets.py:641 src/inputwidgets.py:655
+msgid "Guitar"
+msgstr "Gitár"
+
+#: src/inputwidgets.py:641 src/inputwidgets.py:658
+msgid "Bass"
+msgstr "Basszusgitár"
+
+#: src/inputwidgets.py:642 src/inputwidgets.py:661
+msgid "5 string bass"
+msgstr "Öthúros basszusgitár"
+
+#: src/inputwidgets.py:642 src/inputwidgets.py:665
+msgid "6 string bass"
+msgstr "Hathúros basszusgitár"
+
+#: src/inputwidgets.py:643 src/inputwidgets.py:649
+msgid "Accordion B griff"
+msgstr "Tangóharmonika H griff"
+
+#: src/inputwidgets.py:643 src/inputwidgets.py:651
+msgid "Accordion C griff"
+msgstr "Tangóharmonika C griff"
+
+#: src/inputwidgets.py:644 src/inputwidgets.py:653
+msgid "Accordion (system used in Finland)"
+msgstr "Tangóharmonika (Finn rendszerû)"
+
+#: src/instrumentselector.py:50
+msgid "_Instrument:"
+msgstr "Hangszer:"
+
+#: src/instrumentselector.py:72
+msgid "_Velocity:"
+msgstr "Sebesség:"
+
+#: src/instrumentselector.py:124
+msgid "Velocity:"
+msgstr "Sebesség:"
+
+#: src/instrumentselector.py:184
+msgid "Highest instrument"
+msgstr "Legmagasabb hangszer"
+
+#: src/instrumentselector.py:188
+msgid "Middle instrument"
+msgstr "Középsõ hangszer"
+
+#: src/instrumentselector.py:193
+msgid "Lowest instrument"
+msgstr "Legalacsonyabb hangszer"
+
+#: src/learning_tree_editor.py:429
+msgid "Select lesson file"
+msgstr "Válasszon leckét"
+
+#: src/learning_tree_editor.py:448
+msgid "Used"
+msgstr "Használt"
+
+#: src/learning_tree_editor.py:452 src/learning_tree_editor.py:685
+#: src/trainingsetdlg.py:82
+msgid "Title"
+msgstr "Cím"
+
+#: src/learning_tree_editor.py:456
+msgid "Filename"
+msgstr "Fájlnév"
+
+#: src/learning_tree_editor.py:470
+msgid "Module:"
+msgstr "Modul:"
+
+#: src/learning_tree_editor.py:478 src/learning_tree_editor.py:480
+msgid "Used by topic(s):"
+msgstr "Téma szerint:"
+
+#: src/learning_tree_editor.py:515
+msgid "_Show files used in other topics"
+msgstr "Mutassa a más témákban használt fájlokat"
+
+#: src/learning_tree_editor.py:567
+#, fuzzy
+msgid "Learning tree:"
+msgstr "Tanulófa"
+
+#: src/learning_tree_editor.py:586
+msgid "Default visibility:"
+msgstr "Alapértelmezett láthatóság:"
+
+#: src/learning_tree_editor.py:600
+msgid "New toplevel menu"
+msgstr ""
+
+#: src/learning_tree_editor.py:601
+msgid "New submenu"
+msgstr ""
+
+#: src/learning_tree_editor.py:603
+msgid "Add lesson"
+msgstr "Lecke hozzáadása"
+
+#: src/learning_tree_editor.py:606
+#, fuzzy
+msgid "Delete"
+msgstr "Hang törlése"
+
+#: src/learning_tree_editor.py:609
+msgid "Move topic up"
+msgstr "Téma feljebb"
+
+#: src/learning_tree_editor.py:612
+msgid "Move topic down"
+msgstr "Téma lejjebb "
+
+#: src/learning_tree_editor.py:615
+#, fuzzy
+msgid "Move lesson up"
+msgstr "Téma feljebb"
+
+#: src/learning_tree_editor.py:619
+#, fuzzy
+msgid "Move lesson down"
+msgstr "Téma lejjebb "
+
+#: src/learning_tree_editor.py:640
+msgid "Lesson filename:"
+msgstr "Lecke fájlneve:"
+
+#: src/learning_tree_editor.py:646
+msgid "Exercise module:"
+msgstr "Gyakorlandó modul:"
+
+#: src/learning_tree_editor.py:657
+msgid "New dependency"
+msgstr "Új függõség"
+
+#: src/learning_tree_editor.py:661
+msgid "Delete dependency"
+msgstr "Függõség törlése"
+
+#: src/learning_tree_editor.py:722 src/learning_tree_editor.py:781
+msgid "The file is not saved. Save before changing?"
+msgstr ""
+
+#: src/learning_tree_editor.py:767 src/learning_tree_editor.py:968
+msgid "Menu"
+msgstr ""
+
+#: src/learning_tree_editor.py:769 src/learning_tree_editor.py:1011
+msgid "Submenu"
+msgstr ""
+
+#: src/learning_tree_editor.py:776 src/learning_tree_editor.py:1108
+#, fuzzy
+msgid "Lesson"
+msgstr "Munkamenet"
+
+#: src/learning_tree_editor.py:783 src/learning_tree_editor.py:790
+#, fuzzy
+msgid "Create new learning tree"
+msgstr "Alapértelmezett tanulófa"
+
+#: src/learning_tree_editor.py:797
+msgid "Do not enter any directory names, only the filename."
+msgstr ""
+
+#: src/learning_tree_editor.py:798
+#, fuzzy
+msgid "File name:"
+msgstr "Fájlnév"
+
+#: src/learning_tree_editor.py:810
+msgid "Enter a file name with no directory."
+msgstr ""
+
+#: src/learning_tree_editor.py:813
+msgid "The file already exists."
+msgstr ""
+
+#: src/learning_tree_editor.py:834 src/learning_tree_editor.py:902
+#, python-format
+msgid ""
+"An error occurred while saving the file:\n"
+"%s"
+msgstr ""
+"Az alábbi fájl mentésekor hiba történt:\n"
+"%s"
+
+#: src/learning_tree_editor.py:843
+msgid "Save changes?"
+msgstr "Változások mentése?"
+
+#: src/learning_tree_editor.py:875
+#, python-format
+msgid "Dependencies of the lesson '%s'"
+msgstr "'%s' lecke elõfeltételei"
+
+#: src/learning_tree_editor.py:878
+#, python-format
+msgid "No dependencies for the lesson '%s'."
+msgstr "'%s' leckének nincsenek elõfeltételei."
+
+#: src/learning_tree_editor.py:920 src/lessonfile_editor_main.py:304
+msgid "Save as..."
+msgstr "Mentés másként"
+
+#: src/learning_tree_editor.py:933 src/learning_tree_editor.py:940
+#, fuzzy
+msgid "Create new menu"
+msgstr "Új téma létrehozása"
+
+#: src/learning_tree_editor.py:947
+#, fuzzy
+msgid "Menu name:"
+msgstr "Lecke fájlneve:"
+
+#: src/learning_tree_editor.py:960 src/learning_tree_editor.py:1005
+msgid "The menu name is already used."
+msgstr ""
+
+#: src/learning_tree_editor.py:964 src/learning_tree_editor.py:1002
+msgid "An empty string is not allowed."
+msgstr ""
+
+#: src/learning_tree_editor.py:975
+msgid "New topic"
+msgstr "Új téma"
+
+#: src/learning_tree_editor.py:982
+msgid "Create new topic"
+msgstr "Új téma létrehozása"
+
+#: src/learning_tree_editor.py:989
+msgid "Topic name:"
+msgstr "Téma címe:"
+
+#: src/learning_tree_editor.py:1145
+msgid ""
+"Lessons depend on this lesson. Delete anyway, and update the dependency list "
+"for lessons that depend on this lesson?"
+msgstr ""
+"Van olyan másik lecke, amelynek ez a lecke az elõfeltétele. Mégis töröljük? "
+"(Ez esetben frissítve lesznek az ettõl függõ egyéb leckék függõségi listái.)"
+
+#: src/learning_tree_editor.py:1186
+msgid ""
+"The default learning tree is write protected in your install. This is "
+"normal. If you want to edit a learning tree, you have to select one of the "
+"trees stored in .solfege/learningtrees in your home directory."
+msgstr ""
+
+#: src/lessonfile_editor_main.py:34 src/lessonfile_editor_main.py:97
+msgid "Add noteheads"
+msgstr "Hangjegyek hozzáadása"
+
+#: src/lessonfile_editor_main.py:35
+msgid "Add sharp"
+msgstr "# hozzáadása"
+
+#: src/lessonfile_editor_main.py:36
+msgid "Add double-sharp"
+msgstr "Kettõs # hozzáadása"
+
+#: src/lessonfile_editor_main.py:37 src/lessonfile_editor_main.py:103
+msgid "Remove accidentals"
+msgstr "Módosító jelek törlése"
+
+#: src/lessonfile_editor_main.py:38
+msgid "Add flat"
+msgstr "b (bé) hozzáadása"
+
+#: src/lessonfile_editor_main.py:39
+msgid "Add double-flat"
+msgstr "Kettõs b (bé) hozzáadása"
+
+#: src/lessonfile_editor_main.py:40
+msgid "Delete tone"
+msgstr "Hang törlése"
+
+#: src/lessonfile_editor_main.py:47
+msgid "GNU Solfege lesson file editor"
+msgstr "GNU Szolfézs leckefájl szerkesztõ"
+
+#: src/lessonfile_editor_main.py:75 src/mainwin.py:342
+msgid "_File"
+msgstr "Fájl"
+
+#: src/lessonfile_editor_main.py:81 src/mainwin.py:357
+msgid "_Help"
+msgstr "Súgó"
+
+#: src/lessonfile_editor_main.py:83
+msgid "_About"
+msgstr "Névjegy"
+
+#: src/lessonfile_editor_main.py:87
+msgid "Go to the first question"
+msgstr "Ugrás az elsõ kérdésre"
+
+#: src/lessonfile_editor_main.py:89
+msgid "Go to the previous question"
+msgstr "Ugrás az elõzõ kérdésre"
+
+#: src/lessonfile_editor_main.py:91
+msgid "Go to the next question"
+msgstr "Következõ kérdés"
+
+#: src/lessonfile_editor_main.py:93
+msgid "Go to the last question"
+msgstr "Utolsó kérdés"
+
+#: src/lessonfile_editor_main.py:95
+msgid "Add a new question"
+msgstr "Új kérdés hozzáadása"
+
+#: src/lessonfile_editor_main.py:99
+msgid "Add sharps"
+msgstr "#-ek hozzáadása"
+
+#: src/lessonfile_editor_main.py:101
+msgid "Add double-sharps"
+msgstr "Dupla #-ek hozzáadása"
+
+#: src/lessonfile_editor_main.py:105
+msgid "Add flats"
+msgstr "b-k hozzáadása"
+
+#: src/lessonfile_editor_main.py:107
+msgid "Add double-flats"
+msgstr "Dupla b-k hozzáadása"
+
+#: src/lessonfile_editor_main.py:109
+msgid "Erase tones"
+msgstr "Hangok törlése"
+
+#: src/lessonfile_editor_main.py:188
+msgid "Questions"
+msgstr "Kérdések"
+
+#: src/lessonfile_editor_main.py:189
+msgid "Enter new chords using the mouse"
+msgstr "Az egér segítségével újabb akkordok bevitele"
+
+#: src/lessonfile_editor_main.py:199
+msgid "Question title:"
+msgstr "A kérdés címe:"
+
+#: src/lessonfile_editor_main.py:206
+msgid "Lessonfile header"
+msgstr "A leckefájl fejléce"
+
+#: src/lessonfile_editor_main.py:210
+msgid "File title:"
+msgstr "A fájl neve:"
+
+#: src/lessonfile_editor_main.py:219
+msgid "Content:"
+msgstr "Tartalma:"
+
+#: src/lessonfile_editor_main.py:231
+msgid "You have unsaved data. Proceed anyway?"
+msgstr "Vannak elmentetlen adatok. Folytatja mégis?"
+
+#: src/lessonfile_editor_main.py:250
+msgid "No file"
+msgstr "A fájl nem található"
+
+#: src/lessonfile_editor_main.py:251
+#, python-format
+msgid "question %(idx)i of %(count)i"
+msgstr "%(idx)i-edik kérdés a %(count)i-bol"
+
+#: src/lessonfile_editor_main.py:271
+#, fuzzy, python-format
+msgid "The exercise module '%s' is not supported yet. Cannot edit this file."
+msgstr ""
+"A '%s' leckefájltartalom egyelõre nem támogatott. Nem szerkeszthetõ a fájl."
+
+#: src/lessonfile_editor_main.py:277
+msgid "Open..."
+msgstr "Megnyitás..."
+
+#: src/lessonfile_editor_main.py:290
+#, python-format
+msgid "Loading file '%(filename)s' failed: %(msg)s"
+msgstr "A '%(filename)s' fájl betöltése nem sikerült: %(msg)s"
+
+#: src/lessonfile_editor_main.py:317
+msgid "Save..."
+msgstr "Mentés... "
+
+#: src/lessonfilegui.py:27
+msgid "Resolve lesson_id crash"
+msgstr "A lecke_azonosító (lesson_id) megfejtése nem sikerült"
+
+#: src/lessonfilegui.py:33
+msgid "Lesson_id crash"
+msgstr "A lecke_azonosító (lesson_id) érvénytelen"
+
+#: src/lessonfilegui.py:37
+msgid ""
+"The lesson_id has to be unique for each lesson file. Please select which "
+"lesson file shall keep the current lesson_id. The preselected file is "
+"Solfege's educated guess. Press 'Cancel' to postpone the decision."
+msgstr ""
+"A lecke_azonosítónak (lesson_id-nek) különbözõnek kell lennie minden "
+"leckefájlban. Válassza ki, melyik lecke tartsa meg a jelenlegi azonosítót. "
+"Az elõre kiválasztott fájl a  Szolfézs oktatta találgatás (?). Üssön Törlés-"
+"t, ha nem akar most dönteni."
+
+#: src/lessonfile.py:998
+#, python-format
+msgid ""
+"Question number %(index)i in the lesson file \"%(filename)s\" is missing the "
+"\"question_text\" variable."
+msgstr ""
+
+#: src/lessonfile.py:1142
+msgid ""
+"This page lists all the lesson files that Solfege can find. You can click on "
+"the links to start practising."
+msgstr ""
+"Ez az oldal a Szolfézs által tárolt összes fájlt kiírja. Bármely linkre "
+"rákattinthat a gyakorlás megkezdéséhez."
+
+#: src/mainwin.py:60
+msgid "Show warranty and copyright."
+msgstr ""
+
+#: src/mainwin.py:62
+msgid "Do not show the startup window."
+msgstr ""
+
+#: src/mainwin.py:67
+msgid "Display more info about the sound setup."
+msgstr ""
+
+#: src/mainwin.py:70
+msgid ""
+"Do not play any sounds. Instead some data is printed to standard output. Use "
+"this for debugging and porting."
+msgstr ""
+
+#: src/mainwin.py:72
+msgid "Include features used by the Solfege developers to debug the program."
+msgstr ""
+
+#: src/mainwin.py:75
+msgid "Disable the exception handling in Gui.standard_exception_handler."
+msgstr ""
+
+#: src/mainwin.py:77
+msgid ""
+"For debugging only: Select questions from lesson files in sequential order."
+msgstr ""
+
+#: src/mainwin.py:80
+msgid "Run without using gtkhtml2 even if it is installed."
+msgstr ""
+
+#: src/mainwin.py:83
+msgid ""
+"Do not use the cairo version of input widgets, even if we run gtk+ 2.8.0 or "
+"newer."
+msgstr ""
+
+#: src/mainwin.py:86
+msgid "Show GtkWarnings and PangoWarnings in the traceback window."
+msgstr ""
+
+#: src/mainwin.py:137
+#, python-format
+msgid "Starting GNU Solfege %s"
+msgstr "A GNU Szolfézs indítása; %s"
+
+#: src/mainwin.py:218
+msgid "Close"
+msgstr "Bezár"
+
+#: src/mainwin.py:336
+#, python-format
+msgid "Learning tree '%s' not found. Using default tree."
+msgstr "A '%s' tanulófa nem található. Az alapértelmezett fát használjuk."
+
+#: src/mainwin.py:346 learningtree.txt:401
+msgid "The_ory"
+msgstr "Elmélet"
+
+#: src/mainwin.py:347 learningtree.txt:5
+msgid "_Intervals"
+msgstr "Hangközök"
+
+#: src/mainwin.py:349
+msgid "_Edit"
+msgstr "Szerkesztés"
+
+#: src/mainwin.py:350
+#, fuzzy
+msgid "Edit learning tree"
+msgstr "Tanulófa"
+
+#: src/mainwin.py:352
+msgid "_Tests"
+msgstr "Feladatlapok"
+
+#: src/mainwin.py:353
+msgid "New training set editor window"
+msgstr ""
+
+#: src/mainwin.py:358
+msgid "_Help on the current exercise"
+msgstr "Az aktuális gyakorlat súgója"
+
+#: src/mainwin.py:360
+#, fuzzy
+msgid "_Music theory on the current exercise"
+msgstr "Az aktuális gyakorlat súgója"
+
+#: src/mainwin.py:361
+msgid "_User manual"
+msgstr ""
+
+#: src/mainwin.py:363
+msgid "All installed _lesson files"
+msgstr "Minden telepített leckefájl"
+
+#: src/mainwin.py:365
+msgid "_Mailinglists, web page etc."
+msgstr "Levelezõlisták, weblapok stb."
+
+#: src/mainwin.py:367
+msgid "Reporting _bugs"
+msgstr "Hibajelentés"
+
+#: src/mainwin.py:370
+msgid "See your bug reports"
+msgstr "Saját hibajelentések megtekintése"
+
+#: src/mainwin.py:397 src/mainwin.py:403
+msgid "Learning tree"
+msgstr "Tanulófa"
+
+#: src/mainwin.py:398 src/mainwin.py:404
+msgid "Default learning tree"
+msgstr "Alapértelmezett tanulófa"
+
+#: src/mainwin.py:408
+msgid "Debugging"
+msgstr ""
+
+#: src/mainwin.py:450 src/mainwin.py:451 src/trainingsetdlg.py:215
+#: src/trainingsetdlg.py:220
+msgid "name"
+msgstr "név"
+
+#: src/mainwin.py:460
+#, python-format
+msgid "%s (passed)"
+msgstr "%s (sikerült)"
+
+#: src/mainwin.py:507
+msgid "Question"
+msgstr "Kérdés"
+
+#: src/mainwin.py:514
+msgid "Please enter the email used when you submitted the bugs:"
+msgstr "Adja meg az e-mail címét, ha hibát szeretne bejelenteni:"
+
+#: src/mainwin.py:587
+#, python-format
+msgid ""
+"Failed to parse the music for question number %(idx)i in '%(lf)s':\n"
+"%(ex)s"
+msgstr ""
+"Nem értelmezhezõ a zene a  %(idx)i számú kérdéshez, ebben: '%(lf)s':\n"
+"%(ex)s"
+
+#: src/mainwin.py:590 src/mainwin.py:626
+msgid "SOLFEGETRANSLATORS"
+msgstr "Szabó Zoltán"
+
+#: src/mainwin.py:611
+msgid "(toolbar icons)"
+msgstr "(Az eszköztár ikonjai)"
+
+#: src/mainwin.py:612 src/mainwin.py:613
+msgid "(some lessonfiles)"
+msgstr "(Néhány leckefájl)"
+
+#: src/mainwin.py:614
+msgid "(sound code for the MS Windows port)"
+msgstr "(Az MS Windows port hangkódjai)"
+
+#: src/mainwin.py:615
+msgid "(ported winmidi.c to gcc)"
+msgstr "(winmidi.c portolása gcc-re)"
+
+#: src/mainwin.py:616
+msgid "(spec file for SuSE 8.2)"
+msgstr "(spec fájl SuSE 8.2-höz)"
+
+#: src/mainwin.py:617
+msgid "(spec file cleanup)"
+msgstr "(spec fájl tisztítás)"
+
+#: src/mainwin.py:618
+msgid "(testing and portability fixes for FreeBSD)"
+msgstr "(tesztelés és hordozhatósági javítások FreeBSD-hez)"
+
+#: src/mainwin.py:619 src/mainwin.py:620
+msgid "(the music font from Lilypond)"
+msgstr "(Zenei fontok a Lilypond-ból)"
+
+#: src/mainwin.py:621
+#, fuzzy
+msgid "(scale exercises)"
+msgstr "Különbözõ gyakorlatok"
+
+#: src/mainwin.py:736
+#, python-format
+msgid "The '%s' exercise module does not support test yet."
+msgstr ""
+
+#: src/melodicinterval.py:108 src/melodicinterval.py:257
+msgid "Melodic interval"
+msgstr "Együtthangzó hangköz"
+
+#: src/melodicinterval.py:180
+msgid "You have already identified this interval"
+msgstr "Már azonosította ezt a hangközt "
+
+#: src/melodicinterval.py:231
+msgid "The exercise has to be better configured."
+msgstr "A gyakorlat jobb beállítást igényel"
+
+#: src/multipleintervalconfigwidget.py:71
+msgid "Number of intervals:"
+msgstr "A hangközök száma:"
+
+#: src/multipleintervalconfigwidget.py:78
+msgid "Configure all intervals in this exercise like this"
+msgstr "Ebben a gyakorlatban minden hangköz legyen ugyanilyen, mint ez"
+
+#: src/multipleintervalconfigwidget.py:86
+msgid "Togglebuttons are for interval number:"
+msgstr "Nyomógomb/hangköz száma:"
+
+#: src/multipleintervalconfigwidget.py:96
+msgid "Up:"
+msgstr "Fel:"
+
+#: src/multipleintervalconfigwidget.py:112
+msgid "Down:"
+msgstr "Le:"
+
+#: src/multipleintervalconfigwidget.py:128
+msgid "Reset to default values"
+msgstr "Alapértelmezett értékek visszaállítása"
+
+#: src/nameinterval.py:142
+msgid "Could not satisfy the constraints in the lesson header."
+msgstr ""
+
+#: src/nameinterval.py:151 src/nameinterval.py:163
+#, python-format
+msgid "Already solved. The interval is a '%s'"
+msgstr ""
+
+#: src/nameinterval.py:180
+#, fuzzy, python-format
+msgid "Correct, the interval is a %s"
+msgstr "Helyes, ez %i"
+
+#: src/nameinterval.py:189
+#, fuzzy
+msgid "Name the interval"
+msgstr "A hangköz éneklése"
+
+#: src/osutils.py:9
+#, python-format
+msgid "The executable '%s' does not exist. Please check your setup."
+msgstr ""
+
+#: src/reportbug.py:36
+msgid "Bug report"
+msgstr "Hibajelentés"
+
+#: src/reportbug.py:38 src/reportbug.py:57
+msgid "_Send"
+msgstr "Küldés"
+
+#: src/reportbug.py:53
+msgid "Make bug report"
+msgstr "Hibajelentés készítése"
+
+#: src/reportbug.py:56
+msgid "See complete _report"
+msgstr "A teljes jelentés"
+
+#: src/reportbug.py:62
+msgid "_Email:"
+msgstr "E-mail:"
+
+#: src/reportbug.py:66
+msgid "Mangled email address:"
+msgstr "Megcsonkított e-mail cím:"
+
+#: src/reportbug.py:72
+msgid "S_hort description:"
+msgstr "Rövid leírás:"
+
+#: src/reportbug.py:74
+msgid "_Describe how to produce the error message:"
+msgstr "Foglalja össze, hogy hogyan lehet elõidézni a hibaüzenetet:"
+
+#. translators, please notice that the word NO_DESCRIPTION must not be
+#. translated in this string.
+#: src/reportbug.py:83
+msgid ""
+"Describe as exactly as you can what you did when this error occurred. If you "
+"give no description at all, you make it very difficult to track down this "
+"bug. You should replace this text with your description, and also remove the "
+"\"bug-tag\" in the bottom of this text so that this bug is not automatically "
+"sorted among the bug reports with no description.\n"
+"\n"
+"(bug-tag: NO_DESCRIPTION)"
+msgstr ""
+"Amilyen pontosan csak tudja, írja körül a hibát, amit tapasztalt. Enélkül "
+"igen nehéz lenyomozni az okát. Ezt a szöveget helyettesítse a saját "
+"leírásával, beleértve az alsó sor semmitmondó \"bug-tag\" értékét.\n"
+"\n"
+"(bug-tag: NINCS_LEIRAS_ERROL)"
+
+#: src/rhythm.py:184
+#, fuzzy
+msgid "Play"
+msgstr "Mindet játssza le"
+
+#: src/rhythm.py:224
+msgid "Don't start the question with a rest"
+msgstr "Ne kezdõdjön szünettel a kérdés"
+
+#: src/rhythm.py:227
+msgid "Beats per minute:"
+msgstr "Percenkénti ütések száma:"
+
+#: src/rhythm.py:300 src/rhythmtapping.py:178
+msgid "You have to configure this exercise properly"
+msgstr "Megfelelõen konfigurálni kell a gyakorlatot"
+
+#: src/rhythm.py:334
+msgid "Identify the rhythm"
+msgstr "Ritmus azonosítása"
+
+#: src/rhythmtapping.py:124
+#, fuzzy
+msgid "Please tap the rhythm."
+msgstr "Ritmus azonosítása"
+
+#: src/rhythmtapping.py:191
+msgid "Tapping in progress..."
+msgstr ""
+
+#: src/singanswer.py:61 src/singchord.py:49 src/singinterval.py:103
+msgid "_Play answer"
+msgstr "Játssza le a helyes választ"
+
+#: src/singchord.py:48
+msgid "440h_z"
+msgstr "440h_z"
+
+#: src/singinterval.py:92
+msgid ""
+"_New interval,\n"
+"last was correct"
+msgstr ""
+"Új hangköz,\n"
+"az utolsó helyes volt"
+
+#: src/singinterval.py:94
+msgid ""
+"New interval,\n"
+"last was _wrong"
+msgstr ""
+"Új hangköz,\n"
+"az utolsó rossz volt"
+
+#: src/singinterval.py:99
+msgid "_Repeat first tone"
+msgstr "Ismételje az elsõ hangot"
+
+#: src/singinterval.py:107
+msgid "Play _last tone"
+msgstr "Játssza le az utolsó hangot"
+
+#: src/singinterval.py:122 src/singinterval.py:169
+msgid "Sing interval"
+msgstr "Hangköz éneklése"
+
+#: src/singinterval.py:140
+msgid ""
+"The exercise has to be better configured.\n"
+"Click 'Reset to default values' on the config\n"
+"page if you don't know how to do this."
+msgstr ""
+"A gyakorlatot jobban be kell állítani.\n"
+"Kattintson az \"Alapértelmezett értékek beállítása\" menüpontra a "
+"Beállítások\n"
+"részen, ha nem tudja, hogyan érhetõ ez el."
+
+#: src/singinterval.py:163
+msgid "Sing the interval"
+msgstr "A hangköz éneklése"
+
+#: src/specialwidgets.py:171
+msgid "Set transposition"
+msgstr "Transzponálás beállítása"
+
+#: src/specialwidgets.py:177
+msgid "Select how to do random transposition"
+msgstr "Válassza ki, hogyan történjen a véletlenszerû transzponálás"
+
+#: src/specialwidgets.py:179
+msgid ""
+"You can read about the different types of transposition in the lesson file "
+"documentation available on the Help menu."
+msgstr ""
+"A transzponálások típusairól a Súgó menüben található leckefájl-"
+"dokumentációban olvashat."
+
+#: src/statisticsviewer.py:65 src/statisticsviewer.py:179
+msgid "Session"
+msgstr "Munkamenet"
+
+#: src/statisticsviewer.py:65 src/statisticsviewer.py:185
+msgid "Today"
+msgstr "Ma"
+
+#: src/statisticsviewer.py:66 src/statisticsviewer.py:191
+msgid "Last 7 days"
+msgstr "Az elmúlt hét folyamán"
+
+#: src/statisticsviewer.py:66 src/statisticsviewer.py:197
+msgid "Total"
+msgstr "Összesítés"
+
+#: src/statisticsviewer.py:75
+msgid "Percent"
+msgstr "Százalék"
+
+#: src/statisticsviewer.py:76 src/trainingsetdlg.py:87
+msgid "Count"
+msgstr "Szám"
+
+#: src/tracebackwindow.py:28
+msgid "GNU Solfege message window"
+msgstr "GNU Szolfézs üzenetablak"
+
+#: src/tracebackwindow.py:31
+msgid ""
+"Please report this to the bug database or send an email to bug-solfege@gnu."
+"org if the content of the message make you believe you have found a bug."
+msgstr ""
+"Kérjük, jelezze ezt a hibát a hiba-adatbázisban, vagy küldjön e-mailt a bug-"
+"solfege@gnu.org címre, ha az üzenet jellegébõl arra következtet, hogy hibát "
+"talált."
+
+#: src/tracebackwindow.py:46
+msgid "_Make automatic bug report"
+msgstr "Automatikus hibajelentés készítése"
+
+#: src/trainingsetdlg.py:59
+msgid "MIDI"
+msgstr ""
+
+#: src/trainingsetdlg.py:60
+msgid "WAV"
+msgstr ""
+
+#: src/trainingsetdlg.py:61
+msgid "MP3"
+msgstr ""
+
+#: src/trainingsetdlg.py:62
+msgid "OGG"
+msgstr ""
+
+#: src/trainingsetdlg.py:66
+#, fuzzy
+msgid "Preferred output format:"
+msgstr "Kiválasztott hangszer"
+
+#: src/trainingsetdlg.py:93
+#, fuzzy
+msgid "Repeat"
+msgstr "Ismétlést kérek"
+
+#: src/trainingsetdlg.py:99
+msgid "Delay"
+msgstr ""
+
+#: src/trainingsetdlg.py:155
+msgid ""
+"This lesson file cannot be exported because some of the music in the file "
+"are not parsable by the mpd module."
+msgstr ""
+
+#: src/trainingsetdlg.py:247
+#, python-format
+msgid "Untitled%s"
+msgstr ""
+
+#: src/trainingsetdlg.py:259
+msgid "Export"
+msgstr ""
+
+#: src/trainingsetdlg.py:297
+#, python-format
+msgid "Save changes to \"%s\" before closing?"
+msgstr ""
+
+#: src/trainingsetdlg.py:300
+#, python-format
+msgid ""
+"If you don't save, changes from the past %i seconds will be permanently lost."
+msgstr ""
+
+#: src/trainingsetdlg.py:302
+#, python-format
+msgid ""
+"If you don't save, changes from the past %i minutes will be permanently lost."
+msgstr ""
+
+#: src/trainingsetdlg.py:304
+msgid "_Close without Saving"
+msgstr ""
+
+#: src/trainingsetdlg.py:367
+msgid "Save File As"
+msgstr ""
+
+#: src/trainingsetdlg.py:395
+msgid "Error saving file"
+msgstr ""
+
+#: src/trainingsetdlg.py:447
+msgid "Select an empty directory, since we want to fill it with files."
+msgstr ""
+
+#: src/trainingsetdlg.py:448
+msgid "Select where to export the files"
+msgstr ""
+
+#: src/trainingsetdlg.py:469
+msgid "Exporting training set"
+msgstr ""
+
+#: src/trainingsetdlg.py:473
+msgid "Export training set"
+msgstr ""
+
+#: src/twelvetone.py:69
+msgid "_Play first note"
+msgstr "Az elsõ hangjegy lejátszása"
+
+#: src/twelvetone.py:71
+msgid "Play _last note"
+msgstr "Az utolsó hangjegy lejátszása"
+
+#: src/twelvetone.py:73
+msgid "Play _all"
+msgstr "Mindet játssza le"
+
+#: src/utils.py:43
+msgid "up"
+msgstr "fel"
+
+#: src/utils.py:45
+msgid "down"
+msgstr "le"
+
+#: mpd/interval.py:34
+#, fuzzy
+msgid "perfect unison"
+msgstr "Tiszta kvint"
+
+#: mpd/interval.py:35
+#, fuzzy
+msgid "diminished unison"
+msgstr "szûkített"
+
+#: mpd/interval.py:36
+#, fuzzy
+msgid "augmented unison"
+msgstr "bõvített"
+
+#: mpd/interval.py:38
+#, fuzzy
+msgid "diminished second"
+msgstr "szûkített"
+
+#: mpd/interval.py:41
+#, fuzzy
+msgid "augmented second"
+msgstr "bõvített"
+
+#: mpd/interval.py:43
+#, fuzzy
+msgid "diminished third"
+msgstr "Szûkített kvint"
+
+#: mpd/interval.py:46
+#, fuzzy
+msgid "augmented third"
+msgstr "bõvített"
+
+#: mpd/interval.py:48
+#, fuzzy
+msgid "diminished fourth"
+msgstr "Szûkített kvint"
+
+#: mpd/interval.py:50
+#, fuzzy
+msgid "augmented fourth"
+msgstr "bõvített"
+
+#: mpd/interval.py:54
+#, fuzzy
+msgid "augmented fifth"
+msgstr "bõvített"
+
+#: mpd/interval.py:56
+#, fuzzy
+msgid "diminished sixth"
+msgstr "Szûkített kvint"
+
+#: mpd/interval.py:59
+#, fuzzy
+msgid "augmented sixth"
+msgstr "bõvített"
+
+#: mpd/interval.py:61
+#, fuzzy
+msgid "diminished seventh"
+msgstr "Szûkített kvint"
+
+#: mpd/interval.py:64
+#, fuzzy
+msgid "augmented seventh"
+msgstr "bõvített"
+
+#: mpd/interval.py:66
+#, fuzzy
+msgid "diminished octave"
+msgstr "szûkített"
+
+#: mpd/interval.py:68
+#, fuzzy
+msgid "augmented octave"
+msgstr "bõvített"
+
+#. translators: Only translate the word after interval| , and don't include
+#. interval| in the translated string. So for Norwegians, translate
+#. "interval|diminished" to "forminsket". Do similar for all strings
+#. that are preceded with "interval|"
+#: mpd/interval.py:73
+#, fuzzy
+msgid "interval|diminished"
+msgstr "szûkített"
+
+#: mpd/interval.py:74
+#, fuzzy
+msgid "interval|pure"
+msgstr "="
+
+#: mpd/interval.py:75
+#, fuzzy
+msgid "interval|augmented"
+msgstr "="
+
+#: mpd/interval.py:76
+#, fuzzy
+msgid "interval|minor"
+msgstr "k2"
+
+#: mpd/interval.py:77
+#, fuzzy
+msgid "interval|major"
+msgstr "k2"
+
+#: mpd/interval.py:78
+msgid "interval|doubly-diminished"
+msgstr ""
+
+#: mpd/interval.py:79
+msgid "interval|doubly-augmented"
+msgstr ""
+
+#: mpd/interval.py:87
+#, fuzzy, python-format
+msgid "Invalid interval name: %s"
+msgstr "Érvénytelen hangjegynév: %s"
+
+#: mpd/musicalpitch.py:84
+msgid "notename|c"
+msgstr "c"
+
+#: mpd/musicalpitch.py:85
+msgid "notename|cb"
+msgstr "cb"
+
+#: mpd/musicalpitch.py:86
+msgid "notename|cbb"
+msgstr "cbb"
+
+#: mpd/musicalpitch.py:87
+msgid "notename|c#"
+msgstr "c#"
+
+#: mpd/musicalpitch.py:88
+msgid "notename|cx"
+msgstr "cx"
+
+#: mpd/musicalpitch.py:89
+msgid "notename|d"
+msgstr "d"
+
+#: mpd/musicalpitch.py:90
+msgid "notename|db"
+msgstr "db"
+
+#: mpd/musicalpitch.py:91
+msgid "notename|dbb"
+msgstr "dbb"
+
+#: mpd/musicalpitch.py:92
+msgid "notename|d#"
+msgstr "d#"
+
+#: mpd/musicalpitch.py:93
+msgid "notename|dx"
+msgstr "dx"
+
+#: mpd/musicalpitch.py:94
+msgid "notename|e"
+msgstr "e"
+
+#: mpd/musicalpitch.py:95
+msgid "notename|eb"
+msgstr "eb"
+
+#: mpd/musicalpitch.py:96
+msgid "notename|ebb"
+msgstr "ebb"
+
+#: mpd/musicalpitch.py:97
+msgid "notename|e#"
+msgstr "e#"
+
+#: mpd/musicalpitch.py:98
+msgid "notename|ex"
+msgstr "ex"
+
+#: mpd/musicalpitch.py:99
+msgid "notename|f"
+msgstr "f"
+
+#: mpd/musicalpitch.py:100
+msgid "notename|fb"
+msgstr "fb"
+
+#: mpd/musicalpitch.py:101
+msgid "notename|fbb"
+msgstr "fbb"
+
+#: mpd/musicalpitch.py:102
+msgid "notename|f#"
+msgstr "f#"
+
+#: mpd/musicalpitch.py:103
+msgid "notename|fx"
+msgstr "fx"
+
+#: mpd/musicalpitch.py:104
+msgid "notename|g"
+msgstr "g"
+
+#: mpd/musicalpitch.py:105
+msgid "notename|gb"
+msgstr "gb"
+
+#: mpd/musicalpitch.py:106
+msgid "notename|gbb"
+msgstr "gbb"
+
+#: mpd/musicalpitch.py:107
+msgid "notename|g#"
+msgstr "g#"
+
+#: mpd/musicalpitch.py:108
+msgid "notename|gx"
+msgstr "gx"
+
+#: mpd/musicalpitch.py:109
+msgid "notename|a"
+msgstr "a"
+
+#: mpd/musicalpitch.py:110
+msgid "notename|ab"
+msgstr "ab"
+
+#: mpd/musicalpitch.py:111
+msgid "notename|abb"
+msgstr "abb"
+
+#: mpd/musicalpitch.py:112
+msgid "notename|a#"
+msgstr "a#"
+
+#: mpd/musicalpitch.py:113
+msgid "notename|ax"
+msgstr "ax"
+
+#: mpd/musicalpitch.py:114
+msgid "notename|b"
+msgstr "h"
+
+#: mpd/musicalpitch.py:115
+msgid "notename|bb"
+msgstr "hb"
+
+#: mpd/musicalpitch.py:116
+msgid "notename|bbb"
+msgstr "hbb"
+
+#: mpd/musicalpitch.py:117
+msgid "notename|b#"
+msgstr "h#"
+
+#: mpd/musicalpitch.py:118
+msgid "notename|bx"
+msgstr "hx"
+
+#: mpd/musicalpitch.py:125
+#, python-format
+msgid "Invalid notename: %s"
+msgstr "Érvénytelen hangjegynév: %s"
+
+#: mpd/musicalpitch.py:345
+#, python-format
+msgid "notenameformat|%(notename)s"
+msgstr "%(notename)s"
+
+#: mpd/musicalpitch.py:347
+#, python-format
+msgid "notenameformat|%(notename)s%(oct)s"
+msgstr "%(notename)s%(oct)s"
+
+#: lesson-files/altered-1:13
+msgid "Altered chords"
+msgstr "Akkordváltozatok"
+
+#: lesson-files/altered-2:8
+msgid "Altered chords & inversions"
+msgstr "Akkordváltozatok és megfordítások"
+
+#: lesson-files/barnesanger:10
+msgid "Norwegian children songs"
+msgstr "Norvég gyermekdalok"
+
+#: lesson-files/besifring:10
+msgid "simple tonal chords"
+msgstr "Egyszerû tonális akkordok"
+
+#: lesson-files/bpm:6
+#, fuzzy
+msgid "Beats per minute"
+msgstr "Percenkénti ütések száma:"
+
+#: lesson-files/chord-7b9-maj79:12
+msgid "7b9 and maj79 chords"
+msgstr ""
+
+#: lesson-files/chord-dim-aug:12
+msgid "Diminished and augmented chords"
+msgstr ""
+
+#: lesson-files/chord-dim-aug:17
+msgid "diminished"
+msgstr "szûkített"
+
+#: lesson-files/chord-dim-aug:18
+msgid "augmented"
+msgstr "bõvített"
+
+#: lesson-files/chord-dim-aug-min-major:9
+msgid "Minor, major, diminished and augmented chords"
+msgstr ""
+
+#: lesson-files/chord-m7-7:12 lesson-files/chord-m7-7-inv-not:9
+msgid "Minor 7 and dominant 7 chords"
+msgstr ""
+
+#: lesson-files/chord-m7-7-inv:9
+#, fuzzy
+msgid "Minor 7 and dominant 7 chords with inversions"
+msgstr "Dúr, moll, domináns szeptim megfordításokkal"
+
+#: lesson-files/chord-m7-7-maj7-m7b5-dim7:12
+msgid "Chords with 7 in their name"
+msgstr ""
+
+#: lesson-files/chord-m9-9:12
+msgid "Minor 9 and 9 chords"
+msgstr ""
+
+#: lesson-files/chord-m9-9-7b9-maj79:12
+msgid "Chords with 9 in their name"
+msgstr ""
+
+#: lesson-files/chord-maj7-m7b5-dim7:12
+msgid "Major seventh, diminished seventh and half diminished seventh chords"
+msgstr ""
+
+#: lesson-files/chord-min-major:12 lesson-files/chord-min-major-inv:9
+msgid "Minor and major chords"
+msgstr ""
+
+#: lesson-files/chord-min-major-7:12
+msgid "Major, minor, dominant seventh with inversions"
+msgstr "Dúr, moll, domináns szeptim megfordításokkal"
+
+#: lesson-files/chord-min-major-7:18 lesson-files/chord-min-major-7:19
+#: lesson-files/chord-min-major-7:20
+#: lesson-files/chord-min-major-close-open:50
+#: lesson-files/chord-min-major-close-open:57
+#: lesson-files/chord-min-major-close-open:64
+#: lesson-files/chord-min-major-close-open:71
+#: lesson-files/chord-min-major-close-open:78
+#: lesson-files/chord-min-major-inv:14 lesson-files/chord-min-major-inv:15
+#: lesson-files/chord-min-major-inv:16 lesson-files/chord-min-major-inv-not:14
+#: lesson-files/chord-min-major-inv-not:15
+#: lesson-files/chord-min-major-inv-not:16 lesson-files/durmoll:22
+#: lesson-files/durmoll:32
+msgid "major"
+msgstr "dúr"
+
+#: lesson-files/chord-min-major-7:21 lesson-files/chord-min-major-7:22
+#: lesson-files/chord-min-major-7:23
+#: lesson-files/chord-min-major-close-open:12
+#: lesson-files/chord-min-major-close-open:19
+#: lesson-files/chord-min-major-close-open:26
+#: lesson-files/chord-min-major-close-open:33
+#: lesson-files/chord-min-major-close-open:40
+#: lesson-files/chord-min-major-inv:17 lesson-files/chord-min-major-inv:18
+#: lesson-files/chord-min-major-inv:19 lesson-files/chord-min-major-inv-not:17
+#: lesson-files/chord-min-major-inv-not:18
+#: lesson-files/chord-min-major-inv-not:19 lesson-files/durmoll:17
+#: lesson-files/durmoll:27
+msgid "minor"
+msgstr "moll"
+
+#: lesson-files/chord-min-major-7:24 lesson-files/chord-min-major-7:25
+#: lesson-files/chord-min-major-7:26 lesson-files/chord-min-major-7:27
+msgid "dominant seventh"
+msgstr "domináns szeptim"
+
+#: lesson-files/chord-min-major-close-open:9
+#, fuzzy
+msgid "Minor/major in close and open position"
+msgstr "dúr/moll zárt és nyitott helyzetben"
+
+#: lesson-files/chord-voicing-test:8
+msgid "Altered chords (chord voicing)"
+msgstr "Akkordváltozatok (akkordéneklés)"
+
+#: lesson-files/compare-intervals:6
+#, fuzzy
+msgid "Compare intervals"
+msgstr "Összhangzó hangközök"
+
+#: lesson-files/compare-intervals-harmonic:6 lesson-files/harmonic-intervals:7
+#: lesson-files/melodic-intervals:7 lesson-files/melodic-intervals-down:7
+#: lesson-files/melodic-intervals-up:7 lesson-files/sing-intervals:9
+msgid "Second to decim"
+msgstr "Szekundtól decimáig"
+
+#: lesson-files/compare-intervals-harmonic-10:6
+#: lesson-files/harmonic-intervals-10:8 lesson-files/melodic-intervals-10:7
+#: lesson-files/melodic-intervals-down-10:7
+#: lesson-files/melodic-intervals-up-10:7 lesson-files/sing-intervals-10:8
+msgid "Decims"
+msgstr "Decimák"
+
+#: lesson-files/compare-intervals-harmonic-2:6
+#: lesson-files/harmonic-intervals-2:8 lesson-files/melodic-intervals-2:9
+#: lesson-files/melodic-intervals-down-2:9
+#: lesson-files/melodic-intervals-up-2:9 lesson-files/nameinterval-seconds:8
+#: lesson-files/sing-intervals-2:9
+msgid "Seconds"
+msgstr "Szekundok"
+
+#: lesson-files/compare-intervals-harmonic-2-3:6
+#: lesson-files/harmonic-intervals-2-3:8 lesson-files/melodic-intervals-2-3:9
+#: lesson-files/melodic-intervals-down-2-3:9
+#: lesson-files/melodic-intervals-up-2-3:9 lesson-files/sing-intervals-2-3:9
+msgid "Seconds and thirds"
+msgstr "Szekundok és tercek"
+
+#: lesson-files/compare-intervals-harmonic-3:6
+#: lesson-files/harmonic-intervals-3:8 lesson-files/melodic-intervals-3:8
+#: lesson-files/melodic-intervals-down-3:7
+#: lesson-files/melodic-intervals-up-3:7 lesson-files/nameinterval-thirds:8
+#: lesson-files/sing-intervals-3:8
+msgid "Thirds"
+msgstr "Tercek"
+
+#: lesson-files/compare-intervals-harmonic-4-5:6
+#: lesson-files/harmonic-intervals-4-5:8 lesson-files/melodic-intervals-4-5:8
+#: lesson-files/melodic-intervals-down-4-5:8
+#: lesson-files/melodic-intervals-up-4-5:8 lesson-files/sing-intervals-4-5:8
+msgid "Fourths and fifths"
+msgstr "Kvartok és kvintek"
+
+#: lesson-files/compare-intervals-harmonic-4-5-8:6
+#: lesson-files/harmonic-intervals-4-5-8:9
+#: lesson-files/melodic-intervals-4-5-8:8
+#: lesson-files/melodic-intervals-down-4-5-8:8
+#: lesson-files/melodic-intervals-up-4-5-8:8
+#: lesson-files/sing-intervals-4-5-8:8
+msgid "Fourths, fifths and octave"
+msgstr "Kvartok, kvintek és oktávok"
+
+#: lesson-files/compare-intervals-harmonic-6:6
+#: lesson-files/harmonic-intervals-6:8 lesson-files/melodic-intervals-6:7
+#: lesson-files/melodic-intervals-down-6:7
+#: lesson-files/melodic-intervals-up-6:7 lesson-files/nameinterval-sixths:8
+#: lesson-files/sing-intervals-6:8
+msgid "Sixths"
+msgstr "Szextek"
+
+#: lesson-files/compare-intervals-harmonic-6-7:6
+#: lesson-files/harmonic-intervals-6-7:8 lesson-files/melodic-intervals-6-7:9
+#: lesson-files/melodic-intervals-down-6-7:9
+#: lesson-files/melodic-intervals-up-6-7:9 lesson-files/sing-intervals-6-7:9
+msgid "Sixths and sevenths"
+msgstr "Szextek és szeptimek"
+
+#: lesson-files/compare-intervals-harmonic-7:6
+#: lesson-files/harmonic-intervals-7:8 lesson-files/melodic-intervals-7:7
+#: lesson-files/melodic-intervals-down-7:7
+#: lesson-files/melodic-intervals-up-7:7 lesson-files/nameinterval-sevenths:8
+#: lesson-files/sing-intervals-7:8
+msgid "Sevenths"
+msgstr "Szeptimek"
+
+#: lesson-files/compare-intervals-harmonic-7-9:6
+#: lesson-files/harmonic-intervals-7-9:9 lesson-files/melodic-intervals-7-9:9
+#: lesson-files/melodic-intervals-down-7-9:9
+#: lesson-files/melodic-intervals-up-7-9:9 lesson-files/sing-intervals-7-9:8
+msgid "Sevenths and ninths"
+msgstr "Szeptimek és nónák"
+
+#: lesson-files/compare-intervals-harmonic-9:6
+#: lesson-files/harmonic-intervals-9:8 lesson-files/melodic-intervals-9:7
+#: lesson-files/melodic-intervals-down-9:7
+#: lesson-files/melodic-intervals-up-9:7 lesson-files/sing-intervals-9:8
+msgid "Ninths"
+msgstr "Nónák"
+
+#: lesson-files/compare-intervals-harmonic-tritonus-7:6
+#: lesson-files/harmonic-intervals-tritonus-7:8
+#: lesson-files/melodic-intervals-down-tritonus-7:7
+#: lesson-files/melodic-intervals-tritonus-7:7
+#: lesson-files/melodic-intervals-up-tritonus-7:7
+#: lesson-files/sing-intervals-tritonus-7:8
+msgid "Tritonus and sevenths"
+msgstr "Tritonusok és szeptimek"
+
+#: lesson-files/csound-fifth-0.97:9 lesson-files/csound-fifth-0.98:9
+#: lesson-files/csound-fifth-0.99:9 lesson-files/csound-fifth-0.995:9
+#: lesson-files/csound-fifth-0.996:9 lesson-files/csound-fifth-0.997:9
+#: lesson-files/csound-fifth-0.998:9
+#, python-format
+msgid "Is the fifth pure, too small or to large? %s"
+msgstr ""
+
+#: lesson-files/diatonic-1:8
+msgid "Diatonic chords"
+msgstr "Diatonikus akkordok"
+
+#: lesson-files/diatonic-2:8
+msgid "Diatonic chords & inversions"
+msgstr "Diatonikus akkordok és megfordítások"
+
+#: lesson-files/durmoll:8
+msgid "Is the song played major or minor"
+msgstr "Dúr vagy moll dallam hangzott el"
+
+#: lesson-files/harmonic-intervals-2-to-8:8
+#: lesson-files/melodic-intervals-2-to-8:7
+#: lesson-files/melodic-intervals-down-2-to-8:7
+#: lesson-files/melodic-intervals-up-2-to-8:7
+#, fuzzy
+msgid "Second to octave"
+msgstr "Szekundtól decimáig"
+
+#: lesson-files/harmonic-intervals-self-config:6
+msgid "Harmonic intervals"
+msgstr "Összhangzó hangközök"
+
+#: lesson-files/id-tone:6
+#, fuzzy
+msgid "Id tone"
+msgstr "Hang azonosítása"
+
+#: lesson-files/id-tone-cde-10:8
+msgid "C to B, C#, D# and F#"
+msgstr ""
+
+#: lesson-files/id-tone-cde-11:8
+msgid "C to B, C#, D#, F# and G#"
+msgstr ""
+
+#: lesson-files/id-tone-cde-12:8
+msgid "All"
+msgstr ""
+
+#: lesson-files/id-tone-cde-3:7
+msgid "C to E"
+msgstr ""
+
+#: lesson-files/id-tone-cde-4:7
+msgid "C to F"
+msgstr ""
+
+#: lesson-files/id-tone-cde-5:7
+msgid "C to G"
+msgstr ""
+
+#: lesson-files/id-tone-cde-6:7
+msgid "C to A"
+msgstr ""
+
+#: lesson-files/id-tone-cde-7:7
+msgid "C to B"
+msgstr ""
+
+#: lesson-files/id-tone-cde-8:8
+msgid "C to B and C#"
+msgstr ""
+
+#: lesson-files/id-tone-cde-9:8
+msgid "C to B, C# and D#"
+msgstr ""
+
+#: lesson-files/jsb-inventions:8
+msgid "Parts of 2 Bach inventions"
+msgstr ""
+
+#: lesson-files/melodic-intervals-self-config:6
+msgid "Melodic intervals"
+msgstr "Hangközök bontásban"
+
+#: lesson-files/nameinterval-1:8
+#, fuzzy
+msgid "Many intervals"
+msgstr "Hangközök éneklése"
+
+#: lesson-files/nameinterval-2:8
+#, fuzzy
+msgid "All intervals"
+msgstr "Hangközök éneklése"
+
+#: lesson-files/nameinterval-fifths:8
+#, fuzzy
+msgid "Fifths"
+msgstr "Szextek"
+
+#: lesson-files/nameinterval-fourths:8
+#, fuzzy
+msgid "Fourths"
+msgstr "Kvart"
+
+#: lesson-files/nameinterval-octave:8
+#, fuzzy
+msgid "Octaves"
+msgstr "Oktáv:"
+
+#: lesson-files/nameinterval-unison:8
+#, fuzzy
+msgid "Unisons"
+msgstr "Egyszólamú"
+
+#: lesson-files/progression-1:10
+#, fuzzy
+msgid "Easy harmonic progressions"
+msgstr "Fokozatos összhangzat-diktálás"
+
+#: lesson-files/progression-1:11 lesson-files/progression-2:12
+#: lesson-files/progression-atte:32 lesson-files/three-prog-root:10
+#, fuzzy
+msgid "Enter the harmonic progression"
+msgstr "Fokozatos összhangzat-diktálás"
+
+#: lesson-files/progression-2:11
+msgid "Easy harmonic progressions, including inverted chords"
+msgstr ""
+
+#: lesson-files/progression-atte:31
+msgid "A few jazz progressions"
+msgstr ""
+
+#: lesson-files/rhythm-all:8 lesson-files/tapping-all:8
+msgid "Rhythms (difficult)"
+msgstr ""
+
+#: lesson-files/rhythm-easy:8 lesson-files/tapping-easy:8
+#, fuzzy
+msgid "Rhythms (easy)"
+msgstr "Ritmus"
+
+#: lesson-files/rhythm-mid:8 lesson-files/tapping-mid:8
+#, fuzzy
+msgid "Rhythms"
+msgstr "Ritmus"
+
+#: lesson-files/rhythm-self-config-binary:8
+msgid "Rhythms, binary time"
+msgstr ""
+
+#: lesson-files/rhythm-self-config-ternary:9
+#, fuzzy
+msgid "Rhythms, ternary time"
+msgstr "Ritmus"
+
+#: lesson-files/rhythm-ternary:8
+#, fuzzy
+msgid "Rhythms in 3/8"
+msgstr "Ritmus"
+
+#: lesson-files/sc-6tones:10
+msgid "Scales with 6 notes"
+msgstr ""
+
+#: lesson-files/sc-8tones:10
+msgid "Scales with 8 notes"
+msgstr ""
+
+#: lesson-files/scales:18 lesson-files/scales-thirds:18
+#: lesson-files/include/sc-master:18
+msgid "Ionian"
+msgstr "Ión"
+
+#: lesson-files/scales:22 lesson-files/scales-thirds:23
+#: lesson-files/include/sc-master:57
+msgid "Dorian"
+msgstr "Dór"
+
+#: lesson-files/scales:26 lesson-files/scales-thirds:28
+#: lesson-files/include/sc-master:94
+msgid "Phrygian"
+msgstr "Fríg"
+
+#: lesson-files/scales:30 lesson-files/scales-thirds:33
+#: lesson-files/include/sc-master:133
+msgid "Lydian"
+msgstr "Líd"
+
+#: lesson-files/scales:34 lesson-files/scales-thirds:38
+#: lesson-files/include/sc-master:170
+msgid "Mixolydian"
+msgstr "Mixolíd"
+
+#: lesson-files/scales:38 lesson-files/scales-thirds:43
+#: lesson-files/include/sc-master:207
+msgid "Aeolian"
+msgstr "Eol"
+
+#: lesson-files/scales:42 lesson-files/scales-thirds:48
+#: lesson-files/include/sc-master:247
+msgid "Locrian"
+msgstr "Lokriszi"
+
+#: lesson-files/scales:46 lesson-files/scales-thirds:53
+msgid "Harmonic minor"
+msgstr "Összhangzó moll (?) "
+
+#: lesson-files/scales:50 lesson-files/scales-thirds:58
+msgid "Melodic minor"
+msgstr "Bontott moll (?)"
+
+#: lesson-files/scales-bebop:18
+msgid "scale|Mixolydian bebop"
+msgstr "Mixolíd bebop"
+
+#: lesson-files/scales-bebop:22
+msgid "scale|Dorian bebop"
+msgstr "Dór bebop"
+
+#: lesson-files/scales-bebop:26
+msgid "scale|Major bebop"
+msgstr "Dúr bebop"
+
+#: lesson-files/sc-beb:10 lesson-files/sc-beb-name:10 learningtree.txt:282
+#, fuzzy
+msgid "Bebop Scales"
+msgstr "Skálák"
+
+#: lesson-files/sc-beb-a:10
+msgid "Bebop Scales - Ascending"
+msgstr ""
+
+#: lesson-files/sc-beb-d:10
+msgid "Bebop Scales - Descending"
+msgstr ""
+
+#: lesson-files/sc-beb-elem:10
+msgid "Bebop Scales - enter structure"
+msgstr ""
+
+#: lesson-files/sc-beb-elem:11 lesson-files/sc-dha-elem:11
+#: lesson-files/sc-ham-elem:11 lesson-files/sc-har-elem:11
+#: lesson-files/sc-hun-elem:11 lesson-files/sc-maj-elem:11
+#: lesson-files/sc-mel-elem:11 lesson-files/sc-nea-elem:11
+#: lesson-files/sc-nem-elem:11 lesson-files/sc-pen-elem:11
+#: lesson-files/sc-sim-elem:11
+msgid "Enter the structure of the mode in number of half-tones"
+msgstr ""
+
+#: lesson-files/sc-beb-s:10
+msgid "Bebop Scales - recognize structure"
+msgstr ""
+
+#: lesson-files/sc-church:10
+msgid "Church Tones"
+msgstr ""
+
+#: lesson-files/sc-dha:10 lesson-files/sc-dha-name:10 learningtree.txt:219
+msgid "Double Harmonic Scale and its modes"
+msgstr ""
+
+#: lesson-files/sc-dha-a:10
+msgid "Double Harmonic Scale and its modes - Ascending"
+msgstr ""
+
+#: lesson-files/sc-dha-d:10
+msgid "Double Harmonic Scale and its modes - Descending"
+msgstr ""
+
+#: lesson-files/sc-dha-elem:10
+msgid "Double Harmonic scale and its modes - enter structure"
+msgstr ""
+
+#: lesson-files/sc-dha-f:10
+msgid "Double Harmonic Scale and its modes - arpeged by fourths"
+msgstr ""
+
+#: lesson-files/sc-dha-g:10
+msgid "Double Harmonic Scale and its modes - recognize grade"
+msgstr ""
+
+#: lesson-files/sc-dha-p:10
+msgid "Double Harmonic Scale and its modes - patterns"
+msgstr ""
+
+#: lesson-files/sc-dha-s:10
+msgid "Double Harmonic Scale and its modes - recognize structure"
+msgstr ""
+
+#: lesson-files/sc-dha-t:10
+msgid "Double Harmonic Scale and its modes - arpeged by thirds"
+msgstr ""
+
+#: lesson-files/sc-dom:10
+msgid "More Scales used over a Dominant or Altered chord"
+msgstr ""
+
+#: lesson-files/sc-dom-jazz:10
+msgid "Jazz Modes used over a Dominant or Altered chord"
+msgstr ""
+
+#: lesson-files/sc-east:10
+msgid "Modes used in East European Music"
+msgstr ""
+
+#: lesson-files/sc-greek:10
+msgid "Ancient Greek Modes"
+msgstr ""
+
+#: lesson-files/sc-hal:10
+msgid "More Scales used over a Half-Diminished or Diminished chord"
+msgstr ""
+
+#: lesson-files/sc-hal-jazz:10
+msgid "Jazz Modes over a Half-Diminished or Diminished chord"
+msgstr ""
+
+#: lesson-files/sc-ham:10 lesson-files/sc-ham-name:10 learningtree.txt:206
+msgid "Harmonic Major Scale and its modes"
+msgstr ""
+
+#: lesson-files/sc-ham-a:10
+msgid "Harmonic Major Scale and its modes - Ascending"
+msgstr ""
+
+#: lesson-files/sc-ham-d:10
+msgid "Harmonic Major Scale and its modes - Descending"
+msgstr ""
+
+#: lesson-files/sc-ham-elem:10
+msgid "Harmonic Major scale and its modes - enter structure"
+msgstr ""
+
+#: lesson-files/sc-ham-f:10
+msgid "Harmonic Major Scale and its modes - arpeged by fourths"
+msgstr ""
+
+#: lesson-files/sc-ham-g:10
+msgid "Harmonic Major Scale and its modes - recognize grade"
+msgstr ""
+
+#: lesson-files/sc-ham-p:10
+msgid "Harmonic Major Scale and its modes - patterns"
+msgstr ""
+
+#: lesson-files/sc-ham-s:10
+msgid "Harmonic Major Scale and its modes - recognize structure"
+msgstr ""
+
+#: lesson-files/sc-ham-t:10
+msgid "Harmonic Major Scale and its modes - arpeged by thirds"
+msgstr ""
+
+#: lesson-files/sc-har:10 lesson-files/sc-har-name:10 learningtree.txt:193
+msgid "Harmonic Minor Scale and its modes"
+msgstr ""
+
+#: lesson-files/sc-har-a:10
+msgid "Harmonic Minor Scale and its modes - Ascending"
+msgstr ""
+
+#: lesson-files/sc-har-d:10
+msgid "Harmonic Minor Scale and its modes - Descending"
+msgstr ""
+
+#: lesson-files/sc-har-elem:10
+msgid "Harmonic Minor scale and its modes - enter structure"
+msgstr ""
+
+#: lesson-files/sc-har-f:10
+msgid "Harmonic Minor Scale and its modes - arpeged by fourths"
+msgstr ""
+
+#: lesson-files/sc-har-g:10
+msgid "Harmonic Minor Scale and its modes - recognize grade"
+msgstr ""
+
+#: lesson-files/sc-har-p:10
+msgid "Harmonic Minor Scale and its modes - patterns"
+msgstr ""
+
+#: lesson-files/sc-har-s:10
+msgid "Harmonic Minor Scale and its modes - recognize structure"
+msgstr ""
+
+#: lesson-files/sc-har-t:10
+msgid "Harmonic Minor Scale and its modes - arpeged by thirds"
+msgstr ""
+
+#: lesson-files/sc-hum-g:10
+msgid "Hungarian Minor Scale and its modes - recognize grade"
+msgstr ""
+
+#: lesson-files/sc-hun:10 lesson-files/sc-hun-name:10 learningtree.txt:259
+msgid "Hungarian Scale and its modes"
+msgstr ""
+
+#: lesson-files/sc-hun-a:10
+msgid "Hungarian Scale and its modes - Ascending"
+msgstr ""
+
+#: lesson-files/sc-hun-d:10
+msgid "Hungarian Scale and its modes - Descending"
+msgstr ""
+
+#: lesson-files/sc-hun-elem:10
+msgid "Hungarian scale and its modes - enter structure"
+msgstr ""
+
+#: lesson-files/sc-hun-f:10
+msgid "Hungarian Scale and its modes - arpeged by fourths"
+msgstr ""
+
+#: lesson-files/sc-hun-g:10
+msgid "Hungarian Scale and its modes - recognize grade"
+msgstr ""
+
+#: lesson-files/sc-hun-p:10
+msgid "Hungarian Scale and its modes - patterns"
+msgstr ""
+
+#: lesson-files/sc-hun-s:10
+msgid "Hungarian Scale and its modes - recognize structure"
+msgstr ""
+
+#: lesson-files/sc-hun-t:10
+msgid "Hungarian Scale and its modes - arpeged by thirds"
+msgstr ""
+
+#: lesson-files/sc-maj:10 lesson-files/sc-maj-name:10 learningtree.txt:165
+msgid "Major Scale and its modes"
+msgstr ""
+
+#: lesson-files/sc-maj-a:10
+msgid "Major Scale and its modes - Ascending"
+msgstr ""
+
+#: lesson-files/sc-maj-d:10
+msgid "Major Scale and its modes - Descending"
+msgstr ""
+
+#: lesson-files/sc-maj-elem:10
+msgid "Major scale and its modes - enter structure"
+msgstr ""
+
+#: lesson-files/sc-maj-f:10
+msgid "Major Scale and its modes - arpeged by fourths"
+msgstr ""
+
+#: lesson-files/sc-maj-g:10
+msgid "Major Scale and its modes - recognize grade"
+msgstr ""
+
+#: lesson-files/sc-maj-p:10
+msgid "Major Scale and its modes - patterns"
+msgstr ""
+
+#: lesson-files/sc-maj-px:10
+msgid "Major Scale and its modes - recognize with only few notes"
+msgstr ""
+
+#: lesson-files/sc-maj-px:11
+msgid "Three notes are enough to recognize the mode"
+msgstr ""
+
+#: lesson-files/sc-maj-s:10
+msgid "Major Scale and its modes - recognize structure"
+msgstr ""
+
+#: lesson-files/sc-maj-t:10
+msgid "Major Scale and its modes - arpeged by thirds"
+msgstr ""
+
+#: lesson-files/sc-mau:10
+msgid "More Scales used over a Major or Augmented chord"
+msgstr ""
+
+#: lesson-files/sc-mau-jazz:10
+msgid "Jazz Modes over a Major or Augmented chord"
+msgstr ""
+
+#: lesson-files/sc-mel:10 lesson-files/sc-mel-name:10 learningtree.txt:180
+msgid "Melodic Minor Scale and its modes"
+msgstr ""
+
+#: lesson-files/sc-mel-a:10
+msgid "Melodic Minor Scale and its modes - Ascending"
+msgstr ""
+
+#: lesson-files/sc-mel-d:10
+msgid "Melodic Minor Scale and its modes - Descending"
+msgstr ""
+
+#: lesson-files/sc-mel-elem:10
+msgid "Melodic Minor scale and its modes - enter structure"
+msgstr ""
+
+#: lesson-files/sc-mel-f:10
+msgid "Melodic Minor Scale and its modes - arpeged by fourths"
+msgstr ""
+
+#: lesson-files/sc-mel-g:10
+msgid "Melodic Minor Scale and its modes - recognize grade"
+msgstr ""
+
+#: lesson-files/sc-mel-p:10
+msgid "Melodic Minor Scale and its modes - patterns"
+msgstr ""
+
+#: lesson-files/sc-mel-s:10
+msgid "Melodic Minor Scale and its modes - recognize structure"
+msgstr ""
+
+#: lesson-files/sc-mel-t:10
+msgid "Melodic Minor Scale and its modes - arpeged by thirds"
+msgstr ""
+
+#: lesson-files/sc-min:10
+msgid "More Scales used over a Minor chord"
+msgstr ""
+
+#: lesson-files/sc-min-jazz:10
+msgid "Jazz Modes over a Minor chord"
+msgstr ""
+
+#: lesson-files/sc-nat-g:10
+msgid "Natural Minor Scale and its modes - recognize grade"
+msgstr ""
+
+#: lesson-files/sc-nea:10 lesson-files/sc-nea-name:10 learningtree.txt:233
+msgid "Neapolitan Scale and its modes"
+msgstr ""
+
+#: lesson-files/sc-nea-a:10
+msgid "Neapolitan Scale and its modes - Ascending"
+msgstr ""
+
+#: lesson-files/sc-nea-d:10
+msgid "Neapolitan Scale and its modes - Descending"
+msgstr ""
+
+#: lesson-files/sc-nea-elem:10
+msgid "Neapolitan scale and its modes - enter structure"
+msgstr ""
+
+#: lesson-files/sc-nea-f:10
+msgid "Neapolitan Scale and its modes - arpeged by fourths"
+msgstr ""
+
+#: lesson-files/sc-nea-g:10
+msgid "Neapolitan Scale and its modes - recognize grade"
+msgstr ""
+
+#: lesson-files/sc-nea-p:10
+msgid "Neapolitan Scale and its modes - patterns"
+msgstr ""
+
+#: lesson-files/sc-nea-s:10
+msgid "Neapolitan Scale and its modes - recognize structure"
+msgstr ""
+
+#: lesson-files/sc-nea-t:10
+msgid "Neapolitan Scale and its modes - arpeged by thirds"
+msgstr ""
+
+#: lesson-files/sc-nem:10 lesson-files/sc-nem-name:10
+msgid "Neapolitan Minor Scale and its modes"
+msgstr ""
+
+#: lesson-files/sc-nem-a:10
+msgid "Neapolitan Minor Scale and its modes - Ascending"
+msgstr ""
+
+#: lesson-files/sc-nem-d:10
+msgid "Neapolitan Minor Scale and its modes - Descending"
+msgstr ""
+
+#: lesson-files/sc-nem-elem:10
+msgid "Neapolitan Minor scale and its modes - enter structure"
+msgstr ""
+
+#: lesson-files/sc-nem-f:10
+msgid "Neapolitan Minor Scale and its modes - arpeged by fourths"
+msgstr ""
+
+#: lesson-files/sc-nem-g:10
+msgid "Neapolitan Minor Scale and its modes - recognize grade"
+msgstr ""
+
+#: lesson-files/sc-nem-p:10
+msgid "Neapolitan Minor Scale and its modes - patterns"
+msgstr ""
+
+#: lesson-files/sc-nem-s:10
+msgid "Neapolitan Minor Scale and its modes - recognize structure"
+msgstr ""
+
+#: lesson-files/sc-nem-t:10
+msgid "Neapolitan Minor Scale and its modes - arpeged by thirds"
+msgstr ""
+
+#: lesson-files/sc-pen:10 lesson-files/sc-pen-name:10 learningtree.txt:272
+msgid "Pentatonic Major Scale and its modes"
+msgstr ""
+
+#: lesson-files/sc-pen-a:10
+msgid "Pentatonic Major Scale and its modes - Ascending"
+msgstr ""
+
+#: lesson-files/sc-pen-d:10
+msgid "Pentatonic Major Scale and its modes - Descending"
+msgstr ""
+
+#: lesson-files/sc-pen-elem:10
+msgid "Pentatonic Major scale and its modes - enter structure"
+msgstr ""
+
+#: lesson-files/sc-pen-g:10
+msgid "Pentatonic Major Scale and its modes - recognize grade"
+msgstr ""
+
+#: lesson-files/sc-pen-s:10
+msgid "Pentatonic Major Scale and its modes - recognize structure"
+msgstr ""
+
+#: lesson-files/sc-plagal:10
+msgid "Plagal Modes"
+msgstr ""
+
+#: lesson-files/sc-sim:10 lesson-files/sc-sim-name:10
+msgid "Symmetric scales"
+msgstr ""
+
+#: lesson-files/sc-sim-a:10
+msgid "Symmetric scales - Ascending"
+msgstr ""
+
+#: lesson-files/sc-sim-d:10
+msgid "Symmetric scales - Descending"
+msgstr ""
+
+#: lesson-files/sc-sim-elem:10
+msgid "Symmetric Scales - enter structure"
+msgstr ""
+
+#: lesson-files/sc-sim-s:10
+msgid "Symmetric scales - recognize structure"
+msgstr ""
+
+#: lesson-files/singchord-1:8
+msgid "Major chords (singchord)"
+msgstr ""
+
+#: lesson-files/singchord-2:8
+#, fuzzy
+msgid "Major chords in different inversions"
+msgstr "Dúr, moll, domináns szeptim megfordításokkal"
+
+#: lesson-files/singchord-3:8
+#, fuzzy
+msgid "Major and minor chords in different inversions"
+msgstr "Dúr, moll, domináns szeptim megfordításokkal"
+
+#: lesson-files/singchord-4:8
+#, fuzzy
+msgid "Dominant 7th chords in root position"
+msgstr "Akkordok alaphelyzetben"
+
+#: lesson-files/singchord-5:8
+#, fuzzy
+msgid "Minor 7th chords in root position"
+msgstr "Akkordok alaphelyzetben"
+
+#: lesson-files/singchord-6:9
+#, fuzzy
+msgid "Major 7th chords in root position"
+msgstr "Akkordok alaphelyzetben"
+
+#: lesson-files/singchord-all:8
+msgid "All the questions from the singchord exercises"
+msgstr ""
+
+#: lesson-files/sing-intervals-self-config:8
+msgid "Sing intervals"
+msgstr "Hangközök éneklése"
+
+#: lesson-files/sing-the-fifth:9
+msgid "Sing the fifth of the chord"
+msgstr ""
+
+#: lesson-files/sing-the-root:9
+msgid "Sing the root of the chord"
+msgstr ""
+
+#: lesson-files/sing-the-seventh:9
+msgid "Sing the seventh of the chord"
+msgstr ""
+
+#: lesson-files/sing-the-third:9
+msgid "Sing the third of the chord"
+msgstr ""
+
+#: lesson-files/three-prog-root:9
+#, fuzzy
+msgid "Three chords, root position"
+msgstr "Akkordok alaphelyzetben"
+
+#: lesson-files/twelvetone:7
+#, fuzzy
+msgid "Sing twelve random tones"
+msgstr "Akkordok éneklése"
+
+#: lesson-files/include/sc-master:19
+#, fuzzy
+msgid "Major"
+msgstr "dúr"
+
+#: lesson-files/include/sc-master:20
+#, fuzzy
+msgid "Diatonic"
+msgstr "Diatonikus akkordok"
+
+#: lesson-files/include/sc-master:21
+#, fuzzy
+msgid "Greek Lydian"
+msgstr "Líd"
+
+#: lesson-files/include/sc-master:22
+#, fuzzy
+msgid "Hypolydian"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:58
+#, fuzzy
+msgid "Greek Phrygian"
+msgstr "Fríg"
+
+#: lesson-files/include/sc-master:59
+#, fuzzy
+msgid "Hypomixolydian"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:95
+msgid "Maqam Kurd"
+msgstr ""
+
+#: lesson-files/include/sc-master:96
+msgid "Major Inverse"
+msgstr ""
+
+#: lesson-files/include/sc-master:97
+#, fuzzy
+msgid "Greek Dorian"
+msgstr "Dór"
+
+#: lesson-files/include/sc-master:98
+#, fuzzy
+msgid "Hypoaeolian"
+msgstr "Eol"
+
+#: lesson-files/include/sc-master:134
+msgid "Greek Hypolydian"
+msgstr ""
+
+#: lesson-files/include/sc-master:135
+#, fuzzy
+msgid "Hypolocrian"
+msgstr "Lokriszi"
+
+#: lesson-files/include/sc-master:171
+msgid "Greek Hypophrygian"
+msgstr ""
+
+#: lesson-files/include/sc-master:172
+#, fuzzy
+msgid "Hypoionian"
+msgstr "Ión"
+
+#: lesson-files/include/sc-master:208
+msgid "Natural Minor"
+msgstr ""
+
+#: lesson-files/include/sc-master:209
+msgid "Ancient Minor"
+msgstr ""
+
+#: lesson-files/include/sc-master:210
+msgid "Pure Minor"
+msgstr ""
+
+#: lesson-files/include/sc-master:211
+msgid "Greek Hypodorian"
+msgstr ""
+
+#: lesson-files/include/sc-master:212
+#, fuzzy
+msgid "Hypodorian"
+msgstr "Dór"
+
+#: lesson-files/include/sc-master:248 lesson-files/include/sc-master:474
+#, fuzzy
+msgid "Half Diminished"
+msgstr "szûkített"
+
+#: lesson-files/include/sc-master:249
+#, fuzzy
+msgid "Greek Mixolydian"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:250
+#, fuzzy
+msgid "Hypophrygian"
+msgstr "Fríg"
+
+#: lesson-files/include/sc-master:289
+msgid "Jazz Minor"
+msgstr ""
+
+#: lesson-files/include/sc-master:290
+#, fuzzy
+msgid "Melodic Minor Ascending"
+msgstr "Bontott moll (?)"
+
+#: lesson-files/include/sc-master:291
+#, fuzzy
+msgid "Modern Minor"
+msgstr "Bontott moll (?)"
+
+#: lesson-files/include/sc-master:292
+msgid "Minor-Major"
+msgstr ""
+
+#: lesson-files/include/sc-master:293
+#, fuzzy
+msgid "Ipoionian"
+msgstr "Ión"
+
+#: lesson-files/include/sc-master:294
+#, fuzzy
+msgid "Ionian b3"
+msgstr "Ión"
+
+#: lesson-files/include/sc-master:295
+#, fuzzy
+msgid "Dorian maj7"
+msgstr "Dór"
+
+#: lesson-files/include/sc-master:328
+#, fuzzy
+msgid "Dorian b9"
+msgstr "Dór"
+
+#: lesson-files/include/sc-master:329
+msgid "Javanese"
+msgstr ""
+
+#: lesson-files/include/sc-master:330
+#, fuzzy
+msgid "Phrygian #6"
+msgstr "Fríg"
+
+#: lesson-files/include/sc-master:363
+#, fuzzy
+msgid "Lydian Augmented"
+msgstr "bõvített"
+
+#: lesson-files/include/sc-master:364
+#, fuzzy
+msgid "Lydian #5"
+msgstr "Líd"
+
+#: lesson-files/include/sc-master:397
+msgid "Lydian Dominant"
+msgstr ""
+
+#: lesson-files/include/sc-master:398
+#, fuzzy
+msgid "Lydian b7"
+msgstr "Líd"
+
+#: lesson-files/include/sc-master:399
+#, fuzzy
+msgid "Mixolydian #4"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:400
+#, fuzzy
+msgid "Mixolydian #11"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:401
+msgid "Overtone"
+msgstr ""
+
+#: lesson-files/include/sc-master:434
+#, fuzzy
+msgid "Mixolydian b13"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:435
+#, fuzzy
+msgid "MIxolydian b6"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:436
+msgid "Hindu"
+msgstr ""
+
+#: lesson-files/include/sc-master:437
+msgid "Hindustan"
+msgstr ""
+
+#: lesson-files/include/sc-master:438
+#, fuzzy
+msgid "Aeolian Dominant"
+msgstr "Eol"
+
+#: lesson-files/include/sc-master:439
+#, fuzzy
+msgid "Aeolian #3"
+msgstr "Eol"
+
+#: lesson-files/include/sc-master:472
+#, fuzzy
+msgid "Semilocrian"
+msgstr "Lokriszi"
+
+#: lesson-files/include/sc-master:473
+#, fuzzy
+msgid "Locrian #2"
+msgstr "Lokriszi"
+
+#: lesson-files/include/sc-master:475
+#, fuzzy
+msgid "Aeolian b5"
+msgstr "Eol"
+
+#: lesson-files/include/sc-master:476
+msgid "Locrian natural 2"
+msgstr ""
+
+#: lesson-files/include/sc-master:509
+#, fuzzy
+msgid "Superlocrian"
+msgstr "Lokriszi"
+
+#: lesson-files/include/sc-master:510
+#, fuzzy
+msgid "Altered"
+msgstr "Akkordváltozatok"
+
+#: lesson-files/include/sc-master:511
+#, fuzzy
+msgid "Ravel"
+msgstr "Mentés"
+
+#: lesson-files/include/sc-master:512
+#, fuzzy
+msgid "Diminished-WholeTone"
+msgstr ""
+"Szûkített\n"
+"kvint"
+
+#: lesson-files/include/sc-master:513
+#, fuzzy
+msgid "Locrian b4"
+msgstr "Lokriszi"
+
+#: lesson-files/include/sc-master:544
+#, fuzzy
+msgid "Melodic Minor A-D"
+msgstr "Bontott moll (?)"
+
+#: lesson-files/include/sc-master:559
+#, fuzzy
+msgid "Harmonic Minor"
+msgstr "Összhangzó moll (?) "
+
+#: lesson-files/include/sc-master:560
+msgid "Mohammedan"
+msgstr ""
+
+#: lesson-files/include/sc-master:561
+#, fuzzy
+msgid "Aeolian maj7"
+msgstr "Eol"
+
+#: lesson-files/include/sc-master:562
+#, fuzzy
+msgid "Melodic Minor b6"
+msgstr "Bontott moll (?)"
+
+#: lesson-files/include/sc-master:595
+#, fuzzy
+msgid "Locrian #6"
+msgstr "Lokriszi"
+
+#: lesson-files/include/sc-master:628
+#, fuzzy
+msgid "Ionian Augmented"
+msgstr "bõvített"
+
+#: lesson-files/include/sc-master:629
+#, fuzzy
+msgid "Ionian #5"
+msgstr "Ión"
+
+#: lesson-files/include/sc-master:662
+#, fuzzy
+msgid "Romanian"
+msgstr "Ión"
+
+#: lesson-files/include/sc-master:663
+#, fuzzy
+msgid "Dorian #4"
+msgstr "Dór"
+
+#: lesson-files/include/sc-master:664
+#, fuzzy
+msgid "Dorian #11"
+msgstr "Dór"
+
+#: lesson-files/include/sc-master:665
+msgid "Misheberakh"
+msgstr ""
+
+#: lesson-files/include/sc-master:698
+#, fuzzy
+msgid "Phrygian Dominant"
+msgstr "Fríg"
+
+#: lesson-files/include/sc-master:699
+#, fuzzy
+msgid "Phrygian Major"
+msgstr "Fríg"
+
+#: lesson-files/include/sc-master:700
+msgid "Balkan"
+msgstr ""
+
+#: lesson-files/include/sc-master:701
+msgid "Jewish"
+msgstr ""
+
+#: lesson-files/include/sc-master:702
+msgid "Spanish Gypsy"
+msgstr ""
+
+#: lesson-files/include/sc-master:703
+msgid "Ahava Rabah"
+msgstr ""
+
+#: lesson-files/include/sc-master:704
+#, fuzzy
+msgid "Mixolydian b2 b6"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:705
+#, fuzzy
+msgid "Mixolydian b9 b13"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:738
+#, fuzzy
+msgid "Lydian #2"
+msgstr "Líd"
+
+#: lesson-files/include/sc-master:771
+#, fuzzy
+msgid "Ultralocrian"
+msgstr "Lokriszi"
+
+#: lesson-files/include/sc-master:772
+msgid "Superlocrian bb7"
+msgstr ""
+
+#: lesson-files/include/sc-master:773
+#, fuzzy
+msgid "Diminished"
+msgstr "szûkített"
+
+#: lesson-files/include/sc-master:810
+#, fuzzy
+msgid "Harmonic Major"
+msgstr "Összhangzó moll (?) "
+
+#: lesson-files/include/sc-master:811
+#, fuzzy
+msgid "Ionian b6"
+msgstr "Ión"
+
+#: lesson-files/include/sc-master:844
+#, fuzzy
+msgid "Dorian b5"
+msgstr "Dór"
+
+#: lesson-files/include/sc-master:845
+#, fuzzy
+msgid "Locrian #2 #6"
+msgstr "Lokriszi"
+
+#: lesson-files/include/sc-master:878
+#, fuzzy
+msgid "Phrygian b4"
+msgstr "Fríg"
+
+#: lesson-files/include/sc-master:879
+#, fuzzy
+msgid "Superphrygian"
+msgstr "Fríg"
+
+#: lesson-files/include/sc-master:880
+msgid "Superlocrian natural 5"
+msgstr ""
+
+#: lesson-files/include/sc-master:913
+#, fuzzy
+msgid "Lydian b3"
+msgstr "Líd"
+
+#: lesson-files/include/sc-master:914
+msgid "Jazz Minor #4"
+msgstr ""
+
+#: lesson-files/include/sc-master:915
+msgid "Jazz Minor #11"
+msgstr ""
+
+#: lesson-files/include/sc-master:916
+#, fuzzy
+msgid "Lydian Diminished"
+msgstr "szûkített"
+
+#: lesson-files/include/sc-master:949
+#, fuzzy
+msgid "Mixolydian b9"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:950
+#, fuzzy
+msgid "Mixolydian b2"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:983
+#, fuzzy
+msgid "Lydian #2 #5"
+msgstr "Líd"
+
+#: lesson-files/include/sc-master:984
+#, fuzzy
+msgid "Lydian Augmented #2"
+msgstr "bõvített"
+
+#: lesson-files/include/sc-master:1017
+#, fuzzy
+msgid "Locrian bb7"
+msgstr "Lokriszi"
+
+#: lesson-files/include/sc-master:1018
+#, fuzzy
+msgid "Locrian diminished 7"
+msgstr "szûkített"
+
+#: lesson-files/include/sc-master:1055
+#, fuzzy
+msgid "Double Harmonic Major"
+msgstr "Összhangzó moll (?) "
+
+#: lesson-files/include/sc-master:1056
+#, fuzzy
+msgid "Double Harmonic"
+msgstr "Összhangzat "
+
+#: lesson-files/include/sc-master:1057
+#, fuzzy
+msgid "Ionian b2 b6"
+msgstr "Ión"
+
+#: lesson-files/include/sc-master:1058
+msgid "Bizantine"
+msgstr ""
+
+#: lesson-files/include/sc-master:1059
+msgid "Major Gipsy"
+msgstr ""
+
+#: lesson-files/include/sc-master:1060
+msgid "Charhargah"
+msgstr ""
+
+#: lesson-files/include/sc-master:1093
+#, fuzzy
+msgid "Lydian #2 #6"
+msgstr "Líd"
+
+#: lesson-files/include/sc-master:1126
+#, fuzzy
+msgid "Ultraphrygian"
+msgstr "Fríg"
+
+#: lesson-files/include/sc-master:1127
+#, fuzzy
+msgid "Phrygian b4 bb7"
+msgstr "Fríg"
+
+#: lesson-files/include/sc-master:1128
+msgid "Ultralocrian natural 5"
+msgstr ""
+
+#: lesson-files/include/sc-master:1161
+#, fuzzy
+msgid "Hungarian Minor"
+msgstr "Összhangzó moll (?) "
+
+#: lesson-files/include/sc-master:1162
+#, fuzzy
+msgid "Double Harmonic Minor"
+msgstr "Összhangzó moll (?) "
+
+#: lesson-files/include/sc-master:1163
+#, fuzzy
+msgid "Harmonic Minor #4"
+msgstr "Összhangzó moll (?) "
+
+#: lesson-files/include/sc-master:1164
+#, fuzzy
+msgid "Lydian b3 b6"
+msgstr "Líd"
+
+#: lesson-files/include/sc-master:1165
+#, fuzzy
+msgid "Algerian"
+msgstr "Eol"
+
+#: lesson-files/include/sc-master:1166
+msgid "Minor Gipsy"
+msgstr ""
+
+#: lesson-files/include/sc-master:1199
+msgid "Oriental"
+msgstr ""
+
+#: lesson-files/include/sc-master:1200
+#, fuzzy
+msgid "Mixolydian b5 b9"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:1201
+#, fuzzy
+msgid "Mixolydian b2 b5"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:1234
+#, fuzzy
+msgid "Ionian #2 #5"
+msgstr "Ión"
+
+#: lesson-files/include/sc-master:1235
+#, fuzzy
+msgid "Ionian Augmented #2"
+msgstr "bõvített"
+
+#: lesson-files/include/sc-master:1268
+#, fuzzy
+msgid "Locrian bb3 bb7"
+msgstr "Lokriszi"
+
+#: lesson-files/include/sc-master:1305
+#, fuzzy
+msgid "Neapolitan"
+msgstr "Eol"
+
+#: lesson-files/include/sc-master:1306
+msgid "Neapolitan Major"
+msgstr ""
+
+#: lesson-files/include/sc-master:1307
+msgid "Jazz Minor b2"
+msgstr ""
+
+#: lesson-files/include/sc-master:1340
+msgid "Leading Whole-Tone"
+msgstr ""
+
+#: lesson-files/include/sc-master:1341
+#, fuzzy
+msgid "Lydian #5 #6"
+msgstr "Líd"
+
+#: lesson-files/include/sc-master:1342
+#, fuzzy
+msgid "Lydian Augmented #6"
+msgstr "bõvített"
+
+#: lesson-files/include/sc-master:1375
+msgid "Lydian Augmented Dominant"
+msgstr ""
+
+#: lesson-files/include/sc-master:1376
+#, fuzzy
+msgid "Lydian #5 b7"
+msgstr "Líd"
+
+#: lesson-files/include/sc-master:1377
+#, fuzzy
+msgid "Mixolydian #4 #5"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:1378
+#, fuzzy
+msgid "Mixolydian #5 #11"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:1411
+msgid "Lydian Dominant b6"
+msgstr ""
+
+#: lesson-files/include/sc-master:1412
+#, fuzzy
+msgid "Lydian b6 b7"
+msgstr "Líd"
+
+#: lesson-files/include/sc-master:1413
+#, fuzzy
+msgid "Mixolydian #4 b6"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:1414
+#, fuzzy
+msgid "Mixolydian #11 b13"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:1415
+#, fuzzy
+msgid "Lydian Minor"
+msgstr "Líd"
+
+#: lesson-files/include/sc-master:1448
+#, fuzzy
+msgid "Major Locrian"
+msgstr "Lokriszi"
+
+#: lesson-files/include/sc-master:1449
+#, fuzzy
+msgid "Mixolydian b5 b6"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:1450
+#, fuzzy
+msgid "Mixolydian b5 b13"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:1451
+#, fuzzy
+msgid "Locrian #2 #3"
+msgstr "Lokriszi"
+
+#: lesson-files/include/sc-master:1452
+#, fuzzy
+msgid "Arabian"
+msgstr "Dór"
+
+#: lesson-files/include/sc-master:1485
+msgid "Semilocrian b4"
+msgstr ""
+
+#: lesson-files/include/sc-master:1486
+msgid "Locrian natural 2 b4"
+msgstr ""
+
+#: lesson-files/include/sc-master:1519
+msgid "Superlocrian bb3"
+msgstr ""
+
+#: lesson-files/include/sc-master:1556
+msgid "Neapolitan Minor"
+msgstr ""
+
+#: lesson-files/include/sc-master:1557
+msgid "Neapolitan Major b6"
+msgstr ""
+
+#: lesson-files/include/sc-master:1558
+#, fuzzy
+msgid "Harmonic Minor b2"
+msgstr "Összhangzó moll (?) "
+
+#: lesson-files/include/sc-master:1559
+#, fuzzy
+msgid "Phrygian maj7"
+msgstr "Fríg"
+
+#: lesson-files/include/sc-master:1592
+#, fuzzy
+msgid "Lydian #6"
+msgstr "Líd"
+
+#: lesson-files/include/sc-master:1625
+#, fuzzy
+msgid "Mixolydian Augmented"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:1626
+#, fuzzy
+msgid "Mixolydian #5"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:1659
+msgid "Hungarian Gipsy"
+msgstr ""
+
+#: lesson-files/include/sc-master:1660
+#, fuzzy
+msgid "Aeolian #4"
+msgstr "Eol"
+
+#: lesson-files/include/sc-master:1693
+#, fuzzy
+msgid "Locrian Dominant"
+msgstr "Lokriszi"
+
+#: lesson-files/include/sc-master:1694
+#, fuzzy
+msgid "Locrian #3"
+msgstr "Lokriszi"
+
+#: lesson-files/include/sc-master:1695
+msgid "Oriental b6"
+msgstr ""
+
+#: lesson-files/include/sc-master:1696
+#, fuzzy
+msgid "Mixolydian b5 b9 b13"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:1697
+#, fuzzy
+msgid "Mixolydian b2 b5 b6"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:1730
+#, fuzzy
+msgid "Ionian #2"
+msgstr "Ión"
+
+#: lesson-files/include/sc-master:1763
+msgid "Ultralocrian bb3"
+msgstr ""
+
+#: lesson-files/include/sc-master:1800
+msgid "Hungarian Major"
+msgstr ""
+
+#: lesson-files/include/sc-master:1801
+msgid "Hungarian"
+msgstr ""
+
+#: lesson-files/include/sc-master:1802
+msgid "Lydian Dominant #2"
+msgstr ""
+
+#: lesson-files/include/sc-master:1803
+#, fuzzy
+msgid "Lydian #2 b7"
+msgstr "Líd"
+
+#: lesson-files/include/sc-master:1804
+#, fuzzy
+msgid "Mixolydian #9 #11"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:1805
+#, fuzzy
+msgid "Mixolydian #2 #4"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:1838
+msgid "Superlocrian bb6 bb7"
+msgstr ""
+
+#: lesson-files/include/sc-master:1871
+#, fuzzy
+msgid "Harmonic Minor b5"
+msgstr "Összhangzó moll (?) "
+
+#: lesson-files/include/sc-master:1904
+msgid "Superlocrian #6"
+msgstr ""
+
+#: lesson-files/include/sc-master:1937
+msgid "Jazz Minor #5"
+msgstr ""
+
+#: lesson-files/include/sc-master:1970
+#, fuzzy
+msgid "Dorian b9 #11"
+msgstr "Dór"
+
+#: lesson-files/include/sc-master:2003
+#, fuzzy
+msgid "Lydian Augmented #3"
+msgstr "bõvített"
+
+#: lesson-files/include/sc-master:2004
+#, fuzzy
+msgid "Lydian #3 #5"
+msgstr "Líd"
+
+#: lesson-files/include/sc-master:2041
+msgid "Major Pentatonic"
+msgstr ""
+
+#: lesson-files/include/sc-master:2056
+msgid "Suspended Pentatonic"
+msgstr ""
+
+#: lesson-files/include/sc-master:2057
+msgid "Yo"
+msgstr ""
+
+#: lesson-files/include/sc-master:2058
+msgid "Egyptian"
+msgstr ""
+
+#: lesson-files/include/sc-master:2073
+msgid "Man Gong"
+msgstr ""
+
+#: lesson-files/include/sc-master:2088
+msgid "Ritusen"
+msgstr ""
+
+#: lesson-files/include/sc-master:2103
+msgid "Minor Pentatonic"
+msgstr ""
+
+#: lesson-files/include/sc-master:2124
+#, fuzzy
+msgid "Diminished W-H"
+msgstr "szûkített"
+
+#: lesson-files/include/sc-master:2125
+msgid "Wholestep-Halfstep"
+msgstr ""
+
+#: lesson-files/include/sc-master:2140
+msgid "Octatonic H-W"
+msgstr ""
+
+#: lesson-files/include/sc-master:2141
+msgid "Halfstep-Wholestep"
+msgstr ""
+
+#: lesson-files/include/sc-master:2156
+msgid "Whole Tone"
+msgstr ""
+
+#: lesson-files/include/sc-master:2157
+#, fuzzy
+msgid "Exatonic"
+msgstr "Tonika lejátszása"
+
+#: lesson-files/include/sc-master:2158
+msgid "Anemitonic"
+msgstr ""
+
+#: lesson-files/include/sc-master:2175
+#, fuzzy
+msgid "Augmented"
+msgstr "bõvített"
+
+#: lesson-files/include/sc-master:2190
+#, fuzzy
+msgid "Augmented Inverse"
+msgstr "bõvített"
+
+#: lesson-files/include/sc-master:2209
+msgid "Bebop Major"
+msgstr ""
+
+#: lesson-files/include/sc-master:2210
+#, fuzzy
+msgid "Bebop Ionian"
+msgstr "Ión"
+
+#: lesson-files/include/sc-master:2225
+msgid "Bebop Dominant"
+msgstr ""
+
+#: lesson-files/include/sc-master:2226
+#, fuzzy
+msgid "Bebop Mixolydian"
+msgstr "Mixolíd"
+
+#: lesson-files/include/sc-master:2241
+#, fuzzy
+msgid "Bebop Dorian"
+msgstr "Dór"
+
+#: lesson-files/include/sc-master:2256
+msgid "Bebop Minor"
+msgstr ""
+
+#: lesson-files/include/sc-master:2257
+#, fuzzy
+msgid "Bebop Melodic Minor"
+msgstr "Bontott moll (?)"
+
+#: lesson-files/include/sc-master:2272
+#, fuzzy
+msgid "Bebop Locrian"
+msgstr "Lokriszi"
+
+#: lesson-files/include/sc-master:2273
+#, fuzzy
+msgid "Bebop Halfdiminished"
+msgstr "szûkített"
+
+#: lesson-files/include/sc-master:2288
+msgid "Enigmatic"
+msgstr ""
+
+#: lesson-files/include/sc-master:2289
+msgid "Verdi's Enigmatic"
+msgstr ""
+
+#: lesson-files/include/sc-master:2306
+msgid "Blues"
+msgstr ""
+
+#: learningtree.txt:8
+#, fuzzy
+msgid "Ascending _melodic intervals"
+msgstr "Hangközfelbontások"
+
+#: learningtree.txt:26
+#, fuzzy
+msgid "_Descending melodic intervals"
+msgstr "Hangközfelbontások"
+
+#: learningtree.txt:44
+msgid "_Melodic intervals"
+msgstr "Hangközfelbontások"
+
+#: learningtree.txt:62
+msgid "_Harmonic intervals"
+msgstr "Együtthangzó hangközök"
+
+#: learningtree.txt:80
+msgid "_Sing intervals"
+msgstr "Hangközök éneklése"
+
+#: learningtree.txt:97
+#, fuzzy
+msgid "C_ompare harmonic intervals"
+msgstr "Együtthangzó hangközök"
+
+#: learningtree.txt:115
+#, fuzzy
+msgid "_Chords"
+msgstr "Tercek"
+
+#: learningtree.txt:118
+msgid "_Chords in root position"
+msgstr "Akkordok alaphelyzetben"
+
+#: learningtree.txt:132
+msgid "In_versions of chords"
+msgstr "Akkordok megfordításai"
+
+#: learningtree.txt:142
+msgid "S_ing chord"
+msgstr "Akkordok éneklése"
+
+#: learningtree.txt:153
+#, fuzzy
+msgid "Sing chord _tone"
+msgstr "Akkordok éneklése"
+
+#: learningtree.txt:162
+#, fuzzy
+msgid "_Scales"
+msgstr "Skálák"
+
+#: learningtree.txt:246
+msgid "Neapolitan Minor scale and its modes"
+msgstr ""
+
+#: learningtree.txt:291
+msgid "Symmetric Scales"
+msgstr ""
+
+#: learningtree.txt:300
+msgid "Scales Collections"
+msgstr ""
+
+#: learningtree.txt:319 learningtree.txt:322
+msgid "_Rhythm"
+msgstr "Ritmus"
+
+#: learningtree.txt:330
+msgid "Tap generated rhythm"
+msgstr ""
+
+#: learningtree.txt:338
+#, fuzzy
+msgid "_Misc"
+msgstr "Vegyes"
+
+#: learningtree.txt:341
+msgid "I_ntonation (require CSound)"
+msgstr "Intonáció (CSound-ot igényel)"
+
+#: learningtree.txt:352
+msgid "_Dictation"
+msgstr "Diktálás"
+
+#: learningtree.txt:374
+msgid "Misc _exercises"
+msgstr "Különbözõ gyakorlatok"
+
+#: learningtree.txt:380
+msgid "Configure yourself"
+msgstr "Beállítható gyakorlatok"
+
+#: learningtree.txt:393
+#, fuzzy
+msgid "Harmonic progressions"
+msgstr "Fokozatos összhangzat-diktálás"
+
+#: learningtree.txt:404
+#, fuzzy
+msgid "Name intervals"
+msgstr "Új hangköz"
+
+#: learningtree.txt:418
+#, fuzzy
+msgid "Name Scales"
+msgstr "Skálák"
+
+#~ msgid "Melodic down"
+#~ msgstr "Hangközfelbontás lefelé"
+
+#~ msgid "Melodic up/down"
+#~ msgstr "Hangközfelbontás fel/lefelé"
+
+#~ msgid "Delete topic"
+#~ msgstr "Téma törlése"
+
+#~ msgid "_Topics:"
+#~ msgstr "Témák:"
+
+#~ msgid "Delete lesson"
+#~ msgstr "Lecke törlése"
+
+#~ msgid "_Lessons in the topic '%s':"
+#~ msgstr "'%s' téma leckéi:"
+
+#~ msgid "No lessons in the topic '%s'."
+#~ msgstr "Nincsenek leckék '%s' témához."
+
+#~ msgid "Delete topic '%s'?"
+#~ msgstr "'%s' téma törlése?"
+
+#~ msgid "_Theory"
+#~ msgstr "Elmélet"
+
+#~ msgid "_Practise"
+#~ msgstr "Gyakorlás"
+
+#~ msgid "Written by"
+#~ msgstr "Írta"
+
+#~ msgid "Documented by"
+#~ msgstr "Dokumentációval ellátta"
+
+#~ msgid "Translated by"
+#~ msgstr "Fordította"
+
+#~ msgid "C_redits"
+#~ msgstr "Köszönet"
+
+#~ msgid "Only one chance to get the answer right"
+#~ msgstr "Csak egy lehetõség legyen a helyes válasz megadására"
+
+#~ msgid "_View"
+#~ msgstr "Nézet"
+
+#~ msgid "_Copyright notice"
+#~ msgstr "_Copyright megjegyzés"
+
+#~ msgid "Help viewer zoom in"
+#~ msgstr "A súgóablak kinagyítása"
+
+#~ msgid "Help viewer zoom out"
+#~ msgstr "A súgóablak kicsinyítése"
+
+#~ msgid "Help viewer zoom reset"
+#~ msgstr "A súgóablak alapméretre állítása"
+
+#~ msgid "GPL'ed ear training."
+#~ msgstr "GPL-es fülélesítés"
+
+#~ msgid ""
+#~ "This exercise doesn't work without GNOME.\n"
+#~ "It can pretty easy be converted to use Pixmap instead\n"
+#~ "of GnomeCanvas, but I (tca) don't have time to do this\n"
+#~ "right now. But I can answer questions if needed."
+#~ msgstr ""
+#~ "A gyakorlat nem mûködik GNOME nélkül.\n"
+#~ "Igen egyszerû lenne inkább Pixmap-ba konvertálni\n"
+#~ "a GnomeCanvas helyett, de nincs idõm ezt megtenni.\n"
+#~ "Felmerülõ kérdésekre szívesen válaszolok."
+
+#~ msgid "_All help files"
+#~ msgstr "Az összes súgó"
+
+#~ msgid "minor/major in close and open position"
+#~ msgstr "dúr/moll zárt és nyitott helyzetben"
+
+#~ msgid ""
+#~ "Because not all documents has been\n"
+#~ "<a href=\"translating-solfege.html\">translated</a>\n"
+#~ "to LANGUAGE yet, the links go to the english version for those\n"
+#~ "untranslated sections."
+#~ msgstr ""
+#~ "Mivel még nem minden dokumentum van\n"
+#~ "<a href=\"translating-solfege.html\">lefordítva</a>\n"
+#~ "magyarra, a linkek az angol verzióra mutatnak a lefordítatlan részeknél."
+
+#~ msgid "GNU Solfege"
+#~ msgstr "GNU Szolfézs"
+
+#~ msgid "Table of contents"
+#~ msgstr "Tartalomjegyzék"
+
+#~ msgid "Exercises"
+#~ msgstr "Gyakorlatok"
+
+#~ msgid "Extending and translating Solfege"
+#~ msgstr "A Szolfézs kiterjesztése és lefordítása"

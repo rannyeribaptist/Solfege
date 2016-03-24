@@ -1,0 +1,13 @@
+# GNU Solfege
+# Copyright (C) 2005, 2006, 2011 Tom Cato Amundsen
+
+header {
+    module=melodicinterval
+    ask_for_intervals_0=-5, -7, -12
+    disable_unused_intervals=yes
+    title = _("Fourths, fifths and octave")
+    theory = "theory-intervals"
+    lesson_id = "b0588df6-5b7a-4ff7-9f32-81c92d135bde"
+    test = "4x"
+    test_requirement = "90%"
+}

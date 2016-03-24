@@ -1,0 +1,28 @@
+
+header {
+    lesson_id = "5fcfe21b-8331-4a94-bfd2-01e4d1998ded"
+    title = "Test play_mediafile"
+    module = idbyname
+}
+
+question {
+    name = "MIDI"
+    music = midifile("../lesson-files/share/fanfare.midi")
+}
+
+question {
+    name = "OGG"
+    music = oggfile("../lesson-files/share/fanfare.ogg")
+}
+
+question {
+    name = "Mp3"
+    music = mp3file("../lesson-files/share/fanfare.mp3")
+}
+
+question {
+    name = "WAV"
+    music = wavfile("../lesson-files/share/fanfare.wav")
+}
+
+

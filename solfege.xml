@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://www.solfege.org/zeroinstall/solfege.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>solfege</name>
+  <summary>free ear training software</summary>
+  <description>
+Solfege is a free ear training program written in Python using gtk+ and PyGtk.
+Solfege is expected to work on any OS where Python, gtk+ and pygtk are ported,
+but some adjustments might be necessary</description>
+  <homepage>http://www.solfege.org</homepage>
+  <icon href="http://www.solfege.org/favicon.ico" type="image/png"/>
+  <category>Education</category>
+<implementation arch="Linux-x86_64" id="sha1new=de36053b9cf49155f3c154fd64a67a89bfc03347" license="OSI Approved :: GNU General Public License v3" main="bin/solfege" released="2011-05-14" stability="developer" version="3.19.8">
+  <manifest-digest sha256="d1c284f1fe8cf3de09e780079f0912f6487858b8dc1485ff92fd7898f44978bf"/>
+  <archive href="http://solfege.org/zeroinstall/solfege-0install-3.19.8.tar.gz" size="4328053"/>
+</implementation>
+<implementation arch="Linux-i386" id="sha1new=e92ef3b6508e7d6dc5a350bd94bd79b0d6c011d8" license="OSI Approved :: GNU General Public License v3" main="bin/solfege" released="2011-05-22" stability="developer" version="3.19.9">
+  <manifest-digest sha256="4020c8785113d630a45e907805022ddbee5dadeba3559b8883ff4968d5a998e0"/>
+  <archive href="http://solfege.org/zeroinstall/solfege-0install-x86-3.19.9.tar.gz" size="5341513"/>
+</implementation>
+<implementation arch="Linux-x86_64" id="sha1new=2634d75cf811b31f5a5e00a124d7ef5a628602c6" license="OSI Approved :: GNU General Public License v3" main="bin/solfege" released="2011-05-22" stability="developer" version="3.19.9">
+  <manifest-digest sha256="dc5774a43284646c8d7cccbf30fca3704d0641cff405788d4c6f9c5a187e1b32"/>
+  <archive href="http://solfege.org/zeroinstall/solfege-0install-3.19.9.tar.gz" size="5322531"/>
+</implementation>
+<implementation arch="Linux-x86_64" id="sha1new=d26afcf8706a34800ab51abea07cc7aa92058c37" license="OSI Approved :: GNU General Public License v3" main="solfege-3.20.0-Linux-x86_64/bin/solfege" released="2011-06-17" stability="stable" version="3.20.0">
+  <manifest-digest sha256="20376caa3ab8c545bdf36006ee8d6bc860aaaade3b4b6ae45be83681f4d84f6e"/>
+  <archive href="http://heanet.dl.sourceforge.net/project/solfege/solfege-stable/3.20.0/0install/solfege-3.20.0-Linux-x86_64.tar.gz" size="4561819"/>
+</implementation>
+<implementation arch="Linux-i386" id="sha1new=5318c08999674a0ee427afa1dd3966664a44fe1a" license="OSI Approved :: GNU General Public License v3" main="solfege-3.20.0-Linux-i386/bin/solfege" released="2011-06-17" stability="stable" version="3.20.0">
+  <manifest-digest sha256="a373094b4e42f118925ae1b7ecad9622e16d3b8652407a327bfd6a5a39d545f8"/>
+  <archive href="http://heanet.dl.sourceforge.net/project/solfege/solfege-stable/3.20.0/0install/solfege-3.20.0-Linux-i386.tar.gz" size="4939889"/>
+</implementation>
+<implementation arch="Linux-x86_64" id="sha1new=41a13adcc06072067905d770c2618d833e0e84b1" license="OSI Approved :: GNU General Public License v3" main="solfege-3.20.1-Linux-x86_64/bin/solfege" released="2011-07-09" stability="stable" version="3.20.1">
+  <manifest-digest sha256="f201390bc44b36653a967f6e881b27c9ffa9130a4932137500e595513626ffbd"/>
+  <archive href="http://heanet.dl.sourceforge.net/project/solfege/solfege-stable/3.20.1/0install/solfege-3.20.1-Linux-x86_64.tar.gz" size="4949226"/>
+</implementation>
+<implementation arch="Linux-i386" id="sha1new=bcdb84e7d680ed911147f227e3614cbc306bfde7" license="OSI Approved :: GNU General Public License v3" main="solfege-3.20.1-Linux-i386/bin/solfege" released="2011-07-09" stability="stable" version="3.20.1">
+  <manifest-digest sha256="5b89d2c0168923f73d8aae3279076456bb03ab04fe481f47d4775f8d489fca50"/>
+  <archive href="http://heanet.dl.sourceforge.net/project/solfege/solfege-stable/3.20.1/0install/solfege-3.20.1-Linux-i386.tar.gz" size="4941025"/>
+</implementation>
+<implementation arch="Linux-x86_64" id="sha1new=b358158b7df6c20245a50128f41f9a6329a837ec" license="OSI Approved :: GNU General Public License v3" main="solfege-3.20.2-Linux-x86_64/bin/solfege" released="2011-09-11" stability="stable" version="3.20.2">
+  <manifest-digest sha256="3371b3fe5a1ce75e85465ee8800a29b2fb842c9921961f5cde426212858342af"/>
+  <archive href="http://heanet.dl.sourceforge.net/project/solfege/solfege-stable/3.20.2/0install/solfege-3.20.2-Linux-x86_64.tar.gz" size="5075275"/>
+</implementation>
+<implementation arch="Linux-i386" id="sha1new=6d0706d461fb3f8e25870c3208d66ebd377160c4" license="OSI Approved :: GNU General Public License v3" main="solfege-3.20.2-Linux-i386/bin/solfege" released="2011-09-11" stability="stable" version="3.20.2">
+  <manifest-digest sha256="8de81b340eb03674883b9b4141407b33068246b6059242a10da0eb15a82c20b4"/>
+  <archive href="http://heanet.dl.sourceforge.net/project/solfege/solfege-stable/3.20.2/0install/solfege-3.20.2-Linux-i386.tar.gz" size="5065976"/>
+</implementation>
+<implementation arch="Linux-x86_64" id="sha1new=a82a7a75094846f5f6fa6fc3b0c7b8e5d608213b" license="OSI Approved :: GNU General Public License v3" main="solfege-3.20.3-Linux-x86_64/bin/solfege" released="2011-09-25" stability="stable" version="3.20.3">
+  <manifest-digest sha256="5e6bcdb05add5c907ebbe0dea8812ca7ca4dfe443d4c39124d53bcb2e1e91798"/>
+  <archive href="http://heanet.dl.sourceforge.net/project/solfege/solfege-stable/3.20.3/0install/solfege-3.20.3-Linux-x86_64.tar.gz" size="5182894"/>
+</implementation>
+<implementation arch="Linux-i386" id="sha1new=2a0c926a28bb2dad7b12c3439d8076de8c1c725d" license="OSI Approved :: GNU General Public License v3" main="solfege-3.20.3-Linux-i386/bin/solfege" released="2011-09-25" stability="stable" version="3.20.3">
+  <manifest-digest sha256="bfe3f865b744216a3294dac78e795e2b63f5f81aacf14bc3b94d131bf2eaf13e"/>
+  <archive href="http://heanet.dl.sourceforge.net/project/solfege/solfege-stable/3.20.3/0install/solfege-3.20.3-Linux-i386.tar.gz" size="5178568"/>
+</implementation>
+<implementation arch="Linux-x86_64" id="sha1new=5d8592f4fdeb32c3622648e1e3f23f7fb90d0e96" license="OSI Approved :: GNU General Public License v3" main="solfege-3.20.4-Linux-x86_64/bin/solfege" released="2011-10-21" stability="stable" version="3.20.4">
+  <manifest-digest sha256="7d7d2442b90c58b6f4c54d460438ea0ef9c58786119e32f211a050296583d15a"/>
+  <archive href="http://heanet.dl.sourceforge.net/project/solfege/solfege-stable/3.20.4/0install/solfege-3.20.4-Linux-x86_64.tar.gz" size="5184986"/>
+</implementation>
+<implementation arch="Linux-i386" id="sha1new=d8862ee0061b3605bf205617d06df0223c2f3b10" license="OSI Approved :: GNU General Public License v3" main="solfege-3.20.4-Linux-i386/bin/solfege" released="2011-10-21" stability="stable" version="3.20.4">
+  <manifest-digest sha256="d4c2fd682d05cf96139408d13ba73b0016c832167aa6e3e254e6017ceab4f6fd"/>
+  <archive href="http://heanet.dl.sourceforge.net/project/solfege/solfege-stable/3.20.4/0install/solfege-3.20.4-Linux-i386.tar.gz" size="5181564"/>
+</implementation>
+<implementation arch="Linux-x86_64" id="sha1new=49c1b417b1ce58915e5bc5667cf36df5f39da2f3" license="OSI Approved :: GNU General Public License v3" main="solfege-3.21.1-Linux-x86_64/bin/solfege" released="2012-02-02" stability="developer" version="3.21.1">
+  <manifest-digest sha256="cdffc9fef82f30efcc77d36dbcb811b2f737de5a1c0ceb6470d9ee0f017a1e8b"/>
+  <archive href="http://heanet.dl.sourceforge.net/project/solfege/solfege-unstable/3.21.1/0install/solfege-3.21.1-Linux-x86_64.tar.gz" size="5069261"/>
+</implementation>
+<implementation arch="Linux-i386" id="sha1new=4180bbb657042eb9096a8fbd5ab1e3bd43ddb773" license="OSI Approved :: GNU General Public License v3" main="solfege-3.21.1-Linux-i386/bin/solfege" released="2012-02-02" stability="developer" version="3.21.1">
+  <manifest-digest sha256="6443c8224d8d3248b385ae774fbc458562ec7f157295fc79354b4a755def3a9a"/>
+  <archive href="http://heanet.dl.sourceforge.net/project/solfege/solfege-unstable/3.21.1/0install/solfege-3.21.1-Linux-i386.tar.gz" size="5069594"/>
+</implementation>
+<implementation arch="Linux-x86_64" id="sha1new=c85bdacc74efa5cab38c6a8482ff762320cfe248" license="OSI Approved :: GNU General Public License v3" main="solfege-3.21.2-Linux-x86_64/bin/solfege" released="2012-03-18" stability="developer" version="3.21.2">
+  <manifest-digest sha256="8ccb4309133ba413a6c59d697e3769c32d08d41cf267268ef2fee1735dc01111"/>
+  <archive href="http://heanet.dl.sourceforge.net/project/solfege/solfege-unstable/3.21.2/0install/solfege-3.21.2-Linux-x86_64.tar.gz" size="5082092"/>
+</implementation>
+<implementation arch="Linux-i386" id="sha1new=aa20a0a2dd737a9306bf6146161f91fc1ea5560b" license="OSI Approved :: GNU General Public License v3" main="solfege-3.21.2-Linux-i386/bin/solfege" released="2012-03-18" stability="developer" version="3.21.2">
+  <manifest-digest sha256="d0a66a17cc248525e2c9aa127d62c538acfe88279836837af0418e581d641103"/>
+  <archive href="http://heanet.dl.sourceforge.net/project/solfege/solfege-unstable/3.21.2/0install/solfege-3.21.2-Linux-i386.tar.gz" size="5080656"/>
+</implementation></interface>
+<!-- Base64 Signature
+iEYEABECAAYFAk9mPnUACgkQgUP37qXkPqP37wCeOXL174cOkvkWfet8Y4Dgm1xSWxAAnRXgwEo/
+34v2JrbeYNRuwe+ynj8i
+
+-->

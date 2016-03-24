@@ -1,0 +1,12 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+
+header {
+    lesson_id = "e56b8435-20e2-4de2-96ca-4755779cfbd1"
+    module=harmonicinterval
+    intervals=1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+    title = _("Second to octave")
+    theory = "theory-intervals"
+    test = "2x"
+    test_requirement = "100%"
+}

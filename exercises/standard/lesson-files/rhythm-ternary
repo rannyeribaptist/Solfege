@@ -1,0 +1,11 @@
+# GNU Solfege
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+
+header {
+    lesson_id = "01640063-42fc-4154-83e7-7167d586b728"
+    module=rhythm
+    rhythm_elements=22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34
+    title = _("Rhythms in 3/8")
+    bpm=80
+    count_in_notelen="4."
+}

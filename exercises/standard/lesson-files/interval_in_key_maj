@@ -1,0 +1,274 @@
+# -*- coding: utf-8 -*-
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2011  Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+# AUTHOR: Tarmo Johannes tarmo@otsakool.edu.ee
+# The exercise plays tonic chord and then an interval in that key. User should enter the name of the interval an guess (write down on paper) the notes.
+
+header {
+    lesson_id = "intervals_in_major"
+	labelformat = progression
+    module = harmonicprogressiondictation
+    title = _("Interval in a key (major)")
+    title[et] = "Intervall helistikus (mažoor)"
+   # help = "intervall-helistikus"
+    lesson_heading = "Määrake intervall, mis kõlab peale toonikaakordi"
+    
+	
+}
+
+
+tempo = 60/4
+
+
+
+
+# 1) SEKUNDID / SECONDS: v2 - väike sekund / minor second,  s2- suur sekund / major second
+
+
+question {
+   name = _("m2")
+   name[et] = "v2"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <e f>  } "  
+}
+
+question {
+   name = _("m2")
+   name[et] = "v2"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <b' c>  } "  
+}
+
+
+question {
+ name = _("M2")
+ name[et] = "s2"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <c d>  } "  
+}
+
+
+question {
+ name = _("M2")
+ name[et] = "s2"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <d e>  } "  
+}
+
+
+question {
+ name = _("M2")
+ name[et] = "s2"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <f g>  } "  
+}
+
+
+question {
+name = _("M2")
+ name[et] = "s2"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <g' a>  } "  
+}
+
+
+question {
+ name = _("M2")
+ name[et] = "s2"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <a' b>  } "  
+}
+
+
+# Tertsid / Thirds: s3 - major 3rd v3 - minor third
+
+question {
+ name = _("m3")
+ name[et] = "v3"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <d f>  } "  
+}
+
+question {
+ name = _("m3")
+ name[et] = "v3"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <e g>  } "  
+}
+
+question {
+ name = _("m3")
+ name[et] = "v3"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <a' c>  } "  
+}
+
+
+question {
+ name = _("M3")
+ name[et] = "s3"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <c e>  } "  
+}
+
+
+question {
+ name = _("M3")
+ name[et] = "s3"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <f a>  } "  
+}
+
+question {
+ name = _("M3")
+ name[et] = "s3"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <g' b>  } "  
+}
+
+
+# Kvardid / Fourth: p4 - perfect fourth <4 - augmented fourth
+
+question {
+  name = _("4")
+ name[et] = "p4"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <c f>  } "  
+}
+
+question {
+ name = _("4")
+ name[et] = "p4"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <d g>  } "  
+}
+
+question {
+  name = _("4")
+  name[et] = "p4"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <e a>  } "  
+}
+
+
+question {
+ name = _("4")
+ name[et] = "p4"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <g' c>  } "  
+}
+
+question {
+  name = _("a4")
+  name[et] = "<4"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <f b>  } "  
+}
+
+# Kvindid - Fifth: p5 - perfect fifth, >5 - diminished fifth
+
+question {
+ name = _("5")
+ name[et] = "p5"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <c g'>  } "  
+}
+
+
+question {
+ name = _("5")
+ name[et] = "p5"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <d a'>  } "  
+}
+
+question {
+ name = _("5")
+ name[et] = "p5"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <e b'>  } "  
+}
+
+question {
+ name = _("d5")
+ name[et] = ">5"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <b f'>  } "  
+}
+
+
+# Sekstid / Sixths: v6 - minor 6, s6 - major 6
+
+question {
+ name = _("m6")
+ name[et] = "v6"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <e c'>  } "  
+}
+
+question {
+ name = _("m6")
+ name[et] = "v6"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <a f'>  } "  
+}
+
+
+question {
+ name = _("M6")
+ name[et] = "s6"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <c a'>  } "  
+}
+
+question {
+ name = _("M6")
+ name[et] = "s6"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <d b'>  } "  
+}
+
+
+# Septimid / Sevenths: v7 - minor 7, s6 - major 7
+
+question {
+ name = _("m7")
+ name[et] = "v7"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <d c'>  } "  
+}
+
+
+question {
+ name = _("m7")
+ name[et] = "v7"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <e d'>  } "  
+}
+
+question {
+ name = _("m7")
+ name[et] = "v7"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <g f'>  } "  
+}
+
+
+
+question {
+ name = _("M7")
+ name[et] = "s7"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <c b'>  } "  
+}
+
+
+question {
+ name = _("M7")
+ name[et] = "s7"
+	tonic = chord("c e' g' c''")
+	"\staff \relative c' { <c1 e g c>  <f e'>  } "  
+}
+

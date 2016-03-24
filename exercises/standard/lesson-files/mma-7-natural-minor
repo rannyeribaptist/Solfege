@@ -1,0 +1,4548 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2011  Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+include("include/mma-grooves")
+
+header {
+    lesson_id = "mma-huge-7-minor"
+    module = elembuilder
+    replaces = "ef982354051b74c9ea7c15c2ecf0976784b07a9b"
+    title = _("7 chords in natural minor mode")
+    lesson_heading = _("Enter the harmonic progression")
+    elements = auto
+    have_music_displayer = no
+}
+
+voicing = load("include/solfege-voicing.mma")
+
+question {
+    name = rnc("I-III-VI-IV-II-V-I")
+    elements = "I", "III", "VI", "IV", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ab
+4   Fm
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-III-IV-V-II-I")
+    elements = "I", "V", "III", "IV", "V", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Eb
+4   Fm
+5   Gm
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-III-II-IV-V-I")
+    elements = "I", "VI", "III", "II", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Eb
+4   Ddim
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-IV-V-IV-VI-I")
+    elements = "I", "VI", "IV", "V", "IV", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Fm
+4   Gm
+5   Fm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-V-VI-IV-V-I")
+    elements = "I", "VI", "V", "VI", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Gm
+4   Ab
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-IV-V-III-VI-I")
+    elements = "I", "II", "IV", "V", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Fm
+4   Gm
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-III-VI-II-V-I")
+    elements = "I", "VI", "III", "VI", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Eb
+4   Ab
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-VI-IV-V-VI-I")
+    elements = "I", "II", "VI", "IV", "V", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Ab
+4   Fm
+5   Gm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-III-VI-II-V-I")
+    elements = "I", "IV", "III", "VI", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Eb
+4   Ab
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-II-V-VI-V-I")
+    elements = "I", "VI", "II", "V", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Ddim
+4   Gm
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-III-VI-IV-V-I")
+    elements = "I", "V", "III", "VI", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Eb
+4   Ab
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-V-VI-II-V-I")
+    elements = "I", "III", "V", "VI", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Gm
+4   Ab
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-IV-VI-II-VI-I")
+    elements = "I", "VI", "IV", "VI", "II", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Fm
+4   Ab
+5   Ddim
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-VI-V-III-VI-I")
+    elements = "I", "IV", "VI", "V", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ab
+4   Gm
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-VI-III-II-V-I")
+    elements = "I", "IV", "VI", "III", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ab
+4   Eb
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-VI-V-IV-V-I")
+    elements = "I", "II", "VI", "V", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Ab
+4   Gm
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-II-V-III-V-I")
+    elements = "I", "IV", "II", "V", "III", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ddim
+4   Gm
+5   Eb
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-II-VI-IV-V-I")
+    elements = "I", "III", "II", "VI", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ddim
+4   Ab
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-VI-IV-II-VI-I")
+    elements = "I", "V", "VI", "IV", "II", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ab
+4   Fm
+5   Ddim
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-VI-V-IV-V-I")
+    elements = "I", "III", "VI", "V", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ab
+4   Gm
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-II-VI-V-IV-I")
+    elements = "I", "V", "II", "VI", "V", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ddim
+4   Ab
+5   Gm
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-III-VI-II-V-I")
+    elements = "I", "V", "III", "VI", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Eb
+4   Ab
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-II-V-IV-VI-I")
+    elements = "I", "V", "II", "V", "IV", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ddim
+4   Gm
+5   Fm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-II-V-IV-V-I")
+    elements = "I", "IV", "II", "V", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ddim
+4   Gm
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-VI-III-IV-V-I")
+    elements = "I", "III", "VI", "III", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ab
+4   Eb
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-IV-II-V-I")
+    elements = "I", "IV", "V", "IV", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Fm
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-II-V-IV-V-I")
+    elements = "I", "VI", "II", "V", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Ddim
+4   Gm
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-VI-II-IV-V-I")
+    elements = "I", "III", "VI", "II", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ab
+4   Ddim
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-IV-III-VI-V-I")
+    elements = "I", "V", "IV", "III", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Fm
+4   Eb
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-IV-II-IV-I")
+    elements = "I", "IV", "V", "IV", "II", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Fm
+5   Ddim
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-II-III-VI-V-I")
+    elements = "I", "VI", "II", "III", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Ddim
+4   Eb
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-VI-III-VI-V-I")
+    elements = "I", "II", "VI", "III", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Ab
+4   Eb
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-III-IV-VI-IV-I")
+    elements = "I", "V", "III", "IV", "VI", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Eb
+4   Fm
+5   Ab
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-VI-IV-VI-V-I")
+    elements = "I", "V", "VI", "IV", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ab
+4   Fm
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-III-VI-IV-V-I")
+    elements = "I", "VI", "III", "VI", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Eb
+4   Ab
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-IV-VI-III-V-I")
+    elements = "I", "VI", "IV", "VI", "III", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Fm
+4   Ab
+5   Eb
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-VI-II-V-I")
+    elements = "I", "IV", "V", "VI", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Ab
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-III-V-IV-VI-I")
+    elements = "I", "VI", "III", "V", "IV", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Eb
+4   Gm
+5   Fm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-IV-II-V-VI-I")
+    elements = "I", "III", "IV", "II", "V", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Fm
+4   Ddim
+5   Gm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-V-VI-III-V-I")
+    elements = "I", "VI", "V", "VI", "III", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Gm
+4   Ab
+5   Eb
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-III-IV-III-VI-I")
+    elements = "I", "VI", "III", "IV", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Eb
+4   Fm
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-V-II-VI-V-I")
+    elements = "I", "II", "V", "II", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Gm
+4   Ddim
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-III-II-VI-II-I")
+    elements = "I", "V", "III", "II", "VI", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Eb
+4   Ddim
+5   Ab
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-III-VI-II-V-I")
+    elements = "I", "II", "III", "VI", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Eb
+4   Ab
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-VI-V-II-V-I")
+    elements = "I", "III", "VI", "V", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ab
+4   Gm
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-II-III-II-VI-I")
+    elements = "I", "IV", "II", "III", "II", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ddim
+4   Eb
+5   Ddim
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-IV-III-IV-V-I")
+    elements = "I", "V", "IV", "III", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Fm
+4   Eb
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-IV-II-VI-V-I")
+    elements = "I", "III", "IV", "II", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Fm
+4   Ddim
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-III-VI-V-I")
+    elements = "I", "IV", "V", "III", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Eb
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-III-VI-II-VI-I")
+    elements = "I", "VI", "III", "VI", "II", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Eb
+4   Ab
+5   Ddim
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-III-V-III-VI-I")
+    elements = "I", "IV", "III", "V", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Eb
+4   Gm
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-II-V-VI-V-I")
+    elements = "I", "V", "II", "V", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ddim
+4   Gm
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-VI-III-VI-IV-I")
+    elements = "I", "V", "VI", "III", "VI", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ab
+4   Eb
+5   Ab
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-VI-V-II-V-I")
+    elements = "I", "II", "VI", "V", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Ab
+4   Gm
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-IV-III-V-I")
+    elements = "I", "IV", "V", "IV", "III", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Fm
+5   Eb
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-III-V-II-VI-I")
+    elements = "I", "IV", "III", "V", "II", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Eb
+4   Gm
+5   Ddim
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-II-V-III-VI-I")
+    elements = "I", "V", "II", "V", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ddim
+4   Gm
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-VI-II-V-II-I")
+    elements = "I", "III", "VI", "II", "V", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ab
+4   Ddim
+5   Gm
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-II-III-V-VI-I")
+    elements = "I", "VI", "II", "III", "V", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Ddim
+4   Eb
+5   Gm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-II-V-IV-V-I")
+    elements = "I", "V", "II", "V", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ddim
+4   Gm
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-III-II-V-IV-I")
+    elements = "I", "IV", "III", "II", "V", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Eb
+4   Ddim
+5   Gm
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-VI-II-VI-V-I")
+    elements = "I", "V", "VI", "II", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ab
+4   Ddim
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-VI-II-VI-IV-I")
+    elements = "I", "V", "VI", "II", "VI", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ab
+4   Ddim
+5   Ab
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-VI-III-V-IV-I")
+    elements = "I", "V", "VI", "III", "V", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ab
+4   Eb
+5   Gm
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-VI-III-IV-V-I")
+    elements = "I", "IV", "VI", "III", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ab
+4   Eb
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-IV-II-V-IV-I")
+    elements = "I", "VI", "IV", "II", "V", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Fm
+4   Ddim
+5   Gm
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-IV-V-VI-V-I")
+    elements = "I", "VI", "IV", "V", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Fm
+4   Gm
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-IV-II-VI-V-I")
+    elements = "I", "VI", "IV", "II", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Fm
+4   Ddim
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-V-VI-II-V-I")
+    elements = "I", "VI", "V", "VI", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Gm
+4   Ab
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-IV-III-II-V-I")
+    elements = "I", "III", "IV", "III", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Fm
+4   Eb
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-II-IV-III-V-I")
+    elements = "I", "VI", "II", "IV", "III", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Ddim
+4   Fm
+5   Eb
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-VI-II-VI-V-I")
+    elements = "I", "IV", "VI", "II", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ab
+4   Ddim
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-VI-III-II-V-I")
+    elements = "I", "V", "VI", "III", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ab
+4   Eb
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-IV-VI-IV-V-I")
+    elements = "I", "V", "IV", "VI", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Fm
+4   Ab
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-II-V-III-V-I")
+    elements = "I", "VI", "II", "V", "III", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Ddim
+4   Gm
+5   Eb
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-VI-II-V-II-I")
+    elements = "I", "IV", "VI", "II", "V", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ab
+4   Ddim
+5   Gm
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-V-III-VI-V-I")
+    elements = "I", "II", "V", "III", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Gm
+4   Eb
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-IV-V-II-V-I")
+    elements = "I", "V", "IV", "V", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Fm
+4   Gm
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-IV-V-IV-II-I")
+    elements = "I", "III", "IV", "V", "IV", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Fm
+4   Gm
+5   Fm
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-VI-III-IV-V-I")
+    elements = "I", "V", "VI", "III", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ab
+4   Eb
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-III-IV-II-VI-I")
+    elements = "I", "VI", "III", "IV", "II", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Eb
+4   Fm
+5   Ddim
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-V-III-II-V-I")
+    elements = "I", "VI", "V", "III", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Gm
+4   Eb
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-II-VI-III-VI-I")
+    elements = "I", "IV", "II", "VI", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ddim
+4   Ab
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-V-III-IV-V-I")
+    elements = "I", "II", "V", "III", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Gm
+4   Eb
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-II-VI-IV-V-I")
+    elements = "I", "VI", "II", "VI", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Ddim
+4   Ab
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-V-IV-VI-IV-I")
+    elements = "I", "II", "V", "IV", "VI", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Gm
+4   Fm
+5   Ab
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-III-VI-II-VI-I")
+    elements = "I", "V", "III", "VI", "II", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Eb
+4   Ab
+5   Ddim
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-IV-VI-V-VI-I")
+    elements = "I", "VI", "IV", "VI", "V", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Fm
+4   Ab
+5   Gm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-VI-V-II-V-I")
+    elements = "I", "IV", "VI", "V", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ab
+4   Gm
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-II-VI-III-II-I")
+    elements = "I", "VI", "II", "VI", "III", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Ddim
+4   Ab
+5   Eb
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-II-IV-III-VI-I")
+    elements = "I", "VI", "II", "IV", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Ddim
+4   Fm
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-II-VI-IV-VI-I")
+    elements = "I", "VI", "II", "VI", "IV", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Ddim
+4   Ab
+5   Fm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-V-VI-IV-VI-I")
+    elements = "I", "III", "V", "VI", "IV", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Gm
+4   Ab
+5   Fm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-V-IV-VI-V-I")
+    elements = "I", "II", "V", "IV", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Gm
+4   Fm
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-VI-II-VI-V-I")
+    elements = "I", "III", "VI", "II", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ab
+4   Ddim
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-II-VI-V-VI-I")
+    elements = "I", "VI", "II", "VI", "V", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Ddim
+4   Ab
+5   Gm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-II-VI-II-V-I")
+    elements = "I", "IV", "II", "VI", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ddim
+4   Ab
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-V-IV-II-V-I")
+    elements = "I", "VI", "V", "IV", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Gm
+4   Fm
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-V-VI-IV-V-I")
+    elements = "I", "II", "V", "VI", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Gm
+4   Ab
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-IV-II-IV-V-I")
+    elements = "I", "V", "IV", "II", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Fm
+4   Ddim
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-III-IV-VI-V-I")
+    elements = "I", "VI", "III", "IV", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Eb
+4   Fm
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-VI-III-IV-I")
+    elements = "I", "IV", "V", "VI", "III", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Ab
+5   Eb
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-II-V-II-VI-I")
+    elements = "I", "IV", "II", "V", "II", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ddim
+4   Gm
+5   Ddim
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-II-IV-V-VI-I")
+    elements = "I", "VI", "II", "IV", "V", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Ddim
+4   Fm
+5   Gm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-IV-III-IV-VI-I")
+    elements = "I", "II", "IV", "III", "IV", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Fm
+4   Eb
+5   Fm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-II-VI-V-IV-I")
+    elements = "I", "VI", "II", "VI", "V", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Ddim
+4   Ab
+5   Gm
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-III-IV-II-V-I")
+    elements = "I", "V", "III", "IV", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Eb
+4   Fm
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-IV-V-II-VI-I")
+    elements = "I", "VI", "IV", "V", "II", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Fm
+4   Gm
+5   Ddim
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-II-V-IV-V-I")
+    elements = "I", "III", "II", "V", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ddim
+4   Gm
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-VI-III-IV-V-I")
+    elements = "I", "II", "VI", "III", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Ab
+4   Eb
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-V-VI-III-IV-I")
+    elements = "I", "II", "V", "VI", "III", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Gm
+4   Ab
+5   Eb
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-IV-III-IV-V-I")
+    elements = "I", "II", "IV", "III", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Fm
+4   Eb
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-V-II-IV-V-I")
+    elements = "I", "VI", "V", "II", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Gm
+4   Ddim
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-III-IV-V-VI-I")
+    elements = "I", "VI", "III", "IV", "V", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Eb
+4   Fm
+5   Gm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-VI-III-VI-V-I")
+    elements = "I", "V", "VI", "III", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ab
+4   Eb
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-IV-V-VI-II-I")
+    elements = "I", "III", "IV", "V", "VI", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Fm
+4   Gm
+5   Ab
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-IV-V-II-V-I")
+    elements = "I", "VI", "IV", "V", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Fm
+4   Gm
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-IV-V-VI-V-I")
+    elements = "I", "III", "IV", "V", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Fm
+4   Gm
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-IV-II-VI-V-I")
+    elements = "I", "V", "IV", "II", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Fm
+4   Ddim
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-II-VI-IV-V-I")
+    elements = "I", "V", "II", "VI", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ddim
+4   Ab
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-III-VI-V-VI-I")
+    elements = "I", "IV", "III", "VI", "V", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Eb
+4   Ab
+5   Gm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-V-III-VI-II-I")
+    elements = "I", "VI", "V", "III", "VI", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Gm
+4   Eb
+5   Ab
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-VI-III-VI-V-I")
+    elements = "I", "IV", "VI", "III", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ab
+4   Eb
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-VI-IV-III-V-I")
+    elements = "I", "IV", "VI", "IV", "III", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ab
+4   Fm
+5   Eb
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-III-II-V-IV-I")
+    elements = "I", "V", "III", "II", "V", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Eb
+4   Ddim
+5   Gm
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-VI-V-III-IV-I")
+    elements = "I", "III", "VI", "V", "III", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ab
+4   Gm
+5   Eb
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-V-VI-III-V-I")
+    elements = "I", "II", "V", "VI", "III", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Gm
+4   Ab
+5   Eb
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-VI-V-III-VI-I")
+    elements = "I", "II", "VI", "V", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Ab
+4   Gm
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-III-V-IV-V-I")
+    elements = "I", "V", "III", "V", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Eb
+4   Gm
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-VI-IV-III-VI-I")
+    elements = "I", "V", "VI", "IV", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ab
+4   Fm
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-IV-VI-II-V-I")
+    elements = "I", "VI", "IV", "VI", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Fm
+4   Ab
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-VI-II-V-VI-I")
+    elements = "I", "IV", "VI", "II", "V", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ab
+4   Ddim
+5   Gm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-III-IV-II-V-I")
+    elements = "I", "IV", "III", "IV", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Eb
+4   Fm
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-III-V-VI-IV-I")
+    elements = "I", "IV", "III", "V", "VI", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Eb
+4   Gm
+5   Ab
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-II-VI-II-I")
+    elements = "I", "IV", "V", "II", "VI", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Ddim
+5   Ab
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-III-IV-V-II-I")
+    elements = "I", "VI", "III", "IV", "V", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Eb
+4   Fm
+5   Gm
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-V-III-IV-II-I")
+    elements = "I", "VI", "V", "III", "IV", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Gm
+4   Eb
+5   Fm
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-II-III-II-V-I")
+    elements = "I", "VI", "II", "III", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Ddim
+4   Eb
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-II-III-VI-V-I")
+    elements = "I", "V", "II", "III", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ddim
+4   Eb
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-III-VI-V-IV-I")
+    elements = "I", "VI", "III", "VI", "V", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Eb
+4   Ab
+5   Gm
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-II-III-IV-V-I")
+    elements = "I", "V", "II", "III", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ddim
+4   Eb
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-II-V-III-VI-I")
+    elements = "I", "VI", "II", "V", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Ddim
+4   Gm
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-VI-IV-II-V-I")
+    elements = "I", "V", "VI", "IV", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ab
+4   Fm
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-VI-II-III-VI-I")
+    elements = "I", "V", "VI", "II", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ab
+4   Ddim
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-V-IV-V-II-I")
+    elements = "I", "VI", "V", "IV", "V", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Gm
+4   Fm
+5   Gm
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-II-V-III-VI-I")
+    elements = "I", "IV", "II", "V", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ddim
+4   Gm
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-III-II-VI-V-I")
+    elements = "I", "VI", "III", "II", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Eb
+4   Ddim
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-VI-II-V-VI-I")
+    elements = "I", "III", "VI", "II", "V", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ab
+4   Ddim
+5   Gm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-II-IV-II-V-I")
+    elements = "I", "VI", "II", "IV", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Ddim
+4   Fm
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-III-II-V-I")
+    elements = "I", "IV", "V", "III", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Eb
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-VI-III-V-II-I")
+    elements = "I", "V", "VI", "III", "V", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ab
+4   Eb
+5   Gm
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-II-VI-III-IV-I")
+    elements = "I", "IV", "II", "VI", "III", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ddim
+4   Ab
+5   Eb
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-V-IV-III-V-I")
+    elements = "I", "II", "V", "IV", "III", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Gm
+4   Fm
+5   Eb
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-II-VI-V-VI-I")
+    elements = "I", "V", "II", "VI", "V", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ddim
+4   Ab
+5   Gm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-III-V-II-V-I")
+    elements = "I", "VI", "III", "V", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Eb
+4   Gm
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-IV-II-VI-I")
+    elements = "I", "IV", "V", "IV", "II", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Fm
+5   Ddim
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-VI-IV-II-V-I")
+    elements = "I", "II", "VI", "IV", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Ab
+4   Fm
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-IV-V-III-VI-I")
+    elements = "I", "VI", "IV", "V", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Fm
+4   Gm
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-VI-II-IV-V-I")
+    elements = "I", "II", "VI", "II", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Ab
+4   Ddim
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-VI-III-VI-I")
+    elements = "I", "IV", "V", "VI", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Ab
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-VI-II-V-II-I")
+    elements = "I", "V", "VI", "II", "V", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ab
+4   Ddim
+5   Gm
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-II-III-VI-V-I")
+    elements = "I", "III", "II", "III", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ddim
+4   Eb
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-VI-V-VI-II-I")
+    elements = "I", "III", "VI", "V", "VI", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ab
+4   Gm
+5   Ab
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-IV-III-VI-V-I")
+    elements = "I", "VI", "IV", "III", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Fm
+4   Eb
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-VI-III-V-I")
+    elements = "I", "IV", "V", "VI", "III", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Ab
+5   Eb
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-VI-II-IV-VI-I")
+    elements = "I", "III", "VI", "II", "IV", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ab
+4   Ddim
+5   Fm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-II-VI-II-V-I")
+    elements = "I", "V", "II", "VI", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ddim
+4   Ab
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-V-VI-II-VI-I")
+    elements = "I", "VI", "V", "VI", "II", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Gm
+4   Ab
+5   Ddim
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-V-IV-II-VI-I")
+    elements = "I", "VI", "V", "IV", "II", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Gm
+4   Fm
+5   Ddim
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-II-V-II-VI-I")
+    elements = "I", "VI", "II", "V", "II", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Ddim
+4   Gm
+5   Ddim
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-VI-IV-III-IV-I")
+    elements = "I", "III", "VI", "IV", "III", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ab
+4   Fm
+5   Eb
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-II-IV-V-IV-I")
+    elements = "I", "III", "II", "IV", "V", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ddim
+4   Fm
+5   Gm
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-II-VI-II-V-I")
+    elements = "I", "III", "II", "VI", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ddim
+4   Ab
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-V-IV-V-VI-I")
+    elements = "I", "VI", "V", "IV", "V", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Gm
+4   Fm
+5   Gm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-II-V-III-IV-I")
+    elements = "I", "VI", "II", "V", "III", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Ddim
+4   Gm
+5   Eb
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-VI-V-IV-V-I")
+    elements = "I", "V", "VI", "V", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ab
+4   Gm
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-VI-III-IV-II-I")
+    elements = "I", "V", "VI", "III", "IV", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ab
+4   Eb
+5   Fm
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-III-VI-V-VI-I")
+    elements = "I", "VI", "III", "VI", "V", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Eb
+4   Ab
+5   Gm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-II-III-IV-V-I")
+    elements = "I", "IV", "II", "III", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ddim
+4   Eb
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-IV-III-IV-V-I")
+    elements = "I", "VI", "IV", "III", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Fm
+4   Eb
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-II-VI-III-V-I")
+    elements = "I", "VI", "II", "VI", "III", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Ddim
+4   Ab
+5   Eb
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-II-VI-IV-I")
+    elements = "I", "IV", "V", "II", "VI", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Ddim
+5   Ab
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-II-III-IV-VI-I")
+    elements = "I", "IV", "II", "III", "IV", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ddim
+4   Eb
+5   Fm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-III-VI-III-IV-I")
+    elements = "I", "V", "III", "VI", "III", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Eb
+4   Ab
+5   Eb
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-III-V-VI-V-I")
+    elements = "I", "IV", "III", "V", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Eb
+4   Gm
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-II-IV-V-II-I")
+    elements = "I", "IV", "II", "IV", "V", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ddim
+4   Fm
+5   Gm
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-V-III-IV-VI-I")
+    elements = "I", "VI", "V", "III", "IV", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Gm
+4   Eb
+5   Fm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-II-VI-III-V-I")
+    elements = "I", "V", "II", "VI", "III", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ddim
+4   Ab
+5   Eb
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-II-VI-III-IV-I")
+    elements = "I", "V", "II", "VI", "III", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ddim
+4   Ab
+5   Eb
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-II-III-VI-V-I")
+    elements = "I", "IV", "II", "III", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ddim
+4   Eb
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-IV-V-III-IV-I")
+    elements = "I", "V", "IV", "V", "III", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Fm
+4   Gm
+5   Eb
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-IV-VI-V-I")
+    elements = "I", "IV", "V", "IV", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Fm
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-II-III-IV-I")
+    elements = "I", "IV", "V", "II", "III", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Ddim
+5   Eb
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-III-VI-IV-V-I")
+    elements = "I", "IV", "III", "VI", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Eb
+4   Ab
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-V-VI-III-VI-I")
+    elements = "I", "VI", "V", "VI", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Gm
+4   Ab
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-III-VI-II-VI-I")
+    elements = "I", "IV", "III", "VI", "II", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Eb
+4   Ab
+5   Ddim
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-IV-III-II-V-I")
+    elements = "I", "VI", "IV", "III", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Fm
+4   Eb
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-III-IV-II-V-I")
+    elements = "I", "II", "III", "IV", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Eb
+4   Fm
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-IV-V-III-V-I")
+    elements = "I", "VI", "IV", "V", "III", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Fm
+4   Gm
+5   Eb
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-III-V-IV-V-I")
+    elements = "I", "IV", "III", "V", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Eb
+4   Gm
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-II-V-VI-I")
+    elements = "I", "IV", "V", "II", "V", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Ddim
+5   Gm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-II-VI-III-VI-I")
+    elements = "I", "VI", "II", "VI", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Ddim
+4   Ab
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-III-IV-V-IV-I")
+    elements = "I", "II", "III", "IV", "V", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Eb
+4   Fm
+5   Gm
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-V-IV-III-II-I")
+    elements = "I", "VI", "V", "IV", "III", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Gm
+4   Fm
+5   Eb
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-VI-V-III-V-I")
+    elements = "I", "III", "VI", "V", "III", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ab
+4   Gm
+5   Eb
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-V-IV-III-VI-I")
+    elements = "I", "VI", "V", "IV", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Gm
+4   Fm
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-III-IV-V-VI-I")
+    elements = "I", "IV", "III", "IV", "V", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Eb
+4   Fm
+5   Gm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-VI-II-IV-V-I")
+    elements = "I", "V", "VI", "II", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ab
+4   Ddim
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-III-II-III-VI-I")
+    elements = "I", "V", "III", "II", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Eb
+4   Ddim
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-VI-V-III-IV-I")
+    elements = "I", "V", "VI", "V", "III", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ab
+4   Gm
+5   Eb
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-IV-VI-II-VI-I")
+    elements = "I", "III", "IV", "VI", "II", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Fm
+4   Ab
+5   Ddim
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-II-VI-V-I")
+    elements = "I", "IV", "V", "II", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Ddim
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-III-IV-II-IV-I")
+    elements = "I", "II", "III", "IV", "II", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Eb
+4   Fm
+5   Ddim
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-VI-III-VI-II-I")
+    elements = "I", "II", "VI", "III", "VI", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Ab
+4   Eb
+5   Ab
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-V-III-IV-V-I")
+    elements = "I", "VI", "V", "III", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Gm
+4   Eb
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-VI-II-IV-V-I")
+    elements = "I", "IV", "VI", "II", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ab
+4   Ddim
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-V-II-V-VI-I")
+    elements = "I", "VI", "V", "II", "V", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Gm
+4   Ddim
+5   Gm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-VI-II-V-IV-I")
+    elements = "I", "III", "VI", "II", "V", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ab
+4   Ddim
+5   Gm
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-III-IV-V-IV-I")
+    elements = "I", "VI", "III", "IV", "V", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Eb
+4   Fm
+5   Gm
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-II-III-VI-I")
+    elements = "I", "IV", "V", "II", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Ddim
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-VI-V-II-V-I")
+    elements = "I", "V", "VI", "V", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ab
+4   Gm
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-II-V-III-IV-I")
+    elements = "I", "IV", "II", "V", "III", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ddim
+4   Gm
+5   Eb
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-II-V-VI-V-I")
+    elements = "I", "IV", "II", "V", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ddim
+4   Gm
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-II-IV-VI-V-I")
+    elements = "I", "IV", "II", "IV", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ddim
+4   Fm
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-III-VI-IV-II-I")
+    elements = "I", "VI", "III", "VI", "IV", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Eb
+4   Ab
+5   Fm
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-II-IV-II-V-I")
+    elements = "I", "V", "II", "IV", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ddim
+4   Fm
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-IV-VI-II-V-I")
+    elements = "I", "V", "IV", "VI", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Fm
+4   Ab
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-III-IV-II-V-I")
+    elements = "I", "VI", "III", "IV", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Eb
+4   Fm
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-IV-VI-III-VI-I")
+    elements = "I", "III", "IV", "VI", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Fm
+4   Ab
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-V-II-VI-V-I")
+    elements = "I", "III", "V", "II", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Gm
+4   Ddim
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-II-V-II-VI-I")
+    elements = "I", "III", "II", "V", "II", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ddim
+4   Gm
+5   Ddim
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-III-II-V-VI-I")
+    elements = "I", "VI", "III", "II", "V", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Eb
+4   Ddim
+5   Gm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-VI-IV-VI-I")
+    elements = "I", "IV", "V", "VI", "IV", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Ab
+5   Fm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-VI-V-IV-V-I")
+    elements = "I", "IV", "VI", "V", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ab
+4   Gm
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-IV-III-VI-V-I")
+    elements = "I", "III", "IV", "III", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Fm
+4   Eb
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-III-IV-III-VI-I")
+    elements = "I", "V", "III", "IV", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Eb
+4   Fm
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-II-V-IV-II-I")
+    elements = "I", "VI", "II", "V", "IV", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Ddim
+4   Gm
+5   Fm
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-III-II-VI-V-I")
+    elements = "I", "V", "III", "II", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Eb
+4   Ddim
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-IV-V-VI-V-I")
+    elements = "I", "V", "IV", "V", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Fm
+4   Gm
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-IV-III-IV-VI-I")
+    elements = "I", "VI", "IV", "III", "IV", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Fm
+4   Eb
+5   Fm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-II-VI-III-VI-I")
+    elements = "I", "III", "II", "VI", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ddim
+4   Ab
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-VI-II-V-IV-I")
+    elements = "I", "V", "VI", "II", "V", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ab
+4   Ddim
+5   Gm
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-III-VI-V-II-I")
+    elements = "I", "VI", "III", "VI", "V", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Eb
+4   Ab
+5   Gm
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-V-II-III-IV-I")
+    elements = "I", "VI", "V", "II", "III", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Gm
+4   Ddim
+5   Eb
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-II-IV-V-II-I")
+    elements = "I", "VI", "II", "IV", "V", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Ddim
+4   Fm
+5   Gm
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-VI-II-VI-I")
+    elements = "I", "IV", "V", "VI", "II", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Ab
+5   Ddim
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-IV-V-III-VI-I")
+    elements = "I", "V", "IV", "V", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Fm
+4   Gm
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-VI-IV-II-VI-I")
+    elements = "I", "III", "VI", "IV", "II", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ab
+4   Fm
+5   Ddim
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-IV-III-II-VI-I")
+    elements = "I", "V", "IV", "III", "II", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Fm
+4   Eb
+5   Ddim
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-II-V-VI-IV-I")
+    elements = "I", "V", "II", "V", "VI", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ddim
+4   Gm
+5   Ab
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-III-VI-V-II-I")
+    elements = "I", "IV", "III", "VI", "V", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Eb
+4   Ab
+5   Gm
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-VI-II-V-IV-I")
+    elements = "I", "II", "VI", "II", "V", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Ab
+4   Ddim
+5   Gm
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-III-V-II-IV-I")
+    elements = "I", "V", "III", "V", "II", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Eb
+4   Gm
+5   Ddim
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-VI-III-V-VI-I")
+    elements = "I", "IV", "VI", "III", "V", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ab
+4   Eb
+5   Gm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-IV-VI-III-V-I")
+    elements = "I", "III", "IV", "VI", "III", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Fm
+4   Ab
+5   Eb
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-IV-V-II-V-I")
+    elements = "I", "III", "IV", "V", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Fm
+4   Gm
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-VI-II-V-IV-I")
+    elements = "I", "IV", "VI", "II", "V", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ab
+4   Ddim
+5   Gm
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-III-V-II-VI-I")
+    elements = "I", "V", "III", "V", "II", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Eb
+4   Gm
+5   Ddim
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-IV-VI-V-IV-I")
+    elements = "I", "VI", "IV", "VI", "V", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Fm
+4   Ab
+5   Gm
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-II-V-IV-I")
+    elements = "I", "IV", "V", "II", "V", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Ddim
+5   Gm
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-VI-IV-II-V-I")
+    elements = "I", "IV", "VI", "IV", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ab
+4   Fm
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-IV-V-VI-II-I")
+    elements = "I", "VI", "IV", "V", "VI", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Fm
+4   Gm
+5   Ab
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-III-IV-III-V-I")
+    elements = "I", "VI", "III", "IV", "III", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Eb
+4   Fm
+5   Eb
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-V-II-V-IV-I")
+    elements = "I", "VI", "V", "II", "V", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Gm
+4   Ddim
+5   Gm
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-VI-II-III-IV-I")
+    elements = "I", "II", "VI", "II", "III", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Ab
+4   Ddim
+5   Eb
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-II-VI-IV-VI-I")
+    elements = "I", "IV", "II", "VI", "IV", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ddim
+4   Ab
+5   Fm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-III-VI-IV-II-I")
+    elements = "I", "V", "III", "VI", "IV", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Eb
+4   Ab
+5   Fm
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-IV-II-V-VI-I")
+    elements = "I", "V", "IV", "II", "V", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Fm
+4   Ddim
+5   Gm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-IV-VI-IV-I")
+    elements = "I", "IV", "V", "IV", "VI", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Fm
+5   Ab
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-IV-II-VI-II-I")
+    elements = "I", "VI", "IV", "II", "VI", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Fm
+4   Ddim
+5   Ab
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-IV-II-III-VI-I")
+    elements = "I", "VI", "IV", "II", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Fm
+4   Ddim
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-VI-III-IV-II-I")
+    elements = "I", "IV", "VI", "III", "IV", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ab
+4   Eb
+5   Fm
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-V-VI-V-II-I")
+    elements = "I", "II", "V", "VI", "V", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Gm
+4   Ab
+5   Gm
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-III-IV-VI-I")
+    elements = "I", "IV", "V", "III", "IV", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Eb
+5   Fm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-III-VI-IV-I")
+    elements = "I", "IV", "V", "III", "VI", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Eb
+5   Ab
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-VI-IV-III-VI-I")
+    elements = "I", "II", "VI", "IV", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Ab
+4   Fm
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-III-IV-II-VI-I")
+    elements = "I", "V", "III", "IV", "II", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Eb
+4   Fm
+5   Ddim
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-VI-IV-V-IV-I")
+    elements = "I", "V", "VI", "IV", "V", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ab
+4   Fm
+5   Gm
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-III-II-V-VI-I")
+    elements = "I", "V", "III", "II", "V", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Eb
+4   Ddim
+5   Gm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-III-VI-IV-VI-I")
+    elements = "I", "VI", "III", "VI", "IV", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Eb
+4   Ab
+5   Fm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-VI-IV-III-V-I")
+    elements = "I", "III", "VI", "IV", "III", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ab
+4   Fm
+5   Eb
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-II-III-IV-V-I")
+    elements = "I", "VI", "II", "III", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Ddim
+4   Eb
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-VI-III-II-I")
+    elements = "I", "IV", "V", "VI", "III", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Ab
+5   Eb
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-II-VI-IV-V-I")
+    elements = "I", "IV", "II", "VI", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ddim
+4   Ab
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-V-IV-III-VI-I")
+    elements = "I", "IV", "V", "IV", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Fm
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-VI-III-II-V-I")
+    elements = "I", "III", "VI", "III", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ab
+4   Eb
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-II-III-IV-VI-I")
+    elements = "I", "III", "II", "III", "IV", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ddim
+4   Eb
+5   Fm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-IV-II-III-VI-I")
+    elements = "I", "V", "IV", "II", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Fm
+4   Ddim
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-IV-VI-V-II-I")
+    elements = "I", "VI", "IV", "VI", "V", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Fm
+4   Ab
+5   Gm
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-III-II-IV-V-I")
+    elements = "I", "V", "III", "II", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Eb
+4   Ddim
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-VI-III-VI-IV-I")
+    elements = "I", "II", "VI", "III", "VI", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Ab
+4   Eb
+5   Ab
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-III-VI-V-VI-I")
+    elements = "I", "II", "III", "VI", "V", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Eb
+4   Ab
+5   Gm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-V-IV-II-IV-I")
+    elements = "I", "VI", "V", "IV", "II", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Gm
+4   Fm
+5   Ddim
+6   Fm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-IV-VI-IV-V-I")
+    elements = "I", "II", "IV", "VI", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Fm
+4   Ab
+5   Fm
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-VI-III-IV-VI-I")
+    elements = "I", "III", "VI", "III", "IV", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ab
+4   Eb
+5   Fm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-III-V-VI-II-I")
+    elements = "I", "V", "III", "V", "VI", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Eb
+4   Gm
+5   Ab
+6   Ddim
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-II-IV-II-V-I")
+    elements = "I", "III", "II", "IV", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ddim
+4   Fm
+5   Ddim
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-VI-V-II-VI-I")
+    elements = "I", "III", "VI", "V", "II", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ab
+4   Gm
+5   Ddim
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-VI-IV-V-VI-I")
+    elements = "I", "III", "VI", "IV", "V", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ab
+4   Fm
+5   Gm
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-V-III-VI-V-I")
+    elements = "I", "III", "V", "III", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Gm
+4   Eb
+5   Ab
+6   Gm
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-V-VI-III-VI-I")
+    elements = "I", "II", "V", "VI", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Gm
+4   Ab
+5   Eb
+6   Ab
+7   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-VI-IV-V-II-I")
+    elements = "I", "IV", "VI", "IV", "V", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ab
+4   Fm
+5   Gm
+6   Ddim
+7   Cm
+""" % voicing)
+}

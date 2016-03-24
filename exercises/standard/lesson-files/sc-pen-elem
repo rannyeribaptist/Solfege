@@ -1,0 +1,45 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2011  Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+include("include/interval-elements")
+
+include("include/sc-master")
+
+header {
+  lesson_id = "e413101c-93c0-4567-4560-17abf6d70749"
+  module = elembuilder
+  title = _("Pentatonic Major scale and its modes - enter structure")
+  lesson_heading = _("Enter the structure of the mode in number of half-tones")
+  elements = auto
+  have_music_displayer = yes
+  questions_selectable = yes
+  have_repeat_slowly_button = yes
+  random_transpose = yes
+  help = "scales"
+  theory = "scales/pen"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+
+question { name = pen1n
+    elements = int2, int2, int3, int2, int3
+    voice(pen1la)
+}
+question { name = pen2n
+    elements = int2, int3, int2, int3, int2
+    voice(pen2la)
+}
+question { name = pen3n
+    elements = int3, int2, int3, int2, int2
+    voice(pen3la)
+}
+question { name = pen4n
+    elements = int2, int3, int2, int2, int3
+    voice(pen4la)
+}
+question { name = pen5n
+    elements = int3, int2, int2, int3, int2
+    voice(pen5la)
+}
+

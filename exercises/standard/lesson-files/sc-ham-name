@@ -1,0 +1,41 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "4f21ab50-5555-11da-89a8-7c9a86d4310c"
+  module = idbyname
+  random_transpose = yes
+  title = _("Harmonic Major Scale and its modes")
+  questions_selectable = yes
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  at_question_start = show
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/ham"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question {set = 0  name = ham1n  voice(ham1c) }
+question {set = 0  name = ham2n  voice(ham2c) }
+question {set = 0  name = ham3n  voice(ham3c) }
+question {set = 0  name = ham4n  voice(ham4c) }
+question {set = 0  name = ham5n  voice(ham5c) }
+question {set = 0  name = ham6n  voice(ham6c) }
+question {set = 0  name = ham7n  voice(ham7c) }
+
+question {set = 1  name = ham1n  voice(ham1l) }
+question {set = 1  name = ham2n  voice(ham2l) }
+question {set = 1  name = ham3n  voice(ham3l) }
+question {set = 1  name = ham4n  voice(ham4l) }
+question {set = 1  name = ham5n  voice(ham5l) }
+question {set = 1  name = ham6n  voice(ham6l) }
+question {set = 1  name = ham7n  voice(ham7l) }
+

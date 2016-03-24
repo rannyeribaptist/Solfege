@@ -1,0 +1,14 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "fee73eeb-74e6-48dd-90f9-318ee3cad5a1"
+    module = rhythmtapping2
+    #have_music_displayer = yes
+    title = _("Rhythm tapping, ternary")
+    configurable_rhythm_elements = 22, 23, 24, 25, newline, 26, 27, 28, 29, 30, newline, 31, 32, 33, 34
+    bpm = 66
+    count_in_notelen="4."
+}
+

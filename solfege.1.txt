@@ -1,0 +1,43 @@
+NAME
+  solfege - GPL'ed ear training software
+SYNOPSIS
+  solfege [options]
+
+DESCRIPTION
+   GNU Solfege is a program that let you use your computer to do ear
+   training.
+
+OPTIONS
+  This program follow the usual GNU command line syntax, with long
+  options starting with two dashes (`-').
+
+XXOPTIONS
+
+BUGS
+   Report bugs to bug-solfege@gnu.org or http://bugs.solfege.org.
+
+FILES
+   /etc/solfege   if solfege is installed into /usr, or {prefix}/etc/solfege
+                  in all other cases.
+                  System administrators can override the values in the
+                  default.config file. The most obvious values you might
+                  want to change is the sound setup.
+   ~/.solfegerc   This file is used to store most configuration values. While it
+          is possible to edit the file by hand, everything you need can
+          and should be done from the gui.
+   ~/.solfege     Statistics is stored in subdirectories below this dir.
+
+COPYRIGHT
+   GNU Solfege is Copyright \[char169] 1999, 2000, 2001, 2002, 2003,
+   2004, 2005, 2006, 2007, 2008 by Tom Cato Amundsen <tca\[at]gnu.org>.
+
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or (at
+   your option) any later version.
+
+AUTHOR
+   Main author of GNU Solfege and this manual page is Tom Cato Amundsen
+   <tca\[at]gnu.org>. For more details, read the AUTHORS file from the
+   source tarball.
+

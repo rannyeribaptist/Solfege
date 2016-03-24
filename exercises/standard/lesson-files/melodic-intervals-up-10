@@ -1,0 +1,13 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+
+header {
+    module=melodicinterval
+    replaces = "de51d9260fa955a873f46970e02e9439714c0caf"
+    ask_for_intervals_0=15, 16
+    title = _("Tenths")
+    theory = "theory-intervals"
+    lesson_id = "1bf61c7d-2852-455a-aba2-0c26524f8043"
+    test = "6x"
+    test_requirement = "90%"
+}

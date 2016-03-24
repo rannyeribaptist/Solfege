@@ -1,0 +1,344 @@
+<sect1 id='preferences-window'>
+<title>Preferences window</title>
+<sect2 id='pw-midi-stuff'>
+<title>Instruments</title>
+<informalfigure id="preferences-midi">
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/preferences-midi.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the 'Midi' page of the preferences window.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+<sect3 id='pw-tempo'>
+<title>Tempo</title>
+<!-- translators: don't translate the module names in this paragraph. -->
+<para>Set the tempo (beats per minute) for music and arpeggios. These values
+are used by exercises written with these exercise modules:
+<literal>compareintervals</literal>,
+<literal>harmonicintervals</literal>,
+<literal>idtone</literal>,
+<literal>melodicinterval</literal>,
+<literal>singchord</literal>,
+<literal>singinterval</literal>,
+<literal>twelvetone</literal>,
+<literal>rhythm</literal>,
+<literal>identifybpm</literal>,
+<literal>nameinterval</literal>.
+Other exercises will either have the tempo set in the lesson file or
+on the config page of the exercise.
+</para>
+</sect3>
+<sect3 id='pw-preferred-instr'>
+<title>Preferred instrument</title>
+<para>Set the midi instrument and volume used for most exercises.</para>
+</sect3>
+<sect3 id='pw-chord-instr'>
+<title>Chord instruments</title>
+<para>Solfege can use three different instruments when playing chords. One for
+the highest tone, one for the tones in the middle and one for the bass tone.
+This can be helpful if you find it difficult to hear individual tones in
+chords.</para>
+</sect3>
+<sect3 id='pw-perc-instr'>
+<title>Preferred percussion instruments</title>
+<para>
+Set the percussion instrument used for count-in before rhythm questions, and
+the instrument used to play the question.
+</para>
+</sect3>
+</sect2>
+
+<sect2 id='pw-user'>
+<title>User</title>
+<informalfigure id="preferences-user">
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/preferences-user.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the 'User' page of the preferences window.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+
+<para>Solfege uses this info in some exercises where the user is supposed to sing.</para>
+<sect3 id='pw-low-high'>
+<title>Lowest/highest tone the user can sing</title>
+<para>These spin buttons tell Solfege the highest and lowest tone the user can
+sing. These values are only considered advisory by the program.  If for example
+the values are set to <literal>c</literal> to <literal>c'</literal> and you
+have configured the program to ask you to sing minor and major tenths, you will
+have to sing tones outside this range.</para> </sect3>
+
+<sect3 id='pw-sex'>
+<title>Sex</title>
+<para>Solfege need to know if the user is male or female when creating
+some of the questions where the user will sing the answer. This because
+the male voice sound one octave lower than the female voice.</para>
+</sect3>
+</sect2>
+
+<sect2 id='pw-external-programs'>
+<title>External programs</title>
+<informalfigure id="preferences-external-programs-screenshot">
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/preferences-external-programs.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the 'External programs' page of the preferences window.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+
+<para>Solfege will search the PATH for the programs you enter on this page.
+So you only have to enter the full path if the programs are installed
+outside the PATH. A warning sign after the entry where you enter the file
+name mean that the program is not found.</para>
+
+<para>Please check the download page on <ulink
+url="http://www.solfege.org">www.solfege.org</ulink> for up-to-date tips
+and download links if you run MS Windows and have to download and install
+the programs yourself.
+</para>
+
+<sect3 id='pw-convertors'>
+<title>Converters</title>
+<para>Give command lines that can convert between different audio formats.
+<literal>%(in)s</literal> will be replaced with the name of the file we convert
+from, and <literal>%(out)s</literal> with the name we convert to.
+It is not necessary to enter <literal>%(out)s</literal> if the program
+automatically saved to a new file with the correct file extension.</para>
+</sect3>
+
+<sect3 id='pw-audio-players'>
+<title>Audio players</title>
+<para>Command lines that can play different audio formats.
+<literal>%s</literal> will be replaced with the name of the file to be played.
+The file name will be appended to the end of the string if you do not include a
+<literal>%s</literal>.
+</para>
+</sect3>
+
+<sect3 id='pw-misc'>
+<title>Miscellaneous</title>
+<para>A few exercises make use of the programs CSound and MMA.
+Lilypond-book is required to make ear training test printouts,
+and latex is required if the printout should be created in dvi format.
+Without latex, you can still create html output.
+</para>
+
+<para>If the file entered is a file ending with <literal>.py</literal>,
+        then the script will be run by the same python interpreter as
+        Solfege itself.</para>
+</sect3>
+
+</sect2>
+<sect2 id="preferences-gui">
+<title>Interface</title>
+<informalfigure id="preferences-gui-screenshot">
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/preferences-gui.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the 'Interface' page of the preferences window.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+
+<para>Resizeable main window: Allow the user to resize the main
+solfege window.</para>
+<para>Select language: You can manually select the language you want if
+Solfege does not detect this correctly, or if you want to run Solfege
+with a different language that your operating system.</para>
+
+<sect3>
+<title>Identify tone keyboard accelerators</title>
+<informalfigure id="preferences-gui-idtone-accels">
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/preferences-gui-idtone.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the 'Interface' page of the preferences window.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+<para>
+Here you can change the keyboard accelerators for the «Identify tone» exercise.
+Click on a row to select the tone you want to change the accelerator for,
+then click again on the second column of the row. Finally you can press
+the key you want to set as the accel for the tone.
+</para>
+<para>
+The «Dvorak» and «ASCII» buttons will set the accelerators to the
+default values for Dvorak and ASCII keyboards.
+</para>
+</sect3>
+
+<sect3>
+<title>Interval keyboard accelerators</title>
+<informalfigure id="preferences-gui-interval-accels">
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/preferences-gui-interval.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the 'Interface' page of the preferences window.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+<para>
+Here you can change the keyboard accelerators for the interval exercises,
+like the «Harmonic interval» and «Melodic interval» exercises.
+Click on a row to select the tone you want to change the accelerator for,
+then click again on the second column of the row. Finally you can press
+the key you want to set as the accel for the tone.
+</para>
+<para>
+The «Dvorak» and «ASCII» buttons will set the accelerators to the
+default values for Dvorak and ASCII keyboards.
+</para>
+</sect3>
+
+</sect2>
+
+<sect2 id='pw-practise'>
+<title>Practise</title>
+<informalfigure id="preferences-practise">
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/preferences-practise.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the 'Practise' page of the preferences window.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+<para>Not allow new question before the old is solved: Disable the 'new' button until the question is answered correctly or the user clicks "give up".</para>
+<para>Repeat question if the answer was wrong: Play the sound again when the user gives an incorrect answer.</para>
+<para>Expert mode: Enabling this option in exercises using the
+ <link linkend='idbyname-module'>idbyname</link> and
+ <link linkend='idproperty-module'>idproperty</link> modules
+ will let you select to practise only a subset of the questions
+ in the lesson file. Practising with expert mode enabled will not save
+ any statistics.</para>
+</sect2>
+
+<sect2 id='pw-sound-setup'>
+<title>Sound setup</title>
+<informalfigure id="preferences-sound-setup">
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/preferences-sound-setup.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the 'Sound setup' page of the preferences window.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+<informalfigure id="preferences-sound-setup-wib32">
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/preferences-sound-setup-win32.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the 'Sound setup' page of the preferences window, running on MS Windows XP.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+<sect3 id='pw-midi-setup'>
+<title>Midi setup</title>
+<variablelist>
+<title>The exercises that generate sound have several ways to play sound:</title>
+<varlistentry>
+<term>No sound:</term>
+<listitem>
+<para>Use this for debugging or when you are porting Solfege. No sounds are played, the midi events are printed to stdout.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Use ALSA device</term>
+<listitem>
+<para>If you have the Python modules for ALSA installed, you can use the
+ALSA sequencer. If your operating system is GNU/Linux, you have a menu item on
+the Help menu that can download and compile the modules for you.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Use device:</term>
+<listitem>
+<para>The best choice here is usually <filename>/dev/music</filename>
+because it has the best support for percussion instruments.
+<filename>/dev/sequencer2</filename> is usually a symbolic link to
+<filename>/dev/music</filename>. If your system don't have
+<filename>/dev/music</filename>, you can create it with this command as root (if you run the linux kernel version 2.2 or later):</para>
+<para>cd /dev mknod music u 14 8</para>
+<para>On MS Windows this choice is labeled <literal>Windows multimedia output</literal>.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Use external midiplayer:</term>
+<listitem>
+<para>This can be useful when porting to systems that don't use OSS, or if you have a bad midi synth on your soundcard and want to use timidity.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+</sect2>
+<sect2 id="pw-statistics">
+<title>Statistics</title>
+<informalfigure id="preferences-statistics">
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/preferences-statistics.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the 'Sound setup' page of the preferences window.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+<sect3>
+<title>Statistics from 3.15 and older</title>
+<para>Versions of Solfege before 3.16.0 saved statistics in many small
+files. Solfege 3.16.0 and newer will import these files into the new database
+file the first time the program is run, but it will leave the old files on
+your computer. It is safe to delete these files after you have run solfege
+3.16.0 or newer once. The files are stored in the <literal>statistics</literal>
+directory of the <emphasis>application data</emphasis> directory.</para>
+</sect3>
+<sect3>
+  <title>Statistics</title>
+  <para>Statistics are now saved in a file <literal>statistics.sqlite</literal>
+  in the <emphasis>application data</emphasis> directory. The exact
+  location of the directory can be found by selecting
+  <guimenuitem>File Locations</guimenuitem> on the <guimenu>Help</guimenu>
+  menu. Click <guibutton>Delete</guibutton> to reset you statistics and
+  start with an empty <literal>statistics.sqlite</literal> file.</para>
+</sect3>
+</sect2>
+</sect1>

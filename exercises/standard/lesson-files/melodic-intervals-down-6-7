@@ -1,0 +1,14 @@
+# GNU Solfege
+# Copyright (C) 2005, 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+
+header {
+    module=melodicinterval
+    ask_for_intervals_0=-8, -9, -10, -11
+    title = _("Sixths and sevenths")
+    theory = "theory-intervals"
+    lesson_id = "ec7951fc-21a2-4dbb-87fc-2df34ed09df1"
+    test = "3x"
+    test_requirement = "90%"
+}

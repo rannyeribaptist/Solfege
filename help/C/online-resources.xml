@@ -1,0 +1,25 @@
+<sect1 id='online-resources'>
+<title>Online resources</title>
+<para>The homepage for Solfege is <ulink url='http://www.solfege.org'>http://www.solfege.org</ulink>. There is also a smaller page with more static info at <ulink url='http://www.gnu.org/software/solfege/'>http://www.gnu.org/software/solfege/</ulink>.</para>
+<sect2 id='download-solfege'>
+<title>Download Solfege</title>
+<para>The source code is available from <ulink url='http://ftp.gnu.org/gnu/solfege'>http://ftp.gnu.org/gnu/solfege</ulink>.  If you are adventurous, you can try the unstable (buggy, but might contain new stuff) releases from <ulink url='http://alpha.gnu.org/gnu/solfege'>http://alpha.gnu.org/gnu/solfege</ulink>. These releases might have more bugs, but then you get the chance to try new stuff and find and report bugs.</para>
+<para>Source code and some precompiled binaries are available from <ulink url='http://sourceforge.net/project/showfiles.php?group_id=1465'>http://sourceforge.net/project/showfiles.php?group_id=1465</ulink>.</para>
+<para>If you run Debian you can <userinput>apt-get install solfege</userinput> to download and install the program.</para>
+</sect2>
+<sect2 id='mailing-lists'>
+<title>Mailing lists</title>
+<sect3 id='mailing-list-solfege-announce'>
+<title><email>solfege-announce@lists.sourceforge.net</email></title>
+<para>Very low traffic, moderated and will be used to announce stable releases of Solfege. (<ulink url='http://lists.sourceforge.net/mailman/listinfo/solfege-announce'>Subscription</ulink> | <ulink url='http://sourceforge.net/mailarchive/forum.php?forum_id=7332'>Archive</ulink>)</para>
+</sect3>
+<sect3 id='mailing-list-solfege-devel'>
+<title><email>solfege-devel@lists.sourceforge.net</email></title>
+<para>If you want to report problems installing or running Solfege, or have questions, comments or ideas on how to improve Solfege, please post to this list instead of using the message forum at Sourceforge or the author directly. You can post to solfege-devel without subscribing. (<ulink url='http://lists.sourceforge.net/mailman/listinfo/solfege-devel'>Subscription</ulink> | <ulink url='http://sourceforge.net/mailarchive/forum.php?forum_id=3968'>Archive</ulink>)</para>
+</sect3>
+<sect3 id='mailing-list-bug-solfege'>
+<title><email>bug-solfege@gnu.org</email></title>
+<para>The standard GNU address to send bug reports. This list is at the moment forwarded to <email>solfege-devel@lists.sourceforge.net</email></para>
+</sect3>
+</sect2>
+</sect1>

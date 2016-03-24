@@ -1,0 +1,59 @@
+# -*-shell-script-*-
+
+[Meta]
+RootName: @solfege.org/solfege:$SOFTWAREVERSION
+DisplayName: GNU Solfege @VERSION@
+ShortName: solfege
+Maintainer: Tom Cato Amundsen <tca@gnu.org>
+Packager: Tom Cato Amundsen <tca@gnu.org>
+
+URL: http://www.solfege.org/
+License: GNU General Public License, Version 2, or later
+SoftwareVersion: @VERSION@
+AutopackageTarget: 1.0
+
+# Only uncomment InterfaceVersion if your package exposes interfaces to other software,
+# for instance if it includes DSOs or python/perl modules. See the developer guide for more info,
+# or ask on autopackage-dev if you don't understand interface versioning in autopackage.
+#
+# InterfaceVersion: 0.0
+
+[Description]
+Description of GNU Solfege. Ear training program
+
+[BuildPrepare]
+prepareBuild
+
+[BuildUnprepare]
+unprepareBuild
+
+[Imports]
+echo '*' | import
+
+[Prepare]
+# Dependency checking
+require @gtk.org/gtk 2.4
+require @python.org/python 2.3
+require @gnome.org/pygtk 2.4
+
+[Install]
+# Put your installation script here
+installExe bin/*
+installMan 1 share/man/man1/*
+installIcon share/pixmaps/solfege.svg
+#FIXME section
+installDesktop "Education" share/applications/solfege.desktop
+installLocale share/locale
+copyFiles lib/solfege/* "$PREFIX/lib/solfege"
+installData share/*
+
+[Uninstall]
+#rm -f $PREFIX/share/solfege/src/*.pyc
+#rm -f $PREFIX/share/solfege/src/*.pyo
+#rm -f $PREFIX/share/solfege/mpd/*.pyc
+#rm -f $PREFIX/share/solfege/mpd/*.pyo
+#rm -f $PREFIX/share/solfege/soundcard/*.pyc
+#rm -f $PREFIX/share/solfege/soundcard/*.pyo
+#uninstallFromLog
+# uninstallFromLog and installLocale is a bad combination
+rm -rf $PREFIX/share/solfege

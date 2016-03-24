@@ -1,0 +1,210 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2011  Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+include("include/mma-grooves")
+
+header {
+    lesson_id = "mma-huge-4-minor"
+    replaces = "166c75c0d9f6617bb2d2828ec9742a44f2bd7889"
+    module = elembuilder
+    title = _("4 chords in natural minor mode")
+    lesson_heading = _("Enter the harmonic progression")
+    elements = auto
+    have_music_displayer = no
+}
+
+voicing = load("include/solfege-voicing.mma")
+
+question {
+    name = rnc("I-IV-V-I")
+    elements = "I", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Gm
+4   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-V-I")
+    elements = "I", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Gm
+4   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-VI-I")
+    elements = "I", "III", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ab
+4   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-VI-I")
+    elements = "I", "V", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ab
+4   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-V-I")
+    elements = "I", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Gm
+4   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-IV-I")
+    elements = "I", "V", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Fm
+4   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-VI-I")
+    elements = "I", "II", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Ab
+4   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-VI-I")
+    elements = "I", "IV", "VI", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ab
+4   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-V-I")
+    elements = "I", "III", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Gm
+4   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-II-I")
+    elements = "I", "III", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Ddim
+4   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-II-I")
+    elements = "I", "VI", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Ddim
+4   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-IV-II-I")
+    elements = "I", "IV", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Fm
+3   Ddim
+4   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-VI-IV-I")
+    elements = "I", "VI", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ab
+3   Fm
+4   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-III-IV-I")
+    elements = "I", "III", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Eb
+3   Fm
+4   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-V-II-I")
+    elements = "I", "V", "II", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Gm
+3   Ddim
+4   Cm
+""" % voicing)
+}
+question {
+    name = rnc("I-II-IV-I")
+    elements = "I", "II", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+%s
+1   Cm
+2   Ddim
+3   Fm
+4   Cm
+""" % voicing)
+}

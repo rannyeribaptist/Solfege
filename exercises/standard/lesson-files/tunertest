@@ -1,0 +1,7 @@
+# GNU Solfege
+# Copyright (C) 2010, 2011 Tom Cato Amundsen
+
+header {
+    module=tuner
+    title = "Tuner testing"
+}

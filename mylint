@@ -1,0 +1,64 @@
+#!/usr/bin/python
+# vim: set fileencoding=utf-8:
+# Solfege - free ear training software
+# Copyright (C) 2007 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+# I use this script with pylint version 0.12.1.
+
+from __future__ import absolute_import
+import codecs
+import os
+import shutil
+import solfege.i18n
+solfege.i18n.setup(".")
+import sys
+from pylint import lint
+
+TMPDIR="mylint-tmpdir"
+
+def tmpfilename(s):
+    p, fn = os.path.split(s)
+    return os.path.join(TMPDIR, p.replace("/", "-").replace("\\", "-")+"-"+fn)
+
+def lint_file(fn):
+    tmpfn = tmpfilename(fn)
+    s = open(fn, 'rU').read()
+    outfile = open(tmpfn, 'w')
+    lines = s.split("\n")
+    # Try to find 4 comment lines in the beginning to drop.
+    i = 0
+    v = []
+    while True:
+        lines[i] = lines[i].lstrip(codecs.BOM_UTF8)
+        if not lines[i].startswith("#"):
+            break
+        if lines[i].startswith("# vim: set fileencoding"):
+            i += 1
+            continue
+        if lines[i].startswith("#"):
+            v.append(i)
+            i += 1
+        if len(v) == 4:
+            break
+    for i in reversed(v):
+        del lines[i]
+    for line in lines[:v[0]]:
+        print >> outfile, line
+    print >> outfile, "def _(s):\n    return s"
+    print >> outfile, "def _i(s):\n    return s"
+    outfile.write("\n".join(lines[v[0]:]))
+    outfile.close()
+    os.system('pylint --include-ids=y --disable=C0103 --good-names="i,j,k,ex,Run,_,s,m,i" --no-docstring-rgx=".*" %s' % tmpfn)
+
+try:
+    os.mkdir(TMPDIR)
+except OSError:
+    pass
+
+for fn in sys.argv[1:]:
+    lint_file(fn)
+try:
+    os.rmdir(TMPDIR)
+except OSError:
+    pass

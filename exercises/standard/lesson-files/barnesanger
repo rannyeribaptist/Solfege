@@ -1,0 +1,48 @@
+# -*- coding: iso-8859-1 -*-
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "b1747bd4-cc15-42a4-b2af-d3bb7abd3484"
+    module = dictation
+  random_transpose = no
+  title = _("Norwegian children songs")
+  version = "2.1.10"
+}
+
+tempo = 120/4
+
+question {
+ name = "Bæ, bæ, lille lam"
+ tempo = 130/4
+ breakpoints = 2/1, 4/1, 8/1, 10/1, 12/1, 14/1
+ music = rvoice("""
+    \time 4/4
+    c'2 g' | e4 e c2 | d4 d g, g | c1 |
+    c2 g' | e4 e c2 | d4 d g, g | c1 |
+    a'4 f f f | g2. e4 | f d d d | e2. c4 |
+    a'2 f | g e4 e | f b, b b | c1 |
+ """)
+}
+question {
+ # this tempo definition overrides the global
+ tempo = 160/4
+ name = "Lisa gikk til skolen"
+ breakpoints = 2/1, 4/1, 6/1
+ music = rvoice("""
+   \time 4/4 
+   c' d e f | g2 g2 | a4 a a a | g1 |
+   f4 f f f | e2 e | d4 d d d | c1
+ """)
+}
+
+question {
+ name = "Det satt to katter på et bord..."
+ tempo = 96/4
+ music = rvoice("""
+     \partial 8
+     \key g \major \time 2/4
+     d'8 | [g g] [fis e] | [fis g] a4 | [d,16 d d d] [e8 fis] | g2 """)
+}
+ 

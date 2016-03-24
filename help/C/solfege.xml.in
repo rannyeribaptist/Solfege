@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<!-- NB NB NB: Don't edit solfege.xml, edit solfege.xml.in, since
+     the first is generated from the second file.
+-->
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+"http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+  <!ENTITY ldquo "'">
+  <!ENTITY rsquo "'">
+  <!ENTITY rdquo "'">
+  <!ENTITY rsquo "'">
+  <!ENTITY appversion "@VERSION@">
+  <!ENTITY app "<application>GNU Solfege</application>">
+  <!-- Information about the entities
+       The legal.xml file contains legal information, there is no need to edit the file. 
+       Use the appversion entity to specify the version of the application.
+       Use the app entity to specify the name of the application. -->
+]>
+<book id="index" lang="en">
+
+  <bookinfo>
+    <title>&app; &appversion; User Manual</title>
+    <copyright>
+      <year>2005</year>
+      <holder>Tom Eykens</holder>
+    </copyright>
+    <copyright> 
+      <year>2000</year> 
+      <year>2001</year> 
+      <year>2002</year> 
+      <year>2003</year> 
+      <year>2004</year> 
+      <year>2005</year> 
+      <year>2006</year>
+      <year>2007</year>
+      <year>2008</year>
+      <year>2009</year>
+      <year>2010</year>
+      <holder>Tom Cato Amundsen</holder> 
+    </copyright> 
+    <authorgroup>
+      <author>
+        <firstname>Tom Cato</firstname>
+        <surname>Amundsen</surname>
+        <affiliation>
+            <address>
+                <email>tca@gnu.org</email>
+            </address>
+        </affiliation>
+      </author>
+    </authorgroup>
+    <legalnotice id="legalnotice">
+    <para>
+      Permission is granted to copy, distribute and/or modify this document
+      under the terms of the GNU General Public License as published by the
+      Free Software Foundation; either version 3 of the License, or (at your
+      option) any later version. The full text of the License is available in
+      <xref linkend='gpl'/>.</para>
+    </legalnotice>
+  </bookinfo>
+
+
+<chapter id="solfege-intro">
+    <title>Introduction</title>
+
+<sect1 id='about-the-manual'>
+<title>Welcome to GNU Solfege</title>
+<para>Solfege is a <ulink
+url='http://www.gnu.org/philosophy/free-sw.html'>free</ulink> eartraining
+program. The program is
+part of the <ulink url='http://www.gnu.org'>GNU Project</ulink>. Check <xref linkend='online-resources'/> for info on mailinglists and where to get the
+latest version of Solfege.</para>
+
+<para>One of the ideas of this program is that you can extend the
+program without having to dig into the source code. If you for example
+want to practise some special chords, you can write a <link
+linkend='extending-solfege'>lesson file</link> yourself. Reading the
+files are pretty straight forward, and the recommended way to get
+started is to copy one of the existing files, and start modifying it.
+If you create good lesson files, you really should consider contributing
+them by sending them to the <link
+linkend='mailing-lists'>mailing list</link> so they can be added to the
+next version of this program.</para></sect1>
+
+<xi:include
+    xmlns:xi="http://www.w3.org/2001/XInclude" href="bug-reporting.xml"/>
+<xi:include
+    xmlns:xi="http://www.w3.org/2001/XInclude" href="online-resources.xml"/>
+<xi:include
+    xmlns:xi="http://www.w3.org/2001/XInclude" href="selecting-exercises.xml"/>
+<xi:include
+    xmlns:xi="http://www.w3.org/2001/XInclude" href="preferences-window.xml"/>
+<xi:include
+    xmlns:xi="http://www.w3.org/2001/XInclude" href="trainingset-editor.xml"/>
+<xi:include
+    xmlns:xi="http://www.w3.org/2001/XInclude" href="ear-training-test-printout-editor.xml"/>
+<xi:include
+    xmlns:xi="http://www.w3.org/2001/XInclude" href="about-statistics.xml"/>
+<xi:include
+    xmlns:xi="http://www.w3.org/2001/XInclude" href="profile-manager.xml"/>
+</chapter>
+<chapter id="solfege-exercise-helps">
+<title>Help sections for the exercises</title>
+<!-- Dummy sect1 to make sure harmonicinterval.xml generates a separate page. 
+-->
+<sect1 id='dummy-sect'><title></title><para></para></sect1>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+ href="harmonicinterval.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+ href="melodicinterval.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+ href="singinterval.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+ href="idbyname-chords.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+ href="idbyname-cadences.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+ href="idbyname.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+ href="idproperty.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+ href="singchord.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+ href="rhythm.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+ href="rhythmtapping2.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+ href="dictation.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+ href="scales.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+ href="idbyname-intonation.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+ href="idtone.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+ href="identifybpm.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+ href="twelvetone.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+ href="nameinterval.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+ href="elembuilder-harmonic-progressions.xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+ href="tone-in-context.xml"/>
+</chapter>
+<xi:include
+    xmlns:xi="http://www.w3.org/2001/XInclude" href="music-theory.xml"/>
+<xi:include
+    xmlns:xi="http://www.w3.org/2001/XInclude" href="../C/lessonfiles.xml"/>
+<xi:include
+    xmlns:xi="http://www.w3.org/2001/XInclude" href="../C/gpl.xml"/>
+</book>
+

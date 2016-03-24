@@ -1,0 +1,13 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "b2bb9c1f-1734-4e25-82cb-cce63563f565"
+    module=melodicinterval
+    theory = "theory-intervals"
+    ask_for_intervals_0=1, 2, -1, -2
+    title = _("Seconds")
+    test = "6x"
+    test_requirement = "90%"
+}

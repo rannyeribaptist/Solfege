@@ -1,0 +1,43 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2011  Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "e8a78777-4cdc-41cd-9c37-6beaf3e9bfe8"
+	labelformat = progression
+    module = harmonicprogressiondictation
+}
+
+tempo = 80/4
+
+s = "\staff\relative c{ \stemUp %s}"
+a = "\addvoice\relative c{ \stemDown %s}"
+t = "\staff\relative c{ \clef bass \stemUp %s}"
+b = "\addvoice\relative c{ \stemDown %s}"
+
+question {
+ name = "I-IV-V-I"
+	tonic = chord("c' e' g' c''")
+	s % "c'' c b c" +
+	a % "g'' a g g" +
+	t % "e' f d e" +
+	b % "c' f, g c,"
+}
+
+question {
+ name = "I-V-I-IV-V-V-I"
+	tonic = chord("c e' g' c''")
+	s % "c'' b c a g b c2" +
+	a % "g''4 g g f d g g2" +
+	t % "e'4 d e c b d e2" +
+	b % "c4 g' c, f g g c2"
+}
+
+question {
+name = "I-I-V-I-IV-V-I"
+	tonic = chord("c g c' e'")
+	s % "e' g g g a g g2" +
+	a % "c'4 e d e f d e2" +
+	t % "g'4 c b c c b c2" +
+	b % "c4 c g' c, f g c,2"
+}

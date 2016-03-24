@@ -1,0 +1,162 @@
+# -*- coding: iso-8859-1 -*-
+# Solfege - free ear training software
+# Copyright (C) 2003, 2004, 2005 Michael Becker
+# License is GPL, see file COPYING
+#
+# lesson file written by Michael Becker
+# M.K.Becker@t-online.de
+#
+# 0 Schön ist die Welt - Volkslied aus Hessen
+# 1 Mit dem Pfeil, dem Bogen - Melodie: A. Weber
+# 2 Wem Gott will rechte Gunst erweisen - Melodie: Th. Fröhlich 1833
+# 3 Hab mein Wage vollgelade - aus den Niederlanden
+# 4 Ein Vogel wollte Hochzeit machen - altes Volkslied
+# 5 Auf de schwäbsche Eisebahne - schwäbisches Volkslied
+# 6 Droben im Oberland - aus Schwaben
+# 7 Ein Jäger längs dem Weiger ging - aus dem 19.Jh
+# 8 Die Affen rasen durch den Wald
+# 9 Ein Mann, der sich Kolumbus nannt
+
+header {
+  module = dictation
+  title = "Volkslieder 1"
+  version = "3.19.7"
+}
+
+question {
+  name = "Schoen ist die Welt"
+  tempo = 120/4
+  breakpoints = 15/8
+  music = rvoice("""
+		\time 2/4
+		\key f \major
+		c'4 [d8 e8] | f4. [f16 g] | [a8 a] [c a] | [a g] r c | [bes a] [g f] | [e d] [c bes'] | a4 g | f4. r8 |
+  """)
+}
+
+question {
+  name = "Mit dem Pfeil, dem Bogen"
+  tempo = 160/4
+  breakpoints = 12/4, 23/4
+  music = rvoice("""
+		\time 6/8
+		\key d \major
+		d'4 d8 fis4 fis8 | a4. fis4. | g4 g8 [fis e d] | e4. r4 r8 |
+		e4 fis8 g4 a8 | b4. a4. | d4 a8 [g fis e] | d4. r4 [fis16 g] |
+		a4 [fis16 g] a4 [fis16 g] | a4. fis4 d8 | e4 e8 [e d e] | d4. r4 r8 |
+  """)
+}
+
+question {
+  name = "Wem Gott will rechte Gunst erweisen"
+  tempo = 80/4
+  breakpoints = 16/4
+  music = rvoice("""
+        \partial 4
+		\time 4/4
+		c'4 | e g [c8 b] [c a] | g2 e4 g |
+		[f8 e] [f d] e4 c | d2 r4 [d8 e] | f4. f8 [e e] [f g] |
+		a2 g4 g | [c8 b] [c d] e4 d | c2 r4 
+  """)
+}
+
+question {
+  name = "Hab mein Wage vollgelade"
+  tempo = 100/4
+  breakpoints = 12/4, 24/4, 41/4
+  music = rvoice("""
+        \partial 4
+  		\time 3/4
+		\key f \major
+		c'8 c | f4 a [f8 f] | g4 bes [c,8 e] | g4. a8 g4 | f4 r [c8 c] |
+		f4 a4 [f8 f] | g4 bes [c,8 e] | g4. a8 g4 | f r c' |
+		\time 4/4
+		c4. c8 [d c] [bes a] | bes4 g r bes | bes4. bes8 [c bes] [a g] |
+		a4 f r2 | f2 c4 c | f a c r | bes2 g4 g | f2 r4
+  """)
+}
+
+question {
+  name = "Ein Vogel wollte Hochzeit machen"
+  tempo = 112/4
+  breakpoints = 4/2
+  music = rvoice("""
+        \partial 8
+		\time 2/4
+		\key d \major
+		fis'8 | [a fis] [a fis] | [g e] [g e] | [fis d] [a' fis] | [e a] [a a16 fis] |
+		[d8 d] [d a'16 fis] | [e8 e] [e a16 g] | [fis8 d] [e cis] | d4 r8
+  """)
+}
+
+question {
+  name = "Auf de schwaebsche Eisebahne"
+  tempo = 80/4
+  breakpoints = 4/2, 8/2, 12/2
+  music = rvoice("""
+		\time 2/4
+		\key g \major
+		[d'8. d16] [d8 d] | [d d] [g g] | [e8. e16] [e8 e] | [e e] [a a] |
+		[b8. a16] [b8 a] | [a g] d4 | [d8 d] [e fis] | [g g] g r |
+		[d d] [d d] | [d d] g4 | [e8 e] [e e] | [e e] a4 |
+		[b8. a16] [b8 a] | [a g] d4 | [d8 d] [e fis] | [g g] g r |
+  """)
+}
+
+question {
+  name = "Droben im Oberland"
+  tempo = 130/3
+  breakpoints = 12/4, 24/4
+  music = rvoice("""
+		\time 3/4
+		\key f \major
+		f'4 c f | g d d | [e8. e16] [e8 bes'] [a g] | f2 r4 |
+		f4 a c | d4. c8 bes4 | c c c | c4. bes8 a4 |
+		f c f | [g8. d16] [d8 d] d4 | [e8. e16] [e8 bes'] [a g] | f2 r4 |
+  """)
+}
+
+question {
+  name = "Ein Jaeger laengs dem Weiher ging"
+  tempo = 90/4
+  breakpoints = 4/2, 12/2
+  music = rvoice("""
+        \partial 8
+		\time 2/4
+		\key f \major
+		c'8 | [f f] [f f] | [f d] c4 | f [c'8 c] | a4 r8 a |
+		[g g] [c g] | [f e16 d] c4 | [f8 f16 f] [f8 f16 f] |
+		[f8 f] [f a] | [g16 f e f] [g f e d] | [c8 e] [g c] |
+		[a a] [g g] | c4 r8 [d16 bes] | [a8 a] [g g] | f4 r8
+  """)
+}
+
+question {
+  name = "Die Affen rasen durch den Wald"
+  tempo = 180/4
+  breakpoints = 47/8
+  music = rvoice("""
+        \partial 4
+		\time 4/4
+		\key c \major
+		a'4 | g g a a | g g a a | g g a a |
+		g g [a8 e] [e f] | g4 g g g | c,2 r8 [c' c a] |
+		c4 c [c8 c] [c a] | c4 c [c8 e,] [e f] | g4 g g g | c,2 r4
+  """)
+}
+
+question {
+  name = "Ein Mann, der sich Kolumbus nannt"
+  tempo = 100/4
+  breakpoints = 4/2, 8/2, 49/8, 65/8
+  music = rvoice("""
+        \partial 8
+		\time 2/4
+		\key g \major
+		d'8 | [g g] [d d] | [e e] d4 | [e16 e e e] [fis8 fis] | g4 r8 d8 |
+		[g g] [d d] | [e e] d4 | [e16 e e e] [fis8 fis] | g4 r8 b |
+		[a8. b16] [a8 g] | [fis a] [d b] | [a8. b16] [a8 g] | [fis e] d4 |
+		[g8. g16] [g8 g] | [a8. a16] a4 | [fis16 fis fis fis] [e8 fis] | [g b d] r |
+		[g,8. g16] [g8 g] | [a8. a16] a4 | [fis16 fis fis fis] [e8 fis] | g4 r8 
+  """)
+}

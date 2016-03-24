@@ -1,0 +1,9 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+
+header {
+    module=harmonicinterval
+    title = _("Harmonic intervals")
+    theory = "theory-intervals"
+    lesson_id = "466409e7-9086-4623-aff0-7c27f7dfd13b"
+}

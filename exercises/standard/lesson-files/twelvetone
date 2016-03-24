@@ -1,0 +1,8 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+
+header {
+    lesson_id = "solfege.org-twelvetone"
+    module = twelvetone
+    title = _("Sing twelve random tones")
+}

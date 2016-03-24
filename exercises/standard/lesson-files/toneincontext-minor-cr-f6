@@ -1,0 +1,10 @@
+# GNU Solfege
+# Copyright (C) 2011 Tom Cato Amundsen
+
+header {
+    module=toneincontext
+    title = _("Cromatic -first 4 tones")
+    tones = 0, 1, 2, 3, 4, 5
+}
+
+include("include/cadence-minor")

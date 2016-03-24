@@ -1,0 +1,27 @@
+<sect1 id='nameinterval'>
+<title>Name intervals</title>
+<informalfigure>
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/nameinterval.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the program practising intervals using the buttons interface.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+
+<para>In this exercise, Solfege will display and play an interval,
+and you should identify the interval. This is a music theory exercise,
+and not an ear training exercise. To learn how to name intervals you should
+read <xref linkend='theory-intervals'/>.
+</para>
+
+<para>
+You identify the interval by clicking on one button telling the specific
+name and the general name.
+</para>
+
+</sect1>

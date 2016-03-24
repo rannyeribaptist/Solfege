@@ -1,0 +1,25 @@
+# Solfege - free ear training software
+# Copyright (C) 2001, 2004, 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "9a4eda75-d2c5-4de2-a773-6570454b5ff0"
+        module = singchord
+        title = _("Major and minor chords in different inversions")
+}
+
+question { satb("c''|e'|g|c") }
+question { satb("c'|g|e|c") }
+question { satb("g'|c'|g|e") }
+question { satb("c''|g'|c'|e") }
+question { satb("g'|e'|c'|g") }
+question { satb("c''|g'|e'|g") }
+
+question { key = "c \minor" satb("c''|es'|g|c") }
+question { key = "c \minor" satb("c'|g|es|c") }
+question { key = "c \minor" satb("g'|c'|g|es") }
+question { key = "c \minor" satb("c''|g'|c'|es") }
+question { key = "c \minor" satb("g'|es'|c'|g") }
+question { key = "c \minor" satb("c''|g'|es'|g") }
+
+

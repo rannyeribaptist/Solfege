@@ -1,0 +1,304 @@
+#
+# GNU Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2007 Tom Cato Amundsen
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+@SET_MAKE@
+
+export prefix:=@prefix@
+export exec_prefix:=@exec_prefix@
+export bindir:=@bindir@
+export datadir:=@datadir@
+export sysconfdir:=@sysconfdir@
+export libdir:=@libdir@
+export mandir:=@mandir@
+export CC:=@CC@
+export CFLAGS:=@CFLAGS@
+export RSVG:=@RSVG@
+export SWIG:=@SWIG@
+export SWIG_VERSION:=@SWIG_VERSION@
+export LILYPOND:=@LILYPOND@
+export LILYPOND_VERSION:=@LILYPOND_VERSION@
+export GIT:="@GIT@"
+export GS:=@GS@
+export TXT2MAN:=@TXT2MAN@
+export XGETTEXT:=@XGETTEXT@
+export MAKEINFO:=@MAKEINFO@
+export MSGFMT:=@MSGFMT@
+export MSGGREP:=@MSGGREP@
+export MSGMERGE:=@MSGMERGE@
+export XML2PO:=@XML2PO@
+export XSLTPROC:=@XSLTPROC@
+export STYLESHEET:=@STYLESHEET@
+export HAVE_STYLESHEET:=@HAVE_STYLESHEET@
+export PYTHON:=@PYTHON@
+export PYTHON_VERSION:=@PYTHON_VERSION@
+export PYTHON_PREFIX:=@PYTHON_PREFIX@
+export PYTHON_INCLUDES:=@PYTHON_INCLUDES@
+export PYTHONDLL:=$(dir $(PYTHON))/python27.dll
+export PACKAGE:=@PACKAGE@
+export MAJOR_VERSION:=@MAJOR_VERSION@
+export MINOR_VERSION:=@MINOR_VERSION@
+export VERSION:=@VERSION@
+
+export INSTALL:=@INSTALL@
+export INSTALL_PROGRAM := ${INSTALL}
+export INSTALL_DATA := ${INSTALL} -m 644
+export ENABLE_OSS_SOUND := @ENABLE_OSS_SOUND@
+export ENABLE_WINMIDI := @ENABLE_WINMIDI@
+export ENABLE_TUNER := @ENABLE_TUNER@
+export HAVE_FFTW := @HAVE_FFTW@
+export LIBS:=@LIBS@
+export DISTNAME:=$(PACKAGE)-$(VERSION)
+export DISTDIR:=$(PWD)/$(PACKAGE)-$(VERSION)
+
+TARGETS += AUTHORS INSTALL README FAQ INSTALL.win32
+installfiles += ui.xml help-menu.xml
+
+.PHONY: all genfiles genlyfiles
+
+# We have this as the default makefile target, because we want the
+# generated .ly files to be present before running make with the
+# all target to build the images
+genfiles: genlyfiles
+	$(MAKE) all
+
+all:
+
+SUBDIRS := po feta solfege test tools topdocs graphics help exercises
+
+FAQ INSTALL.win32 README INSTALL : topdocs/defs.texi
+
+%: topdocs/%.texi
+	LC_ALL=C makeinfo -I topdocs --no-split --no-headers --output $(notdir $(basename $<)) $<
+
+dist_files = AUTHORS COPYING INSTALL FAQ INSTALL.win32 \
+	Makefile.in config.h.in \
+	README changelog ChangeLog configure configure.ac \
+	default.config system.rc finn \
+	install-sh py-compile run-solfege.py.in \
+	solfege.1 solfege.1.txt \
+	lessonfile_editor.1.txt \
+	solfege.desktop solfege.css solfege.py \
+	windowsinstaller.iss.in windowsinstaller.iss \
+	win32-start-solfege.pyw \
+	solfegedebug.bat \
+	acinclude.m4 aclocal.m4 \
+	runsrcdir.bat \
+	ui.xml \
+	help-menu.xml \
+	autopackage/default.apspec.in \
+	winbuild.sh \
+	testgtkenv.py testgtkenv.bat \
+	test.py 
+
+include $(patsubst %,%/Makefile,$(SUBDIRS))
+-include debian-dir/Makefile
+-include debian/Makefile
+
+# We need solfege/_version.py because solfege imports it at runtime.
+solfege.1: solfege.1.txt solfege/_version.py
+ifneq ($(TXT2MAN),notfound)
+	LANGUAGE=C $(PYTHON) -c "import tools.buildutil; tools.buildutil.create_manpage()" | $(TXT2MAN) -t Solfege -r "GNU Solfege @VERSION@" -s 1 > $@
+endif
+
+rsync-manual: $(foreach lang,$(USER_MANUAL_LANGUAGES),help/$(lang)/one-big-page.html) help/C/one-big-page.html
+	rm -rf tmp-build
+	make prefix=`pwd`/tmp-build
+	make prefix=`pwd`/tmp-build install
+	for lang in $(USER_MANUAL_LANGUAGES) C; do \
+		ls tmp-build/share/solfege/help/$$lang/one*.html; \
+	done
+	cd tmp-build/share/solfege/help && rsync --delete --rsh=ssh -r . tom@solfege.org:/srv/data/www/docs.solfege.org/www/$(MAJOR_VERSION).$(MINOR_VERSION)
+	ssh tom@solfege.org "cd /srv/data/www/docs.solfege.org && python mkindex.py"
+
+maintainer-clean: clean
+clean:
+	rm -f $(TARGETS)
+	rm -f $(clean-files)
+	rm -f AUTHORS.txt COPYING.txt FAQ.txt README.txt INSTALL.txt INSTALL.win32.txt
+	# share is created at build time to store .mo files to be used when
+	# we run the program from the source dir.
+	rm -rf share
+
+install: all mkinstalldirs install-po install-soundcard install-graphics install-program-files compileall
+
+install-program-files: mkinstalldirs
+	$(INSTALL_PROGRAM) run-solfege.py $(DESTDIR)/$(bindir)/solfege
+	$(INSTALL_DATA) solfege.css $(DESTDIR)/$(datadir)/$(PACKAGE)
+	$(INSTALL_DATA) default.config $(DESTDIR)/$(datadir)/$(PACKAGE)
+ifneq ($(TXT2MAN),notfound)
+	$(INSTALL_DATA) solfege.1 $(DESTDIR)/$(mandir)/man1
+endif
+	$(INSTALL_DATA) system.rc $(DESTDIR)/$(sysconfdir)/$(PACKAGE)
+	$(INSTALL_DATA) solfege.desktop $(DESTDIR)/$(datadir)/applications/
+	for ifile in $(installfiles); do \
+	    cp --parents $$ifile $(DESTDIR)/$(datadir)/$(PACKAGE)/; \
+	done
+
+compileall:
+ifneq "$(nopycompile)" "YES"
+	$(PYTHON) -c "import compileall; compileall.compile_dir('$(DESTDIR)/$(datadir)/$(PACKAGE)/solfege')"
+endif
+
+mkinstalldirs:
+	mkdir -p $(DESTDIR)/$(mandir)/man1
+	mkdir -p $(DESTDIR)/$(bindir)
+	mkdir -p $(DESTDIR)/$(datadir)/$(PACKAGE)
+	mkdir -p $(DESTDIR)/$(sysconfdir)
+	mkdir -p $(DESTDIR)/$(datadir)/applications/
+
+uninstall: uninstall-po uninstall-soundcard uninstall-graphics
+	rm $(addprefix $(datadir)/$(PACKAGE)/,$(installfiles))
+	# delete .pyc files
+	rm -f $(patsubst %,$(datadir)/$(PACKAGE)/%c,$(filter %.py,$(installfiles)))
+	# delete .pyo files
+	rm -f $(patsubst %,$(datadir)/$(PACKAGE)/%o,$(filter %.py,$(installfiles)))
+	rm $(bindir)/$(PACKAGE)
+	rmdir $(bindir) || true
+	rm $(mandir)/man1/solfege.1
+	rmdir $(mandir)/man1 || true
+	rmdir $(mandir) || true
+	rm -f $(datadir)/$(PACKAGE)/solfege.css
+	rm -f $(datadir)/$(PACKAGE)/default.config
+	rm -f $(sysconfdir)/$(PACKAGE)
+	rm -f $(datadir)/applications/solfege.desktop
+	rmdir $(datadir)/$(PACKAGE)/feta
+	rmdir $(datadir)/$(PACKAGE)/exercises/standard/regression-lesson-files
+	rmdir $(datadir)/$(PACKAGE)/exercises/standard/lesson-files/bin
+	rmdir $(datadir)/$(PACKAGE)/exercises/standard/lesson-files/share
+	rmdir $(datadir)/$(PACKAGE)/exercises/standard/lesson-files/include
+	rmdir $(datadir)/$(PACKAGE)/exercises/standard/lesson-files
+	rmdir $(datadir)/$(PACKAGE)/exercises/standard
+	rmdir $(datadir)/$(PACKAGE)/exercises
+	rmdir $(datadir)/$(PACKAGE)/solfege/mpd
+	rmdir $(datadir)/$(PACKAGE)/solfege/soundcard
+	rmdir $(datadir)/$(PACKAGE)/solfege/exercises
+	rmdir $(datadir)/$(PACKAGE)/solfege
+	rmdir $(datadir)/$(PACKAGE)/graphics
+	rm -rf $(datadir)/$(PACKAGE)/help
+	rmdir $(datadir)/$(PACKAGE)
+	rmdir $(datadir)/applications || true
+	rmdir $(datadir)/pixmaps || true
+	rmdir $(datadir) || true
+	rmdir $(sysconfdir) || true
+	rmdir $(libdir) || true
+	rmdir $(prefix) || true
+
+.PHONY: test
+
+test: xmllint po/solfege.pot
+	if grep -H -n -e "[Uu]ser'*s manual" po/solfege.pot; then \
+		echo "Don't write \"users manual\" or \"user's manual\". Always write \"user manual\""; \
+		exit 10; \
+	fi
+	$(PYTHON) test.py
+	$(PYTHON) tools/po-file-checks.py
+
+test-screenshots:
+	$(PYTHON) tools/missing-screenshots.py
+
+solfege/_version.py:
+	$(PYTHON) -c "import tools.buildutil; tools.buildutil.create_versions_file('@GIT@')"
+
+check-revision-id:
+ifndef skip_rev_test
+	# We force recreating solfege/_version.py here
+	$(PYTHON) -c "import tools.buildutil; tools.buildutil.create_versions_file('@GIT@')"
+	$(PYTHON) tools/test-revision-id.py
+endif
+
+prepare-release: check-for-new-po-files check-for-new-manual-po-files update-manual check-revision-id test
+
+dist: po/solfege.pot help/C/solfege.pot
+	# We cannot add disk_workhorse as a prerequisite to the dist target,
+	# because it is possible, I think, that dist_workhorse will be executed
+	# before update-manual
+	$(MAKE) dist_workhorse
+	@echo
+	@echo "To make an official release:"
+	@echo " * set revision-id and version string in configure.ac and run"
+	@echo "   autoconf && configure"
+	@echo " * make prepare-release"
+	@echo " * make dist"
+
+# Run this from inside build-branch after creating the release with
+# tools/make-release.py
+binary-tarball:
+	$(MAKE) update-manual
+	$(MAKE)
+	cd .. && mv build-branch solfege-$(VERSION) && tar --gzip --create --file=solfege-bin-$(VERSION).tar.gz solfege-$(VERSION)
+	
+dist_workhorse: all AUTHORS INSTALL README FAQ INSTALL.win32
+	rm -rf $(DISTNAME)
+ifdef BZR
+	$(BZR) st && $(BZR) log -r 1..  > ChangeLog || true
+endif
+	mkdir $(DISTNAME)
+	for dfile in $(dist_files); do \
+		cp --parents $$dfile $(DISTNAME); \
+	done
+	# We had to split the dist_files variable in two because
+	# the list got too long for execvp
+	for dfile in $(lf_dist_files); do \
+		cp --parents $$dfile $(DISTNAME); \
+	done
+	find $(DISTNAME) | grep "~$$" | xargs rm -f
+	tar --gzip --create --file=../$(DISTNAME).tar.gz $(DISTNAME)
+	rm -rf $(DISTNAME)
+
+distclean-files += config.status config.cache config.log \
+	install-stamp build-stamp \
+	Makefile \
+	config.h run-solfege.py \
+	installer.nsi \
+	autopackage/default.apspec
+
+
+distclean: clean
+	rm -f $(distclean-files)
+
+count_c_lines:
+	wc --lines $(wildcard soundcard/*.c)
+
+count_lines:
+	wc --lines $(wildcard solfege/mpd/*.py solfege/soundcard/*.py solfege/*.py)
+	@echo "Counted python files"
+
+winbuild:
+	$(PYTHON) -c "file('AUTHORS.txt', 'w').write(file('AUTHORS', 'rU').read())"
+	$(PYTHON) -c "file('COPYING.txt', 'w').write(file('COPYING', 'rU').read())"
+	$(PYTHON) -c "file('FAQ.txt', 'w').write(file('FAQ', 'rU').read())"
+	$(PYTHON) -c "file('README.txt', 'w').write(file('README', 'rU').read())"
+	$(PYTHON) -c "file('INSTALL.txt', 'w').write(file('INSTALL', 'rU').read())"
+	$(PYTHON) -c "file('INSTALL.win32.txt', 'w').write(file('INSTALL.win32', 'rU').read())"
+
+solfege/languages.py: $(wildcard po/*.po) tools/buildutil.py
+	$(PYTHON) -c "import tools.buildutil; tools.buildutil.create_languages_py()"
+
+TARGETS += solfege/languages.py
+
+all: $(TARGETS) solfege.1
+
+.PHONY: help
+help:
+	@echo "set skip_rev_test=yes if you need to skip the bzr revid test"
+	@echo "set skipmanual=yes       Don't rebuild the music theory images"
+	@echo "make po-update           Update po/solfege.pot and msgmerge with po/*.po"
+	@echo "make manual-po-update    Update help/*/solfege.pot and msgmerge with help/*/*.po"
+	@echo "make update-manual       Rebuild the manual, requiring xml2po etc."
+	@echo "make test-screenshots    See which screenshots are missing in the user manual"
+	@echo "make help                Display this message."
+	@echo "help/C/one-big-page.html Make documentation in on big html file."

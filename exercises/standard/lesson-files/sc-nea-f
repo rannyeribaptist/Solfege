@@ -1,0 +1,31 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "06b00310-23db-11db-8682-8558e4e4f94h"
+  module = idbyname
+  random_transpose = yes
+  title = _("Neapolitan Scale and its modes - arpeged by fourths")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/nea"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question { name = nea1n  voice(nea1lf) }
+question { name = nea2n  voice(nea2lf) }
+question { name = nea3n  voice(nea3lf) }
+question { name = nea4n  voice(nea4lf) }
+question { name = nea5n  voice(nea5lf) }
+question { name = nea6n  voice(nea6lf) }
+question { name = nea7n  voice(nea7lf) }
+

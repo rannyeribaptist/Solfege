@@ -1,0 +1,36 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2011  Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "bb2f9d88-4284-4c10-bb29-76c00ada94c9"
+    module = dictation
+    title = _("Parts of 2 Bach inventions")
+}
+
+tempo = 70/4
+
+s = "\staff\relative c'{ %s}"
+b = "\staff\relative c { \clef bass %s}"
+
+question {
+  name = "Inventio 1"
+  breakpoints = 1/1, 2/1
+  clue_music = music(s % "\time 4/4 r16 c" 
+         + b % "\time 4/4 r2")
+  music = s % """\time 4/4 r16 [c d e] [f d e c] [g'8 c] [b c] |
+               [d16 g, a b] [c a b g] [d'8 g] [f g] |
+               [e16 a g f] [e g f a] [g f e d] [c e d f] |"""
+         + b % """\time 4/4 r2 r16 [c d e] [f d e c] |
+                [g'8 g,] r4 r16 [g'16 a b] [c a b g] |
+                [c8 b] [c d] [e g,] [a b] |"""
+}
+
+question {
+  name = "Inventio 2"
+  clue_end = 1/4
+  breakpoints = 1/2
+  music = music("""\staff\relative c''{ \key c \minor \time 4/4 
+               r8 [c16 b] [c d es g,] [as bes as f] [f' es d c] |
+               [b as' g f] [es d c b] [c d c d] [d8. c32 d32]}""")
+}

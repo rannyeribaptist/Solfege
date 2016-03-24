@@ -1,0 +1,19 @@
+<sect1 id='rhythmtapping2'>
+<title>Tap the rhythm</title>
+<informalfigure>
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/rhythmtapping2.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the rhythmtapping.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+<para>The program will play a randomly generated rhythm, and the user
+should reproduce the rhythm. The user enters the rhythm by
+tapping on the button labeled <emphasis>Tap here</emphasis>.
+</para>
+</sect1>

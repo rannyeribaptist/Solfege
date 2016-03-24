@@ -1,0 +1,32 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "098f0720-23db-11db-8682-8558e4e4f94c"
+  module = idbyname
+  random_transpose = yes
+  title = _("Jazz Modes used over a Dominant or Altered chord")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/modes"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question { name = maj5n  voice(maj5l) }
+question { name = mel4n  voice(mel4l) }
+question { name = mel5n  voice(mel5l) }
+question { name = who1n  voice(who1l) }
+question { name = dim2n  voice(dim2l) }
+question { name = mel7n  voice(mel7l) }
+question { name = blu1n  voice(blu1l) }
+question { name = har5n  voice(har5l) }
+

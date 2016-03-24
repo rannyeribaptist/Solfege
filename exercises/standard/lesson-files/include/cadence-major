@@ -1,0 +1,7 @@
+﻿# GNU Solfege
+# Copyright (C) 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+cadence {
+  music = "\staff\relative g'{ <g e c> <a f c> <g f d b> <g e c> }"
+}

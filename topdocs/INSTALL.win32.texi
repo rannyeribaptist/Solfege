@@ -1,0 +1,92 @@
+\input texinfo @c
+@setfilename INSTALL.win32.info
+@include topdocs/defs.texi
+@settitle INSTALL.win32
+@node Top, , , (dir)
+
+@chapter INSTALL.win32 - how to install GNU Solfege @value{SOLFEGEVERSION} on MS Windows
+
+Installing Solfege @value{SOLFEGEVERSION} on MS Windows is almost as simple as on
+Debian GNU/Linux:
+
+@itemize @bullet
+@item Download the file solfege-win32-@value{SOLFEGEVERSION}.exe
+from @uref{http://www.solfege.org}.
+@item Run the file by double-clicking on it.
+@item Accept all default values, and the program is installed
+in a few seconds.
+@item You can start the program from the Start Menu, 
+select Programs/GNU Solfege.
+@end itemize
+
+@section Uninstall the program.
+To uninstall the program, use the 'Add/remove program' utility in the
+control panel.
+Do not delete the files directly.
+
+@section Trouble?
+It is possible that the file @file{.solfegerc}
+is corrupted by a bug in the program. If you have strange problems,
+you can try to delete the file and rerun the program. The file is stored in
+@file{c:\Documents and Settings\YourName}.
+
+If you still have problems, you should check if there is a newer
+release available. And if so, test that release to see if the 
+bug has been fixed. If not, you can email you can email your questions to
+@email{solfege-devel@@lists.sourceforge.net}. Remember to tell
+what version of Solfege you are running, what version of MS Windows,
+and the name of the soundcard, if you know it. Do @emph{not} email
+the author of Solfege directly, because when emailing the list,
+other people than me get the chance to help. 
+
+@section Developers
+
+Solfege 3.23.0 and newer can be checked out and built from the
+git repository after you have installed the dependencies.
+
+@subsection Setup for running from source dir
+
+Install mingw using the installer
+from @uref{http://sourceforge.net/projects/mingw}.
+
+Install Python 2.7 from
+@uref{http://www.python.org/download/releases/2.7.2/}
+
+Download
+@uref{http://osspack32.googlecode.com/files/pygi-aio-3.4.2rev10.7z}
+and unzip to /C/mygi
+
+$ cp -a /C/mygi/py27 /C/Python27/Lib/site-packages/
+$ cp -a /C/mygi/gtk /C/Python27/Lib/site-packages/
+
+@section Setup for creating the binary package
+
+While Python 2.7 is _NOT_ installed, run this:
+
+@command{ msiexec /a python-2.7.2msi TARGETDIR=C:\mypython27}
+
+After that, you can reinstall Python 2.7, if you want.
+
+Install a program that can unpack 7z files. Unpack
+@uref{http://osspack32.googlecode.com/files/pygi-aio-3.4.2rev10.7z}
+to c:\mygi
+
+Checkout solfege with git into c:\solfege
+
+
+@section Building and running from source dir
+
+$ git clone http://git.solfege.org/solfege.git
+$ cd solfege
+$ ./autogen.sh
+$ make
+
+Then you run the program by double-clicking @command{runsrcdir.bat}.
+
+@section Creating the binary package
+
+Build as in the previous section.
+
+$ ./makeinstaller.sh
+
+... TODO

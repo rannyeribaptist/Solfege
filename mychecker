@@ -1,0 +1,38 @@
+#!/usr/bin/python
+# Solfege - free ear training software
+# Copyright (C) 2007 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+# I use this script with pychecker 0.8.17
+
+import os
+import shutil
+import sys
+
+
+def tmpfilename(s):
+    p, fn = os.path.split(s)
+    return os.path.join(p, "pychecker-tmp-" + fn)
+
+def check_file(fn):
+    tmpfn = tmpfilename(fn)
+    s = open(fn, 'rU').read()
+    outfile = open(tmpfn, 'w')
+    lines = s.split("\n")
+    two_first_are_empty = True
+    for x in range(2):
+        if not lines[x].startswith("#") or not lines[x].strip():
+            two_first_are_empty = False
+    head = [x for x in lines if '__future__' in x]
+    head.append("import solfege.i18n")
+    head.append("solfege.i18n.setup('.')")
+    lines = [x for x in lines if '__future__' not in x]
+    outfile.write("\n".join(head))
+    outfile.write("\n".join(lines[int(two_first_are_empty)*2:]))
+    outfile.close()
+    os.system('pychecker --limit 60 %s' % tmpfn)
+    os.remove(tmpfn)
+    os.remove(tmpfn+"c")
+
+for fn in sys.argv[1:]:
+    check_file(fn)

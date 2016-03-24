@@ -1,0 +1,2946 @@
+See changelog-2 and ChangeLog for newer changes.
+This file is not updated any more.
+----------------------------
+ incomplete list of changes
+----------------------------
+2.1.2:
+	* online-docs/addstyle.py: Use correct type of comment for the
+	styles.
+
+	* Makefile.in, easy-patches/: move patches needed to create the
+	easy-build tarball into easy-patches/. Updated Makefile.in.
+
+	* src/abstract.py: gtk.timeout_add want an integer as first argument.
+
+	* src/lessonfile.py.py + all lesson based exercises: Questions
+	can set the midi instrument using the "instrument" variable.
+        
+	* online-docs/C/lessonfile.xml: document the "instrument" variable.
+
+
+2.1.1: March 27, 2004
+	* Lots of small changes/cleanups not listed.
+	
+	* src/utils.py: bugfix: allow dots in file names.
+
+	* src/configwindow.py: Let the user select the program to use
+	to play .wav files.
+
+	* src/lessonfile.py: added 'play_wav' function.
+
+	* default.config: added sound/wav_player=/usr/bin/aplay
+
+	* lesson-files/fifth-small-pure-0.99, lessonfiles/share/*.wav:
+	Added files. The lesson file is an example file showing how to
+	use an external program to play .wav files.
+
+	* lesson-files/bin/runcsound.sh, lesson-files/share/fil1.*,
+	lesson-files/csound-*: added files.
+
+	* lesson-files/diatonic-*: Use the files for chord-voicing too.
+
+	* mpd/engravers.py: Added a little more space above the first
+	staff.
+
+	* src/lessonfile.py: renamed some class methods from 
+	"_functionname" to "functionname" because functions with names
+	like the first one is ignored by pydoc.
+	
+	* src/chordvoicing.py: s/get_chordtype/get_cname/
+
+	* src/chord.py, src/lessonfile.py: Let musicformat=satb work
+	for the chord exercise. Removed ChordLessonfile.get_chordtype,
+	use .get_cname
+
+	* src/lessonfile.py: the 'content' variable for lesson files
+	written for the harmonic progression exercise should contain
+	the name 'harmonic-progression-dictation'. The old 'harmony'
+	keyword is still supported for backward compatibility. Updated
+	the lesson files.
+
+	* src/abstract.py, selectlessonfilewidget.py, chord.py,
+	chordvoicing.py, singchord.py, idbyname.py,
+	harmonicprogressiondictation.py, dictation.py, const.py: code
+	cleanup. Don't use the USE_XXX variables. The lesson file
+	'content' variable use the exercise names now.
+
+	* src/chord.py, src/idbyname.py: make right-click play something.
+
+	* src/idbyname.py(new_question): display error message for
+	LessonfileException is raised.
+
+	* online-docs/C/Makefile: fix building without
+	WITH_LOCAL_XMLCATALOG=yes
+
+	* src/chord.py: g_type_status: set translated name when we give up.
+
+	* lesson-files/chord-all: s/m7b7/m7b9/
+
+	* online-docs/*/*.xml: replaced .solfegerc&shortversion; with
+	.solfegerc
+
+	* src/app.py: added SolfegeApp.run_external_program. Updated with
+	app/rcfileversion=2 to handle appended "example-files" to 
+	"cfg/lessoncollections"
+	
+	* lesson-files: altered-2, chord-m7-7-inv, chord-m7-7-inv-not,
+	chord-min-major-close-open, chord-min-major-inv,
+	chord-min-major-inv-not: added "set=nn"
+
+	* lesson-files/altered-1: Transposed questions one octave up and
+	added "questions_selectable=yes".
+
+	* src/rcfile.py: removed file. We won't upgrade from older
+	.solfegerc19 files any more.
+
+	* src/cfg.py: _Really_ make #-comments work.
+
+	* online-docs/C/lessonfiles.xml: Document musicformat=cmdline
+
+	* src/idbyname.py(on_end_practise): handle self.m_P == None better.
+
+	* src/abstract.py(parse_lessonfile): warn when running possible
+	dangerous lesson files.
+
+	* src/abstract.py(play_question): added support for musicformat=cmdline
+
+	* added a few lesson files, scripts and data files that use CSound.
+	(http://www.sourceforge.net/projects/csound)
+
+	* src/mainwin.py(dialog_yesno): Added function.
+
+	* topdocs/AUTHORS.texi, src/mainwin.py: Spelling fix.
+	
+	* test/mpd-test.py: Updated for new i18n api.
+
+	* po/no.po: use suboct2 for notenameformat translation.
+
+	* mpd/musicalpitch.py: added suboct2 so that norwegian and german
+	notenames has correct octaves.
+
+	* use stupid_catalog_file.cat to build gpl and fdl html page if
+	 --with-local-catalogfile is given to configure.
+
+	* mpd/mpdutils.py, mpd/musicalpitch.py, soundcard/midifilesynth.py:
+	We should only catch a specific excpetion, not all exceptions.
+
+	* online-docs/Rules.make: Use $(PYTHON) and not pythno2.2
+
+	* Makefile.in: building solfege.1 from solfege.manpage.xml should
+	use online-docs/stupid_catalog_file.cat if configured with
+	----with-local-catalogfile. 
+
+	* src/idbyname.py: update_gui_after_lessonfile_change: make more
+	robust if .solfegerc has invalid data.
+	
+	Add "Repeat slowly"-button for lesson files that set the
+	have_repeat_slowly_button to yes in the lesson file header.
+	Slowly is defined as 50% slower as the tempo set in the lessonfile.
+
+	* src/configwindow.py, default.config: Removed slow_bpm since no
+	exercises use that variable.
+
+	* src/identifyscale.py: removed file. Reimplemented the exercise using
+	lesson files. Updated online-docs/C/identify-scale.xml, src/const.py
+	and src/mainwin.py
+
+	* Replaced gtk.TRUE and gtk.FALSE with True and False
+
+	* src/dataparser.py: Silently replace characters with bad encoding.
+
+	* src/idbyname.py: Small changes caused by new SelectLessonfileWidget
+	and HIGified look.
+
+	* src/selectlessonfilewidget.py: New SelectLessonfileWidget class.
+
+	* src/lessonfile.py: LessonfileManager should save both
+	title and description. Used by new lessonfile selection code.
+
+	* online-docs/C/copyright.xml, online-docs/create_toc.py:
+	Use trademark tag and not copy entity.
+
+	* src/gu.py: added hig_dlg_vbox(), hig_category_vbox() and
+	hig_label_widget()
+
+	* src/abstract.py(LessonbasedTeacher): Merged set_lessonfile and
+	set_lessoncollection into only set_lessonfile function.
+
+	* solfege.manpage.1.in, online-docs/*/solfege.xml:
+	don't include iso-num.ent
+
+	* online-docs/stupid_catalog_file.cat: simplified file
+
+2.1.0: November 20, 2003
+	* big replace: s/eartraining/ear training/
+
+	* src/idbyname.py, src/chord.py, src/chordvoicing.py,
+	src/lessonfile.py: id-by-name: Show a "Repeat arpeggio" button
+	whenever the content of a lesson file is chords in chord format.
+	Updated files affected by lessonfile.py api change.
+
+	* src/i18n.py: Added setup() and setup_srcdir()
+
+	* src/statistics.py: Save all statistics with C locale name. This
+	to avoid problems if a user run the program with several different
+	locale settings. If you have ran Solfege with messages set to
+	anything else that english, then you might have to delete
+	$HOME/.solfege/id-by-name
+
+	* src/lessonfile.py, src/dataparser.py: translating lessonfiles
+	without gettext is done using names like this: "name[LANG]=..."
+	and not "name(LANG)=...". This because the latter broke in version
+	1.9.99, and implementing "name[LANG]=..." was far easier.
+
+	* src/mainwin.py: Added better error message if soundcard.synth==None.
+
+	* src/engravers.py: convert some arguments to .render_to_drawable to
+	ints to avoid DeprecationWarnings.
+
+	* src/idbyname.py, src/specialwidgets.py: Now we can select
+	the questions to be asked if the variable questions_selectable
+	in the header block of lesson files are set to "yes". See
+	lesson-files/chord-all-types and lesson-files/harmonic-intervals
+	for an example.
+
+	* lesson-files/chord-m7-7-inv: Fixed typo: s/inv=/inversion=/
+
+	* src/lessonfile.py: Removed automatic convert of very lesson files
+	with a very old music format. (Older than 1.1.3)
+
+	* solfege.suse82.spec.in, configure.ac: added the specfile.
+
+	* gnomeemu/gnome/ui.py: put buttons in gnome property box in
+        correct order.
+
+	* acinclude.m4: removed test for python. We use the one from
+        automake 1.7. This should fix the broken configure script of 2.0.1.
+
+	* src/configwindow.py: Improved using GNOME Human Interface
+	Guidelines (HIG)
+
+	* src/htmlwidget.py(on_button_release): get_iter_at_location want
+	ints as arguments.
+
+2.0.3: October 11, 2003 (Merged from stable branch on 2003-10-11)
+	* online-docs/C/chord-names.xml: added file.
+
+	* lesson-files:
+	 Renamed chord-m7-7-maj7-7b5 chord-m7-7-maj7-m7b5-dim7
+	 Renamed chord-maj7-7b5 chord-maj7-m7b5-dim7
+	Fixed bugs in the above mentioned files plus these:
+	 chord-m7-7, chord-m7-7-inv, chord-m7-7-inv-not, chord-min-major-7
+	My english sucks. I recently learned that what I have called
+	"Major Seventh" really is called "Dominant Seventh" in english.
+
+	* solfege.suse82.spec.in, configure.ac: added the specfile.
+
+2.0.2: September 21, 2003 (Merged from stable branch on 2003-10-11)
+	* configure.ac: set program version to 2.0.2
+
+	* gnomeemu/gnome/ui.py: put buttons in gnome property box in
+	correct order.
+
+	* acinclude.m4: removed test for python. We use the one from
+	automake 1.7. This should fix the broken configure script of 2.0.1.
+
+	* src/htmlwidget.py(on_button_release): get_iter_at_location want
+	ints as arguments.
+
+2.0.1: September 8, 2003
+	* acinclude.m4: test for python2.3
+
+	* solfege.py: run /usr/bin/python and not /usr/bin/python2.2
+	Edit the file if it does not fit you needs.
+
+	* configure.ac: check for python2.3
+
+	* online-docs/C/dictation-help.xml: removed strange guibutton markup.
+	
+	* lesson-files/chord-7b9-maj79: fixed wrong notes in chords.
+
+	* configure.ac : added --disable-pygnome-test and 
+	--disable-pygtk-test
+
+2.0.0: September 1, 2003
+	* soundcard/midifile.py: Fix tempo setting. Thanks to Michael Becker
+	for reporting this.
+	
+	* Don't create TRANSLATING from online-docs/C/translating-solfege.html
+
+	* topdocs/README.texi, topdocs/INSTALL.texi: updated to today
+	world.
+
+	* online-docs/Makefile: install png files.
+
+	* soundcard/Makefile: install correct midi module depending on
+	swig version. Remove old files when configure is rerun.
+	Thanks Michael Shigorin.
+	
+	* src/tracebackwindow.py: Adjusted the message and decreased heading
+	font size.
+
+	* online-docs/[C|no]/online-resources.xml: New url to mail archive.
+
+	* src/rcfile.py, solfege.py run-solfege.py.in: Store config settings
+	in unversioned file ~/.solfegerc. You can delete the old
+	~/.solfegercX.Y files after the first run of solfege 2.0
+
+	* src/mainwin.py: Redirect stderr to the traceback windows earlier
+	in the init process because we want to trap output from statistics.py.
+
+	* src/statistics.py: Statistics are stored in ~/.solfege/ and not
+	in versioned directory ~/.solfegeX.Y/ . The file
+	~/.solfege/statistics_version will make sure we understand the
+	statistics we read. The program will import statistics from solfege
+	1.9 or 1.4 if available. After you have ran the program once, you
+	can delete all old ~/.solfegeX.Y/ directories. 
+
+	* online-docs/[C|no]/chord-help.xml: Small change to make the file
+	also be valid sgml docbook.
+
+	*po/no.po: translation of C and B griff was mixed up.
+
+	* src/multipleintervalconfigwidget.py: bugfix for spin button
+	selecting what interval we are configuring.
+
+	* src/mainwin.py: about window: add 2003 to list of years with
+	releases.
+
+	* src/gu.py: Fix PercussionNameOptionMenu
+
+1.9.99: July 31, 2003
+	* topdocs/TRANSLATING.xml: removed file. Merged content with
+	online-docs/C/translating-solfege.xml
+	
+	* online-docs/C/helpfile-format.xml: texi->docbook :-)
+
+	* lesson-files/ : Added some chord lesson files. Renamed others.
+	Added a paragraph about the files in the help page for the chord
+	exercise. Transposed a lot of the chords one octave up.
+
+	* Makefile.inc.in, configure.ac, acinclude.m4, soundcard/Makefile:
+	Detect swig version automatically. Dropped --with-swig13 option.
+
+	* online-docs/addstyle.py: Less empty space on generated pages.
+
+	* online-docs/C/lessonfile.xml: Added paragraph about file encoding.
+
+	* online-docs/[C|no]/chord-help.xml: Add nice ordered list of lesson files
+	to practise.
+
+	* src/app.py: Display nice error message if links goes to non-existing
+	lesson files.
+
+	* src/selectlessonfilewidget.py: Do really watch the 'lessonfile'
+	and 'lessoncollection' config vars, and update the gui when the
+	change.
+
+	* src/lessonfile.py: Don't use build in type name 'file' as
+	a variable name.
+	
+	* src/htmlwidget.py(TextViewHtmlWidget): non-underlined whitespace
+	between two links. Adjust font according to GNOME defaults.
+	(GtkHtml2Widget): scrollbars POLICY_AUTOMATIC.
+
+	* Lesson files are assumed to be UTF-8 by default. Add the
+	line "# -*- coding: charset -*-" as the first line in the file
+	to use other encodings. Popular codings will be
+	"# -*- coding: iso-8859-1 -*-" for western european languages and
+	"# -*- coding: KOI8-R" for russian language. See
+	lesson-files/barnesanger for an example.
+	
+	* src/dataparser.py, src/lessonfile.py: Rewrote the dataparser
+	once more. But this time I have read about parser before the
+	rewrite, so the parser is easy to maintain and extend. This
+	rewrite revealed some oddities in the lesson file syntax. So from now
+	on the recommended way to include a lesson file is by the command
+	include("filename") and not the old way as include(filename).
+	The old syntax will still work, but support will be removed in the
+	future.
+
+	* solfege.redhat9.spec.in: Added file.
+
+	* src/inputwidgets.py: Don't call the callback function if the
+	user click on the widget before we have started to practice.
+	
+	* src/htmlwidget.py: Added enough table support to diplay the
+	tables in the users guide.
+
+1.9.11: July 14, 2003
+	* src/i18n.py: Simplify. The same setup code for windows and linux.
+	* mpd/{engravers.py, parser.py}: display natural signs in key
+	signatures if necessary. Renamed a few variables and functions.
+	
+	* src/htmlwidget.py: unicode fix for ms-windows. Code cleanup,
+	reading htmllib docs really help.
+	* soundcard/winsynth.py: added dummy WinSynth.stop() function.
+	* installer.nsi.in: removed.
+	* configure.ac, windowsinstaller.iss.in: added file. This is
+	the script to create the Inno Setup installer.
+	* solfege.bat, runpy2exe.bat: update the ms-windows dist.
+	* solfegewithconsole.bat: removed file. Edit solfege.bat if you
+	need to see the output.
+	* src/mainwin.py: import all exercise modules at startup. We do
+	this because py2exe need it.
+
+	* finally translated ChordVoicing to norwegian :-)
+
+	* online-docs/C/id-tone-help.xml, online-docs/no/id-tone-help.xml:
+	added paragraph to keyboard shortcuts.
+
+	* solfege.redhat8.spec.in: added gnome-python2-gtkhtml2 to 
+	Requires field.
+
+1.9.10: May 27, 2003
+	* po/fr.po: some update from Olivier Ahn. Need more work.
+
+	* topdocs/TRANSLATING.xml: small update.
+
+	* online-docs/C/Makefile: workaround: ignore errors building
+	fdl.html and gpl.html. Need this workaround until we figure out
+	what is causing xsltproc segfault on these files.
+
+	* src/inputwidgets.py: bugfix: added dummy grab_focus_first_button
+	function to classes that need it.
+	
+	* configure.ac: fix --enable-local-xmlcatalog description.
+
+	* src/mainwin.py: menu creating cleanup. Use ImageMenuItem when
+	required. Use tearoff menus if gui/menus_has_tearoff is set to
+	true in default.config or ~/.solfegerc1.9
+	Use gtk.main_quit, not gtk.mainquit.	
+
+	* gnomeemu/gnome/ui.py: stupid bugfix: hide about-window when
+	we click ok.
+
+	* src/chordvoicing.py: display notenames for the answer using
+	.get_user_notename, not .get_notename.
+	
+	* online-docs/no/chord-help.xml,
+	harmonic-progression-dictation-help.xml, chord-voicing-help.xml:
+	added norwegian translation.
+
+	* online-docs/C/chord-help.xml: spelling fix.
+
+	* src/melodicinterval.py, src/harmonicinterval.py: Make notename
+	spin button on config page wider, so the whole notename is visible
+	in french.
+	
+	* src/idtone.py: Translate _all_ notenames on config page.
+	
+	* src/notenamespinbutton.py: Rewrote the class not using
+	gtk.SpinButton; input and output signals are broken. Also the with
+	the new class, we can use pango markup when displaying notenames.
+
+1.9.9: March 26, 2003
+        * this release is also distributed as solfege-easybuild-1.9.9.tar.gz
+        This is for people that fails to install the proper docbook XML
+        tools to build the documentation.
+        
+        * online-docs/addstyle.py: use background: #ccc for .programlisting.
+
+        * po/ru.po: Fix a few keyboard accels.
+
+        * src/htmlwidget.py(HTMLWriter): pango markup size attribute
+        is 1/1000 of a point, not point. Found this since gtk+ 2.2 is
+        more picky than gtk+ 2.0.
+        
+	* online-docs/C/lessonfile.xml: add 'satb' to musicformat doc.
+
+	* src/mainwin.py: display progress info in the splash window
+	when we start the program.
+
+	* src/lessonfile.py, online-docs/C/lessonfile.xml: Three types
+	of transpositions: "accidentals", "keys" and "semitones". Documented
+	this.
+
+	* src/dataparser.py: simplify the get_tokens function from 95 to
+	30 lines and get a small speedup.
+
+	* src/rcfile.py: added code that will copy relevant data from
+	.solfegerc1.9 (or older) and to .solfegerc2.0
+
+	* run "make dvi" in online-docs/ to create a dvi file with the
+	online documentation.
+	
+	* src/abstract.py, default_config: don't set action_area button
+	height, use default gtk layout.
+
+	* src/cfg.py: don't raise string exceptions, use Exception class.
+
+        * src/rhythm.py, src/abstract.py, src/harmonicinterval.py,
+        src/identifyscale.py, src/idbyname.py:
+        Move focus to the controls used to answer when we click Repeat.
+
+        * src/mainwin.py: The about window will only show the name of
+        the translators of the current locale. Translators add their name
+        in the .po files.
+
+	* src/htmlwidget.py: only connect to self.anchor_track_cb if the
+	function is not None.
+
+1.9.8: February 3, 2003
+	* online-docs/no: compare-intervals-help.xml, dictation-help.xml,
+	harmonic-interval-help.xml, harmonic-progression-dictation-help.xml,
+	id-by-name-help.xml, id-tone-help.xml, identify-bpm-help.xml,
+	identify-scale-help.xml, inc-interval-input-keybindings.xml,
+	melodic-interval-help.xml, online-resources.xml, rhythm-help.xml,
+	sing-chord-help.xml, sing-interval-help.xml, twelve-tone-help.xml:
+	Translated to norwegian.
+
+	* online-docs/C/: id-by-name-help.xml, id-tone-help.xml,
+	identify-bpm-help.xml, inc-interval-input-keybindings.xml,
+	online-resources.xml, sing-chord-help.xml, sing-interval-help.xml,
+	welcome.xml: Small markup fixes, fixing of very bad english.
+	The bad english are still there.
+	
+	* updated copyright strings in (hopefully) all files.
+
+	* src/mainwin.py: Mainwin.set_icon; at least metacity show the icon
+	when we cycle programs, but I still get the warning:
+	object class `GnomeProgram' has no property named `default-icon'
+
+	Call gnome.program_init with version number from configureoutput,
+	not just 1.9.1.
+
+	* solfege.manpage.xml.in: rewrote manpage in docbook. Removed the
+	old file.
+
+	* online-docs/create_toc.py: don't write about untranslated files
+	in the english toc. Fix encoding.
+
+        * src/htmlwidget.py(GtkHtml2Widget.source): fix for gtkhtml2 2.2.0:
+        call Document.clear() before we open the stream and write to it.
+
+	* online-docs/C|no|ru|es_MX/solfege.xml: give full url to iso-num.ent
+
+	* online-docs/es_MX/solfege.xml: refer to the DTD on
+	www.oasis-open.org
+
+	* debian-dir/rules: --with-local-xmlcatalog
+
+	* debian-dir/control: build depend on docbook-xml
+
+1.9.7: January 8, 2003
+	* online-docs/addstyle.py: Use courier as tt font to avoid warnings
+	on my system.
+	
+	* mpd/interval.py: fixes to make pychecker and module testing work
+	better.
+
+	* topdocs/TRANSLATING.xml: merged online-docs/README and po/README.
+
+	* online-docs/C|es_MX/copyright.xml: fixed markup error.
+
+	* online-docs/C/Makefile: build gpl.html and fdl.html separately
+	because we want them in one big file. We need a big file because
+	the rest of the doco is built using suppress.navigation 1
+
+	* online-docs/create_toc.py: Hopefully the last time: get the
+	toc translated correctly.
+
+	* Makefile.in: Run make in po/ directory early, because gettext
+	is used later in the build.
+	
+	* src/htmlwidget.py(HTMLWriter.send_flowing_data): workaround for
+	a unicode error I don't understand.
+
+	* mpd/musicalpitch.py: added MusicalPitch._format_notename function.
+	Notenames are now fully translateable using .po files. Also fixed the
+	file so we can run pychecker on it, and made doctest tests work.
+
+	* src/identifybpm.py: button sensitivity fix. set q_status correct,
+	and do the right thing.
+
+	* src/rhythm.py: button focus fix.
+
+	* src/selectlessonfilewidget.py(toggle_lessonfile_details):
+	use .get_active(), .active attrib is not supported in pygtk+ 1.99.x
+
+	* src/ abstract.py, app.py, chord.py, chordvoicing.py, 
+	compareintervals.py, dictation.py, harmonicinterval.py, idbyname.py,
+	identifybpm.py, identifyscale.py, idtone.py, mainwin.py,
+	melodicinterval.py, rhythm.py, singchord.py, twelvetone.py:
+	make sure on_start|end_practise is called at the proper places.
+
+	* added online-docs/stupid_catalog_file.cat. The option
+	--enable-local-xmlcatalog will use this file if your /etc/xml/catalog
+	file is missing or broken. Documented this in the INSTALL file.
+
+	* online-docs/*/solfege.xml: do the document start the correct way.
+
+	* removed the last traces of development_menu.
+
+	* online-docs/C/*-help.xml: updated key bindings.
+
+	* src/idtone.py: Reset statistics when we give up. Don't be
+	confused when the users click the piano after the question has
+	been solved.
+
+	* Don't use my home made system for keyboard accels, do it the
+	standard gtk+ way.
+
+1.9.6: December 28, 2002
+	* src/gu.py(Flashbar): Do nothing if we pop an empty stack.
+
+	* src/inputwidgets.py(AbstractGuitarWidget.mark_note): removed
+	workaround I had to use for gnome 1.4.
+	
+	* soundcard/rat.py: Made rat a new-style class and user __slots__
+	to gain a tiny-tiny performance increase.
+
+	* src/harmonicprogressiondictation.py, default.config,
+	online-docs/C/harmonic-progression-dictation-help.xml: Added
+	'Give up' button to the exercise. Changed the keyboard shortcut
+	to answer from Ctrl-g to Ctrl-a, and let Ctrl-g give up.
+
+	* src/htmlwidget.py, src/mainwin.py: This time, _really_ let
+	the html widget grab focus at program startup.
+
+	* Fixed a few simple FIXME tags found in the code. Use
+	display_question_music_error_message in lots of exercises to display
+	parse errors from mpd.
+
+	* src/mainwin.py: Move configureoutput.WITH_GNOME test to after
+	we have done pygtk.require("2.0"), or else the real gnome bindings
+	will be first in the path. 
+
+	* src/chord.py: Make the exercise 'config/picky_on_new_question'.
+
+	* src/multipleintervalconfigwidget.py(reset_to_default): Enable
+	exactly the same intervals that are in default.config.
+	
+	* online-docs/es_MX: added spannish/mexican translation. Contributed
+	by Daniel Tonda. Don't try to process gpl|fdl-appendix.sgml since they
+	are not (and should not be) translated.
+
+	* solfege.gtkrc: Removed some definitions used by the old gnomeemu
+	about window.
+
+	* configure.ac: test for gtkhtml2 using pkgconfig.
+
+	* gnomeemu/ : Removed some junk that is not necessary with gtk+ 2.0
+	Wrote About class.
+
+	* online-docs/C/harmonic-progression-dictation.xml: Added paragraphs
+	about configuration and key bindings.
+
+	* solfege.redhat.spec.in: add missing --with-buggy-distro and
+	fix path to solfege.png. Thanks Daniel Tonda.
+
+	* src/gu.py(SolfegeDialog): removed class.
+
+	* online-docs/create_toc.py: added link to GPL and FDL.
+	Improved html code. Don't import gtk.
+
+	* src/lessonfile.py: handle corrupt lessonfile. List them on
+	the page where we list all installed lessonfiles.
+
+	* src/selectlessonfilewidget.py: Improved exception handling:
+	Display the message using mainwin.display_error_message.
+	Don't choke on empty lessonfile collection.
+
+	* soundcard/midifilesynth.py, soundcard/oss_common.py: added
+	stop() function.
+
+	* src/mainwin.py(MainWin.display_error_message): use
+	gtk.MessageDialog, not gnome.ui.gnome_error_dialog_parented.
+
+	* mpd/musicdisplayer.py, src/singchord.py, src/idbyname,
+	src/dataparser.py, mpd/parser.py, src/abstract.py, src/dictation.py,
+	src/harmonicprogressiondictation.py: Handle errors in lessonfiles
+	better.
+
+	* src/lessonfile.py(SingChordLessonfile.select_random_question):
+	Rewrote function because the old was unreadable. Now it works as
+	documented: if we transpose, make sure there are no more than five
+	accidentals.
+
+	* src/rhythm.py(Gui.new_question), src/configwindow.py(on_apply),
+	src/identifyscale.py(Gui.new_question):
+	Don't rise a string exception, use an assert statement.
+	
+	* mpd/_exceptions.py: Added file and MpdException. All exceptions
+	raised from the module now derive from this.
+
+	* mpd/mpdutils.py: renamed from utils.py because this make pychecker
+	unhappy.
+	
+	* src/inputwidgets.py: removed norwegian comment since python2.3
+	want only ascii characters unless set the source code encoding.
+
+	* src/identifybtpm.py: Focus fix + follow picky_on_new_question.
+
+	* debian-dir/control: Small adjustment to package description.
+
+	* src/specialwidgets.py(grab_focus_first_button): added function
+
+	* src/melodicinterval.py, src/singinterval.py, src/identifyscale.py,
+	src/idbyname.py, src/mainwin(MusicViewerWindow), src/dictation.py,
+	src/twelvetone.py, src/idtone.py, src/compareintervals.py,
+	src/singchord.py, src/harmonicprogressiondictation.py,
+	src/identifybpm.py:
+	Improved focus when using keyboard.
+
+	* src/harmonicinterval.py: 'New interval' button gets focus when
+	we give up.
+
+	* src/chord.py: Improved focus when using keyboard. Display thei
+	music when we have guessed correct.
+
+1.9.5: Desember 20, 2002
+	* online-docs/C/translating-solfege.xml: updated.
+
+	* online-docs/[no|ru]/Makefile: use gnu make function to set
+	the name variable. Since the files now are the same, maybe we
+	should use symlinks?
+
+	* acinclude.m4(AM_PATH_PYTHON): make version strings with
+	letters in work, so we can use python 2.3a0 
+
+	* online-docs/Makefile, online-docs/create_toc.py,
+	online-docs/Rules.make: Localisation fix. Make the generated
+	TOC be localised, and do the russian manual in utf-8.
+	
+	* configure.ac: added --with-swig13 option. Use this if you have
+	swig 1.3 and not the default version 1.1.
+	
+	* configure.ac: added --with-buggy-distro option to do some extra
+	testing on buggy distros like RedHat 8.0. Use pkgconfig test for
+	pygnome by default, only use the import test if this option is used.
+
+	* src/chordvoicing.py, harmonicinterval.py, src/htmlwidget.py,
+	src/mainwin.py, src/chord.py: Focus adjustments.
+
+	* acinclude.m4(BUGGY_DISTRO_CHECK_PYGNOME2): Renamed from
+	CHECK_PYGNOME. The test is still flawed, but a little less flawed
+	since it now does "import gnome"
+
+	* configure.ac: Fail with an error message if we give --with-gtkhtml
+	to ./configure, but the library are not found.
+
+	* graphics/solfege.xpm: added icon that was lost in xpm->png
+	conversion in version 1.9.3.
+
+	* mpd/musicalpitch.py(get_notename, get_octave_notename,
+	get_user_notename, get_user_octave_notename): there four
+	functions replace .notename() and .str() functions. Updated
+	callers.
+	
+	* src/selectlessonfilewidget.py(update): select the correct
+	lessonfile on the optionmenu when lessonfile based exercises
+	are started.
+
+	* src/harmonicprogressiondictation.py: Set focus to answer entry
+	when we start a new question. Pressing ENTER key check our answer.
+
+	* lesson-files/jsb-inventions: added missing '}'
+	
+	* tools/lf2so.py: can now process all lessonfiles.
+
+	* online-docs/Rules.make.texinfo, htmlfix.py.in, htmlfix.py,
+	tools/midiplayer.c: removed file.
+	
+1.9.4: Desember 6, 2002
+	* Makefile.in: removed rpm and deb targets.
+
+	* solfege.spec.in: corrected package names for Requires field.
+	The package names are for redhat 8.0. Use --enable-docbook-stylesheet
+	in %build to find the stylesheet.
+
+	* online-docs/create_toc.py: the file will create a table of
+	contents to the users guide for all langs other than C. If
+	a file is not translated, there will be a link to the english
+	file.
+
+	* configure.ac: Fail xsltproc is not able to parse the the
+	stylesheet found by configure.
+
+	* acinclude.m4: added test TEST_STYLESHEET
+	
+	* configure.ac, online-docs/Rules.make, Makefile.inc.in: use
+	variable XSLTPROC to find xsltproc.
+
+	* online-docs/C/harmonic-progression-dictation-help.xml: added
+	skeleton file to be filled later.
+	
+	* online-docs/C/twelve-tone-help.xml: renamed from
+	twelvetone-help.xml
+
+	* po/es.po, po/Makefile: added partial spanninsh translations
+	from 1.4.8 and asked Daniel to translate es.po.
+	
+1.9.3: November 13, 2002
+	* configure.ac: added --enable-docbook-stylesheet option.
+
+	* mpd/parser.py(_generate_midi_events): let each voice have it's
+	own channel. Please let me know if anybody have problems with this.
+
+	* configure.ac, acinclude.m4: wrote new test to check for
+	gnome-python bindings because some distros, for example
+	redhat 8.0 don't include gnome-python-2.0.pc.
+
+	* graphics/identify-bpm24.png: added ugly icon for the exercise.
+
+	* xpm/*.xpm: converted files to png and moved them to
+	graphis/ directory. Updated makefiles and the files that used
+	the graphics.
+
+	* topdocs/README.texi: removed paragraph about LC_NUMERIC other than C
+	would cause an error, since this is not a problem with pygtk2.
+
+	* src/const.py: Add harmonic-progression-dictation to the file
+	menu. Added auto-new-question function and made it possible to
+	get different instrument on different voices.
+
+	* src/mainwin.py, src/const.py, src/identifybpm.py: small fix to
+	make it work with gtk+2.0, a few bugfixes and added the exercise
+	to the file menu. Better configuration will be added later.
+
+	* src/mainwin.py: be nice to systems that don't have the pygtk
+	module.
+
+	* online-docs/Rules.make, Makefile.in: run update-version-strings
+	on the toplevel dist target to avoid building the documentation
+	twice.
+	
+	* Makefile.in: make 'make dist' run 'aclocal -I
+	/usr/share/aclocal/gnome2-macros'
+
+	* misc files: removed "from __future__ import nested_scopes"
+	because this is standard in python2.2
+
+	* src/notenamespinbutton.py: it is now possible to write the
+	notename directly into the entry, without using the arrows.
+	Added workaround for python2.2 bug.
+	
+	* configure.ac: Check for xsltproc.
+
+	* src/mainwin.py, test/lessonparser-test.py, test/mpd-test.py,
+	test/musicparser-test.py: Added 
+	"import pygtk; pygtk.require("2.0")" to make sure we get the
+	correct version of pygtk bindings.
+
+	* src/chordvoicing.py: Made the exercise usable. More work has
+	to be done before the lesson file format is decided and the lesson
+	file backend can do random voicing of chords.
+	
+	* online-docs/C/Rules.make: automatically update version and
+	shortversion ENTITY in online-docs/xx/solfege.xml
+
+	* online-docs/C/lessonfiles.xml: fix xml markup bug that cause
+	my simple html widget to crash.
+
+	* src/utils.py(parse_url): handle anchors in links.
+
+1.9.2: August 18, 2002
+	* online-docs/C/*.xml: Added CVS $ Id $ tag.
+
+	* Just a warning: Since we now use gtk+ 2.0, all strings in
+	lessonfiles that represent labels that will be displayed by the
+	program have to be unicode.
+
+	* renamed configure.in --> configure.ac
+
+	* configure.in: require pygtk and gnome-python version 1.99.11
+	or newer.
+
+	* Use static methods new_from_notename and new_from_int to create
+	a new MusicalPitch with a value other than "c". __init__ does
+	automatically initialise to "c". Updated affected files.
+
+	* src/inputwidgets.py(IntervalButtonsWidget),
+	src/compareintervals.ly(__ini__): JUSTIFY_CENTER some labels.
+
+	* src/notenamespinbutton.py: Removed old unused
+	SimplestNotenameSpinButton class.
+
+	* SpinButton: use 'value-changed' signal, not 'changed'.
+
+	* converted the last set_usize to set_size_request.
+
+	* test/mpd-test.py: updated to new i18n init.
+
+1.9.1: July 2, 2002
+	* configure.in: removed the sysconfdir hack. Specify --sysconfdir
+	to where you want it, if {prefix}/etc is not ok.
+
+	* Moved some stuff from run-solfege.py.in and solfege.py to
+	  mainwin.py
+
+	* generate debian-solfege.py.in from run-solfege.py.in . 
+
+	* src/mainwin.py: key bindings are not confused by NumLock or
+	CapsLock.
+
+	* src/rhythm.py: two small fixes that the convert script (gtk
+	1.2->2.0) did not handle.
+
+	* harmonic-interal and melodic-interval: Use OptionMenu instead
+	of Combo to select input widget.
+
+	* Updated about-dialog to GNOME2
+
+	* converted english online docs and the russian welcome page
+	to docbook. The dutch translation is still in texinfo.
+
+	* src/i18n.py(get_charset): removed function
+
+	* src/htmlwidget.py: set the charset by examining the
+	header of the html document.
+
+	* topdocs/README.texi, topdocs/INSTALL.texi: updated after
+	gnome2 porting
+
+	* configure.in: more uptodate to GNOME2 stuff.
+
+	* src/htmlwidget.py: Added support for gtkhtml2
+	
+	* It is not allowed to use single qoutes for multiline strings
+	any more in lesson files. You have to use tripple quotes like
+	in python. This because we use pygettext to exctract
+	translatable strings. Updated online-docs/C/lessonfiles.texi.m4
+
+1.4.7: June 14, 2002
+	* online-docs/C/music-format.texi.m4: fixed typo.
+
+	* src/compareintervalls.py(Gui.show_intervalls): there was a
+	missing space after the \clef command if interval two was
+	displayed with a different clef than clef one. Thanks to David
+	Petrou for the bug report.
+
+1.9.0: April 20, 2002
+	* po/ : We don't need the solfege-intervalnames-nn.po files
+	any more. See po/README for details.
+
+	* topdocs/README.texi: updated required software list.
+
+	* use pythons gettext.py
+
+	* I deleted Mandrake to install GNU/Hurd, so there are no .rpm this
+	time. Time to start saving for a larger hard disk.
+	
+	* First step in port to gtk 2.0. You have to configure with
+	--without-gnome. This release includes a simple and very ugly html
+	widget that can display images, fonts and pretty normal looking
+	links, even for ms-windows users. Small adjustments to the gui.
+
+1.4.6: April 17, 2002
+	* generate gpl.html from gpl.texi, and use that instead of GPL.html
+	that was just plaintext GPL inside <pre> tags.
+
+	* online-docs/C/Makefile: fdl.html is cleaned by make clean.
+
+	* src/dictation.py(Gui._update): don't break if $HOME/lessonfiles
+	does not exist or is empty.
+
+1.5.1: (not yet released)
+	* online-docs/texidefinitions.m4.in: intervall->interval
+
+	* src/configwindow.py: changes to make gtk 2.0 porting easier.
+
+	* src/cfg.py: added watch functionality to cfg.set_XXX
+
+	* configure.in: use gtkhtml by default
+
+	* src/cfg.py, src/mainwin.py: removed custom float method. 
+	locale.setlocale(locale.LC_NUMERIC, "C") seems to fix the problems.
+
+	* added changes from stable branch (1.4.3 and 1.4.4 releases)
+
+1.4.5: April 8, 2002
+	* mpd/musicdisplayer.py(display_range): sort the list of
+	timepos Rats. Fixes problem with jsb-invention and dictation
+	exercise.
+
+	* po/Makefile: call mkdir with -p before filename, bugfix for
+	FreeBSD.
+	
+	* src/INSTALL.texi: write that we need GNU m4, not any m4.
+
+	* src/README.texi: --no-sound option
+
+	* src/midifilesynth.py: do os.kill inside a try-except block just in
+	case the process is already killed. Also kill using SIGKILL, not
+	SIGQUIT.
+
+	* configure.in: python version test broken for python 1.5
+
+1.4.4: March 11, 2002
+	* htmlfix.py: fix bugs in texinfo 4.0f
+
+	* solfege.spec.in: make /etc/solfege1.4 a %config files
+
+	* online-docs/C/development-warning.texi.m4: removed file
+	
+	* online-docs/??/*.texi.m4: texinfo code fixup.
+
+	* online-docs/C/nognomewelcome.texi.m4: fix typo.
+
+	* Makefile.in: build INSTALL.win32
+
+1.4.3: February 18, 2002
+	* installer.nsi.in: little work in windows installer.
+
+	* po/ru.po: *really* add russian translations this time.
+
+	* add 2002 to list of years in copyright notices.
+
+	* po/da.po: updated danish translation.
+
+	* online-docs/C/Makefile: really install AUTHORS.html, GPL.html
+	and fdl.html.
+
+	* online-docs/C/lessonfiles.texi.m4: inserted newline to create
+	a paragraph + fixed a typo.
+
+	* src/mainwin.py: locale.setlocale(locale.LC_NUMERIC, "C") also
+	on linux because gnome.ui tend to change the locale for float()
+	even if it should not.
+	
+	* src/inithack.c: removed file. You should use gdk-pixbuf 0.15.0
+	or newer if you want to use GtkHTML and view pages with png images.
+	(If you can't install gdk-pixbuf 0.15.0, you can as always use
+	XmHTML)
+
+	* create_fileslist.py: use wildcard when specifying man page, so
+	both distros that gzip and bzip2 the file will work.
+
+	* src/harmonicintervall.py, src/statistics.py: harmonic intervall
+	statistics should not say directions of intervalls.
+
+	* src/abstract.py(Gui.keymatch): select correct keyboard
+	shortcut if both KEY and <modifier>KEY are possible matches.
+
+	* src/inputwidgets.py: changed the font used for keyboard
+	labels because it didn't show on mandrake 8.1.
+
+
+1.5.0: February 9, 2002
+	* installer.nsi.in: include the translated messages, but they are
+	still broken. Simplified the file.
+
+	* online-docs/png/mainwin.py, online-docs/C/ui.texi.m4: made a 
+	new screenshot and updated the text a little.
+
+	* src/harmonicintervall.py, src/statistics.py: harmonic intervall
+	statistics should not say directions of intervalls.
+
+	* src/inithack.c: removed file. You should use gdk-pixbuf 0.15.0
+	or newer if you want to use GtkHTML and view pages with png images.
+	(If you can't install gdk-pixbuf 0.15.0, you can as always use
+	XmHTML)
+
+	* create_fileslist.py: use wildcard when specifying man page, so
+	both distros that gzip and bzip2 the file will work.
+
+	* src/cfg.py(float): added home made float function to be used
+	since PyGNOME regularly changes the comma separator char when it
+	should not.
+
+	* src/abstract.py(keymatch): make keyboard shortcuts work even
+	if scroll lock or num lock is on.
+
+	* src/chordvoicing.py: new exercise, not complete, see help
+	online documentation.
+
+	* mpd/utils.py: removed DataClass, we can use __slots__ and
+	python 2.2 for this.
+
+	* a few small fixes after checking code with pychecker.
+
+	* online-docs/C/helpfile-format.texi.m4: fixed typo.
+
+	* IntervalButtonsInterface (used by harmonic and melodic intervall)
+	can disable buttons for intervals that will not be asked for.
+
+	* 'The big intervall->interval spelling fixup'
+
+1.4.2: January 22, 2002
+	* configure.in: Check for Python >= 2.1
+
+	* solfege.spec: put the file in toplevel source dir, so users
+	can do "rpm -ta solfege-1.4.2.tar.gz" to build rpm package.
+
+	* create_fileslist.py: moved to toplevel sourcedir, and added
+	hack since rpm seems to compress the man page.
+
+	* lesson-files/chords-3: fixed wrong toptone to one chord.
+
+	* src/idtone.py: clear flashbar on new question. Thanks Seymour.
+
+	* online-docs/*/*.texi.m4: intervall->interval spelling fix. Only
+	user visible fix, not changing file names and rc file yet. We have
+	to do the rest in the next devel releases because this require that
+	we change the names of exercises, files and rc file format.
+
+	* online-docs/C/translating-solfege.texi.m4: rewrote paragraph
+	about translating users guide.
+
+1.4.1: December 25, 2001
+	* solfege.py, run-solfege.py.in, debian-solfege.py.in,
+	src/mainwin.py: do the old-rc-file-copy before cfg.initialise.
+
+	* src/cfg.py: reread_data should read _app_defaults.
+	
+1.4.0: December 22, 2001. Merry Christmas everybody!
+	* src/rcfile.py, src/mainwin.py: import rc file from earlier
+	versions of solfege.
+	
+	* solfege.py, debian-solfege.py.in, run-solfege.py.in: check
+	for what python version we are using, and issue a warning if the
+	python interpreter is too old.
+
+1.3.99: Desember 19, 2001
+	* debian/solfege.postinst: a little more robust.
+
+	* src/configwindow.py(create_win32_sound_page): set apply
+	button sensitive when we change the g_synth_num spin button.
+
+	* installer.nsi.in: don't claim to be alpha quality.
+
+	* Makefile.in: export-to-dos will make winmidi.pyd
+	
+	* Makefile.in: the 'dist' target depend on rpm-spec to make sure
+	we distribute rpm/files.list.
+
+	* Makefile.in: make README and friends depend on topdocs/defs.texi
+	so they get updated.
+
+1.3.4: Desember 17, 2001
+	* solfege.1.in: use configure to get version numbers
+	in man page.
+
+	* online-docs/C/index.texi.m4: fix broken link to
+	twelve-tone-help.html
+
+	* po/: added russian translations.
+
+	* online-docs/id-tone-help.texi.m4: fixed a typo + use
+	SOLFEGESHORTVERSION m4 macro.
+ 
+	* online-docs/all languages: use m4 macro expansion to automate
+	things when version number is mentioned.
+
+	* online-docs/texidefinitions.m4: renamed to
+	online-docs/texidefinitions.m4.in because it now contains m4
+	variables telling the version number of Solfege
+
+	* topdocs/*: added topdocs/defs.texi.in that defines variables
+	for the version number of this release, so it is easier to make
+	sure version numbers and file names are uptodate on the README files.
+
+1.3.3: December 6, 2001
+	* online-docs: added russian translation of welcome message.
+	Po-files will follow in 1.3.4
+
+	* first release with new windows installer. Windows users only
+	need to download one big .exe file that contains everything they
+	need. Don't even have to install python. (I will re-add the option
+	to do it "the right-but-hard way" installing python, gtk and
+	pygtk manually later, probably in the next release.)
+	
+	* src/htmlwidget, configure.in: If we use xmhtml or gtkhtml
+	are now only selected using configure options. This is because
+	the hack using cfg module so select htmlwidget don't work using
+	py2exe on MS Windows.
+	
+	* src/dataparser.py, mpd/parser.py, mpd/engravers.py: some
+	a = a + x changed to a += x. The speed increase is only
+	theoretical.
+
+	* You can now select what synth number to use on ms windows.
+	
+	* soundcard/winmidi.c, soundcard/Makefile: Steve Lee ported the file
+	to gcc, we now can crosscompile the sound module from linux using
+	mingw32 gcc cross compiler.
+
+	* Makefile.in: remove old trash, a little simplified using
+	pattern rules.
+
+	* topdocs/INSTALL.texi: add a paragraph about configure
+	options.
+
+	* topdocs/README.texi: update to new config file names, and
+	make the comments version independent.
+
+1.3.2: November 9, 2001
+	* online-docs Makefiles: move pattern rules to Makefile.inc.in
+
+	* online-docs/index.texi.m4: renamed to solfege.texi.m4
+	
+	* online-docs/C/id-tone-help.texi.m4: add missing '}'
+
+	* configuration: the program will read
+	/usr/share/solfege/default.config, then /etc/solfege1.3,
+	and finally $HOME/.solfegerc1.3. This mean that /etc/solfege1.3
+	can now be empty, or only contain sys admins changes, for
+	example the sound setup, instead of the whole set of default
+	values.
+
+	* topdocs/INSTALL.text: fix broken url
+
+	* online-docs/C/*.texi.m4: added the cvs 'Id' keyword
+
+	* online-docs/C/id-tone.texi.m4: small improvement to
+	the documentation.
+
+	* src/idtone.py: set q_status to const.QSTATUS_NO in 
+	Gui.start_practise instead of Teacher.end_practise so
+	we get the name on the first tone when we press 'New tone'
+	after reading some docs.
+	
+	* topdocs/FAQ.texi: added paragraph about 'invalid literal
+	for float():' error message.
+
+	* test/mpd-test.py: update to changed mpd api. Use python2.1
+	instead of 'env python'
+
+	* src/mainwin.py: removed some lambda statements, simplified
+	others.
+	
+	* src/cfg.py(get_bool): return 0 if get_string don't return
+	'true' or 'false'.
+
+	* src/idtone.py(Gui.on_answer_from_user): fixed typo in
+	config variable name.
+	
+	* src/const.py: use tuplets instead of lists for lists that
+	won't ever change.
+
+	* configure.in: check for Python.h in pythonX.Y/
+	
+	* solfege.1: bugfixes
+
+	* use weak references to avoid memory leaks. So we now
+	require Python 2.1 or later. No big deal since PyGTK 2.0
+	will require Python 2.2 anyway. Updated the docs about this.
+
+1.3.1: October 15, 2001
+	* misc small (invisible to end user) changes in the use
+	of the gtk module to ease porting to gtk+ and pygtk version 2.
+	
+	* sound on win32 is temporary broken. Someone that
+	owns a MS C compiler has to check the latest changes to
+	soundcard/winmidi.c and compile it for python 2.0.1
+	and 2.1.1 and send me the binaries. An alternative (that
+	is the plan for the future) is to port the code to gcc
+	on win32.
+
+	* added doc-base support for Debian.
+
+	* Dutch translations for much of the online documentations
+	contributed by F(r)eddy SpierenBU(r)G.
+
+1.3.0: (not released to the public)
+	* Added danish translations. Thanks to Keld Simonsen.
+	Use LC_MESSAGES=da_DK.
+
+	* src/cfg.py: We use our own config system all the time,
+	dropping gnome.config. This to make things simpler and
+	to make sure the config code for people running Solfege
+	without gnome get enough testing.
+
+	This change the names the config files to:
+	 system default:  /etc/solfege1.3
+	 users config:    $HOME/.solfegerc1.3
+
+1.2.2: Desember 14, 2001
+	* po/ : added russian translations. Thanks to Michael Shigorin.
+	
+	* po/ : added danish translations. Thanks to Keld Simonsen.
+
+	* configure.in: check for Python.h in pythonX.Y/ not python/
+
+	* added fixes to debian packaging, see debian/changelog 1.2.1-2
+
+1.2.1: September 9, 2001
+	* online-docs/png/skip.png: added missing file.
+	
+	* src/mainwin.py: "import src.inithack" -> "import inithack",
+	so it works when it is installed
+	
+	* src/Makefile: compile inithack.c with -fPIC
+
+	* Makefile.in: distclean should remove Makefile.inc
+
+1.2.0: September 7, 2001
+	* accordionwidget: shift it a little down and right.
+
+	* src/mainwin.py: set LC_NUMERIC on win32 to avoid the comma
+	char change from '.' to ','. 
+
+	* gnomeemu/gnome/config.py(set_int, set_float): small
+	bugfix/cleanup.
+
+	* default.config: fix spelling error.
+
+	* soundcard/winsynth.py: set the default tempo to be 60 bpm.
+
+	* mpd/parser.py: import engravers on toplevel to avoid
+	warning from python 2.2a1
+
+	* toplevel docs in win32-dist:  be nice and do newline
+	conversion and add .txt to the file names so windows
+	users can view the files in notepad.
+
+	* topdocs/INSTALL.texi: a little reorg.
+
+	* online-docs/C/id-tone-help.texi.m4: update the paragraph
+	about key bindings.
+
+	* Added inithack module that make sure all libraries needed
+	to display png images when we use the GtkHtml widet are loaded.
+	This is necessary to get GtkHtml to work on Debian (and probably
+	other distros). Start Solfege with '--inithack' commandline
+	option if the program crashes when you display html files that
+	contains graphics.
+	
+	This hack is not very portable, so we still use
+	the old xmhtml module as default in the tarball. But to try
+	it, edit $HOME/.gnome/solfegeX.Y and set [gui]htmlwidget=gtkhtml
+	and, if necessary, start solfege with the '--inithack' option.
+	You might have to edit the file names in src/inithack.c and
+	recompile if your system uses other names for shared libs than
+	Debian or when you upgrade your libs.
+
+	If you try this, let me know if it works or fails for you, and
+	remember to tell me the name and version of your OS.
+	(UPDATE: this only works if your gtkhtml libs are compiled
+	without gconf support.)
+
+1.1.5: August 11, 2001 "1.2.0 release candidate 2"
+	* win32.zip: include compiled .mo files so translated
+	messages work on windows too.
+
+	* src/idtone.py: Gui.on_start_practise will make sure the
+	correct buttons are [in]sensitive
+
+	* po/*.po: fixed a few copyright notices.
+
+	*src/compareintervalls.py: same as idtone.py:
+	key-bindings should not cause errors.
+
+	* src/idtone.py: don't trow exception if we press the
+	'repeat'-key-binding before clicking new tone.
+
+	* lesson-files: converted all lesson files that still used
+	the ; after some commands. Even if solfege converts
+	automatically, the files should be an example for people
+	writing other lesson files.
+	
+	* src/utils.py(compare_version_strings): return -1, 0 and 1
+	the same way as cmp(int, int) does. Updated all callers.
+
+	* preferred_instrument and preferred_instrument_velocity
+	selected from the preferences window will now *really*
+	be used everywhere.
+
+	* online-docs/C/news-in-1.1.texi.m4: mention idbyname
+	and session change.
+	
+1.1.4: August 7, 2001 "1.2.0 release candidate 1"
+	* Statistics: The 'Session' column is now reseted each time
+	you start practise an exercises, not each time you restart
+	the program.
+
+	* src/mainwin.py: always open exercises with the practise page
+	selected when we click on the toolbar or use the menu.
+
+	* src/idtone.py: misc changes. Follow the practise rules set
+	in prerefences window. Use the regular auto-new-question
+	code.
+	
+	* configure.in: check for makeinfo
+
+	* src/dataparser.py src/lessonfile.py: Small hack to get
+	the startup time down to what it was in version 1.1.2
+
+	* win32-solfege.py: removed the file. We set
+	PYTHONPATH in solfege.bat and run the standard solfege.py
+
+	* src/txtui.py: added display_error_message.
+	
+1.1.3: July 12, 2001
+	* src/dataparser.py: Yet Another Rewrite(tm). It is 
+	10 to 15% faster, depending on what version of python you
+	use. But more important, the code should be easier
+	to read. It works for all the lesson files distributed
+	with Solfege, but it is not yet very much tested, and
+	good error messages are not completed.
+
+	* online-docs/C/music-format.texi.m4: added a paragraph
+	about the \time command.
+
+	* mpd/duration.py: Added a __cmp__ function.
+
+	* mpd/parser.py: If you set the time signature on one staff,
+	it is automatically set on the other staffs.
+
+	* mpd: no ; after the  \time, \key and \clef command. 
+	We do this change to
+	follow the format for GNU Lilypond closer. The change was
+	made in GNU Lilypond in the new stable 1.4.x release.
+
+	\time 3/4;      -->  \time 3/4
+	\key g \major;  -->  \key g \major
+	\clef violin;   -->  \clef violin
+
+	Older lesson files will still work because of automatic
+	conversions. Lesson files that are changed to the new music 
+	format should set the 'version' variable in the header block
+	to '1.1.3' to be parsed a *little* faster.
+
+	* mpd(Score._generate_engravers): removed a few
+	unnecessary lines and got 3-4 % speedup
+
+	* mpd: display a natural sign before the sharp sign after
+	a double sharp note, for example: gisis gis
+
+	* windows port: the .zip file for windows is now laid out
+	the same way as the tarball, but it includes precompiled
+	midiplayer.exe and winmidi.dll. You need Mingw GCC to
+	compile midiplayer.exe and some expensive microsoft
+	C compiler to build winmidi.dll.
+	
+	* soundcard: Joe Lee contributed some nice code that
+	talks to the soundcard, so you don't have to use
+	midiplayer.exe any more. Thanks!
+	
+	* mpd: Added tuplets. Use the \times 2/3 command just
+	as GNU Lilypond
+
+	* mpd: bugfixes to the key signature code. This bugfix
+	also fixes 8 other types of clefs. Updated doco about this.
+	
+	* online-docs/musicformat.texi.m4: documented the \key
+	command.
+
+1.1.2: June 15, 2001
+	* feta/README: added the file
+
+	* mpd/parser.py: fix to announce_timepos avoids a few
+	unnecessary function calls. 2.4% speedup with
+	python 2.1 and -O command line option.
+
+	* mpd: added "s" to skip like Lilypond does. Added notice
+	in online doco.
+
+	* mpd: music "c4 c. c8" are not allowed, you should do
+	"c4 c4. c8". We do this to follow GNU Lilypond closer.
+
+	* online-docs: don't include html version of changelog in
+	the online docs. Generate fdl.html. Fixed a few copyright
+	notices.
+
+	* id-tone: Small doco fix + added a frame to the config page.
+	
+	* mpd/parser.py(musicalpitch_relative): rewrote to fix a bug
+	and reduced lines of code with 50%.
+
+	* mpd/parser.py, mpd/engravers.py: improved horisontal
+	alignment of accidentals.
+
+1.1.1: May 21, 2001
+	* configure.in: small changes. I'm learning a little bit,
+	and hope the changes are more correct than wrong. Check
+	for the programs needed to build the program.
+
+	* Makefiles: don't distribute .mo files and files generated
+	by swig.
+	
+	* po/some-files: fixed charset and encoding for a few files.
+
+	* the tuner (available from the development menu) are
+	disabled by default, configure with --enable-tuner to
+	test it.
+
+	* online-docs/C/lessonfiles.texi.m4: documented the
+	latest additions to random_transpose.
+
+	Added advise to use the version variable in the header
+	block.
+
+	* Swig (http://www.swig.org) is now required to build the
+	program. I had to do this since parts of the C code are
+	optional or depends on what libs you have installed.
+	
+	* src/identifyscale.py: Now you select what scales to
+	practise on the config page. This is more consistent with
+	the other exercises.
+
+	* mpd/parser.py, mpd/engravers.py: impoved the layout of
+	noteheads.
+
+	* src/inputwidgets.py: Small fixes since I now know about
+	the GnomeCanvas.set_scroll_region function. Thanks to
+	Adrian Likins.
+
+	* src/harmonicintervall.py: added the m_t.play_question()
+	that was lost....
+
+1.1.0: May 1, 2001
+	* lesson-files: replaced random_intervall = 1 with
+	random_intervall = yes
+
+	* src/lessonfile.py: make the random_transpose variable
+	used in the header block more usable. Now you can
+	specify how much up or down the music can be transposed,
+	
+	random_transpose = no
+	random_transpose = yes (the same as random_transpose = -5, 6)
+	random_transpose = 0, 12 (only transpose up)
+	random_transpose = 10, 20 (this is valid too, you will get
+				   very bright music)
+	  
+	* removed src/startup.py. Made src/app.py gui independent
+	and moved gui-intependent stuff from startup.py to app.py,
+	and the rest to mainwin.py. Added src/txtui.py, an
+	extremely temporary command line gui to the harmonic
+	intervall exercise. Start Solfege with --txtui to use the
+	command line UI. The plan is to make parts of the program
+	usable for blind people.
+
+	* The development menu is visible by default in the devel
+	releases.
+
+	* start time reduced from 2.99 to 2.55 seconds on my pc by not
+	importing an exercise until it is needed. As a side effect of
+	this, I removed some rubbish from src/const.py.
+	
+	* moved the sound init code to SolfegeApp, and added a function
+	that is used by the startup code and the configure window to
+	display a GnomeErrorDialog if there was some problems 
+	initialising the sound card. Removed the command line options
+	dealing with sound config that was marked as obsolete in
+	version 1.0.0, updated the manpage about this, and fixed a typo
+	in the manpage.
+
+	* src/dataparser.py: moved the most used matches first in the
+	loop to get 1-2% speedup. 
+
+	* rewrote the notenamespinbutton.py. The only visible changes
+	is that the noterange in preferences window works properly,
+	and that mouse button 2 and 3 has switched functions because
+	this is more natural for users with only two buttons.
+
+	* borrowed some dsp code from guituner. We have an
+	experimental tuner on the development menu that you can use to
+	tune your guitar or banjo. I will add microphone support to
+	sing-intervall and sing-chord in a later release.  
+
+1.0.5: June 5, 2001
+	* configure.in: added configure test for xgettext, msgfmt
+	and msgmerge.
+
+	* src/rat.py(Rat.__mul__): bugfix.
+
+	* src/dictation.py: display the name of each piece of music.
+
+	* src/engravers.py(KeySignatureEngraver.engrave): recognise
+	the clef name "treble". Fixed documentation to tell the truth,
+	only treble/violin and bass clef works. I'll add the other
+	clefs to a later release. Reported by Sylvian Bernier.
+
+	* src/lessonfile.py: don't crash if there is a subdirectory
+	in $SOLFEGEHOME/lesson-files/. Reported by Sylvian Bernier.
+
+	* src/configwindow.py: bugfix: solfege forgot the
+	settings and always used port 0 when opening sound device.
+	Thanks to Sylvian Bernier for reporting this.
+
+1.0.4: May 10, 2001 "I am a fool..."
+	* This is a release nobody needs unless they want to build
+	a debian package from the tarball. The last release was
+	screwed up in a way so that I could build the debian package
+	*once* from the working dir, but the debian autobuilders
+	failed. This release will be uploaded to debian properly,
+	so if there are more packaging errors, it will not
+	require a new version. Sorry..., I'll do more testing in
+	the future.
+ 
+1.0.3: April 29, 2001
+	* src/lessonfile.py: Bugfix to the random transpose code
+
+1.0.2: April 26, 2001
+	* src/inputwidgets.py: another fix for python 2.x
+
+	* dutch translations from Freddy Spierenburg.
+
+	* applied quite a lot of changes from the devel branch,
+	most importand it that src/startup.py is gone, and that
+	the gui is initialised before the App object.
+	
+	I figured it would be simpler to make the sound init code
+	give you proper error messagse and not just crash the program
+	with these changes. This changes also mean that the
+	command line options you could use to configure sound are
+	gone, you should use the Preferences Window.
+
+1.0.1: April 12, 2001
+	* src/configwindow.py: fix so you can select no sound.
+	
+	* src/twelvetone.py: small adjustment to avoid scrollbars.
+
+	* musicdisplayer: less space between the notes.
+
+	* soundcard/midifilesynth.py: call os.wait with no 
+	parameters so it will work with python 2.1
+
+	* online-docs/C/lessonfiles.texi.m4: mentioned the
+	include() command.
+
+	* statistics.py: The program will no longer fail if the
+	$HOME/solfegeX.Y/exercise-name/solfege/filename_hash
+	is corrupted. Thanks to Atte André Jensen for reporting
+	this problem.
+
+	* lessonfiles: fixed LessonfileCommon so it works as the
+	documentation says, the header block is first by convention.
+	When you use include(filename), the parser will use the
+	first header block it finds and ignore the rest. Also fixed
+	a bug with the include() function used in lesson files.
+	
+	* po/de.po: updated german translations, thanks Oliver!
+
+	* solfege.1: s/Substitue/Substitue/
+
+1.0.0: March 29, 2001
+	* merged the spin button from 1.1.0. (I branched cvs and started
+	to more devel before the 1.0 release)
+
+0.7.38: March 15, 2001
+	* src/dataparser.py: included files won't pollute the including
+	files name space.
+
+	* we use FDL for the online documentation.
+
+	* moved the extra copyright info out of COPYING, the GPL itself
+	is copyrighted, and shouldn't be changed. 
+	
+	* converted documentation to texinfo. Now we can make a nice
+	printed manual (even if we don't have content to that yet).
+	Also, it is possible to use lilypond and lilypond-book to
+	write longer texts about music theory with inline images
+	both for html and dvi output. Small fixes here and there in the
+	documentation.
+
+	* src/identifyscale.py: small bugfix to gui, only visible after
+	upgrading to gtk+ 2.2.9
+	
+	* the LessonFileManager will sort the file listing and add white
+	space so the page listing all lesson files can be word wrapped.
+
+	* some work on the progression-* lesson files. Added id-by-name
+	content type to Giovannis lesson files.
+
+0.7.37: March 10, 2001
+	* src/dataparser.py: fix to make include(filename) work with python2.
+	Compile re.compile operator_re only once
+
+	* mpd/parser.py(Lexer): compile the re's only once. (6% speedup to
+	parse_to_score_object)
+
+	* fixed bad URLs in INSTALL and welcome.html
+
+	* ran python with -tt options and fixed some inconsistent use
+	of tabs and spaces
+
+	* soundcard/midifilesynth.py: an os.wait(pid) call fixed the problem
+	with processed not being killed properly.
+
+0.7.36: March 8, 2001
+	* Oliver Vollmer: updated german translations.
+
+	* debian/rules: don't include INSTALL in /usr/share/doc/solfege
+
+	* debian/copyright: fixed url of homepage.
+	
+	* soundcard/midifilesynth.py(play_track): Mats Bengtsson noticed
+	that Solfege will fork a new process each time it run the external
+	midiplayer program, and will eventually eat up too much resources.
+	This because I don't have a clue about threading, multiple
+	processes and fork/kill/execl. The kill call didn't kill it properly.
+
+	So we are back to using os.system for now. The function using fork
+	and execlp is still in midifilesynth.py if someone want to fix it.
+
+	* friendlier error messages if the sound card is not setup
+	or if the device is busy and used by another app.
+
+	* converted README to texinfo, small adjustment of what goes into
+	INSTALL and README
+
+	* Corrected the key binding listing in the doco for chord exercise.
+
+	* Some new lesson files for the chord exercise from Giovanni
+	Chierico: altered-1 altered-2 diatonic-1 diatonic-2
+	
+0.7.35: March 5, 2001
+	* minor documentation updates, change (C) 2000 to
+	(C) 2000-2001 in online-docs/C/definitions.m4
+	
+	* src/identifyscale.py, src/harmonicintervall.py,
+	src/melodicintervall.py, src/idbyname.py:
+	added necessary flashbar.clear() call.
+
+	* debian/rules: hack to build m68k binaries without
+	oss sound. Ok, lets see if we can get this into the
+	testing distribution now.
+	
+0.7.34: March 4, 2001
+	* Rewrote the FlashBar to use HarmonicProgressionLabel
+	so it can display string like I-VI(6)-V-I
+
+	* configure.in: make --with-gnome do the right thing.
+
+	* removed the "Use antialised canvas when possible" because
+	(if I remember correctly) it was necessary for some of the
+	instruments because I forgot to make pologons anticlockwise.
+	Let me know if there still are problems with the canvas.
+
+	* src/gu.py(FlashBar): added push, pop and clear method.
+
+	* This release will delete your preferences stored in 
+	~/.gnome/solfege0.7
+	
+	* Some lessonfile i18n bugfixes.
+
+	* LessonManager will no longer choke because of tmp files
+	created by vim.
+
+	* melodic-intervall: use utils.int_to_intervall name to get
+	the feedback in the flashbar correct when we don't use the
+	buttons interface (Wasn't this fixed months ago???) + fixed
+	another bug ocouring when the user clicked on a tone to answer
+	an intervall bigger than a decim.
+
+	* src/utils.py(int_to_intervallname): don't give direction for
+	unison intervall.
+
+	* added 'Give up' button to harmonic-intervall, melodic-intervall,
+	identify-scale, idbyname
+
+	* added copyright notice to some files that was missing it.
+
+	* renamed the constants used for q_status
+
+	* forgot to add autorepeat_if_wrong to ConfigWindow.on_apply.
+
+	* typo in online-docs/C/bug-reporting.html.m4
+
+0.7.33: February 28, 2001
+	* The program will delete identify-scale statistics created
+	with any older release, because one key in the db was changed
+	a few releases ago.
+
+	* Preferences window: added global option; the program can
+	be configured to repeat the last question if you answer wrong.
+	This is used in harmonic-intervall, melodic-intervall,
+	identify-scale, idbyname, compare-intervalls
+
+	* BeamEngraver.engrave: 1/16, 1/32 and 1/64-notes should
+	work now. (There are probably some special exceptions I have not
+	covered yet.)
+
+	* added -w, --warranty
+	
+	* added -h to be short for --help.
+
+	* --version will also display copyright information.	
+	
+	* made default program startup more quiet. Added
+	--verbose-sound-init command line option.
+
+	* 2000 -> 2000-2001 (c) search and replace
+
+0.7.32: Feb 25, 2001 "My fingers are soon falling of..."
+	* Solfege now works with Python 2.0. But according to FSF,
+	you cannot import GPL'ed C extensions in Python 2.0 because
+	of GPL is incompatible with the licencse Python 2.0 is
+	distributed under. So to be safe, if you want to use python
+	2.0, you should configure with --disable-oss and use an
+	external midiplayer such as playmidi, drvmidi or timidity.
+	Let's hope Python 2.1 be released with a GPL compatible license.
+
+	* utils.py(parse_url): fixed regular expression to make it
+	work with python 2.0
+
+	* mpd/parser.py: updated some .append calls to make them work
+	with python 2.0
+
+	* src/statistics.py(het_hash_of_lessonfile): call expanduser
+
+	* src/startup.py: don't show splash window or initialise
+	sound if we use --help, --gtk-help, -v, --version command
+	line options.
+
+	* configure.in: a little cleanup. Check for pygtk and
+	pygnome without acutally running a python program that
+	imports them, because this is nicer to autobuilders that
+	build the program without and X display available
+
+	* rhythm.py: use SHADOW_IN for the frame where we enter
+	rhythm elements.
+
+	* better sectioning in the menu used to select midi instrument.
+
+	* lesson-files: completed the songs in the file 'barnesanger'
+
+	* online-docs/C/lessonfiles.html.m4: added a paragraph about
+	tripple quotes in lesson files.
+	
+0.7.31: Feb 23, 2001
+	* id-tone exercise will not run the on_start_exercise if we
+	are running without gnome, since the whole exercise is unusable.
+
+	* melodic-intervall, sing-intervall: The program will no
+	longer tell you to configure the exercise better if you select
+	a to small range of tones to create the question from, but
+	will silently adjust the range. Thanks to Giovanni for
+	reporting this.
+
+	* added popup window while waiting for the app to start.
+	Use --no-splash if you don't want to see it.
+
+	* fixed the --sound-using-drvmidi and --sound-using-timidity
+	command line options. Updated the man page.
+
+	* bf: makefile changes in last release broke the html->text
+	conversion of GPL.html.
+
+0.7.30: Feb 21, 2001
+	* we use singintervall24.xpm as icon for Debian and GNOME
+	menus. I'm sure some user with more graphical talent than I
+	can come up with something better.
+ 
+	* src/mainwin.py: fixed Docviewer.source
+
+	* src/dataparser.py: the parser will report correct
+	filename and linenumber if there are errors in files
+	that are included with include(filename)
+	
+	* default.config: make id-tone exercise simpler by default.
+
+	* twelvetone: add .clear() to the constructor, so we
+	see an empty line at startup.
+
+	* exernal midi player: make timidity less verbose
+
+	* small adjustments to the statistics viewer.
+
+	* small tweaking to the startup scripts for windows and
+	unix. i18n should work even for windows now...
+
+	* only compress the installed man page when we build debian
+	package
+
+	* src/inputwidgets.py: workaround for weird floating point
+	error when LC_ALL is set. This will not be necessary after
+	changing to gnome-python-1.4
+
+	* Internationalization fixes. I had done very little testing
+	lately, and it has been broken when using the tarball (and maybe
+	.rpm), the debian package worked fine.
+	
+	* Simplified the makefiles a little. The configure script
+	only need to create the toplevel Makefile and Makefile.inc,
+	not all the makefiles in the subdirs.
+
+	New dist target. Each subdir has to set the  dist_files
+	variable to include all files that has to be included.
+
+0.7.29: February 12, 2001
+	* dropped the app bar. Added feedback in a statusbar
+	in the middle of the practise_area. Some other small gui
+	adjustments.
+
+	* simplified src/cfg.py a little.
+
+	* on_end_practise will be called when you change the input
+	widget in melodic and harmonic intervall exercise.
+	
+	* small documentation updates.
+
+	* 5 new lessonfiles for the sing-chord exercise.
+
+	* souncard/track.py: added separate play_track function
+	that don't use fork() to be used on win32.
+
+	* solfege.gtkrc: a little cleanup, now even the small numbers
+	for HarmonicProgressionLabel is visible.
+
+	* A few changes to make the windows port work. Per-user-
+	config file will be $HOME/solfegerc0.7, not $HOME/.solfegerc0.7
+	because windows95 seems to like the first name better. I also
+	updated the makefile for win32.
+
+	* Rewrote lessonfile.py and added dataparser.py. The file format
+	is backward compatible. New is the include(lessonfile) command.
+	See lesson-files/singchord-all
+	
+	The new lessonfile code is easier to read and maintain and it
+	is faster. Comparing the old and new code on python 1.5.2 show
+	15% faster parsing. Doing the same with python 2.0 and 2.1a1
+	show 45% speedup. 
+	  
+	And btw, the python 2.x interpreters are more than twice as
+	fast as python 1.5.2 for this type of code.
+
+	The new parser will also give a little better error messages,
+	and tell you the linenumber that has an error (but line numbers
+	will be wrong if you use the include command)
+
+	The parsing of lessonfiles at startup are 5 times faster with
+	the new lessonfile code.
+
+0.7.28: January 21, 2001
+	* configure.in: bugfix to --sysconfdir combined with missing
+	gnome-config script + fix some without-gnome mess
+
+	* soundcard/: oss_common.py, oss_sequencer.py, oss_sequencer2.py:
+	After some changes, it seems that both /dev/sequencer and
+	/dev/sequencer2 works fine for all exercises. But if you don't have
+	an AWE32 card, you might get piano sound instead of percussion on
+	the rhythm exercise.
+
+	* src/lessonfile.py: SingChordLessonfile are now a little smarter
+	when doing random transpose, you wont get key signatures with more
+	than 5 accidentals.  Earlier you could get 8 or more. This also
+	adds the "key" variable to the lessonfile. See
+	online-docs/C/sing-chord-help.html.m4
+
+	* mpd/engravers.py: a little more space after key signatures.
+	
+	* src/singchord.py: use global preferences to get preferred
+	instrument and velocity
+	
+	* mpd/musicdisplayer.py: fix for clicking on xshifted notes
+
+	* solfege will now kill the external midiplayer if you
+	try to play a new sound before the other is finished. This
+	give people using playmidi or timidity a much better feel.
+
+	* use AWE_SET_CHANNEL_MODE and AWE_DRUM_CHANNELS to get
+	percussion to work. I'm not sure how the macros work, so
+	someone could explain this to me.
+
+	Added checkbutton on configwindow to use this macros if
+	you have a Sound Blaster AWE card.
+
+	* configure.in: configure will fail with an explanation if
+	m4 is not installed. If you don't want to install m4, use one
+	of the precompiled binaries as sourceforge or www.debian.org
+
+	* configure.in: added --enable|disable-oss-sound, so it can
+	be built on systems without OSS sound
+
+	* configure.in: added check for python bindings for gtk
+	and gnome.
+
+	* fix: the guitar widget was unusable for a few releases since
+	some cleanup to mpd.MusicalPitch.
+
+	* fix: the callback from SelectLessonfileWidget got called
+	twice.
+
+	* the keyboard shortcuts won't mess with the config page
+	of exercises any more.
+
+	* added the file solfege.desktop to be used with GNOME
+
+0.7.27: Desember 9, 2000
+	* small bugfixes to the Makefile.in uninstall target.
+
+	* mpd/mainwin.py: fixed bug with clicking links and updating
+	the status line.
+
+	* mpd/engravers.py(KeySignatureEngraver.engrave):
+	fixed type in notename: his -> bis
+
+	* all exercises should use the velocity 64 by default.
+
+	* online-docs/C/GPL.html: now in html format instead of
+	plain ascii inside <pre></pre>
+
+	* online-docs/ : small changes to the Makefile.in's to use
+	/data-targets.make
+
+	Added copyright notice to the online documentation.
+	
+	* mpd/parser.py(Voice.add_notehead): Discard beam request on
+	1/4-notes and longer durations.
+
+	* src/identifyscale.py: changed how the displayed scale is written.
+	Now we use a key signature.
+
+	* mpd/parser.py(Staff.accbarline): fixed a bug with accidentals
+	and key signatures.
+
+	* mpd/parser.py: bf: the \key command should know about \transpose
+
+	* some small bugfixes to harmonic-intervall, melodic-intervall,
+	sing-intervall, id-by-name
+
+	* updated the exercises on the development menu so they
+	work with the latest changes to mpd and soundcard.
+
+	* documentation:
+	  * identify-bpm.html.m4: two lines telling this exercise is shit.
+	  * id-by-name.html.m4: just a little explanation.
+	  * twelve-tone-help.html.m4
+
+	* mpd/parser.py, engravers.py: improved ties. They are still
+	not very good with xshifted noteheads, so thats on my TODO list.
+
+	* reread lots of old code, removed some old crap.
+
+	* src/statistics.py: statistics are stored in
+	~/.solfegeMAJOR_VERSION.MINOR_VERSION. So later the
+	stable 1.0.x release can coexist with unstable 1.1.x
+
+	* ConfigWindow: use a combo box to select devicefile.
+
+	* soundcard/solfege_c_midi.c(get_synth_name): no more
+	memory leak (I hope).
+
+	* soundcard/ : we now support both /dev/sequencer and /dev/music
+	Since there are some issuse with /dev/music I still don't
+	understand, and it seems that this make most people happy; the
+	default is now to use /dev/sequencer (updated default.config)
+	
+	* use the configure script to create src/configureoutput.py
+
+	* no stem on whole note!
+
+0.7.26.1:
+	* only import gtkhtml if the user really want it.
+
+
+0.7.26:
+	* removed some crap that was floating around:
+	   soundcard/devmusicsynth.py: Synth.Xplay_track
+	   mpd.__init__.py: tr(notename, i)
+
+	* src/inputwidgets.py: we need to import cfg !!
+
+	* src/dictation.py(Gui.__init__): g_part_box is now packed
+	without being expanded.
+
+	* src/compareintervalls.py: Use only one musicdisplayer
+	since it now supports changing clef. Show the music when
+	the user guesses correct.
+
+	* mpd/parser.py: better handling of shifted noteheads.
+	(Let's hope) no more collisions between noteheads and
+	accidentals.
+
+0.7.25: November 8, 2000
+	* PianoOctaveWithAccelName: use a fontsize available in
+	Xfree 4.0.1
+	
+	* src/rhythm.py: bug fix when changing the number of beats in the
+	question and pressing give up.
+
+	* completed some half-finished changes to gu.nSpinButton, removed
+	the temporary class newnSpinButton
+
+	* rc files are named /etc/solfege0.7 and ~/.gnome/solfege0.7
+	or ~/.solfegerc0.7 (the last for non-GNOME version)
+
+	* gnomeconfigutils.py -> cfg.py
+
+	* removed some crap from src/pyscript.py
+	
+	* Pressing F1 several times will not display the 'missing helpfile'
+	page. Also fixed duplicate history entries (src/history.py)
+
+	* added support for the new GtkHTML widget. The default is still
+	to use the XmHTML-widget since thats what most people have
+	installed. To try out with GtkHTML, edit ~/.gnome/Solfege,
+	and change the "htmlwidget=xmhtml" to "htmlwidget=gtkhtml"
+	(I have included a patch to apply to gtkhtmlmodule.c, to make
+	gtkhtml 0.6.1 and gnome-python 1.0.53 cooperate. The file is
+	included as pygnome-patch.diff)
+
+	renamed src/solfegexmhtml.py -> src/htmlwidget.py
+	
+	* in the id-by-name exercise, the buttons with question names
+	will be ordered the same way as in the lessonfile.
+
+	* mpd/musicdisplayer.py and mpd/parser.py: Now the music displayer
+	can display the music from the start until timepos Rat(x, y)
+
+	* online-docs/C/lessonfiles.html.m4: documented clue_end and
+	clue_music.
+
+	* src/dictation.py: added clue_end and clue_music variables
+	to dicataion lessonfiles. They can be used if displaying the
+	first column is not good enough hint on what tones the music
+	starts with. Fixed some ugly code.
+
+	* src/lessonfile.py: removed some left-over code from the
+	last changes.
+
+	* default.config: added some values for identify-scale.
+
+	* The program will popup a message that you have to configure
+	sound from the preferences window if it fails to setup sound.
+
+	* online-docs/C/music-format.html.m4: updated after the
+	work on the mpd module.
+
+	* app.py(SolfegeApp.handle_href), configwindow.py:  
+	mailto:name@dot.com links in the documentation now work.
+
+	* mpd: \stemup, \stemdown and \stemboth are renamed to
+	\stemUp, \stemDown and \stemBoth to use the same names as
+	Lilypond.
+	
+	* mpd: removed some spagetticode, wrote some new.
+	Rewrote the Score._generate_engravers function and the engravers.
+	
+	The module now support beams for quaver notes (1/8) and
+	semiquaver notes (1/16). 1/32 and 1/64 notes will be added later,
+	I have to think a little to get the algorithm correct.
+	
+	Now you can change clef in the middle of the staff, and lots of
+	new clefs are supported.
+	
+	The \key command has changed to the same syntax as GNU Lilypond:
+	\key g \major;  or \key es \minor;
+
+	mpd/utils.py: some functions not fitting elsewhere in mpd/ will
+	be put here.
+
+	* gnomeemu/xmhtml.py: user GtkText.insert_defaults instead of
+	insert_text
+
+0.7.24: October 14, 2000
+	* src/selectlessonfilewidget.py: now the widget is watching
+	the config variables 'lessonfile' and 'lessoncollection'. So
+	links to exercises for lessonfile based exercises should work now.
+
+	* mpd/engravers.py(StemEngraver): improved the code thatselects
+	stem direction.
+
+	* the program adds --disable-sound to the command line before
+	loading the gnome libs.
+	
+0.7.23: September 28, 2000
+	* src/mainwin.py(MusicViewerWindow): connected the 'destroy'
+	event to m_app.close_musicviewer to fix problem when closing the
+	window using the windowmanager instead of the close button.
+	
+	* chords: sort the buttons for inversion and toptone.
+
+	* melodic-intervall: fixed problem when changing input widget
+	and the question is out of range for that widget. Also use
+	config/default_instrument when playing sounds.
+
+	* fixed bass widgets to sound one octave lower
+
+	* changed lessonstatistics compare the hashvalue of the
+	content of the files when deciding if the lessonfile have
+	changed and statistics has to be deleted. This way you can
+	keep your statistics when upgrading if the lessonfile is the
+	same and the file format for the saved data has not changed.
+	
+	* bugfix: nothing happened when pressing 'new question' after
+	changing lessonfile.
+
+0.7.22: September 13, 2000
+	* src/musicdisplayer.py: bug fix to make it work with
+	gtk-themes. Thanks to Gerard Milmeist for reporting this.
+
+	* src/configwindow.py: bug fix to instrument selection.
+
+	* src/lessonfile.py: removed some obsolete code
+
+0.7.21: September 10, 2000
+	* topdocs/INSTALL.texi: fixed some bogus messages
+
+	* mpd/parser.py: handle ties between three and more notes:  c~ c~ c
+
+	* src/dictation.py: breakpoints in music. The program can play
+	smaller parts of the music.
+	
+	* changed mpd.play_music to take 'start' and 'end' argument
+	to play only parts of the music, for example from bar 2 to 4.
+	Small changes to mpd.parser to make this work.
+	
+	* soundcard/: Track.set_bpm accept a third argument 'notelen'
+	that defaults to 4. 
+
+	* moved the files in exercises/ to src/ to make the new global
+	vars in gnomeconfigutils work as expected.
+
+	* src/gnomeconfigutils.py: added notify feature. Used this
+	in nSpinButton and nNotenameRange. Using the notify feature, changed
+	the config page for all exercises to watch the config data, and then
+	moved the .configure_exercise methods to the teacher classes.
+
+	* more german translations, thanks Oliver.
+
+	* french translations by Jean Orloff
+
+	* italian translations by Mauro Colorio.
+
+	* Some work on lesson files and statistics. Running Solfege
+	with different locale settings should work as expected for
+	lesson file exercises. Please test with different locale
+	settings and report how it works.
+
+0.7.20: August 25, 2000
+	* reoved 'never twice' check button from all exercises.
+	This is things the user should not have to worry about.
+
+	* melodic-intervall: only Wrong/Correct feedback.
+
+	* updated german translations, fixed translation of scale
+	names in scale statistics. Thanks Oliver Vollmer
+
+	* some minor changes to lessonfile format: identifier names
+	can contain a '-'. More work in online-docs/C/lessonfiles.html.m4
+
+	* devmusicsynth.py: handle also 255 < bpm < 511
+
+	* LessonFileManger: fixed brokens links when generating
+	the page with "All installed lessonfiles"
+
+	* abstract.LessonbasedGui.configure_exercise: fixed a
+	variable I forgot to rename.
+	
+	* SolfegeApp.quit_program: the program will exit nicely
+	even when you did the *stupid* thing of trying to run
+	two instances of Solfege at the same time.
+
+	* exercises/abstract.py (_add_auto_new_question_gui):
+	added a .show()
+
+	* The music displayer will draw into a pixmap, and only
+	recreate the pixmap when the music change. Less flickering
+	and faster redraws!
+	
+0.7.19: August 21, 2000
+	* the music displayer is now a ScrolledWindow. Still too
+	much flickering, and not possible to scroll automatically
+	in sync with the music played.
+	
+	* some work on dictation exercise.
+
+	* src/statistics.py(AbstractStatistics.get_keys): fixed a
+	typo that caused some problems with invalid statistics. But
+	there are still issues. I think the problem occour when we
+	some other error that cause statistics to be added for the
+	'None' key.
+
+	* Small adjustments to the gui
+
+	* exercises/compareintervalls.py: fix problem with harmonic
+	intervall, where there could be create intervall <f fis> that
+	the displayer cannot display properly.
+
+	* mpd/intervall|musicalpitch.py: buxfig to intervall arithmetics.
+	This makes sing-intervall work correctly.
+
+	* window heading will show what exercise and lesson file you
+	are using.
+
+	* bugfix: show/hide toolbars
+	
+	* Misc cleanup, removing unnecessary code.
+	
+	* gnomeemu/gnome/xmhtml.py: we use our own html-to-text
+	convertor, no need for lynx
+
+	* src/instrumentselector.py: changed the look of the widgets.
+	Updated the config window because of this.
+
+	* A window showing the traceback will popup on exceptions.
+
+	* Mainwindow resize policy is configurable from the preferences
+	window.
+	
+	* a few lines of documentation was written.
+
+	* added 4, 5 and 6 string bass input for intervall exercises
+	and did some cleanup on src/inputwidgets.py
+
+	* fixing typo in intervall exercises, thanks Harald Terkelsen.
+
+0.7.18: August 5, 2000
+	* the statistics viewer is only updated when the user
+	actually want to see it. This because the new viewer is
+	slower to update than the old one.
+
+	* updated german translations, thanks Vollmer
+
+	* exercises/harmonicintervall.py: An option on the config
+	page to get a new question automatically after x seconds,
+	if you answer correct.
+
+	* mpd/parser.py: simple hack to avoid colliding accidentals.
+	The parser still need to be fixed before 1.0
+
+	* topdocs/AUTHORS.texi it used to create AUTHORS and
+	online-docs/C/AUTHORS.html
+
+0.7.17 August 4, 2000
+	* src/statistics*.py: New viewer that don't use XmHTML.
+	Now even statistics can be used if you don't have GNOME.
+
+	* exercises/rhythm.py: set tempo on config page. This 
+	exercise will not use config/default_bpm. Minor documentation
+	update.
+
+	* exercises/chord.py: gui improve/fix
+
+	* gnomeemu: GnomePropertyBox: it works :-) Now you can use
+	File|Preferences even when you are running without gnome.
+
+	XmHTML-"emulator" will strip away html code, and only one
+	right click is enough to follow links
+
+	* configwindow.py: fixed the way InstrumentSelector was
+	contructed
+
+	* Some additions to the documentation, fixing errors about
+	key bindings.
+
+	* abstract.Gui.__init__ take optional argument no_notebook=1.
+	This is used in twelve-tone exercise.
+
+	* src/selectlessonfilewidget.py: clear title label when
+	you select user collection and there are no files in it.
+
+	* minor syntax change for links to exercises. See
+	online-docs/C/helpfile-format.html. Updated the rest of
+	the program.
+
+	* added a "Velocity:" label to instrumentselector.py
+	(InstrumentSelector). Some of those classes really need better
+	names.
+
+	* GnomeCanvas is antialiased by default
+
+	* removed all code about popuping exercises
+	
+0.7.16: July 25, 2000
+	* new option to configure: --without-gnome
+	This let you run  Solfege on a system with only gtk and python
+	bindings for gtk installed. Since I am not a autoconf guru yet,
+	you have to use this options if you are running without gnome.
+	(At the moment, Solfege without gnome is still a stip down version
+	of Solfege.
+	
+	* harmonic and melodic intervall will ignore intervalls greater
+	than decim.
+
+	* gnome-emu/xmhtml.py: move the cursor to the text where there
+	is a link in the html document, and right click to follow the
+	link.
+
+	* Rewrote much of the makefiles, reduced the amount of chaos
+	in the world.
+
+	* miscutils.py -> util.py
+
+	* Rewrote some of the gui code used to select lesson file,
+	 see src/selectlessonfilewidget.py. You can now include a
+	 longer text in the lessonfile that can include links to
+	 configure the exercise or links to other exercises and
+	 documentation
+
+	* Some changes to lesson file format to support i18n of files
+	distributed independently of Solfege. Translations are kept in
+	the actual lesson file instead of using the same catalog as
+	Solfege.
+
+	Header block:
+	'description' is renamed to 'title', and should be a short
+	online description of the file
+
+	'description' is now used for a longer text describing
+	the file. It can contain html tags.
+
+	Translations  can be entered like this:
+	  title = "Major, minor, dim and aug in root position"
+	  title(no) = "Dur, moll, forminsket og forstørret i grunnstilling"
+	  title(de) = "Dur, Moll, verm. und überm. in Grundstellung"
+	if the file is distributed outside of Solfege or if the author want
+	to be independent of the solege gettext catalog.
+
+	* Added build-depend: libgnome-dev because I use gnome-config
+
+	* The online documentation is preprocessed by m4
+
+	* Some internal reorganisation, more has to be done.
+	src/main.py is gone, new files are src/app.py and
+	src/mainwin.py, src/configstuff.py -> src/configwindow.py
+
+	History in src/history.py
+	
+	* the program will use /etc/gnome/config/Solfege some defaults.
+	These were earlier scattered all over the code. Made necessary
+	changes to the makefiles
+
+	* some work on gnome-emu
+
+	* src/statisticsviewer.py: Marked some more strings for translation.
+
+	* src/pyscript.py, src/solfegexmhtml.py: Added some experimental
+	scripting to the online documentation. At the moment it can
+	get strings out of the config database.
+
+	* Added key bindings from all exercises. It is now (almost)
+	possible to practise without using the mouse.
+	
+	* exercises/singintervall.py(new_question): bugfix to make
+	more than one intervall work.
+
+	* mpd/musicalpitch.py: MusicalPitch.__add__ can take
+	Intervall instance as second argument.
+
+	Musicalpitch.str() renamed to notename(). Updated the rest
+	of the program.
+	
+	* mpd/intervall.py: New Intervall class
+
+	* solfege.1: mentioned where statistics is saved
+
+	* harmonic and melodic intervall will give an error dialog
+	if the exercise is wrongly configured
+
+	* exercises/rhythm.py: polishing the ui.
+
+	* solfege.gtkrc: removed some trash, changed the font
+	selection string to fix Vollmers problems.
+
+	* Track(start_note, stop_note): added int(pitch) to fix
+	problem with compare-intervall when using an external midi
+	player.
+
+	* Misc cleanup to statistics.py and statisticsviewer.py.
+	Necessary changes to the exercises since some classes changed
+	name and *Statistics.add_wrong require one more argument
+
+0.7.15: 1 July 2000
+	* exercises/abstract.py(IntervallGui.use_inputwidget): show
+	what is the tonika when changing inputwidget
+
+	* po/de.po: Added some translations I forgot for 0.7.14
+
+	* configure.in, Makefile.in: The configure script will check
+	for lynx, so building will not fail if it it not installed.
+
+	* exercises/chord.py: Fixed bug with transposition of chords.
+
+	* exercises/harmincintervall.py: Right click on button
+	will play what intervall.
+
+	* src/configwindow.py: 'config/picky_on_new_question'
+	Added support for this in all exercises.
+
+	* exercises/rhythm.py: Better feedback on what's 
+	right and wrong.
+
+	* exercises/singintervall.py: will only show one
+	'new intervall'-button for the first question.
+
+	* src/main.py(Mainwin.show_box): will call 
+	exercise.on_start_practise and exercise.on_end_practise
+
+0.7.14: 26 June 2000
+	* debian/control: added Build-Depends: python-dev, debhelper
+	* debian/control: removed Depends: debconf
+
+	* src/abstract(MelodicIntervallTeacher.new_question): small fixes
+
+	* src/miscfunctions.py(random_tonika_and_intervall): bugfix
+
+	* completed mpd.select_clef
+
+	* Some work on the online documentation.
+	
+	* online-docs/C/credits.html: added that gettext.py 
+	was written by James Henstridge.
+
+	* multiline hrefs will not make them mainwindow resize.
+
+	* Solfege is now an official part of the GNU project. The
+	program will still be hosted at solfege.sourceforge.net
+	
+	* Updated the manpage to be correct about config files, added
+	--no-sound option and did some small adjustments.
+
+	* Make it configurable from File/Preferences what program to
+	run for URLs to external webpages.
+
+	* No more use of ~/.solfegerc. Make it simple and let
+	everything go into ~/.gnome/Solfege
+
+	* Added souncard/fakesynth.py, it contains a Synth class
+	that only print the notes the program want to play. This
+	can be useful for debugging and porting. Use command line
+	argument --no-sound to use this.
+
+	* Makefiles: some changes to make things simpler, and to
+	make sure swig generated files *never* is included in the
+	debian package. Another try to fix the makefile mess. I
+	usually break stuff doing this, so please report any problems.
+	Made sure tarballs always unpack to a directory named
+	solfege-x.y.z
+
+	* exercises/rhythm.py: let the user select what instrument
+	to use for playing the rhythm. Count-in.
+	
+	* src/gu.py: added nCombo and PercussionNameCombo.
+	
+	* src/gnomeconfigutils.py: added default value to get_int.
+	Completed some work I started and forgott about some releases
+	ago.
+
+	* src/instrumentselector.py(InstrumentSelector): use popup
+	menu instead of menubar.
+
+	* soundcard/track.py: replaced __add__ with merge_with
+
+0.7.13: June 4 2000
+	* exercises/compareintervalls.py(new_question): fixed bug caused
+	by changes to MusicalPitch
+
+	* soundcard/midifilesynth.py(play_track): added default 60 bpm
+
+	* exercises/abstract.py(IntervallTeacher.new_question): simplified
+	some intervall arithmetics.  
+
+	* exercises/rhythm.py: New rhythm exercise. Useable, but
+	not finished yet.
+
+	* Makefile.in: make clean should also delete compiled files
+	in gnome-emu, and png/.xvpics
+
+	* execises/identifyscale.py: Simplified code using the latest changes
+	to gu.py
+
+	* src/gu.py(Button): Just noticed you can send data with events.
+
+	* mpd/__init__.py(transpose_notename): take integer value to tell
+	how much to transpose
+
+	* mpd/musicalpitch.py(MusicalPitch.transpose): renamed to
+	transpose_by_musicalpitch, just to give it a cryptical name so
+	that nobody but mpd/parser.py tries to use it.
+
+	* mpd/musicalpitch.py: Moved code related to parser.py and
+	relative mode to parser.py. Cleanup on __sub__.
+	
+0.7.12: May 29 2000
+	* Sorry, 0.7.11 broken.
+
+0.7.11: May 29 2000
+	* mpd/musicalpitch.py: Cleanup. Really needed :-)
+	* added some random_* functions to src/miscutils.py. These functions
+	are used by abstract.IntervallTeacher and
+	harmonicintervall.Teacher.new_question. The intervallexercises now
+	to a better job making the question within a given range of tones.
+	
+	* Makefile.in: removed some silly working directory renaming
+
+	* MultipleIntervallConfigWidget: small bugfix
+
+	* exercises/singintervall.py: use mpd.select_clef
+
+	* tools/changelog2html.py: new script to convert the changelog to
+	html to be viewed from inside Solfege.
+
+	* src/inputwidgets.py, src/configwindow.py: added support for
+	antialiased canvas for guitar and accordion widget. Since antialiased
+	canvas still seems to be a little buggy, this is turned off by default.
+	Turn on from File/Preferences/Misc
+
+	* small tweaks to many files.
+	
+	* mpd/parser.py(Track.generate_track_for_voice): Bug fix, dotted notes
+	are now played correctly.
+
+	* mpd/__init__.py: added music_to_tracklist function, that is the
+	same as the old (wrong named) music_to_track, and changed
+	music_to_track to only return one track, merging tracks if necessary.
+
+	* exercises/singchord.py: make use of 'preferred_instrument' and 
+	'preferred_instrument_velodicy'
+
+	* mpd/__init__.py(compare_notenames): changed to return value
+	greater than 0 if first argument is largest, return less than 0 if
+	second argument is largest. Previously it returned -1, 0, or 1.
+
+	* src/notenamespinbutton.py: cleanup, PgUp, PgDown change one
+	octave, left mouse button change to the max/minimum allowed value,
+	middle mouse button change one octave.  Added nNotenameRange class.
+
+	* Added guitar and accordion input for harmonic and melodic
+	intervall, and did some cleanup.
+
+	* InstrumentSelector.play_selected_instrument: bugfix
+
+	* Solfege officially require python 1.5.2 (it has actually done
+	it for a while)
+
+	* changelog and TODO is available from online-docs. 
+
+	* ConfigWindow can now change the synth used for playing sound.
+	Also, the first time you run Solfege, it will popup the config window
+	and ask you to select how to play sounds if it is not able to use
+	/dev/music
+
+	* soundcard: tmp file creation for FileSynth is now handled in
+	FileSynth.__init__, not soundcard.__init__
+
+	* gnome-emu/: when renamed to gnome, this module will *try* to 
+	emulate some of the functions from gnome. It is used to run Solfege
+	on win32, but it can also be used on linux.
+
+0.7.10: May 4, 2000
+ * new Rat class. Simpler, make mpd.parser 6% faster, GPL'ed
+ * small improvements to src/main.py
+ * use gnome.config.[get|set]_bool for booleans
+ * started working with idtone to make it useable
+ * more work in ConfigWindow
+0.7.9: April 29, 2000
+ * cleanup of program startup, location of files needed at runtime,
+   stopped the abuse of __main__.
+ * gu.py: RadioButton connect to callback using 'toggled' signal
+ * do not create /etc/solfege when installing debian package. Use
+   default value sequencer-device=/dev/music, and have user to change
+   this with /etc/solfege or $HOME/.solfegerc manually
+ * mpd.parser.Score.get_midi_events() will return a list of lists of
+   Tracks. This way we get one track for each voice, and can have
+   different instrument on different voices in polyphonic music.
+ * soundcard/mfutils.py: cleanup
+ * rename solfegerc -> solfege.gtkrc
+ * no link in /usr/bin/solfege->../share/solfege/solfege.py
+ * More consistent use of gnome.config and VariableStorage
+ * small fixes to manpage
+ * Reorganised soundcard/, MidiEventStream is split to Track, Synth,
+   MidifileSynth. Tracks can be added. Moved mpd/rat.py to 
+   soundcard/rat.py
+ * link to exercise:/xxx will show exercise page, never config page
+ * various cleanups after ->/dev/music change
+ * IMPORTANT: from this release you should use /dev/music instead of
+   /dev/sequencer. The change is because I have read my first OSS doco,
+   and learned how much nicer /dev/music is
+ * added: --sequencer-device=/dev/devicname
+ * MidiEventStream: api change start_note and stop_note does not
+   have notelen as first argument. Instead we use notelen_time(notelen)
+   to get delta time. Updated necessary exercises.
+ * adjusted toolbar pixmaps, all are 24x24. Noteheads are 6x4
+ * configure_exercise for most exercises
+ * first port to windows using win32 port of gtk+ and pygtk. Some ugly
+   hacks to make it work without gnome libs. The windows port will save
+   the music to play to a midi file and use an external program to play
+   it until I find out how to use midiOutOpen and friends, and how to
+   create python C extentions for win32. All exercises except id-tone
+   works fine. If you want to test win32 port you should get the win32
+   snapshot on ftp://solfege.sourceforge.net/pub/solfege, don't try to
+   use this tarball directly.
+ * ask_for_intervall_nn is zero index based
+ * change to format of links to exercises:
+    exercise:harmonic-intervall?lowest_instrument:1, highest_instrument:2
+   is now entered as
+    exercise:harmonic-intervall?lowest_instrument=1; highest_instrument=2
+   misc cleanup to code related to this.
+ * help browser can be in its own window (i think this was added in 0.7.7)
+0.7.8
+ * make sure Solfege/lesson_collections/solfege always point do the
+   correct place
+ * fixed problems with --sound-using-xxx and --external-midiplayer
+   command line options
+0.7.7
+ * bf: translated messages even when not running from sourcedir
+ * Added error handling when errors in lesson files.
+ * made it possible to specify several directories to place lesson files
+   into.
+ * all lessonfile classes go into file 'lessonfile'. Improvements to
+   avoid heavy use of __main__
+ * mpd: added limited support for ties, see music-format.html for info.
+ * mpd.parser: adjust_noteheads renamed do_xshift_noteheads, and
+   avoiding a call to vector.sort()
+ * src/inputwidgets.py: some work, putting common code in abstract
+   baseclass. Not good code, but better than before.
+ * more """no "from gtk import *" no more""" that I missed last time
+ * mpd.musicdisplayer: MusicDisplay.display take a music string as
+   argument, not a vector of engravers. This to hide some action needed
+   to avoid memory leak.
+ * memory leak fixes. After upgrading to python-gnome 1.0.52 and
+   doing some careful "del someobject", redisplaying some music
+   does not eat any more memory. With 0.7.6, each time parsing and
+   displaying some music, solfege would eat 4k-8k of memory.
+ * wrote some documentation
+ * updated some helpfile links: "exercise://exercise-name" ->
+   "exercise:exercise-name"
+ * mpd: adjust to avoid crashing noteheads in chords like <c e f g>
+   Need more work, the function is parser.Score.adjust_noteheads
+0.7.6-2
+ * debian/rules: removed dh_suidregister
+ * don't distribute debian/tmp/
+0.7.6 March 26 2000
+ * ended my little tab for indent adventure
+ * no "from gtk import *" no more
+ * making some buttons insensitive until they are usable, like repeat
+   buttons before new_question has been pressed.
+ * .deb: Section: sound, not main/sound
+ * .deb: Depend, not Pre-Depend on debconf
+ * cleanup on help file links, solfege will chdir to where the help
+   files are stored before loading files. This make links to images:
+   "../png/image.png" and to a specific language as "../nn/file.html"
+ * lessonfilemanager work
+ * online-docs/C/lessonfiles.html: updated after lesson file parser
+   was rewritten.
+ * rewrote lesson file parser. Trying to define a more clear grammar.
+   changes to lesson file format: 
+      use = chord, id-by-name
+    has to be written:
+      use = chord, id_by_name
+   '-' is not allowed in identifiers
+ * bf: should distribute swig generated files
+ * first step in cleaning up lessonfile parsing and use, some
+   changes to the interface exercises use to access the data in
+   lesson files.
+ * added i18n to lesson files, keep translated messages inside
+   _("..") like normal python code
+0.7.5
+ * /etc/solfege to set how to play midi sound.
+ * Debian package use debconf to create /etc/solfege on install.
+ * Vollmer: po/po.de and german translation of spec file.
+ * set correct user and group for files in redhat package
+ * used ./fix_feta.py to make the background of feta pixmap white.
+ * started documenting the format for mpd.Parser
+ * Makefile: simplified dist target, do maintainer-clean,
+   ./configure and tar everything thats left.
+ * soundcard: api changes to be closer to linux kernel names:
+   MidiEventStream: note_on -> start_note, note_off -> stop_note
+   program_change -> set_patch
+ * macro_to_function.c|i : added seq_bender to lowlevel_c_midi and
+   .bender to MidiEventStream
+ * get correct number of ledger lines
+ * updated after api changes in MidiEventStream
+ * more makefile cleanup
+ * Change python script start from:
+	#!/usr/bin/python
+   to:
+	#!/usr/bin/env python
+ * first release after solfege is splitted into three separate
+   packages
+0.7.4: March 6 2000, 6975 lines of .py
+ * makefile changes
+ * renamed NEWS to changelog
+ * set window title to show what exercise we are practising.
+ * musicdisplayer/parser: major rewrite. 
+   * support for time signature. It can display it, but the parser is
+     completely stupid and will allow time signatures like 7/7, 9/3
+   * Added barlines and accidentals, now do the right thing if there 
+     is for example several cis in a row. 
+   * Accidentals also understand bar lines.
+   * use the xpms directly from Lilypond, don't manually convert to
+     python code.
+   Rests are still invisible after the rewrite. The code 
+   still need heavy cleanup, or even better, a complete rewrite (by 
+   someone else than me)
+ * automatically generated rpm spec file, need more testing. To build
+   rpm, to ./configure; make rpm, just remember you need write access to
+   /usr/src/redhat
+ * --sound-using-timidity will send output to /dev/null
+0.7.3: Feb 22 2000, 6914 lines of .py
+ * misc small bugfixes and improvements
+ * adding _(...) to more strings to be translated
+ * some documentation of lesson file format and about translating
+   Solfege.
+ * translated html files can now be placed in lessonfiles/nn/ where
+   nn is the code for the language you use, no=norwegian, se=swedish.
+ * added browser-like history and back/forward button
+ * sing-intervall can use random_keyword=1 in lesson file
+ * added mudela.select_clef, use it in chord, compare-intervall
+ * some work on compare-intervalls
+ * Vollmer: more icons
+ * work on toolbar, configurable to use text/icons/both, 
+   some pixmaps renamed, Vollmer, please notice this when making new
+   icons.
+ * typo in man page
+0.7.2: 6801 lines of .py
+ * new exercise: compare-intervall
+ * minor gui adjustments
+ * misc fixes to exercises that are not configured correctly
+ * intervall exercises has checkbutton to not ask same question
+   twice in a row.
+ * More work on help system, and href's to exercises
+ * Finished SingChord, need more lesson files
+ * Fixed some problems with statistics. You should remove 
+    ~/.solfege/harmonic-intervall*, probably the whole ~/.solfege
+ * Added random_transpose variable to lesson files. It is used by chord
+   lesson to decide if it can transpose the music. And also id-by-name.
+ * melodicintervall and singintervall will use 
+      'Solfege/config/preferred_instrument*'
+0.7.1: 6290 lines of .py
+ * Vollmer: small changes to pixmaps
+ * --debug-sound option
+ * cleaned up the help system (but not help file contents...)
+ * Statistics. Stored in ~/.solfege/exercisename/ If you get segfaults 
+   or solfege freeze, please delete the statistics files for the exercise 
+   you have problem with (or at least the 2-3 newest files).
+ * Add to sys.path if installing to /usr/local
+ * main.py: create exercises as they are needed, not all at startup. Now, if one
+   exercise is completely broken, Solfege will still work.
+ * Add /usr/local/lib/python1.5/site-packages to search path if installing
+   there. Not all distros is like debian...
+ * some cleanup to popup code. More has to be done.
+0.7.0  6030 lines
+ * MusicDisplayer will resize to fit any number of staffs (i hope...)
+ * Small changes here and there to gui
+ * Redused memory leaks, I don't think mudela.parser is leaking any longer, but
+   there is problems with musicdisplayer. (Not investigated very much...)
+ * Added documentation on notebook page, enabling links to other exercises.
+ * Removed the possibility to not use a notebook in the main window
+ * TwelveTone exercise
+ * SingChord exercise
+ * MusicDisplayer: click on note will play it.
+0.6.0
+ * mudela.parser: dont use channel 9 when generating midi events because
+   it is for perkussion
+ * Fixed broken link creating in debian/rules
+ * soundcard.midieventstream.py: __interpret_notelen should always
+   return an int
+ * Made sure solfegerc is parsed when not running from sourcedir
+ * removed some old code that hasn't and will never be used
+ * Toolbar use pixmaps from Oliver Vollmer, toolbar can be turned in 
+   Preferences (without restarting Solfege...:-)
+0.5.7: not released 5406
+ * Misc code-cleanup and minor fixes preparing for 0.6
+ * debian: created symlink /usr/share/doc/solfege/manual.html -> 
+   ../../gnome/help/solfege/C/manual.html
+ * bf: symbolic link /usr/bin/solfege in debian package
+ * mudela.parser.Parser: made it possible to generate midi events for only
+   the last notes.
+ * Making parser smarter and MusicDisplayer dumber.
+0.5.6: 5349 .py lines (not counting the long feta??.py files)
+ * Added tempo keyword to lesson files. tempo keyword can be set globally
+   for the whole file, and/or local to each question.
+ * New startup procedure, create symbolic link in bin dir. Files in
+   /src are now installed in share/solfege/src, not share/solfege/
+ * Made it possible to play or display only the first note (or first 
+   notes in polyphonic music). This makes the dictation exercise 
+   useable!
+ * Added callback function param to InstrumentSelector so we can call
+   GnomePropertyBox.set_modified(TRUE) in ConfigWindow
+ * Some changes to keywords used in lesson files. New changes should
+   be backward compatible.
+ * small adjustments of box layout in practiseboxes.py
+ * the last (almost a promise) non backward compatible change to the
+   syntax for the music parser before 1.0: added \staff and \addvoice
+   keywords, removed the old usage of \staff and \voice
+ * music displayer/parser: added rests
+ * layout of stems and noteheads
+ * ledger lines
+ * Makefile.in: make clean should remove run-solfege
+0.5.5: 5079 .py lines (not counting the long feta??.py files)
+ * Simplifying the music parser and the syntax it read. Don't try to
+   be Lilypond.
+ * MusicDisplayer to replace ScoreDisplayer, new class that use feta
+   font from GNU Lilypond and GtkDrawingArea instead of GnomeCanvas.
+   MusicDisplayer is a big improvement compared to ScoreDisplayer. It
+   will be possible to let different exercises use different font
+   size. The plan is to let it connect it to MidiEventStream and
+   scroll the music as it is played if the window is to small.
+ * moved src/const.py: instrument_sections and instrument_names to
+   soundcard/__init__
+ * parser.py: Parser.generate_midi_events: fixed problem calling
+   note_off with wrong channel
+ * teachers.py: Chord: new_question: random transpose of chord
+ * practiseboxes.py: ChordBox: choose clef when displaying
+ * updated man page
+0.5.4: (17 Jan 2000) 5428 .py lines
+ * moved setting of default values for configurable stuff form
+   solfege.py to configstuff.py
+ * solfege.py: removed Solfege/config/program_version stuff
+ * updated InstrumentSelector after the changes to sound playing
+   modules. Small cosmetic changes to the code. InstrumentSelector
+   will set default values.
+ * made src/const.py: instrument_names a touple of strings
+ * removed the obsolete remove_* functions from mudela.__init__.py
+
+0.5.3: (17. Jan 2000)
+ * Rewrote sound playing modules. Made a cleaner interface to the soundcard.
+   Better support for people using --sound-using-timidity
+ * oops, 0.5.2 was missing some files, configure.in had to be edited to build.
+0.5.2: (16 Jan 2000) 5482 lines
+ * lesson-files/Makefile.in: fixed install target
+ * fixed make diff, see INSTALL file
+ * bf: HarmonicIntervall: play_melodic fixed
+ * Instrument change is written to midifile.
+ * New command line parameters
+     --sound-using-timidity
+     --sound-using-drvmidi
+ * Obsolete command line parameter:
+     -external-sound
+ * misc Makefile bugfixes: uninstall of man1/solfege.1, installation of 
+   lesson files, distribution also include debian/
+ * distributes html version of the users manual. Don't need debiandoc-sgml
+   unless you change manual.sgml
+ * dataparser.py -> lessonfileparser.py
+ * removed BeginnersChordsBox and IdentifySingleChordBox and created a
+   lesson based ChordBox. The gui is not finished yet, and you cannot
+   customise the midi sound, but it is usable.  Necesarry changes to
+   teachers.py
+ * removed "This is Solfege..." startup message
+ * update gnome.app_id on startup, now solfege --version looks nice
+0.5.1: (14. jan 2000)
+ * testrelease of the possibiliy to make it possible to play the music
+   using and external program.  Right now the command line parameter
+   --external-sound use drvmidi to play  the created midi files.
+ * Visual changes to MultipleIntervallConfigInterface 
+ * PianoWidget bugfix: correct number of arguments to callback
+ * freshed up HarmonicIntervallBox.config_box
+ * Rewrote InstrumentSelector
+ * Global preferred midi instrument overridden for each exercise. (well only harmonic intervall for now)
+0.5: (12. jan 2000)
+ * silly manpage to please lintian
+ * removed the pyconfigure.py.in mess, added src/version.py
+ * renamed classes in practiseboxes.py:
+	       PractiseBaseBox -> AbstractBox
+	       IdIntervallBaseBox -> AbstractIntervallBox
+ * renamed classes in teachers.py:
+	AbstractTeacher -> Abstract
+	AbstractChordTeacher -> AbstractChord
+	AbstractLessonbasedTeacher -> AbstractLessonbased
+	AbstractIntervallTeacher -> AbstractIntervall
+ * Module guiutils -> gu
+ * Removed m_pretty_name member of AbstractTeacher
+ * Exercises to do dictation, exercises stored in lesson files.
+ * created class LessonFileManager that know what exercises can
+   be used on what gui 
+ * small fixes because of syntax change:
+   \clef "violin"; --> \clef violin;
+0.4.2: (2. jan 2000)
+ * Mudela.engravers.StemEngraver.do_stuff: make stem go in correct
+   direction, respect \stemup and \stemdown
+ * music parser syntax change: \clef "violin"; --> \clef violin;
+ * bf: mudela.parser.Parser: chords in relative mode
+ * bf: <c e g><c e g> bug in mudela.parser.Parser.collaple_chords
+ * midi/ cleanup, some C code rewritten in python.
+ * Started working on harmonic progressions
+ * source file names to lower case, moved .py files from ./ to ./src
+0.4.1
+ *
+0.4 (11. november 1999) 
+
+	* Lots of changes, some visible, some internal. Run the program
+	to see yourself. Don't let the even version number make you
+	believe this is a stable release, I don't make stable releases.
+	Its just a marketing trick. Next version might be called
+	Solfege 2000.
+
+
+(The changes before 0.4 was lost. Don't know when, don't know where...)
+
+# vim: set noexpandtab:

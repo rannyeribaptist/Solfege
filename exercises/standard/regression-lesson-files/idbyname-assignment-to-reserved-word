@@ -1,0 +1,11 @@
+# Solfege - ear training for GNOME
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+question = 3
+header {
+    lesson_id = "23d0f70b-77b9-4991-8d47-146b912090f9"
+    module = idbyname
+    title = "Assignment to reserved word."
+    at_question_start=play
+}

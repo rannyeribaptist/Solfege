@@ -1,0 +1,25 @@
+# Solfege - ear training for GNOME
+# Copyright (C) 2000, 2001, 2002, 2003, 2004  Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "7a7d69a6-9fdf-4cb1-a6fc-e176d49f0eda"
+  module = idbyname
+  random_transpose = accidentals, -1, 1
+  title = "rvoice"
+  description = """
+  """
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+}
+tempo = 240/4
+
+question {
+ name = "The notes c' d' e' f' g'"
+ music = music("c'4 d e f g", rvoice)
+}
+question {
+ name = "The music: key d \major d' e' fis'"
+ key = "d \major"
+ music = music("\key d \major d' e fis", rvoice)
+}

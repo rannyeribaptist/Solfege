@@ -1,0 +1,12 @@
+# GNU Solfege
+# Copyright (C) 2005, 2010, 2011 Tom Cato Amundsen
+
+header {
+    module=compareintervals
+    title = _("Thirds")
+    theory = "theory-intervals"
+    first_interval_type = melodic
+    last_interval_type = melodic
+    first_interval = 3, 4
+    last_interval = 3, 4
+}

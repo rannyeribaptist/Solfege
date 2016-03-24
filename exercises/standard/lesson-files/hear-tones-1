@@ -1,0 +1,23 @@
+# Solfege - free ear training software
+# Copyright (C) 2007, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+  lesson_id = "f8f88572-4ef4-4089-896a-659fed995889"
+  title = _("Thirds")
+  module = singanswer
+  version = "3.9.2"
+}
+
+question {
+  question_text = _("Sing the two tones")
+  music = voice("< c'2 es' >")
+  answer = voice("c'8 es'")
+}
+
+question {
+  question_text = _("Sing the two tones")
+  music = voice("< c'2 e' >")
+  answer = voice("c'8 e'")
+}
+

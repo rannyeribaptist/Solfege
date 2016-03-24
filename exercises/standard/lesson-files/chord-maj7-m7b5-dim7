@@ -1,0 +1,19 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "0dc7ab6d-6943-4377-90f9-f9d9dd3bc6ca"
+    module = idbyname
+    help = "idbyname-chords"
+    have_music_displayer = yes
+    fillnum = 3
+        random_transpose = accidentals, -5, 5
+        title = _("Major seventh, diminished seventh and half diminished seventh chords")
+        lesson_heading = _("Identify the chord")
+        test = "4x"
+        test_requirement = "90%"
+}
+question { name=_i("chord|maj7") chord("c' e' g' b'") }
+question { name=_i("chord|m7b5") chord("c' es' ges' bes'") }
+question { name=_i("chord|dim7") chord("c' es' ges' beses'") }

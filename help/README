@@ -1,0 +1,23 @@
+How to add a new language
+=========================
+
+to add language NN:
+
+add NN to the variable USER_MANUAL_LANGUAGES in help/Makefile
+
+add the following line to help/Makefile, just below the other lines that look
+similar:
+
+help/NN/solfege.xml: help/NN/NN.po $(USER_MANUAL_SOURCES)
+
+Create the directory help/NN:
+mkdir help/NN
+
+Copy the file help/C/solfege.pot to help/NN and name it NN.po:
+cp help/C/solfege.pot help/NN/NN.po
+
+Then run the following to build the documentation for language NN:
+make help/NN/index.html
+
+Or just email tca@gnu.org and ask for help. I'm happy to help everybody
+that want to translate the manual.

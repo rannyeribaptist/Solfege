@@ -1,0 +1,13 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+
+header {
+    module=compareintervals
+    title = _("Sixths")
+    theory = "theory-intervals"
+    lesson_id = "bc508d74-e92f-4c9e-bfc4-d408a9eb69cf"
+    first_interval_type = harmonic
+    last_interval_type = harmonic
+    first_interval = 8, 9
+    last_interval = 8, 9
+}

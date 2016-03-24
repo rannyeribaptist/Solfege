@@ -1,0 +1,66 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "0b024630-23db-11db-8782-8558e4e4f94b"
+  module = idbyname
+  random_transpose = yes
+  title = _("Double Harmonic Scale and its modes - patterns")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/dha"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question { name = dha1n  set = 0 voice(dha1lp0) }
+question { name = dha1n  set = 1 voice(dha1lp1) }
+question { name = dha1n  set = 2 voice(dha1lp2) }
+question { name = dha1n  set = 3 voice(dha1lp3) }
+question { name = dha1n  set = 4 voice(dha1lp4) }
+
+question { name = dha2n  set = 0 voice(dha2lp0) }
+question { name = dha2n  set = 1 voice(dha2lp1) }
+question { name = dha2n  set = 2 voice(dha2lp2) }
+question { name = dha2n  set = 3 voice(dha2lp3) }
+question { name = dha2n  set = 4 voice(dha2lp4) }
+
+question { name = dha3n  set = 0 voice(dha3lp0) }
+question { name = dha3n  set = 1 voice(dha3lp1) }
+question { name = dha3n  set = 2 voice(dha3lp2) }
+question { name = dha3n  set = 3 voice(dha3lp3) }
+question { name = dha3n  set = 4 voice(dha3lp4) }
+
+question { name = dha4n  set = 0 voice(dha4lp0) }
+question { name = dha4n  set = 1 voice(dha4lp1) }
+question { name = dha4n  set = 2 voice(dha4lp2) }
+question { name = dha4n  set = 3 voice(dha4lp3) }
+question { name = dha4n  set = 4 voice(dha4lp4) }
+
+question { name = dha5n  set = 0 voice(dha5lp0) }
+question { name = dha5n  set = 1 voice(dha5lp1) }
+question { name = dha5n  set = 2 voice(dha5lp2) }
+question { name = dha5n  set = 3 voice(dha5lp3) }
+question { name = dha5n  set = 4 voice(dha5lp4) }
+
+question { name = dha6n  set = 0 voice(dha6lp0) }
+question { name = dha6n  set = 1 voice(dha6lp1) }
+question { name = dha6n  set = 2 voice(dha6lp2) }
+question { name = dha6n  set = 3 voice(dha6lp3) }
+question { name = dha6n  set = 4 voice(dha6lp4) }
+
+question { name = dha7n  set = 0 voice(dha7lp0) }
+question { name = dha7n  set = 1 voice(dha7lp1) }
+question { name = dha7n  set = 2 voice(dha7lp2) }
+question { name = dha7n  set = 3 voice(dha7lp3) }
+question { name = dha7n  set = 4 voice(dha7lp4) }
+
+

@@ -1,0 +1,12 @@
+# GNU Solfege
+# Copyright (C) 2005 Tom Cato Amundsen
+
+header {
+    module=compareintervals
+    title = "Harmonic thirds"
+    first_interval_type = harmonic
+    last_interval_type = harmonic
+    first_interval = 3, 4
+    last_interval = 3, 4
+    lesson_id = "702a4960-e4f4-4aeb-b719-175becedd697"
+}

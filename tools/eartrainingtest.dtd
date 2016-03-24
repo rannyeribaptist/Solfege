@@ -1,0 +1,25 @@
+<!--
+This is the DTD defining the xml format used to save ear training
+test print-out definitions. It is not used by the program, but you
+can use it to validate files if you do change them manually.
+
+xmllint -noout -dtdvalid eartrainingtest.dtd thefile.xml
+-->
+<!ELEMENT sheet (title, output_format, section*)>
+<!ELEMENT section (title, lesson_id, count, line_len, qtype, question*)>
+<!ELEMENT question (teachers, students)>
+<!ELEMENT teachers (name, music)>
+<!ELEMENT students (name, music)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT output_format (#PCDATA)>
+<!ELEMENT lesson_id (#PCDATA)>
+<!ELEMENT count (#PCDATA)>
+<!ELEMENT line_len (#PCDATA)>
+<!ELEMENT qtype (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT music (#PCDATA)>
+
+<!ATTLIST sheet
+          fileformat_version CDATA #REQUIRED
+          app_version CDATA #REQUIRED
+          creator CDATA #REQUIRED>

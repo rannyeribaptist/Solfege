@@ -1,0 +1,21 @@
+<sect1 id='idbyname-intonation'>
+<title>Intonation</title>
+<informalfigure id="idbyname-intonation-screen1">
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/idbyname-intonation.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the program.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+
+<para>In this exercise, Solfege will play a interval, and you should
+tell how the interval is intonated. You do this by clicking on one of the
+buttons labeled 'too small', 'pure' or 'too large'. It is also possible that
+one of these three buttons are missing.</para>
+
+</sect1>

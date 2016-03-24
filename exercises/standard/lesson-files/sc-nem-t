@@ -1,0 +1,31 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "06acf5d0-23db-11db-8682-8558e4e4f94g"
+  module = idbyname
+  random_transpose = yes
+  title = _("Neapolitan Minor Scale and its modes - arpeged by thirds")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/nem"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question { name = nem1n  voice(nem1lt) }
+question { name = nem2n  voice(nem2lt) }
+question { name = nem3n  voice(nem3lt) }
+question { name = nem4n  voice(nem4lt) }
+question { name = nem5n  voice(nem5lt) }
+question { name = nem6n  voice(nem6lt) }
+question { name = nem7n  voice(nem7lt) }
+

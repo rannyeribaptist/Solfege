@@ -1,0 +1,14 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    module=harmonicinterval
+    replaces = "789fab14f04f10df559850e661a8f6202b68dce8"
+    intervals=15, 16
+    title = _("Tenths")
+    theory = "theory-intervals"
+    lesson_id = "0776bd7c-e641-4644-99ca-d35c05ca95eb"
+    test = "6x"
+    test_requirement = "90%"
+}

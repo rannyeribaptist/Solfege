@@ -1,0 +1,31 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "4f21ab50-d6cc-11da-89a8-7c9a86d4310h"
+  module = idbyname
+  random_transpose = yes
+  title = _("Harmonic Major Scale and its modes - arpeged by fourths")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/ham"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question { name = ham1n  voice(ham1lf) }
+question { name = ham2n  voice(ham2lf) }
+question { name = ham3n  voice(ham3lf) }
+question { name = ham4n  voice(ham4lf) }
+question { name = ham5n  voice(ham5lf) }
+question { name = ham6n  voice(ham6lf) }
+question { name = ham7n  voice(ham7lf) }
+

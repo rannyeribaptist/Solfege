@@ -1,0 +1,14 @@
+# Solfege - free ear training software
+# Copyright (C) 2001, 2004, 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "aa38afbc-e55d-4d55-bdda-19f4fe1b4a6e"
+        module = singchord
+        title = _("Minor 7th chords in root position")
+}
+
+question { key = "bes \major" satb("g'|es'|bes|c") }
+question { key = "bes \major" satb("es'|bes|g|c") }
+question { key = "bes \major" satb("bes'|es'|g|c") }
+

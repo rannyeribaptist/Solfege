@@ -1,0 +1,12 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+
+header {
+    module=melodicinterval
+    ask_for_intervals_0=10, 11, -10, -11
+    title = _("Sevenths")
+    theory = "theory-intervals"
+    lesson_id = "8b2174e3-5e44-4453-a989-12867c5aefed"
+    test = "6x"
+    test_requirement = "90%"
+}

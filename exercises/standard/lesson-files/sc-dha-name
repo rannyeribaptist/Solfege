@@ -1,0 +1,41 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "0b024630-5555-11db-8682-8558e4e4f94b"
+  module = idbyname
+  random_transpose = yes
+  title = _("Double Harmonic Scale and its modes")
+  questions_selectable = yes
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  at_question_start = show
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/dha"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question {set = 0  name = dha1n  voice(dha1c) }
+question {set = 0  name = dha2n  voice(dha2c) }
+question {set = 0  name = dha3n  voice(dha3c) }
+question {set = 0  name = dha4n  voice(dha4c) }
+question {set = 0  name = dha5n  voice(dha5c) }
+question {set = 0  name = dha6n  voice(dha6c) }
+question {set = 0  name = dha7n  voice(dha7c) }
+
+question {set = 1  name = dha1n  voice(dha1l) }
+question {set = 1  name = dha2n  voice(dha2l) }
+question {set = 1  name = dha3n  voice(dha3l) }
+question {set = 1  name = dha4n  voice(dha4l) }
+question {set = 1  name = dha5n  voice(dha5l) }
+question {set = 1  name = dha6n  voice(dha6l) }
+question {set = 1  name = dha7n  voice(dha7l) }
+

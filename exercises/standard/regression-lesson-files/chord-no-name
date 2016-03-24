@@ -1,0 +1,73 @@
+# Solfege - ear training for GNOME
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "bc55f1fe-7651-4297-8297-5008df0916bb"
+    module = chord
+	random_transpose = accidentals, -5, 5
+	title = "Questions without name variable"
+}
+question {
+ set=0
+ toptone = 5
+ inversion = 0
+ chord("c' es' g'")
+}
+question {
+ set=1
+ toptone = 3
+ inversion = 0
+ chord("c' g' es''")
+}
+question {
+ set=2
+ toptone = 1 
+ inversion = 1 
+ chord("es' g' c''")
+}
+question {
+ set=3
+ toptone = 5 
+ inversion = 1 
+ chord("es c' g'")
+}
+question {
+ set=4
+ toptone = 1
+ inversion = 2 
+ chord("g es' c''")
+}
+
+
+
+question {
+ set=0
+ toptone = 5
+ inversion = 0
+ chord("c' e' g'")
+}
+question {
+ set=1
+ toptone = 3
+ inversion = 0
+ chord("c' g' e''")
+}
+question {
+ set=2
+ toptone = 1 
+ inversion = 1 
+ chord("e' g' c''")
+}
+question {
+ set=3
+ toptone = 5 
+ inversion = 1 
+ chord("e c' g'")
+}
+question {
+ set=4
+ toptone = 1
+ inversion = 2 
+ chord("g e' c''")
+}

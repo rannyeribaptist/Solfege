@@ -1,0 +1,10 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+
+header {
+    module = idtone
+    black_keys_weight =  1, 1,    1, 1, 0
+    white_keys_weight = 1, 1, 1, 1, 1, 1, 1
+    title = _("C to B, C#, D#, F# and G#")
+    lesson_id = "5a2333ea-1536-47c9-831a-0bfbbe2e68d2"
+}

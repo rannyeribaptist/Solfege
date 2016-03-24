@@ -1,0 +1,2311 @@
+<chapter id="extending-solfege"><?dbhtml chunk.section.depth="0" ?>
+<title>Extending GNU Solfege</title>
+<sect1 id='extending-intro'>
+<title>Introduction</title>
+<para>GNU Solfege is written so that it can easily be extended, even if
+you do not know any computer programming. The steps are:</para>
+<itemizedlist>
+
+<listitem><para>Create a <link linkend="lesson-files">lesson file</link>
+and save it it in the first directory
+listed when you select <guimenuitem>User Exercises</guimenuitem> from the
+<guimenu>File</guimenu> menu. Create the directory if it does not
+exist.</para></listitem>
+<listitem><para>Select <guimenuitem>User Exercises</guimenuitem> once again to
+see the file show up in the list.</para></listitem>
+<listitem><para>Click the link to your lesson file and enjoy!</para></listitem>
+</itemizedlist>
+
+<para>To get started, you can copy one of the lesson files included in GNU
+Solfege. The lesson files are located in the <filename
+class="directory">exercises/standard/lesson-files</filename> subdirectory of
+the installation directory. You can find the installation directory by
+selecting <guimenuitem>File Locations</guimenuitem> from the
+<guimenu>Help</guimenu> menu. It is important to store the lesson files you
+create in the directory intended for user created lesson files, and not in the
+applications directory. This because all files in the installation directory
+may be removed while upgrading the program.</para>
+
+<para>If you create many lesson files, you might want to group them together
+in a separate subdirectory and attach them to a front page file. This way you
+have a set of files in a subdirectory that you can easily distribute to other students. So create a new directory side by side the <filename>user</filename>
+directory you found by selecting <guimenuitem>User Exercises</guimenuitem>
+earlier this article. Your files might be structured like this:</para>
+<programlisting>myfiles/myfrontpage.txt
+myfiles/lesson-files/chords-1
+myfiles/lesson-files/chords-2
+</programlisting>
+
+<para>To create a new front page file, you should select
+<guimenuitem>Edit Front Page</guimenuitem> from the <guimenu>File</guimenu>
+menu, and then click <guibutton>New</guibutton> on the toolbar of the
+dialog that pops up.</para>
+
+</sect1>
+
+<sect1 id='lesson-file-locations-details'>
+<title>File locations</title>
+
+<sect2>
+<title>INSTALLDIR</title>
+<para>In <xref linkend='extending-intro'/> we showed you just enough to place
+your lesson file to get started. This sections give you all the details
+how files and directories are set up.</para>
+
+<para>We will write <literal id="INSTALLDIR">INSTALLDIR</literal>
+whenever we refer to the directory Solfege is installed in. The exact
+location differ from operating system to operating system, and can be
+found by selecting <menuchoice><guimenu>Help</guimenu><guimenuitem>File locations</guimenuitem></menuchoice> and then lookup «Solfege installation directory».
+Example of locations:
+</para>
+<itemizedlist>
+  <listitem><para>MS Windows - C:\Program files\GNU Solfege\share\solfege</para></listitem>
+  <listitem><para>GNU/Linux - /usr/share/solfege</para></listitem>
+</itemizedlist>
+
+<para>Please notice that INSTALLDIR is not necessarily the top directory where
+all files belonging to Solfege is installed. Different operating system place
+files differently. For the purpose of this document INSTALLDIR is the directory
+containing the <filename>solfege/</filename> subdirectory containing all the
+python modules that composes the program and the
+<filename>exercises/</filename> subdirectory that contains all the lesson
+files.</para>
+</sect2>
+
+<sect2>
+<title><literal id="USERDATA">USERDATA</literal></title>
+<para>Solfege allow for the user to create exercises (and soon also
+exercise modules written in Python). These should not be saved in
+<filename>INSTALLDIR</filename> because then they will be lost on
+upgrade.</para>
+
+<para>The directory to save the lesson files you write yourself depends on the
+operating system you run, and on the locale settings (language). In this
+document we will write USERDATA whenever we refer to the directory found
+if you lookup «Solfege user data» by selecting
+<menuchoice><guimenu>Help</guimenu><guimenuitem>File locations</guimenuitem>
+</menuchoice>. Your files should be saved in directories below USERDATA.
+Example values for USERDATA:
+</para>
+<itemizedlist>
+ <listitem><para>MS Windows 7 - C:\Users\User name\Documents\GNU Solfege
+    </para></listitem>
+ <listitem><para>MS Windows XP - C:\Documents and settings\User name\My Documents\GNU Solfege</para></listitem>
+ <listitem><para>GNU/Linux - /home/username/.solfege</para></listitem>
+</itemizedlist>
+
+</sect2>
+
+<sect2>
+<title>Lesson files and front page files</title>
+<para>Lesson files and front page files are grouped together in
+subdirectories below <literal>USERDATA/exercises</literal>. You can have
+as many subdirectories as you like in <literal>USERDATA/exercises</literal>.
+Each file that matches <literal>USERDATA/exercises/*/*</literal> will be
+read by the program and used as a front page file if it has the correct
+format. Other files will silently be ignored. This means that you can
+have more than one front page file in a subdirectory, and extra files,
+like README and COPYRIGHT files are ignored.</para>
+
+<para>Lesson files should be saved in a directory named
+<literal>lesson-files</literal> in the same directory as the front page
+file is saved. So if you create some exercises with jazz progressions, you
+might have this file structure on your computer:</para>
+<programlisting>
+USERDATA/exercises/jazzprog/page.txt
+USERDATA/exercises/jazzprog/lesson-files/prog1
+USERDATA/exercises/jazzprog/lesson-files/prog2
+USERDATA/exercises/jazzprog/lesson-files/prog3
+</programlisting>
+
+</sect2>
+
+<sect2>
+<title>User lesson files</title>
+<para>
+There is one folder name below <literal>USERDATA/exercises</literal>
+that is special. In addition to what described above, all lesson files
+in <literal>USERDATA/exercises/user/lesson-files</literal> will be
+shown when you select <guimenuitem>User Exercises</guimenuitem> on the
+<guimenu>File</guimenu> menu. This was done to make it simple to just
+write a lesson file, drop it in a directory and use it.</para>
+<note><para>In versions prior to 3.20.3, all lesson files matching
+<literal>USERDATA/exercises/*/lesson-files/*</literal> would be listed.
+</para></note>
+</sect2>
+</sect1>
+
+<sect1 id='lesson-files'>
+<title>Lesson files</title>
+<para>In GNU Solfege, each exercise is created by a lesson file
+interpreted by one of the exercise modules.</para>
+
+<para>Deprecated modules: chord, harmonicprogressiondictation,
+</para>
+<para>Missing documentation: chordvoicing, identifybpm, twelvetone
+</para>
+
+<sect2 id='File-encoding'>
+<title>File encoding</title>
+<indexterm><primary>File encoding</primary></indexterm>
+<para>Solfege by default expects the content of lesson files to be in UTF-8
+encoding.
+Modern editors often let you
+specify the encoding in the "Save As" dialog. One example is
+<application>gedit</application>. Other programs, like
+<application>vim</application> and <application>emacs</application> let you
+specify the encoding inside the text file.</para>
+
+<para>If this sounds complicated, you can safely ignore the whole
+encoding issue if you restrict yourself to use only standard ascii
+characters. That is only the letters a to z.
+</para>
+
+<para>If you create lesson files with a different encoding, you have to
+declare the encoding in a special comment at the top of the file. This because
+Solfege and the tools used to translate Solfege cannot guess the encoding
+safely.
+We follow the same conventions as the Python language. See
+<ulink url="http://www.python.org/dev/peps/pep-0263/">PEP-0263</ulink>
+for the details.</para>
+
+<para>What you have to do is add a comment to one of the first two lines
+of the lesson file, where part of the line matches <literal>coding=encoding</literal> or <literal>coding: encoding</literal>. Extra characters on the
+line are ignored, so if you use the emacs or vim editors, you can conveniently
+tell the editor about the file encoding. The following example sets
+the charset to ISO 8859-1, a charset commonly used in many west-european
+languages:
+</para>
+
+<programlisting># -*- coding: iso-8859-1 -*-</programlisting>
+<para>Russians might want to use koi8-r:</para>
+<programlisting># -*- coding: koi8-r -*-</programlisting>
+
+<para>Same as above, but in a format that works with the <application>vim</application>:</para>
+<programlisting># vim: set fileencoding= koi8-r :</programlisting>
+
+<para>The program use the python libs to convert to unicode, so it
+should understand almost any encoding you can think of. If you see some
+characters are missing, for example when the name of questions are
+displayed on buttons, then most likely you have done something wrong
+with the encoding.</para>
+
+</sect2>
+
+<sect2 id='Useful-characters'>
+<title>Useful unicode characters</title>
+<para>Unicode has some characters that you might want to use to make labels
+look more professionally. If your editor use unicode by default, you may
+copy-and-paste the characters you need from here, if you are viewing this
+documentation in a web browser. The number is a hexidecimal number.</para>
+<variablelist>
+ <varlistentry>
+  <term>ø <literal>00F8 LATIN SMALL LETTER O WITH STROKE</literal></term>
+  <listitem>
+  <para>Half-diminished seventh chord.</para></listitem>
+ </varlistentry>
+ <varlistentry>
+   <term>° <literal>00B0 DEGREE SIGN</literal></term>
+   <listitem><para>Diminished seventh chord.</para></listitem>
+ </varlistentry>
+ <varlistentry>
+   <term>△ <literal>25B3 WHITE UP-POINTING TRIANGLE</literal></term>
+   <term>Δ <literal>0394 GREEK CAPITAL LETTER DELTA</literal></term>
+   <listitem><para>Major seventh chord. We do not know
+   which character to recommend. Solfege does not care, so you can use
+   the symbol you like.
+   </para></listitem>
+ </varlistentry>
+ <varlistentry>
+   <term>♭ <literal>266D MUSIC FLAT SIGN</literal></term>
+   <listitem><para>This sign can be used instead of the letter 'b' for a
+   flat sign.</para></listitem>
+ </varlistentry>
+ <varlistentry>
+   <term>♯ <literal>266F MUSIC SHARP SIGN</literal></term>
+   <listitem><para>This can be used instead of the letter '#' for the
+   sharp sign.</para></listitem>
+ </varlistentry>
+</variablelist>
+</sect2>
+
+<sect2 id='Comments'>
+<title>Comments</title>
+<indexterm><primary>Comments</primary></indexterm>
+<para>Everything after # on a line is ignored. Example:</para>
+<programlisting># This line is ignored. The next line is not.
+question { bla bla }
+</programlisting>
+</sect2>
+
+<sect2 id='Types'>
+<title>Types</title>
+<sect3 id='lf-types-strings'>
+<title>Strings</title>
+<indexterm><primary>Strings</primary></indexterm>
+<para>Strings are quoted with the <literal>"</literal> character. Example:</para>
+<programlisting>"this is a string"</programlisting>
+<para>Use triple quotes for strings that contain line breaks, or
+if the string itself has to contain the <literal>"</literal> character:</para>
+
+<programlisting>
+description = """&lt;h1&gt;Long desription&lt;h1&gt; This lessonfile need
+very much descriptions. Qoutes (") are ok here. bla bla bla"""</programlisting>
+
+<para>NB: All strings have to be unicode strings. If you get error messages like this one:</para>
+<programlisting>
+In line 21 of input: does not recognise this string ';lt;' as a valid token.'
+(line 20): question {
+(line 21): question {
+(line 22):   name = _("Ionia�)
+</programlisting>
+<para>then you must check the encoding of your file, and maybe you should
+read <xref linkend='File-encoding'/>. You can change the encoding of a file using the <command>iconv</command> program:</para>
+<programlisting>iconv -f YOUR_ENCODING -t utf8 your.file</programlisting>
+</sect3>
+
+<sect3 id='lf-type-tempo'>
+<title>Tempo</title>
+<para>The tempo of music is entered as <literal>bpm/beatlen</literal>. The
+following example will set the tempo to 120 beats per minute, each beat being a
+quarter note.</para>
+<programlisting>tempo = 120/4</programlisting>
+</sect3>
+</sect2>
+
+<sect2 id='Global-variables'>
+<title>Global variables</title>
+<indexterm><primary>Global variables</primary></indexterm>
+<para>Global variables can save you a few key strokes.</para>
+<programlisting>
+s = "\score\relative c'{ %s }
+question {
+# instead of music = music("\score\relative c'{ c d e f g2 g2 }") 
+music = music(s % "c d e f g2 g")
+}
+</programlisting>
+</sect2>
+
+<sect2 id='Lesson-file-contents'>
+<title>Lesson file contents</title>
+<para>A lesson file consist of one header block and zero or more
+question blocks:</para>
+
+<!-- translators: don't translate this string. -->
+<programlisting>
+header {
+ ASSIGNMENT
+ ASSIGNMENT
+ ...
+}
+question {
+ ASSIGNMENT
+ ...
+}
+</programlisting>
+</sect2>
+
+<sect2 id='Header-block'>
+<title>Header block</title>
+<indexterm><primary>header block</primary></indexterm>
+
+<para>The header block can be placed anywhere in the file, but by convention
+    it should be the first block in the file. And there is a limitation that
+    the header has to be within the first 40000 characters of the file.</para>
+
+<variablelist id='lesson-header-vars'>
+<title>Variables shared by many exercise modules</title>
+<varlistentry>
+ <term>
+ <!-- translators: don't translate this string. -->
+ <varname id='lf-module'>module</varname></term>
+ <!-- translators: don't translate the string inside the <varname> element -->
+ <listitem><para>Tell what exercise module that will run the lesson file. This
+ variable is required for all lesson files. (The variable was added in
+ Solfege 2.9.0 where it replaced the <varname>content</varname>
+ variable.). Example:</para>
+ <!-- translators: don't translate this string. -->
+ <programlisting>module = idbyname</programlisting></listitem></varlistentry>
+
+<varlistentry>
+ <term>
+ <!-- translators: don't translate this string. -->
+ <varname id='lf-replaces'>replaces</varname></term>
+ <listitem>
+ <!-- translators: don't translate the string inside the <literal> and <command> elements -->
+ <para>A string or list of strings with hash values of lesson files that
+ this lesson file can replace without dropping the statistics. Use this only when
+ you know what you are doing. The hash value is calculated by
+ <literal>solfege.lessonfile.hash_of_lessonfile()</literal>.
+ <command>tools/hash-of-file.py</command> can be used to get the hash value
+ of files before modifying them.</para>
+ <!-- translators: don't translate this string. -->
+ <programlisting>replaces = "bf7dd374206451bff43d61fc8191f5fb3e88d007"
+replaces = "bf7dd374206451bff43d61fc8191f5fb3e88d007", "cdb2f9415171650ee7682028788c1c42c62fdbf"
+ </programlisting></listitem></varlistentry>
+
+<varlistentry>
+  <term><literal id='lf-lesson_id'>lesson_id</literal></term>
+  <listitem>
+  <indexterm><primary>lesson_id</primary></indexterm>
+  <remark>This variable is deprecated in Solfege 3.15.3. It should remain in
+  existing lesson files because if you remove it, you will have to add
+  a <xref linkend='lf-replaces' endterm='lf-replaces'/> entry to keep
+  the statistics. But it should not be added to new lesson files.</remark>
+  </listitem>
+</varlistentry>
+
+<varlistentry>
+<term><!-- translators: don't translate this string. -->
+<varname id='lf-version'>version</varname></term>
+<listitem><para>
+<indexterm><primary>version</primary></indexterm>
+Tell the version of
+solfege the lessonfile is known to work with. This variable is not
+required, but it should be used because it can (but don't guarantee to)
+help avoid trouble if the lesson file format changes in the future.
+Example:</para>
+<!-- translators: don't translate this string. -->
+<programlisting>version = "3.0.7"</programlisting>
+</listitem></varlistentry>
+
+<varlistentry>
+<term>
+<!-- translators: don't translate this string. -->
+<varname id='lf-title'>title</varname></term>
+<listitem><para>
+<indexterm><primary>title</primary></indexterm>
+Short one-line description that will be used for
+creating the menu entry for the exercise. You should add this to all lesson
+files. Example:</para>
+<!-- translators: Don't translate the word 'title'. -->
+<programlisting>title = "Minor and major chords in root position"</programlisting>
+</listitem></varlistentry>
+
+<!--
+<varlistentry>
+<term>
+ translators: don't translate this string.
+<varname>description</varname></term>
+<listitem><para>FIXME DEPRECATED. Optional, long description that can contain html tags. Use
+this if you have to describe how the lesson file should be used.
+This variable was used in Solfege 2.4. It is ignored in recent versions
+of Solfege.</para>
+</listitem></varlistentry>
+-->
+<varlistentry><term>
+<!-- translators: don't translate this string. -->
+<varname id="lf-lesson_heading">lesson_heading</varname></term>
+<listitem><para>
+<indexterm><primary>lesson_heading</primary></indexterm>
+A short heading that will be displayed above the exercise. It
+should say what the purpose of the exercise is. Some modules provide a
+default value, others leave the string empty. Example:</para>
+<programlisting>lesson_heading = _("Identify the chord")</programlisting>
+</listitem></varlistentry>
+
+<varlistentry><term>
+<!-- translators: don't translate this string. -->
+<varname id="lf-help">help</varname></term>
+<listitem><para>
+<indexterm><primary>help</primary></indexterm>
+This variable say which help file from the user manual will be
+displayed when the user presses F1.
+Example:</para>
+<programlisting>help = "idbyname-intonation"</programlisting>
+<para>By default, Solfege will display the help file that has the same
+name as the exercise module being used in the lesson file.</para>
+</listitem></varlistentry>
+
+<varlistentry><term>
+<!-- translators: don't translate this string. -->
+<varname id="lf-theory">theory</varname></term>
+<listitem><para>
+<indexterm><primary>theory</primary></indexterm>
+This variable say which help file from the user manual will be
+displayed when the user presses F3. Pressing F3 should display
+music theory about the exercise. Don't include this variable if there
+are no music theory written.
+Example:</para>
+<programlisting>theory = "scales/maj"</programlisting>
+</listitem></varlistentry>
+
+<varlistentry>
+<term>
+<!-- translators: don't translate this string. -->
+<varname>random_transpose</varname></term>
+<listitem>
+<indexterm><primary>random_transpose</primary></indexterm>
+<!-- translators: don't translate the strings inside <literal> elements -->
+<para>In some exercises the program can transpose the music to
+create variation. The default value is <literal>yes</literal>. (The
+default value changed from <literal>no</literal> to
+<literal>yes</literal> in Solfege 3.0.)</para>
+<para>Used in modules: <literal>chord</literal>,
+<literal>chordvoicing</literal>, <literal>harmonicprogressiondictation</literal>,
+<literal>idbyname</literal>, <literal>singanswer</literal>,
+<literal>singchord</literal></para>
+
+    <variablelist>
+    <title>Possible values</title>
+        <varlistentry>
+            <!-- translators: don't translate this string. -->
+            <term>random_transpose = no</term>
+            <listitem><para>No transposition will be done.</para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+            <!-- translators: don't translate this string. -->
+            <term>random_transpose = yes</term>
+            <listitem><para>The exercise will do random transposition. What
+            kind of transposition depends on the exercise, but you get a
+            ok result from this. This is the default value.</para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+            <!-- translators: don't translate the string 'random_transpose = accidentals'.
+You can translate INTEGER1 and INTEGER2.-->
+            <term>random_transpose = accidentals, INTEGER1, INTEGER2</term>
+            <listitem>
+            <para>
+              Transpose the question by random and make sure the key signature
+              of the question does not get more than a certain number of
+              accidentals.  In this context, the number of accidentals can be
+              described by an integer value. A negative value denote a number of
+              flats (b), and a positive number denote a number o sharps (#).
+              Zero mean no accidentals.  The integers INTEGER1 and INTEGER2
+              defines a range of allowed number of accidentals.
+            </para>
+              <para>For this to work properly the music must
+              either be in C major or A minor, or the key of the music has
+              to be set with the
+              <link linkend='lf-key'><literal>key</literal></link> variable.
+              </para>
+            </listitem>
+        </varlistentry>
+
+        <varlistentry>
+            <!-- translators: don't translate the string 'random_transpose = key'.
+You can translate INTEGER1 and INTEGER2. -->
+            <term>random_transpose = key, INTEGER1, INTEGER2</term>
+            <listitem>
+            <para>
+              Transpose the music INTEGER1 steps down or INTEGER2 steps up the
+              circle of fifth. In this context up is more sharps and down is
+              more flats. This is real transposition where both the key and the
+              notes are transposed.</para>
+              <para>For this to work properly the music must
+              either be in C major or A minor, or the key of the music has
+              to be set with the
+              <link linkend='lf-key'><literal>key</literal></link> variable.
+              </para>
+            </listitem>
+        </varlistentry>
+
+        <varlistentry>
+            <!-- translators: don't translate the strings 'random_transpose = semitones'.
+You can transpose INTEGER1 and INTEGER2.
+            -->
+            <term>random_transpose = semitones, INTEGER1, INTEGER2</term>
+            <listitem>
+            <para>
+              Transpose the music at most INTEGER1 semitones down or INTEGER2
+              semitones up. This is real transposition where both the key and
+              the notes are transposed. You will easily end up with music in the
+              keys with LOTS of accidentals.
+            </para>
+            </listitem>
+        </varlistentry>
+        <varlistentry>
+            <!-- translators: don't translate the strings 'random_transpose = atonal'.
+You can transpose INTEGER1 and INTEGER2.
+            -->
+            <term>random_transpose = atonal, INTEGER1, INTEGER2</term>
+            <listitem>
+            <para>
+              Transpose the music at most INTEGER1 semitones down or INTEGER2
+              semitones up. Similar to <literal>semitones</literal>, but the
+              notes will be transposed one by one, and the key will not change.
+            </para>
+            </listitem>
+        </varlistentry>
+
+   </variablelist>
+</listitem> </varlistentry>
+
+<varlistentry>
+    <term><literal>enable_right_click = no</literal></term>
+    <listitem>
+    <para>By default, Solfege will let the user right-click on buttons to hear
+    the music they represent without guessing. Set this variable to
+    <literal>no</literal> for lesson files where it does not make sense, for
+    example in a <literal>idbyname</literal> lesson file where many questions
+    have the same name.</para>
+    <para>Modules: <literal>idbyname</literal>, <literal>chordvoicing</literal>
+    and <literal>chord</literal>.</para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>
+    <!-- translators: don't translate this string. -->
+    <varname
+    id='lf-disable_unused_intervals'>disable_unused_intervals</varname>
+    <!-- translators: don't translate this string. -->
+    <literal>
+    = no</literal></term>
+    <listitem>
+    <para>By default, Solfege will make the buttons insensitive for intervals
+    that are not being asked. Set this variable to <literal>no</literal> if you
+    want all buttons to be sensitive.
+    </para>
+    <para>Modules: <literal>harmonicinterval</literal> and
+    <literal>melodicinterval</literal>.</para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><literal id='lf-ask_for_intervals'>ask_for_intervals_0</literal></term>
+    <listitem>
+    <para>Select which intervals to ask for. 1 for minor second, 2 for major
+    second, 3 or minor third etc. Use a negative number for descending
+    intervals. To ask for more that one interval create the variables
+    <literal>ask_for_intervals_1</literal>,
+    <literal>ask_for_intervals_2</literal> etc. In the following example
+    Solfege will ask for two intervals. The first will be either a minor second
+    or a major second, both intervals going up. And the second interval will be
+    either major second or minor third, both intervals going down.</para>
+
+    <programlisting>ask_for_intervals_0 = 1, 2
+ask_for_intervals_1 = -2, -3
+    </programlisting>
+    <para>Modules: <literal>melodicinterval</literal> and
+    <literal>singinterval</literal>.</para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><varname id='lf-intervals'>intervals</varname></term>
+    <listitem>
+    <para>This variable tell which intervals should be asked for in exercises
+    using the <literal>harmonicinterval</literal> module. 1 for minor second, 2 for major
+    second, 3 or minor third etc. Example that will practise thirds:</para>
+    <programlisting>intervals = 3, 4</programlisting>
+    <para>Modules: <literal>harmonicinterval</literal>.</para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>
+    <indexterm>
+    <!-- translators: don't translate this string. -->
+    <primary>test</primary></indexterm><varname id='lf-test'>test</varname></term>
+    <listitem>
+    <para>
+        This variable defines the test for the exercise. In a test,
+        Solfege will ask all the questions in the lesson file a number
+        of times. 
+        This variable is always used together with <varname>test_requirement</varname>.
+        In the following example, each question will be asked
+        3 times:
+    </para>
+    <programlisting>test = "3x"</programlisting>
+    <para>Modules: <literal>harmonicinterval</literal>,
+        <literal>idbyname</literal>, <literal>melodicinterval</literal>
+        and <literal>singinterval</literal>.</para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>
+    <!-- translators: don't translate this string. -->
+    <varname id='lf-test_requirement'>test_requirement</varname></term>
+    <listitem>
+    <para>
+    <indexterm><primary>test_requirement</primary></indexterm>
+    This variable defines how large percentage of the questions
+    has to be answered correctly to pass the test. Example:
+    </para>
+    <programlisting>test_requirement = "90%"</programlisting>
+    <para>Modules: <literal>harmonicinterval</literal>,
+        <literal>idbyname</literal>, <literal>melodicinterval</literal>
+        and <literal>singinterval</literal>.</para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>
+    <!-- translators: don't translate this string. -->
+    <varname id='lf-have_repeat_arpeggio_button'>have_repeat_arpeggio_button</varname>
+    <!-- translators: don't translate this string. -->
+    <literal>= yes</literal></term>
+    <listitem>
+    <para>Set to <literal>yes</literal> if you want the exercise to have a
+    "Repeat arpeggio" button.</para>
+    <para>Modules: <literal>singanswer</literal>.</para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>
+    <!-- translators: don't translate this string. -->
+    <varname id='lf-have_music_displayer'>have_music_displayer</varname>
+    <!-- translators: don't translate this string. -->
+    <literal>= yes</literal></term>
+    <listitem>
+    <para>Set to <literal>yes</literal> if you want the question to have a
+    music displayer.</para>
+
+    <para>In the idbyname module, setting this variable will add a
+    music displayer where the program will display the answer when the
+    user gives up or answers the question correctly. You might also want
+    to read about <xref linkend='lf-at_question_start' endterm='lf-at_question_start'/>.</para>
+
+    <para>In the <literal>singanswer</literal> module, setting this variable
+    will add a music displayer where the music will be displayed when
+    the question is displayed.</para>
+    <para>Modules: <literal>idbyname</literal>,
+       <literal>elembuilder</literal> and
+       <literal>singanswer</literal>.</para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>
+    <!-- translators: don't translate this string. -->
+    <varname id='lf-music_displayer_stafflines'>music_displayer_stafflines</varname>
+    <!-- translators: don't translate this string. -->
+    <literal>= INTEGER</literal></term>
+    <listitem>
+    <para>The number of empty staff lines to display when we have no
+    music to display.</para>
+
+    <para>Modules: <literal>idbyname</literal> and
+       <literal>elembuilder</literal>.</para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>
+    <!-- translators: don't translate this string. -->
+    <varname id='lf-at_question_start'>at_question_start</varname>
+    <indexterm><primary>at_question_start</primary></indexterm>
+    <!-- translators: don't translate this string. -->
+    <literal></literal></term>
+    <listitem>
+    <para>This variable changes what happens when the user clicks
+    <guibutton>New</guibutton>. By default, Solfege will play the music when
+    the user clicks <guibutton>New</guibutton>, and only display the music
+    when the question is answered correctly and the
+    <varname>have_music_displayer</varname> variable is set to
+    <literal>yes</literal>. Setting this variable will also set
+    <varname>have_music_displayer</varname> to <literal>yes</literal>.
+    </para>
+
+    <variablelist>
+    <varlistentry>
+        <term><literal>at_question_start = show</literal></term>
+        <listitem>
+        <para>The exercise will get a <guibutton>Play music</guibutton> button.
+        When the user clicks <guibutton>New</guibutton> the music will be
+        displayed in the music displayer, but no music is played. Click
+        <guibutton>Play music</guibutton> to hear the music.</para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term><literal>at_question_start = play</literal></term>
+        <listitem>
+        <para>The exercise will get a <guibutton>Display music</guibutton>
+        button. When the user clicks <guibutton>New</guibutton> the music is
+        played. Click <guibutton>Display music</guibutton> to see the
+        music.</para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term><literal>at_question_start = show, play</literal></term>
+        <listitem>
+        <para>When the user clicks <guibutton>New</guibutton> the music is both
+        played and displayed.</para>
+        </listitem>
+    </varlistentry>
+    </variablelist>
+
+    <para>Modules: <literal>idbyname</literal>, <literal>elembuilder</literal>,
+      <literal>rhythmtapping</literal>
+      and <literal>rhythmtapping2</literal>.</para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><literal id='lf-vmusic'>vmusic</literal></term>
+    <listitem>
+    <para>This variable holds a representation of the question intended to be
+    displayed. This can be necessary if the music is a .wav or .mp3 file. It
+    will be used when the user clicks Show music or when the question is
+    answered correctly (if we have a musicdisplayer). Added to
+    <literal>idbyname</literal> in Solfege 2.5.1 and to
+    <literal>elembuilder</literal> in 3.9.2.</para>
+    <para>Modules: <literal>idbyname</literal> and <literal>elembuilder</literal>.</para>
+    </listitem>
+</varlistentry>
+<varlistentry>
+    <term><literal id='lf-rhythm_elements'>rhythm_elements</literal></term>
+    <listitem>
+    <para>A list of integers (1-34) telling what elements we should use when
+    creating questions. Example:</para>
+    <programlisting>rhythm_elements = 0, 1, 2, 3, 4</programlisting>
+    <xi:include
+    xmlns:xi="http://www.w3.org/2001/XInclude" href="rhythmtable.xml"/>
+    <para>Modules: <literal>rhythm</literal> and <literal>rhythmtapping2</literal></para>
+    </listitem>
+</varlistentry>
+<varlistentry>
+    <term><literal id='lf-statistics_matrices'>statistics_matrices = enabled | disabled | hidden</literal></term>
+    <listitem>
+    <para>Set to <literal>disabled</literal> if the statistics page
+    of the exercise should not display the matrices showing more details
+    on how you have answered. Set to <literal>hidden</literal> if the
+    matrices should be hidden by an expander button. (Added in Solfege 3.21.3)
+    </para>
+    <para>Default value: <literal>enabled</literal></para></listitem>
+</varlistentry>
+</variablelist>
+
+<sect3 id='lf-obsolete-vars'>
+<title>Variables that has been obsoleted</title>
+<variablelist>
+<varlistentry>
+<term><literal>number_of_intervals = INTEGER</literal></term>
+<listitem><para>Made obsolete in Solfege 3.1.5. Solfege will find this number automatically now, so this variable is ignored.</para></listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+</sect2>
+
+<sect2 id='Question-block'>
+<title>Question block</title>
+<variablelist>
+<title>Variables you can define in the question block</title>
+
+<varlistentry>
+    <term><literal id='lf-name'>name</literal></term>
+    <listitem>
+    <para>Questions written for the
+      <link linkend='idbyname-module'>idbyname</link> or 
+      <link linkend='elembuilder-module'>elembuilder</link>
+      exercise modules need a name. A name is optional for
+      <link linkend='dictation-module'>dictation</link> module.</para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><literal id='lf-music'>music</literal></term>
+    <listitem>
+    <para>
+    For most lesson files the music representing the question is assigned to
+    this variable. Note that there is a shortcut. Instead of:</para>
+<programlisting>question {
+  name = "Lisa gikk til skolen"
+  music = music(...)"
+}
+</programlisting>
+<para>you can write:</para>
+<programlisting>question {
+  name = "Lisa gikk til skolen"
+  music(...)
+}
+</programlisting>
+<para>Music objects are documented in <xref linkend='music-object'/>.</para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><literal id='lf-rhythm'>rhythm</literal></term>
+    <listitem>
+    <para>If defined in a question, the rhythm of this music object is used
+    when comparing the users answer to the question. This can be useful if
+    the Solfege cannot find the rhythm of the question, for example when
+    the music object is a MP3 file.
+    </para>
+    <para>Used in modules: <literal>rhythmtapping</literal> and
+           <literal>rhythmdictation.</literal></para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><literal id='lf-tempo'>tempo</literal></term>
+    <listitem>
+    <para>Set the tempo for this questions music. The variable is defined
+    "beats per minute" / "notelen per beat". Example:</para>
+    <programlisting>tempo = 150 / 4</programlisting>
+    <para>This variable can also be defined globally for the whole lesson file.
+    Do do so you should put it in the beginning of the file, outside any
+    question blocks.</para>
+    <para>Modules: <literal>idbyname</literal>, <literal>chord</literal>,
+        <literal>chordvoicing</literal>,
+        <literal>rhythmdictation2</literal> and
+        <literal>rhythmtapping</literal>.</para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><literal id='lf-countin'>countin</literal></term>
+    <listitem>
+    <para>A music object representing a count-in to be played before
+    the question. Only music objects that are parsed by the
+    <literal>mpd</literal> module can be used as count-in, and only
+    questions parsed by this module can have count-in. Example:</para>
+    <programlisting>tempo = rhythm("\time 4/4 d4 d d d")</programlisting>
+    <para>Entering the time signature is not necessary if the time
+    signature is 4/4, but for all other time signatures you must
+    include it.</para>
+    <para>Modules: <literal>rhythmdictation</literal> and
+        <literal>rhythmdicatation2</literal>
+    </para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><literal>instrument</literal></term>
+    <listitem>
+    <para>By default, Solfege will use the instrument specified on the
+     <link linkend='preferences-window'>preferences window</link> when playing questions. This variable let you select a different instrument. Example:
+    </para>
+    <programlisting>instrument = "cello", 100</programlisting>
+    <para>The instrument name has to be quoted. The integer is the volume,
+    and it should be in the range 0-127. You can see a list of
+    instrument names in <xref linkend='midi-instrument-names'/>. For lesson
+    files where it makes sense, it is possible to specify three set of
+    instruments. The following example will play bass for the lowest tone,
+    piano in the middle and clarinet on the top tone:</para>
+    <programlisting>instrument = "bass", 100, "acoustic grand", 100, "clarinet", 100</programlisting>
+    <para>This variable can also be defined globally for the whole lesson file.
+    Do do so you should put it in the beginning of the file, outside any
+    question blocks.</para>
+    <para>Modules: <literal>idbyname</literal>, <literal>chord</literal>,
+        <literal>singanswer</literal> and <literal>chordvoicing</literal></para>
+    <!-- ikke melodicinterval, singchord, compareintervals, ...-->
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><literal>set</literal></term>
+    <listitem>
+    <para>The set variable is used by some exercise modules to select
+    which question to play when the user right clicks on one of the
+    answer buttons. This can be useful if the lesson file has many questions
+    with the same name, and you want solfege to play the question that is
+    most closely related to the question being asked. You can assign
+    whatever value you want. A good suggestion is to use integers.</para>
+
+    <para>In lesson files that does not use the <literal>set</literal> variable,
+    solfege will play the first question it can find with
+    the same name as the button the user right clicks on.</para>
+
+    <para>If the lesson file uses the <literal>set</literal>, or more
+    precisely, if the question being asked has the variable defined, the
+    program will first try to find a question where the
+    <literal>set</literal> variable matches the question being asked, and the
+    name matches the button clicked. If no match is found,
+    the program will select a question to play as if the
+    <literal>set</literal> variable was not used at all.</para>
+
+    <para>Modules: <literal>idbyname</literal> and
+        <literal>chordvoicing</literal>.</para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><literal id='lf-key'>key</literal></term>
+    <listitem>
+    <para>Needed to make some random transposition work properly
+          if the music is not in C major on A minor. Two examples:</para>
+    <programlisting>key="b \minor"
+key="g \major"</programlisting>
+    </listitem>
+</varlistentry>
+
+</variablelist>
+</sect2>
+
+<sect2 id='import-statement'>
+<title>The <literal>import</literal> statement</title>
+<para>
+The import statement will parse a library file and bind it to a
+name in the global namespace. You then refer to names defined in the
+libarary file using dot notation. In the example below, the
+files <filename>jazz_progressions</filename> and <filename>progression_elements</filename> are two library files that are part of GNU Solfege and
+is located in the INSTALLDIR/exercises/standard/lib/ directory.
+</para>
+<programlisting>
+import progression_elements <co id="imp"/>
+import jazz_progressions as j <co id="imp.as"/>
+question {
+  elements = progression_elements.I, progression_elements.V
+}
+question {
+  elements = j.I, j.V, j.V
+}
+</programlisting>
+<calloutlist>
+<callout arearefs="imp"><para>
+Parse the file and bind it to the same name as the file name:
+<literal>progression_elements</literal>.
+</para></callout>
+<callout arearefs="imp.as"><para>
+Parse the <filename>jazz_progressions</filename> file, and
+refer to it by the name <literal>j</literal>. The name
+<literal>jazz_progressions</literal> will not be defined.
+</para></callout>
+</calloutlist>
+
+<para>
+The program will first search for a library file in
+<filename>INSTALLDIR/exercises/standard/lib/</filename> and if not found,
+in the <filename>../lib/</filename> relative to the location of the
+lesson file.
+</para>
+</sect2>
+
+<sect2 id='rimport-statement'>
+<title>The <literal>rimport</literal> statement</title>
+<para>The <literal>rimport</literal> statement work exactly the same
+way as <literal>import</literal> except that <filename>../lib/</filename>
+relative to the lesson file is searched before
+<filename>INSTALLDIR/exercises/standard/lib/</filename>.</para>
+</sect2>
+
+<sect2 id='import-vs-include'>
+<title>Import or include</title>
+<para>Include and import works a little differently. One thing is that how they
+find the file to parse differs. But also what happens with the file content. If
+one <literal>idbyname</literal> lesson file includes another
+<literal>idbyname</literal> lesson file, when the questions from the included
+file will be asked when you practise the including file. But if you copy the
+included file to <filename class="directory">../lib/</filename> and import it,
+the questions in the imported file will not be asked.  Only the global
+variables in the imported file will be available with dot-notation, as
+described in <xref linkend="import-statement"/>.  </para> </sect2>
+
+<sect2 id='music-object'>
+<title><literal>music</literal> objects</title>
+<para>Each question in your lesson files will define one or more
+<literal>music</literal> objects.</para>
+
+<variablelist>
+<varlistentry>
+    <term><emphasis role='bold' id='lfunc-music'>music</emphasis>(<emphasis>musiccode</emphasis>)</term>
+    <listitem>
+    <para>This is music entered completely following the <!--<xref
+    linkend='music-format' endterm='music-format'/> --> music format FIXME spec. This means you
+    have to enter complete code with a <literal>\staff</literal> command. Example:</para>
+    <programlisting>variable = music("\staff\relative c' { c' d' }")</programlisting>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><emphasis role='bold' id='lfunc-music3'>music3</emphasis>(<emphasis>musiccode</emphasis>)</term>
+    <listitem>
+    <para>The music object can be used for music that has 3 or more staffs.
+       It works the same way as <xref linkend='lfunc-music' endterm='lfunc-music'/>,
+       but if "Use different instruments
+       for chords and harmonic intervals" is checked in the preferences window,
+       the 3 instruments you can select the same place will be used instead
+       of the preferred MIDI instrument.
+</para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><emphasis role='bold' id='lfunc-chord'>chord</emphasis>(<emphasis>musiccode</emphasis>)</term>
+    <listitem>
+    <para>Enter the tones from the lowest to the highest tone, like this:</para>
+    <programlisting>variable = chord("c' e' g'")</programlisting>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><emphasis role='bold' id='lfunc-satb'>satb</emphasis>(<emphasis>musiccode</emphasis>)</term>
+    <listitem>
+    <para>This type of music is used by the singchord exercises. It let you
+    say which tones of a chord the different voices in a choir will sing.
+    Take this, for example:</para>
+    <programlisting>variable = satb("c''|e'|g|c")</programlisting>
+    <para>The <literal>c''</literal> will be sung by the soprano, <literal>e'</literal> by the alto, <literal>g</literal> by the tenor and
+    <literal>c</literal> by the bass. Please notice that when this music
+    is played in arpeggio, the tones to be sung by the women, will be played
+    one octave deeper, of the user is a male. And vice versa if the user
+    is a female or a child.</para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><emphasis role='bold' id='lfunc-voice'>voice</emphasis>(<emphasis>musiccode</emphasis>)</term>
+    <listitem>
+    <para>This musictype saves some key strokes if you want to enter a melody.</para>
+    <programlisting>variable = voice("c'4 c' g' g' | a' a' g'2")</programlisting>
+    <para>is the same as</para>
+    <programlisting>variable = music("\staff{ c'4 c' g' g' | a' a' g'2")</programlisting>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><emphasis role='bold' id='lfunc-rvoice'>rvoice</emphasis>(<emphasis>musiccode</emphasis>)</term>
+    <listitem>
+    <para><varname>rvoice</varname> is similar to <varname>voice</varname>
+    except that the music is in <literal>\relative</literal> mode, relative
+    to the first tone. The following two statements produce the same music:</para>
+    <programlisting>variable = rvoice("c'4 c g' g | a a g2")
+\staff\relative c'{ c4 c g' g' | a a g2 }
+    </programlisting>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><emphasis role='bold' id='lfunc-percussion'>percussion</emphasis>(<emphasis>percussioncode</emphasis>)</term>
+    <listitem>
+    <para>This music object provides a simple way to play
+    rhythms with percussion instruments. Each tone represents a percussion
+    instrument as defined in <xref linkend='percussion-instrument-names'/>.
+    In the following example, the tone
+    <emphasis>c</emphasis> is translated to the midi sound <emphasis>Side
+    Stick</emphasis> and <emphasis>d</emphasis> to a <emphasis>Mute
+    triangle</emphasis>.
+    <programlisting>variable = percussion("d4 d d d c8 c8 c4")</programlisting>
+    </para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><emphasis role='bold' id='lfunc-rhythm'>rhythm</emphasis>(<emphasis>musiccode</emphasis>)</term>
+    <listitem>
+    <para>This music object let you write questions that tap rhythms with the
+    two percussion instruments defined in the preferences window. The tone
+    <literal>c</literal> will play with the instrument intended for the
+    question and <literal>d</literal> will use the instrument
+    intended for count off. Example:</para>
+    <programlisting>rhythm("d4 d d d c8 c8 c4 c c8 c8")</programlisting>
+
+    <para>You should only use two pitches, <literal>c</literal> and
+    <literal>d</literal>. Other pitches will print a warning, but will still
+    work in the current implementation. To play real percussion with many
+    different instruments you should use the <xref linkend='lfunc-percussion'
+    endterm='lfunc-percussion'/> music object.</para>
+
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><emphasis role='bold' id='lfunc-midifile'>midifile</emphasis>(<emphasis>filename</emphasis>)</term>
+    <listitem>
+    <para>Play a midi file. The path given to the file
+    is relative to the directory the lesson file is stored in. Example:</para>
+    <programlisting>variable = midifile("share/example.mid")</programlisting>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><emphasis role='bold' id='lfunc-wavfile'>wavfile</emphasis>(<emphasis>filename</emphasis>)</term>
+    <listitem>
+    <para>Play a <literal>.wav</literal> file. The path given to the file
+    is relative to the directory the lesson file is stored in. Example:</para>
+    <programlisting>variable = wavfile("share/fifth-small-220.00.wav")</programlisting>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><emphasis role='bold' id='lfunc-mp3file'>mp3file</emphasis>(<emphasis>filename</emphasis>)</term>
+    <listitem>
+    <para>Play a MP3 file. Similar to <literal>wavfile</literal>.</para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><emphasis role='bold' id='lfunc-oggfile'>oggfile</emphasis>(<emphasis>filename</emphasis>)</term>
+    <listitem>
+    <para>Play an Ogg Vorbis file. Similar to <literal>wavfile</literal>.</para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><emphasis role='bold' id='lfunc-csound'>csound</emphasis>(<emphasis>orchestra</emphasis>, <emphasis>score</emphasis>)</term>
+    <listitem>
+    <para>Given a CSound orchestra and score, this music object will
+    generate a WAV file and play it. Example:</para>
+    <programlisting>csound(load("share/sinus.orc"), """
+    f1 0 4096 10 1
+    i1 0 1 220.0
+    i1 + 1 329.04
+    """)
+    </programlisting>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><emphasis role='bold' id='lfunc-mma'>mma</emphasis>(<emphasis>mmacode</emphasis>)</term>
+    <term><emphasis role='bold'>mma</emphasis>(<emphasis>groove, mmacode</emphasis>)</term>
+    <listitem>
+    <para>Create a music object that use <ulink url="http://www.mellowood.ca/mma/">MMA</ulink> to generate music that it will play. If you create the object
+    with one argument, <emphasis>mmacode</emphasis> should be a string with
+    complete MMA code. With two arguments, <literal>groove</literal> is
+    a string with the name of the groove, and <literal>mmacode</literal> is
+    comple MMA code, except it could be missing the initial
+    "Groove" instruction. The groove from <literal>groove</literal>
+    will be prepended the string.</para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><emphasis role='bold' id='lfunc-cmdline'>cmdline</emphasis>(<emphasis>shell code</emphasis>)</term>
+    <listitem>
+    <para>Run an external program. Example:</para>
+    <programlisting>cmdline("./bin/csound-play-harmonic-interval.sh 220.000000 320.100000")</programlisting>
+    </listitem>
+</varlistentry>
+
+</variablelist>
+</sect2>
+
+<sect2 id='functions'>
+<title>Functions</title>
+
+<itemizedlist>
+    <listitem>
+    <para role="fdef"><literal>_(<replaceable>message</replaceable>)</literal></para>
+    <para>
+      Return the translation of <replaceable>message</replaceable> if it exist.
+      Return the string unchanged if not.</para>
+    <programlisting>title = _("Bla bla title")</programlisting>
+    </listitem>
+
+    <listitem><para role="fdef"><literal>include(<replaceable>filename</replaceable>)</literal></para>
+    <para>Read the file <replaceable>filename</replaceable> into the lesson file
+    and parse it as a part of the file.
+    The program will first search for the file with the filename relative
+    to the location of the lesson file. If not found, it will search
+    the <literal>exercises/standard/lesson-files</literal> directory
+    of the installation directory of the program.</para>
+    <programlisting>include("singchord-1")</programlisting>
+    <para>The lesson header variables will be taken from the including lesson
+    file. Only if a variable is only defined in the included lesson file,
+    and not in the including lesson file, then the value will be taken from the
+    included file.</para>
+    </listitem>
+
+    <listitem><para role="fdef"><literal>load(<replaceable>filename</replaceable>)</literal></para>
+    <para>Read the file <replaceable>filename</replaceable> from disk and return
+    it as a string. The filename is relative to the location
+    of the lesson file.</para>
+    <programlisting>orc = load("share/sinus.orc")</programlisting>
+    </listitem>
+</itemizedlist>
+
+<itemizedlist id="labelfunctions" xreflabel="label functions">
+<title>Label functions</title>
+<para>We call these functions <emphasis>label functions</emphasis> because
+we use them to create the label for some questions in the program.
+You should only use these functions where they are documented to work.</para>
+ <listitem id="lfunc-pangomarkup" xreflabel="pangomarkup">
+ <para role="fdef"><literal>pangomarkup</literal>(<replaceable>pangostring</replaceable>)</para>
+ <para>Return a label that the program can put on a button. The label
+ is created using GTK pangomarkup.
+ <ulink url="http://www.google.com/search?q=pango+markup">
+ Google for "pango markup"</ulink> to get the markup explained.
+ Notice that you have to use triple qoutes around the string.</para>
+ <programlisting><![CDATA[
+pangomarkup("""<span size="xx-large">V</span>""")]]></programlisting>
+ </listitem>
+
+
+ <listitem id="lfunc-progressionlabel" xreflabel="progressionlabel">
+ <para role="fdef"><literal>progressionlabel(<replaceable>str</replaceable>)</literal></para>
+  <remark>This function has existed in Solfege for a while, but it has
+  not been documented until now. Should we find a shorter function name?
+  An alias can be added so that the old long function name still works.
+  </remark>
+ <para>Return a label. <replaceable>str</replaceable> is interpreted like
+ this:</para>
+ <itemizedlist>
+ <listitem><para>Each letter outside of a parentheses is displayed with
+ a large serif font.</para></listitem>
+ <listitem><para>The text
+ inside parentheses is displayed as a superscript: smaller letters above
+ the baseline.</para></listitem>
+ <listitem><para>If the text inside the parentheses is divided by a comma,
+ the text before the comma is superscript and after the comma is subscript.
+ </para></listitem>
+ </itemizedlist>
+ <programlisting>progressionlabel("I-IV-(6,4)V(5,3)-I")
+progressionlabel("I-VI-V(6)-I")"
+progressionlabel("C(maj7)")
+ </programlisting>
+    <informalfigure id="lfunc-progressionlabel-example1">
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="../C/figures/progressionlabel-example-1.png" format="PNG"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </informalfigure>
+ </listitem>
+
+ <listitem id="lfunc-rnc" xreflabel="rnc">
+ <para role="fdef"><literal>rnc(<replaceable>str</replaceable>)</literal></para>
+ <para>Display a sequence of roman numeral chords. The chords are separated
+ by whitespace and an optional hyphen. The exact implementation of this is
+ still open for discussion. The current developent version of Solfege will
+ divide each chord in 3 parts and give them different font sizes, and also try
+ to make the chord compact, so that it should not take too much space on
+ screen.</para>
+ <itemizedlist>
+  <listitem><para>The first part of the chord is the roman numberal, including
+  an optional <literal>b</literal>, <literal>♭</literal> 
+  (unicode character <literal>U+266D MUSIC FLAT SIGN</literal>),
+  <literal>#</literal> or <literal>♯</literal>
+  (unicode character <literal>U+266F MUSIC SHARP SIGN</literal>).
+  </para></listitem>
+  <listitem><para>The second part is the letters (if any) between the first
+  and the third part.</para></listitem>
+  <listitem><para>The third part is from the first digit and the rest of the
+  chord.</para></listitem>
+ </itemizedlist>
+ <programlisting>rnc("Imaj7-IIm7-V9-Imaj7")</programlisting>
+    <informalfigure id="fig-rnc">
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="../C/figures/rnc-example.png" format="PNG"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </informalfigure>
+  <para>Spaces are not allowed in the chord name.</para>
+  <para>New in version 3.11.0.</para>
+ </listitem>
+
+<listitem id="lfunc-chordname" xreflabel="chordname">
+ <para role="fdef"><literal>chordname(<replaceable>str</replaceable>)</literal></para>
+ <para>Display a sequence of chords. The chords are separated by whitespace.
+ Each chord consist of up to four parts, and part two to four are optional:
+ </para>
+ <programlisting>[notename][txt1][:txt2][/bass]</programlisting>
+ <para><literal>notename</literal> and <literal>bass</literal> music be
+  a notename in the format understood by the music parser. You can read
+  more about this in <xref linkend='mpd-module'/>. Example:</para>
+ <programlisting>g:11b9 cm/g ges:Δ besm:7/f</programlisting>
+    <informalfigure id="fig-chordname">
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="../C/figures/chordname-example.png" format="PNG"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </informalfigure>
+  <para>New in version 3.11.1.</para>
+</listitem>
+
+</itemizedlist>
+</sect2>
+
+<sect2 id='lf-operators'>
+<title>Operators</title>
+<para>Operators can only be used on strings. <literal>+</literal> is used for
+joining strings, and <literal>%</literal> is similar to what you find in
+python, but it is very limited. It only know about <literal>%s</literal>. One
+example:</para>
+
+<programlisting>"\staff\relative c'{%s}" % "c d e"</programlisting>
+<para>evaluates to</para>
+<programlisting>\staff\relative c'{c d e}</programlisting>
+</sect2>
+
+</sect1>
+
+<sect1 id='chordvoicing-module'>
+<title>The <literal>chordvoicing</literal> module</title>
+<para>Still undocumented...</para>
+</sect1>
+
+<sect1 id='compareintervals-module'>
+<title>The <literal>compareintervals</literal> module</title>
+<para>Here is a minimal lesson file:</para>
+<programlisting>
+header {
+    <xref linkend='lf-module' endterm='lf-countin_perc'/> = compareintervals
+    <xref linkend='lf-title' endterm='lf-title'/> = "Compare intervals"
+}
+</programlisting>
+<para>This file will make an exercise that ask you to compare harmonic
+intervals. And since you do not say which intervals, it will ask for all
+intervals from a small second up to a major tenth.</para>
+
+<variablelist>
+<varlistentry>
+    <term><literal>first_interval_type</literal></term>
+    <term><literal>second_interval_type</literal></term>
+    <listitem>
+    <para>Let you select if the intervals you are asked to compare should be a
+    melodic or a harmonic interval. The default value is
+    <literal>melodic</literal>. Possible values:
+    <literal>harmonic</literal> and <literal>melodic</literal>.
+    </para>
+    <programlisting>
+    first_interval_type = melodic
+    second_interval_type = harmonic
+    </programlisting>
+    <para>Modules: <literal>compareintervals</literal>.</para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><literal>first_interval</literal></term>
+    <term><literal>last_interval</literal></term>
+    <listitem>
+    <para>Select which intervals to select from when creating the questions.
+    This variable should be defined the same way as <xref
+    linkend='lf-ask_for_intervals' endterm='lf-ask_for_intervals'/>. If these
+    two variables are not defined, then the user will be able to select which
+    intervals to practise from the Config page of the exercise.</para>
+    <para>Modules: <literal>compareintervals</literal>.</para>
+    </listitem>
+</varlistentry>
+
+
+</variablelist>
+</sect1>
+
+<sect1 id='dictation-module'>
+<title>The <literal>dictation</literal> module</title>
+<para>Example:</para>
+<programlisting>
+header {
+  <xref linkend='lf-module' endterm='lf-module'/> = dictation
+  <xref linkend='lf-title' endterm='lf-title'/> = _("Norwegian children songs")
+  <xref linkend='lf-version' endterm='lf-version'/> = "2.1.10"
+}
+
+question {
+ <xref linkend='lf-name' endterm='lf-name'/> = "Bæ, bæ, lille lam"
+ <xref linkend='lf-tempo' endterm='lf-tempo'/> = 130/4
+ <xref linkend='lf-breakpoints' endterm='lf-breakpoints'/> = 2/1, 4/1, 8/1, 10/1, 12/1, 14/1
+ music = <xref linkend='lfunc-rvoice' endterm='lfunc-rvoice'/>("""
+    \time 4/4
+    c'2 g' | e4 e c2 | d4 d g, g | c1 |
+    c2 g' | e4 e c2 | d4 d g, g | c1 |
+    a'4 f f f | g2. e4 | f d d d | e2. c4 |
+    a'2 f | g e4 e | f b, b b | c1 |
+ """)
+}
+question {
+ # this tempo definition overrides the global
+ <xref linkend='lf-tempo' endterm='lf-tempo'/> = 160/4
+ <xref linkend='lf-name' endterm='lf-name'/> = "Lisa gikk til skolen"
+ <xref linkend='lf-breakpoints' endterm='lf-breakpoints'/> = 2/1, 4/1, 6/1
+ music = <xref linkend='lfunc-rvoice' endterm='lfunc-rvoice'/>("""
+   \time 4/4 
+   c' d e f | g2 g2 | a4 a a a | g1 |
+   f4 f f f | e2 e | d4 d d d | c1
+ """)
+}
+
+question {
+ name = "Det satt to katter på et bord..."
+ tempo = 96/4
+ music = rvoice("""
+     \key g \major \time 2/4
+     d'8 | [g g] [fis e] | [fis g] a4 | [d,16 d d d] [e8 fis] | g2 """)
+}
+
+</programlisting>
+<para>By default, the dictation exercise will show the first column of music,
+and then the user should write the rest. But if the first column is not good
+enough, for example if there are only rests on the first beat, these two
+variables can tell the program how much music to display:</para>
+
+<variablelist>
+<varlistentry>
+    <term><literal id='lf-clue_end'>clue_end</literal></term>
+    <listitem>
+    <para>The following example will display the music on all staffs in
+    the first quarter note:</para>
+    <programlisting>clue_end=1/4</programlisting>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><literal id='lf-clue_music'>clue_music</literal></term>
+    <listitem>
+    <para>
+    This is an alternative to <varname>clue_end</varname>. The music assigned
+    to <varname>clue_music</varname> will be shown to the user when he should
+    start the dictation. You should not use both <varname>clue_end</varname>
+    and <literal>clue_music</literal> in the same question.</para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><literal id='lf-breakpoints'>breakpoints</literal></term>
+    <listitem>
+    <para>Set breakpoints in the music, so you can hear the music in parts
+    when doing the dictation.</para>
+    </listitem>
+</varlistentry>
+
+</variablelist>
+</sect1>
+
+<sect1 id='elembuilder-module'>
+<title>The <literal>elembuilder</literal> module</title>
+<para>Here is a minimal lesson file:</para>
+<programlisting>
+element progI { label = "I" }
+element progIV { label = "IV" }
+element progV { label = "V" }
+
+header {
+    <xref linkend='lf-module' endterm='lf-module'/> = elembuilder
+    <xref linkend='lf-title' endterm='lf-title'/> = "progression test"
+    <xref linkend='lf-header-elements' endterm='lf-header-elements'/> = auto
+    # uncomment if you want a music displayer.
+    # have_music_displayer = yes
+}
+
+question {
+ <xref linkend='lf-music' endterm='lf-music'/> = rvoice("&lt;c' e g&gt; &lt;b d g&gt; &lt;c e g&gt;")
+ <xref linkend='lf-header-elements' endterm='lf-question-elements'/> = progI, progV, progI
+ <xref linkend='lf-name' endterm='lf-name'/> = "I-V-I"
+}
+question {
+ <xref linkend='lf-music' endterm='lf-music'/> = rvoice("&lt;c' e g&gt; &lt;c f a&gt; &lt;c e g&gt;")
+ <xref linkend='lf-header-elements' endterm='lf-question-elements'/> = progI, progIV, progI
+ <xref linkend='lf-name' endterm='lf-name'/> = "I-IV-I"
+}
+</programlisting>
+
+<sect2 id='elembuilder-element-block'>
+<title>The element block</title>
+<para>
+This block defines the elements the user can put together to answer the
+question. Each block is named by the string between <literal>element</literal>
+and <literal>{</literal>. The block defines one variable,
+<literal>label</literal> that is the label the button will get.</para>
+
+<variablelist>
+<varlistentry>
+    <term><literal>label</literal></term>
+    <listitem>
+        <para><literal>label</literal> can either be a plain string or one
+        of the <xref linkend='labelfunctions'/>.</para> 
+    </listitem>
+</varlistentry>
+<varlistentry>
+    <term><literal>sort</literal></term>
+    <listitem>
+        <para>If defined, the value of <literal>sort</literal> will be used
+        to sort the elements when displaying the buttons. If not defined,
+        the elements will be sorted by their name.</para>
+    </listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+<sect2 id='elembuilder-header-block'>
+<title>The header block</title>
+<variablelist>
+<varlistentry>
+    <term><literal id='lf-header-elements'>elements</literal></term>
+    <listitem>
+    <para>This variable defines which elements to display. Set this to <literal>auto</literal> to display all elements that are needed to answer the questions in the lesson file. You can display more elements that needed to make it more difficult for the user. An example:</para>
+    <programlisting>elements = progI, progIV, progV, progIV, progV_6</programlisting>
+    </listitem>
+</varlistentry>
+<varlistentry>
+    <term><literal id='lf-header-music_displayer_stafflines'>music_displayer_stafflines</literal></term>
+    <listitem>
+    <para>Set this if you want the music displayer to show more than
+    one empty staff line when the music displayer have no music to display.
+    </para></listitem>
+</varlistentry>
+</variablelist>
+
+<para>
+See also <xref linkend='lf-at_question_start' endterm='lf-at_question_start'/>
+and <xref linkend='lf-music_displayer_stafflines' endterm='lf-music_displayer_stafflines'/>.
+</para>
+</sect2>
+
+<sect2 id='elembuilder-question-block'>
+<title>The question block</title>
+<variablelist>
+<varlistentry>
+    <term><literal id='lf-question-elements'>elements</literal></term>
+    <listitem>
+    <para>This variable defines which elements defines the question.
+    It can be elements, as defined in the example above, or strings
+    or labels defined by the <xref linkend="labelfunctions"/>.</para>
+    </listitem>
+</varlistentry>
+<varlistentry>
+    <term><literal id='lf-tonic'>tonic</literal></term>
+    <listitem>
+    <para>The exercise will have a "Play tonic" button if this variable is
+    defined in a question in the lesson file. The variable should contain some
+    music to play to the user so that he knows the tonic of the question.
+    This can be useful in harmonic progressions that does not start on the
+    tonic. This variable is optional. Example:</para>
+    <programlisting>tonic = chord("c e g")</programlisting>
+    </listitem>
+</varlistentry>
+<varlistentry>
+    <term><literal>name</literal></term>
+    <listitem>
+    <para>The name is needed for storing statistics. A string or
+    a label created by the <xref linkend="labelfunctions"/>. </para>
+    </listitem>
+</varlistentry>
+</variablelist>
+<para>See also <xref linkend='lf-vmusic' endterm='lf-vmusic'/>.</para>
+</sect2>
+</sect1>
+
+<sect1 id='harmonicinterval-module'>
+<title>The <literal>harmonicinterval</literal> module</title>
+<para>User documentation is in <xref linkend='harmonicinterval'/>.</para>
+<para>Here is a minimal lesson file:</para>
+<!-- translators: don't translate this string. -->
+<programlisting>
+header {
+  <xref linkend='lf-module' endterm='lf-module'/> = harmonicinterval
+  <xref linkend='lf-version' endterm='lf-version'/> = "3.1.4"
+  <xref linkend='lf-title' endterm='lf-title'/> = "Seconds"
+  <xref linkend='lf-intervals' endterm='lf-intervals'/> = 1, 2
+  <xref linkend='lf-test' endterm='lf-test'/> = "3x"
+  <xref linkend='lf-test_requirement' endterm='lf-test_requirement'/> = "90%"
+}
+</programlisting>
+<para>Additional variables you can put in the header. Click on the link to
+get an explanation:
+<itemizedlist>
+<listitem>
+  <para>
+  <xref linkend='lf-disable_unused_intervals' endterm='lf-disable_unused_intervals'/> 
+  </para>
+</listitem>
+<listitem>
+  <para><xref linkend='lf-lesson_heading' endterm='lf-lesson_heading'/></para>
+</listitem>
+</itemizedlist>
+</para>
+</sect1>
+
+<sect1 id='idbyname-module'>
+<title>The <literal>idbyname</literal> module</title>
+<para>This is a very generic exercise. In its most basic form, the program will
+play some sound, and you have to select among several buttons that in some way
+represents the music.</para>
+
+<para>Here is a minimal lesson file:</para>
+<programlisting>
+header {
+  <xref linkend='lf-module' endterm='lf-module'/> = idbyname
+  <xref linkend='lf-version' endterm='lf-version'/> = "3.1.4"
+  <xref linkend='lf-title' endterm='lf-title'/> = "Menuitem title"
+}
+question {
+ name = "Major"
+ music = chord("c' e' g'")
+}
+question {
+ name = "Minor"
+ music = chord("c' es' g'")
+}
+</programlisting>
+
+<variablelist>
+<title>Optional idbyname header variables</title>
+<varlistentry>
+    <term><literal>filldir = vertic</literal></term>
+    <listitem>
+    <indexterm><primary>filldir</primary></indexterm>
+    <para>Tell the direction the buttons are filled. Default value is <literal>horiz</literal>.</para>
+    <para>Modules: <literal>idbyname</literal>.</para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><literal>fillnum</literal></term>
+    <listitem>
+     <indexterm><primary>fillnum</primary></indexterm>
+     <para>Tell how many buttons there are in each row or column. 
+     The default value is 1.</para>
+     <para>Modules: <literal>idbyname</literal>.</para>
+     </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><literal id='lf-labelformat'>labelformat</literal><literal> = progression</literal></term>
+    <listitem>
+    <indexterm><primary>labelformat</primary></indexterm>
+    <para>The default value is <literal>normal</literal>.
+    Set to <literal>progression</literal> for lesson files where the name of the
+    questions is a harmonic progression, written in a undocumented, but not
+    difficult format. Check some existing lesson file to see how it works.
+    <warning><para>Using this variable is deprecated. Do not use it for new
+    lesson files.</para></warning>
+    </para>
+    <para>Modules: <literal>idbyname</literal></para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>
+    <!-- translators: don't translate this string. -->
+    <varname id='lf-have_repeat_slowly_button'>have_repeat_slowly_button</varname>
+    <!-- translators: don't translate this string. -->
+    <literal>= yes</literal></term>
+    <listitem>
+    <indexterm><primary>have_repeat_slowly_button</primary></indexterm>
+    <para>Set to <literal>yes</literal> if you want the exercise to have a "Repeat slowly" button.</para>
+    <para>Modules: <literal>idbyname</literal>.</para>
+    </listitem>
+</varlistentry>
+
+</variablelist>
+
+<para>
+See also <xref linkend='lf-at_question_start' endterm='lf-at_question_start'/>
+and <xref linkend='lf-music_displayer_stafflines' endterm='lf-music_displayer_stafflines'/>.
+</para>
+
+<sect2>
+<title>Question block</title>
+<itemizedlist>
+<title>Required question variables</title>
+<listitem><para><xref linkend="lf-name" endterm="lf-name"/>. Can be a string
+or a label created by the <xref linkend="labelfunctions"/>.</para></listitem>
+<listitem><para><xref linkend="lf-music" endterm="lf-music"/></para></listitem>
+</itemizedlist>
+
+<variablelist>
+<title>Optional question variables</title>
+<varlistentry>
+    <term><varname>vmusic</varname></term>
+    <listitem>
+    <indexterm><primary>vmusic</primary></indexterm>
+    <para>See <xref linkend='lf-vmusic' endterm='lf-vmusic'/>.</para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><varname>cuemusic</varname></term>
+    <listitem>
+    <indexterm><primary>cuemusic</primary></indexterm>
+    <para>Will be displayed in the music displayer when the user clicks New.
+    Ignored if <literal>at_question_start = play, show</literal> or
+    <literal>at_question_start = show</literal>, because then the content of
+    <varname>music</varname> or <varname>vmusic</varname> is displayed when the
+    user clicks New. (Added in Solfege 2.5.1)</para>
+    </listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+</sect1>
+
+<sect1 id='identifybpm-module'>
+<title>The <literal>identifybpm</literal> module</title>
+<para>Still undocumented...</para>
+</sect1>
+
+<sect1 id='idproperty-module'>
+<title>The <literal>idproperty</literal> module</title>
+<para>
+ The <literal>idproperty</literal> module let you create exercises where
+ solfege will play some music and you have to identify different properties
+ of the music.
+</para>
+
+<para>Below is a minimal lesson file. It will create an exercise that will play
+a minor or major chord and the user answers with two buttons labeled "Minor"
+and "Major" and two buttons representing the inversion. Notice that unused properties, toptone in this example, are hidden.</para>
+
+<programlisting>
+header {
+    <xref linkend='lf-module' endterm='lf-module'/> = idproperty
+    flavour = "chord"
+    <xref linkend='lf-title' endterm='lf-title'/> = "Minor and major chords"
+}
+question {
+  name = "Major"
+  music = chord("c' e' g'")
+  inversion = 0
+}
+question {
+  name = "Minor"
+  music = chord("es' g' c''")
+  inversion = 1
+}
+</programlisting>
+
+<para><literal>flavour = "chord"</literal> will add the following definitions
+to the lesson file header, unless if they are missing:</para>
+<programlisting>
+  new_button_label = _("_New chord")
+  lesson_heading = _("Identify the chord")
+  qprops = "name", "inversion", "toptone"
+  qprop_labels = _("Name"), _("Inversion"), _("Toptone")
+</programlisting>
+
+<para><literal>new_button_label</literal> is the label to put on the
+<guibutton>New</guibutton> button. The default value is
+<literal>_("New")</literal>.</para>
+
+<para><literal>lesson_heading</literal> will set the heading to be displayed
+when you practise. The default value is an empty string, that will hide the
+heading.</para>
+
+<para>The properties are defined by the <literal>props</literal> variable in
+the lesson file header, and there should be a variable
+<literal>prop_labels</literal> that defines the label to use.
+<literal>props</literal> and <literal>prop_labels</literal> must be lists of
+equal length.</para>
+
+
+<para>The exercise will have a <guibutton>Repeat arpeggio</guibutton> button
+if one or more of the questions can be played arpeggiated. Set the lesson file
+header variable <literal>have_repeat_arpeggio_button</literal> to <literal>no</literal> to disable hide the button.</para>
+
+<para>If the exercise have a <literal>inversion</literal> property, it will be
+treated special. If assigned integer values, like in the example, the integer values will be replaced with strings. So <literal>0</literal> is replaced with "root position", <literal>1</literal> with "1. inversion" etc.</para>
+
+</sect1>
+
+<sect1 id='idtone-module'>
+<title>The <literal>idtone</literal> module</title>
+<para>Here is a minimal lesson file:</para>
+<programlisting>
+header {
+    <xref linkend='lf-module' endterm='lf-module'/> = idtone
+    <xref linkend='lf-title' endterm='lf-title'/> = "Id tone 3"
+    black_keys_weight =  0, 0,    0, 0, 0
+    white_keys_weight = 1, 1, 1, 0, 0, 0, 0
+}
+</programlisting>
+<para>The 'weight' of a tone tell how big chance is it that the program will
+select this tone as the next to identify. Think of the weight of a tone as
+the number of lottery tickets with the name of the tone.</para>
+
+<para>The variable <varname>black_keys_weight</varname> set the weight of the
+tones c#, d#, f#, g# and a#, and <varname>white_keys_weight</varname> will set
+the weight of the tones c, d, e, f, g, a, b. In the example above, the tones c,
+d and e get an equal weight of 1, the other tones 0. This mean that the only
+tones that will be asked for are c, d and e, and that the three tones share the
+same probability to be selected.</para>
+
+</sect1>
+
+<sect1 id='melodicinterval-module'>
+<title>The <literal>melodicinterval</literal> module</title>
+<para>User documentation is in <xref linkend='melodicinterval'/>.</para>
+<para>Here is a minimal lesson file:</para>
+<!-- translators: don't translate this string. -->
+<programlisting>
+header {
+  <xref linkend='lf-module' endterm='lf-module'/> = melodicinterval
+  <xref linkend='lf-version' endterm='lf-version'/> = "3.1.4"
+  <xref linkend='lf-title' endterm='lf-title'/> = "Seconds and thirds"
+  <xref linkend='lf-ask_for_intervals' endterm='lf-ask_for_intervals'/> = 1, 2, 3, 4, -1, -2, -3, -4
+  <xref linkend='lf-test' endterm='lf-test'/> = "3x"
+  <xref linkend='lf-test_requirement' endterm='lf-test_requirement'/> = "90%"
+}
+</programlisting>
+<para>Additional variables you can put in the header. Click on the link to
+get an explanation:
+<itemizedlist>
+<listitem>
+  <para>
+  <xref linkend='lf-disable_unused_intervals' endterm='lf-disable_unused_intervals'/> 
+  </para>
+</listitem>
+<listitem>
+  <para><xref linkend='lf-lesson_heading' endterm='lf-lesson_heading'/></para>
+</listitem>
+</itemizedlist>
+</para>
+
+<para>Tests are only partially implemented for the
+<literal>melodicinterval</literal> exercise module: tests where each question
+is made by more than one interval does not work yet.</para>
+
+</sect1>
+
+<sect1 id='nameinterval-module'>
+<title>The <literal>nameinterval</literal> module</title>
+<para>Here is a minimal lesson file:</para>
+<programlisting>
+header {
+    module = nameinterval
+    title = _("Fifths")
+    intervals = p5, a5, d5
+}
+</programlisting>
+
+<variablelist>
+<varlistentry>
+    <term><literal>intervals</literal></term>
+    <listitem>
+    <para>A list of the intervals to ask for. The intervals are written
+    in a short form, a letter and a number, like <literal>d5</literal>
+    or <literal>m7</literal>. The letters are telling the interval quality are
+    'd' for diminished, 'a' for augmented, 'm' for minor, 'M' for major and
+    'p' for perfect.
+    </para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><literal>tones</literal></term>
+    <listitem>
+    <para>This variable sets the range of tones that can be used when
+    constructing the intervals. The note names has to be quoted. The
+    default value is <literal>"b", "g''"</literal>. Example:
+    </para>
+    <programlisting>
+tones = "c'", "f''"  # valid
+tones = c', f''      # not valid</programlisting>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><literal>accidentals</literal></term>
+    <listitem>
+    <para>This variable defines how many accidentals the tones making
+    the interval can have. The value 0 means no accidentals, 1 means that
+    flats and sharps are allowed, and 2 means that double flats and double
+    sharps are allowed. The default value is 1. Example:
+    </para>
+    <programlisting>accidentals = 2</programlisting>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><literal>clef</literal></term>
+    <listitem>
+    <para>Set which clef to use. The default value is <literal>violin</literal>.
+    Possible values: <literal>violin</literal>, <literal>treble</literal>,
+    <literal>subbass</literal>, <literal>bass</literal>, 
+    <literal>baritone</literal>, <literal>varbaritone</literal>, 
+    <literal>tenor</literal>, <literal>alto</literal>,
+    <literal>mezzosoprano</literal> and <literal>french</literal>.
+    Example:
+    </para>
+    <programlisting>clef = bass</programlisting>
+    </listitem>
+</varlistentry>
+
+</variablelist>
+</sect1>
+
+<sect1 id='rhythm-module'>
+<title>The <literal>rhythm</literal> module</title>
+<para>A simple rhythm exercise. Solfege will randomly generate rhythm patterns
+that the user should recreate by clicking on buttons.</para>
+
+<para>Here is a minimal lesson file:</para>
+<programlisting>
+header {
+  <xref linkend='lf-module' endterm='lf-module'/> = rhythm
+  <xref linkend='lf-version' endterm='lf-version'/> = "3.1.4"
+  <xref linkend='lf-title' endterm='lf-title'/> = "Easy rhythms"
+  <xref linkend='lf-rhythm_elements' endterm='lf-rhythm_elements'/> = 1, 2, 3, 4
+}
+</programlisting>
+
+<variablelist>
+<varlistentry>
+    <term><literal id='lf-visible_rhythm_elements'>visible_rhythm_elements</literal></term>
+    <listitem>
+    <para>Define this variable if you want more rhythm elements that the one to
+    be asked for. This variable must include both the rhythm elements defined
+    in <literal>rhythm_elements</literal> and the extra elements.
+    Example:</para>
+    <programlisting>rhythm_elements = 0, 1, 2, 3, 4, 5, 6</programlisting>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><literal id='lf-countin_perc'>countin_perc</literal></term>
+    <listitem><para>
+    An integer value between 35 and 81, representing the percussion instrument
+    used to give you the beat before the question. The default value is 80.
+    Example:
+    </para>
+    <programlisting>countin_perc = 35</programlisting>
+    <programlisting>35 Acoustic Bass Drum 51 Ride Cymbal 1   67 High Agoga
+36 Bass Drum          52 Chinece Cymbal  68 Agogo Low
+37 Side Stick         53 Ride Bell       69 Cabasa
+38 Acoustic Snare     54 Tambourine      70 Maracas
+39 Hand Clap          55 Splash Cymbal   71 Short Whistle
+40 Electric Snare     56 Cowbell         72 Long Whistle
+41 Low Floor Tom      57 Crash cymbal 2  73 Short Guiro
+42 Closed Hi Hat      58 Vibraslap       74 Long Guiro
+43 High Floor Tom     59 Ride Cymbal 2   75 Claves
+44 Pedal Hi Hat       60 Hi Bongo        76 Hi Wood Block
+45 Low Tom            61 Low Bongo       77 Low Wood Block
+46 Open HiHat         62 Mute Hi Conga   78 Mute Cuica
+47 Low-Mid Tom        63 Open High Conga 79 Open Cuica
+48 Hi-Mid Tom         64 Low Conga       80 Mute Triangle
+49 Crash Cymbal 1     65 High Timbale    81 Open Triangle
+50 High Tom           66 Low Timbale</programlisting>
+        <para>Modules: <literal>rhythm</literal></para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><literal id='lf_rhythm_perc'>rhythm_perc</literal></term>
+    <listitem>
+    <para>Same as <xref linkend='lf-countin_perc' endterm='lf-countin_perc'/>,
+    but setting the instrument used to play the question. The default value is
+    37.</para>
+    <para>Modules: <literal>rhythm</literal></para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><literal id='lf-count_in'>count_in</literal></term>
+    <listitem>
+    <para>The number of beats as count in. The default value is 2.</para>
+    <para>Modules: <literal>rhythm</literal></para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><literal id='lf-bpm'>bpm</literal></term>
+    <listitem>
+    <para>The tempo, in beats per minute. The default value is 60.</para>
+    <para>Modules: <literal>rhythm</literal></para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><literal id='lf-num_beats'>num_beats</literal></term>
+    <listitem>
+    <para>The number of elements the question is made of. The default
+    value is 4.</para>
+    <para>Modules: <literal>rhythm</literal></para>
+    </listitem>
+</varlistentry>
+
+</variablelist>
+</sect1>
+
+<sect1 id='rhythmtapping-module'>
+<title>The <literal>rhythmtapping</literal> module</title>
+<para>Exercises using this module will play some music and then the user should
+tap the rhythm. The program will then say if the users rhythm is similar enough
+to the rhythm played by the computer.</para>
+
+<para>Here is a minimal lesson file:</para>
+<!-- translators: don't translate this string. -->
+<programlisting>
+header {
+  <xref linkend='lf-module' endterm='lf-module'/> = rhythmtapping
+  <xref linkend='lf-version' endterm='lf-version'/> = "3.7.0"
+  <xref linkend='lf-title' endterm='lf-title'/> = "Rhythm tapping test"
+}
+question {
+ <xref linkend='lf-music' endterm='lf-music'/> = rhythm("c4 c8 c8")
+}
+question {
+ <xref linkend='lf-music' endterm='lf-music'/> = music("\staff\relative c'{c4 d8 e f4}\addvoice\relative c'{c4 b8 c a4}")
+ <xref linkend='lf-rhythm' endterm='lf-rhythm'/> = rhythm("c4 c8 c c4")
+}
+</programlisting>
+
+<para>The first question in the example is very simple and self explaining.
+Solfege will play the rhythm defined in the <literal>music</literal> variable,
+and the user should tap that rhythm.</para>
+
+<para>The second question is a little more complicated. Here Solfege will play
+the music defined in the <literal>music</literal> variable. And when the user
+taps the rhythm, Solfege will compare the users rhythm with the rhythm defined
+in the <literal>rhythm</literal> variable. The reason for using two variables
+is that Solfege is not smart enough to figure out the rhythm if you enter
+polyphonic music. It make no difference if you set the
+<literal>rhythm</literal> variable to be a <literal>rhythm</literal> music
+object, or another single voice type like <literal>rvoice</literal>. This might
+change in the future. You as a lesson file author must make sure the rhythms in
+the two variables are in fact the same.</para>
+
+<para>See also <xref linkend='lf-at_question_start' endterm='lf-at_question_start'/>.</para>
+
+</sect1>
+
+<sect1 id='rhythmtapping2-module'>
+<title>The <literal>rhythmtapping2</literal> module</title>
+<para>Solfege will play a generated rhythm, and the user should tap the same
+rhythm.</para>
+<para>Here is a minimal lesson file:</para>
+<!-- translators: don't translate this string. -->
+<programlisting>
+header {
+  <xref linkend='lf-module' endterm='lf-module'/> = rhythmtapping2
+  <xref linkend='lf-version' endterm='lf-version'/> = "3.7.0"
+  <xref linkend='lf-title' endterm='lf-title'/> = "Rhythm tapping test"
+  <xref linkend='lf-rhythm_elements' endterm='lf-rhythm_elements'/> = 1, 2, 3, 4
+}
+</programlisting>
+<para>See also <xref linkend='lf-at_question_start' endterm='lf-at_question_start'/>.</para>
+</sect1>
+
+<sect1 id='rhythmdictation-module'>
+<title>The <literal>rhythmdictation</literal> module</title>
+<para>Solfege will play some music, and the user should enter the
+rhythm of the music in the rhythm editor.
+Below is a small lesson file example.
+</para>
+<programlisting>
+header {
+  <xref linkend='lf-module' endterm='lf-module'/> = rhythmdictation2
+  <xref linkend='lf-title' endterm='lf-title'/> = "Rhythm dictation"
+}
+
+# Tempo for all questions
+<xref linkend='lf-tempo' endterm='lf-tempo'/> = 150/4
+
+# Used for all questions that does not set the countin music themselves
+<xref linkend='lf-countin' endterm='lf-countin'/> = rhythm("c4 c  c c")
+
+question {
+  # Tempo set here overrides the global tempo
+  <xref linkend='lf-tempo' endterm='lf-tempo'/> = 150/4
+  <xref linkend='lf-music' endterm='lf-music'/> = rvoice("d'4 d8 e fis8 fis4.")
+}
+
+question {
+  <xref linkend='lf-music' endterm='lf-music'/> = mp3file("musicfile.mp3")
+  <xref linkend='lf-rhythm' endterm='lf-rhythm'/> = rvoice("c4 c4 c8 c8 c4")
+}
+</programlisting>
+
+
+</sect1>
+
+
+<sect1 id='rhythmdictation2-module'>
+<title>The <literal>rhythmdictation2</literal> module</title>
+<para>Solfege will play a generated rhythm, and then the user should enter
+the rhythm in the rhythm editor. Below is a minimal lesson file. You can
+have as many question blocks as you like. When the program generates
+a random question, it will first select one question block by random,
+and then use it to generate the actual question.
+</para>
+<programlisting>
+header {
+  <xref linkend='lf-module' endterm='lf-module'/> = rhythmdictation2
+  <xref linkend='lf-title' endterm='lf-title'/> = "Rhythm dictation"
+}
+# Tempo for all questions that does not specify it.
+<xref linkend='lf-tempo' endterm='lf-tempo'/> = 150/4
+# Countin for all questions that does not specify it
+<xref linkend='lf-countin' endterm='lf-countin'/> = rhythm("d4 d d d")
+
+question {
+  <xref linkend='lf-bars' endterm='lf-bars'/> = 4/4, 3/4, 4/4
+  <xref linkend='lf-elements' endterm='lf-elements'/> = "4", "8 8"
+  # Tempo set here overrides the global tempo
+  <xref linkend='lf-tempo' endterm='lf-tempo'/> = 150/4
+}
+question {
+  <xref linkend='lf-bars' endterm='lf-bars'/> = 3/4, 3/4
+  <xref linkend='lf-countin' endterm='lf-countin'/> = rhythm("d4 d d")
+  <xref linkend='lf-elements' endterm='lf-elements'/> = "4", "8 8"
+}
+</programlisting>
+
+<variablelist>
+<varlistentry>
+    <term><literal id='lf-bars'>bars</literal></term>
+    <listitem>
+    <para>The time signatures of the bars to generate. The number of
+    time signatures tell how many bars to generate.
+    </para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term><literal id='lf-elements'>elements</literal></term>
+    <listitem>
+    <para>The elements to choose from when generating the rhythm.</para>
+    </listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id='singanswer-module'>
+<title>The <literal>singanswer</literal> module</title>
+<para>Here is a minimal lesson file:</para>
+<programlisting>
+header {
+  <xref linkend='lf-module' endterm='lf-module'/> = singanswer
+  <xref linkend='lf-version' endterm='lf-version'/> = "3.1.4"
+  <xref linkend='lf-title' endterm='lf-title'/> = "Sing the root of the chord"
+}
+question {
+    question_text = "Sing the root"
+    music = chord("c' e' g'")
+    answer = chord("c'")
+}
+question {
+    question_text = "Sing the root"
+    music = chord("a' c'' e''")
+    answer = chord("a'")
+}
+</programlisting>
+<para>Additional variables you can put in the header. Click on the link to
+get an explanation:
+<itemizedlist>
+<listitem>
+  <para>
+  <xref linkend='lf-have_repeat_arpeggio_button' endterm='lf-have_repeat_arpeggio_button'/>
+  </para>
+</listitem>
+</itemizedlist>
+</para>
+</sect1>
+
+<sect1 id='singchord-module'>
+<title>The <literal>singchord</literal> module</title>
+<para>Questions for this exercise need to have the <varname>key</varname> variable set if the key signature is anything else than ''c'' major (or ''a'' minor). Example:</para>
+<programlisting>
+header {
+  <xref linkend='lf-module' endterm='lf-module'/> = singchord
+  <xref linkend='lf-version' endterm='lf-version'/> = "3.1.4"
+  <xref linkend='lf-title' endterm='lf-title'/> = "Simple chords"
+}
+question { music = satb("c''|e'|g|c") }
+question { music = satb("a'|e'|c'|a") }
+question { key="d \major" music = satb("a'|fis'|d'|d") }
+question { key="f \minor" music = satb("as'|f'|c'|f") }
+</programlisting>
+<para>See also <xref linkend='singchord'/>.</para>
+</sect1>
+
+<sect1 id='singinterval-module'>
+<title>The <literal>singinterval</literal> module</title>
+<para>This is an exercise where the program display an interval and play the
+first tone. Then the user should sing the interval, and then click a button to
+hear the correct answer. There is no microphone support yet.</para>
+
+<para>User documentation is in <xref linkend='singinterval'/>.</para>
+<para>Here is a minimal lesson file:</para>
+<programlisting>
+header {
+  <xref linkend='lf-module' endterm='lf-module'/> = singinterval
+  <xref linkend='lf-version' endterm='lf-version'/> = "3.1.4"
+  <xref linkend='lf-title' endterm='lf-title'/> = "Thirds"
+  <xref linkend='lf-ask_for_intervals' endterm='lf-ask_for_intervals'/> = 3, 4
+  <xref linkend='lf-test' endterm='lf-test'/> = "3x"
+  <xref linkend='lf-test_requirement' endterm='lf-test_requirement'/> = "90%"
+}
+</programlisting>
+</sect1>
+
+<sect1 id='toneincontext-module'>
+<title>The <literal>toneincontext</literal> module</title>
+<warning><para>This module is still begin worked on. The lesson file
+format will most likely change in the next releases. Right now the music
+in the cadences must be a string with complete mpd code. Using
+music objects will not work now.
+</para></warning>
+<para>Here is a minimal lesson file:</para>
+<programlisting>
+header {
+  <xref linkend='lf-module' endterm='lf-module'/> = toneincontext
+  <xref linkend='lf-version' endterm='lf-version'/> = "3.21.0"
+  <xref linkend='lf-title' endterm='lf-title'/> = "First 4 scale tones"
+  <xref linkend='lf-tones' endterm='lf-tones'/> = 3, 4
+}
+cadence {
+  music = "\staff\relative g'{ &lt;g e c> &lt;a f c> &lt;g f d b> &lt;g e c> }"
+}
+</programlisting>
+
+<para>The cadence block should be in C major. The program will select
+cadence by random if you write more than one cadence block.
+</para>
+
+<para>If you don't define the <xref linkend='lf-tones' endterm='lf-tones'/>
+variable, the program will let you select tones in the config page of the
+exercise.
+</para>
+
+<variablelist>
+<title>Header variables</title>
+<varlistentry>
+    <term><literal id='lf-tones'>tones</literal></term>
+    <listitem><para>list of integers from 0 to 12.
+    </para>
+    </listitem>
+</varlistentry>
+<varlistentry>
+    <term><literal id='lf-random_tonic'>random_tonic</literal></term>
+    <listitem><para>Set to <literal>no</literal> if you don't want
+    transposition. Default value is <literal>yes</literal>.
+    </para></listitem>
+</varlistentry>
+<varlistentry>
+    <term><literal id='lf-tone_in_cadence'>tone_in_cadence</literal></term>
+    <listitem><para>If set to <literal>yes</literal>, the tone to identify
+    will be played together with the last tone of the cadence. Default
+    value is <literal>no</literal>.
+    </para></listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id='twelvetone-module'>
+<title>The <literal>twelvetone</literal> module</title>
+<para>Still undocumented...</para>
+</sect1>
+
+<sect1 id='user-modules'>
+<title>Writing your own modules</title>
+<warning><para>Experimental feature. Will most likely change in the
+next stable branch because we need a failsafe way for exercise module
+to include other files like graphcis etc.
+</para></warning>
+<para>You can write your own exercise modules in Python and place them in the
+<filename class="directory">modules/</filename> directory parallell to the
+<filename class="directory">lesson-files/</filename> directory containing the
+lesson file.  So the lesson file
+<filename>USERDATA/exercises/user/lesson-files/demofile</filename> will search
+for exercise modules in <filename
+class="directory">USERDATA/exercises/user/modules/</filename>.  </para>
+
+<para>A module below <xref linkend="USERDATA" endterm="USERDATA"/> can have the
+same name as one of the standard modules. The module below USERDATA will be
+used when the lesson file is stored in the <filename
+class="directory">lesson-files/</filename> directory parallell to the <filename
+class="directory">modules/</filename> directory. But the standard lessonfiles
+stored in <xref linkend="INSTALLDIR" endterm="INSTALLDIR"/> and in other
+directories willuse the standard module included with Solfege.
+</para> </sect1>
+
+<sect1 id="mpd-module">
+<title>The <literal>mpd</literal> module</title>
+<para>The module is not documented yet. The input format is similar to
+the one used by GNU Lilypond, but only the simplest construct works.
+</para>
+<para>Quick note: Notenames understood by the program are c, d, e, f, g, a, b, with 'is', 'isis', 'es', or 'eses' added. For example 'fis', 'bes', 'gisis'.
+</para>
+</sect1>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+ href="midi-instrument-names.xml"/>
+
+</chapter>
+

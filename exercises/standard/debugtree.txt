@@ -1,0 +1,173 @@
+FileHeader(1, 
+ Page(_(u'Exercises only used for debugging'), [
+  Column([
+   LinkList(_(u'Exception handling'), [
+    Page(_(u'idbyname'), [
+     Column([
+      LinkList(_(u'idbyname'), [
+       u'solfege:regression-lesson-files/idbyname-bad-cuemusic',
+       u'solfege:regression-lesson-files/idbyname-missing-.wav-file',
+       u'solfege:regression-lesson-files/idbyname-noquestionsinfile',
+       u'solfege:regression-lesson-files/idbyname-assignment-to-reserved-word',
+       u'solfege:regression-lesson-files/idbyname-syntax-error-1',
+       u'solfege:regression-lesson-files/idbyname-syntax-error-2',
+       u'solfege:regression-lesson-files/idbyname-unsupported-named-block',
+       ]),
+      ]),
+     ]),
+    Page(_(u'singanswer'), [
+     Column([
+      LinkList(_(u'singanswer'), [
+       u'solfege:regression-lesson-files/singanswer-missing-.wav-file',
+       u'solfege:regression-lesson-files/singanswer-missing-question_text',
+       u'solfege:regression-lesson-files/singanswer-bad-mpd-code',
+       ]),
+      ]),
+     ]),
+    Page(_(u'chord'), [
+     Column([
+      LinkList(_(u'chord'), [
+       u'solfege:regression-lesson-files/chord-wav-music',
+       ]),
+      ]),
+     ]),
+    Page(_(u'nameinterval'), [
+     Column([
+      LinkList(_(u'nameinterval'), [
+       u'solfege:regression-lesson-files/nameinterval-constraints',
+       u'solfege:regression-lesson-files/nameinterval-bad-tones-header-var',
+       ]),
+      ]),
+     ]),
+    Page(_(u'chordvoicing'), [
+     Column([
+      LinkList(_(u'chordvoicing'), [
+       u'solfege:regression-lesson-files/chordvoicing-lessonfile-exception',
+       u'solfege:regression-lesson-files/chordvoicing-mpd-exception',
+       ]),
+      ]),
+     ]),
+    Page(_(u'harmonicprogressiondictation'), [
+     Column([
+      LinkList(_(u'harmonicprogressiondictation'), [
+       u'solfege:regression-lesson-files/harmonicprogression-lessonfile-exception',
+       ]),
+      ]),
+     ]),
+    Page(_(u'dictation'), [
+     Column([
+      LinkList(_(u'dictation'), [
+       u'solfege:regression-lesson-files/dictation-no-questions',
+       u'solfege:regression-lesson-files/dictation-exception-handling',
+       ]),
+      ]),
+     ]),
+    Page(_(u'rhythmtapping'), [
+     Column([
+      LinkList(_(u'rhythmtapping'), [
+       u'solfege:regression-lesson-files/rhythmtapping-bad-mpd-code',
+       ]),
+      ]),
+     ]),
+    Page(_(u'elembuilder'), [
+     Column([
+      LinkList(_(u'elembuilder'), [
+       u'solfege:regression-lesson-files/elembuilder-bad-tonic',
+       ]),
+      ]),
+     ]),
+    Page(_(u'generated test files'), [
+     Column([
+      LinkList(_(u'generated test files'), [
+       u'solfege:regression-lesson-files/xx-chord-exceptions',
+       u'solfege:regression-lesson-files/xx-chordvoicing-exceptions',
+       u'solfege:regression-lesson-files/xx-dictation-exceptions',
+       u'solfege:regression-lesson-files/xx-elembuilder-exceptions',
+       u'solfege:regression-lesson-files/xx-harmonicprogressiondictation-exceptions',
+       u'solfege:regression-lesson-files/xx-idbyname-exceptions',
+       u'solfege:regression-lesson-files/xx-idproperty-exceptions',
+       u'solfege:regression-lesson-files/xx-rhythmtapping-exceptions',
+       u'solfege:regression-lesson-files/xx-singanswer-exceptions',
+       u'solfege:regression-lesson-files/xx-singchord-exceptions',
+       ]),
+      ]),
+     ]),
+    ]),
+   ]),
+  Column([
+   LinkList(_(u'Modules'), [
+    Page(_(u'rhythmtapping'), [
+     Column([
+      LinkList(_(u'rhythmtapping'), [
+       u'solfege:regression-lesson-files/rhythmtapping-1',
+       u'solfege:regression-lesson-files/rhythmtapping-2',
+       u'solfege:regression-lesson-files/rhythmtapping-3',
+       u'solfege:regression-lesson-files/rhythmtapping-4',
+       ]),
+      ]),
+     ]),
+    Page(_(u'rhythmtapping2'), [
+     Column([
+      LinkList(_(u'rhythmtapping2'), [
+       u'solfege:regression-lesson-files/rhythmtapping2-1',
+       u'solfege:lesson-files/rhythmtapping2-self-config-binary',
+       ]),
+      ]),
+     ]),
+    Page(_(u'harmonicprogressiondictation'), [
+     Column([
+      LinkList(_(u'harmonicprogressiondictation'), [
+       u'solfege:lesson-files/progression-x',
+       ]),
+      ]),
+     ]),
+    Page(_(u'chord'), [
+     Column([
+      LinkList(_(u'chord'), [
+       u'solfege:regression-lesson-files/chord-no-name',
+       ]),
+      ]),
+     ]),
+    Page(_(u'other tests'), [
+     Column([
+      LinkList(_(u'other tests'), [
+       u'solfege:regression-lesson-files/idbyname-mediafiles',
+       ]),
+      ]),
+     ]),
+    Page(_(u'idbyname'), [
+     Column([
+      LinkList(_(u'idbyname'), [
+       u'solfege:regression-lesson-files/idbyname-vmusic',
+       u'solfege:lesson-files/fifth-small-pure-0.99',
+       u'solfege:regression-lesson-files/idbyname-at_question_start-1',
+       u'solfege:regression-lesson-files/idbyname-at_question_start-2',
+       u'solfege:regression-lesson-files/idbyname-at_question_start-3',
+       ]),
+      ]),
+     ]),
+    Page(_(u'elembuilder'), [
+     Column([
+      LinkList(_(u'elembuilder'), [
+       u'solfege:regression-lesson-files/elembuilder-scale-1',
+       u'solfege:regression-lesson-files/elembuilder-scale-2',
+       u'solfege:regression-lesson-files/elembuilder-scale-3',
+       u'solfege:regression-lesson-files/elembuilder-scale-4',
+       u'solfege:regression-lesson-files/elembuilder-scale-5',
+       ]),
+      ]),
+     ]),
+    Page(_(u'idproperty'), [
+     Column([
+      LinkList(_(u'idproperty'), [
+       u'solfege:regression-lesson-files/idproperty-1',
+       u'solfege:regression-lesson-files/idproperty-2',
+       u'solfege:regression-lesson-files/idproperty-3',
+       u'solfege:regression-lesson-files/idproperty-4',
+       ]),
+      ]),
+     ]),
+    ]),
+   ]),
+  ]),
+ )

@@ -1,0 +1,31 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "381ad650-2453-11db-9c7d-579b64606811"
+  module = idbyname
+  random_transpose = yes
+  title = _("Major Scale and its modes - Ascending")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/maj"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question { name = maj1n  voice(maj1la) }
+question { name = maj2n  voice(maj2la) }
+question { name = maj3n  voice(maj3la) }
+question { name = maj4n  voice(maj4la) }
+question { name = maj5n  voice(maj5la) }
+question { name = maj6n  voice(maj6la) }
+question { name = maj7n  voice(maj7la) }
+

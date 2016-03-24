@@ -1,0 +1,30 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "098f0720-6842-11db-8682-8558e4e4f94b"
+  module = idbyname
+  random_transpose = yes
+  title = _("Modes used in East European Music")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/modes"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question { name = har1n  voice(har1l) }
+question { name = har4n  voice(har4l) }
+question { name = dha1n5 voice(dha1l) }
+question { name = dha4n  voice(dha4l) }
+question { name = nem4n  voice(nem4l) }
+question { name = hun1n  voice(hun1l) }
+

@@ -1,0 +1,14 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+
+header {
+    module=harmonicinterval
+    intervals=5, 7, 12
+    title = _("Fourths, fifths and octave")
+    theory = "theory-intervals"
+    lesson_id = "9efa6347-69f4-4039-b2d1-6a03a1b7feb3"
+    test = "4x"
+    test_requirement = "90%"
+}

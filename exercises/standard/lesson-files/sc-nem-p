@@ -1,0 +1,66 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "06acf5d0-23db-11db-8682-8548e4e4f94b"
+  module = idbyname
+  random_transpose = yes
+  title = _("Neapolitan Minor Scale and its modes - patterns")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/nem"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question { name = nem1n  set = 0 voice(nem1lp0) }
+question { name = nem1n  set = 1 voice(nem1lp1) }
+question { name = nem1n  set = 2 voice(nem1lp2) }
+question { name = nem1n  set = 3 voice(nem1lp3) }
+question { name = nem1n  set = 4 voice(nem1lp4) }
+
+question { name = nem2n  set = 0 voice(nem2lp0) }
+question { name = nem2n  set = 1 voice(nem2lp1) }
+question { name = nem2n  set = 2 voice(nem2lp2) }
+question { name = nem2n  set = 3 voice(nem2lp3) }
+question { name = nem2n  set = 4 voice(nem2lp4) }
+
+question { name = nem3n  set = 0 voice(nem3lp0) }
+question { name = nem3n  set = 1 voice(nem3lp1) }
+question { name = nem3n  set = 2 voice(nem3lp2) }
+question { name = nem3n  set = 3 voice(nem3lp3) }
+question { name = nem3n  set = 4 voice(nem3lp4) }
+
+question { name = nem4n  set = 0 voice(nem4lp0) }
+question { name = nem4n  set = 1 voice(nem4lp1) }
+question { name = nem4n  set = 2 voice(nem4lp2) }
+question { name = nem4n  set = 3 voice(nem4lp3) }
+question { name = nem4n  set = 4 voice(nem4lp4) }
+
+question { name = nem5n  set = 0 voice(nem5lp0) }
+question { name = nem5n  set = 1 voice(nem5lp1) }
+question { name = nem5n  set = 2 voice(nem5lp2) }
+question { name = nem5n  set = 3 voice(nem5lp3) }
+question { name = nem5n  set = 4 voice(nem5lp4) }
+
+question { name = nem6n  set = 0 voice(nem6lp0) }
+question { name = nem6n  set = 1 voice(nem6lp1) }
+question { name = nem6n  set = 2 voice(nem6lp2) }
+question { name = nem6n  set = 3 voice(nem6lp3) }
+question { name = nem6n  set = 4 voice(nem6lp4) }
+
+question { name = nem7n  set = 0 voice(nem7lp0) }
+question { name = nem7n  set = 1 voice(nem7lp1) }
+question { name = nem7n  set = 2 voice(nem7lp2) }
+question { name = nem7n  set = 3 voice(nem7lp3) }
+question { name = nem7n  set = 4 voice(nem7lp4) }
+
+

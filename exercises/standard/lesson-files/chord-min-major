@@ -1,0 +1,21 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "38bfaa64-c182-4687-aa41-ed6352017342"
+    help = "idbyname-chords"
+    module = idbyname
+    have_music_displayer = yes
+    fillnum = 2
+        random_transpose = accidentals, -5, 5
+        title = _("Minor and major chords")
+        lesson_heading = _("Identify the chord")
+        test = "6x"
+        test_requirement = "90%"
+}
+
+# We do in-file translation to norwegian in this file, just
+# to show that it is possible.
+question { name=_("minor") name[no]="moll" chord("c' es' g'") }
+question { name=_("major") name[no]="dur" chord("c' e' g'") }

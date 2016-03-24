@@ -1,0 +1,39 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011  Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+import progression_elements as p
+include("progression-1")
+
+header {
+    module = elembuilder
+    title = _("Easy harmonic progressions, including inverted chords")
+    lesson_heading = _("Enter the harmonic progression")
+    elements = auto
+    have_music_displayer = yes
+    music_displayer_stafflines = 2
+}
+
+s = "\staff\relative c{ \stemUp %s}"
+a = "\addvoice\relative c{ \stemDown %s}"
+t = "\staff\relative c{ \clef bass \stemUp %s}"
+b = "\addvoice\relative c{ \stemDown %s}"
+
+question {
+    name = progressionlabel("I-IV(6)-V-I")
+    elements = p.I, p.IV_6, p.V, p.I
+    tonic = chord("c g e' c''")
+    music = music3(s % "c'' c b c"
+          + a % "e'  f d e"
+          + t % "g'  f g g"
+          + b % "c   a g c")
+}
+question {
+    name = progressionlabel("I-IV(6)-V(6)-I")
+    elements = p.I, p.IV_6, p.V_6, p.I
+    tonic = chord("c g e' c''")
+    music = music3(s % "e' f g e"
+          + a % "c' c d c"
+          + t % "g' a g g"
+          + b % "c  a b c")
+}

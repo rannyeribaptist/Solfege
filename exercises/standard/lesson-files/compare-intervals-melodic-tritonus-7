@@ -1,0 +1,13 @@
+# GNU Solfege
+# Copyright (C) 2005, 2010, 2011 Tom Cato Amundsen
+
+header {
+    lesson_id = "e64fdcf9-32cc-415f-9cfe-214af63e2363"
+    module=compareintervals
+    title = _("Tritone and sevenths")
+    theory = "theory-intervals"
+    first_interval_type = melodic
+    last_interval_type = melodic
+    first_interval = 6, 10, 11
+    last_interval = 6, 10, 11
+}

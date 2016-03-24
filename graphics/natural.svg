@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
+<svg
+   id="svg602"
+   sodipodi:version="0.34"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="210mm"
+   height="297mm"
+   xml:space="preserve"
+   sodipodi:docbase="/home/tom/src/solfege/graphics"
+   sodipodi:docname="/home/tom/src/solfege/graphics/accidental-natural.svg"><defs
+   id="defs604" /><sodipodi:namedview
+   id="base" /><g
+   id="g610"
+   transform="matrix(1.058572,0,-1.109494e-2,1.49785,31.31419,-236.6274)"><path
+   style="fill:black;fill-rule:nonzero;stroke:none;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;"
+   id="path605"
+   d="M 191.9062 234.2991 C 191.6753 230.2193 194.8978 566.9717 194.7472 578.4258 L 176.152 578.5726 C 176.5185 567.2181 172.1281 241.6884 171.3264 234.2991 L 191.9062 234.2991 z "
+   sodipodi:nodetypes="ccccc" /><path
+   style="fill:black;fill-rule:nonzero;stroke:none;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;"
+   id="path606"
+   d="M 407.4707 367.0409 C 407.2398 362.961 410.4623 699.7134 410.3117 711.1676 L 391.7165 711.3143 C 392.083 699.9598 387.6926 374.4301 386.8909 367.0409 L 407.4707 367.0409 z "
+   sodipodi:nodetypes="ccccc" /><path
+   style="fill:black;fill-rule:nonzero;stroke:none;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;"
+   id="path607"
+   d="M 391.0959 413.2613 C 383.3019 414.8949 205.9122 450.314 193.1218 454.0516 L 192.2684 403.8017 C 205.6289 399.5262 382.1071 370.0708 388.2483 367.622 L 391.0959 413.2613 z "
+   sodipodi:nodetypes="ccccc" /><path
+   style="fill:black;fill-rule:nonzero;stroke:none;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;"
+   id="path609"
+   d="M 392.6796 537.9077 C 384.8856 539.5414 207.4959 574.9604 194.7055 578.6981 L 193.8521 528.4481 C 207.2126 524.1726 383.6908 494.7172 389.832 492.2684 L 392.6796 537.9077 z "
+   sodipodi:nodetypes="ccccc" /></g></svg>

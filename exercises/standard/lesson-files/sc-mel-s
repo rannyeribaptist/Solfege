@@ -1,0 +1,31 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "4f24b890-d6cc-11da-89a8-7c9a86d4310s"
+  module = idbyname
+  random_transpose = yes
+  title = _("Melodic Minor Scale and its modes - recognize structure")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/mel"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 180/4
+
+question { name = mel1s  voice(mel1la) }
+question { name = mel2s  voice(mel2la) }
+question { name = mel3s  voice(mel3la) }
+question { name = mel4s  voice(mel4la) }
+question { name = mel5s  voice(mel5la) }
+question { name = mel6s  voice(mel6la) }
+question { name = mel7s  voice(mel7la) }
+

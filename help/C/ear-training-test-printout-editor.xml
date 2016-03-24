@@ -1,0 +1,53 @@
+<sect1 id='ear-training-test-printout-editor'>
+<title>Ear training test print-out editor</title>
+<informalfigure>
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/ear-training-test-printout-editor.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the trainingset-editor window.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+<para>
+ This tool is available on the <guimenu>File</guimenu> menu. Use it to create
+ ear training tests to print out on paper. Solfege will generate two versions of
+ the document: one for the students to complete, and one with the correct
+ answer already written. This tool was added by request from a user, but
+ we don't know if it has any real world usage. So please
+ <link linkend="online-resources">contact us</link> if you really use this,
+ and let us know if it is usable.
+</para>
+
+<para>
+ The <guibutton>Add</guibutton> button will pop up a menu with all exercises
+ from the active front page that this tool can create exercises from:
+ exercises written using the
+ <link linkend='idbyname-module'>idbyname</link>,
+ <link linkend='melodicinterval-module'>melodicinterval</link> and
+ <link linkend='harmonicinterval-module'>harmonicinterval</link>
+ exercise modules. From lesson
+ files written for the <literal>idbyname</literal> module, only
+ <link linkend='lfunc-chord'>chord</link>,
+ <link linkend='lfunc-rvoice'>rvoice</link> and
+ <link linkend='lfunc-voice'>voice</link> music objects are supported.
+</para>
+
+<para>
+ <guibutton>Create sheet</guibutton> will open a dialog that let you
+ select or create an empty directory, and then save the HTML or LaTex
+ files and the graphics in that directory.
+</para>
+
+<para>
+ When you save and load the files defining ear training tests, the
+ program will remember the random questions, so loading a file and
+ clicking <guibutton>Create Sheet</guibutton> will create the exact
+ same test. Click <guibutton>Randomize</guibutton> to create a new
+ random set of questions.
+</para>
+</sect1>
+

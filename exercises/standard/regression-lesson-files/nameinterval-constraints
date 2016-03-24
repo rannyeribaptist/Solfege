@@ -1,0 +1,11 @@
+# Solfege - ear training for GNOME
+# Copyright (C) 2006 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "56928553-18ac-4402-9953-ca8e4e25c0ee"
+    module = nameinterval
+    title = "Too small range of tones to be able to construct intervals."
+    intervals = p5, a5, d5
+    tones = "c", "d"
+}

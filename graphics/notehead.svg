@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   id="svg602"
+   sodipodi:version="0.34"
+   width="600pt"
+   height="600pt"
+   xml:space="preserve"
+   sodipodi:docbase="/home/tom/src/solfege/graphics/"
+   sodipodi:docname="/home/tom/src/solfege/graphics/tool-notehead.svg"><defs
+   id="defs604"><linearGradient
+   id="linearGradient606"><stop
+   style="stop-color:#000;stop-opacity:1;"
+   offset="0"
+   id="stop607" /><stop
+   style="stop-color:#fff;stop-opacity:1;"
+   offset="1"
+   id="stop608" /></linearGradient><linearGradient
+   xlink:href="#linearGradient606"
+   id="linearGradient609"
+   x1="0.17156084"
+   y1="0.6093688"
+   x2="4.90181893e-3"
+   y2="0.67968744" /></defs><sodipodi:namedview
+   id="base" /><path
+   sodipodi:type="arc"
+   style="fill-rule:evenodd;stroke:none;fill:#411b00;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;"
+   id="path605"
+   d="M 570.3124 514.2996 A 169.7358 106.9336 0 1 0 230.8408 514.2996 A 169.7358 106.9336 0 1 0  570.3124 514.2996 z"
+   sodipodi:cx="400.576599"
+   sodipodi:cy="514.299561"
+   sodipodi:rx="169.73584"
+   sodipodi:ry="106.933578"
+   transform="matrix(0.970556,-0.240877,0.240877,0.970556,-145.0759,-10.42191)" /></svg>

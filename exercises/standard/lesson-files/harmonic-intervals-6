@@ -1,0 +1,13 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    module=harmonicinterval
+    intervals=8, 9
+    title = _("Sixths")
+    theory = "theory-intervals"
+    lesson_id = "4130363a-4701-4d44-9057-e41c565b752a"
+    test = "6x"
+    test_requirement = "90%"
+}

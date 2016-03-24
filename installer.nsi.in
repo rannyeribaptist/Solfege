@@ -1,0 +1,55 @@
+; The name of the installer
+Name "GNU Solfege"
+
+ShowInstDetails show
+
+; The file to write
+OutFile "solfege-win32-@VERSION@.exe"
+
+; The default installation directory
+InstallDir "$PROGRAMFILES\GNU Solfege"
+
+; The text to prompt the user to enter a directory
+DirText "This will install GNU Solfege on your computer. The installer is still experimental and are missing some features. Most important is that if you upgrade Solfege, you must uninstall older versions of this program (select Uninstall on the Start Menu) before running the installer for the new release."
+
+
+LicenseText "Copyright 1999, 2000, 2001, 2002, 2003 Tom Cato Amundsen"
+LicenseData "COPYING.txt"
+
+; The stuff to install
+Section "ThisNameIsIgnoredSoWhyBother?"
+  ; Set output path to the installation directory.
+  
+  SetOutPath $INSTDIR
+  ; Put file there
+  File /r "dist\solfege\*.*"
+
+  SetOutPath "$INSTDIR\share"
+  File /r "share\*.*"
+
+  SetOutPath $INSTDIR
+;  IfFileExists $SMPROGRAMS\NSIS 0 NoSourceShortCuts
+  CreateDirectory "$SMPROGRAMS\GNU Solfege"
+  CreateShortCut "$SMPROGRAMS\GNU Solfege\Solfege.lnk" "$INSTDIR\solfege.bat" "" "" 0 SW_SHOWMINIMIZED
+  CreateShortCut "$SMPROGRAMS\GNU Solfege\Solfege (with console).lnk" "$INSTDIR\solfegewithconsole.bat"
+  CreateShortCut "$SMPROGRAMS\GNU Solfege\Uninstall Solfege.lnk" "$INSTDIR\uninstallsolfege.exe"
+  CreateShortCut "$SMPROGRAMS\GNU Solfege\COPYING.lnk" "$INSTDIR\COPYING.txt"
+  CreateShortCut "$SMPROGRAMS\GNU Solfege\AUTHORS.lnk" "$INSTDIR\AUTHORS.txt"
+  CreateShortCut "$SMPROGRAMS\GNU Solfege\FAQ.lnk" "$INSTDIR\FAQ.txt"
+  CreateShortCut "$SMPROGRAMS\GNU Solfege\INSTALL.lnk" "$INSTDIR\INSTALL.txt"
+  CreateShortCut "$SMPROGRAMS\GNU Solfege\INSTALL.win32.lnk" "$INSTDIR\INSTALL.win32.txt"
+  CreateShortCut "$SMPROGRAMS\GNU Solfege\README.lnk" "$INSTDIR\README.txt"
+  CreateShortCut "$SMPROGRAMS\GNU Solfege\Online manual.lnk" "$INSTDIR\online-docs\C\welcome.html"
+  MessageBox MB_OK "You can now run GNU Solfege from the start menu."
+
+SectionEnd ; end the section
+
+UninstallText "This will uninstall GNU Solfege"
+UninstallExeName "uninstallsolfege.exe"
+
+Section "Uninstall"
+  RMDir /r "$SMPROGRAMS\GNU Solfege"
+  RMDir /r "$INSTDIR" 
+SectionEnd
+; eof
+

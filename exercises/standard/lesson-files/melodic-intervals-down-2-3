@@ -1,0 +1,14 @@
+# GNU Solfege
+# Copyright (C) 2005, 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+
+header {
+    module=melodicinterval
+    ask_for_intervals_0=-1, -2, -3, -4
+    title = _("Seconds and thirds")
+    theory = "theory-intervals"
+    lesson_id = "52858a6b-3a8f-45e4-bc4a-cc443636fe57"
+    test = "3x"
+    test_requirement = "90%"
+}

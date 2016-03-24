@@ -1,0 +1,28 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "d8ae9d02-e6e3-418e-801e-a4580ccaa385"
+    module = idbyname
+    help = "idbyname-chords"
+    have_music_displayer = yes
+    fillnum = 2
+        random_transpose = accidentals, -5, 5
+        title = _("Major, minor, dominant seventh with inversions")
+        lesson_heading = _("Identify the chord")
+        test = "1x"
+        test_requirement = "100%"
+}
+
+question { name = _("major") inversion=0 chord("c' e' g'") }
+question { name = _("major") inversion=1 chord("e' g' c''") }
+question { name = _("major") inversion=2 chord("g' c'' e''") }
+question { name = _("minor") inversion=0 chord("c' es' g'") }
+question { name = _("minor") inversion=1 chord("es' g' c''") }
+question { name = _("minor") inversion=2 chord("g' c'' es''") }
+question { name = _("dominant seventh") inversion=0 chord("c' e' g' bes'") }
+question { name = _("dominant seventh") inversion=1 chord("e' g' bes' c''") }
+question { name = _("dominant seventh") inversion=2 chord("g' bes' c'' e''") }
+question { name = _("dominant seventh") inversion=3 chord("bes c' e' g'") }
+

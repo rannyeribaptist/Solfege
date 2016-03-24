@@ -1,0 +1,24 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "f87da7c3-1b22-41e9-ad4a-75ebcf5f2097"
+    module = singanswer
+    version = "3.0.6"
+    title = _("Sing the seventh of the chord")
+    lesson_heading = title
+    have_music_displayer = yes
+    have_repeat_arpeggio_button = yes
+}
+
+question {
+    question_text = _("Sing the seventh of the chord")
+    music = chord("c' e' g' bes'")
+    answer = chord("bes'")
+}
+question {
+    question_text = _("Sing the seventh of the chord")
+    music = chord("a' c'' e'' g''")
+    answer = chord("g''")
+}

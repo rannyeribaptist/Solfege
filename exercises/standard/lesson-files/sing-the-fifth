@@ -1,0 +1,24 @@
+# Solfege - free ear training software
+# Copyright (C) 2004, 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "97f7f605-f924-4482-965d-234580e3b941"
+    module = singanswer
+    version = "3.0.6"
+    title = _("Sing the fifth of the chord")
+    lesson_heading = title
+    have_music_displayer = yes
+    have_repeat_arpeggio_button = yes
+}
+
+question {
+    question_text = _("Sing the fifth of the chord")
+    music = chord("c' e' g'")
+    answer = chord("g'")
+}
+question {
+    question_text = _("Sing the fifth of the chord")
+    music = chord("a' c'' e''")
+    answer = chord("e''")
+}

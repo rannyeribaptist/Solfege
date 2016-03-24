@@ -1,0 +1,9 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+
+header {
+    module=compareintervals
+    title = _("Compare intervals")
+    theory = "theory-intervals"
+    lesson_id = "9f830e12-1f50-4fa9-8688-1e04469692fa"
+}

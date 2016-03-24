@@ -1,0 +1,10 @@
+# GNU Solfege
+# Copyright (C) 2011 Tom Cato Amundsen
+
+header {
+    module=toneincontext
+    title = _("First 4 tones")
+    tones = 0, 2, 3, 5
+}
+
+include("include/cadence-minor")

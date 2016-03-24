@@ -1,0 +1,66 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "4f2c59b0-d6cc-11da-8948-7c9a86d4310c"
+  module = idbyname
+  random_transpose = yes
+  title = _("Harmonic Minor Scale and its modes - patterns")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/har"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question { name = har1n  set = 0 voice(har1lp0) }
+question { name = har1n  set = 1 voice(har1lp1) }
+question { name = har1n  set = 2 voice(har1lp2) }
+question { name = har1n  set = 3 voice(har1lp3) }
+question { name = har1n  set = 4 voice(har1lp4) }
+
+question { name = har2n  set = 0 voice(har2lp0) }
+question { name = har2n  set = 1 voice(har2lp1) }
+question { name = har2n  set = 2 voice(har2lp2) }
+question { name = har2n  set = 3 voice(har2lp3) }
+question { name = har2n  set = 4 voice(har2lp4) }
+
+question { name = har3n  set = 0 voice(har3lp0) }
+question { name = har3n  set = 1 voice(har3lp1) }
+question { name = har3n  set = 2 voice(har3lp2) }
+question { name = har3n  set = 3 voice(har3lp3) }
+question { name = har3n  set = 4 voice(har3lp4) }
+
+question { name = har4n  set = 0 voice(har4lp0) }
+question { name = har4n  set = 1 voice(har4lp1) }
+question { name = har4n  set = 2 voice(har4lp2) }
+question { name = har4n  set = 3 voice(har4lp3) }
+question { name = har4n  set = 4 voice(har4lp4) }
+
+question { name = har5n  set = 0 voice(har5lp0) }
+question { name = har5n  set = 1 voice(har5lp1) }
+question { name = har5n  set = 2 voice(har5lp2) }
+question { name = har5n  set = 3 voice(har5lp3) }
+question { name = har5n  set = 4 voice(har5lp4) }
+
+question { name = har6n  set = 0 voice(har6lp0) }
+question { name = har6n  set = 1 voice(har6lp1) }
+question { name = har6n  set = 2 voice(har6lp2) }
+question { name = har6n  set = 3 voice(har6lp3) }
+question { name = har6n  set = 4 voice(har6lp4) }
+
+question { name = har7n  set = 0 voice(har7lp0) }
+question { name = har7n  set = 1 voice(har7lp1) }
+question { name = har7n  set = 2 voice(har7lp2) }
+question { name = har7n  set = 3 voice(har7lp3) }
+question { name = har7n  set = 4 voice(har7lp4) }
+
+

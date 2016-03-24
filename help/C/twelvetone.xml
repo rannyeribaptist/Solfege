@@ -1,0 +1,19 @@
+<sect1 id='twelvetone'>
+<title>Sing 12 random notes</title>
+<informalfigure>
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/twelvetone.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+
+<para>In this exercise, the program will display all the twelve tones in the
+scale in a random order and play the first one. Then you should sing all the
+notes and see if the last note matches. So this is more like an exam in sight
+singing than an exercise for learning how to sing the intervals. For that you
+should try some of the other interval exercises.</para>
+
+</sect1>

@@ -1,0 +1,21 @@
+# Solfege - ear training for GNOME
+# Copyright (C) 2006 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "3b7f8ba3-68a7-4d35-9616-c06ca95ae4de"
+    module = rhythmtapping
+    #have_music_displayer = yes
+    #at_question_start = show, play
+    title = "Rhythm tapping test"
+}
+question {
+ music = music("\staff\relative c'{c4 d8 e f4}\addvoice\relative c'{c4 b8 c a4}")
+ rhythm = rvoice("c4 cis8 d es4")
+}
+
+question {
+ music = rhythm("c4 c8 c8")
+ tempo = 100/4
+}
+

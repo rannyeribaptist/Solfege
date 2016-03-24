@@ -1,0 +1,12 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "e3df956a-55e2-4c07-b0cb-f7c6d887dc3e"
+    module = nameinterval
+    title = _("Thirds")
+    intervals = m3, M3, a3, d3
+    tones = "b", "f''"
+    theory = "theory-intervals"
+}

@@ -1,0 +1,60 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2011  Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+import progression_elements as p
+
+header {
+    module = elembuilder
+    title = _("Easy harmonic progressions")
+    lesson_heading = _("Enter the harmonic progression")
+    elements = auto
+    have_music_displayer = yes
+    music_displayer_stafflines = 2
+}
+
+s = "\staff\relative c{ \stemUp %s}"
+a = "\addvoice\relative c{ \stemDown %s}"
+t = "\staff\relative c{ \clef bass \stemUp %s}"
+b = "\addvoice\relative c{ \stemDown %s}"
+
+question {
+    name = progressionlabel("I-II-V-I")
+    elements = p.I, p.II, p.V, p.I
+    tonic = chord("c g e' c''")
+    music = music3(s % "c'' a b c"
+          + a % "e'  d d e"
+          + t % "g'  f g g"
+          + b % "c   d g, c")
+}
+
+question {
+    name = progressionlabel("I-IV-V-I")
+    elements = p.I, p.IV, p.V, p.I
+    tonic = chord("c g e' c''")
+    music = music3(s % "c'' c b c"
+          + a % "e'  f d e"
+          + t % "g'  a g g"
+          + b % "c   f g c,")
+}
+
+question {
+    name = progressionlabel("I-V-IV-I")
+    elements = p.I, p.V, p.IV, p.I
+    tonic = chord("c e' g' c''")
+    music = music3(s % "c'' b c c"
+          + a % "e'  d f e"
+          + t % "g'  g a g"
+          + b % "c   g f c'")
+}
+
+question {
+    name = progressionlabel("I-VI-V-I")
+    elements = p.I, p.VI, p.V, p.I
+    tonic = chord("c g e' c''")
+    music = music3(s % "c'' c d c"
+          + a % "e'  e g e"
+          + t % "g'  a b g"
+          + b % "c   a g c")
+}
+

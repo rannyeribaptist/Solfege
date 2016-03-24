@@ -1,0 +1,37 @@
+# Solfege - ear training for GNOME
+# Copyright (C) 2006  Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+element I { label = rnc("I") }
+element Im7 { label = rnc("Im7") } 
+element Imaj7 { label = rnc("Imaj7") }
+
+element II { label = rnc("II") }
+element IIm7 { label = rnc("IIm7") }
+element IIm7b5 { label = rnc("IIm7b5") }
+element II7 { label = rnc("II7") }
+
+element bIIImaj7 { label = rnc("bIIImaj7") }
+
+element III { label = rnc("III") }
+element IIIm7 { label = rnc("III7") }
+element III7 { label = rnc("III7") }
+
+element IV { label = rnc("IV") }
+element IVm7 { label = rnc("IVm7") }
+element IVmaj7 { label = rnc("IVmaj7")}
+element IV_6 { label = progressionlabel("IV(6)") }
+
+element V { label = rnc("V") }
+element V7 { label = rnc("V7") }
+element Vm7 { label = rnc("Vm7") }
+element Vts { label = pangomarkup("""<span font_family="serif"><span size="xx-large">Vts</span></span>""") }
+element VtsParen { label = pangomarkup("""<span font_family="serif"><span size="xx-large">[Vts]</span></span>""") }
+element V_6 { label = progressionlabel("V(6)") }
+element V9 { label = rnc("V9") }
+element V13 { label = rnc("V13") }
+
+element VI { label = rnc("VI") }
+element VIm7 { label = rnc("VIm7") }
+element VI7 { label = rnc("VI7") }
+

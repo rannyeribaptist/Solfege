@@ -1,0 +1,14 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    module=harmonicinterval
+    replaces = "9cab2f58ada61e40aca89265bc7afe56950b0e98"
+    intervals=6, 10, 11
+    title = _("Tritone and sevenths")
+    theory = "theory-intervals"
+    lesson_id = "a652c131-03da-4c9d-bdc5-df6f5309080a"
+    test = "6x"
+    test_requirement = "90%"
+}

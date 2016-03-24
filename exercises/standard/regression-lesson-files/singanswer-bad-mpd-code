@@ -1,0 +1,28 @@
+# Solfege - ear training for GNOME
+# Copyright (C) 2006 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "36b158e5-c1f3-4eac-831e-2cb853cdc511"
+    module = singanswer
+    title = "2 of 3 questions contain bad mpd code in music or answer"
+    have_music_displayer = yes
+}
+
+question {
+ question_text = "ok"
+ music = rvoice("c d e")
+ answer = chord("c")
+}
+
+question {
+ question_text = "bad music variable"
+ music = rvoice(" c d e a T f g")
+ answer = chord("c")
+}
+question {
+ question_text = "bad answer variable"
+ music = rvoice(" c d e a f g")
+ answer = chord("S 7{")
+}
+

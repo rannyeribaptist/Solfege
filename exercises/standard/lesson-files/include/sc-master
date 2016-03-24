@@ -1,0 +1,2404 @@
+# Solfege - ear training for GNOME
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+# This is a source file for all scale lessons
+# source file version: 1.11
+# see VARIABLE ENCODING & VERSION HISTORY sections at the end of this document
+
+sc_test = "3x"
+sc_test_requirement = "90%"
+
+#----------------------------------
+# Major Scale and its modes:
+#----------------------------------
+
+# I grade
+
+maj1s  = "2212221"
+
+maj1n1 = _("Ionian")
+maj1n2 = _("Major")
+maj1n3 = _("Diatonic")
+maj1ng = _("Greek Lydian")
+maj1nh = _("Hypolydian")
+maj1n  = maj1n1
+
+maj1ca  = " c' d' e' f' g' a' b' c'' "
+maj1cd  = " c'' b' a' g' f' e' d' c' "
+maj1c   = maj1ca + maj1cd
+maj1cta = " c' e' g' b' d'' f'' a'' "
+maj1ctd = " c''' a'' f'' d'' b' g' e' c' "
+maj1ct  = maj1cta + maj1ctd
+maj1cf  = " c f b e' a' d'' g'' "
+maj1cp0 = " c' e' g' b' c'' a' f' d' c' "
+maj1cp1 = " c' e' d' f' e' g' f' a' g' b' a' c'' "
+maj1cp2 = " c' d' e' f' c'' b' a' g' "
+maj1cp3 = " c' e' g' b' d' f' a' c'' "
+maj1cp4 = " c' f' b' e' a' d' g' "
+maj1cpx = " c' f' b' "
+
+maj1la  = maj1ca
+maj1ld  = maj1cd
+maj1l   = maj1c
+maj1lta = maj1cta
+maj1ltd = maj1ctd
+maj1lt  = maj1ct
+maj1lf  = maj1cf
+maj1lp0 = maj1cp0
+maj1lp1 = maj1cp1
+maj1lp2 = maj1cp2
+maj1lp3 = maj1cp3
+maj1lp4 = maj1cp4
+maj1lpx = maj1cpx
+
+# II grade
+
+maj2s  = "2122212"
+
+maj2n1 = _("Dorian")
+maj2ng = _("Greek Phrygian")
+maj2nh = _("Hypomixolydian")
+maj2n  = maj2n1
+
+maj2ca  = " c' d' es' f' g' a' bes' c'' "
+maj2cd  = " c'' bes' a' g' f' es' d' c' "
+maj2c   = maj2ca + maj2cd
+maj2cta = " c' es' g' bes' d'' f'' a'' "
+maj2ctd = " c''' a'' f'' d'' bes' g' es' c' "
+maj2ct  = maj2cta + maj2ctd
+maj2cf  = " c f bes es' a' d'' g'' "
+maj2cp0 = " c' es' g' bes' c'' a' f' d' c' "
+maj2cp1 = " c' es' d' f' es' g' f' a' g' bes' a' c'' "
+maj2cp2 = " c' d' es' f' c'' bes' a' g' "
+maj2cp3 = " c' es' g' bes' d' f' a' c'' "
+maj2cp4 = " c' f' bes' es' a' d' g' "
+maj2cpx = " c' es' a' "
+
+maj2la  = " d' e' f' g' a' b' c'' d'' "
+maj2ld  = " d'' c'' b' a' g' f' e' d' "
+maj2l   = maj2la + maj2ld
+maj2lta = " d' f' a' c'' e'' g'' b'' "
+maj2ltd = " d''' b'' g'' e'' c'' a' f' d' "
+maj2lt  = maj2lta + maj2ltd
+maj2lf  = " d g c' f' b' e'' a'' "
+maj2lp0 = " d' f' a' c'' d'' b' g' e' d' "
+maj2lp1 = " d' f' e' g' f' a' g' b' a' c'' b' d'' "
+maj2lp2 = " d' e' f' g' d'' c'' b' a' "
+maj2lp3 = " d' f' a' c'' e' g' b' d'' "
+maj2lp4 = " d' g' c'' f' b' e' a' "
+maj2lpx = " d' f' b' "
+
+# III grade
+
+maj3s  = "1222122"
+
+maj3n1 = _("Phrygian")
+maj3n2 = _("Maqam Kurd")
+maj3n3 = _("Major Inverse")
+maj3ng = _("Greek Dorian")
+maj3nh = _("Hypoaeolian")
+maj3n  = maj3n1
+
+maj3ca  = " c' des' es' f' g' as' bes' c'' "
+maj3cd  = " c'' bes' as' g' f' es' des' c' "
+maj3c   = maj3ca + maj3cd
+maj3cta = " c' es' g' bes' des'' f'' as'' "
+maj3ctd = " c''' as'' f'' des'' bes' g' es' c' "
+maj3ct  = maj3cta + maj3ctd
+maj3cf  = " c f bes es' as' des'' g'' " 
+maj3cp0 = " c' es' g' bes' c'' as' f' des' c' "
+maj3cp1 = " c' es' des' f' es' g' f' as' g' bes' as' c'' "
+maj3cp2 = " c' des' es' f' c'' bes' as' g' "
+maj3cp3 = " c' es' g' bes' des' f' as' c'' "
+maj3cp4 = " c' f' bes' es' as' des' g' "
+maj3cpx = " c' des' g' "
+
+maj3la  = " e' f' g' a' b' c'' d'' e'' "
+maj3ld  = " e'' d'' c'' b' a' g' f' e' "
+maj3l   = maj3la + maj3ld
+maj3lta = " e' g' b' d'' f'' a'' c''' "
+maj3ltd = " e''' c''' a'' f'' d'' b' g' e' "
+maj3lt  = maj3lta + maj3ltd
+maj3lf  = " e a d' g' c'' f'' b'' "
+maj3lp0 = " e' g' b' d'' e'' c'' a' f' e' "
+maj3lp1 = " e' g' f' a' g' b' a' c'' b' d'' c'' e'' "
+maj3lp2 = " e' f' g' a' e'' d'' c'' b' "
+maj3lp3 = " e' g' b' d'' f' a' c'' e'' "
+maj3lp4 = " e' a' d'' g' c'' f' b' "
+maj3lpx = " e' f' b' "
+
+# IV grade
+
+maj4s  = "2221221"
+
+maj4n1 = _("Lydian")
+maj4ng = _("Greek Hypolydian")
+maj4nh = _("Hypolocrian")
+maj4n  = maj4n1
+
+maj4ca  = " c' d' e' fis' g' a' b' c'' "
+maj4cd  = " c'' b' a' g' fis' e' d' c' "
+maj4c   = maj4ca + maj4cd
+maj4cta = " c' e' g' b' d'' fis'' a'' "
+maj4ctd = " c''' a'' fis'' d'' b' g' e' c' "
+maj4ct  = maj4cta + maj4ctd
+maj4cf  = " c fis b e' a' d'' g'' "
+maj4cp0 = " c' e' g' b' c'' a' fis' d' c' "
+maj4cp1 = " c' e' d' fis' e' g' fis' a' g' b' a' c'' "
+maj4cp2 = " c' d' e' fis' c'' b' a' g' "
+maj4cp3 = " c' e' g' b' d' fis' a' c'' "
+maj4cp4 = " c' fis' b' e' a' d' g' "
+maj4cpx = " c' e' fis' "
+
+maj4la  = " f' g' a' b' c'' d'' e'' f'' "
+maj4ld  = " f'' e'' d'' c'' b' a' g' f' "
+maj4l   = maj4la + maj4ld
+maj4lta = " f a c' e' g' b' d''"
+maj4ltd = " f'' d'' b' g' e' c' a f "
+maj4lt  = maj4lta + maj4ltd
+maj4lf  = " f b e' a' d'' g'' c''' "
+maj4lp0 = " f' a' c'' e'' f'' d'' b' g' f' "
+maj4lp1 = " f' a' g' b' a' c'' b' d'' c'' e'' d'' f'' "
+maj4lp2 = " f' g' a' b' f'' e'' d'' c'' "
+maj4lp3 = " f' a' c'' e'' g' b' d'' f'' "
+maj4lp4 = " f' b' e'' a' d'' g' c'' "
+maj4lpx = " f' a' b' "
+
+# V grade
+
+maj5s  = "2212212"
+
+maj5n1 = _("Mixolydian")
+maj5ng = _("Greek Hypophrygian")
+maj5nh = _("Hypoionian")
+maj5n  = maj5n1
+
+maj5ca  = " c' d' e' f' g' a' bes' c'' "
+maj5cd  = " c'' bes' a' g' f' e' d' c' "
+maj5c   = maj5ca + maj5cd
+maj5cta = " c' e' g' bes' d'' f'' a'' "
+maj5ctd = " c''' a'' f'' d'' bes' g' e' c' "
+maj5ct  = maj5cta + maj5ctd
+maj5cf  = " c f bes e' a' d'' g'' "
+maj5cp0 = " c' e' g' bes' c'' a' f' d' c' "
+maj5cp1 = " c' e' d' f' e' g' f' a' g' bes' a' c'' "
+maj5cp2 = " c' d' e' f' c'' bes' a' g' "
+maj5cp3 = " c' e' g' bes' d' f' a' c'' "
+maj5cp4 = " c' f' bes' e' a' d' g' "
+maj5cpx = " c' e' bes' "
+
+maj5la  = " g' a' b' c'' d'' e'' f'' g'' "
+maj5ld  = " g'' f'' e'' d'' c'' b' a' g' "
+maj5l   = maj5la + maj5ld
+maj5lta = " g b d' f' a' c'' e'' "
+maj5ltd = " g'' e'' c'' a' f' d' b g "
+maj5lt  = maj5lta + maj5ltd
+maj5lf  = " g c' f' b' e'' a'' d''' "
+maj5lp0 = " g' b' d'' f'' g'' e'' c'' a' g' "
+maj5lp1 = " g' b' a' c'' b' d'' c'' e'' d'' f'' e'' g'' "
+maj5lp2 = " g' a' b' c'' g'' f'' e'' d'' "
+maj5lp3 = " g' b' d'' f'' a' c'' e'' g'' "
+maj5lp4 = " g' c'' f'' b' e'' a' d'' "
+maj5lpx = " g' b' f'' "
+
+# VI grade
+
+maj6s  = "2122122"
+
+maj6n1 = _("Aeolian")
+maj6n2 = _("Natural Minor")
+maj6n3 = _("Ancient Minor")
+maj6n4 = _("Pure Minor")
+maj6ng = _("Greek Hypodorian")
+maj6nh = _("Hypodorian")
+maj6n  = maj6n1
+
+maj6ca  = " c' d' es' f' g' as' bes' c'' "
+maj6cd  = " c'' bes' as' g' f' es' d' c' "
+maj6c   = maj6ca + maj6cd
+maj6cta = " c' es' g' bes' d'' f'' as'' "
+maj6ctd = " c''' as'' f'' d'' bes' g' es' c' "
+maj6ct  = maj6cta + maj6ctd
+maj6cf  = " c f bes es' as' d'' g'' "
+maj6cp0 = " c' es' g' bes' c'' as' f' d' c' "
+maj6cp1 = " c' es' d' f' es' g' f' as' g' bes' as' c'' "
+maj6cp2 = " c' d' es' f' c'' bes' as' g' "
+maj6cp3 = " c' es' g' bes' d' f' as' c'' "
+maj6cp4 = " c' f' bes' es' as' d' g' "
+maj6cpx = " c' d' as' "
+
+maj6la  = " a b c' d' e' f' g' a' "
+maj6ld  = " a' g' f' e' d' c' b a "
+maj6l   = maj6la + maj6ld
+maj6lta = " a c' e' g' b' d'' f'' "
+maj6ltd = " a'' f'' d'' b' g' e' c' a "
+maj6lt  = maj6lta + maj6ltd
+maj6lf  = " a, d g c' f' b' e'' "
+maj6lp0 = " a c' e' g' a' f' d' b a "
+maj6lp1 = " a c' b d' c' e' d' f' e' g' f' a' "
+maj6lp2 = " a b c' d' a' g' f' e' "
+maj6lp3 = " a c' e' g' b d' f' a' "
+maj6lp4 = " a d' g' c' f' b e' "
+maj6lpx = " a b f' "
+
+# VII grade
+
+maj7s  = "1221222"
+
+maj7n1 = _("Locrian")
+maj7n2 = _("Half Diminished")
+maj7ng = _("Greek Mixolydian")
+maj7nh = _("Hypophrygian")
+maj7n  = maj7n1
+
+maj7ca  = " c' des' es' f' ges' as' bes' c'' "
+maj7cd  = " c'' bes' as' ges' f' es' des' c' "
+maj7c   = maj7ca + maj7cd
+maj7cta = " c' es' ges' bes' des'' f'' as'' "
+maj7ctd = " c''' as'' f'' des'' bes' ges' es' c' "
+maj7ct  = maj7cta + maj7ctd
+maj7cf  = " c f bes es' as' des'' ges'' " 
+maj7cp0 = " c' es' ges' bes' c'' as' f' des' c' "
+maj7cp1 = " c' es' des' f' es' ges' f' as' ges' bes' as' c'' "
+maj7cp2 = " c' des' es' f' c'' bes' as' ges' "
+maj7cp3 = " c' es' ges' bes' des' f' as' c'' "
+maj7cp4 = " c' f' bes' es' as' des' ges' "
+maj7cpx = " c' es' ges' "
+
+maj7la  = " b c' d' e' f' g' a' b' "
+maj7ld  = " b' a' g' f' e' d' c' b "
+maj7l   = maj7la + maj7ld
+maj7lta = " b d' f' a' c'' e'' g'' "
+maj7ltd = " b'' g'' e'' c'' a' f' d' b "
+maj7lt  = maj7lta + maj7ltd
+maj7lf  = " b, e a d' g' c'' f'' "
+maj7lp0 = " b d' f' a' b' g' e' c' b "
+maj7lp1 = " b d' c' e' d' f' e' g' f' a' g' b' "
+maj7lp2 = " b c' d' e' b' a' g' f' "
+maj7lp3 = " b d' f' a' c' e' g' b' "
+maj7lp4 = " b e' a' d' g' c' f' "
+maj7lpx = " b d' f' "
+
+#-------------------------------------
+# Melodic Minor Scale and its modes:
+#-------------------------------------
+
+# I grade
+
+mel1s  = "2122221"
+
+mel1n1 = _("Jazz Minor")
+mel1n2 = _("Melodic Minor Ascending")
+mel1n3 = _("Modern Minor")
+mel1n4 = _("Minor-Major")
+mel1n5 = _("Ipoionian")
+mel1n6 = _("Ionian b3")
+mel1n7 = _("Dorian maj7")
+mel1n  = mel1n1
+
+mel1ca  = " c' d' es' f' g' a' b' c'' "
+mel1cd  = " c'' b' a' g' f' es' d' c' "
+mel1c   = mel1ca + mel1cd
+mel1cta = " c' es' g' b' d'' f'' a'' "
+mel1ctd = " c''' a'' f'' d'' b' g' es' c' "
+mel1ct  = mel1cta + mel1ctd
+mel1cf  = " c f b es' a' d'' g'' "
+mel1cp0 = " c' es' g' b' c'' a' f' d' c' "
+mel1cp1 = " c' es' d' f' es' g' f' a' g' b' a' c'' "
+mel1cp2 = " c' d' es' f' c'' b' a' g' "
+mel1cp3 = " c' es' g' b' d' f' a' c'' "
+mel1cp4 = " c' f' b' es' a' d' g' "
+
+mel1la  = mel1ca
+mel1ld  = mel1cd
+mel1l   = mel1c
+mel1lta = mel1cta
+mel1ltd = mel1ctd
+mel1lt  = mel1ct
+mel1lf  = mel1cf
+mel1lp0 = mel1cp0
+mel1lp1 = mel1cp1
+mel1lp2 = mel1cp2
+mel1lp3 = mel1cp3
+mel1lp4 = mel1cp4
+
+# II grade
+
+mel2s  = "1222212"
+
+mel2n1 = _("Dorian b9")
+mel2n2 = _("Javanese")
+mel2n3 = _("Phrygian #6")
+mel2n  = mel2n1
+
+mel2ca  = " c' des' es' f' g' a' bes' c'' "
+mel2cd  = " c'' bes' a' g' f' es' des' c' "
+mel2c   = mel2ca + mel2cd
+mel2cta = " c' es' g' bes' des'' f'' a'' "
+mel2ctd = " c''' a'' f'' des'' bes' g' es' c' "
+mel2ct  = mel2cta + mel2ctd
+mel2cf  = " c f bes es' a' des'' g'' "
+mel2cp0 = " c' es' g' bes' c'' a' f' des' c' "
+mel2cp1 = " c' es' des' f' es' g' f' a' g' bes' a' c'' "
+mel2cp2 = " c' des' es' f' c'' bes' a' g' "
+mel2cp3 = " c' es' g' bes' des' f' a' c'' "
+mel2cp4 = " c' f' bes' es' a' des' g' "
+
+mel2la  = " d' es' f' g' a' b' c'' d'' "
+mel2ld  = " d'' c'' b' a' g' f' es' d' "
+mel2l   = mel2la + mel2ld
+mel2lta = " d' f' a' c'' es'' g'' b'' "
+mel2ltd = " d''' b'' g'' es'' c'' a' f' d' "
+mel2lt  = mel2lta + mel2ltd
+mel2lf  = " d g c' f' b' es'' a'' "
+mel2lp0 = " d' f' a' c'' d'' b' g' es' d' "
+mel2lp1 = " d' f' es' g' f' a' g' b' a' c'' b' d'' "
+mel2lp2 = " d' es' f' g' d'' c'' b' a' "
+mel2lp3 = " d' f' a' c'' es' g' b' d'' "
+mel2lp4 = " d' g' c'' f' b' es' a' "
+
+# III grade
+
+mel3s  = "2222121"
+
+mel3n1 = _("Lydian Augmented")
+mel3n2 = _("Lydian #5")
+mel3n  = mel3n1
+
+mel3ca  = " c' d' e' fis' gis' a' b' c'' "
+mel3cd  = " c'' b' a' gis' fis' e' d' c' "
+mel3c   = mel3ca + mel3cd
+mel3cta = " c' e' gis' b' d'' fis'' a'' "
+mel3ctd = " c''' a'' fis'' d'' b' gis' e' c' "
+mel3ct  = mel3cta + mel3ctd
+mel3cf  = " c fis b e' a' d'' gis'' "
+mel3cp0 = " c' e' gis' b' c'' a' fis' d' c' "
+mel3cp1 = " c' e' d' fis' e' gis' fis' a' gis' b' a' c'' "
+mel3cp2 = " c' d' e' fis' c'' b' a' gis' "
+mel3cp3 = " c' e' gis' b' d' fis' a' c'' "
+mel3cp4 = " c' fis' b' e' a' d' gis' "
+
+mel3la  = " es' f' g' a' b' c'' d'' es'' "
+mel3ld  = " es'' d'' c'' b' a' g' f' es' "
+mel3l   = mel3la + mel3ld
+mel3lta = " es' g' b' d'' f'' a'' c''' "
+mel3ltd = " es''' c''' a'' f'' d'' b' g' es' "
+mel3lt  = mel3lta + mel3ltd
+mel3lf  = " es a d' g' c'' f'' b'' "
+mel3lp0 = " es' g' b' d'' es'' c'' a' f' es' "
+mel3lp1 = " es' g' f' a' g' b' a' c'' b' d'' c'' es'' "
+mel3lp2 = " es' f' g' a' es'' d'' c'' b' "
+mel3lp3 = " es' g' b' d'' f' a' c'' es'' "
+mel3lp4 = " es' a' d'' g' c'' f' b' "
+
+# IV grade
+
+mel4s  = "2221212"
+
+mel4n1 = _("Lydian Dominant")
+mel4n2 = _("Lydian b7")
+mel4n3 = _("Mixolydian #4")
+mel4n4 = _("Mixolydian #11")
+mel4n5 = _("Overtone")
+mel4n  = mel4n1
+
+mel4ca  = " c' d' e' fis' g' a' bes' c'' "
+mel4cd  = " c'' bes' a' g' fis' e' d' c' "
+mel4c   = mel4ca + mel4cd
+mel4cta = " c' e' g' bes' d'' fis'' a'' "
+mel4ctd = " c''' a'' fis'' d'' bes' g' e' c' "
+mel4ct  = mel4cta + mel4ctd
+mel4cf  = " c fis bes e' a' d'' g'' "
+mel4cp0 = " c' e' g' bes' c'' a' fis' d' c' "
+mel4cp1 = " c' e' d' fis' e' g' fis' a' g' bes' a' c'' "
+mel4cp2 = " c' d' e' fis' c'' bes' a' g' "
+mel4cp3 = " c' e' g' bes' d' fis' a' c'' "
+mel4cp4 = " c' fis' bes' e' a' d' g' "
+
+mel4la  = " f' g' a' b' c'' d'' es'' f'' "
+mel4ld  = " f'' es'' d'' c'' b' a' g' f' "
+mel4l   = mel4la + mel4ld
+mel4lta = " f a c' es' g' b' d''"
+mel4ltd = " f'' d'' b' g' es' c' a f "
+mel4lt  = mel4lta + mel4ltd
+mel4lf  = " f b es' a' d'' g'' c''' "
+mel4lp0 = " f' a' c'' es'' f'' d'' b' g' f' "
+mel4lp1 = " f' a' g' b' a' c'' b' d'' c'' es'' d'' f'' "
+mel4lp2 = " f' g' a' b' f'' es'' d'' c'' "
+mel4lp3 = " f' a' c'' es'' g' b' d'' f'' "
+mel4lp4 = " f' b' es'' a' d'' g' c'' "
+
+# V grade
+
+mel5s  = "2212122"
+
+mel5n1 = _("Mixolydian b13")
+mel5n2 = _("Mixolydian b6")
+mel5n3 = _("Hindu")
+mel5n4 = _("Hindustan")
+mel5n5 = _("Aeolian Dominant")
+mel5n6 = _("Aeolian #3")
+mel5n  = mel5n1
+
+mel5ca  = " c' d' e' f' g' as' bes' c'' "
+mel5cd  = " c'' bes' as' g' f' e' d' c' "
+mel5c   = mel5ca + mel5cd
+mel5cta = " c' e' g' bes' d'' f'' as'' "
+mel5ctd = " c''' as'' f'' d'' bes' g' e' c' "
+mel5ct  = mel5cta + mel5ctd
+mel5cf  = " c f bes e' as' d'' g'' "
+mel5cp0 = " c' e' g' bes' c'' as' f' d' c' "
+mel5cp1 = " c' e' d' f' e' g' f' as' g' bes' as' c'' "
+mel5cp2 = " c' d' e' f' c'' bes' as' g' "
+mel5cp3 = " c' e' g' bes' d' f' as' c'' "
+mel5cp4 = " c' f' bes' e' as' d' g' "
+
+mel5la  = " g' a' b' c'' d'' es'' f'' g'' "
+mel5ld  = " g'' f'' es'' d'' c'' b' a' g' "
+mel5l   = mel5la + mel5ld
+mel5lta = " g b d' f' a' c'' es'' "
+mel5ltd = " g'' es'' c'' a' f' d' b g "
+mel5lt  = mel5lta + mel5ltd
+mel5lf  = " g c' f' b' es'' a'' d''' "
+mel5lp0 = " g' b' d'' f'' g'' es'' c'' a' g' "
+mel5lp1 = " g' b' a' c'' b' d'' c'' es'' d'' f'' es'' g'' "
+mel5lp2 = " g' a' b' c'' g'' f'' es'' d'' "
+mel5lp3 = " g' b' d'' f'' a' c'' es'' g'' "
+mel5lp4 = " g' c'' f'' b' es'' a' d'' "
+
+# VI grade
+
+mel6s  = "2121222"
+
+mel6n1 = _("Semilocrian")
+mel6n2 = _("Locrian #2")
+mel6n3 = _("Half Diminished")
+mel6n4 = _("Aeolian b5")
+mel6n5 = _("Locrian natural 2")
+mel6n  = mel6n1
+
+mel6ca  = " c' d' es' f' ges' as' bes' c'' "
+mel6cd  = " c'' bes' as' ges' f' es' d' c' "
+mel6c   = mel6ca + mel6cd
+mel6cta = " c' es' ges' bes' d'' f'' as'' "
+mel6ctd = " c''' as'' f'' d'' bes' ges' es' c' "
+mel6ct  = mel6cta + mel6ctd
+mel6cf  = " c f bes es' as' d'' ges'' "
+mel6cp0 = " c' es' ges' bes' c'' as' f' d' c' "
+mel6cp1 = " c' es' d' f' es' ges' f' as' ges' bes' as' c'' "
+mel6cp2 = " c' d' es' f' c'' bes' as' ges' "
+mel6cp3 = " c' es' ges' bes' d' f' as' c'' "
+mel6cp4 = " c' f' bes' es' as' d' ges' "
+
+mel6la  = " a b c' d' es' f' g' a' "
+mel6ld  = " a' g' f' es' d' c' b a "
+mel6l   = mel6la + mel6ld
+mel6lta = " a c' es' g' b' d'' f'' "
+mel6ltd = " a'' f'' d'' b' g' es' c' a "
+mel6lt  = mel6lta + mel6ltd
+mel6lf  = " a, d g c' f' b' es'' "
+mel6lp0 = " a c' es' g' a' f' d' b a "
+mel6lp1 = " a c' b d' c' es' d' f' es' g' f' a' "
+mel6lp2 = " a b c' d' a' g' f' es' "
+mel6lp3 = " a c' es' g' b d' f' a' "
+mel6lp4 = " a d' g' c' f' b es' "
+
+# VII grade
+
+mel7s  = "1212222"
+
+mel7n1 = _("Superlocrian")
+mel7n2 = _("Altered")
+mel7n3 = _("Ravel")
+mel7n4 = _("Diminished-WholeTone")
+mel7n5 = _("Locrian b4")
+mel7n  = mel7n1
+
+mel7ca  = " c' des' es' fes' ges' as' bes' c'' "
+mel7cd  = " c'' bes' as' ges' fes' es' des' c' "
+mel7c   = mel7ca + mel7cd
+mel7cta = " c' es' ges' bes' des'' fes'' as'' "
+mel7ctd = " c''' as'' fes'' des'' bes' ges' es' c' "
+mel7ct  = mel7cta + mel7ctd
+mel7cf  = " c fes bes es' as' des'' ges'' " 
+mel7cp0 = " c' es' ges' bes' c'' as' fes' des' c' "
+mel7cp1 = " c' es' des' fes' es' ges' fes' as' ges' bes' as' c'' "
+mel7cp2 = " c' des' es' fes' c'' bes' as' ges' "
+mel7cp3 = " c' es' ges' bes' des' fes' as' c'' "
+mel7cp4 = " c' fes' bes' es' as' des' ges' "
+
+mel7la  = " b c' d' es' f' g' a' b' "
+mel7ld  = " b' a' g' f' es' d' c' b "
+mel7l   = mel7la + mel7ld
+mel7lta = " b d' f' a' c'' es'' g'' "
+mel7ltd = " b'' g'' es'' c'' a' f' d' b "
+mel7lt  = mel7lta + mel7ltd
+mel7lf  = " b, es a d' g' c'' f'' "
+mel7lp0 = " b d' f' a' b' g' es' c' b "
+mel7lp1 = " b d' c' es' d' f' es' g' f' a' g' b' "
+mel7lp2 = " b c' d' es' b' a' g' f' "
+mel7lp3 = " b d' f' a' c' es' g' b' "
+mel7lp4 = " b es' a' d' g' c' f' "
+
+# Classic Melodic Minor
+
+mel8n1 = _("Melodic Minor A-D")
+mel8n  = mel8n1
+
+mel8c   = mel1ca + maj6cd
+
+mel8l   = " d' e' f' g' a' b' cis'' d'' d'' c'' bes' a' g' f' e' d' "
+
+#-------------------------------------
+# Harmonic Minor Scale and its modes:
+#-------------------------------------
+
+# I grade
+
+har1s  = "2122131"
+
+har1n1 = _("Harmonic Minor")
+har1n2 = _("Mohammedan")
+har1n3 = _("Aeolian maj7")
+har1n4 = _("Melodic Minor b6")
+har1n  = har1n1
+
+har1ca  = " c' d' es' f' g' as' b' c'' "
+har1cd  = " c'' b' as' g' f' es' d' c' "
+har1c   = har1ca + har1cd
+har1cta = " c' es' g' b' d'' f'' as'' "
+har1ctd = " c''' as'' f'' d'' b' g' es' c' "
+har1ct  = har1cta + har1ctd
+har1cf  = " c f b es' as' d'' g'' "
+har1cp0 = " c' es' g' b' c'' as' f' d' c' "
+har1cp1 = " c' es' d' f' es' g' f' as' g' b' as' c'' "
+har1cp2 = " c' d' es' f' c'' b' as' g' "
+har1cp3 = " c' es' g' b' d' f' as' c'' "
+har1cp4 = " c' f' b' es' as' d' g' "
+
+har1la  = " a b c' d' e' f' gis' a' "
+har1ld  = " a' gis' f' e' d' c' b a "
+har1l   = har1la + har1ld
+har1lta = " a c' e' gis' b' d'' f'' "
+har1ltd = " a'' f'' d'' b' gis' e' c' a "
+har1lt  = har1lta + har1ltd
+har1lf  = " a, d gis c' f' b' e'' "
+har1lp0 = " a c' e' gis' a' f' d' b' a "
+har1lp1 = " a c' b d' c' e' d' f' e' gis' f' a' "
+har1lp2 = " a b c' d' a' gis' f' e' "
+har1lp3 = " a c' e' gis' b d' f' a' "
+har1lp4 = " a d' gis' c' f' b e' "
+
+# II grade
+
+har2s  = "1221312"
+
+har2n1 = _("Locrian #6")
+har2n  = har2n1
+
+har2ca  = " c' des' es' f' ges' a' bes' c'' "
+har2cd  = " c'' bes' a' ges' f' es' des' c' "
+har2c   = har2ca + har2cd
+har2cta = " c' es' ges' bes' des'' f'' a'' "
+har2ctd = " c''' a'' f'' des'' bes' ges' es' c' "
+har2ct  = har2cta + har2ctd
+har2cf  = " c f bes es' a' des'' ges'' " 
+har2cp0 = " c' es' ges' bes' c'' a' f' des' c' "
+har2cp1 = " c' es' des' f' es' ges' f' a' ges' bes' a' c'' "
+har2cp2 = " c' des' es' f' c'' bes' a' ges' "
+har2cp3 = " c' es' ges' bes' des' f' a' c'' "
+har2cp4 = " c' f' bes' es' a' des' ges' "
+
+har2la  = " b c' d' e' f' gis' a' b' "
+har2ld  = " b' a' gis' f' e' d' c' b "
+har2l   = har2la + har2ld
+har2lta = " b d' f' a' c'' e'' gis'' "
+har2ltd = " b'' gis'' e'' c'' a' f' d' b "
+har2lt  = har2lta + har2ltd
+har2lf  = " b, e a d' gis' c'' f'' "
+har2lp0 = " b d' f' a' b' gis' e' c' b "
+har2lp1 = " b d' c' e' d' f' e' gis' f' a' gis' b' "
+har2lp2 = " b c' d' e' b' a' gis' f' "
+har2lp3 = " b d' f' a' c' e' gis' b' "
+har2lp4 = " b e' a' d' gis' c' f' "
+
+# III grade
+
+har3s  = "2213121"
+
+har3n1 = _("Ionian Augmented")
+har3n2 = _("Ionian #5")
+har3n  = har3n1
+
+har3ca  = " c' d' e' f' gis' a' b' c'' "
+har3cd  = " c'' b' a' gis' f' e' d' c' "
+har3c   = har3ca + har3cd
+har3cta = " c' e' gis' b' d'' f'' a'' "
+har3ctd = " c''' a'' f'' d'' b' gis' e' c' "
+har3ct  = har3cta + har3ctd
+har3cf  = " c f b e' a' d'' gis'' "
+har3cp0 = " c' e' gis' b' c'' a' f' d' c' "
+har3cp1 = " c' e' d' f' e' gis' f' a' gis' b' a' c'' "
+har3cp2 = " c' d' e' f' c'' b' a' gis' "
+har3cp3 = " c' e' gis' b' d' f' a' c'' "
+har3cp4 = " c' f' b' e' a' d' gis' "
+
+har3la  = har3ca
+har3ld  = har3cd
+har3l   = har3c
+har3lta = har3cta
+har3ltd = har3ctd
+har3lt  = har3ct
+har3lf  = har3cf
+har3lp0 = har3cp0
+har3lp1 = har3cp1
+har3lp2 = har3cp2
+har3lp3 = har3cp3
+har3lp4 = har3cp4
+
+# IV grade
+
+har4s  = "2131212"
+
+har4n1 = _("Romanian")
+har4n2 = _("Dorian #4")
+har4n3 = _("Dorian #11")
+har4n4 = _("Misheberakh")
+har4n  = har4n1
+
+har4ca  = " c' d' es' fis' g' a' bes' c'' "
+har4cd  = " c'' bes' a' g' fis' es' d' c' "
+har4c   = har4ca + har4cd
+har4cta = " c' es' g' bes' d'' fis'' a'' "
+har4ctd = " c''' a'' fis'' d'' bes' g' es' c' "
+har4ct  = har4cta + har4ctd
+har4cf  = " c fis bes es' a' d'' g'' "
+har4cp0 = " c' es' g' bes' c'' a' fis' d' c' "
+har4cp1 = " c' es' d' fis' es' g' fis' a' g' bes' a' c'' "
+har4cp2 = " c' d' es' fis' c'' bes' a' g' "
+har4cp3 = " c' es' g' bes' d' fis' a' c'' "
+har4cp4 = " c' fis' bes' es' a' d' g' "
+
+har4la  = " d' e' f' gis' a' b' c'' d'' "
+har4ld  = " d'' c'' b' a' gis' f' e' d' "
+har4l   = har4la + har4ld
+har4lta = " d' f' a' c'' e'' gis'' b'' "
+har4ltd = " d''' b'' gis'' e'' c'' a' f' d' "
+har4lt  = har4lta + har4ltd
+har4lf  = " d gis c' f' b' e'' a'' "
+har4lp0 = " d' f' a' c'' d'' b' gis' e' d' "
+har4lp1 = " d' f' e' gis' f' a' gis' b' a' c'' b' d'' "
+har4lp2 = " d' e' f' gis' d'' c'' b' a' "
+har4lp3 = " d' f' a' c'' e' gis' b' d'' "
+har4lp4 = " d' gis' c'' f' b' e' a' "
+
+# V grade
+
+har5s  = "1312122"
+
+har5n1 = _("Phrygian Dominant")
+har5n2 = _("Phrygian Major")
+har5n3 = _("Balkan")
+har5n4 = _("Jewish")
+har5n5 = _("Spanish Gypsy")
+har5n6 = _("Ahava Rabah")
+har5n7 = _("Mixolydian b2 b6")
+har5n8 = _("Mixolydian b9 b13")
+har5n  = har5n1
+
+har5ca  = " c' des' e' f' g' as' bes' c'' "
+har5cd  = " c'' bes' as' g' f' e' des' c' "
+har5c   = har5ca + har5cd
+har5cta = " c' e' g' bes' des'' f'' as'' "
+har5ctd = " c''' as'' f'' des'' bes' g' e' c' "
+har5ct  = har5cta + har5ctd
+har5cf  = " c f bes e' as' des'' g'' " 
+har5cp0 = " c' e' g' bes' c'' as' f' des' c' "
+har5cp1 = " c' e' des' f' e' g' f' as' g' bes' as' c'' "
+har5cp2 = " c' des' e' f' c'' bes' as' g' "
+har5cp3 = " c' e' g' bes' des' f' as' c'' "
+har5cp4 = " c' f' bes' e' as' des' g' "
+
+har5la  = " e' f' gis' a' b' c'' d'' e'' "
+har5ld  = " e'' d'' c'' b' a' gis' f' e' "
+har5l   = har5la + har5ld
+har5lta = " e' gis' b' d'' f'' a'' c''' "
+har5ltd = " e''' c''' a'' f'' d'' b' gis' e' "
+har5lt  = har5lta + har5ltd
+har5lf  = " e a d' gis' c'' f'' b'' "
+har5lp0 = " e' gis' b' d'' e'' c'' a' f' e' "
+har5lp1 = " e' gis' f' a' gis' b' a' c'' b' d'' c'' e'' "
+har5lp2 = " e' f' gis' a' e'' d'' c'' b' "
+har5lp3 = " e' gis' b' d'' f' a' c'' e'' "
+har5lp4 = " e' a' d'' gis' c'' f' b' "
+
+# VI grade
+
+har6s  = "3121221"
+
+har6n1 = _("Lydian #2")
+har6n  = har6n1
+
+har6ca  = " c' dis' e' fis' g' a' b' c'' "
+har6cd  = " c'' b' a' g' fis' e' dis' c' "
+har6c   = har6ca + har6cd
+har6cta = " c' e' g' b' dis'' fis'' a'' "
+har6ctd = " c''' a'' fis'' dis'' b' g' e' c' "
+har6ct  = har6cta + har6ctd
+har6cf  = " c fis b e' a' dis'' g'' "
+har6cp0 = " c' e' g' b' c'' a' fis' dis' c' "
+har6cp1 = " c' e' dis' fis' e' g' fis' a' g' b' a' c'' "
+har6cp2 = " c' dis' e' fis' c'' b' a' g' "
+har6cp3 = " c' e' g' b' dis' fis' a' c'' "
+har6cp4 = " c' fis' b' e' a' dis' g' "
+
+har6la  = " f' gis' a' b' c'' d'' e'' f'' "
+har6ld  = " f'' e'' d'' c'' b' a' gis' f' "
+har6l   = har6la + har6ld
+har6lta = " f a c' e' gis' b' d''"
+har6ltd = " f'' d'' b' gis' e' c' a f "
+har6lt  = har6lta + har6ltd
+har6lf  = " f b e' a' d'' gis'' c''' "
+har6lp0 = " f' a' c'' e'' f'' d'' b' gis' f' "
+har6lp1 = " f' a' gis' b' a' c'' b' d'' c'' e'' d'' f'' "
+har6lp2 = " f' gis' a' b' f'' e'' d'' c'' "
+har6lp3 = " f' a' c'' e'' gis' b' d'' f'' "
+har6lp4 = " f' b' e'' a' d'' gis' c'' "
+
+# VII grade
+
+har7s  = "1212213"
+
+har7n1 = _("Ultralocrian")
+har7n2 = _("Superlocrian bb7")
+har7n3 = _("Diminished")
+har7n  = har7n1
+
+har7ca  = " c' des' es' fes' ges' as' beses' c'' "
+har7cd  = " c'' beses' as' ges' fes' es' des' c' "
+har7c   = har7ca + har7cd
+har7cta = " c' es' ges' beses' des'' fes'' as'' "
+har7ctd = " c''' as'' fes'' des'' beses' ges' es' c' "
+har7ct  = har7cta + har7ctd
+har7cf  = " c fes beses es' as' des'' ges'' " 
+har7cp0 = " c' es' ges' beses' c'' as' fes' des' c' "
+har7cp1 = " c' es' des' fes' es' ges' fes' as' ges' beses' as' c'' "
+har7cp2 = " c' des' es' fes' c'' beses' as' ges' "
+har7cp3 = " c' es' ges' beses' des' fes' as' c'' "
+har7cp4 = " c' fes' beses' es' as' des' ges' "
+
+har7la  = " gis' a' b' c'' d'' e'' f'' gis'' "
+har7ld  = " gis'' f'' e'' d'' c'' b' a' gis' "
+har7l   = har7la + har7ld
+har7lta = " gis b d' f' a' c'' es'' "
+har7ltd = " gis'' es'' c'' a' f' d' b gis "
+har7lt  = har7lta + har7ltd
+har7lf  = " gis c' f' b' es'' a'' d''' "
+har7lp0 = " gis' b' d'' f'' gis'' e'' c'' a' gis' "
+har7lp1 = " gis' b' a' c'' b' d'' c'' e'' d'' f'' e'' gis'' "
+har7lp2 = " gis' a' b' c'' gis'' f'' e'' d'' "
+har7lp3 = " gis' b' d'' f'' a' c'' e'' gis'' "
+har7lp4 = " gis' c'' f'' b' e'' a' d'' "
+
+#-------------------------------------
+# Harmonic Major Scale and its modes:
+#-------------------------------------
+
+# I grade
+
+ham1s  = "2212131"
+
+ham1n1 = _("Harmonic Major")
+ham1n2 = _("Ionian b6")
+ham1n  = ham1n1
+
+ham1ca  = " c' d' e' f' g' as' b' c'' "
+ham1cd  = " c'' b' as' g' f' e' d' c' "
+ham1c   = ham1ca + ham1cd
+ham1cta = " c' e' g' b' d'' f'' as'' "
+ham1ctd = " c''' as'' f'' d'' b' g' e' c' "
+ham1ct  = ham1cta + ham1ctd
+ham1cf  = " c f b e' as' d'' g'' "
+ham1cp0 = " c' e' g' b' c'' as' f' d' c' "
+ham1cp1 = " c' e' d' f' e' g' f' as' g' b' as' c'' "
+ham1cp2 = " c' d' e' f' c'' b' as' g' "
+ham1cp3 = " c' e' g' b' d' f' as' c'' "
+ham1cp4 = " c' f' b' e' as' d' g' "
+
+ham1la  = ham1ca
+ham1ld  = ham1cd
+ham1l   = ham1c
+ham1lta = ham1cta
+ham1ltd = ham1ctd
+ham1lt  = ham1ct
+ham1lf  = ham1cf
+ham1lp0 = ham1cp0
+ham1lp1 = ham1cp1
+ham1lp2 = ham1cp2
+ham1lp3 = ham1cp3
+ham1lp4 = ham1cp4
+
+# II grade
+
+ham2s  = "2121312"
+
+ham2n1 = _("Dorian b5")
+ham2n2 = _("Locrian #2 #6")
+ham2n  = ham2n1
+
+ham2ca  = " c' d' es' f' ges' a' bes' c'' "
+ham2cd  = " c'' bes' a' ges' f' es' d' c' "
+ham2c   = ham2ca + ham2cd
+ham2cta = " c' es' ges' bes' d'' f'' a'' "
+ham2ctd = " c''' a'' f'' d'' bes' ges' es' c' "
+ham2ct  = ham2cta + ham2ctd
+ham2cf  = " c f bes es' a' d'' ges'' "
+ham2cp0 = " c' es' ges' bes' c'' a' f' d' c' "
+ham2cp1 = " c' es' d' f' es' ges' f' a' ges' bes' a' c'' "
+ham2cp2 = " c' d' es' f' c'' bes' a' ges' "
+ham2cp3 = " c' es' ges' bes' d' f' a' c'' "
+ham2cp4 = " c' f' bes' es' a' d' ges' "
+
+ham2la  = " d' e' f' g' as' b' c'' d'' "
+ham2ld  = " d'' c'' b' as' g' f' e' d' "
+ham2l   = ham2la + ham2ld
+ham2lta = " d' f' as' c'' e'' g'' b'' "
+ham2ltd = " d''' b'' g'' e'' c'' as' f' d' "
+ham2lt  = ham2lta + ham2ltd
+ham2lf  = " d g c' f' b' e'' as'' "
+ham2lp0 = " d' f' as' c'' d'' b' g' e' d' "
+ham2lp1 = " d' f' e' g' f' as' g' b' as' c'' b' d'' "
+ham2lp2 = " d' e' f' g' d'' c'' b' as' "
+ham2lp3 = " d' f' as' c'' e' g' b' d'' "
+ham2lp4 = " d' g' c'' f' b' e' as' "
+
+# III grade
+
+ham3s  = "1213122"
+
+ham3n1 = _("Phrygian b4")
+ham3n2 = _("Superphrygian")
+ham3n3 = _("Superlocrian natural 5")
+ham3n  = ham3n1
+
+ham3ca  = " c' des' es' fes' g' as' bes' c'' "
+ham3cd  = " c'' bes' as' g' fes' es' des' c' "
+ham3c   = ham3ca + ham3cd
+ham3cta = " c' es' g' bes' des'' fes'' as'' "
+ham3ctd = " c''' as'' fes'' des'' bes' g' es' c' "
+ham3ct  = ham3cta + ham3ctd
+ham3cf  = " c fes bes es' as' des'' g'' " 
+ham3cp0 = " c' es' g' bes' c'' as' fes' des' c' "
+ham3cp1 = " c' es' des' fes' es' g' fes' as' g' bes' as' c'' "
+ham3cp2 = " c' des' es' fes' c'' bes' as' g' "
+ham3cp3 = " c' es' g' bes' des' fes' as' c'' "
+ham3cp4 = " c' fes' bes' es' as' des' g' "
+
+ham3la  = " e' f' g' as' b' c'' d'' e'' "
+ham3ld  = " e'' d'' c'' b' as' g' f' e' "
+ham3l   = ham3la + ham3ld
+ham3lta = " e' g' b' d'' f'' as'' c''' "
+ham3ltd = " e''' c''' as'' f'' d'' b' g' e' "
+ham3lt  = ham3lta + ham3ltd
+ham3lf  = " e as d' g' c'' f'' b'' "
+ham3lp0 = " e' g' b' d'' e'' c'' as' f' e' "
+ham3lp1 = " e' g' f' as' g' b' as' c'' b' d'' c'' e'' "
+ham3lp2 = " e' f' g' as' e'' d'' c'' b' "
+ham3lp3 = " e' g' b' d'' f' as' c'' e'' "
+ham3lp4 = " e' as' d'' g' c'' f' b' "
+
+# IV grade
+
+ham4s  = "2131221"
+
+ham4n1 = _("Lydian b3")
+ham4n2 = _("Jazz Minor #4")
+ham4n3 = _("Jazz Minor #11")
+ham4n4 = _("Lydian Diminished")
+ham4n  = ham4n1
+
+ham4ca  = " c' d' es' fis' g' a' b' c'' "
+ham4cd  = " c'' b' a' g' fis' es' d' c' "
+ham4c   = ham4ca + ham4cd
+ham4cta = " c' es' g' b' d'' fis'' a'' "
+ham4ctd = " c''' a'' fis'' d'' b' g' es' c' "
+ham4ct  = ham4cta + ham4ctd
+ham4cf  = " c fis b es' a' d'' g'' "
+ham4cp0 = " c' es' g' b' c'' a' fis' d' c' "
+ham4cp1 = " c' es' d' fis' es' g' fis' a' g' b' a' c'' "
+ham4cp2 = " c' d' es' fis' c'' b' a' g' "
+ham4cp3 = " c' es' g' b' d' fis' a' c'' "
+ham4cp4 = " c' fis' b' es' a' d' g' "
+
+ham4la  = " f' g' as' b' c'' d'' e'' f'' "
+ham4ld  = " f'' e'' d'' c'' b' as' g' f' "
+ham4l   = ham4la + ham4ld
+ham4lta = " f as c' e' g' b' d''"
+ham4ltd = " f'' d'' b' g' e' c' as f "
+ham4lt  = ham4lta + ham4ltd
+ham4lf  = " f b e' as' d'' g'' c''' "
+ham4lp0 = " f' as' c'' e'' f'' d'' b' g' f' "
+ham4lp1 = " f' as' g' b' as' c'' b' d'' c'' e'' d'' f'' "
+ham4lp2 = " f' g' as' b' f'' e'' d'' c'' "
+ham4lp3 = " f' as' c'' e'' g' b' d'' f'' "
+ham4lp4 = " f' b' e'' as' d'' g' c'' "
+
+# V grade
+
+ham5s  = "1312212"
+
+ham5n1 = _("Mixolydian b9")
+ham5n2 = _("Mixolydian b2")
+ham5n  = ham5n1
+
+ham5ca  = " c' des' e' f' g' a' bes' c'' "
+ham5cd  = " c'' bes' a' g' f' e' des' c' "
+ham5c   = ham5ca + ham5cd
+ham5cta = " c' e' g' bes' des'' f'' a'' "
+ham5ctd = " c''' a'' f'' des'' bes' g' e' c' "
+ham5ct  = ham5cta + ham5ctd
+ham5cf  = " c f bes e' a' des'' g'' "
+ham5cp0 = " c' e' g' bes' c'' a' f' des' c' "
+ham5cp1 = " c' e' des' f' e' g' f' a' g' bes' a' c'' "
+ham5cp2 = " c' des' e' f' c'' bes' a' g' "
+ham5cp3 = " c' e' g' bes' des' f' a' c'' "
+ham5cp4 = " c' f' bes' e' a' des' g' "
+
+ham5la  = " g' as' b' c'' d'' e'' f'' g'' "
+ham5ld  = " g'' f'' e'' d'' c'' b' as' g' "
+ham5l   = ham5la + ham5ld
+ham5lta = " g b d' f' as' c'' e'' "
+ham5ltd = " g'' e'' c'' as' f' d' b g "
+ham5lt  = ham5lta + ham5ltd
+ham5lf  = " g c' f' b' e'' as'' d''' "
+ham5lp0 = " g' b' d'' f'' g'' e'' c'' as' g' "
+ham5lp1 = " g' b' as' c'' b' d'' c'' e'' d'' f'' e'' g'' "
+ham5lp2 = " g' as' b' c'' g'' f'' e'' d'' "
+ham5lp3 = " g' b' d'' f'' as' c'' e'' g'' "
+ham5lp4 = " g' c'' f'' b' e'' as' d'' "
+
+# VI grade
+
+ham6s  = "3122121"
+
+ham6n1 = _("Lydian #2 #5")
+ham6n2 = _("Lydian Augmented #2")
+ham6n  = ham6n1
+
+ham6ca  = " c' dis' e' fis' gis' a' b' c'' "
+ham6cd  = " c'' b' a' gis' fis' e' dis' c' "
+ham6c   = ham6ca + ham6cd
+ham6cta = " c' e' gis' b' dis'' fis'' a'' "
+ham6ctd = " c''' a'' fis'' dis'' b' gis' e' c' "
+ham6ct  = ham6cta + ham6ctd
+ham6cf  = " c fis b e' a' dis'' gis'' "
+ham6cp0 = " c' e' gis' b' c'' a' fis' dis' c' "
+ham6cp1 = " c' e' dis' fis' e' gis' fis' a' gis' b' a' c'' "
+ham6cp2 = " c' dis' e' fis' c'' b' a' gis' "
+ham6cp3 = " c' e' gis' b' dis' fis' a' c'' "
+ham6cp4 = " c' fis' b' e' a' dis' gis' "
+
+ham6la  = " as b c' d' e' f' g' as' "
+ham6ld  = " as' g' f' e' d' c' b as "
+ham6l   = ham6la + ham6ld
+ham6lta = " as c' e' g' b' d'' f'' "
+ham6ltd = " as'' f'' d'' b' g' e' c' as "
+ham6lt  = ham6lta + ham6ltd
+ham6lf  = " as, d g c' f' b' e'' "
+ham6lp0 = " as c' e' g' as' f' d' b' as "
+ham6lp1 = " as c' b d' c' e' d' f' e' g' f' as' "
+ham6lp2 = " as b c' d' as' g' f' e' "
+ham6lp3 = " as c' e' g' b d' f' as' "
+ham6lp4 = " as d' g' c' f' b e' "
+
+# VII grade
+
+ham7s  = "1221213"
+
+ham7n1 = _("Locrian bb7")
+ham7n2 = _("Locrian diminished 7")
+ham7n  = ham7n1
+
+ham7ca  = " c' des' es' f' ges' as' beses' c'' "
+ham7cd  = " c'' beses' as' ges' f' es' des' c' "
+ham7c   = ham7ca + ham7cd
+ham7cta = " c' es' ges' beses' des'' f'' as'' "
+ham7ctd = " c''' as'' f'' des'' beses' ges' es' c' "
+ham7ct  = ham7cta + ham7ctd
+ham7cf  = " c f beses es' as' des'' ges'' " 
+ham7cp0 = " c' es' ges' beses' c'' as' f' des' c' "
+ham7cp1 = " c' es' des' f' es' ges' f' as' ges' beses' as' c'' "
+ham7cp2 = " c' des' es' f' c'' beses' as' ges' "
+ham7cp3 = " c' es' ges' beses' des' f' as' c'' "
+ham7cp4 = " c' f' beses' es' as' des' ges' "
+
+ham7la  = " b c' d' e' f' g' as' b' "
+ham7ld  = " b' as' g' f' e' d' c' b "
+ham7l   = ham7la + ham7ld
+ham7lta = " b d' f' as' c'' e'' g'' "
+ham7ltd = " b'' g'' e'' c'' as' f' d' b "
+ham7lt  = ham7lta + ham7ltd
+ham7lf  = " b, e as d' g' c'' f'' "
+ham7lp0 = " b d' f' as' b' g' e' c' b "
+ham7lp1 = " b d' c' e' d' f' e' g' f' as' g' b' "
+ham7lp2 = " b c' d' e' b' as' g' f' "
+ham7lp3 = " b d' f' as' c' e' g' b' "
+ham7lp4 = " b e' as' d' g' c' f' "
+
+#-------------------------------------
+# Double Harmonic Scale and its modes:
+#-------------------------------------
+
+# I grade
+
+dha1s  = "1312131"
+
+dha1n1 = _("Double Harmonic Major")
+dha1n2 = _("Double Harmonic")
+dha1n3 = _("Ionian b2 b6")
+dha1n4 = _("Bizantine")
+dha1n5 = _("Major Gipsy")
+dha1n6 = _("Charhargah")
+dha1n  = dha1n1
+
+dha1ca  = " c' des' e' f' g' as' b' c'' "
+dha1cd  = " c'' b' as' g' f' e' des' c' "
+dha1c   = dha1ca + dha1cd
+dha1cta = " c' e' g' b' des'' f'' as'' "
+dha1ctd = " c''' as'' f'' des'' b' g' e' c' "
+dha1ct  = dha1cta + dha1ctd
+dha1cf  = " c f b e' as' des'' g'' "
+dha1cp0 = " c' e' g' b' c'' as' f' des' c' "
+dha1cp1 = " c' e' des' f' e' g' f' as' g' b' as' c'' "
+dha1cp2 = " c' des' e' f' c'' b' as' g' "
+dha1cp3 = " c' e' g' b' des' f' as' c'' "
+dha1cp4 = " c' f' b' e' as' des' g' "
+
+dha1la  = dha1ca
+dha1ld  = dha1cd
+dha1l   = dha1c
+dha1lta = dha1cta
+dha1ltd = dha1ctd
+dha1lt  = dha1ct
+dha1lf  = dha1cf
+dha1lp0 = dha1cp0
+dha1lp1 = dha1cp1
+dha1lp2 = dha1cp2
+dha1lp3 = dha1cp3
+dha1lp4 = dha1cp4
+
+# II grade
+
+dha2s  = "3121311"
+
+dha2n1 = _("Lydian #2 #6")
+dha2n  = dha2n1
+
+dha2ca  = " c' dis' e' fis' g' ais' b' c'' "
+dha2cd  = " c'' b' ais' g' fis' e' dis' c' "
+dha2c   = dha2ca + dha2cd
+dha2cta = " c' e' g' b' dis'' fis'' ais'' "
+dha2ctd = " c''' ais'' fis'' dis'' b' g' e' c' "
+dha2ct  = dha2cta + dha2ctd
+dha2cf  = " c fis b e' ais' dis'' g'' "
+dha2cp0 = " c' e' g' b' c'' ais' fis' dis' c' "
+dha2cp1 = " c' e' dis' fis' e' g' fis' ais' g' b' ais' c'' "
+dha2cp2 = " c' dis' e' fis' c'' b' ais' g' "
+dha2cp3 = " c' e' g' b' dis' fis' ais' c'' "
+dha2cp4 = " c' fis' b' e' ais' dis' g' "
+
+dha2la  = " des' e' f' g' as' b' c'' des'' "
+dha2ld  = " des'' c'' b' as' g' f' e' des' "
+dha2l   = dha2la + dha2ld
+dha2lta = " des' f' as' c'' e'' g'' b'' "
+dha2ltd = " des''' b'' g'' e'' c'' as' f' des' "
+dha2lt  = dha2lta + dha2ltd
+dha2lf  = " des g c' f' b' e'' as'' "
+dha2lp0 = " des' f' as' c'' des'' b' g' e' des' "
+dha2lp1 = " des' f' e' g' f' as' g' b' as' c'' b' des'' "
+dha2lp2 = " des' e' f' g' des'' c'' b' as' "
+dha2lp3 = " des' f' as' c'' e' g' b' des'' "
+dha2lp4 = " des' g' c'' f' b' e' as' "
+
+# III grade
+
+dha3s  = "1213113"
+
+dha3n1 = _("Ultraphrygian")
+dha3n2 = _("Phrygian b4 bb7")
+dha3n3 = _("Ultralocrian natural 5")
+dha3n  = dha3n1
+
+dha3ca  = " c' des' es' fes' g' as' beses' c'' "
+dha3cd  = " c'' beses' as' g' fes' es' des' c' "
+dha3c   = dha3ca + dha3cd
+dha3cta = " c' es' g' beses' des'' fes'' as'' "
+dha3ctd = " c''' as'' fes'' des'' beses' g' es' c' "
+dha3ct  = dha3cta + dha3ctd
+dha3cf  = " c fes beses es' as' des'' g'' "
+dha3cp0 = " c' es' g' beses' c'' as' fes' des' c' "
+dha3cp1 = " c' es' des' fes' es' g' fes' as' g' beses' as' c'' "
+dha3cp2 = " c' des' es' fes' c'' beses' as' g' "
+dha3cp3 = " c' es' g' beses' des' fes' as' c'' "
+dha3cp4 = " c' fes' beses' es' as' des' g' "
+
+dha3la  = " e' f' g' as' b' c'' des'' e'' "
+dha3ld  = " e'' des'' c'' b' as' g' f' e' "
+dha3l   = dha3la + dha3ld
+dha3lta = " e' g' b' des'' f'' as'' c''' "
+dha3ltd = " e''' c''' as'' f'' des'' b' g' e' "
+dha3lt  = dha3lta + dha3ltd
+dha3lf  = " e as des' g' c'' f'' b'' "
+dha3lp0 = " e' g' b' des'' e'' c'' as' f' e' "
+dha3lp1 = " e' g' f' as' g' b' as' c'' b' des'' c'' e'' "
+dha3lp2 = " e' f' g' as' e'' des'' c'' b' "
+dha3lp3 = " e' g' b' des'' f' as' c'' e'' "
+dha3lp4 = " e' as' des'' g' c'' f' b' "
+
+# IV grade
+
+dha4s  = "2131131"
+
+dha4n1 = _("Hungarian Minor")
+dha4n2 = _("Double Harmonic Minor")
+dha4n3 = _("Harmonic Minor #4")
+dha4n4 = _("Lydian b3 b6")
+dha4n5 = _("Algerian")
+dha4n6 = _("Minor Gipsy")
+dha4n  = dha4n1
+
+dha4ca  = " c' d' es' fis' g' as' b' c'' "
+dha4cd  = " c'' b' as' g' fis' es' d' c' "
+dha4c   = dha4ca + dha4cd
+dha4cta = " c' es' g' b' d'' fis'' as'' "
+dha4ctd = " c''' as'' fis'' d'' b' g' es' c' "
+dha4ct  = dha4cta + dha4ctd
+dha4cf  = " c fis b es' as' d'' g'' "
+dha4cp0 = " c' es' g' b' c'' as' fis' d' c' "
+dha4cp1 = " c' es' d' fis' es' g' fis' as' g' b' as' c'' "
+dha4cp2 = " c' d' es' fis' c'' b' as' g' "
+dha4cp3 = " c' es' g' b' d' fis' as' c'' "
+dha4cp4 = " c' fis' b' es' as' d' g' "
+
+dha4la  = " f' g' as' b' c'' des'' e'' f'' "
+dha4ld  = " f'' e'' des'' c'' b' as' g' f' "
+dha4l   = dha4la + dha4ld
+dha4lta = " f as c' e' g' b' des''"
+dha4ltd = " f'' des'' b' g' e' c' as f "
+dha4lt  = dha4lta + dha4ltd
+dha4lf  = " f b e' as' des'' g'' c''' "
+dha4lp0 = " f' as' c'' e'' f'' des'' b' g' f' "
+dha4lp1 = " f' as' g' b' as' c'' b' des'' c'' e'' des'' f'' "
+dha4lp2 = " f' g' as' b' f'' e'' des'' c'' "
+dha4lp3 = " f' as' c'' e'' g' b' des'' f'' "
+dha4lp4 = " f' b' e'' as' des'' g' c'' "
+
+# V grade
+
+dha5s  = "1311312"
+
+dha5n1 = _("Oriental")
+dha5n2 = _("Mixolydian b5 b9")
+dha5n3 = _("Mixolydian b2 b5")
+dha5n  = dha5n1
+
+dha5ca  = " c' des' e' f' ges' a' bes' c'' "
+dha5cd  = " c'' bes' a' ges' f' e' des' c' "
+dha5c   = dha5ca + dha5cd
+dha5cta = " c' e' ges' bes' des'' f'' a'' "
+dha5ctd = " c''' a'' f'' des'' bes' ges' e' c' "
+dha5ct  = dha5cta + dha5ctd
+dha5cf  = " c f bes e' a' des'' ges'' "
+dha5cp0 = " c' e' ges' bes' c'' a' f' des' c' "
+dha5cp1 = " c' e' des' f' e' ges' f' a' ges' bes' a' c'' "
+dha5cp2 = " c' des' e' f' c'' bes' a' ges' "
+dha5cp3 = " c' e' ges' bes' des' f' a' c'' "
+dha5cp4 = " c' f' bes' e' a' des' ges' "
+
+dha5la  = " g' as' b' c'' des'' e'' f'' g'' "
+dha5ld  = " g'' f'' e'' des'' c'' b' as' g' "
+dha5l   = dha5la + dha5ld
+dha5lta = " g b des' f' as' c'' e'' "
+dha5ltd = " g'' e'' c'' as' f' des' b g "
+dha5lt  = dha5lta + dha5ltd
+dha5lf  = " g c' f' b' e'' as'' des''' "
+dha5lp0 = " g' b' des'' f'' g'' e'' c'' as' g' "
+dha5lp1 = " g' b' as' c'' b' des'' c'' e'' des'' f'' e'' g'' "
+dha5lp2 = " g' as' b' c'' g'' f'' e'' des'' "
+dha5lp3 = " g' b' des'' f'' as' c'' e'' g'' "
+dha5lp4 = " g' c'' f'' b' e'' as' des'' "
+
+# VI grade
+
+dha6s  = "3113121"
+
+dha6n1 = _("Ionian #2 #5")
+dha6n2 = _("Ionian Augmented #2")
+dha6n  = dha6n1
+
+dha6ca  = " c' dis' e' f' gis' a' b' c'' "
+dha6cd  = " c'' b' a' gis' f' e' dis' c' "
+dha6c   = dha6ca + dha6cd
+dha6cta = " c' e' gis' b' dis'' f'' a'' "
+dha6ctd = " c''' a'' f'' dis'' b' gis' e' c' "
+dha6ct  = dha6cta + dha6ctd
+dha6cf  = " c f b e' a' dis'' gis'' "
+dha6cp0 = " c' e' gis' b' c'' a' f' dis' c' "
+dha6cp1 = " c' e' dis' f' e' gis' f' a' gis' b' a' c'' "
+dha6cp2 = " c' dis' e' f' c'' b' a' gis' "
+dha6cp3 = " c' e' gis' b' dis' f' a' c'' "
+dha6cp4 = " c' f' b' e' a' dis' gis' "
+
+dha6la  = " as b c' des' e' f' g' as' "
+dha6ld  = " as' g' f' e' des' c' b as "
+dha6l   = dha6la + dha6ld
+dha6lta = " as c' e' g' b' des'' f'' "
+dha6ltd = " as'' f'' des'' b' g' e' c' as "
+dha6lt  = dha6lta + dha6ltd
+dha6lf  = " as, des g c' f' b' e'' "
+dha6lp0 = " as c' e' g' as' f' des' b as "
+dha6lp1 = " as c' b des' c' e' des' f' e' g' f' as' "
+dha6lp2 = " as b c' des' as' g' f' e' "
+dha6lp3 = " as c' e' g' b des' f' as' "
+dha6lp4 = " as des' g' c' f' b e' "
+
+# VII grade
+
+dha7s  = "1131213"
+
+dha7n1 = _("Locrian bb3 bb7")
+dha7n  = dha7n1
+
+dha7ca  = " c' des' eses' f' ges' as' beses' c'' "
+dha7cd  = " c'' beses' as' ges' f' eses' des' c' "
+dha7c   = dha7ca + dha7cd
+dha7cta = " c' eses' ges' beses' des'' f'' as'' "
+dha7ctd = " c''' as'' f'' des'' beses' ges' eses' c' "
+dha7ct  = dha7cta + dha7ctd
+dha7cf  = " c f beses eses' as' des'' ges'' "
+dha7cp0 = " c' eses' ges' beses' c'' as' f' des' c' "
+dha7cp1 = " c' eses' des' f' eses' ges' f' as' ges' beses' as' c'' "
+dha7cp2 = " c' des' eses' f' c'' beses' as' ges' "
+dha7cp3 = " c' eses' ges' beses' des' f' as' c'' "
+dha7cp4 = " c' f' beses' eses' as' des' ges' "
+
+dha7la  = " b c' des' e' f' g' as' b' "
+dha7ld  = " b' as' g' f' e' des' c' b "
+dha7l   = dha7la + dha7ld
+dha7lta = " b des' f' as' c'' e'' g'' "
+dha7ltd = " b'' g'' e'' c'' as' f' des' b "
+dha7lt  = dha7lta + dha7ltd
+dha7lf  = " b, e as des' g' c'' f'' "
+dha7lp0 = " b des' f' as' b' g' e' c' b "
+dha7lp1 = " b des' c' e' des' f' e' g' f' as' g' b' "
+dha7lp2 = " b c' des' e' b' as' g' f' "
+dha7lp3 = " b des' f' as' c' e' g' b' "
+dha7lp4 = " b e' as' des' g' c' f' "
+
+#-------------------------------------
+# Neapolitan Scale and its modes:
+#-------------------------------------
+
+# I grade
+
+nea1s  = "1222221"
+
+nea1n1 = _("Neapolitan")
+nea1n2 = _("Neapolitan Major")
+nea1n3 = _("Jazz Minor b2")
+nea1n  = nea1n1
+
+nea1ca  = " c' des' es' f' g' a' b' c'' "
+nea1cd  = " c'' b' a' g' f' es' des' c' "
+nea1c   = nea1ca + nea1cd
+nea1cta = " c' es' g' b' des'' f'' a'' "
+nea1ctd = " c''' a'' f'' des'' b' g' es' c' "
+nea1ct  = nea1cta + nea1ctd
+nea1cf  = " c f b es' a' des'' g'' "
+nea1cp0 = " c' es' g' b' c'' a' f' des' c' "
+nea1cp1 = " c' es' des' f' es' g' f' a' g' b' a' c'' "
+nea1cp2 = " c' des' es' f' c'' b' a' g' "
+nea1cp3 = " c' es' g' b' des' f' a' c'' "
+nea1cp4 = " c' f' b' es' a' des' g' "
+
+nea1la  = nea1ca
+nea1ld  = nea1cd
+nea1l   = nea1c
+nea1lta = nea1cta
+nea1ltd = nea1ctd
+nea1lt  = nea1ct
+nea1lf  = nea1cf
+nea1lp0 = nea1cp0
+nea1lp1 = nea1cp1
+nea1lp2 = nea1cp2
+nea1lp3 = nea1cp3
+nea1lp4 = nea1cp4
+
+# II grade
+
+nea2s  = "2222211"
+
+nea2n1 = _("Leading Whole-Tone")
+nea2n2 = _("Lydian #5 #6")
+nea2n3 = _("Lydian Augmented #6")
+nea2n  = nea2n1
+
+nea2ca  = " c' d' e' fis' gis' ais' b' c'' "
+nea2cd  = " c'' b' ais' gis' fis' e' d' c' "
+nea2c   = nea2ca + nea2cd
+nea2cta = " c' e' gis' b' d'' fis'' ais'' "
+nea2ctd = " c''' ais'' fis'' d'' b' gis' e' c' "
+nea2ct  = nea2cta + nea2ctd
+nea2cf  = " c fis b e' ais' d'' gis'' "
+nea2cp0 = " c' e' gis' b' c'' ais' fis' d' c' "
+nea2cp1 = " c' e' d' fis' e' gis' fis' ais' gis' b' ais' c'' "
+nea2cp2 = " c' d' e' fis' c'' b' ais' gis' "
+nea2cp3 = " c' e' gis' b' d' fis' ais' c'' "
+nea2cp4 = " c' fis' b' e' ais' d' gis' "
+
+nea2la  = " des' es' f' g' a' b' c'' des'' "
+nea2ld  = " des'' c'' b' a' g' f' es' des' "
+nea2l   = nea2la + nea2ld
+nea2lta = " des' f' a' c'' es'' g'' b'' "
+nea2ltd = " des''' b'' g'' es'' c'' a' f' des' "
+nea2lt  = nea2lta + nea2ltd
+nea2lf  = " des g c' f' b' es'' a'' "
+nea2lp0 = " des' f' a' c'' des'' b' g' es' des' "
+nea2lp1 = " des' f' es' g' f' a' g' b' a' c'' b' des'' "
+nea2lp2 = " des' es' f' g' des'' c'' b' a' "
+nea2lp3 = " des' f' a' c'' es' g' b' des'' "
+nea2lp4 = " des' g' c'' f' b' es' a' "
+
+# III grade
+
+nea3s  = "2222112"
+
+nea3n1 = _("Lydian Augmented Dominant")
+nea3n2 = _("Lydian #5 b7")
+nea3n3 = _("Mixolydian #4 #5")
+nea3n4 = _("Mixolydian #5 #11")
+nea3n  = nea3n1
+
+nea3ca  = " c' d' e' fis' gis' a' bes' c'' "
+nea3cd  = " c'' bes' a' gis' fis' e' d' c' "
+nea3c   = nea3ca + nea3cd
+nea3cta = " c' e' gis' bes' d'' fis'' a'' "
+nea3ctd = " c''' a'' fis'' d'' bes' gis' e' c' "
+nea3ct  = nea3cta + nea3ctd
+nea3cf  = " c fis bes e' a' d'' gis'' "
+nea3cp0 = " c' e' gis' bes' c'' a' fis' d' c' "
+nea3cp1 = " c' e' d' fis' e' gis' fis' a' gis' bes' a' c'' "
+nea3cp2 = " c' d' e' fis' c'' bes' a' gis' "
+nea3cp3 = " c' e' gis' bes' d' fis' a' c'' "
+nea3cp4 = " c' fis' bes' e' a' d' gis' "
+
+nea3la  = " es' f' g' a' b' c'' des'' es'' "
+nea3ld  = " es'' des'' c'' b' a' g' f' es' "
+nea3l   = nea3la + nea3ld
+nea3lta = " es' g' b' des'' f'' a'' c''' "
+nea3ltd = " es''' c''' a'' f'' des'' b' g' es' "
+nea3lt  = nea3lta + nea3ltd
+nea3lf  = " es a des' g' c'' f'' b'' "
+nea3lp0 = " es' g' b' des'' es'' c'' a' f' es' "
+nea3lp1 = " es' g' f' a' g' b' a' c'' b' des'' c'' es'' "
+nea3lp2 = " es' f' g' a' es'' des'' c'' b' "
+nea3lp3 = " es' g' b' des'' f' a' c'' es'' "
+nea3lp4 = " es' a' des'' g' c'' f' b' "
+
+# IV grade
+
+nea4s  = "2221122"
+
+nea4n1 = _("Lydian Dominant b6")
+nea4n2 = _("Lydian b6 b7")
+nea4n3 = _("Mixolydian #4 b6")
+nea4n4 = _("Mixolydian #11 b13")
+nea4n5 = _("Lydian Minor")
+nea4n  = nea4n1
+
+nea4ca  = " c' d' e' fis' g' as' bes' c'' "
+nea4cd  = " c'' bes' as' g' fis' e' d' c' "
+nea4c   = nea4ca + nea4cd
+nea4cta = " c' e' g' bes' d'' fis'' as'' "
+nea4ctd = " c''' as'' fis'' d'' bes' g' e' c' "
+nea4ct  = nea4cta + nea4ctd
+nea4cf  = " c fis bes e' as' d'' g'' "
+nea4cp0 = " c' e' g' bes' c'' as' fis' d' c' "
+nea4cp1 = " c' e' d' fis' e' g' fis' as' g' bes' as' c'' "
+nea4cp2 = " c' d' e' fis' c'' bes' as' g' "
+nea4cp3 = " c' e' g' bes' d' fis' as' c'' "
+nea4cp4 = " c' fis' bes' e' as' d' g' "
+
+nea4la  = " f' g' a' b' c'' des'' es'' f'' "
+nea4ld  = " f'' es'' des'' c'' b' a' g' f' "
+nea4l   = nea4la + nea4ld
+nea4lta = " f a c' es' g' b' des''"
+nea4ltd = " f'' des'' b' g' es' c' a f "
+nea4lt  = nea4lta + nea4ltd
+nea4lf  = " f b es' a' des'' g'' c''' "
+nea4lp0 = " f' a' c'' es'' f'' des'' b' g' f' "
+nea4lp1 = " f' a' g' b' a' c'' b' des'' c'' es'' des'' f'' "
+nea4lp2 = " f' g' a' b' f'' es'' des'' c'' "
+nea4lp3 = " f' a' c'' es'' g' b' des'' f'' "
+nea4lp4 = " f' b' es'' a' des'' g' c'' "
+
+# V grade
+
+nea5s  = "2211222"
+
+nea5n1 = _("Major Locrian")
+nea5n2 = _("Mixolydian b5 b6")
+nea5n3 = _("Mixolydian b5 b13")
+nea5n4 = _("Locrian #2 #3")
+nea5n5 = _("Arabian")
+nea5n  = nea5n1
+
+nea5ca  = " c' d' e' f' ges' as' bes' c'' "
+nea5cd  = " c'' bes' as' ges' f' e' d' c' "
+nea5c   = nea5ca + nea5cd
+nea5cta = " c' e' ges' bes' d'' f'' as'' "
+nea5ctd = " c''' as'' f'' d'' bes' ges' e' c' "
+nea5ct  = nea5cta + nea5ctd
+nea5cf  = " c f bes e' as' d'' ges'' "
+nea5cp0 = " c' e' ges' bes' c'' as' f' d' c' "
+nea5cp1 = " c' e' d' f' e' ges' f' as' ges' bes' as' c'' "
+nea5cp2 = " c' d' e' f' c'' bes' as' ges' "
+nea5cp3 = " c' e' ges' bes' d' f' as' c'' "
+nea5cp4 = " c' f' bes' e' as' d' ges' "
+
+nea5la  = " g' a' b' c'' des'' es'' f'' g'' "
+nea5ld  = " g'' f'' es'' des'' c'' b' a' g' "
+nea5l   = nea5la + nea5ld
+nea5lta = " g b des' f' a' c'' es'' "
+nea5ltd = " g'' es'' c'' a' f' des' b g "
+nea5lt  = nea5lta + nea5ltd
+nea5lf  = " g c' f' b' es'' a'' des''' "
+nea5lp0 = " g' b' des'' f'' g'' es'' c'' a' g' "
+nea5lp1 = " g' b' a' c'' b' des'' c'' es'' des'' f'' es'' g'' "
+nea5lp2 = " g' a' b' c'' g'' f'' es'' des'' "
+nea5lp3 = " g' b' des'' f'' a' c'' es'' g'' "
+nea5lp4 = " g' c'' f'' b' es'' a' des'' "
+
+# VI grade
+
+nea6s  = "2112222"
+
+nea6n1 = _("Semilocrian b4")
+nea6n2 = _("Locrian natural 2 b4")
+nea6n  = nea6n1
+
+nea6ca  = " c' d' es' fes' ges' as' bes' c'' "
+nea6cd  = " c'' bes' as' ges' fes' es' d' c' "
+nea6c   = nea6ca + nea6cd
+nea6cta = " c' es' ges' bes' d'' fes'' as'' "
+nea6ctd = " c''' as'' fes'' d'' bes' ges' es' c' "
+nea6ct  = nea6cta + nea6ctd
+nea6cf  = " c fes bes es' as' d'' ges'' "
+nea6cp0 = " c' es' ges' bes' c'' as' fes' d' c' "
+nea6cp1 = " c' es' d' fes' es' ges' fes' as' ges' bes' as' c'' "
+nea6cp2 = " c' d' es' fes' c'' bes' as' ges' "
+nea6cp3 = " c' es' ges' bes' d' fes' as' c'' "
+nea6cp4 = " c' fes' bes' es' as' d' ges' "
+
+nea6la  = " a b c' des' es' f' g' a' "
+nea6ld  = " a' g' f' es' des' c' b a "
+nea6l   = nea6la + nea6ld
+nea6lta = " a c' es' g' b' des'' f'' "
+nea6ltd = " a'' f'' des'' b' g' es' c' a "
+nea6lt  = nea6lta + nea6ltd
+nea6lf  = " a, des g c' f' b' es'' "
+nea6lp0 = " a c' es' g' a' f' des' b a "
+nea6lp1 = " a c' b des' c' es' des' f' es' g' f' a' "
+nea6lp2 = " a b c' des' a' g' f' es' "
+nea6lp3 = " a c' es' g' b des' f' a' "
+nea6lp4 = " a des' g' c' f' b es' "
+
+# VII grade
+
+nea7s  = "1122222"
+
+nea7n1 = _("Superlocrian bb3")
+nea7n  = nea7n1
+
+nea7ca  = " c' des' eses' fes' ges' as' bes' c'' "
+nea7cd  = " c'' bes' as' ges' fes' eses' des' c' "
+nea7c   = nea7ca + nea7cd
+nea7cta = " c' eses' ges' bes' des'' fes'' as'' "
+nea7ctd = " c''' as'' fes'' des'' bes' ges' eses' c' "
+nea7ct  = nea7cta + nea7ctd
+nea7cf  = " c fes bes eses' as' des'' ges'' "
+nea7cp0 = " c' eses' ges' bes' c'' as' fes' des' c' "
+nea7cp1 = " c' eses' des' fes' eses' ges' fes' as' ges' bes' as' c'' "
+nea7cp2 = " c' des' eses' fes' c'' bes' as' ges' "
+nea7cp3 = " c' eses' ges' bes' des' fes' as' c'' "
+nea7cp4 = " c' fes' bes' eses' as' des' ges' "
+
+nea7la  = " b c' des' es' f' g' a' b' "
+nea7ld  = " b' a' g' f' es' des' c' b "
+nea7l   = nea7la + nea7ld
+nea7lta = " b des' f' a' c'' es'' g'' "
+nea7ltd = " b'' g'' es'' c'' a' f' des' b "
+nea7lt  = nea7lta + nea7ltd
+nea7lf  = " b, es a des' g' c'' f'' "
+nea7lp0 = " b des' f' a' b' g' es' c' b "
+nea7lp1 = " b des' c' es' des' f' es' g' f' a' g' b' "
+nea7lp2 = " b c' des' es' b' a' g' f' "
+nea7lp3 = " b des' f' a' c' es' g' b' "
+nea7lp4 = " b es' a' des' g' c' f' "
+
+#-------------------------------------
+# Neapolitan Minor Scale and its modes:
+#-------------------------------------
+
+# I grade
+
+nem1s  = "1222131"
+
+nem1n1 = _("Neapolitan Minor")
+nem1n2 = _("Neapolitan Major b6")
+nem1n3 = _("Harmonic Minor b2")
+nem1n4 = _("Phrygian maj7")
+nem1n  = nem1n1
+
+nem1ca  = " c' des' es' f' g' as' b' c'' "
+nem1cd  = " c'' b' as' g' f' es' des' c' "
+nem1c   = nem1ca + nem1cd
+nem1cta  = " c' es' g' b' des'' f'' as'' "
+nem1ctd = " c''' as'' f'' des'' b' g' es' c' "
+nem1ct  = nem1cta + nem1ctd
+nem1cf  = " c f b es' as' des'' g'' "
+nem1cp0 = " c' es' g' b' c'' as' f' des' c' "
+nem1cp1 = " c' es' des' f' es' g' f' as' g' b' as' c'' "
+nem1cp2 = " c' des' es' f' c'' b' as' g' "
+nem1cp3 = " c' es' g' b' des' f' as' c'' "
+nem1cp4 = " c' f' b' es' as' des' g' "
+
+nem1la  = " e' f' g' a' b' c'' dis'' e'' "
+nem1ld  = " e'' dis'' c'' b' a' g' f' e' "
+nem1l   = nem1la + nem1ld
+nem1lta = " e' g' b' dis'' f'' a'' c''' "
+nem1ltd = " e''' c''' a'' f'' dis'' b' g' e' "
+nem1lt  = nem1lta + nem1ltd
+nem1lf  = " e a dis' g' c'' f'' b'' "
+nem1lp0 = " e' g' b' dis'' e'' c'' a' f' e' "
+nem1lp1 = " e' g' f' a' g' b' a' c'' b' dis'' c'' e'' "
+nem1lp2 = " e' f' g' a' e'' dis'' c'' b' "
+nem1lp3 = " e' g' b' dis'' f' a' c'' e'' "
+nem1lp4 = " e' a' dis'' g' c'' f' b' "
+
+# II grade
+
+nem2s  = "2221311"
+
+nem2n1 = _("Lydian #6")
+nem2n  = nem2n1
+
+nem2ca  = " c' d' e' fis' g' ais' b' c'' "
+nem2cd  = " c'' b' ais' g' fis' e' d' c' "
+nem2c   = nem2ca + nem2cd
+nem2cta  = " c' e' g' b' d'' fis'' ais'' "
+nem2ctd = " c''' ais'' fis'' d'' b' g' e' c' "
+nem2ct  = nem2cta + nem2ctd
+nem2cf  = " c fis b e' ais' d'' g'' "
+nem2cp0 = " c' e' g' b' c'' ais' fis' d' c' "
+nem2cp1 = " c' e' d' fis' e' g' fis' ais' g' b' ais' c'' "
+nem2cp2 = " c' d' e' fis' c'' b' ais' g' "
+nem2cp3 = " c' e' g' b' d' fis' ais' c'' "
+nem2cp4 = " c' fis' b' e' ais' d' g' "
+
+nem2la  = " f' g' a' b' c'' dis'' e'' f'' "
+nem2ld  = " f'' e'' dis'' c'' b' a' g' f' "
+nem2l   = nem2la + nem2ld
+nem2lta = " f a c' e' g' b' dis''"
+nem2ltd = " f'' dis'' b' g' e' c' a f "
+nem2lt  = nem2lta + nem2ltd
+nem2lf  = " f b e' a' dis'' g'' c''' "
+nem2lp0 = " f' a' c'' e'' f'' dis'' b' g' f' "
+nem2lp1 = " f' a' g' b' a' c'' b' dis'' c'' e'' dis'' f'' "
+nem2lp2 = " f' g' a' b' f'' e'' dis'' c'' "
+nem2lp3 = " f' a' c'' e'' g' b' dis'' f'' "
+nem2lp4 = " f' b' e'' a' dis'' g' c'' "
+
+# III grade
+
+nem3s  = "2213112"
+
+nem3n1 = _("Mixolydian Augmented")
+nem3n2 = _("Mixolydian #5")
+nem3n  = nem3n1
+
+nem3ca  = " c' d' e' f' gis' a' bes' c'' "
+nem3cd  = " c'' bes' a' gis' f' e' d' c' "
+nem3c   = nem3ca + nem3cd
+nem3cta  = " c' e' gis' bes' d'' f'' a'' "
+nem3ctd = " c''' a'' f'' d'' bes' gis' e' c' "
+nem3ct  = nem3cta + nem3ctd
+nem3cf  = " c f bes e' a' d'' g'' "
+nem3cp0 = " c' e' gis' bes' c'' a' f' d' c' "
+nem3cp1 = " c' e' d' f' e' gis' f' a' gis' bes' a' c'' "
+nem3cp2 = " c' d' e' f' c'' bes' a' gis' "
+nem3cp3 = " c' e' gis' bes' d' f' a' c'' "
+nem3cp4 = " c' f' bes' e' a' d' gis' "
+
+nem3la  = " g' a' b' c'' dis'' e'' f'' g'' "
+nem3ld  = " g'' f'' e'' dis'' c'' b' a' g' "
+nem3l   = nem3la + nem3ld
+nem3lta = " g b dis' f' a' c'' e'' "
+nem3ltd = " g'' e'' c'' a' f' dis' b g "
+nem3lt  = nem3lta + nem3ltd
+nem3lf  = " g c' f' b' e'' a'' dis''' "
+nem3lp0 = " g' b' dis'' f'' g'' e'' c'' a' g' "
+nem3lp1 = " g' b' a' c'' b' dis'' c'' e'' dis'' f'' e'' g'' "
+nem3lp2 = " g' a' b' c'' g'' f'' e'' dis'' "
+nem3lp3 = " g' b' dis'' f'' a' c'' e'' g'' "
+nem3lp4 = " g' c'' f'' b' e'' a' dis'' "
+
+# IV grade
+
+nem4s  = "2131122"
+
+nem4n1 = _("Hungarian Gipsy")
+nem4n2 = _("Aeolian #4")
+nem4n  = nem4n1
+
+nem4ca  = " c' d' es' fis' g' as' bes' c'' "
+nem4cd  = " c'' bes' as' g' fis' es' d' c' "
+nem4c   = nem4ca + nem4cd
+nem4cta  = " c' es' g' bes' d'' fis'' as'' "
+nem4ctd = " c''' as'' fis'' d'' bes' g' es' c' "
+nem4ct  = nem4cta + nem4ctd
+nem4cf  = " c fis bes es' as' d'' g'' "
+nem4cp0 = " c' es' g' bes' c'' as' fis' d' c' "
+nem4cp1 = " c' es' d' fis' es' g' fis' as' g' bes' as' c'' "
+nem4cp2 = " c' d' es' fis' c'' bes' as' g' "
+nem4cp3 = " c' es' g' bes' d' fis' as' c'' "
+nem4cp4 = " c' fis' bes' es' as' d' g' "
+
+nem4la  = " a b c' dis' e' f' g' a' "
+nem4ld  = " a' g' f' e' dis' c' b a "
+nem4l   = nem4la + nem4ld
+nem4lta = " a c' e' g' b' dis'' f'' "
+nem4ltd = " a'' f'' dis'' b' g' e' c' a "
+nem4lt  = nem4lta + nem4ltd
+nem4lf  = " a, dis g c' f' b' e'' "
+nem4lp0 = " a c' e' g' a' f' dis' b a "
+nem4lp1 = " a c' b dis' c' e' dis' f' e' g' f' a' "
+nem4lp2 = " a b c' dis' a' g' f' e' "
+nem4lp3 = " a c' e' g' b dis' f' a' "
+nem4lp4 = " a dis' g' c' f' b e' "
+
+# V grade
+
+nem5s  = "1311222"
+
+nem5n1 = _("Locrian Dominant")
+nem5n2 = _("Locrian #3")
+nem5n3 = _("Oriental b6")
+nem5n4 = _("Mixolydian b5 b9 b13")
+nem5n5 = _("Mixolydian b2 b5 b6")
+nem5n  = nem5n1
+
+nem5ca  = " c' des' e' f' ges' as' bes' c'' "
+nem5cd  = " c'' bes' as' ges' f' e' des' c' "
+nem5c   = nem5ca + nem5cd
+nem5cta  = " c' e' ges' bes' des'' f'' as'' "
+nem5ctd = " c''' as'' f'' des'' bes' ges' e' c' "
+nem5ct  = nem5cta + nem5ctd
+nem5cf  = " c f bes e' as' des'' g'' " 
+nem5cp0 = " c' e' ges' bes' c'' as' f' des' c' "
+nem5cp1 = " c' e' des' f' e' ges' f' as' ges' bes' as' c'' "
+nem5cp2 = " c' des' e' f' c'' bes' as' ges' "
+nem5cp3 = " c' e' ges' bes' des' f' as' c'' "
+nem5cp4 = " c' f' bes' e' as' des' ges' "
+
+nem5la  = " b c' dis' e' f' g' a' b' "
+nem5ld  = " b' a' g' f' e' dis' c' b "
+nem5l   = nem5la + nem5ld
+nem5lta = " b dis' f' a' c'' e'' g'' "
+nem5ltd = " b'' g'' e'' c'' a' f' dis' b "
+nem5lt  = nem5lta + nem5ltd
+nem5lf  = " b, e a dis' g' c'' f'' "
+nem5lp0 = " b dis' f' a' b' g' e' c' b "
+nem5lp1 = " b dis' c' e' dis' f' e' g' f' a' g' b' "
+nem5lp2 = " b c' dis' e' b' a' g' f' "
+nem5lp3 = " b dis' f' a' c' e' g' b' "
+nem5lp4 = " b e' a' dis' g' c' f' "
+
+# VI grade
+
+nem6s  = "3112221"
+
+nem6n1 = _("Ionian #2")
+nem6n  = nem6n1
+
+nem6ca  = " c' dis' e' f' g' a' b' c'' "
+nem6cd  = " c'' b' a' g' f' e' dis' c' "
+nem6c   = nem6ca + nem6cd
+nem6cta  = " c' e' g' b' dis'' f'' a'' "
+nem6ctd = " c''' a'' f'' dis'' b' g' e' c' "
+nem6ct  = nem6cta + nem6ctd
+nem6cf  = " c f b e' a' dis'' g'' "
+nem6cp0 = " c' e' g' b' c'' a' f' dis' c' "
+nem6cp1 = " c' e' dis' f' e' g' f' a' g' b' a' c'' "
+nem6cp2 = " c' dis' e' f' c'' b' a' g' "
+nem6cp3 = " c' e' g' b' dis' f' a' c'' "
+nem6cp4 = " c' f' b' e' a' dis' g' "
+
+nem6la  = nem6ca
+nem6ld  = nem6cd
+nem6l   = nem6c
+nem6lta = nem6cta
+nem6ltd = nem6ctd
+nem6lt  = nem6ct
+nem6lf  = nem6cf
+nem6lp0 = nem6cp0
+nem6lp1 = nem6cp1
+nem6lp2 = nem6cp2
+nem6lp3 = nem6cp3
+nem6lp4 = nem6cp4
+
+# VII grade
+
+nem7s  = "1122213"
+
+nem7n1 = _("Ultralocrian bb3")
+nem7n  = nem7n1
+
+nem7ca  = " c' des' eses' fes' ges' as' beses' c'' "
+nem7cd  = " c'' beses' as' ges' fes' eses' des' c' "
+nem7c   = nem7ca + nem7cd
+nem7cta  = " c' eses' ges' beses' des'' fes'' as'' "
+nem7ctd = " c''' as'' fes'' des'' beses' ges' eses' c' "
+nem7ct  = nem7cta + nem7ctd
+nem7cf  = " c fes beses eses' as' des'' g'' "
+nem7cp0 = " c' eses' ges' beses' c'' as' fes' des' c' "
+nem7cp1 = " c' eses' des' fes' eses' ges' fes' as' ges' beses' as' c'' "
+nem7cp2 = " c' des' eses' fes' c'' beses' as' ges' "
+nem7cp3 = " c' eses' ges' beses' des' fes' as' c'' "
+nem7cp4 = " c' fes' beses' eses' as' des' ges' "
+
+nem7la  = " dis' e' f' g' a' b' c'' dis'' "
+nem7ld  = " dis'' c'' b' a' g' f' e' dis' "
+nem7l   = nem7la + nem7ld
+nem7lta = " dis' f' a' c'' e'' g'' b'' "
+nem7ltd = " dis''' b'' g'' e'' c'' a' f' dis' "
+nem7lt  = nem7lta + nem7ltd
+nem7lf  = " dis g c' f' b' e'' a'' "
+nem7lp0 = " dis' f' a' c'' dis'' b' g' e' dis' "
+nem7lp1 = " dis' f' e' g' f' a' g' b' a' c'' b' dis'' "
+nem7lp2 = " dis' e' f' g' dis'' c'' b' a' "
+nem7lp3 = " dis' f' a' c'' e' g' b' dis'' "
+nem7lp4 = " dis' g' c'' f' b' e' a' "
+
+#-------------------------------------
+# Hungarian Scale and its modes:
+#-------------------------------------
+
+# I grade
+
+hun1s  = "3121212"
+
+hun1n1 = _("Hungarian Major")
+hun1n2 = _("Hungarian")
+hun1n3 = _("Lydian Dominant #2")
+hun1n4 = _("Lydian #2 b7")
+hun1n5 = _("Mixolydian #9 #11")
+hun1n6 = _("Mixolydian #2 #4")
+hun1n  = hun1n1
+
+hun1ca  = " c' dis' e' fis' g' a' bes' c'' "
+hun1cd  = " c'' bes' a' g' fis' e' dis' c' "
+hun1c   = hun1ca + hun1cd
+hun1cta  = " c' e' g' bes' dis'' fis'' a'' "
+hun1ctd = " c''' a'' fis'' dis'' bes' g' e' c' "
+hun1ct  = hun1cta + hun1ctd
+hun1cf  = " c fis bes e' a' dis'' g'' "
+hun1cp0 = " c' e' g' bes' c'' a' fis' dis' c' "
+hun1cp1 = " c' e' dis' fis' e' g' fis' a' g' bes' a' c'' "
+hun1cp2 = " c' dis' e' fis' c'' bes' a' g' "
+hun1cp3 = " c' e' g' bes' dis' fis' a' c'' "
+hun1cp4 = " c' fis' bes' e' a' dis' g' "
+
+hun1la  = " f' gis' a' b' c'' d'' es'' f'' "
+hun1ld  = " f'' es'' d'' c'' b' a' gis' f' "
+hun1l   = hun1la + hun1ld
+hun1lta = " f a c' es' gis' b' d''"
+hun1ltd = " f'' d'' b' gis' es' c' a f "
+hun1lt  = hun1lta + hun1ltd
+hun1lf  = " f b es' a' d'' gis'' c''' "
+hun1lp0 = " f' a' c'' es'' f'' d'' b' gis' f' "
+hun1lp1 = " f' a' gis' b' a' c'' b' d'' c'' es'' d'' f'' "
+hun1lp2 = " f' gis' a' b' f'' es'' d'' c'' "
+hun1lp3 = " f' a' c'' es'' gis' b' d'' f'' "
+hun1lp4 = " f' b' es'' a' d'' gis' c'' "
+
+# II grade
+
+hun2s  = "1212123"
+
+hun2n1 = _("Superlocrian bb6 bb7")
+hun2n  = hun2n1
+
+hun2ca  = " c' des' es' fes' ges' ases' beses' c'' "
+hun2cd  = " c'' beses' ases' ges' fes' es' des' c' "
+hun2c   = hun2ca + hun2cd
+hun2cta  = " c' es' ges' beses' des'' fes'' ases'' "
+hun2ctd = " c''' ases'' fes'' des'' beses' ges' es' c' "
+hun2ct  = hun2cta + hun2ctd
+hun2cf  = " c fes beses es' ases' des'' g'' "
+hun2cp0 = " c' es' ges' beses' c'' ases' fes' des' c' "
+hun2cp1 = " c' es' des' fes' es' ges' fes' ases' ges' beses' ases' c'' "
+hun2cp2 = " c' des' es' fes' c'' beses' ases' ges' "
+hun2cp3 = " c' es' ges' beses' des' fes' ases' c'' "
+hun2cp4 = " c' fes' beses' es' ases' des' ges' "
+
+hun2la  = " gis' a' b' c'' d'' es'' f'' gis'' "
+hun2ld  = " gis'' f'' es'' d'' c'' b' a' gis' "
+hun2l   = hun2la + hun2ld
+hun2lta = " gis b d' f' a' c'' es'' "
+hun2ltd = " gis'' es'' c'' a' f' d' b gis "
+hun2lt  = hun2lta + hun2ltd
+hun2lf  = " gis c' f' b' es'' a'' d''' "
+hun2lp0 = " gis' b' d'' f'' gis'' es'' c'' a' gis' "
+hun2lp1 = " gis' b' a' c'' b' d'' c'' es'' d'' f'' es'' gis'' "
+hun2lp2 = " gis' a' b' c'' gis'' f'' es'' d'' "
+hun2lp3 = " gis' b' d'' f'' a' c'' es'' gis'' "
+hun2lp4 = " gis' c'' f'' b' es'' a' d'' "
+
+# III grade
+
+hun3s  = "2121231"
+
+hun3n1 = _("Harmonic Minor b5")
+hun3n  = hun3n1
+
+hun3ca  = " c' d' es' f' ges' as' b' c'' "
+hun3cd  = " c'' b' as' ges' f' es' d' c' "
+hun3c   = hun3ca + hun3cd
+hun3cta  = " c' es' ges' b' d'' f'' as'' "
+hun3ctd = " c''' as'' f'' d'' b' ges' es' c' "
+hun3ct  = hun3cta + hun3ctd
+hun3cf  = " c f b es' as' d'' g'' "
+hun3cp0 = " c' es' ges' b' c'' as' f' d' c' "
+hun3cp1 = " c' es' d' f' es' ges' f' as' ges' b' as' c'' "
+hun3cp2 = " c' d' es' f' c'' b' as' ges' "
+hun3cp3 = " c' es' ges' b' d' f' as' c'' "
+hun3cp4 = " c' f' b' es' as' d' ges' "
+
+hun3la  = " a b c' d' es' f' gis' a' "
+hun3ld  = " a' gis' f' es' d' c' b a "
+hun3l   = hun3la + hun3ld
+hun3lta = " a c' es' gis' b' d'' f'' "
+hun3ltd = " a'' f'' d'' b' gis' es' c' a "
+hun3lt  = hun3lta + hun3ltd
+hun3lf  = " a, d gis c' f' b' es'' "
+hun3lp0 = " a c' es' gis' a' f' d' b a "
+hun3lp1 = " a c' b d' c' es' d' f' es' gis' f' a' "
+hun3lp2 = " a b c' d' a' gis' f' es' "
+hun3lp3 = " a c' es' gis' b d' f' a' "
+hun3lp4 = " a d' gis' c' f' b es' "
+
+# IV grade
+
+hun4s  = "1212312"
+
+hun4n1 = _("Superlocrian #6")
+hun4n  = hun4n1
+
+hun4ca  = " c' des' es' fes' ges' a' bes' c'' "
+hun4cd  = " c'' bes' a' ges' fes' es' des' c' "
+hun4c   = hun4ca + hun4cd
+hun4cta = " c' es' ges' bes' des'' fes'' a'' "
+hun4ctd = " c''' a'' fes'' des'' bes' ges' es' c' "
+hun4ct  = hun4cta + hun4ctd
+hun4cf  = " c fes bes es' a' des'' g'' "
+hun4cp0 = " c' es' ges' bes' c'' a' fes' des' c' "
+hun4cp1 = " c' es' des' fes' es' ges' fes' a' ges' bes' a' c'' "
+hun4cp2 = " c' des' es' fes' c'' bes' a' ges' "
+hun4cp3 = " c' es' ges' bes' des' fes' a' c'' "
+hun4cp4 = " c' fes' bes' es' a' des' ges' "
+
+hun4la  = " b c' d' es' f' gis' a' b' "
+hun4ld  = " b' a' gis' f' es' d' c' b "
+hun4l   = hun4la + hun4ld
+hun4lta = " b d' f' a' c'' es'' gis'' "
+hun4ltd = " b'' gis'' es'' c'' a' f' d' b "
+hun4lt  = hun4lta + hun4ltd
+hun4lf  = " b, es a d' gis' c'' f'' "
+hun4lp0 = " b d' f' a' b' gis' es' c' b "
+hun4lp1 = " b d' c' es' d' f' es' gis' f' a' gis' b' "
+hun4lp2 = " b c' d' es' b' a' gis' f' "
+hun4lp3 = " b d' f' a' c' es' gis' b' "
+hun4lp4 = " b es' a' d' gis' c' f' "
+
+# V grade
+
+hun5s  = "2123121"
+
+hun5n1 = _("Jazz Minor #5")
+hun5n  = hun5n1
+
+hun5ca  = " c' d' es' f' gis' a' b' c'' "
+hun5cd  = " c'' b' a' gis' f' es' d' c' "
+hun5c   = hun5ca + hun5cd
+hun5cta = " c' es' gis' b' d'' f'' a'' "
+hun5ctd = " c''' a'' f'' d'' b' gis' es' c' "
+hun5ct  = hun5cta + hun5ctd
+hun5cf  = " c f b es' a' d'' g'' "
+hun5cp0 = " c' es' gis' b' c'' a' f' d' c' "
+hun5cp1 = " c' es' d' f' es' gis' f' a' gis' b' a' c'' "
+hun5cp2 = " c' d' es' f' c'' b' a' gis' "
+hun5cp3 = " c' es' gis' b' d' f' a' c'' "
+hun5cp4 = " c' f' b' es' a' d' gis' "
+
+hun5la  = hun5ca
+hun5ld  = hun5cd
+hun5l   = hun5c
+hun5lta = hun5cta
+hun5ltd = hun5ctd
+hun5lt  = hun5ct
+hun5lf  = hun5cf
+hun5lp0 = hun5cp0
+hun5lp1 = hun5cp1
+hun5lp2 = hun5cp2
+hun5lp3 = hun5cp3
+hun5lp4 = hun5cp4
+
+# VI grade
+
+hun6s  = "1231212"
+
+hun6n1 = _("Dorian b9 #11")
+hun6n  = hun6n1
+
+hun6ca  = " c' des' es' fis' g' a' bes' c'' "
+hun6cd  = " c'' bes' a' g' fis' es' des' c' "
+hun6c   = hun6ca + hun6cd
+hun6cta = " c' es' g' bes' des'' fis'' a'' "
+hun6ctd = " c''' a'' fis'' des'' bes' g' es' c' "
+hun6ct  = hun6cta + hun6ctd
+hun6cf  = " c fis bes es' a' des'' g'' "
+hun6cp0 = " c' es' g' bes' c'' a' fis' des' c' "
+hun6cp1 = " c' es' des' fis' es' g' fis' a' g' bes' a' c'' "
+hun6cp2 = " c' des' es' fis' c'' bes' a' g' "
+hun6cp3 = " c' es' g' bes' des' fis' a' c'' "
+hun6cp4 = " c' fis' bes' es' a' des' g' "
+
+hun6la  = " d' es' f' gis' a' b' c'' d'' "
+hun6ld  = " d'' c'' b' a' gis' f' es' d' "
+hun6l   = hun6la + hun6ld
+hun6lta = " d' f' a' c'' es'' gis'' b'' "
+hun6ltd = " d''' b'' gis'' es'' c'' a' f' d' "
+hun6lt  = hun6lta + hun6ltd
+hun6lf  = " d gis c' f' b' es'' a'' "
+hun6lp0 = " d' f' a' c'' d'' b' gis' es' d' "
+hun6lp1 = " d' f' es' gis' f' a' gis' b' a' c'' b' d'' "
+hun6lp2 = " d' es' f' gis' d'' c'' b' a' "
+hun6lp3 = " d' f' a' c'' es' gis' b' d'' "
+hun6lp4 = " d' gis' c'' f' b' es' a' "
+
+# VII grade
+
+hun7s  = "2312121"
+
+hun7n1 = _("Lydian Augmented #3")
+hun7n2 = _("Lydian #3 #5")
+hun7n  = hun7n1
+
+hun7ca  = " c' d' eis' fis' gis' a' b' c'' "
+hun7cd  = " c'' b' a' gis' fis' eis' d' c' "
+hun7c   = hun7ca + hun7cd
+hun7cta = " c' eis' gis' b' d'' fis'' a'' "
+hun7ctd = " c''' a'' fis'' d'' b' gis' eis' c' "
+hun7ct  = hun7cta + hun7ctd
+hun7cf  = " c fis b eis' a' d'' g'' "
+hun7cp0 = " c' eis' gis' b' c'' a' fis' d' c' "
+hun7cp1 = " c' eis' d' fis' eis' gis' fis' a' gis' b' a' c'' "
+hun7cp2 = " c' d' eis' fis' c'' b' a' gis' "
+hun7cp3 = " c' eis' gis' b' d' fis' a' c'' "
+hun7cp4 = " c' fis' b' eis' a' d' gis' "
+
+hun7la  = " es' f' gis' a' b' c'' d'' es'' "
+hun7ld  = " es'' d'' c'' b' a' gis' f' es' "
+hun7l   = hun7la + hun7ld
+hun7lta = " es' gis' b' d'' f'' a'' c''' "
+hun7ltd = " es''' c''' a'' f'' d'' b' gis' es' "
+hun7lt  = hun7lta + hun7ltd
+hun7lf  = " es a d' gis' c'' f'' b'' "
+hun7lp0 = " es' gis' b' d'' es'' c'' a' f' es' "
+hun7lp1 = " es' gis' f' a' gis' b' a' c'' b' d'' c'' es'' "
+hun7lp2 = " es' f' gis' a' es'' d'' c'' b' "
+hun7lp3 = " es' gis' b' d'' f' a' c'' es'' "
+hun7lp4 = " es' a' d'' gis' c'' f' b' "
+
+#-------------------------------------
+# Pentatonic Major Scale and its modes:
+#-------------------------------------
+
+# I grade
+
+pen1s  = "22323"
+
+pen1n1 = _("Major Pentatonic")
+pen1n  = pen1n1
+
+pen1ca  = " c' d' e' g' a' c'' "
+pen1cd  = " c'' a' g' e' d' c' "
+pen1c   = pen1ca + pen1cd
+
+pen1la  = pen1ca
+pen1ld  = pen1cd
+pen1l   = pen1c
+
+# II grade
+
+pen2s  = "23232"
+
+pen2n1 = _("Suspended Pentatonic")
+pen2n2 = _("Yo")
+pen2n3 = _("Egyptian")
+pen2n  = pen2n1
+
+pen2ca  = " c' d' f' g' bes' c'' "
+pen2cd  = " c'' bes' g' f' d' c' "
+pen2c   = pen2ca + pen2cd
+
+pen2la  = " d' e' g' a' c'' d'' "
+pen2ld  = " d'' c'' a' g' e' d' "
+pen2l   = pen2la + pen2ld
+
+# III grade
+
+pen3s  = "32322"
+
+pen3n1 = _("Man Gong")
+pen3n  = pen3n1
+
+pen3ca  = " c' es' f' as' bes' c'' "
+pen3cd  = " c'' bes' as' f' es' c' "
+pen3c   = pen3ca + pen3cd
+
+pen3la  = " e' g' a' c'' d'' e'' "
+pen3ld  = " e'' d'' c'' a' g' e' "
+pen3l   = pen3la + pen3ld
+
+# IV grade
+
+pen4s  = "23223"
+
+pen4n1 = _("Ritusen")
+pen4n  = pen4n1
+
+pen4ca  = " c' d' f' g' a' c'' "
+pen4cd  = " c'' a' g' f' d' c' "
+pen4c   = pen4ca + pen4cd
+
+pen4la  = " g a c' d' e' g' "
+pen4ld  = " g' e' d' c' a g "
+pen4l   = pen4la + pen4ld
+
+# V grade
+
+pen5s  = "32232"
+
+pen5n1 = _("Minor Pentatonic")
+pen5n  = pen5n1
+
+pen5ca  = " c' es' f' g' bes' c'' "
+pen5cd  = " c'' bes' g' f' es' c' "
+pen5c   = pen5ca + pen5cd
+
+pen5la  = " a c' d' e' g' a' "
+pen5ld  = " a' g' e' d' c' a "
+pen5l   = pen5la + pen5ld
+
+#-------------------------------------
+# Simmetric Scales
+#-------------------------------------
+
+# Diminished Scale (eight notes)
+
+# I grade
+
+dim1s  = "21212121"
+
+dim1n1 = _("Diminished W-H")
+dim1n2 = _("Wholestep-Halfstep")
+dim1n  = dim1n1
+
+dim1ca  = " c' d' es' f' ges' gis' a' b' c'' "
+dim1cd  = " c'' b' a' gis' ges' f' es' d' c' "
+dim1c   = dim1ca + dim1cd
+
+dim1la  = dim1ca
+dim1ld  = dim1cd
+dim1l   = dim1c
+
+# II grade
+
+dim2s  = "12121212"
+
+dim2n1 = _("Octatonic H-W")
+dim2n2 = _("Halfstep-Wholestep")
+dim2n  = dim2n1
+
+dim2ca  = " c' des' dis' e' fis' g' a' bes' c'' "
+dim2cd  = " c'' bes' a' g' fis' e' dis' des' c' "
+dim2c   = dim2ca + dim2cd
+
+dim2la  = " d' es' f' ges' gis' a' b' c'' d'' "
+dim2ld  = " d'' c'' b' a' gis' ges' f' es' d' "
+dim2l   = dim2la + dim2ld
+
+# Whole-Tone Scale (six notes)
+
+who1s  = "222222"
+
+who1n1 = _("Whole Tone")
+who1n2 = _("Exatonic")
+who1n3 = _("Anemitonic")
+who1n  = who1n1
+
+who1ca  = " c' d' e' fis' gis' bes' c'' "
+who1cd  = " c'' bes' gis' fis' e' d' c' "
+who1c   = who1ca + who1cd
+
+who1la  = " des' es' f' g' a' b' des'' "
+who1ld  = " des'' b' a' g' f' es' des' "
+who1l   = who1la + who1ld
+
+# Augmented Scale (six notes)
+
+# I grade
+
+aug1s  = "313131"
+
+aug1n1 = _("Augmented")
+aug1n  = aug1n1
+
+aug1ca  = " c' dis' e' g' gis' b' c'' "
+aug1cd  = " c'' b' gis' g' e' dis' c' "
+aug1c   = aug1ca + aug1cd
+
+aug1la  = aug1ca
+aug1ld  = aug1cd
+aug1l   = aug1c
+
+# II grade
+
+aug2s  = "131313"
+
+aug2n1 = _("Augmented Inverse")
+aug2n  = aug2n1
+
+aug2ca  = " c' des' e' f' gis' a' c'' "
+aug2cd  = " c'' a' gis' f' e' des' c' "
+aug2c   = aug2ca + aug2cd
+
+aug2la  = aug2ca
+aug2ld  = aug2cd
+aug2l   = aug2c
+
+#-------------------------------------
+# Bebop Scales
+#-------------------------------------
+
+# "Bebop Major"
+
+beb1s  = "22121121"
+
+beb1n1 = _("Bebop Major")
+beb1n2 = _("Bebop Ionian")
+beb1n  = beb1n1
+
+beb1ca  = " c' d' e' f' g' gis' a' b' c'' "
+beb1cd  = " c'' b' a' gis' g' f' e' d' c' "
+beb1c   = beb1ca + beb1cd
+
+beb1la  = beb1ca
+beb1ld  = beb1cd 
+beb1l   = beb1c
+
+# "Bebop Dominant"
+
+beb2s  = "22122111"
+
+beb2n1 = _("Bebop Dominant")
+beb2n2 = _("Bebop Mixolydian")
+beb2n  = beb2n1
+
+beb2ca  = " c' d' e' f' g' a' bes' b' c'' "
+beb2cd  = " c'' b' bes' a' g' f' e' d' c' "
+beb2c   = beb2ca + beb2cd
+
+beb2la  = beb2ca
+beb2ld  = beb2cd 
+beb2l   = beb2c
+
+# "Bebop Dorian"
+
+beb3s  = "21112212"
+
+beb3n1 = _("Bebop Dorian")
+beb3n  = beb3n1
+
+beb3ca  = " c' d' es' e' f' g' a' bes' c'' "
+beb3cd  = " c'' bes' a' g' f' e' es' d' c' "
+beb3c   = beb3ca + beb3cd
+
+beb3la  = " g' a' bes' b' c'' d'' e'' f'' g'' "
+beb3ld  = " g'' f'' e'' d'' c'' b' bes' a' g' "
+beb3l   = beb3la + beb3ld
+
+# "Bebop Minor"
+
+beb4s  = "21221121"
+
+beb4n1 = _("Bebop Minor")
+beb4n2 = _("Bebop Melodic Minor")
+beb4n  = beb4n1
+
+beb4ca  = " c' d' es' f' g' gis' a' b' c'' "
+beb4cd  = " c'' b' a' gis' g' f' es' d' c' "
+beb4c   = beb4ca + beb4cd
+
+beb4la  = beb4ca
+beb4ld  = beb4cd 
+beb4l   = beb4c
+
+# "Bebop Locrian"
+
+beb5s  = "12211122"
+
+beb5n1 = _("Bebop Locrian")
+beb5n2 = _("Bebop Halfdiminished")
+beb5n  = beb5n1
+
+beb5ca  = " c' des' es' f' ges' g' as' bes' c'' "
+beb5cd  = " c'' bes' as' g' ges' f' es' des' c' "
+beb5c   = beb5ca + beb5cd
+
+beb5la  = " e' f' g' a' bes' b' c'' d'' e'' "
+beb5ld  = " e'' d'' c'' b' bes' a' g' f' e' "
+beb5l   = beb5la + beb5ld
+
+#-------------------------------------
+# Enigmatic Scale
+#-------------------------------------
+
+eni1n1 = _("Enigmatic")
+eni1n2 = _("Verdi's Enigmatic")
+eni1n  = eni1n1
+
+eni1ca  = " c' des' e' fis' gis' ais' b' c'' "
+eni1cd  = " c'' b' ais' gis' f' e' des' c' "
+eni1c   = eni1ca + eni1cd
+
+eni1la  = eni1ca
+eni1ld  = eni1cd
+eni1l   = eni1c
+
+#-------------------------------------
+# Blues Scale
+#-------------------------------------
+
+blu1s  = "321132"
+
+blu1n1 = _("Blues")
+blu1n  = blu1n1
+
+blu1ca  = " c' es' f' fis' g' bes' c'' "
+blu1cd  = " c'' bes' g' fis' f' es' c' "
+blu1c   = blu1ca + blu1cd
+
+blu1la  = blu1ca
+blu1ld  = blu1cd
+blu1l   = blu1c
+
+#-------------------------------------
+# VARIABLE ENCODING:
+#-------------------------------------
+#
+# [AAAnBCD]
+#
+# [AAA] are the first 3 characters indicate the reference scale:
+#
+# [AAA] = "maj" : major scale
+# [AAA] = "mel" : melodic minor scale
+# [AAA] = "har" : harnomic minor scale
+# [AAA] = "ham" : harmonic major scale
+# [AAA] = "dha" : double harmonic scale
+# [AAA] = "nea" : neapolitan scale
+# [AAA] = "nem" : neapolitan minor scale
+# [AAA] = "hun" : hungarian major scale
+# [AAA] = "pen" : pentatonic major scale
+# [AAA] = "blu" : blues scale
+# [AAA] = "eni" : enigmatic scale
+# [AAA] = "who" : whole tone (six notes) scale
+# [AAA] = "dim" : diminished (eight notes) scale
+# [AAA] = "aug" : augmented (six notes) scale
+# [AAA] = "beb" : bebop scales
+#
+# [n] indicate the grade number of the mode in the reference scale
+# example: Ionian mode is first grade of Major Scale: "maj1"
+# example: Superlocrian mode is seventh grade of Melodic Minor Scale: "mel7"
+# exception: "mel8" indicates classic melodic minor scale
+# exception: bebop scale numbers do not indicate the grade
+#
+# [B] indicate the first note of the mode (default is "c")
+# if [B] is not a note symbol:
+# [B] = "l" : the first note is setted tho have the minor number of alterations
+# [B] = "s"  : the structure (in number of halftones) of the mode;
+# [B] = "n1", "n2", etc: the alternative names of the mode;
+# [B] = "ng" : the greek name of the mode (in modes from major scale);
+# [B] = "nh" : the plagal name of the mode (in modes from major scale);
+# [B] = "n"  : the choosen name of the mode (default is "n1");
+#
+# [CD] if not present, the variable indicate the notes of the mode;
+# [CD] = "a"  : the notes of the mode, ascending only;
+# [CD] = "d"  : the notes of the mode, descending only;
+# [CD] = "ta" : the notes of the mode, arpeged ascending by thirds,
+#               this can also be used as a 13th complete chord;
+# [CD] = "td" : the notes of the mode, arpeged descending by thirds;
+# [CD] = "t"  : the notes of the mode, arpeged up & down by thirds;
+# [CD] = "f"  : the notes of the mode, arpeged by fourths,
+#               this can also be used as a complete fourths chord;
+# [CD] = "p"  : the notes of the mode using one of the following patterns:
+#        "p0" : 1 3 5 7 8 6 4 2 1
+#        "p1" : 1 3 2 4 3 5 4 6 5 7 6 8
+#        "p2" : 1 2 3 4 8 7 6 5
+#        "p3" : 1 3 5 7 2 4 6 8
+#        "p4" : 1 4 7 3 6 2 5
+#        "px" : the less number of tones to determine the mode within the
+#               reference scale (for now only for major scale and its modes)
+
+#-------------------------------------------------------------------------------
+
+# VERSION HISTORY
+
+# source file version: 1.12
+#
+# - added sc_test and sc_test_requirement variables to be included by all
+#   scale lesson files
+
+# source file version: 1.11
+
+# - added new patterns: p2, p3, p4, px
+
+# source file version: 1.1
+
+# - changed the variable encoding for structure & mode naming 
+#   in old variable encoding, used in version 1.0 of this document,
+#   [B] was always "c", even in mode names & structures
+# - fixed alternative names
+# - fixed ancient greek names
+# - added plagal names
+# - added ascending and descending for all modes
+# - added new notes disposition: by thirds, by fourths, in some patterns
+#   (see VARIABLE ENCODING section)
+
+# source file version: 1.0 - added in GNU solfege 3.50
+
+

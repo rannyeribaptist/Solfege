@@ -1,0 +1,31 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "4f2c59b0-d6cc-11da-89a8-7c9a86d4310s"
+  module = idbyname
+  random_transpose = yes
+  title = _("Harmonic Minor Scale and its modes - recognize structure")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/har"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 180/4
+
+question { name = har1s  voice(har1la) }
+question { name = har2s  voice(har2la) }
+question { name = har3s  voice(har3la) }
+question { name = har4s  voice(har4la) }
+question { name = har5s  voice(har5la) }
+question { name = har6s  voice(har6la) }
+question { name = har7s  voice(har7la) }
+

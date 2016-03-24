@@ -1,0 +1,1252 @@
+# translation of solfege-manual-3.20.3.po to Turkish
+# This file is distributed under the same license as the solfege package.
+# Server Acim <sacim@kde.org.tr>, 2006, 2009.
+# Server Acim <serveracim@gmail.com>, 2010.
+# Server Acim <serveracim@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: solfege-manual-3.20.3\n"
+"POT-Creation-Date: 2011-09-25 15:54+0200\n"
+"PO-Revision-Date: 2011-10-02 12:30+0200\n"
+"Last-Translator: Server Acim <serveracim@gmail.com>\n"
+"Language-Team: Turkish <gnu-tr-u12a@lists.sourceforge.net>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: help/C/twelvetone.xml:2(title)
+msgid "Sing 12 random notes"
+msgstr "12 rastgele notayı söyleyiniz."
+
+#: help/C/twelvetone.xml:13(para)
+msgid "In this exercise, the program will display all the twelve tones in the scale in a random order and play the first one. Then you should sing all the notes and see if the last note matches. So this is more like an exam in sight singing than an exercise for learning how to sing the intervals. For that you should try some of the other interval exercises."
+msgstr "Bu alıştırmada, program dizideki tüm on iki sesi karışık sırada gösterecek ve dizinin ilk sesini çalacak. Sonra, siz tüm sesleri söyleyebilir ve son sesin uyup uymadığını kontrol edebilirsiniz. Bu yüzden bu çalışma, aralıkları söyleme alıştırmasından ziyade deşifre sınavı gibidir. Bu sebeple, önce diğer aralık alıştırmalarını denemelisiniz."
+
+#: help/C/trainingset-editor.xml:2(title)
+msgid "Training set editor"
+msgstr "Eğitim seti düzenleyicisi"
+
+#: help/C/trainingset-editor.xml:10(phrase)
+#: help/C/ear-training-test-printout-editor.xml:10(phrase)
+msgid "Screenshot of the trainingset-editor window."
+msgstr "Eğitim seti düzenleme penceresinin ekran görüntüsü."
+
+#: help/C/trainingset-editor.xml:15(para)
+msgid "The training set editor lets you create MIDI/WAV/MP3/OGG files of questions so that you can upload them to your pda, cell phone or MP3 player. A solution sheet will be generated for you to print out. Then you can let the MP3 player play the tracks in random order, and you can use the solution sheet to check if you recognized the music correctly."
+msgstr "Eğitim seti düzenleyicisi soruların MİDİ/WAV/MP3/OGG dosyalarını üretmenize ve bunları pda, cep telefonu, MP3 çalar gibi taşınabilir aygıtlara yüklemenize olanak tanır. Çözüm tablosu çıktısını almanız için üretilecektir. Ondan sonra, MP3 çalıcınız ile izleri karışık sırada çalabilecek ve çözüm tablonuzu müziği doğru algılayıp algılamadığını anlamak için  kullanabileceksiniz."
+
+#: help/C/trainingset-editor.xml:21(para)
+msgid "You use the training set editor to define which exercises to generate. You can save your definition in a file for later use. Each time you click <guibutton>Export</guibutton> a new set of files are generated in a directory of your choice. You have to manually upload the generated sound files to you mobile device."
+msgstr "Eğitim seti düzenleyicinizi hangi alıştırmaların oluşturulacağını belirlemek için kullanırsınız. Daha sonra kullanmak üzere tanımınızı bir dosyaya kayıt edebilirsiniz. Her seferinde şu düğmeye  <guibutton>Dışarı Aktar</guibutton> basarak seçtiğiniz dizinde yeni dosya setleri oluşur. Taşınabilir aygıtınıza oluşturduğunuz ses dosyalarını elle yüklemeniz gerekecektir."
+
+#: help/C/trainingset-editor.xml:27(para)
+msgid "The program let you generate questions from as many lesson files as you like, but the most typical usage would be to generate lots of questions from just a single, or just a few files."
+msgstr "Bu program size hoşunuza giden ders dosyalarından sorular türetmenize imkan tanır, fakat daha tipik bir yolu tercih ederseniz bir veya birkaç dersten yola çıkarak bir sürü soru türetmektir."
+
+#: help/C/trainingset-editor.xml:31(para)
+msgid "The programs used to convert between the different file formats are defined in Gui page of the <link linkend=\"preferences-gui\">preferences window</link>. Please check the definitions there if you have problems converting the MIDI files to WAV, MP3 or OGG format."
+msgstr "Farklı dosya yapılarını birbirleri arasında dönüştürmekte kullanılan programlar <link linkend=\"preferences-gui\">tercihler penceresi</link>ni Grafik kullanıcı arayüzü sayfasında tanımlanmıştır. Eğer, MIDI dosyalarını WAV, MP3 veya OGG kipine dönüştürmekte sorunlar yaşıyorsanız oradaki tanımlamaları lütfen denetleyiniz."
+
+#: help/C/trainingset-editor.xml:38(title)
+msgid "Table headings explained"
+msgstr "Tablo başlıkları açıklaması"
+
+#: help/C/trainingset-editor.xml:40(term)
+msgid "Count"
+msgstr "Say"
+
+#: help/C/trainingset-editor.xml:41(para)
+msgid "The number of questions to generate from the lesson file."
+msgstr "Ders dosyasından üretilecek soruların sayısı."
+
+#: help/C/trainingset-editor.xml:45(term)
+msgid "Repeat"
+msgstr "Tekrarla"
+
+#: help/C/trainingset-editor.xml:46(para)
+msgid "The number of times to repeat each question."
+msgstr "Her sorunun tekrarlanma sayısı."
+
+#: help/C/trainingset-editor.xml:50(term)
+msgid "Delay"
+msgstr "Gecikme"
+
+#: help/C/trainingset-editor.xml:50(para)
+msgid "How long delay it will be between the questions. Measured in the length of quarter-notes."
+msgstr "Sorular arasındaki gecikmenin ne kadar olacağı. Dörtlük nota uzunluğunda ayarlandı."
+
+#: help/C/solfege.xml:21(title)
+msgid "&app; &appversion; User Manual"
+msgstr "&app; &appversion; Kullanıcı El Kitabı"
+
+#: help/C/solfege.xml:23(year) help/C/solfege.xml:32(year)
+msgid "2005"
+msgstr "2005"
+
+#: help/C/solfege.xml:27(year)
+msgid "2000"
+msgstr "2000"
+
+#: help/C/solfege.xml:28(year)
+msgid "2001"
+msgstr "2001"
+
+#: help/C/solfege.xml:29(year)
+msgid "2002"
+msgstr "2002"
+
+#: help/C/solfege.xml:30(year)
+msgid "2003"
+msgstr "2003"
+
+#: help/C/solfege.xml:31(year)
+msgid "2004"
+msgstr "2004"
+
+#: help/C/solfege.xml:33(year)
+msgid "2006"
+msgstr "2006"
+
+#: help/C/solfege.xml:34(year)
+msgid "2007"
+msgstr "2007"
+
+#: help/C/solfege.xml:35(year)
+msgid "2008"
+msgstr "2008"
+
+#: help/C/solfege.xml:36(year)
+msgid "2009"
+msgstr "2009"
+
+#: help/C/solfege.xml:37(year)
+msgid "2010"
+msgstr "2010"
+
+#: help/C/solfege.xml:52(para)
+msgid "Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version. The full text of the License is available in <xref linkend=\"gpl\"/>."
+msgstr "Özgür Yazılım Vakfı  tarafından yayımlanan Genel Kamu Lisansını kabul etmiş olmak şartıyla bu belgeyi kopyalamaya ve dağıtmaya izin verilebilir; bu kural Lisansın 2inci veya daha sonraki sürümü için de geçerlidir. Lisansın tam metninin sağlanabileceği yer  <xref linkend=\"gpl\"/>."
+
+#: help/C/solfege.xml:63(title)
+msgid "Introduction"
+msgstr "Giriş"
+
+#: help/C/solfege.xml:66(title)
+msgid "Welcome to GNU Solfege"
+msgstr "GNU Solfege Yazılımına Hoş Geldiniz"
+
+#: help/C/solfege.xml:67(para)
+msgid "Solfege is a <ulink url=\"http://www.gnu.org/philosophy/free-sw.html\">free</ulink> eartraining program. The program is part of the <ulink url=\"http://www.gnu.org\">GNU Project</ulink>. Check <xref linkend=\"online-resources\"/> for info on mailinglists and where to get the latest version of Solfege."
+msgstr "Solfege bir <ulink url=\"http://www.gnu.org/philosophy/free-sw.html\"açık kaynak kodlu</ulink> kulak eğitimi yazılımıdır. Bu program <ulink url=\"http://www.gnu.org\"> GNU Projesi'nin bir parçasıdır</ulink> Elmek listelerini <xref linkend=\"online-resources\"/> bilgi ve Solfege yazılımının en son sürümünü edinmek için kontrol edin."
+
+#: help/C/solfege.xml:73(para)
+msgid "One of the ideas of this program is that you can extend the program without having to dig into the source code. If you for example want to practise some special chords, you can write a <link linkend=\"extending-solfege\">lesson file</link> yourself. Reading the files are pretty straight forward, and the recommended way to get started is to copy one of the existing files, and start modifying it. If you create good lesson files, you really should consider contributing them by sending them to the <link linkend=\"mailing-lists\">mailing list</link> so they can be added to the next version of this program."
+msgstr "Bu programın amaçlarından biri de kaynak kodları konusunda hiç bir şey bilmeseniz bile yazılımı genişletebilme olanağına sahip olabilmenizdir. Eğer örneğin bazı özel akorlar üzerine pratik yapmak isterseniz, kendiniz bir <link linkend=\"extending-solfege\">ders dosyası</link> yazabilirsiniz. Dosyaları okumak önemlidir ve size başlangıç için yazılmış dosyaları kullanmanızı ve bu dosyaları değiştirmenizi öneririz. Eğer iyi ders dosyaları oluşturursanız, bunları posta listelerine göndermek suretiyle <link linkend=\"mailing-lists\">mailinglist</link> bu çalışmalarını paylaşabilirsiniz ve böylece oluşturduğunuz dosyalar programın bir sonraki sürümünde yerlerini alabilirler."
+
+#: help/C/solfege.xml:102(title)
+msgid "Help sections for the exercises"
+msgstr "Alıştırmalar için Yardım bölümleri"
+
+#: help/C/singinterval.xml:2(title)
+msgid "Sing interval"
+msgstr "Aralığı seslendir"
+
+#: help/C/singinterval.xml:10(phrase)
+msgid "Screenshot of the sing interval exercise."
+msgstr "Aralığı seslendirme alıştırmasının ekran görüntüsü."
+
+#: help/C/singinterval.xml:15(para)
+msgid "In this exercise, Solfege will display one or more intervals, and you should sing them. Unfortunately, it is not yet possible to sing into a microphone and let Solfege decide if you sing correct, so you have to decide yourself if you are correct or wrong."
+msgstr "Bu alıştırmada, Solfege yazılımı bir veya birden fazla aralığı gösterecektir ve bunları seslendirmelisiniz. Ne yazık ki , eğer Solfege yazılımının doğru seslendirme yapıp yapmadığınıza Solfege karar vermesi için sesleri bir mikrofona henüz  söyleyemiyorsanız, o zaman doğru söyleyip söyleyemediğinize kendiniz karar vermek zorundasınız."
+
+#: help/C/singinterval.xml:17(title) help/C/idtone.xml:58(title)
+msgid "Config"
+msgstr "Yapılandır"
+
+#: help/C/singinterval.xml:18(para)
+msgid "The program will try to make a question where all tones are within the range the user can sing, as configured in the <link linkend=\"preferences-window\">preferences window</link>. Sometimes, it is not possible to keep the question within this range, for example when the exercise is configured to create many intervals where all intervals go upwards."
+msgstr "İnsan sesi bölgesinde kalarak bu yazılım bir soru sormayı deneyecek, ki bu işlem <link linkend=\"preferences-window\">tercihler penceresinde </link>yapılandırılmıştır. Bazen, soruları daha makul ses sınırları içinde kullanmak pek mümkün olmamıştır, örneğin bazı alıştırmalar öyle programlanmıştır ki yukarı doğru giden pek çok aralık oluşturulmuştur."
+
+#: help/C/singchord.xml:2(title)
+msgid "Sing chord"
+msgstr "Akoru söyle"
+
+#: help/C/singchord.xml:11(phrase) help/C/idtone.xml:10(phrase)
+#: help/C/idproperty.xml:11(phrase) help/C/idbyname-intonation.xml:10(phrase)
+#: help/C/idbyname-chords.xml:10(phrase)
+#: help/C/elembuilder-harmonic-progressions.xml:10(phrase)
+msgid "Screenshot of the program."
+msgstr "Yazılımın ekran görüntüsü."
+
+#: help/C/singchord.xml:17(para)
+msgid "If you are conducting a choir, you have to sing the starting tones for the different voices, and if you don't have a piano near by, you have to use a tuning fork. If you are a male, you will sing the tones for the women, one octave deeper, and visa versa."
+msgstr "Eğer bir koro yönetiyorsanız, eğer yakınınızda piyano yoksa, tüm partilerin ilk başlangıç seslerini söylemelisiniz, ya da bir diyapasonunuz olmalı. Eğer erkekseniz, kadın seslerini bir oktav aşağıdan söylemelisiniz."
+
+#: help/C/singchord.xml:22(para)
+msgid "The program will play the tone A (440 hz) for you, and display a chord that you must sing. Solfege does not yet have support for microphone, so you will have to decide yourself if your answer is correct or not."
+msgstr "Yazılım LA sesini (440 hz) sizin için çalacaktır, ve söylemeniz gereken akoru gösterecektir. Solfege yazılımı henüz mikrofonu desteklememektedir, bu yüzden cevabınızın doğruluğunu kendiniz kontrol etmelisiniz."
+
+#: help/C/selecting-exercises.xml:2(title)
+msgid "Selecting exercises"
+msgstr "Alıştırmaları seçmek"
+
+#: help/C/selecting-exercises.xml:3(para)
+msgid "Selecting exercises works like navigating a web page and clicking on links. Press <keycombo><keycap>Alt</keycap><keycap>Left</keycap></keycombo> to move to the previous page or <keycap>F5</keycap> to move to the front page."
+msgstr "Alıştırmaları seçme, bağlantılara tıklayarak bir web sayfasına göz atmadaki yöntem gibi çalışır. Önceki sayfaya gitmek için, <keycombo><keycap>Alt</keycap><keycap>Left</keycap></keycombo> tuş kombinasyonunu ve açılıç sayfasına gitmek için ise <keycap>F5</keycap> tuşuna basınız."
+
+#: help/C/scales.xml:2(title) help/C/music-theory.xml:4(title)
+msgid "Scales"
+msgstr "Diziler"
+
+#: help/C/scales.xml:3(para)
+msgid "Scales are a complex matter. For example is the greek lydian (C-D-E-F-G-A-B-C) different from the medieval and modern lydian (C-D-E-F#-G-A-B-C). You can read about all the scales used in GNU Solfege <ulink url=\"scales/modes.html\">here</ulink>."
+msgstr "Diziler karışık sıradadır. Örneğin yunan lidyen dizisi (C-D-E-F-G-A-B-C) ortaçağ ve modern lidyen (C-D-E-F#-G-A-B-C) dizisinden farklıdır. Aşağıdaki talo GNU Solfege yazılımının bu sürümünde kullanılan dizileri göstermektedir <ulink url=\"scales/modes.html\">here</ulink>."
+
+#: help/C/scales.xml:6(para)
+msgid "Solfege has three variants of scale exercises so far."
+msgstr "Solfege yazılımı dizi alıştırmalarının sadece üç çeşidini içerir."
+
+#: help/C/scales.xml:8(para)
+msgid "Solfege will play a scale, and you should identify the scale by clicking on the button with the scale name."
+msgstr "Solfege bir dizi çalacaktır, ve diziyi dizi adlarının olduğu düğmelerden birine tıklayarak tanımlamalısınız."
+
+#: help/C/scales.xml:11(para)
+msgid "Solfege will play a scale, and you should identify the structure of the scale. You will be presented a collection of buttons labeled with a number of '1', '2' and '3'. These numbers represent the intervals minor second, major second and minor third that are between the tones of the scale."
+msgstr "Solfege bir dizi çalacaktır, ve siz dizinin yapısını tanımlamalısınız. Bu diziler size '1', '2' ve '3' gibi düğmelerden oluşan etiketlerle gösterilecektir. Bu numaralar küçük ikili, büyük ikili ve küçük üçlü aralıklarını temsil edeceklerdir."
+
+#: help/C/scales.xml:12(para)
+msgid "Solfege will play a scale, and you should identify the grade. For example may Solfege take the natural minor scale, and play it from any of the tones one the scale, and you must tell which tone it starts on."
+msgstr "Solfege size bir dizi çalacak ve siz de dereceyi belirleyeceksiniz. Örneğin, Solfege doğal minör dizisini almış ve bu diziyi size dizinin herhangi bir sesinden başlayarak çalmaya başlayabilir, ve siz dizinin hangi notadan başladığını belirlemelisiniz."
+
+#: help/C/rhythm.xml:2(title)
+msgid "Rhythm"
+msgstr "Ritm"
+
+#: help/C/rhythm.xml:10(phrase)
+msgid "Screenshot of the program running the chord exercise."
+msgstr "Programın akor alıştırması çalışırken ki ekran görüntüsü."
+
+#: help/C/rhythm.xml:16(para)
+msgid "The program play a randomly generated rhythm, and the user should reproduce the rhythm. The user enters the rhythm by clicking on buttons representing different rhythmic elements."
+msgstr "Yazılım rastgele üretilmiş bir ritm çalacak ve kullanıcının ritmi yeniden üretmesi gerekecektir. 'Kullanıcı' değişik ritmik ögeleri içeren düğmelere tıklayarak ritmleri girecektir."
+
+#: help/C/rhythm.xml:20(para)
+msgid "When you have entered enough rhythm elements, Solfege will check your answer. If everything is correct it will display a happy face, otherwise a sad face, and all wrong rhythms will be marked."
+msgstr "Yeterli ritmik unsurları girdikten sonra, Solfege cevabınızı kontrol edecektir. Eğer herşey doğruysa mutlu bir yüz çıkacak,  eğer değilse üzgün bir surat gözükecek ve tüm yanlış ritmler gösterilecektir."
+
+#: help/C/rhythm.xml:24(para)
+msgid "If some of your answer was wrong, everything from the first wrong element will be removed (preserving any correct rhythms in the beginning of your answer) when you click on the sad face, or when you click on the rhythm buttons on top of the page."
+msgstr "Üzgün surata tıkladığınızda ya da sayfanın üstündeki ritm düğmelerine tıkladığınız zaman, eğer cevaplarınızdan bazıları yanlış ise, baştan sona tüm yanlış ögeler kaldırılacaktır (cevabınızdaki doğru ritmler korunacaktır)."
+
+#: help/C/rhythm.xml:29(para)
+msgid "You can click the 'Play' button to hear your suggestion."
+msgstr "Önerinizi duymak için 'Çal' düğmesine tıklayabilirsiniz."
+
+#: help/C/rhythm.xml:31(para)
+msgid "The questions made by this exercise are at the moment made by selecting rhythm elements randomly. This is not the best way to do it, and we hope a more clever way of generating questions will be made in a later release."
+msgstr "Bu alıştırmadaki sorular ritm ögelerinin rastgele seçimi ile oluşturulmaktadır aynı zamanda. Bunun yapmanın en iyi yolu bu değildir, ve umarız daha sonraki sürümlerde soruları harmanlamanın daha akılcı yolunu bulacağız."
+
+#: help/C/rhythmtapping2.xml:2(title)
+msgid "Tap the rhythm"
+msgstr "Ritmi vur"
+
+#: help/C/rhythmtapping2.xml:10(phrase)
+msgid "Screenshot of the rhythmtapping."
+msgstr "Ritm vuruşunun ekran görüntüsü."
+
+#: help/C/rhythmtapping2.xml:15(para)
+msgid "The program will play a randomly generated rhythm, and the user should reproduce the rhythm. The user enters the rhythm by tapping on the button labeled <emphasis>Tap here</emphasis>."
+msgstr "Yazılım rastgele üretilmiş bir ritm çalacak ve kullanıcının ritmi yeniden üretmesi gerekecektir. 'Kullanıcı' değişik ritmik ögeleri içeren düğmelere tıklayarak ritmleri girecektir ve şu düğme kullanılacaktır<emphasis>Buraya vur</emphasis>."
+
+#: help/C/profile-manager.xml:2(title)
+msgid "Profile Manager"
+msgstr "Profil Düzenleyicisi"
+
+#: help/C/profile-manager.xml:12(para)
+msgid "The profile manager let multiple Solfege users share a login on your operating system. The profiles will share the config file, but they will have separate statistics and test results."
+msgstr "Profil düzenleyicisi, işletim sisteminizde birden fazla Solfege yazılımını kullanıcıların paylaşmasına olanak tanır. Profiller config dosyasını paylaşacaklardır, fakat her kullanıcının ayrı istatistiği ve test sonucu olacaktır."
+
+#: help/C/profile-manager.xml:17(para)
+msgid "The profile manager will display at program startup if more than one profile exists. You can also access the profile manager by selecting <guimenuitem>Profile Manager</guimenuitem> from the <guimenu>File</guimenu>."
+msgstr "Eğer birden fazla profil varsa, program başlarken profil düzenleyicisi görüntülenecektir. Ayrıca profil düzenleyicisini şöyle de seçebilirsiniz: <guimenuitem>Profil Düzenleyicisi</guimenuitem> buradan ulaşın <guimenu>Dosya</guimenu>."
+
+#: help/C/profile-manager.xml:23(para)
+msgid "Check <emphasis>Don't ask at startup</emphasis> if you don't want to see the profile manager at startup. It will then remember the last profile selected when you close the profile manager and start the program with that profile."
+msgstr "Seçin <emphasis>Başlangıçta sorma</emphasis> eğer başlangıçta profil düzenleyicisi görmek istemiyorsanız. Bu durumda program son kullanılan profili hatırlayacak ve programı son kullanılan profil ile açacaktır."
+
+#: help/C/preferences-window.xml:2(title)
+msgid "Preferences window"
+msgstr "Seçenekler penceresi"
+
+#: help/C/preferences-window.xml:4(title)
+msgid "Instruments"
+msgstr "Çalgılar"
+
+#: help/C/preferences-window.xml:12(phrase)
+msgid "Screenshot of the 'Midi' page of the preferences window."
+msgstr "Tercihler penceresindeki 'Midi' sayfasının ekran görüntüsü."
+
+#: help/C/preferences-window.xml:18(title)
+msgid "Tempo"
+msgstr "Hız"
+
+#. translators: don't translate the module names in this paragraph.
+#: help/C/preferences-window.xml:20(para)
+msgid "Set the tempo (beats per minute) for music and arpeggios. These values are used by exercises written with these exercise modules: <literal>compareintervals</literal>, <literal>harmonicintervals</literal>, <literal>idtone</literal>, <literal>melodicinterval</literal>, <literal>singchord</literal>, <literal>singinterval</literal>, <literal>twelvetone</literal>, <literal>rhythm</literal>, <literal>identifybpm</literal>, <literal>nameinterval</literal>. Other exercises will either have the tempo set in the lesson file or on the config page of the exercise."
+msgstr "Müzik ve arpejler için hızı (saniye başına vuruş sayısı)ayarların. Bu değerler sıralanan alıştırma modülleri tarafından kullanılacaktır: <literal>aralıklarıkarşılaştır</literal>, <literal>armonikaralıklar</literal>, <literal>tonutanımla</literal>, <literal>melodikaralık</literal>, <literal>akorusöyle</literal>, <literal>aralığısöyle</literal>, <literal>onikiton</literal>, <literal>ritm</literal>, <literal>dakikabaşınavuruşubelirle</literal>, <literal>aralığıadlandır</literal>. Diğer alıştırmaların hız ayarları dosyasından veya alıştırmanın ayarlar sayfasından yapılacaktır."
+
+#: help/C/preferences-window.xml:37(title)
+msgid "Preferred instrument"
+msgstr "Tercih edilen çalgı"
+
+#: help/C/preferences-window.xml:38(para)
+msgid "Set the midi instrument and volume used for most exercises."
+msgstr "Çoğu alıştırmada kullanılan midi çalgısı ve ses yüksekliğini ayarlayınız."
+
+#: help/C/preferences-window.xml:41(title)
+msgid "Chord instruments"
+msgstr "Akor çalgıları"
+
+#: help/C/preferences-window.xml:42(para)
+msgid "Solfege can use three different instruments when playing chords. One for the highest tone, one for the tones in the middle and one for the bass tone. This can be helpful if you find it difficult to hear individual tones in chords."
+msgstr "Solfege akorları çalarken üç farklı çalgı kullanabilir. Bu çalgılardan biri en üstteki nota için, birisi ortadaki ses için diğeri de bas sesi için olacaktır. Eğer akorlardaki sesleri ayrıştırmakta zorlanıyorsanız böyle bir uygulama size yardımcı olacaktır."
+
+#: help/C/preferences-window.xml:48(title)
+msgid "Preferred percussion instruments"
+msgstr "Tercih edilen vurmalı çalgılar"
+
+#: help/C/preferences-window.xml:49(para)
+msgid "Set the percussion instrument used for count-in before rhythm questions, and the instrument used to play the question."
+msgstr "Ritm sorusu başlamadan önceki saymada kullanılacak çalgıyı, ve soru sorulurken kullanılacak olan çalgıyı ayarlayınız."
+
+#: help/C/preferences-window.xml:57(title)
+msgid "User"
+msgstr "Kullanıcı"
+
+#: help/C/preferences-window.xml:65(phrase)
+msgid "Screenshot of the 'User' page of the preferences window."
+msgstr "Tercihler penceresindeki 'Kullanıcı' sayfasının ekran görüntüsü."
+
+#: help/C/preferences-window.xml:71(para)
+msgid "Solfege uses this info in some exercises where the user is supposed to sing."
+msgstr "Kullanıcının sesleri söylemesi istendiğinde Solfege bu bilgiyi bazı alıştırmalarda kullanır. "
+
+#: help/C/preferences-window.xml:73(title)
+msgid "Lowest/highest tone the user can sing"
+msgstr "Kullanıcının söyleyebileceği en kalın/en ince ses"
+
+#: help/C/preferences-window.xml:74(para)
+msgid "These spin buttons tell Solfege the highest and lowest tone the user can sing. These values are only considered advisory by the program. If for example the values are set to <literal>c</literal> to <literal>c'</literal> and you have configured the program to ask you to sing minor and major tenths, you will have to sing tones outside this range."
+msgstr "Bu döndürme düğmeleri Solfege yazılımına kullanıcının söyleyebileceği en tiz ve en pes sesi anlatır. Bu değerler yazılımın önerdiği değerlerdir sadece. Örneğin değerler <literal>c</literal>  ile <literal>c'</literal> arasına ayarlanmış ise yazılımın size küçük ve büyük ondalık değerler aralığındaki parametrede sesleri söylemesini istemek üzere ayarlamışsınız demektir, bu oranın dışındaki sesleri söylemek zorundasınızdır."
+
+#: help/C/preferences-window.xml:81(title)
+msgid "Sex"
+msgstr "Cinsiyet"
+
+#: help/C/preferences-window.xml:82(para)
+msgid "Solfege need to know if the user is male or female when creating some of the questions where the user will sing the answer. This because the male voice sound one octave lower than the female voice."
+msgstr "Solfege yazılımı kullanıcının cinsiyetini bilmelidir. Erkek sesi bayan sesine göre bir oktav aşağıdan tınladığı için kullanıcının cevaplandıracağı sorular hazırlanırken bu fark göz önünde tutulmaktadır."
+
+#: help/C/preferences-window.xml:89(title)
+msgid "External programs"
+msgstr "Harici yazılımlar"
+
+#: help/C/preferences-window.xml:97(phrase)
+msgid "Screenshot of the 'External programs' page of the preferences window."
+msgstr "Tercihler penceresindeki 'Dış yazılımlar' sayfasının  ekran görüntüsü."
+
+#: help/C/preferences-window.xml:103(para)
+msgid "Solfege will search the PATH for the programs you enter on this page. So you only have to enter the full path if the programs are installed outside the PATH. A warning sign after the entry where you enter the file name mean that the program is not found."
+msgstr "Bu sayfaya eklediğiniz programların YOLU, Solfege tarafından aranacaktır. Eğer programlar YOL dışındaki yerlere kurulmuş ise, bu yolun tam adresini girmeniz gerekecektir. Aksi taktirde, bu bir dosyayı açmak istediğinizde programın  bulunamadığına dair bir uyarı mesajı karşınıza gelecektir. "
+
+#: help/C/preferences-window.xml:108(para)
+msgid "Please check the download page on <ulink url=\"http://www.solfege.org\">www.solfege.org</ulink> for up-to-date tips and download links if you run MS Windows and have to download and install the programs yourself."
+msgstr "Eğer MS Windows kullanıyor ve programı kendinizin indirmesi ve kurması gerekiyorsa ve güncel ipuçlarına göz atmak istiyorsanız, lütfen <ulink url=\"http://www.solfege.org\">www.solfege.org</ulink> sayfasındaki indirme sayfasına göz atınız."
+
+#: help/C/preferences-window.xml:115(title)
+msgid "Converters"
+msgstr "Dönüştürücüler"
+
+#: help/C/preferences-window.xml:116(para)
+msgid "Give command lines that can convert between different audio formats. <literal>%(in)s</literal> will be replaced with the name of the file we convert from, and <literal>%(out)s</literal> with the name we convert to. It is not necessary to enter <literal>%(out)s</literal> if the program automatically saved to a new file with the correct file extension."
+msgstr "Farklı ses dosyalarının birbirleri arasında dönüştürmek için komut satırı verir. <literal>%(in)s</literal> dönüştürmemize kaynaklık eden dosyaya verilen ad olacak, ve <literal>%(out)s</literal> ise dönüştüğümüz dosyaya verilen ad olacaktır. Şöyle bir girdi yazmak  <literal>%(out)s</literal> eğer doğru dosya son eki ile kaydedilmiş ise gerekli değildir."
+
+#: help/C/preferences-window.xml:124(title)
+msgid "Audio players"
+msgstr "Ses dosyası çalarlar"
+
+#: help/C/preferences-window.xml:125(para)
+msgid "Command lines that can play different audio formats. <literal>%s</literal> will be replaced with the name of the file to be played. The file name will be appended to the end of the string if you do not include a <literal>%s</literal>."
+msgstr "Farklı ses dosyası çalan komut satırları. <literal>%s</literal> çalınacak olan dosya adını alacaktır. Eğer siz yazmaz iseniz dizgenin sonuna eklenen dosya adı şöyle olacaktır <literal>%s</literal>."
+
+#: help/C/preferences-window.xml:133(title)
+msgid "Miscellaneous"
+msgstr "Çeşitli"
+
+#: help/C/preferences-window.xml:134(para)
+msgid "A few exercises make use of the programs CSound and MMA. Lilypond-book is required to make ear training test printouts, and latex is required if the printout should be created in dvi format. Without latex, you can still create html output."
+msgstr "CSound ve MMA programlarının kullanımını gerektiren bir kaç  alıştırma. Kulak eğitimi test çıktılarını elde etmek için sisteminizde lilypond-book kurulu olmalı, ve dvi formatındaki çıktıların alınabilmesi için latex kurulu olmalıdır. Sisteminizde latex kurulu değilse, sadece html çıktısı elde edersiniz."
+
+#: help/C/preferences-window.xml:140(para)
+msgid "If the file entered is a file ending with <literal>.py</literal>, then the script will be run by the same python interpreter as Solfege itself."
+msgstr "Eğer girilen dosyanın son eki <literal>.py</literal> ise, o zaman betik Solfege ile aynı şekilde aynı python yorumlayıcı tarafından çalıştırılacaktır."
+
+#: help/C/preferences-window.xml:147(title)
+msgid "Interface"
+msgstr "Arayüz"
+
+#: help/C/preferences-window.xml:155(phrase)
+#: help/C/preferences-window.xml:176(phrase)
+#: help/C/preferences-window.xml:202(phrase)
+msgid "Screenshot of the 'Interface' page of the preferences window."
+msgstr "Tercihler penceresindeki 'Arayüz' sayfasının ekran görüntüsü."
+
+#: help/C/preferences-window.xml:161(para)
+msgid "Resizeable main window: Allow the user to resize the main solfege window."
+msgstr "Yeniden boyutlandırılabilen ana pencere: Bu pencere ana solfege penceresini isteğinize göre boyutlandırmanızı sağlar."
+
+#: help/C/preferences-window.xml:163(para)
+msgid "Select language: You can manually select the language you want if Solfege does not detect this correctly, or if you want to run Solfege with a different language that your operating system."
+msgstr "Dili seç. Eğer Solfege otomatik olarak algılamaz ise dili elle seçebilirsiniz, veya Solfege yazılımınızı işletim sisteminizden farklı bir dilde çalıştırmak isteyebilirsiniz."
+
+#: help/C/preferences-window.xml:168(title)
+msgid "Identify tone keyboard accelerators"
+msgstr "Ses klavye hızlandırıcılarını belirleyiniz"
+
+#: help/C/preferences-window.xml:181(para)
+msgid "Here you can change the keyboard accelerators for the «Identify tone» exercise. Click on a row to select the tone you want to change the accelerator for, then click again on the second column of the row. Finally you can press the key you want to set as the accel for the tone."
+msgstr "Buradan «Sesi belirle» alıştırması için klavye hızlandırıcılarını değiştirebilirsiniz. Hızlandırıcı için değiştirmek istediğiniz sıradaki sese tıklayın, sonra sıranın ikinci sütununa tekrar tıklayın. Son olarak da, sesin hızlandırıcısı için istediğiniz tuşa basın."
+
+#: help/C/preferences-window.xml:187(para)
+#: help/C/preferences-window.xml:214(para)
+msgid "The «Dvorak» and «ASCII» buttons will set the accelerators to the default values for Dvorak and ASCII keyboards."
+msgstr "«Dvorak» ve «ASCII» düğmeleri Dvorak ve ASCII klavyeler için varsayılan değerleri ayarlayacaklardır."
+
+#: help/C/preferences-window.xml:194(title)
+msgid "Interval keyboard accelerators"
+msgstr "Aralık klavye hızlandırıcıları"
+
+#: help/C/preferences-window.xml:207(para)
+msgid "Here you can change the keyboard accelerators for the interval exercises, like the «Harmonic interval» and «Melodic interval» exercises. Click on a row to select the tone you want to change the accelerator for, then click again on the second column of the row. Finally you can press the key you want to set as the accel for the tone."
+msgstr "Buradan «Armonik aralık» ve «Melodik aralık» gibi aralık alıştırmaları için klavye hızlandırıcılarını değiştirebilirsiniz. Hızlandırıcı için değiştirmek istediğiniz sıradaki sese tıklayın, sonra sıranın ikinci sütununa tekrar tıklayın. Son olarak da, sesin hızlandırıcısı için istediğiniz tuşa basın."
+
+#: help/C/preferences-window.xml:223(title)
+msgid "Practise"
+msgstr "Pratik Yap"
+
+#: help/C/preferences-window.xml:231(phrase)
+msgid "Screenshot of the 'Practise' page of the preferences window."
+msgstr "Tercihler penceresindeki 'Alıştırma yap' sayfasının ekran görüntüsü."
+
+#: help/C/preferences-window.xml:236(para)
+msgid "Not allow new question before the old is solved: Disable the 'new' button until the question is answered correctly or the user clicks \"give up\"."
+msgstr "Eskisi çözülmeden yeni sorulara izin verilmez: 'yeni' düğmesini soru doğru cevaplanmadan veya kullanıcı \"vazgeç\" seçeneğini işaretlemeden etkisizleştir."
+
+#: help/C/preferences-window.xml:237(para)
+msgid "Repeat question if the answer was wrong: Play the sound again when the user gives an incorrect answer."
+msgstr ":Eğer soru yanlış ise soruyu tekrarla: Kullanıcı yanlış cevap verirse sesi tekrar çal."
+
+#: help/C/preferences-window.xml:238(para)
+msgid "Expert mode: Enabling this option in exercises using the <link linkend=\"idbyname-module\">idbyname</link> and <link linkend=\"idproperty-module\">idproperty</link> modules will let you select to practise only a subset of the questions in the lesson file. Practising with expert mode enabled will not save any statistics."
+msgstr "Uzman kipi: Bu seçeneği etkinleştirmek şu özellikleri kullanan alıştırma <link linkend=\"idbyname-module\">isimletanımla</link> and <link linkend=\"idproperty-module\">özelliğitanımla</link> modüllerinin sadece ders dosyasının alt kısmındaki soru seçenekleri ile çalışma yapmanıza imkan verecektir. Uzman kipi etkinleştirildiğinde istatistik kaydı tutulmayacaktır."
+
+#: help/C/preferences-window.xml:247(title)
+msgid "Sound setup"
+msgstr "Ses ayarı"
+
+#: help/C/preferences-window.xml:255(phrase)
+#: help/C/preferences-window.xml:320(phrase)
+msgid "Screenshot of the 'Sound setup' page of the preferences window."
+msgstr "Tercihler penceresindeki 'Ses ayarı' sayfasının ekran görüntüsü."
+
+#: help/C/preferences-window.xml:267(phrase)
+msgid "Screenshot of the 'Sound setup' page of the preferences window, running on MS Windows XP."
+msgstr "MS Windows XP işletim sisteminde, tercihler penceresi, 'Ses ayarı' sayfasının ekran görüntüsü."
+
+#: help/C/preferences-window.xml:273(title)
+msgid "Midi setup"
+msgstr "Midi ayarı"
+
+#: help/C/preferences-window.xml:275(title)
+msgid "The exercises that generate sound have several ways to play sound:"
+msgstr "Ses oluşturan alıştırmalar için, sesi çalmanın birkaç yolu vardır:"
+
+#: help/C/preferences-window.xml:277(term)
+msgid "No sound:"
+msgstr "Ses yok:"
+
+#: help/C/preferences-window.xml:279(para)
+msgid "Use this for debugging or when you are porting Solfege. No sounds are played, the midi events are printed to stdout."
+msgstr "Bunu hata ayıklamak için veya Solfege yazılımını taşımak için kullan. Hiçbir ses çalınmaz, midi olayları bekletilmektedir."
+
+#: help/C/preferences-window.xml:283(term)
+msgid "Use ALSA device"
+msgstr "ALSA aygıtını kullan"
+
+#: help/C/preferences-window.xml:285(para)
+msgid "If you have the Python modules for ALSA installed, you can use the ALSA sequencer. If your operating system is Linux, you have a menu item on the Help menu that can download and compile the modules for you."
+msgstr "Kurulu ALSA için Python modülleriniz varsa, ALSA sekvansır'ını kullanabilirsiniz. Eğer işletim sisteminiz Linux ise, Yardım menüsünde istediğiniz modülleri indirip derleyebileceğiniz menü seçeneğiniz vardır."
+
+#: help/C/preferences-window.xml:291(term)
+msgid "Use device:"
+msgstr "Aygıtı kullan:"
+
+#: help/C/preferences-window.xml:293(para)
+msgid "The best choice here is usually <filename>/dev/music</filename> because it has the best support for percussion instruments. <filename>/dev/sequencer2</filename> is usually a symbolic link to <filename>/dev/music</filename>. If your system don't have <filename>/dev/music</filename>, you can create it with this command as root (if you run the linux kernel version 2.2 or later):"
+msgstr "Burada en iyi seçim genellikle <filename>/dev/music</filename> çünkü en iyi vurma çalgılar desteğine sahiptir.  <filename>/dev/sequencer2</filename> bu genellikle şuna simgesel bir linktir  <filename>/dev/music</filename>. Eğer sisteminizde bu yoksa <filename>/dev/music</filename>, root olarak onu oluşturabilirsiniz (eğer linux çekirdeğinin 2.2 veya daha üstünü kullanıyorsanız):"
+
+#: help/C/preferences-window.xml:298(para)
+msgid "cd /dev mknod music u 14 8"
+msgstr "cd /dev mknod music u 14 8"
+
+#: help/C/preferences-window.xml:299(para)
+msgid "On MS Windows this choice is labeled <literal>Windows multimedia output</literal>."
+msgstr "MS Windows işletim sisteminde bu seçenek <literal>Windows çokluortam çıkışı</literal> olarak etiketlenmiştir."
+
+#: help/C/preferences-window.xml:303(term)
+msgid "Use external midiplayer:"
+msgstr "Dış midiçalar kullan:"
+
+#: help/C/preferences-window.xml:305(para)
+msgid "This can be useful when porting to systems that don't use OSS, or if you have a bad midi synth on your soundcard and want to use timidity."
+msgstr "Bu seçenek eğer harici bir ses düzeneği kullanıyor veya  ses kartınızdaki midi sentezleyici kötü ve timidity kullanmak istiyorsanız faydalı olabilir."
+
+#: help/C/preferences-window.xml:312(title)
+#: help/C/preferences-window.xml:335(title)
+msgid "Statistics"
+msgstr "İstatistikler"
+
+#: help/C/preferences-window.xml:326(title)
+msgid "Statistics from 3.15 and older"
+msgstr "3.15 veya daha eski sürümden İstatistikler"
+
+#: help/C/preferences-window.xml:327(para)
+msgid "Versions of Solfege before 3.16.0 saved statistics in many small files. Solfege 3.16.0 and newer will import these files into the new database file the first time the program is run, but it will leave the old files on your computer. It is safe to delete these files after you have run solfege 3.16.0 or newer once. The files are stored in the <literal>statistics</literal> directory of the <emphasis>application data</emphasis> directory."
+msgstr "3.16.0 önceki Solfege sürümü istatistikleri pek çok küçük dosyada saklar. Solfege 3.16.0 sürümü bu dosyaları programı ilk kez kullandığınızda hiçbir şekilde yeni veri dosyalarına aktaramayacak, ancak eski dosyalar bilgisayarınızda duracaktır. Solfege 3.16.0 veya yeni bir sürüm kullanıyorsanız bu dosyaları silmek daha güvenli bir yoldur. Bu dosyaların saklandığı yerler: <emphasis>application data</emphasis> dizini altındaki <literal>statistics</literal> dizini."
+
+#: help/C/preferences-window.xml:336(para)
+msgid "Statistics are now saved in a file <literal>statistics.sqlite</literal> in the <emphasis>application data</emphasis> directory. The exact location of the directory can be found by selecting <guimenuitem>File Locations</guimenuitem> on the <guimenu>Help</guimenu> menu. Click <guibutton>Delete</guibutton> to reset you statistics and start with an empty <literal>statistics.sqlite</literal> file."
+msgstr "İstatistiklerin saklandığı dosyanın yeri <literal>statistics.sqlite</literal> dizini içindeki <emphasis>application data</emphasis> dizini. Dizinin tam yerine <guimenuitem>Dosya Yerleri</guimenuitem> menüsünün  <guimenu>Yardım</guimenu> üstmenüsünden ulaşabilirsiniz. <guibutton>Sil</guibutton> düğmesine tıklayarak istatistiklerinizi sıfırlayabilir ve boş bir <literal>statistics.sqlite</literal> dosyası ile herşeye yeniden başlayabilirsiniz."
+
+#: help/C/online-resources.xml:2(title)
+msgid "Online resources"
+msgstr "Çevrimiçi kaynaklar"
+
+#: help/C/online-resources.xml:3(para)
+msgid "The homepage for Solfege is <ulink url=\"http://www.solfege.org\">http://www.solfege.org</ulink>. There is also a smaller page with more static info at <ulink url=\"http://www.gnu.org/software/solfege/\">http://www.gnu.org/software/solfege/</ulink>."
+msgstr "Solfege anasayfası <ulink url=\"http://www.solfege.org\">http://www.solfege.org</ulink>. Daha duruk bilgiler içeren daha küçük web sayfasının linki<ulink url=\"http://www.gnu.org/software/solfege/\">http://www.gnu.org/software/solfege/</ulink>."
+
+#: help/C/online-resources.xml:5(title)
+msgid "Download Solfege"
+msgstr "Solfege Yazılımını İndir"
+
+#: help/C/online-resources.xml:6(para)
+msgid "The source code is available from <ulink url=\"http://ftp.gnu.org/gnu/solfege\">http://ftp.gnu.org/gnu/solfege</ulink>. If you are adventurous, you can try the unstable (buggy, but might contain new stuff) releases from <ulink url=\"http://alpha.gnu.org/gnu/solfege\">http://alpha.gnu.org/gnu/solfege</ulink>. These releases might have more bugs, but then you get the chance to try new stuff and find and report bugs."
+msgstr "Kaynak kodunu indirebileceğiniz link<ulink url=\"http://ftp.gnu.org/gnu/solfege\">http://ftp.gnu.org/gnu/solfege</ulink>. Eğer maceracı biriyseniz, kararsız sürümü deneyebilirsiniz (biraz hatalı, fakat bazı yeni özellikle içerebilir) buradan yükleyebilirsiniz<ulink url=\"http://alpha.gnu.org/gnu/solfege\">http://alpha.gnu.org/gnu/solfege</ulink>. Bu sürümlerde daha çok hata olabilir, fakat yazılımın yeni özelliklerini deneme şansınız ve bazı hataları bulup raporlama şansınız var."
+
+#: help/C/online-resources.xml:7(para)
+msgid "Source code and some precompiled binaries are available from <ulink url=\"http://sourceforge.net/project/showfiles.php?group_id=1465\">http://sourceforge.net/project/showfiles.php?group_id=1465</ulink>."
+msgstr "Kaynak kodu ve bazı önceden derlenmiş ikililere ulaşmak için<ulink url=\"http://sourceforge.net/project/showfiles.php?group_id=1465\">http://sourceforge.net/project/showfiles.php?group_id=1465</ulink>."
+
+#: help/C/online-resources.xml:8(para)
+msgid "If you run Debian you can <userinput>apt-get install solfege</userinput> to download and install the program."
+msgstr "Eğer Debian kullanıyorsanız<userinput>apt-get install solfege</userinput> komutu ile yazılımı yükleyip kurabilirsiniz."
+
+#: help/C/online-resources.xml:11(title)
+msgid "Mailing lists"
+msgstr "Posta listeleri"
+
+#: help/C/online-resources.xml:14(para)
+msgid "Very low traffic, moderated and will be used to announce stable releases of Solfege. (<ulink url=\"http://lists.sourceforge.net/mailman/listinfo/solfege-announce\">Subscription</ulink> | <ulink url=\"http://sourceforge.net/mailarchive/forum.php?forum_id=7332\">Archive</ulink>)"
+msgstr "Çok düşük trafik, azaltılmış ve Solfege yazılımının kararlı sürümlerinin duyurulması için kullanılacak olan bir link. (<ulink url=\"http://lists.sourceforge.net/mailman/listinfo/solfege-announce\">Subscription</ulink> | <ulink url=\"http://sourceforge.net/mailarchive/forum.php?forum_id=7332\">Archive</ulink>)"
+
+#: help/C/online-resources.xml:18(para)
+msgid "If you want to report problems installing or running Solfege, or have questions, comments or ideas on how to improve Solfege, please post to this list instead of using the message forum at Sourceforge or the author directly. You can post to solfege-devel without subscribing. (<ulink url=\"http://lists.sourceforge.net/mailman/listinfo/solfege-devel\">Subscription</ulink> | <ulink url=\"http://sourceforge.net/mailarchive/forum.php?forum_id=3968\">Archive</ulink>)"
+msgstr "Eğer Solfege yazılımının yükleme ve kurulmasında bazı problemler yaşıyorsanız, ya da sorularınız, yorumlarınız veya Solfege geliştirmek ile ilgili fikirleriniz varsa, yazara veya Sourceforge'daki forumlara ileti göndermek yerine bunları listelere gönderiniz. solfege-devel listesine üye olmadan da ileti gönderebilirsiniz. (<ulink url=\"http://lists.sourceforge.net/mailman/listinfo/solfege-devel\">Subscription</ulink> | <ulink url=\"http://sourceforge.net/mailarchive/forum.php?forum_id=3968\">Archive</ulink>)"
+
+#: help/C/online-resources.xml:22(para)
+msgid "The standard GNU address to send bug reports. This list is at the moment forwarded to <email>solfege-devel@lists.sourceforge.net</email>"
+msgstr "Hata raporlarının gönderildiği standart GNU adresi.  Bu liste'nin şu anda iletildiği posta adresi <email>solfege-devel@lists.sourceforge.net</email>"
+
+#: help/C/nameinterval.xml:2(title)
+msgid "Name intervals"
+msgstr "Aralıklar adlandır"
+
+#: help/C/nameinterval.xml:10(phrase) help/C/melodicinterval.xml:10(phrase)
+#: help/C/interval-config-help.xml:16(phrase)
+#: help/C/harmonicinterval.xml:10(phrase)
+msgid "Screenshot of the program practising intervals using the buttons interface."
+msgstr "Düğmeler arabirimlerinin kullanılarak aralıkların çalışıldığı yazılımın ekran görüntüsü."
+
+#: help/C/nameinterval.xml:16(para)
+msgid "In this exercise, Solfege will display and play an interval, and you should identify the interval. This is a music theory exercise, and not an ear training exercise. To learn how to name intervals you should read <xref linkend=\"theory-intervals\"/>."
+msgstr "Bu alıştırmada, Solfege bir aralık gösterecek, ve siz de aralığı niteleyeceksiniz. Bu bir müzik teorisi alıştırmasıdır, ve kulak eğitim alıştırması değildir. Aralıkları nasıl niteleyebileceğinizi öğrenmek için şunu okumalısınız <xref linkend=\"theory-intervals\"/>."
+
+#: help/C/nameinterval.xml:22(para)
+msgid "You identify the interval by clicking on one button telling the specific name and the general name."
+msgstr "Aralığı düğmeye tıklayarak özel ismini ve genel ismini söyleyerek nitelersiniz."
+
+#: help/C/music-theory.xml:2(title)
+msgid "Music theory"
+msgstr "Müzik Kuramı"
+
+#: help/C/music-theory.xml:5(para)
+msgid "Davide Bonetti has contributed a large set of scale exercises and some pages describing all the scales. You can see the pages <ulink url=\"../C/scales/modes.html\">here</ulink>."
+msgstr "Davide Bonetti önemli boyutta dizi alıştırmaları ve tüm dizileri anlatan sayfalarla önemli katkılarda bulunmuştır. Bu sayfaları bulabileceğiniz yer <ulink url=\"../C/scales/modes.html\">burasıdır</ulink>."
+
+#: help/C/music-theory.xml:10(title)
+msgid "Intervals"
+msgstr "Aralıklar"
+
+#: help/C/music-theory.xml:11(para)
+msgid "In music theory we use the word interval when we talk about the pitch difference between two notes. We call them harmonic intervals if two tones sound simultaneously and melodic intervals if they sound successively."
+msgstr "Müzik kuramında iki nota arasındaki uzaklıktan bahsederken aralık kelimesini kullanırız. Eğer iki ses aynı anda duyuluyorsa buna armonik aralıklar, eğer peşpeşe duyuluyorlarsa melodik aralıklar deriz."
+
+#. translators: This paragraph is messy because the author is writing
+#. in english, and english is not his mother language. Write this paragraph
+#. so that is as clear and simple as possible, describing only what is relevant
+#. for your language
+#: help/C/music-theory.xml:20(para)
+msgid "Interval names consist of two parts. Some examples are \"major third\" and \"perfect fifth\". In Walter Piston's \"Harmony\" the two parts are called <emphasis>the specific name</emphasis> and <emphasis>the general name</emphasis> part. Wikipedia talks about <emphasis>interval quality</emphasis> and <emphasis>interval number</emphasis>. I have seen people talking about an interval's <emphasis>numerical size</emphasis>."
+msgstr "Aralık adları iki parçadan oluşur. Örneğin \"büyük üçlü\" and \"tam beşli\". Walter Piston'un \"Armoni\" kitabında bu iki parça <emphasis>özel isim</emphasis> ve <emphasis>genel isim</emphasis> olarak tanımlanmıştır. Wikipedia sayfalarında bu iki parça <emphasis>aralık niteliği</emphasis> ve <emphasis>aralık numarası</emphasis> olarak tanımlanır. Bazıları ise aralıklardan bahsederken <emphasis>sayısal boyut</emphasis> terimini kullanmaktadır."
+
+#: help/C/music-theory.xml:27(para)
+msgid "You find the general name by counting the steps on the staff, ignoring any accidentals. So if the interval you want to name goes from E to G#, then we count to 3 (E F G) and see that the general name is <emphasis>third</emphasis>."
+msgstr "Genel ismi arızaları gözardı ederek dizek üzerindeki perdeleri sayarak bulursunuz. Böylece eğer adlandırmak istediğiniz aralık Mi'den Sol diyez'e gidiyorsa, 3 ses (mi, fa, sol) sayarız ve genel ismin <emphasis>üçlü</emphasis> olduğunu görürüz."
+
+#: help/C/music-theory.xml:40(para)
+msgid "The specific name tells the exact size of the interval. Unisons, fourths, fifths and octaves can be diminished, pure or augmented. Seconds, thirds, sixths and sevenths can be minor, major, diminished or augmented. A minor interval is one semitone smaller than a major interval. A diminished interval is one semitone smaller than a pure or a minor interval, and an augmented interval is one semitone larger than a pure or major interval."
+msgstr "Özel isim bize aralığın tam adını anlatır. Sesdeşler, dörtlüler, beşliler ve sekizliler eksilmiş, saf veya artmış olabilir. İkililer, üçlüler, altılıar ve yedililer küçük, büyük, eksiltilmiş veya arttırılmış olabilir. Bir küçük aralık, büyüğüne göre yarım perde daha küçüktür. Bir eksiltilmiş aralık minör aralığına göre bir yarım perde daha küçük, bir arttırılmış aralık tam veya büyük olanına göre yarım perde daha büyüktür."
+
+#: help/C/music-theory.xml:48(para)
+msgid "Accidentals change the size of intervals. The interval becomes one semitone larger if you add a sharp to the highest tone or a flat to the lowest tone. And it becomes one semitone smaller if you add a flat to the highest tone or a sharp to the lowest tone. In the following sections naming of the intervals will be shown in greater detail."
+msgstr "Arızalar aralığın boyutunu değiştirebilirler. Bir aralığın ikinci sesine diyez veya ilk sesine bir bemol eklerseniz arlık yarım perde daha büyük olacaktır.  Ve ikinci ses bemol veya birinci sese diyez eklerseniz aralık bir yarım perde daha küçük olacaktor. Gelen bölümde aralıkların adlandırılması daha detaylı biçimde anlatılmaktadır."
+
+#: help/C/music-theory.xml:57(title)
+msgid "Seconds"
+msgstr "İkililer"
+
+#: help/C/music-theory.xml:58(para)
+msgid "Seconds are easy to recognise: the two notes are neighbours on the staff. One note is on a staff line, and the other one is in the space above or below. A minor second is one semitone step, also called a half step. A major second is two semitone steps, also called a whole step."
+msgstr "İkilileri tanımak kolaydır: dizekteki komşu seslerdir bunlar. Notanın biri çizginin tam içinde ötekisi ise bir sonraki veya bir önceki boşluktadır. Küçük ikili yarım perde, büyük ikili tam perde uzaklığındadır."
+
+#: help/C/music-theory.xml:63(para)
+msgid "To learn to identify seconds, you first have to learn which seconds there are between the natural tones. As you can see in <xref linkend=\"theory-intervals-seconds\"/>, only the intervals E-F and B-C are minor seconds. The rest are major intervals. You can check that <xref linkend=\"theory-intervals-seconds\"/> is correct by looking at a piano. You will see that there are no black keys between E and F and between B and C."
+msgstr "İkilileri tanımayı öğrenmek için, önce doğal skalada hangi sesler arasında ikililerin kendiliğinden oluştuğunu anlamalısınız. Burada gördüğünüz gibi <xref linkend=\"theory-intervals-seconds\"/>, sadece E-F ve B-C sesleri küçük ikilidir. Diğerlerinin tümü büyük aralıklardır. Buraya bakarak <xref linkend=\"theory-intervals-seconds\"/> piyano tuşesinden de bunu doğrulayabilirsiniz. Göreceğiniz gibi E ve F ile B ve C arasında hiç siyah tuş yoktur."
+
+#: help/C/music-theory.xml:79(para)
+msgid "If the second has accidentals, then we have to examine them to find out how they change the size of the interval. Let us identify a few intervals!"
+msgstr "Eğer ikililer arıza almış ise, aralığın boyutunda bunların neyi değiştirdiğine bir bakalım. Bir kaç aralık tanımlayalım!"
+
+#: help/C/music-theory.xml:92(para)
+msgid "We remove the accidental from the interval in <xref linkend=\"theory-intervals-seconds-1\"/> and see that the interval F-G is a major second. When we add the flat to the highest tone, the interval becomes one semitone smaller, turning into a minor second."
+msgstr "Şu aralıkdan arızayı kaldıralım <xref linkend=\"theory-intervals-seconds-1\"/> ve F-G seslerinin büyük ikili oluşturduğunu görelim. İkinci sese bemol eklediğimizde, aralığın boyutu yarım perde küçülür, ve küçük ikili olur."
+
+#: help/C/music-theory.xml:106(para)
+msgid "We remove the accidentals, and see that the interval A-B is a major second. You still remember <xref linkend=\"theory-intervals-seconds\"/>, don't you? Then we add the flat to the A, and the interval becomes an augmented second. And when we add the flat to the B, the interval becomes a major second."
+msgstr "Arızaları kaldırınca, A-B'nin büyük ikili olduğunu görürüz. Hatırlıyorsunuz <xref linkend=\"theory-intervals-seconds\"/>, değil mi? Sonra La sesine bemol ekleyince aralık artık ikili olur. Ve Si sesine de bemol ekleyince, aralık büyük ikili olur."
+
+#: help/C/music-theory.xml:121(para)
+msgid "We remove the accidentals, and see that the interval E-F is a minor second. When we add a flat to the lowest tone, the interval becomes one semitone larger, turning into a major second. And when we add a sharp to the highest tone, the interval becomes one semitone larger, turning into an augmented second."
+msgstr "Arızaları kaldırınca Mi-Fa'nın küçük ikili olduğunu görürüz. Alttaki sese bemol ekleyince, iki ses arasındaki aralık bir yarım perde açılır, ve büyük ikili olur. Üstteki sese diyez eklersek aralık yarım perde daha büyür ve artmış ikili olur."
+
+#: help/C/music-theory.xml:134(title)
+msgid "Thirds"
+msgstr "Üçlüler"
+
+#: help/C/music-theory.xml:135(para)
+msgid "A minor third is one minor and one major second, or three semitones. A major third are two major seconds, or four semitone steps. <xref linkend=\"theory-intervals-thirds\"/> shows the thirds between all the natural tones. You should memorise the major intervals, C-E, F-A and G-B. Then you know that the other four intervals are minor."
+msgstr "Bir küçük üçlü aralığı, bir küçük ve bir büyük ikiliden veya üç yarım perdeden oluşur. Bir büyük üçlü aralığı iki büyük ikiliden veya dört yarım perdeden oluşur. <xref linkend=\"theory-intervals-thirds\"/> tüm doğal yapıdaki üçlüleri gösterir. Büyük aralıkları ezberlemelisiniz, Do-Mi, Fa-La ve Sol-Si. Bunun dışındaki diğer dört aralık küçüktür."
+
+#: help/C/music-theory.xml:150(para)
+msgid "Then you examine the accidentals to see if they change the specific name. This is done exactly the same way as for seconds."
+msgstr "Bundan sonra arızaların aralıkların özel isimlerini nasıl değiştirdiğine bakabilirsiniz. Bu ikililerin başına gelen yöntemle aynıdır."
+
+#: help/C/music-theory.xml:158(title)
+msgid "Fourth"
+msgstr "Dörtlü"
+
+#: help/C/music-theory.xml:159(para)
+msgid "A pure fourth is 2½ steps, or two major seconds and a minor second. <xref linkend=\"theory-intervals-fourths\"/> shows all fourths between natural tones. You should memorise that the fourth F-B is augmented, and that the other six are pure."
+msgstr "Düz dörtlü 2½ perde, veya iki büyük ikili ve bir küçük ikiliden oluşur. <xref linkend=\"theory-intervals-fourths\"/> doğal dizideki tüm dörtlüleri gösterir. Fa-Si arasındaki dörtlünün artmış ve diğer altısının düz olduğunu ezberlemelisiniz."
+
+#: help/C/music-theory.xml:178(title)
+msgid "Fifth"
+msgstr "Beşli"
+
+#: help/C/music-theory.xml:179(para)
+msgid "A pure fifth is 3½ steps, or three major seconds and a minor second. <xref linkend=\"theory-intervals-fifths\"/> shows all fifths between natural tones. You should remember that all those intervals are pure, except B-F that is diminished."
+msgstr "Düz beşli 3½ perde, veya üç büyük ikili ve bir küçük ikiliden oluşur. <xref linkend=\"theory-intervals-fifths\"/> doğal yapıdaki tüm beşlileri gösterir. Si-Fa dışındaki artmış dışındaki diğerlerinin düz beşli olduğunu ezberlemelisiniz."
+
+#: help/C/music-theory.xml:193(para)
+msgid "If an interval has accidentals, then we must examine them to see how they change the size of the interval. A diminished fifth is one semitone smaller than a pure interval, and an augmented fifth is one semitone larger. Below you will find a few examples:"
+msgstr "Eğer aralıkta arıza varsa, bunun aralığın boyutunu nasıl değiştirdiğini kontrol etmeliyiz. Bir eksiltilmiş beşli tam beşliden bir yarım perde daha küçük, ve bir artmış beşli bir yarım perde daha büyüktir. Aşağıda bununla ilgili bir kaç örnek bulacaksınız:"
+
+#: help/C/music-theory.xml:207(para)
+msgid "We remember from <xref linkend=\"theory-intervals-fifths\"/> that the interval B-F is a diminished fifth. The lowest tone in <xref linkend=\"theory-intervals-fifths-1\"/> is preceded by a flat that makes the interval one semitone larger and changes the interval from a diminished to a pure fifth."
+msgstr "Şuradan anımsarsanız <xref linkend=\"theory-intervals-fifths\"/> Si-Fa artık beşlidir. Burada alttaki ses <xref linkend=\"theory-intervals-fifths-1\"/> bemol almış olup aralığı bir yarım perde büyütür ve aralığın niteliğini eksiltilmiş den tam beşliye dönüştürür."
+
+#: help/C/music-theory.xml:222(para)
+msgid "We know from <xref linkend=\"theory-intervals-fifths\"/> that interval E-B is a perfect fifth. In <xref linkend=\"theory-intervals-fifths-2\"/> the E has a flat in front of it, making the interval augmented. But then the B is preceded by a double flat that makes the interval two semitone steps smaller and changes the interval to a diminished fifth."
+msgstr "Şurada da görüldüğü gibi <xref linkend=\"theory-intervals-fifths\"/> Mi-Si aralığı tam beşlidir. Burada <xref linkend=\"theory-intervals-fifths-2\"/> Mi bir bemol almakta olup, aralığı artmış hale getirmektedir. Fakat ardından Si çift bemol alarak aralığı iki yarım perde küçük hale getirir ve aralığı eksik beşliye dönüştürmektedir."
+
+#: help/C/music-theory.xml:230(title)
+msgid "Sixths"
+msgstr "Altılılar"
+
+#: help/C/music-theory.xml:231(para)
+msgid "Sixths are easiest identified by <link linkend=\"inverting-intervals\"> inverting the interval</link> and identifying the third. Then the following rule applies:"
+msgstr "Altılılar tanımlanması en kolay aralıklardır çünkü <link linkend=\"inverting-intervals\"> aralığı çevirdiğimizde</link> aralık üçlü olur. Sonra gelen kural uygulanmaya başlar:"
+
+#: help/C/music-theory.xml:236(para)
+msgid "If the third is diminished, then the sixth is augmented"
+msgstr "Eğer üçlü eksiltilmiş ise, o zaman altılı artmış olur"
+
+#: help/C/music-theory.xml:237(para)
+msgid "If the third is minor, then the sixth is major"
+msgstr "Eğer üçlü küçük ise, altılı büyük olur"
+
+#: help/C/music-theory.xml:238(para)
+msgid "If the third is major, then the sixth is minor"
+msgstr "Eğer üçlü büyük ise, altılı küçük olur"
+
+#: help/C/music-theory.xml:239(para)
+msgid "If the third is augmented, then the sixth is diminished"
+msgstr "Eğer üçlü artmış ise, o zaman altılı eksiltilmiş olur"
+
+#: help/C/music-theory.xml:242(para)
+msgid "If you find inverting intervals difficult, then you can memorise that the intervals E-C, A-F and B-G are minor. The other four are major. Then you examine the accidentals to see if they change the specific name. This is done exactly the same way as for seconds."
+msgstr "Eğer aralıklar size zor gelirse, Mi-Do, La-Fa ve Si-Sol seslerinin küçük olduğunu ezberleyin. Diğer dördü büyüktür. Sonra, arıza varsa özel adları değiştirip değiştirmediğini kontrol edin. Bunu ikililere yaptığımız gibi diğerlerine de uygulayabiliriz."
+
+#: help/C/music-theory.xml:259(title)
+msgid "Sevenths"
+msgstr "Yedililer"
+
+#: help/C/music-theory.xml:260(para)
+msgid "Sevenths are identified the same way as sixths. When you invert a seventh, you get a second."
+msgstr "Yedililer, altılılara yapıdlığı tanımlanırlar. Yediliyi çevirdiğinizde, ikili elde edersiniz."
+
+#: help/C/music-theory.xml:263(para)
+msgid "If you find inverting intervals difficult, then you can memorise that the intervals C-B and F-E are major. The other five are minor. Then you examine the accidentals to see if they change the specific name. This is done exactly the same way as for seconds."
+msgstr "Eğer aralıkları çevirmek size zor gelirse, Do-Si ve Fa-Mi seslerinin küçük olduğunu ezberleyin. Diğer beşi büyüktür. Sonra, arıza varsa özel adları değiştirip değiştirmediğini kontrol edin. Bunu ikililere yaptığımız gibi diğerlerine de uygulayabiliriz."
+
+#: help/C/music-theory.xml:283(title)
+msgid "Inverting intervals"
+msgstr "Aralıklların Çevrimi"
+
+#: help/C/music-theory.xml:284(para)
+msgid "You invert an interval when you move the lowest tone of an interval one octave higher or the highest tone one octave lower. The general name changes this way:"
+msgstr "Bir aralığın çevrimini yaparken birinci sesi bir oktav yukarı veya ikinci sesi bir oktav aşağıya alırsınız. Böylece genel isimlerde şöylesi değişiklikler olur:"
+
+#: help/C/music-theory.xml:287(para)
+msgid "Second becomes seventh."
+msgstr "İkililer çevrilince yedili olur."
+
+#: help/C/music-theory.xml:288(para)
+msgid "Third becomes sixth."
+msgstr "Üçlü çevrilince altılı olur."
+
+#: help/C/music-theory.xml:289(para)
+msgid "Forth becomes fifth."
+msgstr "Dörtlü çevrilince beşli olur."
+
+#: help/C/music-theory.xml:290(para)
+msgid "Fifth becomes fourth."
+msgstr "Beşli çevrilince dörtlü olur."
+
+#: help/C/music-theory.xml:291(para)
+msgid "Sixth becomes third."
+msgstr "Altılı çevrilince üçlü olur."
+
+#: help/C/music-theory.xml:292(para)
+msgid "Seventh becomes second."
+msgstr "Yedili çevrilince ikili olur."
+
+#: help/C/music-theory.xml:295(para)
+msgid "The specific name changes this way:"
+msgstr "Özel adlı aralıklardaki değişikli ise şöyle olur:"
+
+#: help/C/music-theory.xml:297(para)
+msgid "Diminished becomes augmented."
+msgstr "Eksiltilmiş aralık çevrilince artmış olur."
+
+#: help/C/music-theory.xml:298(para)
+msgid "Minor becomes major."
+msgstr "Küçük çevrilince büyük olur."
+
+#: help/C/music-theory.xml:299(para)
+msgid "Perfect stays perfect."
+msgstr "Tam, tam kalır."
+
+#: help/C/music-theory.xml:300(para)
+msgid "Major becomes minor."
+msgstr "Büyük çevrilince küçük olur."
+
+#: help/C/music-theory.xml:301(para)
+msgid "Augmented becomes diminished."
+msgstr "Artmış çevrilince eksiltilmiş olur."
+
+#: help/C/music-theory.xml:304(para)
+msgid "Below are two examples, a major third is inverted and becomes a minor sixth, and a minor seventh is inverted and becomes a major second."
+msgstr "Aşağıda iki örnek vardır, bir büyük üçlü çevrilmiş ve küçük altılı olmuş, ve bir küçük yedili çevrilmiş ve büyük ikili olmuştur."
+
+#: help/C/melodicinterval.xml:2(title)
+msgid "Melodic interval"
+msgstr "Melodik Aralık"
+
+#: help/C/melodicinterval.xml:16(para)
+msgid "This exercise creates random intervals and you should try to identify them."
+msgstr "Alıştırma rastgele aralıklar üretir veya siz bunları tanımlamaya çalışmalısınız."
+
+#: help/C/melodicinterval.xml:18(para) help/C/harmonicinterval.xml:22(para)
+msgid "If you are using the buttons interface, then you can right-click on the buttons to hear the interval they represent."
+msgstr "Eğer düğmeler arayüzünü kullanıyorsanız, temsil ettiği aralığı duymak için düğmelere sağ tıklamanız gerekir."
+
+#: help/C/interval-config-help.xml:2(title)
+msgid "Configuration"
+msgstr "Yapılandırma"
+
+#: help/C/interval-config-help.xml:3(para)
+msgid "On the config page of the exercise, there is a combo box where you can select different ways to answer the question. Currently there is a piano, guitar, bass and a few types of accordion in addition to the default buttons interface. Below is a screenshot showing the piano interface."
+msgstr "Alıştırmanın yapılandırma sayfasında, soruya cevap vermenin farklı yollarını seçebileceğiniz karma bir kutu vardır. Orada piyano, gitar, bas ve varsayılan düğmeler arabirimine ek olarak akordiyon'un birkaç türü vardır. Piyano arabirimini gösteren ekran görüntüsü aşağıdadır."
+
+#: help/C/idtone.xml:2(title)
+msgid "Identify tone"
+msgstr "Sesi nitelendir"
+
+#: help/C/idtone.xml:16(para)
+msgid "This is a combined tone memory and interval exercise. Some people believe this kind of exercise can give you perfect pitch (absolute pitch), but I don't believe so."
+msgstr "Bu ses hafızası ve aralık alıştırmasının birleşimidir. Bazı kişiler bu tür bir çalışmanın size mükemmel bir duyuş yetisi (absolut kulak) kazandırdığına inanırlar, ama ben inanmıyorum."
+
+#: help/C/idtone.xml:22(para)
+msgid "The basics are: the program play a tone and you must identify it by comparing it with the last tone played for you."
+msgstr "Programın temelinde size bir ses duyurup bunu belirlemenizi istemek ve bu sesi bir önce verilen ses ile karşılaştırmanızı beklemektir."
+
+#: help/C/idtone.xml:26(para)
+msgid "To get you started the program will play one tone and display its name on the status bar. You identify the tones by clicking on the piano keyboard or using the keyboard shortcuts that are the letters written on each key."
+msgstr "Başlamak için program size bir ses çalacak ve onun adını durum çubuğunda gösterecektir. Siz sesleri piyano tuşesine tıklayarak veya klavye tuşlarındaki kısayol tuşlarına basarak nitelendireceksiniz."
+
+#: help/C/idtone.xml:31(para)
+msgid "Right click on the piano keyboard to hear a note without actually guessing it. (Some will call that cheating....)"
+msgstr "Bir sesi doğal yoldan tahmin etmeden duymak için piyano tuşesine tıklayın. (Bazıları buna kopya çekmek diyor...)"
+
+#: help/C/idtone.xml:35(title)
+msgid "Manual configuration"
+msgstr "Elle yapılandırma"
+
+#: help/C/idtone.xml:37(para)
+msgid "You can configure this exercise as you like if you select select “Configure yourself” front the default front page."
+msgstr "Eğer ön sayfadan \"Kendi Yapılandır\"  seçeneğini seçersen bu alıştırmayı istediğiniz gibi yapılandırabilirsiniz."
+
+#: help/C/idtone.xml:40(para)
+msgid "There are several ways you can use this exercise. Personally, I have not used this exercise very much, and the sections below are only suggestions."
+msgstr "Bu alıştırmayı kullanmanın bazı yolları vardır. Kişisel olarak, bu alıştırmayı çok kullanmadım, ve aşağıdaki kısımlar sadece önerilerden ibarettir."
+
+#: help/C/idtone.xml:44(title)
+msgid "Note by note"
+msgstr "Nota nota"
+
+#: help/C/idtone.xml:45(para)
+msgid "Start with only the notes c-d-e at weight 1. When your score is at least 96% correct, you add the tone f and continue. Exercises are defined that will add one and one tone until you practise with all 12 tones."
+msgstr "Sadece birinci zorluktaki c-d-e notalarıyla başlayın. Puanınız en az 96% doğruya ulaştığında, f sesini ekleyin ve devam edin. Alıştırmalar, tüm 12 ses ile alıştırmanızı bitirene kadar sürecektir."
+
+#: help/C/idtone.xml:52(title)
+msgid "Heavy A"
+msgstr "Ağır LA"
+
+#: help/C/idtone.xml:54(para)
+msgid "Configure with the tone a at weight 11 (or higher) and the rest of the tones at weight 1. This way the program will play the tone a very often, so you will remember the tone, and then you use a as a reference tone to identify the other tones. When you have practised a while, you can reduce the weight of a to make the exercise harder."
+msgstr "Ağırlık 11 (veya daha yüksek) derecesinde sesi yapılandırın ve seslerin tümünün ağırlığı 1 olsun. Bu yolla program sesi daha sık çalacak, böylece sesi hatırlayacak ve bu sesi diğer sesleri hatırlamak için bir referans sesi olarak görmeye başlayacaksınız. Bu şekilde bir süre pratik yaptıktan sonra, daha zor alıştırmalara daha cesaretle geçebileceksiniz."
+
+#: help/C/idtone.xml:60(para)
+msgid "If run from “Configure yourself”, on the top of the config page you tell the program how important the different tones are. If you for example give the tone a 11 points and the rest 1 point each, then (11+11*1)/11*100 = 50% of the random tones will be an a."
+msgstr "Eğer \"Kendiniz Yapılandırın\"ı çalıştırırsanız, yapılandır penceresinin tepesinde farklı seslerin ne kadar önemli olduğunu programa söyleyeceksiniz. Eğer örneğin siz bir sese 11 puan, tümünden herbirine 1 puan verirseniz (11+11*1)/11*100 = 50% rastgele tonlar bir la olacaktır. "
+
+#: help/C/idtone.xml:65(para)
+msgid "Below that you select what octaves the random tones can be from."
+msgstr "Aşağıda rastgele seslerin hangi oktavdan geleceğini seçebilirsiniz."
+
+#: help/C/idtone.xml:67(para)
+msgid "Then you can select if Solfege should give you a new question automatically when you have solved the old."
+msgstr "Bundan sonra eskisini çözdüyseniz Solfege otomatik olarak size yeni bir soru soracaktır."
+
+#: help/C/idtone.xml:70(para)
+msgid "In the frame below you can set some pretty self explaining options about what happens if you answer wrong."
+msgstr "Aşağıdaki çerçevede eğer cevabınız yanlışsa, bazı kendiliğinden açıklanmış güzel seçenekleri ayarlayabilirsiniz."
+
+#: help/C/idtone.xml:73(para)
+msgid "The keyboard shortcuts can be configured from the <link linkend=\"preferences-window\">preferences window</link>."
+msgstr "Klavye kısayolları <link linkend=\"preferences-window\">tercihler penceresinde</link> ayarlanabilir."
+
+#: help/C/idproperty.xml:2(title)
+msgid "Multiple choice answers to music"
+msgstr "Müziğe verilecek çok seçenekli cevaplar"
+
+#: help/C/idproperty.xml:17(para)
+msgid "This page is a generic help page for all exercises written using the <literal>idproperty</literal> exercise module. Exercises will typically write more specialized help text than this."
+msgstr "Bu sayfa tüm alıştırmaların bulunduğu genel yardım sayfasıdır ve bu alıştırmalar <literal>idproperty</literal> alıştırma modülü kullanılarak yazılmıştır. Alıştırmalar daha detaylı yardım metinleri ile görüntülenecektir."
+
+#: help/C/idproperty.xml:21(para)
+msgid "The screenshot above show one example of how an exercise can look like."
+msgstr "Yukarıdaki ekran görüntüsü bir alıştırmanın nasıl göründüğünü göstermektedir."
+
+#: help/C/idproperty.xml:24(para)
+msgid "The exercise will display a question and play some music, and you have to select one answer from each column in the table of buttons. When you select the correct answer in a column, the label will turn bold, and the message \"Correct\" will be flashed in the status bar."
+msgstr "Alıştırma bir soru içerecek ve bir müzik çalacaktır, ve düşmelerden oluşan tablodaki sütünlardaki cevaplardan birini seçeceksiniz. Bir sütündaki doğru cevabı seçerseniz, etiket kalın olacak ve \"Doğru\" mesajı durum çubuğunda yanıp sönecektir."
+
+#: help/C/idproperty.xml:29(para)
+msgid "The exercise will have a <guibutton>Repeat arpeggio</guibutton> if one or more of the questions is of a type the program can play arpeggiated."
+msgstr "Alıştırmada bir <guibutton>Arpeji tekrarla</guibutton> düğmesi bulunur, bu durum soru veya soruların arpej olarak da çalınabilme olacağı varsa geçerlidir."
+
+#: help/C/identifybpm.xml:2(title)
+msgid "Beats per minute"
+msgstr "Dakika başına vuruş sayısı"
+
+#: help/C/identifybpm.xml:13(para)
+msgid "The program will play a tempo, like a metronome. You should try to guess how many beats per minute is played. Each button represents one tempo, and the program will only play in tempos that has a button with bold text. Right-click on buttons to change the status of a tempo."
+msgstr "Yazılım metronom gibi bir tempo çalacaktır. Dakika başına kaç vuruş çalındığını tahmin etmelisiniz. Her düğme bir tempoyu simgeler, ve yazılım sadece kalın metine sahip tempoları çalacaktır. Temponun durumunu değiştirmek için düğmenin üzerine sağ tıklayınız."
+
+#: help/C/identifybpm.xml:18(para)
+msgid "Note: the rhythm depends on the <literal>gtk timeout_add</literal> function to play the rhythm, so it is not very precise."
+msgstr "Dikkat: ritmin bağlı olduğu özellik <literal>gtk timeout_add</literal> işlevidir, bu yüzden çok da kesin değildir."
+
+#: help/C/idbyname.xml:2(title)
+msgid "Answer questions by clicking on buttons"
+msgstr "Soruları düğmelere tıklayarak cevaplayınız"
+
+#: help/C/idbyname.xml:3(para)
+msgid "This page is a generic help page for all exercises written using the <literal>idbyname</literal> exercise module. Exercises will typically write more specialized help text than this."
+msgstr "Bu sayfa tüm alıştırmaların bulunduğu genel yardım sayfasıdır ve bu alıştırmalar <literal>idproperty</literal> alıştırma modülü kullanılarak yazılmıştır. Alıştırmalar daha detaylı yardım metinleri ile görüntülenecektir."
+
+#: help/C/idbyname.xml:7(para)
+msgid "Click on the button representing the answer of the question played or displayed. Exercises will often display a heading telling the purpose of the exercise."
+msgstr "Sorunun cevabını duyarak veya görüntüleyerek almak için düğmeye tıklayınız. Alıştırmaların başında çoğunlukla o alıştırmanın amacını belirten bir başlık göreceksiniz."
+
+#: help/C/idbyname-intonation.xml:2(title)
+msgid "Intonation"
+msgstr "Entonasyon"
+
+#: help/C/idbyname-intonation.xml:16(para)
+msgid "In this exercise, Solfege will play a interval, and you should tell how the interval is intonated. You do this by clicking on one of the buttons labeled 'too small', 'pure' or 'too large'. It is also possible that one of these three buttons are missing."
+msgstr "Bu alıştırmada, Solfege bir aralık çalacak ve aralığın nasıl temiz söyleneceğini söylemelisiniz. Bunu 'çok küçük', 'temiz' or 'çok büyük' düğmelerine tıklayarak yapabilirsiniz. Bu üç değmeden birinin olmaması da mümkündür."
+
+#: help/C/idbyname-chords.xml:2(title)
+msgid "Identify the chord"
+msgstr "Akoru nitelendir"
+
+#: help/C/idbyname-chords.xml:16(para)
+msgid "The purpose of this exercise is to identify the chord being played."
+msgstr "Bu alıştırmanın amacı çalınan akoru nitelendirmektir."
+
+#: help/C/idbyname-chords.xml:17(para)
+msgid "Start the exercise by pressing <guibutton>New</guibutton>. Solfege will then play a chord, and you should identify it by clicking one of the buttons below the empty staff line."
+msgstr "Alıştırmaya <guibutton>Yeni</guibutton> düğmesine basarak başlayın. Solfege siz düğmeye basınca bir akor çalacaktır, ve boş dizeğin altındaki düğmelerden birine basarak bu akoru nitelendireceksiniz."
+
+#: help/C/idbyname-chords.xml:19(para)
+msgid "If you guess correct, the program will display the chord on the staff line and flash the message \"Correct\" in the status bar. Then you can click the button <guibutton>New</guibutton> to get a new question."
+msgstr "Eğer tahmininiz doğru ise, program akoru dizekte gösterecek ve durum çubuğunda \"Doğru\" mesajı yanıp sönecektir. Bundan sonra siz  <guibutton>Yeni</guibutton> düğmesine basarak yeni bir soruya hazırlanacaksınız."
+
+#: help/C/idbyname-chords.xml:21(para)
+msgid "If you guess wrong the message \"Wrong\" will be displayed in the status bar."
+msgstr "Eğer tahmininiz yanlış ise durum çubuğunda  \"Yanlış\" mesajı gözükecektir."
+
+#: help/C/idbyname-cadences.xml:2(title)
+msgid "Identify the cadence"
+msgstr "Kadansı nitelendir"
+
+#: help/C/idbyname-cadences.xml:3(para)
+msgid "Identify the cadence by clicking on the button with its name. As acknowledged in <ulink url=\"http://bugs.solfege.org/5\">bug #5</ulink> we need cadence exercises in Solfege."
+msgstr "Kadansları ona ait düğmelere basarak nitelendirebilirsiniz. As acknowledged in <ulink url=\"http://bugs.solfege.org/5\">bug #5</ulink> we need cadence exercises in Solfege."
+
+#: help/C/idbyname-cadences.xml:8(para)
+msgid "In this release of Solfege, we only have one exercise with cadences in major. In this exercise, a major scale is played to establish the tonic. Maybe this is too little? Do we need a complete I-IV-V-I before the question? Or maybe it is better to write real music that ends in the cadence we want to practise? This are things we need to decide before we release 3.12.0. Comments and music can be added to <ulink url=\"http://bugs.solfege.org/5\"> bug #5</ulink>."
+msgstr "Solefege yazılımının bu sürümünde, sadece majör kadanslara ait bir alıştırmamız vardır. Bu alıştırmada, ekseni algılamak için bir majör dizi çalınmaktadır. Belki bu çok azdır? Sorudan önce tam bir I-IV-V-I bağlantısını duymaya istiyor muyuz? Ya da alıştırmasını yapmak istediğimiz kadansı içeren bir müziğe ihtiyacımız olabilir. 3.12.0 sürümünü çıkarmadan önce karar vermemiz gereken konulardan biri de budur. Yorumlarınızı ve müziklerinizi şuraya eklenebilir <ulink url=\"http://bugs.solfege.org/5\"> bug #5</ulink>."
+
+#: help/C/harmonicinterval.xml:2(title)
+msgid "Harmonic interval"
+msgstr "Armonik aralık"
+
+#: help/C/harmonicinterval.xml:16(para)
+msgid "This exercise is one of the exercises you can use to practise intervals. The concept is pretty simple: You press the <guibutton>New interval</guibutton> button to play a random interval, and then you should tell what interval it was."
+msgstr "Bu alıştırma aralıkları çalışabilecek olduğunuz alıştırmalardan biridir. Anlayış basittir. Siz rastgele bir aralık çalınması için <guibutton>Yeni aralık</guibutton>düğmesine basarsınız ve aralığın hangi nitelikte olduğunu söylersiniz."
+
+#: help/C/elembuilder-harmonic-progressions.xml:2(title)
+msgid "Harmonic progression dictation"
+msgstr "Armonik bağlantı diktesi"
+
+#: help/C/elembuilder-harmonic-progressions.xml:16(para)
+msgid "In this exercise, Solfege will play some music, and you must click on the buttons to build a representation of the harmonic progressions in the exercise."
+msgstr "Bu alıştırmada, Solfege size bir müzik çalacaktır, ve siz armonik bağlantı alıştırmasını simgeleyen düğmelere tıklamalısınız."
+
+#: help/C/ear-training-test-printout-editor.xml:2(title)
+msgid "Ear training test print-out editor"
+msgstr "Kulak eğitim deneme çıktısı düzenleyicisi"
+
+#: help/C/ear-training-test-printout-editor.xml:15(para)
+msgid "This tool is available on the <guimenu>File</guimenu> menu. Use it to create ear training tests to print out on paper. Solfege will generate two versions of the document: one for the students to complete, and one with the correct answer already written. This tool was added by request from a user, but we don't know if it has any real world usage. So please <link linkend=\"online-resources\">contact us</link> if you really use this, and let us know if it is usable."
+msgstr "Bu araca <guimenu>Dosya</guimenu> menüsünden ulaşabilirsiniz. Onun kulak eğitimi testlerini kağıda basmak için kullanabilirsiniz. Solfege belgenin 2 ayrı çıktı türünü üretecektr: biri öğrencilerin tamamlaması için, ve diğeri de cevap anahtarı olacaktır. Bu araç bir kullanıcıdan gelen istek üzerine eklenmiştir, fakat bize bu konuda bir geri dönüşte bulunulmamıştır. Bu yüzden, eğer gerçekten bu özelliği kullanıyorsanız, bundan bizim de haberimiz olması için lütfen  <link linkend=\"online-resources\">bize ulaşın</link>."
+
+#: help/C/ear-training-test-printout-editor.xml:25(para)
+msgid "The <guibutton>Add</guibutton> button will pop up a menu with all exercises from the active front page that this tool can create exercises from: exercises written using the <link linkend=\"idbyname-module\">idbyname</link>, <link linkend=\"melodicinterval-module\">melodicinterval</link> and <link linkend=\"harmonicinterval-module\">harmonicinterval</link> exercise modules. From lesson files written for the <literal>idbyname</literal> module, only <link linkend=\"lfunc-chord\">chord</link>, <link linkend=\"lfunc-rvoice\">rvoice</link> and <link linkend=\"lfunc-voice\">voice</link> music objects are supported."
+msgstr "Gördüğünüz <guibutton>Ekle</guibutton> düğmesi alıştırmalar oluşturabileceğiniz ve etkin tüm alıştırmaları ağaç görünümde gösterildiği bir açılan menü gösterecektir. Bunu yazarken kullanılan  alıştırma modüllerü <link linkend=\"idbyname-module\">idbyname</link>, <link linkend=\"melodicinterval-module\">melodicinterval</link> ve <link linkend=\"harmonicinterval-module\">harmonicinterval</link> alıştırma modülleridir. Ders dosyalarından yazılmış olan  <literal>idbyname</literal> modülü, sadece <link linkend=\"lfunc-chord\">chord</link>, <link linkend=\"lfunc-rvoice\">rvoice</link> ve <link linkend=\"lfunc-voice\">voice</link> müzik objeleri desteklenmektedir."
+
+#: help/C/ear-training-test-printout-editor.xml:39(para)
+msgid "<guibutton>Create sheet</guibutton> will open a dialog that let you select or create an empty directory, and then save the HTML or LaTex files and the graphics in that directory."
+msgstr "<guibutton>Tablo oluştur</guibutton> bir seçenekler penceresi açacak ve siz bir dizini seçme veya oluşturma olanağı bulacaksınız, ve ardından bu dizine HTML veya LaTex ve resim dosyalarını kaydedebileceksiniz."
+
+#: help/C/ear-training-test-printout-editor.xml:45(para)
+msgid "When you save and load the files defining ear training tests, the program will remember the random questions, so loading a file and clicking <guibutton>Create Sheet</guibutton> will create the exact same test. Click <guibutton>Randomize</guibutton> to create a new random set of questions."
+msgstr "Kulak eğitimi testleri tanımları dosyalarını kaydedip ve yüklediğinizde, program rastgele soruları hatırlayacak, böylece bir dosyayı <guibutton>Tablo Oluştur</guibutton> düğmesine tıklayıp yüklediğinizde aynı test tekrardan oluşturulmuş olacaktır. Yeni bir rastgele soru seti oluşturmak için <guibutton>Rastgele Oluştur</guibutton> düğmesine basınız."
+
+#: help/C/dictation.xml:2(title)
+msgid "Dictation"
+msgstr "Dikte"
+
+#: help/C/dictation.xml:10(phrase)
+msgid "Screenshot of the program running the dictation exercise."
+msgstr "Programın Dikte alıştırması yapılırken alınmış ekran görüntüsü."
+
+#: help/C/dictation.xml:19(para)
+msgid "You can let Solfege play some music for you that you are supposed to write down on paper. Click on the buttons with a quarter note pixmap to repeat smaller parts of the music. You have to click on the Show button and check your notes yourself to see if you made any mistakes."
+msgstr "Solfege yazılımı kağıda yazacağınız bir müziği çalar. Müziğin küçük parçalarını tekrar etmesi için dörtlük nota şeklindeki düğmeye basın. Bir hata yapıp yapmadığınızı kontrol etmek için Göster düğmesini tıklamalısınız."
+
+#: help/C/dictation.xml:25(para)
+msgid "You can use this exercise to practise sight singing: When you start the exercise, press Show and then try to sing the music. Then you can use the Play the whole music button or the quarter note buttons to let the program play the music. You have to decide yourself if you think you succeeded."
+msgstr "Bu alıştırmayı deşifre amaçlı kullanabilirsiniz. Alıştırmaya başladığınızda, Göster'e basın ve müziği söylemeye çalışın. Ondan sonra programın müziğin tamamını çalması için Çal'a veya dörtlük nota şeklindeki düğmelere basın. Başarılı olup olmadığınıza kendiniz karar vermek durumundasınız."
+
+#: help/C/dictation.xml:16(para)
+msgid "This exercise is called the dictation exercise, but if the necessary lesson files are written it can be used in several ways: <placeholder-1/>"
+msgstr "Bu alıştırmaya dikte alıştırması denir, fakat ders dosyaları hazır ise bu alıştırmalar başka şekillerde de kullanılabilir: <placeholder-1/>"
+
+#: help/C/bug-reporting.xml:2(title)
+msgid "Bugs"
+msgstr "Hatalar"
+
+#: help/C/bug-reporting.xml:3(para)
+msgid "Report bugs to the bug tracker at <ulink url=\"http://bugs.solfege.org/\">http://bugs.solfege.org</ulink>. Alternately, you can send an email to <email>bug-solfege@gnu.org</email>. General questions and patches should be sent to <email>solfege-devel@lists.sourceforge.net</email>."
+msgstr "Hata raporları için <ulink url=\"http://bugs.solfege.org/\">http://bugs.solfege.org</ulink>. Ya da, şu adrese e-posta gönderebilirsiniz <email>bug-solfege@gnu.org</email>. Genel konular ve betikler şu e-posta adresine gönderilebilir <email>solfege-devel@lists.sourceforge.net</email>."
+
+#: help/C/bug-reporting.xml:9(para)
+msgid "Please make your bug reports detailed. ''I get an error message in a window when I try to start the program.'' is not usable to me. When reporting bugs:"
+msgstr "Lütfen detaylı hata raporu gönderiniz. '' Programı başlatmayı denediğimde bir hata mesajı alıyorum'' gibi bir ifade benim için yetersizdir. Hata raporu gönderirken şunlara dikkat ediniz:"
+
+#: help/C/bug-reporting.xml:14(para)
+msgid "Tell me what version of Solfege you run. Please check if a newer release is available. If you only want to run stable releases, then you don't have to test newer development releases."
+msgstr "Solfege programının hangi sürümünü kullandığınızı belirtiniz. Eğer daha yeni bir sürümü varsa kontrol ediniz. Eğer sadece kararlı sürümü kullanmak istiyorsanız, bu durumda geliştirme sürümlerini test etme durumunda kalmazsınız."
+
+#: help/C/bug-reporting.xml:15(para)
+msgid "What operating system are you running? Version?"
+msgstr "Hangi işletim sistemi kullanmaktasınız? Versiyonu nedir?"
+
+#: help/C/bug-reporting.xml:16(para)
+msgid "Describe exactly what you are doing when the error happens."
+msgstr "Hata oluştuğunda tama olarak ne yaptığınızı tanımlayınız."
+
+#: help/C/bug-reporting.xml:17(para)
+msgid "Send an exact copy of the error messages. They make sense to the Solfege author even if you think they look cryptic to you."
+msgstr "Hata raporunun tam bir kopyasını gönderiniz. Size şifre gibi gözükseler de onların Solfege yazarı için çok daha büyük anlamı vardır."
+
+#: help/C/about-statistics.xml:2(title)
+msgid "About statistics"
+msgstr "İstatistikler hakkında"
+
+#: help/C/about-statistics.xml:3(para)
+msgid "Some exercises will show some statistics for different periods of time: <emphasis>Session</emphasis>, <emphasis>Today</emphasis>, <emphasis>Last 7 days</emphasis> and <emphasis>Total</emphasis>. The program uses two different kind of tables."
+msgstr "Bazı alıştırmalar farklı zamanlardaki bazı istatistikleri göstereceklerdir: <emphasis>Oturum</emphasis>, <emphasis>Bugün</emphasis>, <emphasis>Son 7 gün</emphasis> and <emphasis>Toplam</emphasis>. Yazılım, iki tür tablo kullanmaktadır."
+
+#: help/C/about-statistics.xml:15(phrase)
+msgid "Screenshot of the percentages table of a statistics page."
+msgstr "İstatistikler sayfasının yüzdeler tablosunun ekran görüntüsü."
+
+#: help/C/about-statistics.xml:20(para)
+msgid "The first table, as shown in the screenshot above, have one row for each question in the lesson file. <emphasis>Percent</emphasis> is the percentage of the times the question have been answered correctly. <emphasis>Count</emphasis> is the number of times the question have been asked."
+msgstr "Yukarıdaki ekran görüntüsünde görünen ilk tabloda, ders dosyasındaki her sorunun bir satırı yer almaktadır.  <emphasis>Yüzde</emphasis> doğru cevaplanan soruların sayısın yüzde değeri olarak gösterir. <emphasis>Sayı</emphasis> ise, soruların kaç kez sorulduğunu gösterir."
+
+#: help/C/about-statistics.xml:27(para)
+msgid "In the second type of table, the columns have the same labels as the rows, but the labels are not displayed because it will make the table too wide. So in the screenshot above, column 1 should have the label <emphasis>m3↑</emphasis> and column 2 <emphasis>M3↑</emphasis>. For the questions identified by the label of each row, each column tell how many times the user have answered the different possible answers. The bold number is the number of times the correct answer have been give."
+msgstr "İkinci tür tabloda, sütunlar satırlar ile aynı etiketlere sahiptir, fakat etiketler tabloyu fazla genişlettikleri için görünmezler. Bu yüzden yukarıdaki ekran görüntüsünde, sütun 1'in sahip olması gereken etiket <emphasis>m3↑</emphasis> ve sütun 2 <emphasis>M3↑</emphasis>dir. Her satırda etiket tarafından tanımlanan sorular için her sütun, kullanıcının farklı çözümlere sahip sorulara kaç kez cevap verdiğini anlatır. Kalın numaralar, doğru cevapların sayısını göstermektedir."
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
+#: help/C/about-statistics.xml:0(None)
+msgid "translator-credits"
+msgstr "SERVER ACİM <sacim@kde.org.tr>, 2009."
+
+#~ msgid "\"Mail program\" defines the command that starts the mail program when you click on email addresses in the user manual."
+#~ msgstr "\"Posta yazılımı\" kullanıcı kılavuzunda yazan e-posta adresine tıkladığınızda başlayan e-posta yazılımı."
+
+#~ msgid "Display user manual in web browser: Use this as an alternative to the help browser included with the program."
+#~ msgstr "Kullanıcı el kitabını web tarayıcıda görüntüle. Bunu programın bir parçası olan yardım tarayıcının bir alternatifi olarak kullan."
+
+#~ msgid "Key bindings"
+#~ msgstr "Tuş kısayolları"
+
+#~ msgid "New: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+#~ msgstr "Yeni: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+
+#~ msgid "Play first note: <keycombo><keycap>Alt</keycap><keycap>p</keycap></keycombo>"
+#~ msgstr "İlk notayı çal: <keycombo><keycap>Alt</keycap><keycap>l</keycap></keycombo>"
+
+#~ msgid "Play last note: <keycombo><keycap>Alt</keycap><keycap>l</keycap></keycombo>"
+#~ msgstr "Son notayı çal: <keycombo><keycap>Alt</keycap><keycap>l</keycap></keycombo>"
+
+#~ msgid "Play all: <keycombo><keycap>Alt</keycap><keycap>a</keycap></keycombo>"
+#~ msgstr "Hepsini çal: <keycombo><keycap>Alt</keycap><keycap>p</keycap></keycombo>"
+
+#~ msgid "New interval: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+#~ msgstr "Yeni aralık: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+
+#~ msgid "New interval, last was correct: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+#~ msgstr "Yeni aralık, son cevap doğru idi: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+
+#~ msgid "New interval, last was wrong: <keycombo><keycap>Alt</keycap><keycap>w</keycap></keycombo>"
+#~ msgstr "Yeni aralık, son cevap yanlıştı: <keycombo><keycap>Alt</keycap><keycap>w</keycap></keycombo>"
+
+#~ msgid "Repeat first tone: <keycombo><keycap>Alt</keycap><keycap>r</keycap></keycombo>"
+#~ msgstr "İlk sesi tekrar edin: <keycombo><keycap>Alt</keycap><keycap>r</keycap></keycombo>"
+
+#~ msgid "Play answer: <keycombo><keycap>Alt</keycap><keycap>p</keycap></keycombo>"
+#~ msgstr "Cevabı çal: <keycombo><keycap>Alt</keycap><keycap>p</keycap></keycombo>"
+
+#~ msgid "Play last tone: <keycombo><keycap>Alt</keycap><keycap>l</keycap></keycombo>"
+#~ msgstr "En son sesi çal: <keycombo><keycap>Alt</keycap><keycap>l</keycap></keycombo>"
+
+#~ msgid "440hz: <keycombo><keycap>Alt</keycap><keycap>z</keycap></keycombo>"
+#~ msgstr "440hz: <keycombo><keycap>Alt</keycap><keycap>z</keycap></keycombo>"
+
+#~ msgid "Repeat answer: <keycombo><keycap>Alt</keycap><keycap>p</keycap></keycombo>"
+#~ msgstr "Cevabı tekrarla: <keycombo><keycap>Alt</keycap><keycap>p</keycap></keycombo>"
+
+#~ msgid "Repeat: <keycombo><keycap>Alt</keycap><keycap>r</keycap></keycombo>"
+#~ msgstr "Tekrarla: <keycombo><keycap>Alt</keycap><keycap>r</keycap></keycombo>"
+
+#~ msgid "Repeat slowly: <keycombo><keycap>Alt</keycap><keycap>s</keycap></keycombo>"
+#~ msgstr "Yavaş hızda tekrarla: <keycombo><keycap>Alt</keycap><keycap>s</keycap></keycombo>"
+
+#~ msgid "Give up: <keycombo><keycap>Alt</keycap><keycap>g</keycap></keycombo>"
+#~ msgstr "Vazgeç: <keycombo><keycap>Alt</keycap><keycap>g</keycap></keycombo>"
+
+#~ msgid "Backspace: <keycap>Backspace</keycap>"
+#~ msgstr "Gerisilme: <keycap>Gerisilme</keycap>"
+
+#~ msgid "New question: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+#~ msgstr "Yeni soru: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+
+#~ msgid "Minor second: 1"
+#~ msgstr "Küçük ikili: 1"
+
+#~ msgid "Perfect fourth: 2"
+#~ msgstr "Tam dörtlü: 2"
+
+#~ msgid "Major sixth: 3"
+#~ msgstr "Büyük altılı: 3"
+
+#~ msgid "Minor ninth: 4"
+#~ msgstr "Küçük dokuzlu: 4"
+
+#~ msgid "Major second: q"
+#~ msgstr "Büyük ikili: q"
+
+#~ msgid "Tritone: w"
+#~ msgstr "Tamses:w"
+
+#~ msgid "Minor seventh: e"
+#~ msgstr "Küçük yedili: e"
+
+#~ msgid "Major ninth: r"
+#~ msgstr "Büyük dokuzlu: r"
+
+#~ msgid "Minor third: a"
+#~ msgstr "Küçük üçlü: a"
+
+#~ msgid "Perfect fifth: s"
+#~ msgstr "Tam beşli: s"
+
+#~ msgid "Major seventh: d"
+#~ msgstr "Büyük yedili: d"
+
+#~ msgid "Minor tenth: f"
+#~ msgstr "Küçük onlu: e"
+
+#~ msgid "Major third: z"
+#~ msgstr "Büyük üçlü: z"
+
+#~ msgid "Minor sixth: x"
+#~ msgstr "Küçük altılı: x"
+
+#~ msgid "Perfect octave: c"
+#~ msgstr "Tam oktav: c"
+
+#~ msgid "Major tenth: v"
+#~ msgstr "Büyük onlu: d"
+
+#~ msgid "New tempo: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+#~ msgstr "Yeni tempo: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+
+#~ msgid "Show: <keycombo><keycap>Alt</keycap><keycap>s</keycap></keycombo>"
+#~ msgstr "Göster: <keycombo><keycap>Alt</keycap><keycap>s</keycap></keycombo>"
+
+#~ msgid "Repeat melodic: <keycombo><keycap>Alt</keycap><keycap>m</keycap></keycombo>"
+#~ msgstr "Melodik tekrarla: <keycombo><keycap>Alt</keycap><keycap>m</keycap></keycombo>"
+
+#~ msgid "Play the whole music: <keycombo><keycap>Alt</keycap><keycap>p</keycap></keycombo>"
+#~ msgstr "Tüm müziği çal: <keycombo><keycap>Alt</keycap><keycap>p</keycap></keycombo>"
+
+#~ msgid "New chord: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+#~ msgstr "Yeni akor: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+
+#~ msgid "Repeat arpeggio: <keycombo><keycap>Alt</keycap><keycap>a</keycap></keycombo>"
+#~ msgstr "Arpeji tekrarla: <keycombo><keycap>Alt</keycap><keycap>a</keycap></keycombo>"
+
+#~ msgid "You can configure the <literal>idbyname</literal> exercise as you like if you select <menuchoice><guimenu>Misc</guimenu><guisubmenu>Configure yourself</guisubmenu><guimenuitem>Id tone</guimenuitem></menuchoice>."
+#~ msgstr "Alıştırmayı <literal>idbyname</literal> bunu seçerek yapılandırabilirsiniz <menuchoice><guimenu>Çeşitli</guimenu><guisubmenu>Kendin Yapılandır</guisubmenu><guimenuitem>Id tone</guimenuitem></menuchoice>."
+
+#~ msgid "'Heavy A' describes another way to practise. It requires that you select <menuchoice><guimenu>Misc</guimenu><guisubmenu>Configure yourself</guisubmenu><guimenuitem>Id tone</guimenuitem></menuchoice>."
+#~ msgstr "'Ağır A' pratik yapmanın farklı bir yoludur. Şu yolu izlenemiz gerekir <menuchoice><guimenu>Çeşitli</guimenu><guisubmenu>Kendin Yapılandır</guisubmenu><guimenuitem>Id tone</guimenuitem></menuchoice>."
+
+#~ msgid "The keyboard shortcuts can be configured from config file. You can find its location from <menuchoice><guimenu>Help</guimenu><guimenuitem>File locations</guimenuitem></menuchoice>."
+#~ msgstr "Tuş kısayolları config dosyasında yapılandırılabilir. Bu dosyayı bulmak için  <menuchoice><guimenu>Yardım</guimenu><guimenuitem>Dosya yerleri</guimenuitem></menuchoice>."
+
+#~ msgid "Select a exercise from the menu to start practising, or click <ulink url=\"index.html\">here</ulink> to read the user manual."
+#~ msgstr "Pratik yapmaya, Pratik yap menüsünden bir alıştırma seçerek başlayın, veya kullanıcı el kitabını okumak için <ulink url=\"index.html\">buraya </ulink>tıklayın."
+
+#~ msgid "About the manual"
+#~ msgstr "El Kitabı Hakkında"
+
+#~ msgid "This user guide is available from inside GNU Solfege on the <guimenu>Help</guimenu> menu. The html viewer included in the program is limited in several ways, for example when it comes to CSS style sheets, so you might want to view it in a real web browser. You can find the install directory of the user manual from <guimenuitem>File locations</guimenuitem> on the <guimenu>Help</guimenu> menu."
+#~ msgstr "Bu kullanıcı rehberi, <guimenu>Yardım</guimenu> menüsünden de okunabilir. Yazılımın içindeki html görüntüleyicisinin belirli sınırları vardır, örneğin eğer dosyalarda CSS stil tekniği kullanılmışsa, bu sayfaların gerçek bir web tarayıcı da görüntülemeniz daha doğru olur. Kullanıcı el kitabının yazılım ile birlikte kurulan dosyalarına ulaşmak isterseniz, izleyeceğiniz yol <guimenuitem>Dosya konumları</guimenuitem> nın bulunduğu <guimenu>Yardım</guimenu> menüsüdür."
+
+#~ msgid "Not really documentation..."
+#~ msgstr "Tam bir belge değil..."
+
+#~ msgid "This appendix contain the file that is displayed when the program starts, before the user selects an exercise."
+#~ msgstr "Bu ek kullanıcı bir alıştırma seçmeden önce, program başladığında karşısına çıkan belgeleri içerir."
+
+#~ msgid "Set the tempo (beats per minute) for music and arpeggios."
+#~ msgstr "Müzik ve arpejler için hızı ayarlayınız. (dakika başına vuruş ölçeğinde)."
+
+#~ msgid "Expert mode: On many exercises, you will be able to select to practise only a subset of the questions in the lesson file."
+#~ msgstr "Uzman kipi: Pek çok alıştırmada, ders dosyasındaki soruların bir alt seviyesini seçme olanağınız bulunacaktır."
+
+#~ msgid "Minor decim: f"
+#~ msgstr "Küçük onlu: f"
+
+#~ msgid "Major decim: v"
+#~ msgstr "Büyük onlu: v"
+
+#~ msgid "Identify the chord type."
+#~ msgstr "Akor türünü nitelendiriniz."
+
+#~ msgid "What is the inversion?"
+#~ msgstr "Çevrim hangisidir?"
+
+#~ msgid "Which tone is the highest tone in the chord?"
+#~ msgstr "Akorda en yukardaki ses hangisidir?"
+
+#~ msgid "This page is a generic help page for all exercises written using the <literal>chord</literal> exercise module. These exercises can ask the user for three things: chord type, inversion and top tone. The idea is that you answer this in three steps: <placeholder-1/> It is important that you take your time, maybe sing the chord, and identify the chord type before you try to find the inversion."
+#~ msgstr "Bu sayfa üreysel bir yardım sayfasıdır ve tüm alıştırmalar <literal>akor</literal> alıştırması modülü kullanılarak yazılmıştır. Bu alıştırmalar kullanıcıya üç şey sorar: akor türü, çevrim ve en üstteki ses. Sizin cevabınızdaki ana fikir üç adımda gerçekleşir: <placeholder-1/> Bir çevrimi bulmadan önce akor seslerini söylemeniz ve akor türünü nitelendirmeniz biraz zamanınızı alabilir."
+
+#~ msgid "Please notice that is is also possible that an exercise will only ask for the chord type and inversion, or even only inversion and top tone."
+#~ msgstr "Bir alıştırmanın sadece akor türünü veya çevrimi, hatta sadece çevrimi ve akorun en üstündeki ses sorabilme olasılığı bulunduğuna lütfen dikkat ediniz."

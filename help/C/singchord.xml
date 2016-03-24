@@ -1,0 +1,26 @@
+<sect1 id='singchord'>
+<title>Sing chord</title>
+
+<informalfigure id="singchord-screen1">
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/singchord.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the program.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+
+<para>If you are conducting a choir, you have to sing the starting tones for
+the different voices, and if you don't have a piano near by, you have to use a
+tuning fork. If you are a male, you will sing the tones for the women, one
+octave deeper, and visa versa.</para>
+
+<para>The program will play the tone A (440 hz) for you, and display a chord
+that you must sing. Solfege does not yet have support for microphone, so you
+will have to decide yourself if your answer is correct or not. </para>
+
+</sect1>

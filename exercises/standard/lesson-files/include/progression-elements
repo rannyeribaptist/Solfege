@@ -1,0 +1,16 @@
+# Solfege - ear training for GNOME
+# Copyright (C) 2006  Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+element progI { label = progressionlabel("I") }
+element progII { label = progressionlabel("II") }
+element progIII { label = progressionlabel("III") }
+element progIV { label = progressionlabel("IV") }
+element progIV_6 { label = progressionlabel("IV(6)") }
+element progV { label = progressionlabel("V") }
+element progVts { label = progressionlabel("Vts") }
+element progVtsParen { label = progressionlabel("[Vts]") }
+element progV_6 { label = progressionlabel("V(6)") }
+element progVI { label = progressionlabel("VI") }
+
+

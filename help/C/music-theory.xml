@@ -1,0 +1,319 @@
+<chapter id="music-theory">
+<title>Music theory</title>
+<sect1 id="theory-scales">
+<title>Scales</title>
+<para>Davide Bonetti has contributed a large set of scale exercises and
+some pages describing all the scales. You can see the pages <ulink
+url="../C/scales/modes.html">here</ulink>.</para>
+</sect1>
+<sect1 id="theory-intervals">
+<title>Intervals</title>
+<para>In music theory we use the word interval when we talk about the pitch
+difference between two notes. We call them harmonic intervals if two tones
+sound simultaneously and melodic intervals if they sound successively.
+</para>
+
+<!-- translators: This paragraph is messy because the author is writing
+in english, and english is not his mother language. Write this paragraph
+so that is as clear and simple as possible, describing only what is relevant
+for your language -->
+<para>Interval names consist of two parts. Some examples are "major third" and
+"perfect fifth". In Walter Piston's "Harmony" the two parts are called
+<emphasis>the specific name</emphasis> and <emphasis>the general
+name</emphasis> part. Wikipedia talks about <emphasis>interval
+quality</emphasis> and <emphasis>interval number</emphasis>. I have seen people
+talking about an interval's <emphasis>numerical size</emphasis>.</para>
+
+<para>You find the
+general name by counting the steps on the staff, ignoring any
+accidentals. So if the interval you want to name goes from E to G#, then we count
+to 3 (E F G) and see that the general name is <emphasis>third</emphasis>.</para>
+
+<informalfigure>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="ly/theory-intervals-1.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+</informalfigure>
+
+<para>
+The specific name tells the exact size of the interval. Unisons, fourths, fifths
+and octaves can be diminished, pure or augmented. Seconds, thirds, sixths and
+sevenths can be minor, major, diminished or augmented. A minor interval is one
+semitone smaller than a major interval. A diminished interval is one semitone
+smaller than a pure or a minor interval, and an augmented interval is one
+semitone larger than a pure or major interval.</para>
+
+<para>Accidentals change the size of intervals. The interval becomes one
+semitone larger if you add a sharp to the highest tone or a flat to the lowest
+tone. And it becomes one semitone smaller if you add a flat to the highest tone
+or a sharp to the lowest tone. In the following sections naming of the
+intervals will be shown in greater detail.</para>
+<!-- #################
+          SECONDS
+     ################# -->
+<sect2 id='theory-seconds'>
+<title>Seconds</title>
+<para>Seconds are easy to recognise: the two notes are neighbours on the staff.
+One note is on a staff line, and the other one is in the space above or below.
+A minor second is one semitone step, also called a half step. A major second is
+two semitone steps, also called a whole step.</para>
+
+<para>To learn to identify seconds, you first have to learn which seconds there
+are between the natural tones. As you can see in <xref
+linkend='theory-intervals-seconds'/>, only the intervals E-F and B-C are minor
+seconds. The rest are major intervals. You can check that <xref
+linkend='theory-intervals-seconds'/> is correct by looking at a piano. You will
+see that there are no black keys between E and F and between B and C.</para>
+
+<figure id='theory-intervals-seconds'>
+    <title></title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="ly/theory-intervals-seconds.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+</figure>
+
+<para>If the second has accidentals, then we have to examine them to find out
+how they change the size of the interval. Let us identify a few intervals!
+</para>
+
+<figure id='theory-intervals-seconds-1'>
+ <title></title>
+ <mediaobject>
+  <imageobject>
+   <imagedata fileref="../C/ly/theory-intervals-seconds-1.png" format="PNG"/>
+  </imageobject>
+ </mediaobject>
+</figure>
+
+<para>We remove the accidental from the interval in <xref
+linkend='theory-intervals-seconds-1'/> and see that the interval F-G is a major
+second. When we add the flat to the highest tone, the interval becomes one
+semitone smaller, turning into a minor second.</para>
+
+<figure id='theory-intervals-seconds-2'>
+ <title></title>
+ <mediaobject>
+  <imageobject>
+   <imagedata fileref="../C/ly/theory-intervals-seconds-2.png" format="PNG"/>
+  </imageobject>
+ </mediaobject>
+</figure>
+
+<para>We remove the accidentals, and see that the interval A-B is a major
+second. You still remember <xref linkend='theory-intervals-seconds'/>, don't
+you? Then we add the flat to the A, and the interval becomes an augmented
+second. And when we add the flat to the B, the interval becomes a major
+second.</para>
+
+<figure id='theory-intervals-seconds-3'>
+ <title></title>
+ <mediaobject>
+  <imageobject>
+   <imagedata fileref="../C/ly/theory-intervals-seconds-3.png" format="PNG"/>
+  </imageobject>
+ </mediaobject>
+</figure>
+
+<para>We remove the accidentals, and see that the interval E-F is a minor
+second. When we add a flat to the lowest tone, the interval becomes one
+semitone larger, turning into a major second. And when we add a sharp to the
+highest tone, the interval becomes one semitone larger, turning into an
+augmented second.</para>
+
+</sect2>
+
+<!-- #################
+         THIRDS
+     ################# -->
+
+<sect2 id='theory-thirds'>
+<title>Thirds</title>
+<para>A minor third is one minor and one major second, or three semitones.  A
+major third are two major seconds, or four semitone steps. <xref
+linkend='theory-intervals-thirds'/> shows the thirds between all the natural
+tones. You should memorise the major intervals, C-E, F-A and G-B. Then you know
+that the other four intervals are minor.</para>
+
+<figure id='theory-intervals-thirds'>
+ <title></title>
+ <mediaobject>
+  <imageobject>
+   <imagedata fileref="ly/theory-intervals-thirds.png" format="PNG"/>
+  </imageobject>
+ </mediaobject>
+</figure>
+
+<para>Then you examine the accidentals to see if they change the specific name.
+This is done exactly the same way as for seconds.</para>
+
+</sect2>
+<!-- #################
+          FOURTHS
+     ################# -->
+<sect2 id='theory-fourths'>
+<title>Fourth</title>
+<para>A pure fourth is 2½ steps, or two major seconds and a minor second.
+<xref linkend='theory-intervals-fourths'/> shows all fourths between natural
+tones. You should memorise that the fourth F-B is augmented, and that the other
+six are pure.  </para>
+
+<figure id='theory-intervals-fourths'>
+    <title></title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="ly/theory-intervals-fourths.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+</figure>
+</sect2>
+
+<!-- #################
+          FIFTHS
+     ################# -->
+<sect2 id='theory-fifths'>
+<title>Fifth</title>
+<para>A pure fifth is 3½ steps, or three major seconds and a minor second.
+<xref linkend='theory-intervals-fifths'/> shows all fifths between natural
+tones. You should remember that all those intervals are pure, except B-F that
+is diminished. </para>
+
+<figure id='theory-intervals-fifths'>
+    <title></title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="ly/theory-intervals-fifths.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+</figure>
+
+<para>If an interval has accidentals, then we must examine them to see how
+they change the size of the interval. A diminished fifth is one semitone
+smaller than a pure interval, and an augmented fifth is one semitone larger.
+Below you will find a few examples:</para>
+
+<figure id='theory-intervals-fifths-1'>
+    <title></title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="../C/ly/theory-intervals-fifths-1.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+</figure>
+
+<para>We remember from <xref linkend='theory-intervals-fifths'/> that the
+interval B-F is a diminished fifth. The lowest tone in <xref
+linkend='theory-intervals-fifths-1'/> is preceded by a flat that makes the
+interval one semitone larger and changes the interval from a diminished to a
+pure fifth.</para>
+
+<figure id='theory-intervals-fifths-2'>
+    <title></title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="../C/ly/theory-intervals-fifths-2.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+</figure>
+
+<para>We know from <xref linkend='theory-intervals-fifths'/> that interval E-B
+is a perfect fifth. In <xref linkend='theory-intervals-fifths-2'/> the E has a
+flat in front of it, making the interval augmented. But then the B is preceded
+by a double flat that makes the interval two semitone steps smaller and changes
+the interval to a diminished fifth.</para>
+</sect2>
+
+<sect2 id='theory-sixths'>
+<title>Sixths</title>
+<para>Sixths are easiest identified by <link linkend='inverting-intervals'>
+inverting the interval</link> and identifying the third. Then the following
+rule applies:</para>
+
+<itemizedlist>
+<listitem><para>If the third is diminished, then the sixth is augmented</para></listitem>
+<listitem><para>If the third is minor, then the sixth is major</para></listitem>
+<listitem><para>If the third is major, then the sixth is minor</para></listitem>
+<listitem><para>If the third is augmented, then the sixth is diminished</para></listitem>
+</itemizedlist>
+
+<para>If you find inverting intervals difficult, then you can memorise that the
+intervals E-C, A-F and B-G are minor. The other four are major.  Then you
+examine the accidentals to see if they change the specific name. This is done
+exactly the same way as for seconds.</para>
+
+<figure id='theory-intervals-sixths'>
+    <title></title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="ly/theory-intervals-sixths.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+</figure>
+
+</sect2>
+
+<sect2 id='theory-sevenths'>
+<title>Sevenths</title>
+<para>Sevenths are identified the same way as sixths. When you invert a
+seventh, you get a second.</para>
+
+<para>If you find inverting intervals difficult, then you
+can memorise that the intervals C-B and F-E are major. The other five are
+minor. Then you examine the accidentals to see if they change the specific
+name. This is done exactly the same way as for seconds.</para>
+
+<figure id='theory-intervals-sevenths'>
+    <title></title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="ly/theory-intervals-sevenths.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+</figure>
+
+
+</sect2>
+
+</sect1>
+
+<sect1 id='inverting-intervals'>
+<title>Inverting intervals</title>
+<para>You invert an interval when you move the lowest tone of an interval one
+octave higher or the highest tone one octave lower. The general name changes this way:</para>
+<itemizedlist>
+<listitem><para>Second becomes seventh.</para></listitem>
+<listitem><para>Third becomes sixth.</para></listitem>
+<listitem><para>Forth becomes fifth.</para></listitem>
+<listitem><para>Fifth becomes fourth.</para></listitem>
+<listitem><para>Sixth becomes third.</para></listitem>
+<listitem><para>Seventh becomes second.</para></listitem>
+</itemizedlist>
+
+<para>The specific name changes this way:</para>
+<itemizedlist>
+<listitem><para>Diminished becomes augmented.</para></listitem>
+<listitem><para>Minor becomes major.</para></listitem>
+<listitem><para>Perfect stays perfect.</para></listitem>
+<listitem><para>Major becomes minor.</para></listitem>
+<listitem><para>Augmented becomes diminished.</para></listitem>
+</itemizedlist>
+
+<para>Below are two examples, a
+major third is inverted and becomes a minor sixth, and a minor seventh is
+inverted and becomes a major second.</para>
+
+<figure id='music-theory-inverting-intervals-fig'>
+    <title></title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="ly/inverting-intervals.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+</figure>
+
+</sect1>
+
+</chapter>

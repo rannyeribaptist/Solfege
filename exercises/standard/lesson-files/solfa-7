@@ -1,0 +1,44 @@
+# Solfege - free ear training software
+# Copyright (C) 2008, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "c8921357-e9db-4326-9711-e6fe16b779e4"
+    module = idbyname
+    have_music_displayer = yes
+    at_question_start = show
+    fillnum = 8
+    random_transpose = accidentals, -5, 5
+    title = _("%s syllables") % "7"
+    lesson_heading = _("Find the sol-fa syllable")
+    test = "6x"
+    test_requirement = "90%"
+}
+question {
+ name = _i("solfa|Do")
+ music = voice("\key c \major c'")
+}
+question {
+ name = _i("solfa|Re")
+ music = voice("\key c \major d'")
+}
+question {
+ name = _i("solfa|Mi")
+ music = voice("\key c \major e'")
+}
+question {
+ name = _i("solfa|Fa")
+ music = voice("\key c \major f'")
+}
+question {
+ name = _i("solfa|Sol")
+ music = voice("\key c \major g'")
+}
+question {
+ name = _i("solfa|La")
+ music = voice("\key c \major a'")
+}
+question {
+ name = _i("solfa|Ti")
+ music = voice("\key c \major b'")
+}

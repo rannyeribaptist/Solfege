@@ -1,0 +1,71 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2011  Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+include("include/jazz-progression-elements")
+include("include/mma-grooves")
+
+header {
+    lesson_id = "c5a50b68-124e-45aa-844c-38cda09df59d"
+    module = elembuilder
+    title = _("Harmonic prog with MMA")
+    lesson_heading = _("Enter the harmonic progression")
+    elements = auto
+    have_music_displayer = no
+}
+
+question {
+    name = rnc("Imaj7-IIm7-V7-Imaj7")
+    elements = progImaj7, progIIm7, progV7, progImaj7
+    music = mma(nrandom(grooves), """
+Tempo 120
+1   Cmaj7
+2   Dm7
+3   G7
+4   Cmaj7
+""")
+}
+question {
+    name = rnc("Imaj7-IVmaj7-V7-Imaj7")
+    elements = progImaj7, progIVmaj7, progV7, progImaj7
+    music = mma(nrandom(grooves), """
+Tempo 120
+1   Cmaj7
+2   Fmaj7
+3   G7
+4   Cmaj7
+""")
+}
+question {
+    name = rnc("Imaj7-V7-IIIm7-Imaj7")
+    elements = progImaj7, progV7, progIIIm7, progImaj7
+    music = mma(nrandom(grooves), """
+Tempo 120
+1   Cmaj7
+2   G7
+3   Em7
+4   Cmaj7
+""")
+}
+question {
+    name = rnc("Imaj7-V7-IVmaj7-Imaj7")
+    elements = progImaj7, progV7, progIVmaj7, progImaj7
+    music = mma(nrandom(grooves), """
+Tempo 120
+1   Cmaj7
+2   G7
+3   Fmaj7
+4   Cmaj7
+""")
+}
+question {
+    name = rnc("Imaj7-VIm7-V7-Imaj7")
+    elements = progImaj7, progVIm7, progV7, progImaj7
+    music = mma(nrandom(grooves), """
+Tempo 120
+1   Cmaj7
+2   Am7
+3   G7
+4   Cmaj7
+""")
+}

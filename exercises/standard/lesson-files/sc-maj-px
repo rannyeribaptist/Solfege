@@ -1,0 +1,32 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "0601ffa0-52c9-11db-9d84-2682ce00eb94"
+  module = idbyname
+  random_transpose = no
+  title = _("Major Scale and its modes - recognize with only few notes")
+  lesson_heading = _("Three notes are enough to recognize the mode")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/maj"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question { name = maj1n  voice(maj1cpx) }
+question { name = maj2n  voice(maj2cpx) }
+question { name = maj3n  voice(maj3cpx) }
+question { name = maj4n  voice(maj4cpx) }
+question { name = maj5n  voice(maj5cpx) }
+question { name = maj6n  voice(maj6cpx) }
+question { name = maj7n  voice(maj7cpx) }
+

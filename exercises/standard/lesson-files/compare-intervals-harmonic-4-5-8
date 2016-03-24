@@ -1,0 +1,13 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+
+header {
+    module=compareintervals
+    title = _("Fourths, fifths and octave")
+    theory = "theory-intervals"
+    lesson_id = "954cd554-1697-4e3e-873e-983ef93de398"
+    first_interval_type = harmonic
+    last_interval_type = harmonic
+    first_interval = 5, 7, 12
+    last_interval = 5, 7, 12
+}

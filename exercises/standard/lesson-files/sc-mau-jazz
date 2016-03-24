@@ -1,0 +1,31 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "d6294670-23df-11db-9d7a-a131a7377dac"
+  module = idbyname
+  random_transpose = yes
+  title = _("Jazz Modes over a Major or Augmented chord")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/modes"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question { name = maj1n  voice(maj1l) }
+question { name = maj4n  voice(maj4l) }
+question { name = ham1n  voice(ham1l) }
+question { name = mel3n  voice(mel3l) }
+question { name = aug1n  voice(aug1l) }
+question { name = blu1n  voice(blu1l) }
+question { name = pen1n  voice(pen1l) }
+

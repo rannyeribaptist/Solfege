@@ -1,0 +1,14 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+
+header {
+    module=compareintervals
+    replaces = "509c7822edb8507f29dd26cac2f14a300a193e65"
+    title = _("Second to tenth")
+    theory = "theory-intervals"
+    lesson_id = "c452a14a-9272-43ff-b3cb-489154ea645c"
+    first_interval_type = harmonic
+    last_interval_type = harmonic
+    first_interval = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
+    last_interval = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
+}

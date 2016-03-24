@@ -1,0 +1,53 @@
+# Solfege - ear training for GNOME
+# Copyright (C) 2000, 2001, 2002, 2003, 2004  Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "ef41195b-9408-479b-af43-f129743e2bdc"
+    module = dictation
+    title = "dictation: mpd errors in cue_music"
+}
+question {
+  music = "\staff{ \clef asdf c' d e }"
+}
+question {
+  music = rvoice("c'2. c")
+}
+question {
+  music = voice("c'2. c")
+}
+question {
+  music = """
+\staff{ c2. c2  }
+"""
+}
+question {
+  music = """\staff{
+  c2. c2  }
+"""
+}
+question {
+ music = voice("c e afd2.+0+0+")
+ clue_end = "not a rat"
+}
+question {
+ music = voice("c d e")
+ clue_music = voice("c d")
+}
+question {
+ music = voice("c d e f")
+ clue_music = voice("c d e")
+}
+
+question {
+ music = voice("c e afd2.+0+0+")
+}
+question {
+ music = voice("c e afd2.+0+0+")
+ clue_music = voice ("got no clue")
+}
+question {
+ music = voice("c e afd2.+0+0+")
+ clue_music = voice ("<")
+}
+

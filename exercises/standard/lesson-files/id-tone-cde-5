@@ -1,0 +1,9 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+
+header {
+    module = idtone
+    white_keys_weight = 1, 1, 1, 1, 1, 0, 0
+    title = _("C to G")
+    lesson_id = "c4280355-0144-4945-8db2-eecf75a20b38"
+}

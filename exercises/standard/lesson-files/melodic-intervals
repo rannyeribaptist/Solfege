@@ -1,0 +1,13 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+
+header {
+    module = melodicinterval
+    replaces = "bc106e8514c3217eb4b6d904401c2d327fd65c87"
+    ask_for_intervals_0=1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, -1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12, -13, -14, -15, -16
+    title = _("Second to tenth")
+    theory = "theory-intervals"
+    lesson_id = "055bf664-7f29-440c-b220-cbfab6369228"
+    test = "2x"
+    test_requirement = "100%"
+}

@@ -1,0 +1,13 @@
+# GNU Solfege
+# Copyright (C) 2005, 2010, 2011 Tom Cato Amundsen
+
+header {
+    lesson_id = "c9ae8c53-71ff-44c0-a6bb-7793986cee5e"
+    module=compareintervals
+    title = _("Seconds and thirds")
+    theory = "theory-intervals"
+    first_interval_type = melodic
+    last_interval_type = melodic
+    first_interval = 1, 2, 3, 4
+    last_interval = 1, 2, 3, 4
+}

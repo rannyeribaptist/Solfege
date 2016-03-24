@@ -1,0 +1,10 @@
+# GNU Solfege
+# Copyright (C) 2011 Tom Cato Amundsen
+
+header {
+    module=toneincontext
+    title = _("All")
+    tones = 0, 2, 4, 5, 7, 9, 11, 12
+}
+
+include("include/cadence-major")

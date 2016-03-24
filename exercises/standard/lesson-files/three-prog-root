@@ -1,0 +1,67 @@
+# Solfege - free ear training software
+# Copyright (C) 2001, 2004, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+include("include/progression-elements")
+header {
+    lesson_id = "6fd0da37-54d4-4b17-97bd-90665ab73303"
+        module = elembuilder
+        title = _("Three chords, root position")
+        lesson_heading = _("Enter the harmonic progression")
+        elements = auto
+        have_music_displayer = yes
+        music_displayer_stafflines = 2
+}
+tempo = 60/4
+s = "\staff\relative c{ \stemUp %s}"
+a = "\addvoice\relative c{ \stemDown %s}"
+t = "\staff\relative c{ \clef bass \stemUp %s}"
+b = "\addvoice\relative c{ \stemDown %s}"
+
+question {
+ name = "I-II-I"
+ elements = progI, progII, progI
+ music = music3(s % "g'' f g"
+       + a % "e' d e"
+       + t % "c' a c"
+       + b % "c d c")
+}
+
+question {
+ name = "I-III-I"
+ elements = progI, progIII, progI
+ music = music3(s % "g'' g g"
+       + a % "e' e e"
+       + t % "c' b c"
+       + b % "c e c")
+}
+
+
+question {
+ name = "I-IV-I"
+ elements = progI, progIV, progI
+ music = music3(s % "g'' a g"
+       + a % "e' f e"
+       + t % "c' c c"
+       + b % "c f, c'")
+}
+
+question {
+ name = "I-V-I"
+ elements = progI, progV, progI
+ music = music3(s % "g'' g g"
+       + a % "e' d e"
+       + t % "c' b c"
+       + b % "c g c")
+}
+
+question {
+ name = "I-VI-I"
+ elements = progI, progVI, progI
+ music = music3(s % "e' e e"
+       + a % "c' c c"
+       + t % "g' a g"
+       + b % "c a c")
+}
+
+

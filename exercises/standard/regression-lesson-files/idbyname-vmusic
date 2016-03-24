@@ -1,0 +1,24 @@
+# Solfege - ear training for GNOME
+# Copyright (C) 2007 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "d3283227-8549-4077-802b-2242d94c4a38"
+    module = idbyname
+    title = "vmusic"
+    have_music_displayer = yes
+}
+question { 
+    name=_("major (wav)")
+    vmusic = rvoice("c8 c c4 e g c2")
+    music = wavfile("../lesson-files/share/fanfare.wav")
+}
+question { 
+    name=_("major")
+    music = rvoice("c8 c c4 e g c2")
+}
+
+question{
+    name = _("major, not vmusic")
+    music = wavfile("../lesson-files/share/fanfare.wav")
+}

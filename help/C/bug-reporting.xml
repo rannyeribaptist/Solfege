@@ -1,0 +1,19 @@
+<sect1 id='bug-reporting'>
+<title>Bugs</title>
+<para>Report bugs to the bug tracker at <ulink
+url="http://bugs.solfege.org/">http://bugs.solfege.org</ulink>.
+Alternately, you can send an email to <email>bug-solfege@gnu.org</email>.
+General questions and patches should be sent to
+<email>solfege-devel@lists.sourceforge.net</email>.</para>
+
+<para>Please make your bug reports detailed. ''I get an error message in a
+window when I try to start the program.'' is not usable to me. When reporting
+bugs:</para>
+
+<itemizedlist>
+<listitem><para>Tell me what version of Solfege you run. Please check if a newer release is available. If you only want to run stable releases, then you don't have to test newer development releases.</para></listitem>
+<listitem><para>What operating system are you running? Version?</para></listitem>
+<listitem><para>Describe exactly what you are doing when the error happens.</para></listitem>
+<listitem><para>Send an exact copy of the error messages. They make sense to the Solfege author even if you think they look cryptic to you.</para></listitem>
+</itemizedlist>
+</sect1>

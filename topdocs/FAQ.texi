@@ -1,0 +1,39 @@
+\input texinfo
+@setfilename FAQ.info
+@settitle FAQ
+@node Top, , , (dir)
+@top
+
+@chapter FAQ
+
+See also @url{http://www.solfege.org/Solfege/FrequentlyAskedQuestions}
+
+@section The window title does not display non-ascii characters
+... everything look like: "Solfege \x@{0414@}\x@{0438@}\x@{0442@}..."
+
+This is because your window manager does not display unicode fonts.
+Try a window manager that can handle unicode fonts, for example metacity.
+
+@section The program crashes at startup!
+Try to start the program with the @option{--no-sound}. If the
+program starts, then you probably has to check the sound setup
+for your kernel. If you for example have a Soundblaster 32 and
+unloads the @file{awe_wave} module, Solfege will crash when it tries
+to open @file{/dev/music}.
+
+@section ValueError: invalid literal for float():
+If you want translated messages, you should only set the @env{LC_MESSAGES}
+environment variable, not @env{LC_ALL} or @env{LC_NUMERIC}. If your
+window manager set these variable, you can avoid the problem by running
+solfege like this:
+
+@command{LC_NUMERIC=C solfege}
+
+You can run the @command{locale} command to see what environment
+variables controlling locales are set.
+
+@section Some menu entries are blank when I use language other than english.
+If you are running Debian with glibc > 2.2, try to rerun
+@command{locale-gen} as root, and maybe edit @file{/etc/locale.gen}.
+
+@bye

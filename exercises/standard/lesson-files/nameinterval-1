@@ -1,0 +1,11 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header { 
+    lesson_id="1a1898f0-4b4b-4b98-887e-5eefac980062"
+    module = nameinterval
+    title = _("Many intervals")
+    intervals = p1, m2, M2, m3, M3, p4, p5, m6, M6, m7, M7, p8
+    theory = "theory-intervals"
+}

@@ -1,0 +1,8 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+
+header {
+    module = identifybpm
+    title = _("Beats per minute")
+    lesson_id = "solfege.org-bpm"
+}

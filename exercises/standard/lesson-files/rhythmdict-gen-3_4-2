@@ -1,0 +1,18 @@
+﻿# -*- coding: iso-8859-1 -*-
+# Solfege - free ear training software
+# Copyright (C) 2010, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+  module = rhythmdictation2
+  title = _("3/4 - %s") % 2
+}
+
+countin = rhythm("\time 3/4 d4 d d")
+tempo = 120/4
+
+question {
+  bars = 3/4, 3/4, 3/4, 3/4
+  elements = "8 8", "4", "2"
+}
+

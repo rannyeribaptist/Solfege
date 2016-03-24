@@ -1,0 +1,66 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "06b00310-23db-11db-8682-8548e4e4f94b"
+  module = idbyname
+  random_transpose = yes
+  title = _("Neapolitan Scale and its modes - patterns")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/nea"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question { name = nea1n  set = 0 voice(nea1lp0) }
+question { name = nea1n  set = 1 voice(nea1lp1) }
+question { name = nea1n  set = 2 voice(nea1lp2) }
+question { name = nea1n  set = 3 voice(nea1lp3) }
+question { name = nea1n  set = 4 voice(nea1lp4) }
+
+question { name = nea2n  set = 0 voice(nea2lp0) }
+question { name = nea2n  set = 1 voice(nea2lp1) }
+question { name = nea2n  set = 2 voice(nea2lp2) }
+question { name = nea2n  set = 3 voice(nea2lp3) }
+question { name = nea2n  set = 4 voice(nea2lp4) }
+
+question { name = nea3n  set = 0 voice(nea3lp0) }
+question { name = nea3n  set = 1 voice(nea3lp1) }
+question { name = nea3n  set = 2 voice(nea3lp2) }
+question { name = nea3n  set = 3 voice(nea3lp3) }
+question { name = nea3n  set = 4 voice(nea3lp4) }
+
+question { name = nea4n  set = 0 voice(nea4lp0) }
+question { name = nea4n  set = 1 voice(nea4lp1) }
+question { name = nea4n  set = 2 voice(nea4lp2) }
+question { name = nea4n  set = 3 voice(nea4lp3) }
+question { name = nea4n  set = 4 voice(nea4lp4) }
+
+question { name = nea5n  set = 0 voice(nea5lp0) }
+question { name = nea5n  set = 1 voice(nea5lp1) }
+question { name = nea5n  set = 2 voice(nea5lp2) }
+question { name = nea5n  set = 3 voice(nea5lp3) }
+question { name = nea5n  set = 4 voice(nea5lp4) }
+
+question { name = nea6n  set = 0 voice(nea6lp0) }
+question { name = nea6n  set = 1 voice(nea6lp1) }
+question { name = nea6n  set = 2 voice(nea6lp2) }
+question { name = nea6n  set = 3 voice(nea6lp3) }
+question { name = nea6n  set = 4 voice(nea6lp4) }
+
+question { name = nea7n  set = 0 voice(nea7lp0) }
+question { name = nea7n  set = 1 voice(nea7lp1) }
+question { name = nea7n  set = 2 voice(nea7lp2) }
+question { name = nea7n  set = 3 voice(nea7lp3) }
+question { name = nea7n  set = 4 voice(nea7lp4) }
+
+

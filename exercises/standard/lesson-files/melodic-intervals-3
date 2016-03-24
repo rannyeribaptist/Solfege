@@ -1,0 +1,12 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+
+header {
+    lesson_id = "5b884e34-b8c3-4ec4-9257-3607a319143f"
+    module=melodicinterval
+    ask_for_intervals_0=3, 4, -3, -4
+    title = _("Thirds")
+    theory = "theory-intervals"
+    test = "6x"
+    test_requirement = "90%"
+}

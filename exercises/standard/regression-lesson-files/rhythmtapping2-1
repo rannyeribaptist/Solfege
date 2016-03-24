@@ -1,0 +1,14 @@
+# Solfege - ear training for GNOME
+# Copyright (C) 2006 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "f31eb3d0-8ccd-4a6f-bfe0-ae540dc68b27"
+    module = rhythmtapping2
+    rhythm_elements=0, 1
+    #have_music_displayer = yes
+    #at_question_start = show, play
+    title = "Rhythm tapping test"
+    bpm = 60
+}
+

@@ -1,0 +1,131 @@
+# -*- coding: iso-8859-1 -*-
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2011  Tom Cato Amundsen
+# License is GPL, see file COPYING
+#
+# Lessonfile by Atte André Jensen, atte@post.com
+# Examples in C:
+#
+# Dm7 G7 C
+# II  V  I
+#
+# Dm7 Db7  C
+# II  Vts I
+# NB:"ts" means "tritone substitution"
+#
+# Ab7  G7 C
+# (Vts) V I
+# NB: parenthesis means "secondary function"
+#
+# Gm7 C7 F#ø Fm6 C
+# (II V)->[IV] #IVø IVmd I
+# NB: "->" and brackets means that Gm7 C7 is 
+# secondary II-V to IV, but that doesn't come.
+# "md" means mol-dur which is the major scale with
+# lowered sixth (Ab in C-major)
+
+include("include/progression-elements")
+header {
+    lesson_id = "8067968c-acd5-40c8-89a6-d29f3bb3b3df"
+    module = elembuilder
+    title = _("A few jazz progressions")
+    lesson_heading = _("Enter the harmonic progression")
+    elements = auto
+    have_music_displayer = yes
+    music_displayer_stafflines = 2
+}
+
+a = "\staff\relative c{ \stemUp %s}"
+b = "\addvoice\relative c{ \stemUp %s}"
+c = "\addvoice\relative c{ \stemUp %s}"
+
+d = "\staff\relative c{ \clef bass\stemUp %s}"
+e = "\addvoice\relative c{ \stemDown %s}"
+
+question {
+	name =  "II-V-I"
+    elements = progII, progV, progI
+	tonic = chord("d c' f' a' e''")
+	music = a % "e'' e d"
+	      + b % "a''  as g"
+	      + c % "f'  f e"
+	      + d % "c'  b b"
+	      + e % "d   g, c"
+}
+
+question {
+	name =  "II-V-I"
+    elements = progII, progV, progI
+	tonic = chord("d f c' e' a'")
+	music = a % "a'' as g"
+	      + b % "e'  e d"
+	      + c % "c'  b b"
+	      + d % "f  f e"
+	      + e % "d   g, c"
+}
+
+question {
+	name =  "II-Vts-I"
+    elements = progII, progVts, progI
+	tonic = chord("d c' f' a' e''")
+	music = a % "e'' es d"
+	      + b % "a''  as g"
+	      + c % "f'  f e"
+	      + d % "c'  b a"
+	      + e % "d   des c"
+}
+
+question {
+	name =  "II-Vts-I"
+    elements = progII, progVts, progI
+	tonic = chord("d f c' e' a'")
+	music = a % "a'' g g"
+	      + b % "e'  es d"
+	      + c % "c'  b b"
+	      + d % "f  f e"
+	      + e % "d   des c"
+}
+
+question {
+	name =  "(Vts)-V-I"
+    elements = progVtsParen, progV, progI
+	tonic = chord("as, ges bes c' f'")
+	music = a % "f' e d"
+	      + b % "c'  b b"
+	      + c % "bes'  as a"
+	      + d % "ges'  f e"
+	      + e % "as   g c"
+}
+
+question {
+	name =  "(Vts)-V-I"
+    elements = progVtsParen, progV, progI
+	tonic = chord("as' c' ges' bes' es''")
+	music = a % "es'' es d"
+	      + b % "bes''  as g"
+	      + c % "ges''  f e"
+	      + d % "c'  b a"
+	      + e % "as'   g c,"
+}
+
+#question {
+#	name =  "(II-V)->[IV]-#IVø-IVmd-I"
+#	tonic = chord("g, f bes' d' a'")
+#	music = a % "a'' e e f g"
+#	      + b % "d' des c c c"
+#	      + c % "bes'  bes a as g"
+#	      + d % "f  e e d c "
+#	      + e % "g c, fis f e"
+#}
+
+
+#question {
+#	name =  "(II-V)->[IV]-#IVø-IVmd-III"
+#	tonic = chord("g, f bes' d' a'")
+#	music = a % "a'' e e f g"
+#	      + b % "d' des c c b"
+#	      + c % "bes'  bes a as g"
+#	      + d % "f  e e d d "
+#	      + e % "g c, fis f e"
+#}
+

@@ -1,0 +1,47 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "807f4c63-dfa4-41e3-b70f-58b731fb7cf8"
+    module = idbyname
+	title = "Is the fifth pure or too small"
+	description = "This file uses the included .wav file and does not need Csound to be installed"
+	filldir = vertic
+	fillnum = 4
+}
+
+question {
+ name = "too small"
+ set=0
+ music = wavfile("share/fifth-small-220.00.wav")
+}
+
+question {
+ name= "Pure"
+ set=0
+ music = wavfile("share/fifth-pure-220.00.wav")
+}
+
+question {
+ name = "too small"
+ set=1
+ music = wavfile("share/fifth-small-247.5.wav")
+}
+
+question {
+ name= "Pure"
+ set=1
+ music = wavfile("share/fifth-pure-247.5.wav")
+}
+question {
+ name = "too small"
+ set=2
+ music = wavfile("share/fifth-small-293.33.wav")
+}
+
+question {
+ name= "Pure"
+ set=2
+ music = wavfile("share/fifth-pure-293.33.wav")
+}

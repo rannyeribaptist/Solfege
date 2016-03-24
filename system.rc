@@ -1,0 +1,8 @@
+# For Solfege versions X.Y.Z, this file get installed as
+# /etc/solfegeX.Y
+#
+# Sys admin can override app defaults set in the file
+#   /usr/share/solfege/X.Y.Z/default.config
+# (in debian packages the file is named
+#   /usr/share/solfege/default.config
+

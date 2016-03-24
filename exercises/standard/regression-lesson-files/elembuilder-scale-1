@@ -1,0 +1,25 @@
+# Solfege - ear training for GNOME
+# Copyright (C) 2006  Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+element whole { label = "Whole" }
+element half { label = "Half" }
+
+header {
+    lesson_id = "330cd0a4-8db9-4f97-a2a7-8fd31c772139"
+    module = elembuilder
+    title = "Build scales"
+    elements = auto
+    lesson_heading = "Build the scale"
+}
+
+question {
+ name = "Dur"
+ elements = whole, whole, half, whole, whole, whole, half
+ music = rvoice("c d e f g a b c")
+}
+question {
+ name = "Dorian"
+ elements = whole, half, whole, whole, whole, half, whole
+ music = rvoice("d e f g a b c d")
+}

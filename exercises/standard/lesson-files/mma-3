@@ -1,0 +1,67 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2011  Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+include("include/jazz-progression-elements")
+include("include/mma-grooves")
+
+
+header {
+    lesson_id = "29c17ec0-3aa5-4ed5-86ba-3e28a05d1771"
+    module = elembuilder
+    title = _("Harmonic prog with MMA")
+    lesson_heading = _("Enter the harmonic progression")
+    elements = auto
+    have_music_displayer = no
+}
+
+question {
+    name = rnc("Imaj7-IIm7-V9-Imaj7")
+    elements = progImaj7, progIIm7, progV9, progImaj7
+    music = mma("""
+Groove ballad
+Tempo 120
+Chord-Piano Voicing Mode=Optimal Rmove=10 Range=9
+1   Cmaj7
+2   Dm7
+3   G9
+4   Cmaj7
+""")
+}
+question {
+    name = rnc("Imaj7-IIm7-V13-Imaj7")
+    elements = progImaj7, progIIm7, progV13, progImaj7
+    music = mma("""
+Groove ballad
+Tempo 120
+1   Cmaj7
+2   Dm7
+3   G13
+4   Cmaj7
+""")
+}
+question {
+    name = rnc("Imaj7-IVmaj7-V9-Imaj7")
+    elements = progImaj7, progIVmaj7, progV9, progImaj7
+    music = mma("""
+Groove ballad
+Tempo 120
+1   Cmaj7
+2   Fmaj7
+3   G9
+4   Cmaj7
+""")
+}
+question {
+    name = rnc("Imaj7-IVmaj7-V13-Imaj7")
+    elements = progImaj7, progIVmaj7, progV13, progImaj7
+    music = mma("""
+Groove ballad
+Tempo 120
+1   Cmaj7
+2   Fmaj7
+3   G13
+4   Cmaj7
+""")
+}
+

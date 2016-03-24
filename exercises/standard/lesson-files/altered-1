@@ -1,0 +1,69 @@
+# Solfege - free ear training software
+# Copyright (C) 2001, 2002, 2003, 2004, 2005  Giovanni Chierico
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "caa223fc-3daf-4ff2-ae4f-f4821a482502"
+    module = idbyname
+    help = "idbyname-chords"
+    have_music_displayer = yes
+    fillnum = 4
+    test = "2x"
+    test_requirement = "90%"
+    title = _("Altered chords")
+    lesson_heading = _("Identify the chord")
+}
+
+##################################################
+question {
+ name = _i("chord|maj7b5")
+ chord("c' e' ges' b'")
+}
+
+##################################################
+question {
+ name = _i("chord|m maj7")
+ chord("c' ees' g' b'")
+}
+
+##################################################
+question {
+ name = _i("chord|7")
+ chord("c' e' g' bes'")
+}
+
+##################################################
+question {
+ name = _i("chord|7b5")
+ chord("c' e' ges' bes'")
+}
+
+##################################################
+question {
+ name = _i("chord|7#5")
+ chord("c' e' gis' bes'")
+}
+
+##################################################
+question {
+ name = _i("chord|9")
+ chord("c' e' g' bes' d''")
+}
+
+##################################################
+question {
+ name = _i("chord|7#9")
+ chord("c' e' g' bes' dis''")
+}
+
+##################################################
+question {
+ name = _i("chord|7b9")
+ chord("c' e' g' bes' des''")
+}
+
+##################################################
+question {
+ name = _i("chord|7#5b9")
+ chord("c' e' gis' bes' des''")
+}

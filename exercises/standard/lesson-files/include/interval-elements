@@ -1,0 +1,18 @@
+# Solfege - ear training for GNOME
+# Copyright (C) 2006  Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this file created by Davide Bonetti
+
+element int1 { label = pangomarkup("""<span size="xx-large">1</span>""") }
+element int2 { label = pangomarkup("""<span size="xx-large">2</span>""") }
+element int3 { label = pangomarkup("""<span size="xx-large">3</span>""") }
+element int4 { label = pangomarkup("""<span size="xx-large">4</span>""") }
+element int5 { label = pangomarkup("""<span size="xx-large">5</span>""") }
+element int6 { label = pangomarkup("""<span size="xx-large">6</span>""") }
+element int7 { label = pangomarkup("""<span size="xx-large">7</span>""") }
+element int8 { label = pangomarkup("""<span size="xx-large">8</span>""") }
+element int9 { label = pangomarkup("""<span size="xx-large">9</span>""") }
+element int10 { label = pangomarkup("""<span size="xx-large">10</span>""") }
+element int11 { label = pangomarkup("""<span size="xx-large">11</span>""") }
+element int11 { label = pangomarkup("""<span size="xx-large">12</span>""") }
+

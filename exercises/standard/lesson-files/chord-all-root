@@ -1,0 +1,22 @@
+# Solfege - free ear training software
+# Copyright (C) 2012 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    help = "idbyname-chords"
+    module = idbyname
+    have_music_displayer = yes
+    fillnum = 4
+        random_transpose = accidentals, -5, 5
+        title = _("Lots of chords")
+        lesson_heading = _("Identify the chord")
+        test = "3x"
+        test_requirement = "90%"
+}
+
+include("chord-min-major")
+include("chord-m7-7")
+include("chord-dim-aug")
+include("chord-maj7-m7b5-dim7")
+include("chord-m9-9-7b9-maj79")
+include("altered-1")

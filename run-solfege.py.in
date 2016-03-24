@@ -1,0 +1,65 @@
+#!@PYTHON@
+# vim: set fileencoding=utf-8 :
+# @configure_input@
+#
+# GNU Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2007, 2008, 2011  Tom Cato Amundsen
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+from __future__ import absolute_import
+import __builtin__
+import time
+__builtin__.start_time = time.time()
+
+import sys
+import os
+
+prefix =  os.path.split(os.path.dirname(os.path.abspath(sys.argv[0])))[0]
+if sys.platform == 'win32':
+    s = os.path.normpath(prefix)
+    os.environ['PATH']=r"%s\python\Lib\site-packages\gtk" % s
+    # Had to add this to make it work for people running solfege
+    # from within directories with non-ascii file names.
+    # Also, this had to be done after we set the environment
+    # variables. Example dir: Gehör
+    prefix = prefix.decode(sys.getfilesystemencoding())
+os.chdir(os.path.join(prefix, "share", "solfege"))
+sys.path.insert(1, os.path.join(prefix, "lib", "solfege"))
+sys.path.insert(1, os.path.join(prefix, "share", "solfege"))
+
+from solfege import cfg
+from solfege import filesystem
+
+# For future reference:
+# The migration code to %APPDATA% on MS Windows that is in
+# solfege.py is not necessary here because this file is only used on
+# linux.
+
+if prefix == "/usr":
+    sysconf = "/etc/solfege"
+else:
+    sysconf = os.path.join(prefix, "etc", "solfege")
+
+from solfege import presetup
+presetup.presetup(os.path.join(prefix, "share", "solfege", "default.config"),
+                  sysconf, filesystem.rcfile())
+
+# i18n should be imported very early in program init because it setup
+# the _ and _i functions for the whole program.
+from solfege import i18n
+i18n.setup(prefix, cfg.get_string("app/lc_messages"))
+
+import solfege.startup
+solfege.startup.start_app(os.path.join(prefix, "share", "solfege"))

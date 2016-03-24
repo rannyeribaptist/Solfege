@@ -1,0 +1,20 @@
+﻿<sect1 id='tone-in-context'>
+<title>Tone in context</title>
+<informalfigure id="tonecontext">
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/toneinkey.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the program running the toneinkey exercise.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+<para>Click <guibutton>New</guibutton> and the program will play some
+music, usually a cadence, followed by a tone.
+The user should find the tone's position in the key
+represented by the cadence and answer clicking the buttons labeled 1 to 7.
+</para>
+</sect1>

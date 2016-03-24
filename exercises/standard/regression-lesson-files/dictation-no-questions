@@ -1,0 +1,9 @@
+# Solfege - ear training for GNOME
+# Copyright (C) 2000, 2001, 2002, 2003, 2004  Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "bb2f2d48-4284-4c10-bbx9-76c00ada94c9"
+    module = dictation
+    title = "No questions in file"
+}

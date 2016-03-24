@@ -1,0 +1,13 @@
+# Solfege - ear training for GNOME
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "ffc11578-9893-4a15-abda-57a04c55a9bf"
+    module = chord
+        random_transpose = accidentals, -5, 5
+        title = "1 of 2 questions have a missing wav file"
+}
+question { name=_("major") set=0 inversion=0 wavfile("share/sound.wav") }
+question { name=_("major") set=1 inversion=1 wavfile("share/x-missing-file.wav")}
+

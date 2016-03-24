@@ -1,0 +1,13 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+
+header {
+    module=singinterval
+    ask_for_intervals_0=-1, -2, 1, 2
+    title = _("Seconds")
+    lesson_id = "14801ac3-5734-4f4c-aa1b-0da356a318f4"
+    test = "3x"
+    test_requirement = "90%"
+}

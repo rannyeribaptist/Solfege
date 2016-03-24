@@ -1,0 +1,53 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2011  Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+include("include/interval-elements")
+
+include("include/sc-master")
+
+header {
+  lesson_id = "e413101c-93c0-4567-95d0-17abf6d70749"
+  module = elembuilder
+  title = _("Major scale and its modes - enter structure")
+  lesson_heading = _("Enter the structure of the mode in number of half-tones")
+  elements = auto
+  have_music_displayer = yes
+  questions_selectable = yes
+  have_repeat_slowly_button = yes
+  random_transpose = yes
+  help = "scales"
+  theory = "scales/maj"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+
+question { name = maj1n
+    elements = int2, int2, int1, int2, int2, int2, int1
+    voice(maj1la)
+}
+question { name = maj2n
+    elements = int2, int1, int2, int2, int2, int1, int2
+    voice(maj2la)
+}
+question { name = maj3n
+    elements = int1, int2, int2, int2, int1, int2, int2
+    voice(maj3la)
+}
+question { name = maj4n
+    elements = int2, int2, int2, int1, int2, int2, int1
+    voice(maj4la)
+}
+question { name = maj5n
+    elements = int2, int2, int1, int2, int2, int1, int2
+    voice(maj5la)
+}
+question { name = maj6n
+    elements = int2, int1, int2, int2, int1, int2, int2
+    voice(maj6la)
+}
+question { name = maj7n
+    elements = int1, int2, int2, int1, int2, int2, int2
+    voice(maj7la)
+}
+

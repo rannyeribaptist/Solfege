@@ -1,0 +1,53 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2011  Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+include("include/interval-elements")
+
+include("include/sc-master")
+
+header {
+  lesson_id = "e413101c-93c0-4567-4768-17abf6d70749"
+  module = elembuilder
+  title = _("Hungarian scale and its modes - enter structure")
+  lesson_heading = _("Enter the structure of the mode in number of half-tones")
+  elements = auto
+  have_music_displayer = yes
+  questions_selectable = yes
+  have_repeat_slowly_button = yes
+  random_transpose = yes
+  help = "scales"
+  theory = "scales/hun"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+
+question { name = hun1n
+    elements = int3, int1, int2, int1, int2, int1, int2
+    voice(hun1la)
+}
+question { name = hun2n
+    elements = int1, int2, int1, int2, int1, int2, int3
+    voice(hun2la)
+}
+question { name = hun3n
+    elements = int2, int1, int2, int1, int2, int3, int1
+    voice(hun3la)
+}
+question { name = hun4n
+    elements = int1, int2, int1, int2, int3, int1, int2
+    voice(hun4la)
+}
+question { name = hun5n
+    elements = int2, int1, int2, int3, int1, int2, int1
+    voice(hun5la)
+}
+question { name = hun6n
+    elements = int1, int2, int3, int1, int2, int1, int2
+    voice(hun6la)
+}
+question { name = hun7n
+    elements = int2, int3, int1, int2, int1, int2, int1
+    voice(hun7la)
+}
+

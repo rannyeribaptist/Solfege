@@ -1,0 +1,13 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    module=harmonicinterval
+    intervals=8, 9, 10, 11
+    title = _("Sixths and sevenths")
+    theory = "theory-intervals"
+    lesson_id = "6517b2f2-f649-4e03-8d21-b1e7194846be"
+    test = "3x"
+    test_requirement = "90%"
+}

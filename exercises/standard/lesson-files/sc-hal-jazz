@@ -1,0 +1,28 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "acdca770-23e0-11db-9d7a-a131a7377dac"
+  module = idbyname
+  random_transpose = yes
+  title = _("Jazz Modes over a Half-Diminished or Diminished chord")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/modes"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question { name = maj7n  voice(maj7l) }
+question { name = mel6n  voice(mel6l) }
+question { name = dim1n  voice(dim1l) }
+question { name = har7n  voice(har7l) }
+

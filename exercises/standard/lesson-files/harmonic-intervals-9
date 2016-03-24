@@ -1,0 +1,13 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    module=harmonicinterval
+    intervals=13, 14
+    title = _("Ninths")
+    theory = "theory-intervals"
+    lesson_id = "2649307e-c919-48da-8f26-ea68f1167ef3"
+    test = "6x"
+    test_requirement = "90%"
+}

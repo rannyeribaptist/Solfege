@@ -1,0 +1,18 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "b9535632-4a99-44a8-b68a-9a65a1747cc5"
+    module = idbyname
+    help = "idbyname-chords"
+    have_music_displayer = yes
+    fillnum = 2
+        random_transpose = accidentals, -5, 5
+        title = _("Diminished and augmented chords")
+        lesson_heading = _("Identify the chord")
+        test = "6x"
+        test_requirement = "90%"
+}
+question { name = _("diminished") chord("c' es' ges'") }
+question { name = _("augmented")  chord("c' e' gis'") }

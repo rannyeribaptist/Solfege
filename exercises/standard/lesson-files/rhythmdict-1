@@ -1,0 +1,33 @@
+# -*- coding: iso-8859-1 -*-
+# Solfege - free ear training software
+# Copyright (C) 2010, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+  module = rhythmdictation
+  title = "Test of new module rhythmdictation module. No real exercises."
+  random_transpose = yes
+}
+question {
+ music = midifile("share/fanfare.midi")
+ rhythm = rhythm("\partial 4 \time 3/4 c8 c c4 c c c2.")
+}
+question {
+    tempo = 120/4
+    music = rvoice("c'4 c8 c8 d4 f | e4 c c2")
+}
+question {
+  music = """\staff\relative c'{c4 e c e}
+             \staff\relative g { g2 g }
+"""
+}
+question {
+ music = """\staff\relative g'{\stemUp g2 g4 g}
+ \addvoice\relative c'{ \stemDown c8 c d d e2 }
+ """
+ }
+question {
+ tempo = 130/4
+ music = rvoice("c'8 c g'8 g f g4. | f16 e d8 e8 d c2")
+}
+

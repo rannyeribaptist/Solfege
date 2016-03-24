@@ -1,0 +1,41 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "4f1e9e10-5555-11da-89a8-7c9a86d4310c"
+  module = idbyname
+  random_transpose = yes
+  title = _("Major Scale and its modes")
+  questions_selectable = yes
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  at_question_start = show
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/maj"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question {set = 0  name = maj1n  voice(maj1c) }
+question {set = 0  name = maj2n  voice(maj2c) }
+question {set = 0  name = maj3n  voice(maj3c) }
+question {set = 0  name = maj4n  voice(maj4c) }
+question {set = 0  name = maj5n  voice(maj5c) }
+question {set = 0  name = maj6n  voice(maj6c) }
+question {set = 0  name = maj7n  voice(maj7c) }
+
+question {set = 1  name = maj1n  voice(maj1l) }
+question {set = 1  name = maj2n  voice(maj2l) }
+question {set = 1  name = maj3n  voice(maj3l) }
+question {set = 1  name = maj4n  voice(maj4l) }
+question {set = 1  name = maj5n  voice(maj5l) }
+question {set = 1  name = maj6n  voice(maj6l) }
+question {set = 1  name = maj7n  voice(maj7l) }
+

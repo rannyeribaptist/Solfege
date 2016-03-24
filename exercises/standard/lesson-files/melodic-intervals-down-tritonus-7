@@ -1,0 +1,13 @@
+# GNU Solfege
+# Copyright (C) 2005, 2006, 2011 Tom Cato Amundsen
+
+header {
+    module=melodicinterval
+    replaces = "37b657b62cbe249455f42a09215149621648818a"
+    ask_for_intervals_0=-6, -10, -11
+    title = _("Tritone and sevenths")
+    theory = "theory-intervals"
+    lesson_id = "df92bab5-d40c-41a2-826e-412228d519c3"
+    test = "4x"
+    test_requirement = "90%"
+}

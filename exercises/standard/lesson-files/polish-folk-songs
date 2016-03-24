@@ -1,0 +1,252 @@
+﻿# -*- coding: utf-8 -*-
+# Solfege - free ear training software
+# Copyright (C) 2011 Piotr Komorowski
+# License is GPL, see file COPYING
+#
+# lesson file written by Piotr A. Komorowski
+# piotr-komorowski@wp.pl
+#
+# 0 "Koło mego ogródeczka"
+# 1 "Iskierki"
+# 2 "Głęboka studzienka"
+# 3 "Laura i Filon"
+# 4 "Czerwone jagody"
+# 5 "Kukułeczka"
+# 6 "Hej, od Krakowa jadę"
+# 7 "Wyjechał pan z chartami na pole" 
+# 8 "Idzie dysc"
+# 9 "W kadzidlańskim boru"
+# 10 "Uciekła mi przepióreczka"
+# 11 "Czerwone jabuszko"
+# 12 "Krakowiaczek jeden"
+# 13 "Dolina"
+# 14 "Kondziałecka"
+# 15 "Wyjechałem na poleczko"
+
+
+header {
+  lesson_id = "Dictations - polish folk songs"
+  module = dictation
+  title = _("Polish folk songs")
+  version = "3.14.10"
+}
+
+ s = "\staff \relative c' { %s}"
+
+question {
+  name = "Koło mego ogródeczka"
+  tempo = 98/4
+  breakpoints = 4/2, 8/2
+  clue_music = music(s % "\time 2/4 \key f \major f4")
+  music = s % """
+		\time 2/4 \key f \major
+		f4 a | f4. e8 | [g8 e] d4 | c4 r4 | [c8 bes'] [bes bes] | [bes a] [c a] |
+		[a g] [bes g] | [g f] [a f] | f4 a | f4. e8 | [g e] d4 | c2  ||
+  """
+}
+
+question {
+	name = "Iskierki"
+	tempo = 102/4
+	breakpoints = 12/4, 24/4, 36/4
+	clue_music = music(s % "\time 3/4 \key a \minor e2")
+	music = s % """
+	\time 3/4 \key a \minor
+	e2 e4 | f2 e4 | a2 e4 | c2 a4 |
+	e'2 e4 | f2 e4 | b2. | b2 r4 |
+	d2 d4 | e2 d4 | b'2 a4 | gis2 f4 |
+	e2 d4 | c2 b4 | a2. | a2 r4 |
+"""
+}
+
+question {
+	name = "Głęboka studzienka"
+	tempo = 116/4
+	breakpoints = 12/4, 24/4, 36/4
+	clue_music = music(s % "\time 3/4 \key d \major a4")
+	music = s % """
+	\time 3/4 \key d \major
+	a4 d fis | a2 g4 | fis2. ~ | fis4 r4 a |
+	b2 a4 | a2 g4 | e2.~ | e4 r4 r4 |
+	a,4 cis e | b'2 b4 | a2.~ | a4 r4 r4 |
+	e4 g fis | e2 a,4 | d2.~ | d4 r4 r4 |
+"""
+}
+
+question {
+  name = "Laura i Filon"
+  tempo = 120/4
+  breakpoints = 12/4, 24/4, 36/4, 48/4, 60/4
+  clue_music = music(s % "\time 3/4 \key g \major g'4")
+  music = s % """
+		\time 3/4 \key g \major
+		g'4 fis g | d2 d4 | e c4. e8 | e2 d4 | g4 fis g| a2 d,4 | c'2 b4 | a2.|
+		c4 b a | b2 g4 | fis4 g4. e8 | e2 d4 | d4 e fis| g2 c4 | b2 a4 | d2. |
+		c4 b a | b2 g4 | fis4 g4. e8 | e2 d4 | d4 e fis| g2 c4 | b2 a4 | g2. |
+  """
+}
+
+question {
+	name = "Czerwone jagody"
+	tempo = 102/4
+	breakpoints = 8/4, 16/4, 24/4
+	clue_music = music(s % "\time 2/4 \key d \minor d4")
+	music = s % """
+	\time 2/4 \key d \minor
+	d4 a | [f'8. f16 e8 d] | e4 a, | [g'8. g16 f8 e] | d4 a | [f'8. f16 e8 d] | [cis e a a] | d,4 d |
+	g4 g | [bes8 bes a g] | f4 d | [a'8 a g f] | e4 a, | [g'8 g f e ] | [d8 f a a] | d,4 d |
+"""
+}
+
+question {
+  name = "Kukułeczka"
+  tempo = 96/4
+  breakpoints = 24/4, 36/4
+  clue_music = music(s % "\time 3/4 \key f \major c8")
+  music = s % """
+		\time 3/4 \key f \major
+		[c8 e] g4 g4 | c4 a2 | [bes8 a] g4 c4 | a4 f2 |
+		[c8 e] g4 g4 | c4 a2 | [bes8 a] g4 c4 | a4 f2 |
+		f'8 r8 c2 | f8 r8 c2 | [e8 d] c2 |[e8 d] c2|
+		[a8 a] a4. f8 | [f8 e f a g f] | [e f g c, d e] | f8 r f'8 r4|
+
+  """
+}
+
+question {
+	name = "Hej, od Krakowa jadę"
+	tempo = 112/4
+	breakpoints = 6/4, 12/4, 18/4
+	clue_music = music(s % "\time 2/4 \key g \minor d8")
+	music = s % """
+	\time 2/4 \key g \minor
+	d8 g4 a8 | [bes8 a] c4 | g2 |
+	d'8 d4 d8 | [es8 d] c4 | d2 |
+	[d8 d] c4 | [bes8 bes] a4 | [g8 g fis d]|
+	d8 g4 a8 | [bes8 a] c4 | g2 |
+"""
+}
+
+question {
+  name = "Wyjechał pan z chartami na pole"
+  tempo = 76/4
+  breakpoints = 6/4, 12/4, 18/4
+  clue_music = music(s % "\time 3/4 \key g \major b'8")
+  music = s % """
+		\time 3/4 \key g \major
+		[b'8 c] d4 g, | [d'8 d] [e d] [c b] | [a a] a4 d, | [c'8 c] [d c] [b a]|
+		[g g] b4 d, | [g8 b] d4 [e8 fis] | [g d] d4 b | [c8 a] g2 ||
+  """
+}
+
+question {
+	name = "Idzie dysc"
+	tempo = 82/4
+	breakpoints = 10/4, 18/4
+	clue_music = music(s % "\time 2/4 \key e \minor b8")
+	music = s % """
+	\time 2/4 \key e \minor
+	b8 e4 b8 | [e8 fis] g4 | b8 b4 c8 | b4 a | e2 |
+	a8 a4 a8 | [a8 b] c4 | b8 b4 a8 | [g8 fis] e4 |
+	b8 e4 b8 | [e8 fis] g4 | b8 b4 c8 | b4 a | e2 |
+"""
+}
+
+question {
+  name = "W kadzidlańskim boru"
+  tempo = 120/4
+  breakpoints = 12/4, 24/4, 36/4, 48/4
+  clue_music = music(s % "\time 3/4 \key f \major f4")
+  music = s % """
+	    \time 3/4 \key f \major
+	    f4 f f | g2 d4 | f2. | c | a'4 a a | bes2 d4 | g,2.~ | g2. |
+	    bes4 d d | a c c | g bes bes | f a a | g a g | f2 g4 | a2. | c2.|
+	    bes4 d d | a c c | g bes bes | f a a | g a g | d2 e4 | f2.~ | f2.|
+"""
+}
+
+question {
+  name = "Uciekła mi przepióreczka"
+  tempo = 108/8
+  breakpoints = 9/8, 18/8, 27/8, 36/8
+  clue_music = music(s % "\time 3/8 \key g \major b'16")
+  music = s % """
+	    \time 3/8 \key g \major
+	      [b'16 c d8 d] | [d8 b b] | c8 e4 |
+		[a,16 b c8 c] | [c8 a8 a] | b8 d4 |
+		[g,16 a b8 b8] | [b8 gis e] | b'8 a4|
+		[a16 b c8 c8] | [e8 d fis,] | a8 g4 |
+		[b8 g fis16 e] | [d8 a' c] | [b8 g fis16 e] | [d8 a' g] |
+"""
+}
+
+question {
+  name = "Czerwone jabuszko"
+  tempo = 112/4
+  breakpoints = 12/4, 24/4, 36/4
+  clue_music = music(s % "\time 3/4 \key c \minor c8")
+  music = s % """
+		\time 3/4 \key c \minor
+		[c8 es] g4 g| d f2 | g4. f8 [es d]| c4 g'2 |
+		[c,8 es] g4 g| d f2 | g4. f8 [es d]| es4 c2 |
+		[c8 d] [es d] c4| [b8 c] [d b] g4| [g'8 as] [g f] [es d]|
+		[c8 d] [es f] g4|
+		[c,8 d] [es d] c4| [b8 c] [d b] g4| [g'8 as] [g f] [es d]|c4 c2 |
+  """
+}
+
+question {
+	name = "Krakowiaczek jeden"
+	tempo = 112/4
+	breakpoints = 4/2, 8/2, 12/2
+	clue_music = music(s % "\time 2/4 \key d \major cis8")
+	music = s % """
+	\time 2/4 \key d \major
+	[cis8 e g b] | a fis4 r8 | [a8 a g e] | d8 fis4 r8 |
+	[cis8 e g b] | a fis4 r8 | [a8 a g e] | d4 d |
+	[g8 b d b] | a fis4 r8 | [a8 a g e] | d8 fis4 r8 |
+	[g8 b d b] | a fis4 r8 | [a8 a g e] | d4 d |
+
+"""
+}
+
+question {
+  name = "Dolina"
+  tempo = 62/4
+  breakpoints = 6/4, 12/4, 18/4
+  clue_music = music(s % "\time 3/4 \key a \minor a'8")
+  music = s % """
+		\time 3/4 \key a \minor
+		[a'8 c] e4 e4 | [d8 c] b2| [c8 b] a4 [g8 a16 g] | e4 e2 |
+		[d8 d] f4 a4 | c4 b2 | \times 2/3 {[c8 b a]} gis4 [gis8 e]| d4 e2|
+  """
+}
+
+question {
+	name = "Kondziałecka"
+	tempo = 122/8
+	breakpoints = 12/8, 24/8, 36/8
+	clue_music = music(s % "\time 3/8 \key d \major d16")
+	music = s % """
+	\time 3/8 \key d \major
+	[d16 fis a8 a]|[a16 e g8 fis8]|d4 e8|b a4|
+	[d16 fis a8 a]|[a16 e g8 fis8]|d4 e8|b a4|
+	[d8 fis fis]|[fis16 e g8 fis]|[d8 fis fis]|[fis16 e g8 fis]
+	|d4 e8|b a4|a'4 e8| e d4|
+"""
+}
+
+question {
+  name = "Wyjechałem na poleczko"
+  tempo = 82/8
+  breakpoints = 12/8, 24/8, 36/8
+  clue_music = music(s % "\time 3/8 \key e \minor b'16")
+  music = s % """
+	  \time 3/8 \key e \minor
+	  [b'16 cis dis8 b ]|[ a16 g fis8 e8]| [dis16 e g8 a]| b8 fis4 |
+	  [b16 cis dis8 b ]|[ a16 g fis8 e8]| [dis16 e fis8 a]| e4. |
+	  [dis16 e g8 a]| [b8. a32 g fis16 e]|| [dis16 e g8 a]| b8 fis4 |
+	  [dis16 e g8 a]| [b8. a32 g fis16 e]| [dis16 e fis8 a]| e4. |
+"""
+}
+

@@ -1,0 +1,57 @@
+<sect1 id='trainingset-editor'>
+<title>Training set editor</title>
+<informalfigure>
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/trainingset-editor.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the trainingset-editor window.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+<para>The training set editor lets you create MIDI/WAV/MP3/OGG files of questions
+so that you can upload them to your pda, cell phone or MP3 player. A solution
+sheet will be generated for you to print out. Then you can let the MP3 player
+play the tracks in random order, and you can use the solution sheet to check
+if you recognized the music correctly.</para>
+
+<para>You use the training set editor to define which exercises to generate.
+You can save your definition in a file for later use. Each time you click
+<guibutton>Export</guibutton> a new set of files are generated
+in a directory of your choice. You have to manually upload the generated
+sound files to you mobile device.</para>
+
+<para>The program let you generate questions from as many lesson files
+as you like, but the most typical usage would be to generate lots of questions
+from just a single, or just a few files.</para>
+
+<para>The programs used to convert between the different file formats
+are defined in Gui page of the
+<link linkend='preferences-gui'>preferences window</link>.
+Please check the definitions there if you have problems converting the
+MIDI files to WAV, MP3 or OGG format.</para>
+
+<variablelist>
+<title>Table headings explained</title>
+<varlistentry>
+ <term>Count</term>
+ <listitem><para>The number of questions to generate from the lesson file.
+ </para></listitem>
+</varlistentry>
+<varlistentry>
+ <term>Repeat</term>
+ <listitem><para>The number of times to repeat each question.
+ </para></listitem>
+</varlistentry>
+<varlistentry>
+ <term>Delay</term> <listitem><para>
+   How long delay it will be between the questions. Measured in
+   the length of quarter-notes.
+ </para></listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>

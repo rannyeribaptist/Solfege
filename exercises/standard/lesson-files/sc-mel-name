@@ -1,0 +1,43 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "4f24b890-5555-11da-89a8-7c9a86d4310c"
+  module = idbyname
+  random_transpose = yes
+  title = _("Melodic Minor Scale and its modes")
+  questions_selectable = yes
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  at_question_start = show
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/mel"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question {set = 0  name = mel1n  voice(mel1c) }
+question {set = 0  name = mel2n  voice(mel2c) }
+question {set = 0  name = mel3n  voice(mel3c) }
+question {set = 0  name = mel4n  voice(mel4c) }
+question {set = 0  name = mel5n  voice(mel5c) }
+question {set = 0  name = mel6n  voice(mel6c) }
+question {set = 0  name = mel7n  voice(mel7c) }
+question {set = 0  name = mel8n  voice(mel8c) }
+
+question {set = 1  name = mel1n  voice(mel1l) }
+question {set = 1  name = mel2n  voice(mel2l) }
+question {set = 1  name = mel3n  voice(mel3l) }
+question {set = 1  name = mel4n  voice(mel4l) }
+question {set = 1  name = mel5n  voice(mel5l) }
+question {set = 1  name = mel6n  voice(mel6l) }
+question {set = 1  name = mel7n  voice(mel7l) }
+question {set = 1  name = mel8n  voice(mel8l) }
+

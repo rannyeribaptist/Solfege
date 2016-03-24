@@ -1,0 +1,12 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+
+header {
+    module = melodicinterval
+    ask_for_intervals_0=1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+    title = _("Second to octave")
+    theory = "theory-intervals"
+    lesson_id = "3ac10629-fd95-42f6-88f0-ba6e60ecd0b2"
+    test = "2x"
+    test_requirement = "100%"
+}

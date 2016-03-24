@@ -1,0 +1,19 @@
+# GNU Solfege
+# Copyright (C) 2011 Tom Cato Amundsen
+
+header {
+    module=toneincontext
+    title = _("Configure yourself")
+}
+
+# We are in custom_mode since header.tones are not defind. The user
+# get a list of checkboxes and can select which cadences to select from.
+cadence {
+  name = _("Major")
+  music = "\staff\relative g'{ <g e c> <a f c> <g f d b> <g e c> }"
+}
+
+cadence {
+  name = _("Minor")
+  music = "\staff\relative g'{ <g es c c,> <as f c f,> <g f d b g,> <g es c c,> }"
+}

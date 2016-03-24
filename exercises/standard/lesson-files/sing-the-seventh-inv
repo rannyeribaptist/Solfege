@@ -1,0 +1,103 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "05ac6db3-382a-49f5-aded-29991c5b957b"
+    module = singanswer
+    version = "3.0.6"
+    title = _("Sing the seventh of the chord. Inversions.")
+    lesson_heading = _("Sing the seventh of the chord")
+    have_music_displayer = yes
+    have_repeat_arpeggio_button = yes
+    at_question_start = play
+}
+# root position
+question {
+    question_text = _("Sing the seventh of the chord")
+    music = chord("c' e' g' bes'")
+    answer = chord("bes'")
+}
+question {
+    question_text = _("Sing the seventh of the chord")
+    music = chord("c' g' bes' e''")
+    answer = chord("bes'")
+}
+# 1. inversion
+question {
+    question_text = _("Sing the seventh of the chord")
+    music = chord("e' g' bes' c''")
+    answer = chord("bes'")
+}
+question {
+    question_text = _("Sing the seventh of the chord")
+    music = chord("e c' g' bes'")
+    answer = chord("bes'")
+}
+# 2. inversion
+question {
+    question_text = _("Sing the seventh of the chord")
+    music = chord("g bes c' e'")
+    answer = chord("bes")
+}
+question {
+    question_text = _("Sing the seventh of the chord")
+    music = chord("g c' e' bes'")
+    answer = chord("bes")
+}
+# 3. inversion 
+question {
+    question_text = _("Sing the seventh of the chord")
+    music = chord("bes c' e' g'")
+    answer = chord("bes")
+}
+question {
+    question_text = _("Sing the seventh of the chord")
+    music = chord("bes e' g' c''")
+    answer = chord("bes")
+}
+# minor 7
+# root position
+question {
+    question_text = _("Sing the seventh of the chord")
+    music = chord("a c' e' g'")
+    answer = chord("g'")
+}
+question {
+    question_text = _("Sing the seventh of the chord")
+    music = chord("a e' g' c''")
+    answer = chord("g'")
+}
+# 1. inversion
+question {
+    question_text = _("Sing the seventh of the chord")
+    music = chord("c' e' g' a'")
+    answer = chord("g'")
+}
+question {
+    question_text = _("Sing the seventh of the chord")
+    music = chord("c a e' g'")
+    answer = chord("g'")
+}
+# 2. inversion
+question {
+    question_text = _("Sing the seventh of the chord")
+    music = chord("e' g' a' c''")
+    answer = chord("g'")
+}
+question {
+    question_text = _("Sing the seventh of the chord")
+    music = chord("e a c' g'")
+    answer = chord("g'")
+}
+# 3. inversion
+question {
+    question_text = _("Sing the seventh of the chord")
+    music = chord("g' a' c'' e''")
+    answer = chord("g'")
+}
+question {
+    question_text = _("Sing the seventh of the chord")
+    music = chord("g c' e' a'")
+    answer = chord("g")
+}

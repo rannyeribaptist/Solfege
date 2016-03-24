@@ -1,0 +1,18 @@
+<sect1 id='idbyname-cadences'>
+<title>Identify the cadence</title>
+<para>
+ Identify the cadence by clicking on the button with its name.
+ As acknowledged in <ulink url="http://bugs.solfege.org/5">bug #5</ulink>
+ we need cadence exercises in Solfege.
+</para>
+<para>
+ In this release of Solfege, we only have one exercise with cadences
+ in major. In this exercise, a major scale is played to establish the tonic.
+ Maybe this is too little? Do we need a complete I-IV-V-I before the
+ question? Or maybe it is better to write real music that ends in the
+ cadence we want to practise?
+ This are things we need to decide before we release 3.12.0.
+ Comments and music can be added to <ulink url="http://bugs.solfege.org/5">
+ bug #5</ulink>.
+</para>
+</sect1>

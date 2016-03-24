@@ -1,0 +1,26 @@
+# Solfege - ear training for GNOME
+# Copyright (C) 2006 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "7e13af2c-6df3-4d76-beba-6a84648117b3"
+    module = rhythmtapping
+    #have_music_displayer = yes
+    at_question_start = show, play
+    title = "Question 2 and 3  of 3 has an mpd bug"
+}
+# Ok
+question {
+ music = rhythm("c8 c c4 c")
+}
+
+# Bad music variable
+question {
+ music = rhythm("c8 BUG c4 c")
+}
+
+# Bad rhythm variable
+question {
+ music = rhythm("c8 c c4 c")
+ rhythm = rhythm("c BUG")
+}

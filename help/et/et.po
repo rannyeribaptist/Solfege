@@ -1,0 +1,1206 @@
+# Estonian translations for GNU Solfege.
+# Copyright (C) 2009
+# This file is distributed under the same license as the solfege package.
+#
+# Tarmo Johannes <tarmo@otsakool.edu.ee>, 2010, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: solfege-manual 3.19.3\n"
+"POT-Creation-Date: 2010-12-31 13:04+0100\n"
+"PO-Revision-Date: 2011-02-11 22:52+0200\n"
+"Last-Translator: Tarmo Johannes <tarmo@otsakool.edu.ee>\n"
+"Language-Team: Estonian <linux-ee@lists.eenet.ee>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+
+#: help/C/twelvetone.xml:2(title)
+msgid "Sing 12 random notes"
+msgstr "Laulge 12 juhuslikku nooti"
+
+#: help/C/twelvetone.xml:13(para)
+msgid "In this exercise, the program will display all the twelve tones in the scale in a random order and play the first one. Then you should sing all the notes and see if the last note matches. So this is more like an exam in sight singing than an exercise for learning how to sing the intervals. For that you should try some of the other interval exercises."
+msgstr "Selles harjutuses paneb programm kõik 12 pooltooni juhuslikku järjekorda ning mängib esimese noodi. Laulge selle järgi kõik 12 nooti ning vaadake, kas viimane noot langeb kokku. Niisiis tegemist on pigem lehest laulmise kui intervallide laulmise harjutamisega. Viimase jaoks peaksite kasutama mõnda spetsiaalselt intervallide laulmiseks mõeldud harjutust."
+
+#: help/C/trainingset-editor.xml:2(title)
+msgid "Training set editor"
+msgstr "Õppepaketi redaktor"
+
+#: help/C/trainingset-editor.xml:10(phrase)
+msgid "Screenshot of the trainingset-editor window."
+msgstr "Ekraanipildi salvestus õppepaketi redaktori aknast."
+
+#: help/C/trainingset-editor.xml:15(para)
+msgid "The training set editor let you create MIDI/WAV/MP3/OGG files of questions so that you can upload them to your pda, cell phone or MP3 player. A solution sheet will be generated for you to print out. Then you can let the MP3 player play the tracks by random order, and you can use the solution sheet to check if you recognized the music correctly."
+msgstr "Õppepaketi redaktor lubab teil luua harjutustest MIDI/WAV/MP3/OGG faile, mida võite üles laadida oma pda-sse, mobiiltelefoni või mp3 mängijasse. Ühtlasi koostatakse lahenduste leht, mida saab välja printida. Siis saate lasta mp3 mängijal mängida salvestisi suvalises järjekorras ning kontrollida vastuste lehelt, kas arvasite vastused ära õigesti."
+
+#: help/C/trainingset-editor.xml:21(para)
+msgid "You use the training set editor to define which exercises to generate. You can save your definition in a file for later use. Each time you click <guibutton>Export</guibutton> a new set of files are generated in a directory of your choice. You have to manually upload the generated sound files to you mobile device."
+msgstr "Õppepaketi redaktoris saate määrata, milliseid harjutusi eksportida. Te võite oma määrangud salvestada faili, et neid hiljem kasutada. Iga kord kui vajutate nupule <guibutton>Eksport</guibutton>, luuakse uus hulk faile teie valitud kataloogi. Te peate laadima failid sellest kataloogist oma kantavasse heliseadmesse ise."
+
+#: help/C/trainingset-editor.xml:27(para)
+msgid "The program let you generate questions from as many lesson files as you like, but the most typical usage would be to generate lots of questions from just a single, or just a few files."
+msgstr "Programm lubab teil eksportida harjutusi kuitahes paljudest harjutusfailidest, kuid kõige tüüpilisem oleks eksportida harjutused vaid ühest või vähestest harjutusfailidest."
+
+#: help/C/trainingset-editor.xml:31(para)
+msgid "The programs used to convert between the different file formats are defined in Gui page of the <link linkend=\"preferences-gui\">preferences window</link>. Please check the definitions there if you have problems converting the MIDI files to WAV, MP3 or OGG format."
+msgstr "Programmid, millega luuakse vastavad helifailid on määratletud seadetes <link linkend=\"preferences-gui\">(Fail->Eelistused->Kasutajaliides->Välised programmid)</link>. Palun kontrollige seadeid sellel lehel, kui teil on probleeme WAV, MP3 või OGG failide salvestamisega."
+
+#: help/C/trainingset-editor.xml:38(title)
+msgid "Table headings explained"
+msgstr "Tabeli päise seletus"
+
+#: help/C/trainingset-editor.xml:40(term)
+msgid "Count"
+msgstr "Arv"
+
+#: help/C/trainingset-editor.xml:41(para)
+msgid "The number of questions to generate from the lesson file."
+msgstr "Mitu harjutust sellest harjutusfailist valida."
+
+#: help/C/trainingset-editor.xml:45(term)
+msgid "Repeat"
+msgstr "Korda"
+
+#: help/C/trainingset-editor.xml:46(para)
+msgid "The number of times to repeat each question."
+msgstr "Mitu korda korrata igat harjutust."
+
+#: help/C/trainingset-editor.xml:50(term)
+msgid "Delay"
+msgstr "Viivitus"
+
+#: help/C/trainingset-editor.xml:50(para)
+msgid "How long delay it will be between the questions. Measured in the length of quarter-notes."
+msgstr "Kui pikk viivitus on harjutuste vahel (mõõdetuna veerandnootides)."
+
+#: help/C/solfege.xml:21(title)
+msgid "&app; &appversion; User Manual"
+msgstr "&app; &appversion; Käsiraamat"
+
+#: help/C/solfege.xml:23(year) help/C/solfege.xml:32(year)
+msgid "2005"
+msgstr "2005"
+
+#: help/C/solfege.xml:27(year)
+msgid "2000"
+msgstr "2000"
+
+#: help/C/solfege.xml:28(year)
+msgid "2001"
+msgstr "2001"
+
+#: help/C/solfege.xml:29(year)
+msgid "2002"
+msgstr "2002"
+
+#: help/C/solfege.xml:30(year)
+msgid "2003"
+msgstr "2003"
+
+#: help/C/solfege.xml:31(year)
+msgid "2004"
+msgstr "2004"
+
+#: help/C/solfege.xml:33(year)
+msgid "2006"
+msgstr "2006"
+
+#: help/C/solfege.xml:34(year)
+msgid "2007"
+msgstr "2007"
+
+#: help/C/solfege.xml:35(year)
+msgid "2008"
+msgstr "2008"
+
+#: help/C/solfege.xml:36(year)
+msgid "2009"
+msgstr "2009"
+
+#: help/C/solfege.xml:37(year)
+msgid "2010"
+msgstr "2010"
+
+#: help/C/solfege.xml:52(para)
+msgid "Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version. The full text of the License is available in <xref linkend=\"gpl\"/>."
+msgstr "Seda dokumenti võib kopeerida, muuta ja levitada vastavalt litsentsile GNU General Public License versioon 3 (mille on koostanud  Free Software Foundation) või vastav hilisem versioon. Litsentsi täistekst on kättesaadav aadressil  <xref linkend=\"gpl\"/>."
+
+#: help/C/solfege.xml:63(title)
+msgid "Introduction"
+msgstr "Sissejuhatus"
+
+#: help/C/solfege.xml:66(title)
+msgid "Welcome to GNU Solfege"
+msgstr "Teretulemast GNU Solfege'i!"
+
+#: help/C/solfege.xml:67(para)
+msgid "Solfege is a <ulink url=\"http://www.gnu.org/philosophy/free-sw.html\">free</ulink> eartraining program. The program is part of the <ulink url=\"http://www.gnu.org\">GNU Project</ulink>. Check <xref linkend=\"online-resources\"/> for info on mailinglists and where to get the latest version of Solfege."
+msgstr "Solfege on <ulink url=\"http://www.gnu.org/philosophy/free-sw.html\">vabavaraline</ulink> kuulmistreeningu programm. Programm on osa <ulink url=\"http://www.gnu.org\">GNU Projektist</ulink>. Vt. <xref linkend=\"online-resources\"/> vastvate meililistide kohta ning kust on võimalik alla laadida Solfege'i viimane versioon."
+
+#: help/C/solfege.xml:73(para)
+msgid "One of the ideas of this program is that you can extend the program without having to dig into the source code. If you want to practise some special chords or want to practise dictation with some music not included, you can write <link linkend=\"extending-solfege\">lesson files</link> and put them into a <filename>lessonfiles/</filename> subdirectory in your <filename>$HOME</filename> directory. If you create good lesson files, you really should consider contributing them by sending them to the <link linkend=\"mailing-lists\">mailinglist</link> so I can add them to the next version of this program."
+msgstr "Üks selle programmi põhimõtteid on, et programmi on võimalik laiendada ilma lähtekoodi kaevumata. Kui te soovite harjutada mingeid erilisi akorde või kirjutada diktaati, mida pakett ei sisalda, võite ise kirjutada vastava  <link linkend=\"extending-solfege\">harjutusfaili</link> ja salvestada selle alamkataloogi <filename>lessonfiles/</filename> teie kodukataloogis (<filename>$HOME</filename>). Kui te olete loonud häid harjutusfaile, palun kaaluge nende jagamist - saatke nad <link linkend=\"mailing-lists\">meililisti</link>, et võiksin nad lisada programmi järgmisele versioonile."
+
+#: help/C/solfege.xml:101(title)
+msgid "Help sections for the exercises"
+msgstr "Abiinfo harjutuste kohta"
+
+#: help/C/singinterval.xml:2(title)
+msgid "Sing interval"
+msgstr "Laulge intervall"
+
+#: help/C/singinterval.xml:10(phrase)
+msgid "Screenshot of the sing interval exercise."
+msgstr "Ekraanipilt harjutusest Laulge intervall."
+
+#: help/C/singinterval.xml:15(para)
+msgid "In this exercise, Solfege will display one or more intervals, and you should sing them. Unfortunately, it is not yet possible to sing into a microphone and let Solfege decide if you sing correct, so you have to decide yourself if you are correct or wrong."
+msgstr "Selles harjutuses kuvab Solfege ühe või rohkem intervalli ning te peaksite püüdma neid laulda. Kahjuks pole veel võimalik kasutada mikrofoni, et programm kontrolliks, kas laulsite õigesti. Seetõttu peate otsustama tulemuse üle ise."
+
+#: help/C/singinterval.xml:17(title) help/C/idtone.xml:58(title)
+msgid "Config"
+msgstr "Seaded"
+
+#: help/C/singinterval.xml:18(para)
+msgid "The program will try to make a question where all tones are within the range the user can sing, as configured in the <link linkend=\"preferences-window\">preferences window</link>. Sometimes, it is not possible to keep the question within this range, for example when the exercise is configured to create many intervals where all intervals go upwards."
+msgstr "Programm püüab moodustada harjtuse nii, et kõik noodid langeksid kasutaja hääleulatusse nagu määratud <link linkend=\"preferences-window\">eelistuste aknas</link>. Mõnikord pole võimalik nendesse piiridesse jääda, näiteks kui harjutus on seadistatud mängima ainult intervalle suunaga üles."
+
+#: help/C/singchord.xml:2(title)
+msgid "Sing chord"
+msgstr "Laulge akord"
+
+#: help/C/singchord.xml:11(phrase) help/C/idtone.xml:10(phrase)
+#: help/C/idproperty.xml:11(phrase) help/C/idbyname-intonation.xml:10(phrase)
+#: help/C/idbyname-chords.xml:10(phrase)
+#: help/C/elembuilder-harmonic-progressions.xml:10(phrase)
+msgid "Screenshot of the program."
+msgstr "Ekraanipilt programmist."
+
+#: help/C/singchord.xml:17(para)
+msgid "If you are conducting a choir, you have to sing the starting tones for the different voices, and if you don't have a piano near by, you have to use a tuning fork. If you are a male, you will sing the tones for the women, one octave deeper, and visa versa."
+msgstr "Kui te juhatate koori, peate andma koorile hääled, ja kui teil pole klaverit käepärast, peate kasutama heliharki. Kui te olete mees, laulate naishäälte noodid oktav madalamalt ning vastupidi."
+
+#: help/C/singchord.xml:22(para)
+msgid "The program will play the tone A (440 hz) for you, and display a chord that you must sing. Solfege does not yet have support for microphone, so you will have to decide yourself if your answer is correct or not."
+msgstr "Programm mängib esmalt ette noodi A (440 Hz) ning näitab akordi, mille peate ette laulma. Solfege'il pole veel mikrofonituge, niisiis peate ise otsustama, kas vastus oli õige või mitte."
+
+#: help/C/scales.xml:2(title) help/C/music-theory.xml:4(title)
+msgid "Scales"
+msgstr "Laadid"
+
+#: help/C/scales.xml:3(para)
+msgid "Scales are a complex matter. For example is the greek lydian (C-D-E-F-G-A-B-C) different from the medieval and modern lydian (C-D-E-F#-G-A-B-C). You can read about all the scales used in GNU Solfege <ulink url=\"scales/modes.html\">here</ulink>."
+msgstr "Laadid on keruline teema. Näiteks on kreeka lüüdia (C-D-E-F-G-A-B-C) on erinev keskaja või kaasaegsest lüüdiast. Te võite lugeda lähemalt laadidest, mis kasutatud  GNU Solfege'is <ulink url=\"scales/modes.html\">siit</ulink>."
+
+#: help/C/scales.xml:6(para)
+msgid "Solfege has three variants of scale exercises so far."
+msgstr "Solfege'is pakub (siiani) harjutamiseks kolme tüüpi harjutusi."
+
+#: help/C/scales.xml:8(para)
+msgid "Solfege will play a scale, and you should identify the scale by clicking on the button with the scale name."
+msgstr "Solfege mängib laadi ette, te peate laadi määrama vajutades vastvale nupule."
+
+#: help/C/scales.xml:11(para)
+msgid "Solfege will play a scale, and you should identify the structure of the scale. You will be presented a collection of buttons labeled with a number of '1', '2' and '3'. These numbers represent the intervals minor second, major second and minor third that are between the tones of the scale."
+msgstr "Solfege mängib laadi ette, määrake laadi struktuur. Teie ees on nupud '1', '2' ja '3'. Need tähistavad pooltoonide arvu astmete vahel (vastavalt väike, suur ja suurendatud sekund)."
+
+#: help/C/scales.xml:12(para)
+msgid "Solfege will play a scale, and you should identify the grade. For example may Solfege take the natural minor scale, and play it from any of the tones one the scale, and you must tell which tone it starts on."
+msgstr "Solfege mängib laadi ette, määrake, milliselt laadi astmelt see helirida algas. Nt. võib Solfege võtta loomuliku minoori ja mängida selle alustades mistahes astmelt ning te peate ütlema, milliselt just."
+
+#: help/C/rhythm.xml:2(title)
+msgid "Rhythm"
+msgstr "Rütm"
+
+#: help/C/rhythm.xml:10(phrase)
+msgid "Screenshot of the program running the chord exercise."
+msgstr "Ekraanipilt akordiharjutusest."
+
+#: help/C/rhythm.xml:16(para)
+msgid "The program play a randomly generated rhythm, and the user should reproduce the rhythm. The user enters the rhythm by clicking on buttons representing different rhythmic elements."
+msgstr "Programm mängib juhuslikult genereeritud rütmi ja te peaksite selle rütmi järgi mängima. Kasutaja saab rütmi sisestada vajutades nuppudele, mis kujutavad mingeid rütmielemente."
+
+#: help/C/rhythm.xml:20(para)
+msgid "When you have entered enough rhythm elements, Solfege will check your answer. If everything is correct is will display a happy face, otherwise a sad face, and all wrong rhythms will be marked."
+msgstr "Kui te olete sisestanud piisavalt rütmielemente, kontrollib Solfege teie vastust. Kui kõik on õige, kuvab programm rõõmsa näo kujutise, vastasel korral märgitakse vigased rütmielemendid."
+
+#: help/C/rhythm.xml:24(para)
+msgid "If some of your answer was wrong, everything from the first wrong element will be removed (preserving any correct rhythms in the beginning of your answer) when you click on the sad face, or when you click on the rhythm buttons on top of the page."
+msgstr "Kui mingi osa teie vastusest oli vigane ja te vajutate vastuse kõrvale tekkivale kurvale näole (või mõnele rütmielemendi nupule ülalpool), kustutakse vastusest kõik elemendid alates esimesest veast ning saate sisestada need grupid uuesti."
+
+#: help/C/rhythm.xml:29(para)
+msgid "You can click the 'Play' button to hear your suggestion."
+msgstr "Kui vajutate nupule 'Mängi', saate kuulata, kuidas kõlab teie vastus."
+
+#: help/C/rhythm.xml:31(para)
+msgid "The questions made by this exercise are at the moment made by selecting rhythm elements randomly. This is not the best way to do it, and we hope a more clever way of generating questions will be made in a later release."
+msgstr "Praeguse seisuga genereeritakse rütmiharjutused antud rütmielementidest juhuslikult. See pole võibolla parim programmiline lahendus ning loodetavasti lisandub tulevikus ka teisi rütmiharjutuste tüüpe."
+
+#: help/C/rhythmtapping2.xml:2(title)
+msgid "Tap the rhythm"
+msgstr "Koputage rütm"
+
+#: help/C/rhythmtapping2.xml:3(para)
+msgid "The program will play a randomly generated rhythm, and the user should reproduce the rhythm. The user enters the rhythm by tapping on the button labeled <emphasis>Tap here</emphasis>."
+msgstr "Programm mängib ette juhuslikult kokku pandud rütmi ning kasutaja peaks selle järgi mängima. Kasutaja saab sisestada rütmi toksides hiirega nupule <emphasis>Tap here</emphasis> või tühikuklahviga, kui nupp <emphasis>Tap here</emphasis> on aktiivne."
+
+#: help/C/profile-manager.xml:2(title)
+msgid "Profile Manager"
+msgstr "Profiilide haldur"
+
+#: help/C/profile-manager.xml:12(para)
+msgid "The profile manager let multiple Solfege users share a login on your operating system. The profiles will share the config file, but they will have separate statistics and test results."
+msgstr "Profiilide haldur lubab mitmel kasutajal kasutada sama  Solfege programmi. Profiilid jagavad sama konfiguratsioonifaili, kuid nad salvestavad statistika ja testide tulemused eraldi. "
+
+#: help/C/profile-manager.xml:17(para)
+msgid "The profile manager will display at program startup if more than one profile exists. You can also access the profile manager by selecting <guimenuitem>Profile Manager</guimenuitem> from the <guimenu>File</guimenu>."
+msgstr "Profiilihaldur kuvatakse programmi käivitamisel, kui leitakse rohkem kui üks salvestatud profiil.  Profiilihalduri leiate muidu, kui valite <guimenuitem>Profiilide haldur</guimenuitem> menüüst <guimenu>Fail</guimenu>."
+
+#: help/C/profile-manager.xml:23(para)
+msgid "Check <emphasis>Don't ask at startup</emphasis> if you don't want to see the profile manager at startup. It will then remember the last profile selected when you close the profile manager and start the program with that profile."
+msgstr "Kui soovite, et profiilihaldurit programmi käivitamisel ei kuvataks, märkige ära <emphasis>Ära küsi programmi käivitamisel</emphasis>. Sellisel juhul jätab programm meelde viimase kasutatud profiili ning avab selle programmi käivitamisel."
+
+#: help/C/preferences-window.xml:2(title)
+msgid "Preferences window"
+msgstr "Eelistused"
+
+#: help/C/preferences-window.xml:4(title)
+msgid "Instruments"
+msgstr "Pillid"
+
+#: help/C/preferences-window.xml:12(phrase)
+msgid "Screenshot of the 'Midi' page of the preferences window."
+msgstr "Ekraanipilt leheküljest 'Midi seaded' menüüs 'Eelistused'."
+
+#: help/C/preferences-window.xml:18(title)
+msgid "Tempo"
+msgstr "Tempo"
+
+#. translators: don't translate the module names in this paragraph.
+#: help/C/preferences-window.xml:20(para)
+msgid "Set the tempo (beats per minute) for music and arpeggios. These values are used by exercises written with these exercise modules: <literal>compareintervals</literal>, <literal>harmonicintervals</literal>, <literal>idtone</literal>, <literal>melodicinterval</literal>, <literal>singchord</literal>, <literal>singinterval</literal>, <literal>twelvetone</literal>, <literal>rhythm</literal>, <literal>identifybpm</literal>, <literal>nameinterval</literal>. Other exercises will either have the tempo set in the lesson file or on the config page of the exercise."
+msgstr "Määrake tempo (lööki minutis) mängitava muusika ja arpedžode jaoks. Neid väärtuseid kasutavad harjutused, mis on kirjutatud järgmiste moodulite abil: <literal>compareintervals</literal>, <literal>harmonicintervals</literal>, <literal>idtone</literal>, <literal>melodicinterval</literal>, <literal>singchord</literal>, <literal>singinterval</literal>, <literal>twelvetone</literal>, <literal>rhythm</literal>, <literal>identifybpm</literal>, <literal>nameinterval</literal>. Teised harjutused kas kasutavad tempot, mis on määratud harjutusfailis või seadete lehel harjutuse juures."
+
+#: help/C/preferences-window.xml:37(title)
+msgid "Preferred instrument"
+msgstr "Eelistatav pill"
+
+#: help/C/preferences-window.xml:38(para)
+msgid "Set the midi instrument and volume used for most exercises."
+msgstr "Määrake midi instrument, mida kasutatakse enamuses harjutustest, ning selle tugevus."
+
+#: help/C/preferences-window.xml:41(title)
+msgid "Chord instruments"
+msgstr "Akordi pillid"
+
+#: help/C/preferences-window.xml:42(para)
+msgid "Solfege can use three different instruments when playing chords. One for the highest tone, one for the tones in the middle and one for the bass tone. This can be helpful if you find it difficult to hear individual tones in chords."
+msgstr "Solfege võib kasutada akordide mängimiseks kolme pilli. Üks ülemise noodi jaoks, üks keskmiste nootide jaoks ning üks bassinoodi mängimiseks. Sellest võib olla abi, kui leiate, et on raske välja kuulda erinevaid akordi hääli."
+
+#: help/C/preferences-window.xml:48(title)
+msgid "Preferred percussion instruments"
+msgstr "Eelistatavad löökpillid"
+
+#: help/C/preferences-window.xml:49(para)
+msgid "Set the percussion instrument used for count-in before rhythm questions, and the instrument used to play the question."
+msgstr "Määrake löökpill, mida kasutatakse tempo andmisel (count in) rütmiharjutustes, ning pill, millega mängitakse muud harjutused."
+
+#: help/C/preferences-window.xml:57(title)
+msgid "User"
+msgstr "Kasutaja"
+
+#: help/C/preferences-window.xml:65(phrase)
+msgid "Screenshot of the 'User' page of the preferences window."
+msgstr "Ekraanipilt leheküljest 'Kasutaja' menüüs 'Eelistused'."
+
+#: help/C/preferences-window.xml:71(para)
+msgid "Solfege uses this info in some exercises where the user is supposed to sing."
+msgstr "Solfege kasutab seda mõningates harjutustes, kus kasutaja peab laulma."
+
+#: help/C/preferences-window.xml:73(title)
+msgid "Lowest/highest tone the user can sing"
+msgstr "Madalaim/kõrgeim noot, mida kasutaja võib laulda"
+
+#: help/C/preferences-window.xml:74(para)
+msgid "These spin buttons tell Solfege the highest and lowest tone the user can sing. These values are only considered advisory by the program. If for example the values are set to <literal>c</literal> to <literal>c'</literal> and you have configured the program to ask you to sing minor and major tenths, you will have to sing tones outside this range."
+msgstr "Need valiknupud ütlevad Solfege'ile kasutaja hääleulatuse madalaima ja kõrgeima noodi. Neid väärtusi võtab programm kui soovituslikke. Näiteks, kui kasutaja on andnud hääleulatuseks ''c'' kuni ''c''' ning te soovite harjutada deetsimite laulmist, peab programm kasutama ka noote väljaspool antud ulatust."
+
+#: help/C/preferences-window.xml:81(title)
+msgid "Sex"
+msgstr "Sugu"
+
+#: help/C/preferences-window.xml:82(para)
+msgid "Solfege need to know if the user is male or female when creating some of the questions where the user will sing the answer. This because the male voice sound one octave lower than the female voice."
+msgstr "Solfege'il on mõnedes harjutustes, kus kasutaja peab laulma vastuse, vaja teada, kas kasutaja on mees või naine, kuna meeshääl kõlab oktavi võrra madalamalt."
+
+#: help/C/preferences-window.xml:89(title)
+msgid "External programs"
+msgstr "Välised programmid"
+
+#: help/C/preferences-window.xml:97(phrase)
+msgid "Screenshot of the 'External programs' page of the preferences window."
+msgstr "Ekraanipilt leheküljest Välised programmid' menüüs 'Eelistused'."
+
+#: help/C/preferences-window.xml:103(para)
+msgid "Solfege will search the PATH for the programs you enter on this page. So you only have to enter the full path if the programs are installed outside the PATH."
+msgstr "Solfege otsib sellel leheküljel määratud programme kataloogidest, mis on määratud süsteemi muutujaga PATH. Nii et programmi kataloog tuleb kirja panna vaid siis, kui see asub mujal kui PATH kataloogides."
+
+#: help/C/preferences-window.xml:109(title)
+msgid "Converters"
+msgstr "Konverteerimisprogrammid"
+
+#: help/C/preferences-window.xml:110(para)
+msgid "Give command lines that can convert between different audio formats. <literal>%(in)s</literal> will be replaced with the name of the file we convert from, and <literal>%(out)s</literal> with the name we convert to. It is not necessary to enter <literal>%(out)s</literal> if the program automatically saved to a new file with the correct file extension."
+msgstr "Sisetage käsud, mille abil on võimalik konverteerida ühest audio formaadist teise. <literal>%(in)s</literal> asendatakse faili nimega, mida konverteeritakse ning <literal>%(out)s</literal> nimega, millesse konverteeritakse. Kui programm salvestab väljundfaili automaatselt uue nimega, siis pole tarvis <literal>%(out)s</literal> määratleda."
+
+#: help/C/preferences-window.xml:118(title)
+msgid "Audio players"
+msgstr "Audio esitamise programmid"
+
+#: help/C/preferences-window.xml:119(para)
+msgid "Command lines that can play different audio formats. <literal>%s</literal> will be replaced with the name of the file to be played. The file name will be appended to the end of the string if you do not include a <literal>%s</literal>."
+msgstr "Käsud, mille abil on võimalik mängida erinevaid audioformaate. <literal>%s</literal> asendatakse faili nimega, mida hakatakse mängima. Kui te ei lisa muutujat <literal>%s</literal>, siis faili nimi listakse käsurea stringi lõppu."
+
+#: help/C/preferences-window.xml:127(title)
+msgid "Miscellaneous"
+msgstr "Mitmesugust"
+
+#: help/C/preferences-window.xml:128(para)
+msgid "A few exercises make use of the programs CSound and MMA. Lilypond-book is required to make ear training test printouts, and latex is required if the printout should be created in dvi format. Without latex, you can still create html output."
+msgstr "Mitmed harjutused kasutavad programme CSound ja MMA. Lilypond-book on vajalik, et teha treeningmaterjali väljaprinte ning kui väljaprint peaks olema dvi formaadis, on vaja programmi latex. Ilma latexita on sellegipoolest võimalik luua treeningmaterjal html formaadis."
+
+#: help/C/preferences-window.xml:134(para)
+msgid "If the file entered is a file ending with <literal>.py</literal>, then the script will be run by the same python interpreter as Solfege itself."
+msgstr "Kui sisestatud fail on lõpuga <literal>.py</literal>, siis see skript käivatakse sama pythoni interpretaatori abil, mis Solfege isegi."
+
+#: help/C/preferences-window.xml:138(para)
+msgid "\"Mail program\" defines the command that starts the mail program when you click on email addresses in the user manual."
+msgstr "\"Emaili programm\" määratleb käsu, mis käivitab emaili programmi, kui te klõpsate mõnele emaili aadressile käsiraamatus."
+
+#: help/C/preferences-window.xml:145(title)
+msgid "Interface"
+msgstr "Kasutajaliides"
+
+#: help/C/preferences-window.xml:153(phrase)
+msgid "Screenshot of the 'Interface' page of the preferences window."
+msgstr "Ekraanipilt leheküljest 'Kasutajaliides' 'Eelistuste' aknas."
+
+#: help/C/preferences-window.xml:159(para)
+msgid "Display user manual in web browser: Use this as an alternative to the help browser included with the program."
+msgstr "Näita käsiraamatut veebibrauseris: kasutage seda alternatiivina programmi enda abiinfo brauserile."
+
+#: help/C/preferences-window.xml:161(para)
+msgid "Resizeable main window: Allow the user to resize the main solfege window."
+msgstr "Kasutaja poolt muudetav põhiakna suurus: lubab kasutajal muuta põhiakna suurust."
+
+#: help/C/preferences-window.xml:163(para)
+msgid "Select language: You can manually select the language you want if Solfege does not detect this correctly, or if you want to run Solfege with a different language that your operating system."
+msgstr "Valige keel: kui Solfege ei tuvasta automaatselt süsteemi põhikeelt või kui soovite Solfege'i kasutada mõnes teises keeles kui süsteemi põhikeel, on võimalik valida kasutatav keel käsitsi."
+
+#: help/C/preferences-window.xml:169(title)
+msgid "Practise"
+msgstr "Harjutused"
+
+#: help/C/preferences-window.xml:177(phrase)
+msgid "Screenshot of the 'Practise' page of the preferences window."
+msgstr "Ekraanipilt leheküljest 'Harjutused' menüüs 'Eelistused'."
+
+#: help/C/preferences-window.xml:182(para)
+msgid "Not allow new question before the old is solved: Disable the 'new' button until the question is answered correctly or the user clicks \"give up\"."
+msgstr "Mitte lubada uusi küsimusi enne, kuni vana harjutus on lahendatud: elimineerib nupu 'Uus', kuni harjutus on lahendatud õigesti või kui kasutaja on vajutanud \"Annan alla\"."
+
+#: help/C/preferences-window.xml:183(para)
+msgid "Repeat question if the answer was wrong: Play the sound again when the user gives an incorrect answer."
+msgstr "Korda harjutust, kui vastus oli vale: Mängi harjututust uuesti, kui vastus oli vale."
+
+#: help/C/preferences-window.xml:184(para)
+msgid "Expert mode: Enabling this option in exercises using the <link linkend=\"idbyname-module\">idbyname</link> and <link linkend=\"idproperty-module\">idproperty</link> modules will let you select to practise only a subset of the questions in the lesson file. Practising with expert mode enabled will not save any statistics."
+msgstr "Eksperdirežiim: Kui aktiveerite selle režiimi, siis harjutused, mis kasutavad mooduleid <link linkend=\"idbyname-module\">idbyname</link> ja <link linkend=\"idproperty-module\">idproperty</link> , lasevad kasutada ainult vastavaid harjutuste alamrühmi harjutusfailides. Eksperdirežiimis ei salvestata ka statistikat harjutuste täitmise kohta."
+
+#: help/C/preferences-window.xml:193(title)
+msgid "Sound setup"
+msgstr "Heli seaded"
+
+#: help/C/preferences-window.xml:201(phrase)
+msgid "Screenshot of the 'Sound setup' page of the preferences window."
+msgstr "Ekraanipilt leheküljest 'Heli seaded' menüüs 'Eelistused'."
+
+#: help/C/preferences-window.xml:213(phrase)
+msgid "Screenshot of the 'Sound setup' page of the preferences window, running on MS Windows XP."
+msgstr "Ekraanipilt leheküljest 'Heli seaded' akas 'Eelistused' MS Windows XP korral."
+
+#: help/C/preferences-window.xml:219(title)
+msgid "Midi setup"
+msgstr "Midi seaded"
+
+#: help/C/preferences-window.xml:221(title)
+msgid "There are three ways to play sound:"
+msgstr "Heli mängimiseks on kolm võimalust:"
+
+#: help/C/preferences-window.xml:223(term)
+msgid "No sound:"
+msgstr "Helitult:"
+
+#: help/C/preferences-window.xml:225(para)
+msgid "Use this for debugging or when you are porting Solfege. No sounds are played, the midi events are printed to stdout."
+msgstr "Kasuta seda tõrgete otsimiseks (debugging) või muul sarnasel põhjusel. Helisid ei mängita, midi sündmused väljastatakse standardväljundisse (standard output)."
+
+#: help/C/preferences-window.xml:229(term)
+msgid "Use device:"
+msgstr "Kasuta seadet:"
+
+#: help/C/preferences-window.xml:231(para)
+msgid "The best choice here is usually <filename>/dev/music</filename> because it has the best support for percussion instruments. <filename>/dev/sequencer2</filename> is usually a symbolic link to <filename>/dev/music</filename>. If your system don't have <filename>/dev/music</filename>, you can create it with this command as root (if you run the linux kernel version 2.2 or later):"
+msgstr "Parim valik on siin tavaliselt <filename>/dev/music</filename>, kuna sel on parim tugi löökpillidele. <filename>/dev/sequencer2</filename> on tavaliselt link <filename>/dev/music</filename>-le. Kui teie süsteemil pole seadet <filename>/dev/music</filename>, võite selle luua järgmise käsuga ('root' kasutajaõigustes - kui teil on linuxi kernel 2.2 või hilisem):"
+
+#: help/C/preferences-window.xml:236(para)
+msgid "cd /dev mknod music u 14 8"
+msgstr "cd /dev mknod music u 14 8"
+
+#: help/C/preferences-window.xml:237(para)
+msgid "On MS Windows this choise is labeled <literal>Windows multimedia output</literal>."
+msgstr "MS Windowsi puhul on selle valiku nimi <literal>Windows multimedia output</literal>."
+
+#: help/C/preferences-window.xml:241(term)
+msgid "Use external midiplayer:"
+msgstr "Kasuta välist midi-mängijat:"
+
+#: help/C/preferences-window.xml:243(para)
+msgid "This can be useful when porting to systems that don't use OSS, or if you have a bad midi synth on your soundcard and want to use timidity."
+msgstr "See võib olla kasulik, kui teie operatsioonisüsteem ei kasuta OSS helisüsteemi või kui teie helikaardil on kehv midi süntesaator ning eelistate kasutada programmi timidity."
+
+#: help/C/preferences-window.xml:250(title)
+#: help/C/preferences-window.xml:261(title)
+msgid "Statistics"
+msgstr "Statistika"
+
+#: help/C/preferences-window.xml:252(title)
+msgid "Statistics from 3.15 and older"
+msgstr "Statistika versioonist 3.15 või vanemast."
+
+#: help/C/preferences-window.xml:253(para)
+msgid "Versions of Solfege before 3.16.0 saved statistics in many small files. Solfege 3.16.0 and newer will import these files into the new database file the first time the program is run, but it will leave the old files on your computer. It is safe to delete these files after you have run solfege 3.16.0 or newer once. The files are stored in the <literal>statistics</literal> directory of the <emphasis>application data</emphasis> directory."
+msgstr "Solfege versioonid enne 3.16.0 salvestasid statistika paljudesse väikestesse failidesse. Solfege 3.16.0 ja uuemad impordivad vanda statistika uude andmebaasifaili, kui programm esimest korda käivitatakse. Hiljem võite rahulikult vanad statistikafailid ära kustutada. Nende failide sisu talletakse kataloogis <literal>statistics</literal>, mis asub omakorda kataloogis <emphasis>application data</emphasis>."
+
+#: help/C/preferences-window.xml:262(para)
+msgid "Statistics are now saved in a file <literal>statistics.sqlite</literal> in the <emphasis>application data</emphasis> directory. The exact location of the directory can be found by selecting <guimenuitem>File Locations</guimenuitem> on the <guimenu>Help</guimenu> menu. Click <guibutton>Delete</guibutton> to reset you statistics and start with an empty <literal>statistics.sqlite</literal> file."
+msgstr "Statistika salvestatakse nüüd faili <literal>statistics.sqlite</literal> kataloogis <emphasis>application data</emphasis>. Selle kataloogi täpse asukoha leiate, kui valite  <guimenuitem>Failide asukohad</guimenuitem> menüüs <guimenu>Abiinfo</guimenu>. Vajutaga <guibutton>Kustuta</guibutton>, et eemaldada senine statistika ja alustada uuesti tühja <literal>statistics.sqlite</literal> failiga."
+
+#: help/C/online-resources.xml:2(title)
+msgid "Online resources"
+msgstr "Materjalid internetis"
+
+#: help/C/online-resources.xml:3(para)
+msgid "The homepage for Solfege is <ulink url=\"http://www.solfege.org\">http://www.solfege.org</ulink>. There is also a smaller page with more static info at <ulink url=\"http://www.gnu.org/software/solfege/\">http://www.gnu.org/software/solfege/</ulink>."
+msgstr "Solfege'i koduleht on <ulink url=\"http://www.solfege.org\">http://www.solfege.org</ulink>. On olemas ka väiksem lehekülg staatilisema infoga: <ulink url=\"http://www.gnu.org/software/solfege/\">http://www.gnu.org/software/solfege/</ulink>."
+
+#: help/C/online-resources.xml:5(title)
+msgid "Download Solfege"
+msgstr "Solfege'i allalaadimine"
+
+#: help/C/online-resources.xml:6(para)
+msgid "The source code is available from <ulink url=\"http://ftp.gnu.org/gnu/solfege\">http://ftp.gnu.org/gnu/solfege</ulink>. If you are adventurous, you can try the unstable (buggy, but might contain new stuff) releases from <ulink url=\"http://alpha.gnu.org/gnu/solfege\">http://alpha.gnu.org/gnu/solfege</ulink>. These releases might have more bugs, but then you get the chance to try new stuff and find and report bugs."
+msgstr "Lähtekood on saadaval aadressilt <ulink url=\"http://ftp.gnu.org/gnu/solfege\">http://ftp.gnu.org/gnu/solfege</ulink>. Kui te olete seiklushimuline, võite proovida kasutada ebastabiilset (võimalike vigadega, kuid kõige uuema sisuga) versioone aadressilt <ulink url=\"http://alpha.gnu.org/gnu/solfege\">http://alpha.gnu.org/gnu/solfege</ulink>. Nendes versioonides võib esineda rohkem tõrkeid, kuid siin on teil võimalus proovida uut materjali ja uusi võimalusi ning anda teada võimalikest vigadest."
+
+#: help/C/online-resources.xml:7(para)
+msgid "Source code and some precompiled binaries are available from <ulink url=\"http://sourceforge.net/project/showfiles.php?group_id=1465\">http://sourceforge.net/project/showfiles.php?group_id=1465</ulink>."
+msgstr "Lähtekood ning mõningat eelkompileeritud installeerimispaketid on saadaval aadressilt <ulink url=\"http://sourceforge.net/project/showfiles.php?group_id=1465\">http://sourceforge.net/project/showfiles.php?group_id=1465</ulink>."
+
+#: help/C/online-resources.xml:8(para)
+msgid "If you run Debian you can <userinput>apt-get install solfege</userinput> to download and install the program."
+msgstr "Kui kasutate Debiani, võite kasutada programmi allallalaadimiseks ning installeerimiseks käsku <userinput>apt-get install solfege</userinput>."
+
+#: help/C/online-resources.xml:11(title)
+msgid "Mailing lists"
+msgstr "Meililistid"
+
+#: help/C/online-resources.xml:14(para)
+msgid "Very low traffic, moderated and will be used to announce stable releases of Solfege. (<ulink url=\"http://lists.sourceforge.net/mailman/listinfo/solfege-announce\">Subscription</ulink> | <ulink url=\"http://sourceforge.net/mailarchive/forum.php?forum_id=7332\">Archive</ulink>)"
+msgstr "Väga hõre liiklus, kasutatakse põhiliselt uutest stabiilsestest versioonidest teatamiseks. (<ulink url=\"http://lists.sourceforge.net/mailman/listinfo/solfege-announce\">Liitumine</ulink> | <ulink url=\"http://sourceforge.net/mailarchive/forum.php?forum_id=7332\">Arhiiv</ulink>)"
+
+#: help/C/online-resources.xml:18(para)
+msgid "If you want to report problems installing or running Solfege, or have questions, comments or ideas on how to improve Solfege, please post to this list instead of using the message forum at Sourceforge or the author directly. You can post to solfege-devel without subscribing. (<ulink url=\"http://lists.sourceforge.net/mailman/listinfo/solfege-devel\">Subscription</ulink> | <ulink url=\"http://sourceforge.net/mailarchive/forum.php?forum_id=3968\">Archive</ulink>)"
+msgstr "Kui soovite teada anda probleemidest Solfege'i installeerimisel või kasutamisel, kui teil on kommentaare või soovitusi Solfege'i täiustamise kohta, palun saatke email pigem sellesse meililisti kui et kasutate vastavat foorumit Sourceforge juures. Kirju võib saata solfege-devel meililisti ka ilma sellega liitumata.  (<ulink url=\"http://lists.sourceforge.net/mailman/listinfo/solfege-devel\">Liitumine</ulink> | <ulink url=\"http://sourceforge.net/mailarchive/forum.php?forum_id=3968\">Arhiiv</ulink>)"
+
+#: help/C/online-resources.xml:22(para)
+msgid "The standard GNU address to send bug reports. This list is at the moment forwarded to <email>solfege-devel@lists.sourceforge.net</email>"
+msgstr "Strandard GNU aadress, kuhu saata tõrkeraportid. Praegusel hetkel suunatakse need teated ümber listi <email>solfege-devel@lists.sourceforge.net</email>"
+
+#: help/C/nameinterval.xml:2(title)
+msgid "Name intervals"
+msgstr "Nimetage intervallid"
+
+#: help/C/nameinterval.xml:10(phrase) help/C/melodicinterval.xml:10(phrase)
+#: help/C/interval-config-help.xml:16(phrase)
+#: help/C/harmonicinterval.xml:10(phrase)
+msgid "Screenshot of the program practising intervals using the buttons interface."
+msgstr "Ekraanipilt intervallide harjutusest, kui intervallide määramiseks kasutatakse programmi nuppusid."
+
+#: help/C/nameinterval.xml:16(para)
+msgid "In this exercise, Solfege will display and play an interval, and you should identify the interval. This is a music theory exercise, and not an ear training exercise. To learn how to name intervals you should read <xref linkend=\"theory-intervals\"/>."
+msgstr "Selles harjutuses Solfege mängib ja kuvab intervalli, kasutaja peab selle ära tundma. See on pigem muusikateooria kui kuulmistreeningu harjutus. Intervallide nimetuste kohta vt. <xref linkend=\"theory-intervals\"/>."
+
+#: help/C/nameinterval.xml:22(para)
+msgid "You identify the interval by clicking on one button telling the specific name and the general name."
+msgstr "Intervalli määramiseks peate vajutama kahele nupule: üks määrab intervalli nime (priim, sekund jne), teine intervalli tüübi (suur, väike, vähendatud jne)."
+
+#: help/C/music-theory.xml:2(title)
+msgid "Music theory"
+msgstr "Muusikateooria"
+
+#: help/C/music-theory.xml:5(para)
+msgid "Davide Bonetti has contributed a large set of scale exercises and some pages describing all the scales. You can see the pages <ulink url=\"../C/scales/modes.html\">here</ulink>."
+msgstr "Davide Bonetti on kirjutanud suure hulga laadide harjutusi ning mõned leheküljed, mis kirjeldavad kõiki laade. Neid lehekülgi võib näha <ulink url=\"../C/scales/modes.html\">siin</ulink>."
+
+#: help/C/music-theory.xml:10(title)
+msgid "Intervals"
+msgstr "Intervallid"
+
+#: help/C/music-theory.xml:11(para)
+msgid "In music theory we use the word interval when we talk about the pitch difference between two notes. We call them harmonic intervals if two tones sound simultaneously and melodic intervals if they sound successively."
+msgstr "Muusikateoorias tähendab mõiste intervall kahe noodi kõrguste vahelist kaugust. Harmooniliseks nimetatakse intervalli siis, kui kaks nooti kõlavad samal ajal ning meloodiliseks, kui noodid kõlavad üksteise järel. "
+
+#. translators: This paragraph is messy because the author is writing
+#. in english, and english is not his mother language. Write this paragraph
+#. so that is as clear and simple as possible, describing only what is relevant
+#. for your language
+#: help/C/music-theory.xml:20(para)
+msgid "Interval names consist of two parts. Some examples are \"major third\" and \"perfect fifth\". In Walter Piston's \"Harmony\" the two parts are called <emphasis>the specific name</emphasis> and <emphasis>the general name</emphasis> part. Wikipedia talks about <emphasis>interval quality</emphasis> and <emphasis>interval number</emphasis>. I have seen people talking about an interval's <emphasis>numerical size</emphasis>."
+msgstr "Intervallide nimetused koosnevad kahest osast. Näiteks \"suur terts\" või \"puhas kvint\". Walter Pistoni \"Harmoonias\" on neid kaht osa nimetatud <emphasis>täpsustav nimetus</emphasis> ning <emphasis>üldnimetus</emphasis>. Wikipedia nimetab neid <emphasis>interval quality</emphasis>  ja <emphasis>interval number</emphasis>.  Mõned inimesed räägivad intervallide <emphasis>arvväärtusest</emphasis>."
+
+#: help/C/music-theory.xml:27(para)
+msgid "You find the general name by counting the steps on the staff, ignoring any accidentals. So if the interval you want to name goes from E to G#, then we count to 3 (E F G) and see that the general name is <emphasis>third</emphasis>."
+msgstr "Intervalli üldnime leiab siis, kui lugeda, mitu astet on kahe noodi vahel arvestamata juhuslikke märke. Nii et kui on vaja leida intervall on E ja Gis noodi vahel, saame kolm astet (E,F, G(is)) ning seega on intervalli üldnimetus  <emphasis>terts</emphasis> (kolmas)."
+
+#: help/C/music-theory.xml:40(para)
+msgid "The specific name tells the exact size of the interval. Unisons, fourths, fifths and octaves can be diminished, pure or augmented. Seconds, thirds, sixths and sevenths can be minor, major, diminished or augmented. A minor interval is one semitone smaller than a major interval. A diminished interval is one semitone smaller than a pure or a minor interval, and an augmented interval is one semitone larger than a pure or major interval."
+msgstr "Intervalli nime täpsustav osa määrab ära intervalli täpse suuruse. Priimid (unisonid), kvardid, kvindid ja oktavid võivad olla vähendatud, puhtad või suurendatud. Sekundid, tertsid, sekstid ja septimid võivad olla suured, väikesed, vähendatud või suurendatud. Väike intervall on pool tooni väiksem kui suur intervall. Vähendatud intervall on pool tooni väiksem kui puhas või väike intervall. Suurendatud intervall on pool tooni suurem kui puhas või suur intervall."
+
+#: help/C/music-theory.xml:48(para)
+msgid "Accidentals change the size of intervals. The interval becomes one semitone larger if you add a sharp to the highest tone or a flat to the lowest tone. And it becomes one semitone smaller if you add a flat to the highest tone or a sharp to the lowest tone. In the following sections naming of the intervals will be shown in greater detail."
+msgstr "Kõrgendus- või madaldusmärgid muudavad intervalli suurust. Intervall muutub poole tooni võrra suuremaks kui lisada ülemise noodi ette diees või madalama noodi ette bemoll. Ning poole tooni võrra väiksemaks, kui lisada ülemisele noodile bemoll või alumisele diees. Järgnevates lõikudes käsitletakse intervallide nimetusi ja määramist lähemalt."
+
+#: help/C/music-theory.xml:57(title)
+msgid "Seconds"
+msgstr "Sekundid"
+
+#: help/C/music-theory.xml:58(para)
+msgid "Seconds are easy to recognise: the two notes are neighbours on the staff. One note is on a staff line, and the other one is in the space above or below. A minor second is one semitone step, also called a half step. A major second is two semitone steps, also called a whole step."
+msgstr "Sekundeid on lihtne ära tunda: kaks nooti on noodijoonestikul naabrid. Üks noot on joone peal ning teine joonevahes selle kõrval, väikse sekundi puhul  on nad üksteisest poole tooni ja suure sekundi puhul täistooni (kahe pooltooni) kaugusel. "
+
+#: help/C/music-theory.xml:63(para)
+msgid "To learn to identify seconds, you first have to learn which seconds there are between the natural tones. As you can see in <xref linkend=\"theory-intervals-seconds\"/>, only the intervals E-F and B-C are minor seconds. The rest are major intervals. You can check that <xref linkend=\"theory-intervals-seconds\"/> is correct by looking at a piano. You will see that there are no black keys between E and F and between B and C."
+msgstr "Et õppida määratlema sekundeid, tuleb esmalt õppida, millised sekundid nö valgete nootide vahel esinevad. Nagu näha,  <xref linkend=\"theory-intervals-seconds\"/>, on ainult E-F ja H-C väikesed sekundid. Ülejäänud on suured sekundid. Seda võite selgelt näha <xref linkend=\"theory-intervals-seconds\"/> ka klaveri klahvistikul - E ja F ning H ja C vahel ei ole musti klahve."
+
+#: help/C/music-theory.xml:79(para)
+msgid "If the second has accidentals, then we have to examine them to find out how they change the size of the interval. Let us identify a few intervals!"
+msgstr "Kui sekundi ühe või teise noodi ees on märgid, peab vaatama, kuidas need määravad sekundi suuruse. Määrakem paar intervalli!"
+
+#: help/C/music-theory.xml:92(para)
+msgid "We remove the accidental from the interval in <xref linkend=\"theory-intervals-seconds-1\"/> and see that the interval F-G is a major second. When we add the flat to the highest tone, the interval becomes one semitone smaller, turning into a minor second."
+msgstr "Kui eemaldada märk intervallis <xref linkend=\"theory-intervals-seconds-1\"/>, näeme, et intervall F-G on suur sekund. Kui lisada bemoll ülemise noodi ette, muutub intervall poole tooni võrra väiksemaks ning seega on tegemist väikse sekundiga."
+
+#: help/C/music-theory.xml:106(para)
+msgid "We remove the accidentals, and see that the interval A-B is a major second. You still remember <xref linkend=\"theory-intervals-seconds\"/>, don't you? Then we add the flat to the A, and the interval becomes an augmented second. And when we add the flat to the B, the interval becomes a major second."
+msgstr "Kui ära võtta märgid, siis intervall A-H on suur sekund. Kas mäletate veel  <xref linkend=\"theory-intervals-seconds\"/>? Kui lisada bemoll A ette, siis muutub intervall poole tooni võrra suuremaks ning tegemist on suurendatud sekundiga. Kui lisada bemoll ka H ette, siis on see intervall suur sekund."
+
+#: help/C/music-theory.xml:121(para)
+msgid "We remove the accidentals, and see that the interval E-F is a minor second. When we add a flat to the lowest tone, the interval becomes one semitone larger, turning into a major second. And when we add a sharp to the highest tone, the interval becomes one semitone larger, turning into an augmented second."
+msgstr "Eemaldame märgid ning näeme, et intervall E-F on väike sekund.  Kui lisada bemoll madalama noodi ette, muutub intervall poole tooni võrra suuremaks ning sellest saab suur sekund. Kui lisame seejärel dieesi ülemise noodi ette, siis muutub intervall veel poole tooni võrra suuremaks ning tegemist on suurendatud sekundiga."
+
+#: help/C/music-theory.xml:134(title)
+msgid "Thirds"
+msgstr "Tertsid"
+
+#: help/C/music-theory.xml:135(para)
+msgid "A minor third is one minor and one major second, or three semitones. A major third are two major seconds, or four semitone steps. <xref linkend=\"theory-intervals-thirds\"/> shows the thirds between all the natural tones. You should memorise the major intervals, C-E, F-A and G-B. Then you know that the other four intervals are minor."
+msgstr "Väike tertsi saame, kui liita üks suur ja üks väike sekund, ehk kokku kolm pooltooni. Suur terts tekib, kui liita kaks suurt sekundit, ehk siis tema suurus on neli pooltooni. <xref linkend=\"theory-intervals-thirds\"/> näitab kõiki tertse, mis tekivad klaveri valgete klahvide vahel. Meelde tuleks jätta, et suured tertsid on C-E, F-A ja G-H. Kõik ülejäänud on väiksed tertsid."
+
+#: help/C/music-theory.xml:150(para)
+msgid "Then you examine the accidentals to see if they change the specific name. This is done exactly the same way as for seconds."
+msgstr "Seejärel tuleks vaadata märke, kas nad muudavad intervalli täpsustavat nime. Seda tehakse täpselt sama moodi nagu sekunditegi puhul."
+
+#: help/C/music-theory.xml:158(title)
+msgid "Fourth"
+msgstr "Kvardid"
+
+#: help/C/music-theory.xml:159(para)
+msgid "A pure fourth is 2½ steps, or two major seconds and a minor second. <xref linkend=\"theory-intervals-fourths\"/> shows all fourths between natural tones. You should memorise that the fourth F-B is augmented, and that the other six are pure."
+msgstr "Puhtas kvardi suurus on 2½ tooni ehk kaks suurt sekundit pluss väike sekund.  <xref linkend=\"theory-intervals-fourths\"/> näitab kõiki kvarte, mis tekivad klaveri valgete klahvide vahel. Meelde tuleks jätta, et F-H on suurendatud ning ülejäänud kuus on puhtad kvardid."
+
+#: help/C/music-theory.xml:178(title)
+msgid "Fifth"
+msgstr "Kvindid"
+
+#: help/C/music-theory.xml:179(para)
+msgid "A pure fifth is 3½ steps, or three major seconds and a minor second. <xref linkend=\"theory-intervals-fifths\"/> shows all fifths between natural tones. You should remember that all those intervals are pure, except B-F that is diminished."
+msgstr "Puhta kvindi ulatus on 3½ tooni, ehk kolm suurt sekundit pluss väike sekund.  <xref linkend=\"theory-intervals-fifths\"/> näitab kõiki kvinte, mis tekivad klaveri valgete klahvide vahel. Meelde tuleks jätta, et kõik need kvindid on puhtad, v.a. H-F, mis on vähendatud."
+
+#: help/C/music-theory.xml:193(para)
+msgid "If an interval has accidentals, then we must examine them to see how they change the size of the interval. A diminished fifth is one semitone smaller than a pure interval, and an augmented fifth is one semitone larger. Below you will find a few examples:"
+msgstr "Kui intervalli ees on märgid, tuleb uurida, kuidas nad muudavad intervalli suurust. Vähendatud kvint on puhtast poole tooni võrra kitsam, suurendatud kvint puhtast poole tooni võrra laiem. Allpool järgnevad paar näidet:"
+
+#: help/C/music-theory.xml:207(para)
+msgid "We remember from <xref linkend=\"theory-intervals-fifths\"/> that the interval B-F is a diminished fifth. The lowest tone in <xref linkend=\"theory-intervals-fifths-1\"/> is preceded by a flat that makes the interval one semitone larger and changes the interval from a diminished to a pure fifth."
+msgstr "Jooniselt <xref linkend=\"theory-intervals-fifths\"/> mäeltame, et intervall H-F on vähendatud kivint. Madalama noodi ees on bemoll, mis teeb intervalli pool tooni suuremaks ning seega on tegemist puhta kvindiga."
+
+#: help/C/music-theory.xml:222(para)
+msgid "We know from <xref linkend=\"theory-intervals-fifths\"/> that interval E-B is a perfect fifth. In <xref linkend=\"theory-intervals-fifths-2\"/> the E has a flat in front of it, making the interval augmented. But then the B is preceded by a double flat that makes the interval two semitone steps smaller and changes the interval to a diminished fifth."
+msgstr "Jooniselt <xref linkend=\"theory-intervals-fifths\"/> teame, et E-H on puhas kvint. Joonisel <xref linkend=\"theory-intervals-fifths-2\"/>  on E ees bemoll, mis teeb intervalli suurendatuks. Kui lisada H ette duubelbemoll, mis teeb intervalli kahe pooltooni võrra väiksemaks, siis on see intervall vähendatud kvint."
+
+#: help/C/music-theory.xml:230(title)
+msgid "Sixths"
+msgstr "Sekstid"
+
+#: help/C/music-theory.xml:231(para)
+msgid "Sixths are easiest identified by <link linkend=\"inverting-intervals\"> inverting the interval</link> and identifying the third. Then the following rule applies:"
+msgstr "Sekste on kõige kergem määrata, kui muuta see seksti<link linkend=\"inverting-intervals\"> pöördintervalliks</link> tertsiks. Sel juhul kehtib reegel:"
+
+#: help/C/music-theory.xml:236(para)
+msgid "If the third is diminished, then the sixth is augmented"
+msgstr "Kui terts on vähendatud, on sekst suurendatud."
+
+#: help/C/music-theory.xml:237(para)
+msgid "If the third is minor, then the sixth is major"
+msgstr "Kui terts on väike, on sekst suur."
+
+#: help/C/music-theory.xml:238(para)
+msgid "If the third is major, then the sixth is minor"
+msgstr "Kui terts on suur, on sekst väike."
+
+#: help/C/music-theory.xml:239(para)
+msgid "If the third is augmented, then the sixth is diminished"
+msgstr "Kui terts on suurendatud, siis sekst on vähendatud. "
+
+#: help/C/music-theory.xml:242(para)
+msgid "If you find inverting intervals difficult, then you can memorise that the intervals E-C, A-F and B-G are minor. The other four are major. Then you examine the accidentals to see if they change the specific name. This is done exactly the same way as for seconds."
+msgstr "Kui intervallide pööramine tundub teile raske, võib meelde jätta, et sekstid E-C, A-F ja B-G on väiksed. Ülejäänud neli on suured. Seejärel tuleb uurida märke, kas need muudavad intervalli täpsustavad nime. Seda tehakse täpselt sama moodi nagu sekunditegi puhul."
+
+#: help/C/music-theory.xml:259(title)
+msgid "Sevenths"
+msgstr "Septimid"
+
+#: help/C/music-theory.xml:260(para)
+msgid "Sevenths are identified the same way as sixths. When you invert a seventh, you get a second."
+msgstr "Septimeid määratakse sama moodi nagu sekste. Septimi pöördintervall on sekund."
+
+#: help/C/music-theory.xml:263(para)
+msgid "If you find inverting intervals difficult, then you can memorise that the intervals C-B and F-E are major. The other five are minor. Then you examine the accidentals to see if they change the specific name. This is done exactly the same way as for seconds."
+msgstr "Kui intervallide pööramine tundub teile raske, võib meelde jätta, C-H ja F-E on suured septimid. Ülejäänud viis on väiksesed septimid. Seejärel tuleb uurida märke, kas need muudavad intervalli täpsustavad nime. Seda tehakse täpselt sama moodi nagu sekunditegi puhul."
+
+#: help/C/music-theory.xml:283(title)
+msgid "Inverting intervals"
+msgstr "Intervallide pööramine"
+
+#: help/C/music-theory.xml:284(para)
+msgid "You invert an interval when you move the lowest tone of an interval one octave higher or the highest tone one octave lower. The general name changes this way:"
+msgstr "Intervallide pööramine tähendab, et intervalli alumine noot tõstetakse oktavi võrra üles või ülemine noot oktavi võrra alla.  Intervalli üldnimetus muutub nii:"
+
+#: help/C/music-theory.xml:287(para)
+msgid "Second becomes seventh."
+msgstr "Sekundist saab septim."
+
+#: help/C/music-theory.xml:288(para)
+msgid "Third becomes sixth."
+msgstr "Tertsist saab sekst."
+
+#: help/C/music-theory.xml:289(para)
+msgid "Forth becomes fifth."
+msgstr "Kvardist saab kvint."
+
+#: help/C/music-theory.xml:290(para)
+msgid "Fifth becomes fourth."
+msgstr "Kvindist saab kvart."
+
+#: help/C/music-theory.xml:291(para)
+msgid "Sixth becomes third."
+msgstr "Sekstist saab terts."
+
+#: help/C/music-theory.xml:292(para)
+msgid "Seventh becomes second."
+msgstr "Septimist saab sekund."
+
+#: help/C/music-theory.xml:295(para)
+msgid "The specific name changes this way:"
+msgstr "Intervalli täpustav nimetus muutub nii:"
+
+#: help/C/music-theory.xml:297(para)
+msgid "Diminished becomes augmented."
+msgstr "Vähendatust saab suurendatud."
+
+#: help/C/music-theory.xml:298(para)
+msgid "Minor becomes major."
+msgstr "Väiksest saab suur."
+
+#: help/C/music-theory.xml:299(para)
+msgid "Perfect stays perfect."
+msgstr "Puhas jääb puhtaks."
+
+#: help/C/music-theory.xml:300(para)
+msgid "Major becomes minor."
+msgstr "Suurest saab väike."
+
+#: help/C/music-theory.xml:301(para)
+msgid "Augmented becomes diminished."
+msgstr "Suurendatust saab vähendatud."
+
+#: help/C/music-theory.xml:304(para)
+msgid "Below are two examples, a major third is inverted and becomes a minor sixth, and a minor seventh is inverted and becomes a major second."
+msgstr "Allpool järgnevad kaks näidet. Suur terts on pööratud ning sellest saab väike sekst, väike septim on pööratud ja sellest saab suur sekund."
+
+#: help/C/melodicinterval.xml:2(title)
+msgid "Melodic interval"
+msgstr "Meloodiline intervall"
+
+#: help/C/melodicinterval.xml:16(para)
+msgid "This exercise creates random intervals and you should try to identify them."
+msgstr "See harjutus genereerib juhuslikke intervalle ning te peate neid ära tundma."
+
+#: help/C/melodicinterval.xml:18(para) help/C/harmonicinterval.xml:22(para)
+msgid "If you are using the buttons interface, then you can right-click on the buttons to hear the interval they represent."
+msgstr "Kui kasutate intervalli määramiseks intervallinuppe ekraanil, võite klõpsta hiire parema klahviga nupule, et vastavat intervalli kuulda."
+
+#: help/C/interval-config-help.xml:2(title)
+msgid "Configuration"
+msgstr "Seaded"
+
+#: help/C/interval-config-help.xml:3(para)
+msgid "On the config page of the exercise, there is a combo box where you can select different ways to answer the question. Currently there is a piano, guitar, bass and a few types of accordion in addition to the default buttons interface. Below is a screenshot showing the piano interface."
+msgstr "Harjutuse seadete leheküljel võite valida mitmeid võimalusi, kuidas harjutust sooritada. Praeguse seisuga on valikuteks klaver, kitarr, bass(kitarr) ning mõningad akordionitüübid lisaks tavapärastele intervallinuppudele. All järgneb ekraanipilt, mis näitab klaveriliidest."
+
+#: help/C/idtone.xml:2(title)
+msgid "Identify tone"
+msgstr "Määrake noot"
+
+#: help/C/idtone.xml:16(para)
+msgid "This is a combined tone memory and interval exercise. Some people believe this kind of exercise can give you perfect pitch (absolute pitch), but I don't believe so."
+msgstr "See harjutus arendab kombineeritult kuulmismälu ning intervallitunnetust. Mõned inimesed arvavad, et see harjutus võimaldab omandada absoluutse kuulmise, kuid mina nii ei usu."
+
+#: help/C/idtone.xml:22(para)
+msgid "The basics are: the program play a tone and you must identify it by comparing it with the last tone played for you."
+msgstr "Programm mängib noodi ning teie peate selle noodi ära tundma võrreldes eelmise noodiga."
+
+#: help/C/idtone.xml:26(para)
+msgid "To get you started the program will play one tone and display its name on the status bar. You identify the tones by clicking on the piano keyboard or using the keyboard shortcuts that are the letters written on each key."
+msgstr "Alustuseks mängib programm ette ühe nood ning ütleb, mis noodiga on tegu. Te peate näitama, kus asub see noot klaviatuuril (klikkides vastaval klahvikujutisel või vajutades vastavale tähele)."
+
+#: help/C/idtone.xml:31(para)
+msgid "Right click on the piano keyboard to hear a note without actually guessing it. (Some will call that cheating....)"
+msgstr "Kui soovite kuulda mõne klahvi kõrgust, ilma et tegelikult vastust pakuks, võite klahvil hiire parema hiireklahviga klõpsata. (Mõned nimetaks seda spikerdamiseks... )"
+
+#: help/C/idtone.xml:35(title)
+msgid "Manual configuration"
+msgstr "Käsitsi seadistamine"
+
+#: help/C/idtone.xml:37(para)
+msgid "You can configure this exercise as you like if you select select “Configure yourself” front the default front page."
+msgstr "Seda harjutust saab seadistada nii nagu soovite, kui valite standard-esilehlet \"Seadistage ise\","
+
+#: help/C/idtone.xml:40(para)
+msgid "There are several ways you can use this exercise. Personally, I have not used this exercise very much, and the sections below are only suggestions."
+msgstr "Selle harjutuse kasutamiseks on mimeid võimalusi. Mina isiklikult pole seda kasutanud kuigi palju ning alljärgnev lõik on puhtalt soovituslik."
+
+#: help/C/idtone.xml:44(title)
+msgid "Note by note"
+msgstr "Noot-noodilt"
+
+#: help/C/idtone.xml:45(para)
+msgid "Start with only the notes c-d-e at weight 1. When your score is at least 96% correct, you add the tone f and continue. Exercises are defined that will add one and one tone until you practise with all 12 tones."
+msgstr "Alustage ainult nootidega c-d-e kaaluga 1. Kui teie skoor on vähemalt 96%, lisage noot f ning jätkake. Harjutusfailides on järjestatud harjutused, mis lisavad noodi järel noodi, kuni jõuate 12 noodini välja."
+
+#: help/C/idtone.xml:52(title)
+msgid "Heavy A"
+msgstr "Raske A"
+
+#: help/C/idtone.xml:54(para)
+msgid "Configure with the tone a at weight 11 (or higher) and the rest of the tones at weight 1. This way the program will play the tone a very often, so you will remember the tone, and then you use a as a reference tone to identify the other tones. When you have practised a while, you can reduce the weight of a to make the exercise harder."
+msgstr "Seadistage noot A' kaaluks 11 (või rohkem) ning teiste nootide kaaluks 1. Sellisel moel mängib programm A nooti väga tihti, nii et teil jääb selle noodi kõrgus kõrvu. Kui olete mõnda aega harjutanud, võite vähendada A noodi kaalu, et muuta harjutust raskemaks."
+
+#: help/C/idtone.xml:60(para)
+msgid "If run from “Configure yourself”, on the top of the config page you tell the program how important the different tones are. If you for example give the tone a 11 points and the rest 1 point each, then (11+11*1)/11*100 = 50% of the random tones will be an a."
+msgstr "Kui te valite \"Seadistage ise\" seadete lehelt, saate ise määrata, millise kaaluga  mingid noodid on.  Kui te annate ühele noodile a nt 11 punkti ja teistele 1 punkt, siis on tõenöaosus (11+11*1)/11*100 = 50% , et juhuslikult valitud noot on just a."
+
+#: help/C/idtone.xml:65(para)
+msgid "Below that you select what octaves the random tones can be from."
+msgstr "Sellest allpool saate valida, millises oktavis noodid mängitakse."
+
+#: help/C/idtone.xml:67(para)
+msgid "Then you can select if Solfege should give you a new question automatically when you have solved the old."
+msgstr "Ühtlasi saate määrata, kas programm mängib uue noodi automaatselt, kui olete eelmise ära arvanud."
+
+#: help/C/idtone.xml:70(para)
+msgid "In the frame below you can set some pretty self explaining options about what happens if you answer wrong."
+msgstr "Ning kastis allpool saate määrata, kas mängida vale noodi peale hoiatussignaal või mitte."
+
+#: help/C/idtone.xml:73(para)
+msgid "The keyboard shortcuts can be configured from the <link linkend=\"preferences-window\">preferences window</link>."
+msgstr "Klaviatuuri lühikombinatsioonid (shortcuts)  või valida <link linkend=\"preferences-window\">Eelistuste aknast</link>."
+
+#: help/C/idproperty.xml:2(title)
+msgid "Multiple choice answers to music"
+msgstr "Mitmed valikvastused"
+
+#: help/C/idproperty.xml:17(para)
+msgid "This page is a generic help page for all exercises written using the <literal>idproperty</literal> exercise module. Exercises will typically write more specialized help text than this."
+msgstr "See lehekülg on üldine abiinfo lehekülg harjutusfailidele, mis on kirjutatud <literal>idproperty</literal> mooduli abil. Harjutusfailidega käib tihti kaasas palju üksikasjalikum abiinfo."
+
+#: help/C/idproperty.xml:21(para)
+msgid "The screenshot above show one example of how an exercise can look like."
+msgstr "Näide ülal kujutab ühte näidet, kuidas harjutus võib välja näha."
+
+#: help/C/idproperty.xml:24(para)
+msgid "The exercise will display a question and play some music, and you have to select one answer from each column in the table of buttons. When you select the correct answer in a column, the label will turn bold, and the message \"Correct\" will be flashed in the status bar."
+msgstr "See harjutus kuvab harjutuse numbri ja mängib natuke muusikat, kasutaja peab valima ühe vastuse igast vastuste nuppude reast. Kui te valite õige vastuse, muutub nupu sildi kiri paksemaks ning olekuribal kuvatekse teade \"Õige\"."
+
+#: help/C/idproperty.xml:29(para)
+msgid "The exercise will have a <guibutton>Repeat arpeggio</guibutton> if one or more of the questions is of a type the program can play arpeggiated."
+msgstr "Harjutuse puhul kuvatakse nupp <guibutton>Korda arpedžos</guibutton>, kui mõnda harjutust harjutusfailis saab mängida arpedžeeritult."
+
+#: help/C/identifybpm.xml:2(title)
+msgid "Beats per minute"
+msgstr "Lööki minutis"
+
+#: help/C/identifybpm.xml:13(para)
+msgid "The program will play a tempo, like a metronome. You should try to guess how many beats per minute is played. Each button represents one tempo, and the program will only play in tempos that has a button with bold text. Right-click on buttons to change the status of a tempo."
+msgstr "Programm mängib ette mingi tempo (nagu metronoom). Te petate proovima arvata, mis tempoga (mitu lööki minutis) on tegu. Nupud ekraanil tähistastavad vastavaid temposid, programm mängib ainult neid temposid, mis on poolpaksus kirjas. Vajutage parema hiireklahviga temponupule, et muuta seda tempot kasutatavaks või vastupidi."
+
+#: help/C/identifybpm.xml:18(para)
+msgid "Note: the rhythm depends on the <literal>gtk timeout_add</literal> function to play the rhythm, so it is not very precise."
+msgstr "NB! Täpne pulss sõltub funktsioonist <literal>gtk timeout_add</literal> , seega see ei pruugi olla üliväga täpne."
+
+#: help/C/idbyname-intonation.xml:2(title)
+msgid "Intonation"
+msgstr "Intonatsioon"
+
+#: help/C/idbyname-intonation.xml:16(para)
+msgid "In this exercise, Solfege will play a interval, and you should tell how the interval is intonated. You do this by clicking on one of the buttons labeled 'too small', 'pure' or 'too large'. It is also possible that one of these three buttons are missing."
+msgstr "Selles harjutuses mängib Solfege ette intervalli ning teie peate arvama, kuidas on intervall intoneeritud. Seda saab teha vajutades nupule 'liiga väike' ('too small'), 'puhas' ('pure')  või 'liiga suur' ('too large'). Võib ka olla, et üks kolmest nupust puudub."
+
+#: help/C/idbyname-chords.xml:2(title)
+msgid "Identify the chord"
+msgstr "Määrake akord"
+
+#: help/C/idbyname-chords.xml:16(para)
+msgid "The purpose of this exercise is to identify the chord being played."
+msgstr "Selle harjutuse ülesanne on määrata akord, mida mängitakse."
+
+#: help/C/idbyname-chords.xml:17(para)
+msgid "Start the exercise by pressing <guibutton>New</guibutton>. Solfege will then play a chord, and you should identify it by clicking one of the buttons below the empty staff line."
+msgstr "Alustage harjutust vajutades nupule <guibutton>Uus</guibutton>. Solfege mängib seejärel akordi, te peate selle määrama vajutades ühele nuppudest, mis on tühja noodirea all."
+
+#: help/C/idbyname-chords.xml:19(para)
+msgid "If you guess correct, the program will display the chord on the staff line and flash the message \"Correct\" in the status bar. Then you can click the button <guibutton>New</guibutton> to get a new question."
+msgstr "Kui arvate õigesti, kuvab programm selle akordi ning olekuribal vilksatab teade \"Õige\". Seejärel võite vajutada nupule <guibutton>Uus</guibutton>, et proovida uut akordi."
+
+#: help/C/idbyname-chords.xml:21(para)
+msgid "If you guess wrong the message \"Wrong\" will be displayed in the status bar."
+msgstr "Kui arvate valesti, vilksatab olekuribal teade \"Vale\"."
+
+#: help/C/idbyname-cadences.xml:2(title)
+msgid "Identify the cadence"
+msgstr "Määrake kadentsi tüüp"
+
+#: help/C/idbyname-cadences.xml:3(para)
+msgid "Identify the cadence by clicking on the button with its name. As acknowledged in <ulink url=\"http://bugs.solfege.org/5\">bug #5</ulink> we need cadence exercises in Solfege."
+msgstr "Määrake kadentsi tüüp klõpsates vastavaele nupule. Nagu öeldud ka raportis  <ulink url=\"http://bugs.solfege.org/5\">bug #5</ulink> on juurde vaja uusi kadentsiharjutusi."
+
+#: help/C/idbyname-cadences.xml:8(para)
+msgid "In this release of Solfege, we only have one exercise with cadences in major. In this exercise, a major scale is played to establish the tonic. Maybe this is too little? Do we need a complete I-IV-V-I before the question? Or maybe it is better to write real music that ends in the cadence we want to practise? This are things we need to decide before we release 3.12.0. Comments and music can be added to <ulink url=\"http://bugs.solfege.org/5\"> bug #5</ulink>."
+msgstr "Selles Solfege'i versioonis on ainult üks kadentside harjutus, mis on mažooris. Selles harjutuses mängitakse ette kõigepealt mažoorne helirida, et anda toonika tunnetus. Võibolla on seda liiga vähe? Kas on tarvis ette mängida nt terve I-IV-V-I järgnevus? Või on parem kirjtutada jupp reaalset muusikat, mis lõpeb kadentsiga, mida tahetakse harjutada? Need on asjad, mida tuleks otsustada, enne kui tuleb välja Solfege 3.12.0. Kommetaarid ja muusika võib lisada <ulink url=\"http://bugs.solfege.org/5\"> bug #5 juurde</ulink>."
+
+#: help/C/harmonicinterval.xml:2(title)
+msgid "Harmonic interval"
+msgstr "Harmooniline intervall"
+
+#: help/C/harmonicinterval.xml:16(para)
+msgid "This exercise is one of the exercises you can use to practise intervals. The concept is pretty simple: You press the <guibutton>New interval</guibutton> button to play a random interval, and then you should tell what interval it was."
+msgstr "See on üks intervallide harjutamiseks mõeldud harjutustest. Põhimõte on küllaltki lihtne: te vajutate nupule \"Uus intervall\" ning seejärel peate määrama, millise intervalliga oli tegu."
+
+#: help/C/elembuilder-harmonic-progressions.xml:2(title)
+msgid "Harmonic progression dictation"
+msgstr "Harmooniline järgnevus"
+
+#: help/C/elembuilder-harmonic-progressions.xml:16(para)
+msgid "In this exercise, Solfege will play some music, and you must click on the buttons to build a representation of the harmonic progressions in the exercise."
+msgstr "Selles harjutuses Solfege mängib akordijärgnevuse ning te peate valiknuppude abil reastama, milliste akordidega oli tegu."
+
+#: help/C/ear-training-test-printout-editor.xml:2(title)
+msgid "Ear training test print-out editor"
+msgstr "Kuulmistreeningu väljaprindi redaktor"
+
+#: help/C/ear-training-test-printout-editor.xml:3(para)
+msgid "This tool is available on the <guimenu>File</guimenu> menu. Use it to create ear training tests to print out on paper. Solfege will generate two versions of the document: one for the students to complete, and one with the correct answer already written."
+msgstr "See tööriist on kättesaadav menüüst <guimenu>Fail</guimenu>. Selle abil on võimalik välja printida kuulmistreeningu teste. Solfege loob kaht sorti dokumente: üks õpilastele täitmiseks, teine õigete vastuste kontrolliks."
+
+#: help/C/ear-training-test-printout-editor.xml:10(para)
+msgid "The <guibutton>Add</guibutton> button will pop up a menu with all exercises from the active front page that this tool can create exercises from. When writing this, the exercise modules <link linkend=\"idbyname-module\">idbyname</link>, <link linkend=\"melodicinterval-module\">melodicinterval</link> and <link linkend=\"harmonicinterval-module\">harmonicinterval</link>. From lesson files written for the <literal>idbyname</literal> module, only <link linkend=\"lfunc-chord\">chord</link>, <link linkend=\"lfunc-rvoice\">rvoice</link> and <link linkend=\"lfunc-voice\">voice</link> music objects are supported."
+msgstr "Nupp <guibutton>Lisa</guibutton> toob nähtavale menüü kõikide harjutustega aktiivsest õppepuust, millest tööriist suudab antud hetkel harjutusi välja printida. Hetkel on selleks moodulid <link linkend=\"idbyname-module\">idbyname</link>, <link linkend=\"melodicinterval-module\">melodicinterval</link> ja <link linkend=\"harmonicinterval-module\">harmonicinterval</link>. Harjutusfailidest, mis on kirjutatd mooduli <literal>idbyname</literal> abil, saab kasutada ainult harjutusi, mis kasutavad muusika määramiseks järgmisi käske:  <link linkend=\"lfunc-chord\">chord</link>, <link linkend=\"lfunc-rvoice\">rvoice</link> ja <link linkend=\"lfunc-voice\">voice</link>."
+
+#: help/C/dictation.xml:2(title)
+msgid "Dictation"
+msgstr "Diktaat"
+
+#: help/C/dictation.xml:10(phrase)
+msgid "Screenshot of the program running the dictation exercise."
+msgstr "Ekraanipilt programmist diktaadi harjutusega."
+
+#: help/C/dictation.xml:19(para)
+msgid "You can let Solfege play some music for you that you are supposed to write down on paper. Click on the buttons with a quarter note pixmap to repeat smaller parts of the music. You have to click on the Show button and check your notes yourself to see if you made any mistakes."
+msgstr "Te võite lasta Solfege'il mängida teile ette mingi meloodia, mille peate kirja panema paberil. Kui soovite korrata mängitut väiksemate lõikudena, vajutage veerandnoodiga tähisatatud nuppudele. Et kontrollida, kas kirjutasite diktaadi üle õigesti, vajutage nupule 'Näita'."
+
+#: help/C/dictation.xml:25(para)
+msgid "You can use this exercise to practise sight singing: When you start the exercise, press Show and then try to sing the music. Then you can use the Play the whole music button or the quarter note buttons to let the program play the music. You have to decide yourself if you think you succeeded."
+msgstr "Diktaatide harjutusi võib kasutada ka lehest laulmise treenimiseks: kui alustate vajutates nupule 'Näita', kuvab programm diktaadi ekraanil. Seejärel laulge seda meloodiat ning kontrollige vajutades nupule 'Mängi' või nuppudele veerandnootidega, kas laulsite õigesti."
+
+#: help/C/dictation.xml:16(para)
+msgid "This exercise is called the dictation exercise, but if the necessary lesson files are written it can be used in several ways: <placeholder-1/>"
+msgstr "Seda harjutust nimetatakse diktaadiks, kuid kui vaja, võib neid harjutusfaile kasutada mitmel moel: <placeholder-1/>"
+
+#: help/C/bug-reporting.xml:2(title)
+msgid "Bugs"
+msgstr "Tõrked (Bugs)"
+
+#: help/C/bug-reporting.xml:3(para)
+msgid "Report bugs to the bug tracker at <ulink url=\"http://bugs.solfege.org/\">http://bugs.solfege.org</ulink>. Alternately, you can send an email to <email>bug-solfege@gnu.org</email>. General questions and patches should be sent to <email>solfege-devel@lists.sourceforge.net</email>."
+msgstr "Programm tõrkeraportid ja täiendamissoovid tuleks kirja panna süsteemi <ulink url=\"http://bugs.solfege.org/\">http://bugs.solfege.org</ulink> abil. Alternatiivina võite saata e-maili aadressile <email>bug-solfege@gnu.org</email>. Üldised küsimused ja programmiuuendused (patches) tuleks saata meililisti <email>solfege-devel@lists.sourceforge.net</email>."
+
+#: help/C/bug-reporting.xml:9(para)
+msgid "Please make your bug reports detailed. ''I get an error message in a window when I try to start the program.'' is not usable to me. When reporting bugs:"
+msgstr "Palun koostage oma tõrkeraportid üksikasjalikult. Tekstist \"Ekraanile ilmub veatade, kui proovin käivitada programmi\" ei ole kasu. Kui annate teada tõrgetest, palun kirjeldage:"
+
+#: help/C/bug-reporting.xml:14(para)
+msgid "Tell me what version of Solfege you run. Please check if a newer release is available. If you only want to run stable releases, then you don't have to test newer development releases."
+msgstr "Millist Solfege'i versiooni te kasutate. Palun kontrollige, kas uuem versioon on saadaval. Kui soovite kasutada ainult stabiilseid versioone, pole tarvis testida uusi arendusversioone."
+
+#: help/C/bug-reporting.xml:15(para)
+msgid "What operating system are you running? Version?"
+msgstr "Millist operatsioonisüsteemi te kasutate? Millist versiooni?"
+
+#: help/C/bug-reporting.xml:16(para)
+msgid "Describe exactly what you are doing when the error happens."
+msgstr "Kirjeldage täpselt, mida te tegite, kui tõrge juhtus."
+
+#: help/C/bug-reporting.xml:17(para)
+msgid "Send an exact copy of the error messages. They make sense to the Solfege author even if you think they look cryptic to you."
+msgstr "Saatke täpne koopia veateatest. See võib anda olulist infot Solfege'i loojatele, olgugi, et teile võib see tunduda teile täieliku krüptograafiana."
+
+#: help/C/about-statistics.xml:2(title)
+msgid "About statistics"
+msgstr "Statistikast"
+
+#: help/C/about-statistics.xml:3(para)
+msgid "Some exercises will show some statistics for different periods of time: <emphasis>Session</emphasis>, <emphasis>Today</emphasis>, <emphasis>Last 7 days</emphasis> and <emphasis>Total</emphasis>. The program uses two different kind of tables."
+msgstr "Mõned harjutused kuvavad statistika erinevate aja perioodi kohta: <emphasis>Sessioon</emphasis>, <emphasis>Täna</emphasis>, <emphasis>Viimased 7 päeva</emphasis> ja <emphasis>Kokku</emphasis>.  Programm kasutab kaht eri tüüpi tabeleid."
+
+#: help/C/about-statistics.xml:15(phrase)
+msgid "Screenshot of the percentages table of a statistics page."
+msgstr "Pilt protsentuaalsest tabelist statistika lehel. "
+
+#: help/C/about-statistics.xml:20(para)
+msgid "The first table, as shown in the screenshot above, have one row for each question in the lesson file. <emphasis>Percent</emphasis> is the percentage of the times the question have been answered correctly. <emphasis>Count</emphasis> is the number of times the question have been asked."
+msgstr "Esimeses tabelis, nagu ülalasetseval joonisel, on iga harjutusfaili harjutuse kohta üks rida. <emphasis>Protsent</emphasis> näitab, kui suur osa oli kõigist katsetest õigeid vastuseid. <emphasis>Arv</emphasis> näitab, mitu korda seda harjutust on sooritatud. "
+
+#: help/C/about-statistics.xml:27(para)
+msgid "In the second type of table, the columns have the same labels as the rows, but the labels are not displayed because it will make the table too wide. So in the screenshot above, column 1 should have the label <emphasis>m3↑</emphasis> and column 2 <emphasis>M3↑</emphasis>. For the questions identified by the label of each row, each column tell how many times the user have answered the different possible answers. The bold number is the number of times the correct answer have been give."
+msgstr "Teist tüüpi tabelis on veergudel samad pealkirjad, mis ridadel, kuid neid ei kuvata, sest see teeks tabeli liiga laiaks. Nii ülalasetseval joonisel peaks veerul 1 olema pealkiri <emphasis>m3↑</emphasis> ja veerul 2 <emphasis>M3↑</emphasis>. Harjutuste nimed on ära toodud ridades ning igas vastavas veerus on näidatud, mitu korda on vastatud igat küsimuse varianti. Numbrit poolpaksus kirjas märgivad õigesti vastatud kordi. "
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
+#: help/C/about-statistics.xml:0(None)
+msgid "translator-credits"
+msgstr "Tõlkinud: Tarmo Johannes <tarmo@otsakool.edu.ee>"
+
+#~ msgid "Key bindings"
+#~ msgstr "Klahvikombinatsioonid"
+
+#~ msgid "New: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+#~ msgstr "Uus: <keycombo><keycap>Alt</keycap><keycap>u</keycap></keycombo>"
+
+#~ msgid "Play first note: <keycombo><keycap>Alt</keycap><keycap>p</keycap></keycombo>"
+#~ msgstr "Mängi esimene noot: <keycombo><keycap>Alt</keycap><keycap>m</keycap></keycombo>"
+
+#~ msgid "Play last note: <keycombo><keycap>Alt</keycap><keycap>l</keycap></keycombo>"
+#~ msgstr "Mängi viimane noot: <keycombo><keycap>Alt</keycap><keycap>v</keycap></keycombo>"
+
+#~ msgid "Play all: <keycombo><keycap>Alt</keycap><keycap>a</keycap></keycombo>"
+#~ msgstr "Mängi kõik: <keycombo><keycap>Alt</keycap><keycap>k</keycap></keycombo>"
+
+#~ msgid "New interval: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+#~ msgstr "Uus intervall: <keycombo><keycap>Alt</keycap><keycap>u</keycap></keycombo>"
+
+#~ msgid "New interval, last was correct: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+#~ msgstr "Uus intervall, viimane oli õige: <keycombo><keycap>Alt</keycap><keycap>u</keycap></keycombo>"
+
+#~ msgid "New interval, last was wrong: <keycombo><keycap>Alt</keycap><keycap>w</keycap></keycombo>"
+#~ msgstr "Uus intervall, viimane oli vale:<keycombo><keycap>Alt</keycap><keycap>v</keycap></keycombo>"
+
+#~ msgid "Repeat first tone: <keycombo><keycap>Alt</keycap><keycap>r</keycap></keycombo>"
+#~ msgstr "Korda esimest nooti:<keycombo><keycap>Alt</keycap><keycap>k</keycap></keycombo>"
+
+#~ msgid "Play answer: <keycombo><keycap>Alt</keycap><keycap>p</keycap></keycombo>"
+#~ msgstr "Mängi vastus: <keycombo><keycap>Alt</keycap><keycap>m</keycap></keycombo>"
+
+#~ msgid "Play last tone: <keycombo><keycap>Alt</keycap><keycap>l</keycap></keycombo>"
+#~ msgstr "Mängi viimane noot: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+
+#~ msgid "440hz: <keycombo><keycap>Alt</keycap><keycap>z</keycap></keycombo>"
+#~ msgstr "440hz: <keycombo><keycap>Alt</keycap><keycap>z</keycap></keycombo>"
+
+#~ msgid "Repeat answer: <keycombo><keycap>Alt</keycap><keycap>p</keycap></keycombo>"
+#~ msgstr "Korda vastus: <keycombo><keycap>Alt</keycap><keycap>k</keycap></keycombo>"
+
+#~ msgid "Repeat: <keycombo><keycap>Alt</keycap><keycap>r</keycap></keycombo>"
+#~ msgstr "Korda: <keycombo><keycap>Alt</keycap><keycap>k</keycap></keycombo>"
+
+#~ msgid "Repeat slowly: <keycombo><keycap>Alt</keycap><keycap>s</keycap></keycombo>"
+#~ msgstr "Korda aeglaselt: <keycombo><keycap>Alt</keycap><keycap>g</keycap></keycombo>"
+
+#~ msgid "Give up: <keycombo><keycap>Alt</keycap><keycap>g</keycap></keycombo>"
+#~ msgstr "Annan alla: <keycombo><keycap>Alt</keycap><keycap>a</keycap></keycombo>"
+
+#~ msgid "Backspace: <keycap>Backspace</keycap>"
+#~ msgstr "Kustuta viimane: <keycap>Backspace</keycap>"
+
+#~ msgid "New question: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+#~ msgstr "Uus harjutus: <keycombo><keycap>Alt</keycap><keycap>u</keycap></keycombo>"
+
+#~ msgid "Minor second: 1"
+#~ msgstr "Väike sekund: 1"
+
+#~ msgid "Perfect fourth: 2"
+#~ msgstr "Puhas kvart: 2"
+
+#~ msgid "Major sixth: 3"
+#~ msgstr "Suur sekst: 3"
+
+#~ msgid "Minor ninth: 4"
+#~ msgstr "Väike noon: 4"
+
+#~ msgid "Major second: q"
+#~ msgstr "Väike sekund: q"
+
+#~ msgid "Tritone: w"
+#~ msgstr "Tritoon: w"
+
+#~ msgid "Minor seventh: e"
+#~ msgstr "Väike septim: e"
+
+#~ msgid "Major ninth: r"
+#~ msgstr "Suur noon: r"
+
+#~ msgid "Minor third: a"
+#~ msgstr "Väike terts: a"
+
+#~ msgid "Perfect fifth: s"
+#~ msgstr "Puhas kvint: s"
+
+#~ msgid "Major seventh: d"
+#~ msgstr "Suur septim: d"
+
+#~ msgid "Minor tenth: f"
+#~ msgstr "Väike deetsim: f"
+
+#~ msgid "Major third: z"
+#~ msgstr "Suur terts: z"
+
+#~ msgid "Minor sixth: x"
+#~ msgstr "Väikes sekst: x"
+
+#~ msgid "Perfect octave: c"
+#~ msgstr "Puhas oktav: c"
+
+#~ msgid "Major tenth: v"
+#~ msgstr "Suur deetsim: v"
+
+#~ msgid "New tempo: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+#~ msgstr "Uus tempo: <keycombo><keycap>Alt</keycap><keycap>u</keycap></keycombo>"
+
+#~ msgid "Show: <keycombo><keycap>Alt</keycap><keycap>s</keycap></keycombo>"
+#~ msgstr "Näita: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+
+#~ msgid "Repeat melodic: <keycombo><keycap>Alt</keycap><keycap>m</keycap></keycombo>"
+#~ msgstr "Korda meloodiliselt: <keycombo><keycap>Alt</keycap><keycap>m</keycap></keycombo>"
+
+#~ msgid "Play the whole music: <keycombo><keycap>Alt</keycap><keycap>p</keycap></keycombo>"
+#~ msgstr "Mängi kogu muusika: <keycombo><keycap>Alt</keycap><keycap>m</keycap></keycombo>"
+
+#~ msgid "New chord: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+#~ msgstr "Uus akordid: <keycombo><keycap>Alt</keycap><keycap>u</keycap></keycombo>"
+
+#~ msgid "Repeat arpeggio: <keycombo><keycap>Alt</keycap><keycap>a</keycap></keycombo>"
+#~ msgstr "Korda noothaaval: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+
+#~ msgid "Expert mode: On many exercises, you will be able to select to practise only a subset of the questions in the lesson file."
+#~ msgstr "Eksperdirežiim: Mitmetes harjutustes saate te valida, millist osa harjutustest te ühest harjutusfailist tahate kasutada."
+
+#~ msgid "Minor decim: f"
+#~ msgstr "Väike deetsim: f"
+
+#~ msgid "Major decim: v"
+#~ msgstr "Suur deetsim: v"
+
+#~ msgid "You can configure the <literal>idbyname</literal> exercise as you like if you select <menuchoice><guimenu>Misc</guimenu><guisubmenu>Configure yourself</guisubmenu><guimenuitem>Id tone</guimenuitem></menuchoice>."
+#~ msgstr "Te võite seadistada <literal>Määrake noot</literal> harjutuse nagu soovite, kui valite  Määrake noot menüüst \"Mitmesugused harjutused\", alammenüü \"Määrake noot\"."
+
+#~ msgid "'Heavy A' describes another way to practise. It requires that you select <menuchoice><guimenu>Misc</guimenu><guisubmenu>Configure yourself</guisubmenu><guimenuitem>Id tone</guimenuitem></menuchoice>."
+#~ msgstr "'Raske A' kirjeldab üht teist moodust harjutamiseks: see nõuab, et te valiks menüüst <menuchoice><guimenu>Mitmesugust</guimenu><guisubmenu>Seadistage ise</guisubmenu><guimenuitem>Id tone</guimenuitem></menuchoice>."
+
+#~ msgid "The keyboard shortcuts can be configured from config file. You can find its location from <menuchoice><guimenu>Help</guimenu><guimenuitem>File locations</guimenuitem></menuchoice>."
+#~ msgstr "Klahvikombinatsioone võib määratleda seadete failis. Selle asukoha leiate menüüst  <menuchoice><guimenu>Abiinfo</guimenu><guimenuitem>Failide asukohad</guimenuitem></menuchoice>."
+
+#~ msgid "Select a exercise from the menu to start practising, or click <ulink url=\"index.html\">here</ulink> to read the user manual."
+#~ msgstr "Harjutamise alustamiseks valige menüüst soovitav harjutus või vajutage <ulink url=\"index.html\">siia</ulink>, et lugeda abiinfo käsiraamatut."
+
+#~ msgid "About the manual"
+#~ msgstr "Sellest käsiraamatust"
+
+#~ msgid "This user guide is available from inside GNU Solfege on the <guimenu>Help</guimenu> menu. The html viewer included in the program is limited in several ways, for example when it comes to CSS style sheets, so you might want to view it in a real web browser. You can find the install directory of the user manual from <guimenuitem>File locations</guimenuitem> on the <guimenu>Help</guimenu> menu."
+#~ msgstr "See käsiraamat on kättesaadav menüüst <guimenu>Abi</guimenu>. Programmi enda html-vaate aken on suhteliselt piiratud võimalustega, näiteks ei käistle ta CSS stiile, nii et te võite soovida vaadata käsiraamatut oma harjumuspärases brauseris. Abiinfo failide asupaiga võite leida menüüst <guimenu>Abi</guimenu> -> <guimenuitem>Failide asupaigad</guimenuitem>."
+
+#~ msgid "Not really documentation..."
+#~ msgstr "Mitte päris dokumentatsioon..."
+
+#~ msgid "This appendix contain the file that is displayed when the program starts, before the user selects an exercise."
+#~ msgstr "See lisa sisaldab faili, mida näidatakse programmi avaaknas enne kui kasutaja valib mõne harjutuse."
+
+#~ msgid "Midi stuff"
+#~ msgstr "Midi seaded"
+
+#~ msgid "Set the tempo (beats per minute) for music and arpeggios."
+#~ msgstr "Määrake tempo (lööki minutis) muusika ja arpedžode mängimiseks."
+
+#~ msgid "Misc"
+#~ msgstr "Mitmesugust"
+
+#~ msgid "Gui"
+#~ msgstr "Kasutajaliides"
+
+#~ msgid "Screenshot of the 'Gui' page of the preferences window."
+#~ msgstr "Ekraanipilt leheküljest 'Kasutajaliides' menüüs 'Eelistused'."
+
+#~ msgid "Expert mode: Let the user select what questions from the lesson files to practise. No statistics is stored in ''expert mode''."
+#~ msgstr "Eksperdirežiim: lubab kasutajal valida, milliseid harjutusi harjutusfailidest valida. Ekspertrežiimis ei salvestata statistikat harjutuste sooritamise kohta."
+
+#~ msgid "Extra options"
+#~ msgstr "Lisavalikud"
+
+#~ msgid "Check the ''My sound card is Sound Blaster AWE32, AWE64 or pnp32'' check button if you have this kind of sound card. This will give you real percussion in the rhythm exercise. Code still has to be added for other sound cards. This option is only necessary if you use <filename>/dev/sequencer</filename> to play midi sounds."
+#~ msgstr "Valige \"Minu helikaart on Sound Blaster AWE32, AWE64 või pnp32\", kui teil on seda tüüpi helikaart. See annab teile võimaluse tõeliseks löökpillikõlaks rütmiharjutustes. Teisi helikaarte toetav kood on veel kirjutamata. See valik omab tähtsust ainult siis, kui midi seadmena kasutate <filename>/dev/sequencer</filename>."
+
+#~ msgid "Identify the chord type."
+#~ msgstr "Määrake akordi tüüp."
+
+#~ msgid "What is the inversion?"
+#~ msgstr "Mis on pööre?"
+
+#~ msgid "Which tone is the highest tone in the chord?"
+#~ msgstr "Milline noot on akordis kõrgeim?"
+
+#~ msgid "This page is a generic help page for all exercises written using the <literal>chord</literal> exercise module. These exercises can ask the user for three things: chord type, inversion and top tone. The idea is that you answer this in three steps: <placeholder-1/> It is important that you take your time, maybe sing the chord, and identify the chord type before you try to find the inversion."
+#~ msgstr "Sel leheküljel leiate üldise abiinfo kõigi harjutuste kohta, mis on kirjutatud kasutades moodulit <literal>chord</literal>. Need harjutused võivad küsida kasutajalt kolme asja: akordi tüüpi, pööret ja meloodilist seisu (ülemist nooti). Põhiidee on, et vastate nendele küsimustele kolmes järgus:<placeholder-1/> Võtke arvamiseks rahulikult aega, võibolla laulge akordi noodid järgi ning vastake esmalt akordi tüüp ning siis pööre ning siis ülemine noot."
+
+#~ msgid "Please notice that is is also possible that an exercise will only ask for the chord type and inversion, or even only inversion and top tone."
+#~ msgstr "On samuti võimalik, et harjutuses küsitakse ainult akordi tüüpi ja pööret või ainult pööret ja ülemist nooti."

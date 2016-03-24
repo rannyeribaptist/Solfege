@@ -1,0 +1,8 @@
+header { 
+    lesson_id="1aa3b9a4-b687-4716-991d-c616a9b65f12"
+    title = "Unsupported named block"
+    module=idbyname
+}
+named block { 
+    title = "File with random chars"
+}

@@ -1,0 +1,52 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "bb22246d-47c3-456b-931c-e53289262c80"
+    module = idbyname
+	filldir = horiz
+	fillnum = 4
+	title = _("simple tonal chords")
+}
+
+question { 
+ name = "C"
+ chord("c e g")
+}
+question { 
+ name = "C/E"
+ chord("e g c'")
+}
+question { 
+ name = "C/G"
+ chord("g c' e'")
+}
+question { 
+ name = "Cm"
+ chord("c es g")
+}
+question { 
+ name = "Cm/es"
+ chord("es g c'")
+}
+question { 
+ name = "Cm/g"
+ chord("g c' es'")
+}
+question { 
+ name = "Cm7"
+ chord("c es g bes")
+}
+question { 
+ name = "Cm7/es"
+ chord("es g bes c'")
+}
+question { 
+ name = "C9"
+ chord("c e g bes d'")
+}
+question { 
+ name = "Cmb9"
+ chord("c es g bes des'")
+}

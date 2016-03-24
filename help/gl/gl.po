@@ -1,0 +1,956 @@
+# translation of solfege-manual-3.13.1.po to Galician
+# This file is distributed under the same license as the Solfege package.
+# Copyright (C) 2009 Free Software Foundation, Inc. 
+# Antón Méixome <meixome@mancomun.org>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: solfege-manual-3.13.1\n"
+"POT-Creation-Date: 2009-02-23 19:09+0100\n"
+"PO-Revision-Date: 2009-02-25 17:28+0100\n"
+"Last-Translator: Antón Méixome <meixome@mancomun.org>\n"
+"Language-Team: Galician <proxecto@trasno.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.2\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: help/C/welcome.xml:2(title)
+msgid "Welcome to GNU Solfege"
+msgstr "Benvidos/as a GNU Solfege"
+
+#: help/C/welcome.xml:3(para)
+msgid "Solfege is a <ulink url=\"http://www.gnu.org/philosophy/free-sw.html\">free</ulink> eartraining program. The program is part of the <ulink url=\"http://www.gnu.org\">GNU Project</ulink>. Check <xref linkend=\"online-resources\"/> for info on mailinglists and where to get the latest version of Solfege."
+msgstr "O Solfege  é un programa <ulink url=\"http://www.gnu.org/philosophy/free-sw.html\">libre</ulink> de adestramento auditivo. O programa forma parte do <ulink url=\"http://www.gnu.org\">Proxecto GNU</ulink>. Consulte <xref linkend=\"online-resources\"/> para máis información sobre as listas de correo e de onde descargar o Solfege."
+
+#: help/C/welcome.xml:9(para)
+msgid "Select a exercise from the menu to start practising, or click <ulink url=\"index.html\">here</ulink> to read the user manual."
+msgstr "Seleccione un exercicio do menú para comezar a práctica ou prema en <ulink url=\"index.html\">aquí</ulink> para ler o manual de usuario."
+
+#: help/C/welcome.xml:12(para)
+msgid "One of the ideas of this program is that you can extend the program without having to dig into the source code. If you want to practise some special chords or want to practise dictation with some music not included, you can write lesson files and put them into a <filename>lessonfiles/</filename> subdirectory in your <filename>$HOME</filename> directory. If you create good lesson files, you really should consider contributing them by sending them to the mailinglist so I can add them to the next version of this program."
+msgstr "Unha das ideas deste programa é que vostede poida estendelo sen ter que profundizar no código fonte. No caso de que quixese practicar con algún acorde especial ou co ditado de música que non estea incluída, pode escribir os ficheiros de lección e incluílos nun subdirectorio <filename>lessonfiles/</filename> no seu directorio <filename>$HOME</filename>. Se vostede pensa que creou uns ficheiros bos de lección, debería considerar o feito de compartilos enviándoos ás listas de correo, desta forma poderanse incluír na seguinte versión deste programa."
+
+#: help/C/twelvetone.xml:2(title)
+msgid "Sing 12 random notes"
+msgstr "Entoar 12 notas aleatorias"
+
+#: help/C/twelvetone.xml:13(para)
+msgid "In this exercise, the program will display all the twelve tones in the scale in a random order and play the first one. Then you should sing all the notes and see if the last note matches. So this is more like an exam in sight singing than an exercise for learning how to sing the intervals. For that you should try some of the other interal exercises."
+msgstr "Neste exercicio, o programa mostrará os doce tons da escala nunha orde aleatoria e reproducirá o primeiro ton. Despois, vostede debería entoar todas as notas e comprobar se a última delas coincide. Así, a actividade semella máis un exame de lectura á vista que un exercicio para aprender a entoar os intervalos. Para isto último, debería realizar algúns dos outros exerciciosde  intervalos."
+
+#: help/C/twelvetone.xml:20(title) help/C/singinterval.xml:21(title)
+#: help/C/singchord.xml:27(title) help/C/scales.xml:16(title)
+#: help/C/rhythm.xml:37(title) help/C/melodicinterval.xml:30(title)
+#: help/C/identifybpm.xml:22(title) help/C/idbyname-intonation.xml:22(title)
+#: help/C/harmonicinterval.xml:29(title) help/C/dictation.xml:34(title)
+#: help/C/chord-keybindings.xml:2(title)
+msgid "Key bindings"
+msgstr "Combinacións de teclas"
+
+#: help/C/twelvetone.xml:22(para) help/C/singchord.xml:29(para)
+#: help/C/scales.xml:18(para) help/C/rhythm.xml:39(para)
+#: help/C/idbyname-intonation.xml:24(para)
+msgid "New: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+msgstr "Novo: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+
+#: help/C/twelvetone.xml:23(para)
+msgid "Play first note: <keycombo><keycap>Alt</keycap><keycap>p</keycap></keycombo>"
+msgstr "Reproducir a primeira nota: <keycombo><keycap>Alt</keycap><keycap>p</keycap></keycombo>"
+
+#: help/C/twelvetone.xml:24(para)
+msgid "Play last note: <keycombo><keycap>Alt</keycap><keycap>l</keycap></keycombo>"
+msgstr "Reproducir a última nota: <keycombo><keycap>Alt</keycap><keycap>l</keycap></keycombo>T"
+
+#: help/C/twelvetone.xml:25(para)
+msgid "Play all: <keycombo><keycap>Alt</keycap><keycap>a</keycap></keycombo>"
+msgstr "Reproducir todas: <keycombo><keycap>Alt</keycap><keycap>a</keycap></keycombo>"
+
+#: help/C/trainingset-editor.xml:2(title)
+msgid "Training set editor"
+msgstr "Editor de conxunto de exercicios"
+
+#: help/C/trainingset-editor.xml:10(phrase)
+msgid "Screenshot of the trainingset-editor window."
+msgstr "Captura de pantalla da xanela do editor de conxunto de exercicios."
+
+#: help/C/trainingset-editor.xml:15(para)
+msgid "The training set editor let you create MIDI/WAV/MP3/OGG files of questions so that you can upload them to your pda, cell phone or MP3 player. A solution sheet will be generated for you to print out. Then you can let the MP3 player play the tracks by random order, and you can use the solution sheet to check if you recognised the music correctly."
+msgstr "O editor de conxunto de exercicios permítelle crear ficheiros MIDI/WAV/MP3/OGG de preguntas para que as poida cargar na pda, no móbil ou no reprodutor MP3. Crearase unha folla coas solucións que se poderá imprimir. Daquela, vostede poderá escoitar as pistas de forma aleatoria no reprodutor MP3 e comprobar se é quen de identificar a música correctamente."
+
+#: help/C/trainingset-editor.xml:21(para)
+msgid "You use the training set editor to define which exercises to generate. You can save your definition in a file for later use. Each time you click <guibutton>Export</guibutton> a new set of files are generated in a directory of your choice. You have to manually upload the generated sound files to you mobile device."
+msgstr "Empregue o editor de conxunto de exercicios para seleccionar que exercicios quere crear. Pode gardar a súa selección nun ficheiro para empregalo máis adiante. Cada vez que prema <guibutton>Exportar</guibutton> crearase un novo conxunto de ficheiros no directorio que vostede elixa. Deberá cargar os sons creados no seu dispositivo móbil de forma manual."
+
+#: help/C/trainingset-editor.xml:27(para)
+msgid "The program let you generate questions from as many lesson files as you like, but the most typical usage would be to generate lots of questions from just a single, or just a few files."
+msgstr "O programa permítelle crear preguntas a partir de tantos ficheiros de lección como vostede queira, pero o máis común sería crear moitas preguntas dun só ficheiro ou duns poucos."
+
+#: help/C/trainingset-editor.xml:31(para)
+msgid "The programs used to convert between the different file formats are defined in Gui page of the <link linkend=\"preferences-gui\">preferences window</link>. Please check the definitions there if you have problems converting the MIDI files to WAV, MP3 or OGG format."
+msgstr "Os programas empregados para converter os diferentes formatos dos ficheiros aparecen especificados na páxina GUI da <link linkend=\"preferences-gui\">xanela de preferencias</link>. Comprobe eses programas no caso de que teña problemas para converter os ficheiros MIDI en formatos WAV, MP3 ou OGG."
+
+#: help/C/trainingset-editor.xml:38(title)
+msgid "Table headings explained"
+msgstr "Táboa coas cabeceiras explicadas"
+
+#: help/C/trainingset-editor.xml:40(term)
+msgid "Count"
+msgstr "Suma"
+
+#: help/C/trainingset-editor.xml:41(para)
+msgid "The number of questions to generate from the lesson file."
+msgstr "Número de preguntas creadas a partir do ficheiro de lección."
+
+#: help/C/trainingset-editor.xml:45(term)
+msgid "Repeat"
+msgstr "Repetir"
+
+#: help/C/trainingset-editor.xml:46(para)
+msgid "The number of times to repeat each question."
+msgstr "Número de veces que se repite cada pregunta."
+
+#: help/C/trainingset-editor.xml:50(term)
+msgid "Delay"
+msgstr "Demora"
+
+#: help/C/trainingset-editor.xml:50(para)
+msgid "How long delay it will be between the questions. Measured in the length of quarter-notes."
+msgstr "Cal será o tempo do atraso entre as preguntas medido en duración de negras."
+
+#: help/C/solfege.xml:21(title)
+msgid "&app; &appversion; User Manual"
+msgstr "&app; &appversion; Manual de usuario"
+
+#: help/C/solfege.xml:23(year) help/C/solfege.xml:32(year)
+msgid "2005"
+msgstr "2005"
+
+#: help/C/solfege.xml:27(year)
+msgid "2000"
+msgstr "2000"
+
+#: help/C/solfege.xml:28(year)
+msgid "2001"
+msgstr "2001"
+
+#: help/C/solfege.xml:29(year)
+msgid "2002"
+msgstr "2002"
+
+#: help/C/solfege.xml:30(year)
+msgid "2003"
+msgstr "2003"
+
+#: help/C/solfege.xml:31(year)
+msgid "2004"
+msgstr "2004"
+
+#: help/C/solfege.xml:33(year)
+msgid "2006"
+msgstr "2006"
+
+#: help/C/solfege.xml:34(year)
+msgid "2007"
+msgstr "2007"
+
+#: help/C/solfege.xml:35(year)
+msgid "2008"
+msgstr "2008"
+
+#: help/C/solfege.xml:50(para)
+msgid "Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version. The full text of the License is available in <xref linkend=\"gpl\"/>."
+msgstr "Está permitido copiar, distribuír e/ou modificar este documento baixo as condicións da Licenza Pública Xeral GNU tal e como publicou a Fundación de Software Libre, tanto a versión 3 da licenza coma calquera outra posterior que vostede escolla. O documento completo da licenza está dispoñíbel en <xref linkend=\"gpl\"/>."
+
+#: help/C/solfege.xml:61(title)
+msgid "Introduction"
+msgstr "Introdución"
+
+#: help/C/solfege.xml:64(title)
+msgid "About the manual"
+msgstr "Sobre o manual"
+
+#: help/C/solfege.xml:65(para)
+msgid "This user guide is available from inside GNU Solfege on the <guimenu>Help</guimenu> menu. The html viewer included in the program is limited in several ways, for example when it comes to CSS style sheets, so you might want to view it in a real web browser. You can find the install directory of the user manual from <guimenuitem>File locations</guimenuitem> on the <guimenu>Help</guimenu> menu."
+msgstr "Esta guía de usuario está dispoñíbel dentro do GNU Solfege no menú <guimenu>Axuda</guimenu>. O visualizador html que se inclúe no programa ten varias limitacións, por exemplo cando vai ás follas de estilo CSS, por iso quizais prefira visualizar a guía nun navegador web real. Pode atopar o directorio de instalación do manual de usuario en <guimenuitem>Localizacións de ficheiros</guimenuitem> no menú <guimenu>Axuda</guimenu> ."
+
+#: help/C/solfege.xml:87(title)
+msgid "Help sections for the exercises"
+msgstr "Apartados de axuda para os exercicios"
+
+#: help/C/solfege.xml:135(title) help/C/solfege.xml:137(title)
+msgid "Not really documentation..."
+msgstr "Isto non é realmente documentación..."
+
+#: help/C/solfege.xml:138(para)
+msgid "This appendix contain the file that is displayed when the program starts, before the user selects an exercise."
+msgstr "Este apéndice contén o ficheiro que se mostrará cando se inicie o programa antes de que o usuario seleccione un exercicio."
+
+#: help/C/singinterval.xml:2(title)
+msgid "Sing interval"
+msgstr "Entoar o intervalo"
+
+#: help/C/singinterval.xml:10(phrase)
+msgid "Screenshot of the sing interval exercise."
+msgstr "Captura de pantalla do exercicio de entoación do intervalo."
+
+#: help/C/singinterval.xml:15(para)
+msgid "In this exercise, Solfege will display one or more intervals, and you should sing them. Unfortunately, it is not yet possible to sing into a microphone and let Solfege decide if you sing correct, so you have to decide yourself if you are correct or wrong."
+msgstr "Neste exercicio, o Solfege mostrará un ou máis intervalos que vostede deberá entoar. Por desgraza, aínda no é posíbel entoar por un micrófono e deixar que o Solfege valore se a súa entoación foi correcta ou non, así que terá que ser vostede quen decida se esta foi válida."
+
+#: help/C/singinterval.xml:17(title) help/C/idtone.xml:67(title)
+msgid "Config"
+msgstr "Configuración"
+
+#: help/C/singinterval.xml:18(para)
+msgid "The program will try to make a question where all tones are within the range the user can sing, as configured in the <link linkend=\"preferences-window\">preferences window</link>. Sometimes, it is not possible to keep the question within this range, for example when the exercise is configured to create many intervals where all intervals go upwards."
+msgstr "O programa tratará de facer unha pregunta onde todos os tons estean dentro dun rexistro que o usuario poida entoar, tal e como se configura na <link linkend=\"preferences-window\">xanela de preferencias</link>. Ás veces, non é posíbel manter a pregunta dentro deste rexistro, por exemplo cando o exercicio está configurado para crear moitos intervalos onde todos eles son ascendentes."
+
+#: help/C/singinterval.xml:23(para) help/C/harmonicinterval.xml:31(para)
+msgid "New interval: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+msgstr "Intervalo novo: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+
+#: help/C/singinterval.xml:24(para)
+msgid "New interval, last was correct: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+msgstr "Intervalo novo, o último foi correcto: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+
+#: help/C/singinterval.xml:25(para)
+msgid "New interval, last was wrong: <keycombo><keycap>Alt</keycap><keycap>w</keycap></keycombo>"
+msgstr "Intervalo novo, o último foi incorrecto: <keycombo><keycap>Alt</keycap><keycap>w</keycap></keycombo>"
+
+#: help/C/singinterval.xml:26(para)
+msgid "Repeat first tone: <keycombo><keycap>Alt</keycap><keycap>r</keycap></keycombo>"
+msgstr "Repetir o primeiro ton: <keycombo><keycap>Alt</keycap><keycap>r</keycap></keycombo>"
+
+#: help/C/singinterval.xml:27(para)
+msgid "Play answer: <keycombo><keycap>Alt</keycap><keycap>p</keycap></keycombo>"
+msgstr "Reproducir a resposta: <keycombo><keycap>Alt</keycap><keycap>p</keycap></keycombo>"
+
+#: help/C/singinterval.xml:28(para)
+msgid "Play last tone: <keycombo><keycap>Alt</keycap><keycap>l</keycap></keycombo>"
+msgstr "Reproducir o último ton: <keycombo><keycap>Alt</keycap><keycap>l</keycap></keycombo>"
+
+#: help/C/singchord.xml:2(title)
+msgid "Sing chord"
+msgstr "Entoar o acorde"
+
+#: help/C/singchord.xml:11(phrase) help/C/idtone.xml:10(phrase)
+#: help/C/idproperty.xml:11(phrase) help/C/idbyname-intonation.xml:10(phrase)
+#: help/C/idbyname-chords.xml:10(phrase)
+#: help/C/elembuilder-harmonic-progressions.xml:10(phrase)
+#: help/C/chord.xml:11(phrase)
+msgid "Screenshot of the program."
+msgstr "Captura de pantalla do programa."
+
+#: help/C/singchord.xml:17(para)
+msgid "If you are conducting a choir, you have to sing the starting tones for the different voices, and if you don't have a piano near by, you have to use a tuning fork. If you are a male, you will sing the tones for the women, one octave deeper, and visa versa."
+msgstr "Se está dirixindo un coro, deberá entoar as primeiras notas para as diferentes voces e, no caso de que non dispoña dun piano cerca, deberá empregar un diapasón. Se vostede é home, deberá dar o ton para as mulleres unha oitaba máis baixo e viceversa."
+
+#: help/C/singchord.xml:22(para)
+msgid "The program will play the tone A (440 hz) for you, and display a chord that you must sing. Solfege does not yet have support for microphone, so you will have to decide yourself if your answer is correct or not."
+msgstr "O programa reproducirá a nota LA (440 hz) e mostrará un acorde que vostede deberá entoar. O Solfege aínda non dispón de soporte para micrófono, así que será vostede quen decida se a súa  resposta foi correcta ou non."
+
+#: help/C/singchord.xml:30(para)
+msgid "440hz: <keycombo><keycap>Alt</keycap><keycap>z</keycap></keycombo>"
+msgstr "440hz: <keycombo><keycap>Alt</keycap><keycap>z</keycap></keycombo>"
+
+#: help/C/singchord.xml:31(para)
+msgid "Repeat answer: <keycombo><keycap>Alt</keycap><keycap>p</keycap></keycombo>"
+msgstr "Repetir a resposta: <keycombo><keycap>Alt</keycap><keycap>p</keycap></keycombo>"
+
+#: help/C/scales.xml:2(title)
+msgid "Scales"
+msgstr "Escalas"
+
+#: help/C/scales.xml:3(para)
+msgid "Scales are a complex matter. For example is the greek lydian (C-D-E-F-G-A-B-C) different from the medieval and modern lydian (C-D-E-F#-G-A-B-C). You can read about all the scales used in GNU Solfege <ulink url=\"scales/modes.html\">here</ulink>."
+msgstr "As escalas son un tema complexo. Por exemplo, a escala lidia grega (C-D-E-F-G-A-B-C) é diferente da escala lidia medieval ou moderna (C-D-E-F#-G-A-B-C). Pode ler máis sobre as escalas que emprega o GNU Solfege <ulink url=\"scales/modes.html\">aquí</ulink>."
+
+#: help/C/scales.xml:6(para)
+msgid "Solfege has three variants of scale exercises so far."
+msgstr "Polo de agora o Solfege só ten tres tipos de exercicios de escalas."
+
+#: help/C/scales.xml:8(para)
+msgid "Solfege will play a scale, and you should identify the scale by clicking on the button with the scale name."
+msgstr "O Solfege reproducirá a escala e vostede terá que identificala premendo no botón co nome da escala correcta."
+
+#: help/C/scales.xml:11(para)
+msgid "Solfege will play a scale, and you should identify the structure of the scale. You will be presented a collection of buttons labeled with a number of '1', '2' and '3'. These numbers represent the intervals minor second, major second and minor third that are between the tones of the scale."
+msgstr "O Solfege reproducirá a escala para que vostede identifique a súa estrutura. Ofreceráselle un conxunto de botóns etiquetados cos números 1, 2 e 3. Estes números representan os intervalos de segunda menor, segunda maior e terceira menor que hai entre os tons da escala."
+
+#: help/C/scales.xml:12(para)
+msgid "Solfege will play a scale, and you should idenitfy the grade. For example may Solfege take the natural minor scale, and play it from any of the tones one the scale, and you must tell which tone it starts on."
+msgstr "O Solfege reprodicirá unha escala e vostede deberá identificar a que grao pertence. Por exemplo, poida que o Solfege escolla a escala menor natural e a reproduza a partir de calquera dos seus tons, polo que vostede deberá dicir en que ton comeza."
+
+#: help/C/scales.xml:19(para) help/C/rhythm.xml:40(para)
+#: help/C/melodicinterval.xml:33(para) help/C/idbyname-intonation.xml:25(para)
+#: help/C/harmonicinterval.xml:32(para) help/C/chord-keybindings.xml:5(para)
+msgid "Repeat: <keycombo><keycap>Alt</keycap><keycap>r</keycap></keycombo>"
+msgstr "Repetir: <keycombo><keycap>Alt</keycap><keycap>r</keycap></keycombo>"
+
+#: help/C/scales.xml:20(para)
+msgid "Repeat slowly: <keycombo><keycap>Alt</keycap><keycap>s</keycap></keycombo>"
+msgstr "Repetir lentamente: <keycombo><keycap>Alt</keycap><keycap>s</keycap></keycombo>"
+
+#: help/C/scales.xml:21(para) help/C/rhythm.xml:41(para)
+#: help/C/melodicinterval.xml:34(para) help/C/identifybpm.xml:25(para)
+#: help/C/idbyname-intonation.xml:26(para)
+#: help/C/harmonicinterval.xml:34(para) help/C/chord-keybindings.xml:7(para)
+msgid "Give up: <keycombo><keycap>Alt</keycap><keycap>g</keycap></keycombo>"
+msgstr "Abandonar: <keycombo><keycap>Alt</keycap><keycap>g</keycap></keycombo>"
+
+#: help/C/rhythm.xml:2(title)
+msgid "Rhythm"
+msgstr "Ritmo"
+
+#: help/C/rhythm.xml:10(phrase)
+msgid "Screenshot of the program running the chord exercise."
+msgstr "Captura de pantalla do programa executando o exercicio de acordes."
+
+#: help/C/rhythm.xml:16(para)
+msgid "The program play a randomly generated rhythm, and the user should reproduce the rhythm. The user enters the rhythm by clicking on buttons representing different rhythmic elements."
+msgstr "O programa reproducirá os ritmos que se creen de forma aleatoria. O usuario deberá introducilos premendo os botóns que representan os diferentes elementos rítmicos."
+
+#: help/C/rhythm.xml:20(para)
+msgid "When you have entered enough rhythm elements, Solfege will check your answer. If everything is correct is will display a happy face, otherwise a sad face, and all wrong rhythms will be marked."
+msgstr "Unha vez introducidos elementos rítmicos suficientes, o Solfege comprobará a resposta. Se todo é correcto, o programa mostrará unha cara sorrindo, no caso contrario, mostrará unha cara triste e marcará todos os ritmos que estean mal."
+
+#: help/C/rhythm.xml:24(para)
+msgid "If some of your answer was wrong, everything from the first wrong element will be removed (preserving any correct rhythms in the beginning of your answer) when you click on the sad face, or when you click on the rhythm buttons on top of the page."
+msgstr "Se algunhas das súas respostas foron incorrectas, borrarase todo a partir do primeiro elemento que estea mal ao premer na cara triste (excepto algún ritmo correcto do comezo da súa resposta) ou ao premer nos botóns para o ritmo do principio da páxina."
+
+#: help/C/rhythm.xml:29(para)
+msgid "You can click the 'Play' button to hear your suggestion."
+msgstr "Poder premer no botón \"Play\" para escoitar a súa opción."
+
+#: help/C/rhythm.xml:31(para)
+msgid "The questions made by this exercise are at the moment made by selecting rhythm elements randomly. This is not the best way to do it, and we hope a more clever way of generating questions will be made in a later release."
+msgstr "De momento as preguntas que fai o exercicio realízanse seleccionando elementos rítmicos de forma aleatoria. Quizais esta non sexa a mellor maneira de facelo, por iso esperamos ter un método máis eficaz de xerar preguntas nunha versión posterior."
+
+#: help/C/rhythm.xml:42(para)
+msgid "Backspace: <keycap>Backspace</keycap>"
+msgstr "Tecla de retroceso: <keycap>Tecla de retroceso</keycap>"
+
+#: help/C/rhythmtapping2.xml:2(title)
+msgid "Tap the rhythm"
+msgstr "Tocar o ritmo"
+
+#: help/C/rhythmtapping2.xml:3(para)
+msgid "The program will play a randomly generated rhythm, and the user should reproduce the rhythm. The user enters the rhythm by tapping on the button labeled <emphasis>Tap here</emphasis>."
+msgstr "O programa reproducirá de forma aleatoria os ritmos creados e o usuario deberá repetilos.Para iso terá que introducir o ritmo premendo no botón coa etiqueta <emphasis>Toque aquí</emphasis>."
+
+#: help/C/preferences-window.xml:2(title)
+msgid "Preferences window"
+msgstr "Xanela de preferencias"
+
+#: help/C/preferences-window.xml:4(title)
+msgid "Midi stuff"
+msgstr "Material Midi"
+
+#: help/C/preferences-window.xml:12(phrase)
+msgid "Screenshot of the 'Midi' page of the preferences window."
+msgstr "Captura de pantalla da páxina \"Midi\" da xanela de preferencias."
+
+#: help/C/preferences-window.xml:18(title)
+msgid "Tempo"
+msgstr "Tempo"
+
+#: help/C/preferences-window.xml:19(para)
+msgid "Set the tempo (beats per minute) for music and arpeggios."
+msgstr "Estabelece o tempo (compases por minuto) para a música e os arpexos."
+
+#: help/C/preferences-window.xml:22(title)
+msgid "Preferred instrument"
+msgstr "Instrumento preferido"
+
+#: help/C/preferences-window.xml:23(para)
+msgid "Set the midi instrument and velocity (volume of each note)."
+msgstr "Estabelece o instrumento e a velocidade (o volume de cada nota)."
+
+#: help/C/preferences-window.xml:26(title)
+msgid "Chord instruments"
+msgstr "Instrumentos do acorde"
+
+#: help/C/preferences-window.xml:27(para)
+msgid "Solfege can use three different instruments when playing chords. One for the highest tone, one for the tones in the middle and one for the bass tone. This can be helpful if you find it difficult to hear individual tones in chords."
+msgstr "O Solfege pode empregar tres instrumentos diferentes á hora de reproducir os acordes. Un para o ton máis alto, outro para os tons do medio e o último para o ton máis baixo. Isto pode ser útil se ten dificultade para identificar tons individuais nos coros."
+
+#: help/C/preferences-window.xml:33(title)
+msgid "Preferred percussion instruments"
+msgstr "Instrumentos de percusión preferidos"
+
+#: help/C/preferences-window.xml:34(para)
+msgid "Set the percussion instrument used for count-in before rhythm questions, and the instrument used to play the question."
+msgstr "Estabelece o instrumento de percursión empregado para dar a entrada ás preguntas de ritmo e o instrumento que reproducirá a pregunta."
+
+#: help/C/preferences-window.xml:42(title)
+msgid "User"
+msgstr "Usuario"
+
+#: help/C/preferences-window.xml:50(phrase)
+msgid "Screenshot of the 'User' page of the preferences window."
+msgstr "Captura de pantalla da páxina do \"Usuario\" da xanela de preferencias."
+
+#: help/C/preferences-window.xml:56(para)
+msgid "Solfege uses this info in some exercises where the user is supposed to sing."
+msgstr "O Solfege emprega esta información nalgúns exercicios en que o usuario ten que entoar."
+
+#: help/C/preferences-window.xml:58(title)
+msgid "Lowest/highest tone the user can sing"
+msgstr "Ton máis alto e baixo que o usuario é quen de entoar."
+
+#: help/C/preferences-window.xml:59(para)
+msgid "These spin buttons tell Solfege the highest and lowest tone the user can sing. These values are only considered advisory by the program. If for example the values are set to <literal>c</literal> to <literal>c'</literal> and you have configured the program to ask you to sing small and large decims, you will have to sing tones outside this range."
+msgstr "Estes botóns de axuste informan ao Solfege do ton máis alto e máis baixo que o usuario é quen de entoar. O programa considera estes valores só de forma orientativa. Por exemplo, se os valores están estabelecidos de <literal>do</literal> a <literal>do'</literal> e vostede configurou o programa para que lle pida que entoe décimas máis pequenas ou máis grandes, probablemente terá que entoar tons fóra dese rexistro."
+
+#: help/C/preferences-window.xml:66(title)
+msgid "Sex"
+msgstr "Sexo"
+
+#: help/C/preferences-window.xml:67(para)
+msgid "Solfege need to know if the user is male or female when creating some of the questions where the user will sing the answer. This because the male voice sound one octave lower than the female voice."
+msgstr "O Solfege precisa saber se o usuario é muller ou home para poder crear as preguntas en que este deberá entoar a resposta. Isto débese a que a voz do home é unha oitava máis baixa que a da muller."
+
+#: help/C/preferences-window.xml:74(title)
+msgid "External programs"
+msgstr "Programas externos"
+
+#: help/C/preferences-window.xml:82(phrase)
+msgid "Screenshot of the 'External programs' page of the preferences window."
+msgstr "Captura de pantalla da páxina \"Programas externos\" da xanela de preferencias."
+
+#: help/C/preferences-window.xml:89(title)
+msgid "Convertors"
+msgstr "Conversores"
+
+#: help/C/preferences-window.xml:90(para)
+msgid "Give command lines that can convert between different audio formats. <literal>%(in)s</literal> will be replaced with the name of the file we convert from, and <literal>%(out)s</literal> with the name we convert to. It is not necessary to enter <literal>%(out)s</literal> if the program automatically saved to a new file with the correct file extention."
+msgstr "Introduza as liñas de comandos que poden converter un formato de audio noutro. <literal>%(in)s</literal> cambiarase co nome do ficheiro que se vai converter e <literal>%(out)s</literal> co nome do ficheiro novo que se obtén. Non é preciso introducir <literal>%(out)s</literal> se o programa o gardou automaticamente nun ficheiro novo coa extensión correcta."
+
+#: help/C/preferences-window.xml:98(title)
+msgid "Audio players"
+msgstr "Reprodutores de audio"
+
+#: help/C/preferences-window.xml:99(para)
+msgid "Command lines that can play different audio formats. <literal>%s</literal> will be replaced with the name of the file to be played. The file name will be appended to the end of the string if you do not include a <literal>%s</literal>."
+msgstr "Liñas de comando que poden reproducir diferentes formatos de audio. <literal>%s</literal> cambiarase co nome do ficheiro que se vai reproducir. O nome do ficheiro engadirase ao final da cadea a non ser que inclúa un <literal>%s</literal>."
+
+#: help/C/preferences-window.xml:107(title)
+msgid "Misc"
+msgstr "Diversos"
+
+#: help/C/preferences-window.xml:108(para)
+msgid "\"Mail program\" defines the command that starts the mail program when you click on email addresses in the user manual."
+msgstr "\"Programa de correo\" especifica o comando que inicia o programa de correo ao premer nos enderezos electrónicos do manual de usuario."
+
+#: help/C/preferences-window.xml:115(title)
+msgid "Gui"
+msgstr "GUI"
+
+#: help/C/preferences-window.xml:123(phrase)
+msgid "Screenshot of the 'Gui' page of the preferences window."
+msgstr "Captura de pantalla da páxina \"GUI\" da xanela de preferencias."
+
+#: help/C/preferences-window.xml:129(para)
+msgid "User resizeable main window: Allows the user to resize the main solfege window."
+msgstr "Xanela principal redimensionábel polo usuario: permite que o usuario redimensione a xanela principal do Solfege."
+
+#: help/C/preferences-window.xml:131(para)
+msgid "Expert mode: Let the user select what questions from the lesson files to practise. No statistics is stored in ''expert mode''."
+msgstr "Modo experto: permite que o usuario seleccione que preguntas dos ficheiros de lección quere practicar. No ''modo experto'' non hai estatísticas almacenadas."
+
+#: help/C/preferences-window.xml:132(para)
+msgid "Select language: You can manually select the language you want if Solfege does not detect this correctly, or if you want to run Solfege with a different language that your operating system."
+msgstr "Seleccione un idioma: vostede pode seleccionar o idioma que queira de forma manual en caso de que o Solfege non o detectase correctamente, ou se prefire executar o Solfege nun idioma diferente ao do seu sistema operativo."
+
+#: help/C/preferences-window.xml:138(title)
+msgid "Practise"
+msgstr "Práctica"
+
+#: help/C/preferences-window.xml:146(phrase)
+msgid "Screenshot of the 'Practise' page of the preferences window."
+msgstr "Captura de pantalla da páxina de \"Práctica\" da xanela de preferencias."
+
+#: help/C/preferences-window.xml:151(para)
+msgid "Not allow new question before the old is solved: Disable the 'new' button until the question is answered correctly or the user clicks \"give up\"."
+msgstr "Non realizar unha pregunta nova até que se resolva a anterior: desactiva o botón \"novo\" até que se responda a pregunta correctamente ou o usuario prema en \"abandonar\"."
+
+#: help/C/preferences-window.xml:152(para)
+msgid "Repeat question if the answer was wrong: Play the sound again when the user gives an incorrect answer."
+msgstr "Repite a pregunta se a resposta foi incorrecta: reproduce o son de novo cando o usuario dea unha resposta incorrecta."
+
+#: help/C/preferences-window.xml:153(para)
+msgid "Expert mode: On many exercises, you will be able to select to practise only a subset of the questions in the lesson file."
+msgstr "Modo experto: en moitos exercicios, vostede só poderá practicar un subgrupo de preguntas do ficheiro de lección."
+
+#: help/C/preferences-window.xml:158(title)
+msgid "Sound setup"
+msgstr "Configuración de son"
+
+#: help/C/preferences-window.xml:166(phrase)
+msgid "Screenshot of the 'Sound setup' page of the preferences window."
+msgstr "Captura de pantalla da páxina \"Configuración de son\" da xanela de preferencias."
+
+#: help/C/preferences-window.xml:172(title)
+msgid "Midi setup"
+msgstr "Configuración de Midi"
+
+#: help/C/preferences-window.xml:174(title)
+msgid "There are three ways to play sound:"
+msgstr "Hai tres formas de reproducir o son:"
+
+#: help/C/preferences-window.xml:176(term)
+msgid "No sound:"
+msgstr "Sen son:"
+
+#: help/C/preferences-window.xml:178(para)
+msgid "Use this for debugging or when you are porting Solfege. No sounds are played, the midi events are printed to stdout."
+msgstr "Use este modo para a depuración ou para portar o Solfege. Desta forma non se reproducen os sons, os eventos do midi cólanse no stdout."
+
+#: help/C/preferences-window.xml:182(term)
+msgid "Use device:"
+msgstr "Usar un dispositvo:"
+
+#: help/C/preferences-window.xml:184(para)
+msgid "The best choice here is usually <filename>/dev/music</filename> because it has the best support for percussion instruments. <filename>/dev/sequencer2</filename> is usually a symbolic link to <filename>/dev/music</filename>. If your system don't have <filename>/dev/music</filename>, you can create it with this command as root (if you run the linux kernel version 2.2 or later):"
+msgstr "Aquí, a mellor opción é xeralmente <filename>/dev/music</filename>, xa que posúe o mellor soporte para os instrumentos de percusión. <filename>/dev/sequencer2</filename> normalmente é unha ligazón simbólica a <filename>/dev/music</filename>. Se o seu sistema non posúe <filename>/dev/music</filename>, pode crealo con este comando como raíz (se vostede utiliza linux kernel versión 2.2 ou posterior):"
+
+#: help/C/preferences-window.xml:189(para)
+msgid "cd /dev mknod music u 14 8"
+msgstr "cd /dev mknod music u 14 8"
+
+#: help/C/preferences-window.xml:193(term)
+msgid "Use external midiplayer:"
+msgstr "Usar  reprodutor midi externo:"
+
+#: help/C/preferences-window.xml:195(para)
+msgid "This can be useful when porting to systems that don't use OSS, or if you have a bad midi synth on your soundcard and want to use timidity."
+msgstr "Isto pode ser de utilidade á hora de portar a sistemas que non empregan OSS, ou se vostede posúe un sintetizador midi de mala calidade na súa tarxeta de son e prefire usar TiMidity."
+
+#: help/C/preferences-window.xml:200(title)
+msgid "Extra options"
+msgstr "Opcións extra"
+
+#: help/C/preferences-window.xml:201(para)
+msgid "Check the ''My sound card is Sound Blaster AWE32, AWE64 or pnp32'' check button if you have this kind of sound card. This will give you real percussion in the rhythm exercise. Code still has to be added for other sound cards. This option is only necessary if you use <filename>/dev/sequencer</filename> to play midi sounds."
+msgstr "Comprobe o botón \"A miña tarxeta de son é Sound Blaster AWE32, AWE64 ou pnp32\" en caso de que vostede teña este tipo de tarxeta de son. Isto proporcionaralle unha percusión real no exercicio de ritmo. O código para unha nova tarxeta de son quedará aínda por engadir. Esta opción só será necesaria se vostede usa <filename>/dev/sequencer</filename> para reproducir os sons midi."
+
+#: help/C/online-resources.xml:2(title)
+msgid "Online resources"
+msgstr "Recursos en liña"
+
+#: help/C/online-resources.xml:3(para)
+msgid "The homepage for Solfege is <ulink url=\"http://www.solfege.org\">http://www.solfege.org</ulink>. There is also a smaller page with more static info at <ulink url=\"http://www.gnu.org/software/solfege/\">http://www.gnu.org/software/solfege/</ulink>."
+msgstr "A páxina do Solfege é <ulink url=\"http://www.solfege.org\">http://www.solfege.org</ulink>. Existe tamén unha páxina con información máis estática en <ulink url=\"http://www.gnu.org/software/solfege/\">http://www.gnu.org/software/solfege/</ulink>."
+
+#: help/C/online-resources.xml:5(title)
+msgid "Download Solfege"
+msgstr "Descargar o Solfege"
+
+#: help/C/online-resources.xml:6(para)
+msgid "The source code is available from <ulink url=\"http://ftp.gnu.org/gnu/solfege\">http://ftp.gnu.org/gnu/solfege</ulink>. If you are adventurous, you can try the unstable (buggy, but might contain new stuff) releases from <ulink url=\"http://alpha.gnu.org/gnu/solfege\">http://alpha.gnu.org/gnu/solfege</ulink>. These releases might have more bugs, but then you get the chance to try new stuff and find and report bugs."
+msgstr "O código fonte está dipoñíbel en <ulink url=\"http://ftp.gnu.org/gnu/solfege\">http://ftp.gnu.org/gnu/solfege</ulink>. Se quere probar sorte, pode tratar de utilizar as versións inestábeis de <ulink url=\"http://alpha.gnu.org/gnu/solfege\">http://alpha.gnu.org/gnu/solfege</ulink> (teñen erros, pero quizais haxa cousas novas). Poida que estas novas versións teñan máis defectos, pero así terá ocasión de probar material novo e enviar informes de erros."
+
+#: help/C/online-resources.xml:7(para)
+msgid "Source code and some precompiled binaries are available from <ulink url=\"http://sourceforge.net/project/showfiles.php?group_id=1465\">http://sourceforge.net/project/showfiles.php?group_id=1465</ulink>."
+msgstr "O código fonte e algúns binarios precompilados están dispoñíbeis en <ulink url=\"http://sourceforge.net/project/showfiles.php?group_id=1465\">http://sourceforge.net/project/showfiles.php?group_id=1465</ulink>."
+
+#: help/C/online-resources.xml:8(para)
+msgid "If you run Debian you can <userinput>apt-get install solfege</userinput> to download and install the program."
+msgstr "Se executa o Debian pode <userinput>apt-get install solfege</userinput> para descargar e instalar o programa."
+
+#: help/C/online-resources.xml:11(title)
+msgid "Mailing lists"
+msgstr "Listas de correo"
+
+#: help/C/online-resources.xml:14(para)
+msgid "Very low traffic, moderated and will be used to announce stable releases of Solfege. (<ulink url=\"http://lists.sourceforge.net/mailman/listinfo/solfege-announce\">Subscription</ulink> | <ulink url=\"http://sourceforge.net/mailarchive/forum.php?forum_id=7332\">Archive</ulink>)"
+msgstr "Teñen pouco tráfico e moderado, empregaranse para anunciar versións estábeis do Solfege. (<ulink url=\"http://lists.sourceforge.net/mailman/listinfo/solfege-announce\">Subscrición</ulink> | <ulink url=\"http://sourceforge.net/mailarchive/forum.php?forum_id=7332\">Arquivo</ulink>)"
+
+#: help/C/online-resources.xml:18(para)
+msgid "If you want to report problems installing or running Solfege, or have questions, comments or ideas on how to improve Solfege, please post to this list instead of using the message forum at Sourceforge or the author directly. You can post to solfege-devel without subscribing. (<ulink url=\"http://lists.sourceforge.net/mailman/listinfo/solfege-devel\">Subscription</ulink> | <ulink url=\"http://sourceforge.net/mailarchive/forum.php?forum_id=3968\">Archive</ulink>)"
+msgstr "Se quere notificar algún problema á hora de instalar ou executar o Solfege, ou se ten algunha pregunta, comentario ou idea para mellorar o programa, pregámoslle que as envíe a estas listas e non ao foro de Sourceforge nin directamente ao autor. Pode enviar as súas suxestións ao Solfege-devel sen ter que subscribirse. (<ulink url=\"http://lists.sourceforge.net/mailman/listinfo/solfege-devel\">Subscrición</ulink> | <ulink url=\"http://sourceforge.net/mailarchive/forum.php?forum_id=3968\">Arquivo</ulink>)"
+
+#: help/C/online-resources.xml:22(para)
+msgid "The standard GNU address to send bug reports. This list is at the moment forwarded to <email>solfege-devel@lists.sourceforge.net</email>"
+msgstr "Enderezo GNU estándar para enviar informes de erros. Polo de agora esta lista vai dirixida a <email>solfege-devel@lists.sourceforge.net</email>"
+
+#: help/C/nameinterval.xml:2(title)
+msgid "Name intervals"
+msgstr "Nomear os intervalos"
+
+#: help/C/nameinterval.xml:10(phrase) help/C/melodicinterval.xml:10(phrase)
+#: help/C/interval-config-help.xml:16(phrase)
+#: help/C/harmonicinterval.xml:10(phrase)
+msgid "Screenshot of the program practising intervals using the buttons interface."
+msgstr "Captura de pantalla do programa practicando intervalos e empregando os botóns da interface."
+
+#: help/C/nameinterval.xml:16(para)
+msgid "In this exercise, Solfege will display and play an interval, and you should identify the interval. This is a music theory exercise, and not an ear training exercise. To learn how to name intervals you should read <xref linkend=\"theory-intervals\"/>."
+msgstr "Neste exercicio, o Solfege mostrará e reproducirá un intervalo que vostede terá que identificar. Este é un exercicio de teoría musical e non de adestramento auditivo. Para aprender a darlle nome aos intervalos debería ler <xref linkend=\"theory-intervals\"/>."
+
+#: help/C/nameinterval.xml:22(para)
+msgid "You identify the interval by clicking on one button telling the specific name and the general name."
+msgstr "Identificará o intervalo premendo no botón que teña o nome específico e o nome xenérico do intervalo."
+
+#: help/C/melodicinterval.xml:2(title)
+msgid "Melodic interval"
+msgstr "Intervalo melódico"
+
+#: help/C/melodicinterval.xml:16(para)
+msgid "This exercise creates random intervals and you should try to identify them."
+msgstr "Este exercicio crea intervalos aleatorios que vostede deberá tratar de identificar."
+
+#: help/C/melodicinterval.xml:18(para) help/C/harmonicinterval.xml:22(para)
+msgid "If you are using the buttons interface, then you can right-click on the buttons to hear the interval they represent."
+msgstr "Se está a utilizar os botóns da interface, poderá permer neles co botón dereito do rato para escoitar os intervalos que representan."
+
+#: help/C/melodicinterval.xml:32(para)
+msgid "New question: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+msgstr "Pregunta nova: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+
+#: help/C/interval-input-keybindings.xml:5(entry)
+msgid "Minor second: 1"
+msgstr "Segunda menor: 1"
+
+#: help/C/interval-input-keybindings.xml:6(entry)
+msgid "Perfect fourth: 2"
+msgstr "Cuarta xusta: 2"
+
+#: help/C/interval-input-keybindings.xml:7(entry)
+msgid "Major sixth: 3"
+msgstr "Sexta maior: 3"
+
+#: help/C/interval-input-keybindings.xml:8(entry)
+msgid "Minor ninth: 4"
+msgstr "Novena menor: 4"
+
+#: help/C/interval-input-keybindings.xml:11(entry)
+msgid "Major second: q"
+msgstr "Segunda maior: q"
+
+#: help/C/interval-input-keybindings.xml:12(entry)
+msgid "Tritone: w"
+msgstr "Trítono: w"
+
+#: help/C/interval-input-keybindings.xml:13(entry)
+msgid "Minor seventh: e"
+msgstr "Sétima menor: e"
+
+#: help/C/interval-input-keybindings.xml:14(entry)
+msgid "Major ninth: r"
+msgstr "Novena maior: r"
+
+#: help/C/interval-input-keybindings.xml:17(entry)
+msgid "Minor third: a"
+msgstr "Terceira menor: a"
+
+#: help/C/interval-input-keybindings.xml:18(entry)
+msgid "Perfect fifth: s"
+msgstr "Quinta xusta: s"
+
+#: help/C/interval-input-keybindings.xml:19(entry)
+msgid "Major seventh: d"
+msgstr "Sétima maior: d"
+
+#: help/C/interval-input-keybindings.xml:20(entry)
+msgid "Minor decim: f"
+msgstr "Décima menor: f"
+
+#: help/C/interval-input-keybindings.xml:23(entry)
+msgid "Major third: z"
+msgstr "Terceira maior: z"
+
+#: help/C/interval-input-keybindings.xml:24(entry)
+msgid "Minor sixth: x"
+msgstr "Sexta menor: x"
+
+#: help/C/interval-input-keybindings.xml:25(entry)
+msgid "Perfect octave: c"
+msgstr "Oitava xusta: c"
+
+#: help/C/interval-input-keybindings.xml:26(entry)
+msgid "Major decim: v"
+msgstr "Décima maior: v"
+
+#: help/C/interval-config-help.xml:2(title)
+msgid "Configuration"
+msgstr "Configuración"
+
+#: help/C/interval-config-help.xml:3(para)
+msgid "On the config page of the exercise, there is a combo box where you can select different ways to answer the question. Currently there is a piano, guitar, bass and a few types of accordion in addition to the default buttons interface. Below is a screenshot showing the piano interface."
+msgstr "Na páxina de configuración do exercicio hai unha caixa de combinación onde vostede poderá seleccionar diferentes formas de responder á pregunta. De momento hai un piano, unha guitarra, un baixo e algúns tipos de acordeóns ademais dos botóns predeterminados que trae a interface. Máis abaixo pódese ver unha captura de pantalla coa interface do piano."
+
+#: help/C/idtone.xml:2(title)
+msgid "Identify tone"
+msgstr "Identificar o ton"
+
+#: help/C/idtone.xml:16(para)
+msgid "This is a combined tone memory and interval exercise. Some people believe this kind of exercise can give you perfect pitch (absolute pitch), but I don't believe so."
+msgstr "Este é un exercicio de memoria de tons e de intervalos ao mesmo tempo. Algunha xente pensa que este tipo de exercicios poden facerlle dar o ton perfectamente, pero nós non pensamos iso."
+
+#: help/C/idtone.xml:22(para)
+msgid "The basics are: the program play a tone and you must identify it by comparing it with the last tone played for you."
+msgstr "Basicamente, o programa dá un ton que vostede terá que identificar mediante a comparación co último ton que lle deu."
+
+#: help/C/idtone.xml:26(para)
+msgid "To get you started the program will play one tone and display its name on the status bar. You identify the tones by clicking on the piano keyboard or using the keyboard shortcuts that are the letters written on each key."
+msgstr "Para comezar, o programa dará un ton e mostrará o nome na barra de estado. Vostede identificará os tons premendo no teclado do piano ou empregando os atallos que representan as letras que aparecen en cada tecla."
+
+#: help/C/idtone.xml:31(para)
+msgid "Right click on the piano keyboard to hear a note without actually guessing it. (Some will call that cheating....)"
+msgstr "Prema co botón dereito do rato no teclado do piano para escoitar a nota sen adiviñala antes (algúns dirían que isto é facer trampas...)."
+
+#: help/C/idtone.xml:35(title)
+msgid "Manual configuration"
+msgstr "Configuración manual"
+
+#: help/C/idtone.xml:37(para)
+msgid "You can configure the <literal>idbyname</literal> exercise as you like if you select <menuchoice><guimenu>Misc</guimenu><guisubmenu>Configure yourself</guisubmenu><guimenuitem>Id tone</guimenuitem></menuchoice>."
+msgstr "Pode configurar o exercicio <literal>idbyname</literal> como vostede queira seleccionando <menuchoice><guimenu>Outros</guimenu><guisubmenu>Configúreo vostede</guisubmenu><guimenuitem>Identificar o ton</guimenuitem></menuchoice>."
+
+#: help/C/idtone.xml:42(para)
+msgid "There are several ways you can use this exercise. Personally, I have not used this exercise very much, and the sections below are only suggestions."
+msgstr "Pode realizar o exercicio de varias formas. Persoalmente, non practiquei moito este exercicio, así que os apartados que seguen son só suxestións."
+
+#: help/C/idtone.xml:46(title)
+msgid "Note by note"
+msgstr "Nota a nota"
+
+#: help/C/idtone.xml:47(para)
+msgid "Start with only the notes <ulink url=\"solfege:/lesson-files/id-tone-cde-3\">c-d-e</ulink> at weight 1. When your score is at least 96% correct, you <ulink url=\"solfege:/lesson-files/id-tone-cde-4\">add the tone f</ulink> and continue. The menu <menuchoice><guimenu>Misc</guimenu><guisubmenu>Identify tone</guisubmenu></menuchoice>, has exercises that will add one and one tone until you practise with all 12 tones."
+msgstr "Comeza só con tres notas <ulink url=\"solfege:/lesson-files/id-tone-cde-3\">do-re-mi</ulink> no peso 1. Cando acade un 96% de acertos, <ulink url=\"solfege:/lesson-files/id-tone-cde-4\">engada a nota fa</ulink> e continúe. O menú <menuchoice><guimenu>Outros</guimenu><guisubmenu>Identificar o ton</guisubmenu></menuchoice> contén exercicios que lle engadirán tons de un en un até que vostede practique con 12 tons."
+
+#: help/C/idtone.xml:57(title)
+msgid "Heavy A"
+msgstr "Peso no la"
+
+#: help/C/idtone.xml:59(para)
+msgid "'Heavy A' describes another way to practise. It requires that you select <menuchoice><guimenu>Misc</guimenu><guisubmenu>Configure yourself</guisubmenu><guimenuitem>Id tone</guimenuitem></menuchoice>."
+msgstr "\"Peso no la\" é outra forma de practicar. Para iso terá que seleccionar <menuchoice><guimenu>Outros</guimenu><guisubmenu>Configúreo vostede</guisubmenu><guimenuitem>Identificar o ton</guimenuitem></menuchoice>."
+
+#: help/C/idtone.xml:63(para)
+msgid "Configure with the tone a at weight 11 (or higher) and the rest of the tones at weight 1. This way the program will play the tone a very often, so you will remember the tone, and then you use a as a reference tone to identify the other tones. When you have practised a while, you can reduce the weight of a to make the exercise harder."
+msgstr "Configure o ton la no peso 11 (ou maior) e o resto no peso 1. Desta forma o programa reproducirá o ton la a miúdo e vostede poderá recordalo para despois empregar o la como referencia para identificar os demais tons. Cando xa leve un tempo practicado, pode baixar o peso do la para facer o exercicio máis difícil."
+
+#: help/C/idtone.xml:69(para)
+msgid "On the top of the config page you tell the program how important the different tones are. If you for example give the tone a 11 points and the rest 1 point each, then (11+11*1)/11*100 = 50% of the random tones will be an a."
+msgstr "Ao comezo da páxina de configuración é vostede quen lle di ao programa cal é a importancia dos diferentes tons. Por exemplo, se vostede lle dá ao la 11 puntos e ao resto un punto a cada un, (11+11*1)/11*100 = 50% dos tons aleatorios serán la."
+
+#: help/C/idtone.xml:74(para)
+msgid "Below that you select what octaves the random tones can be from."
+msgstr "Debaixo diso, vostede seleccionará a que oitavas pertencerán os tons aleatorios."
+
+#: help/C/idtone.xml:76(para)
+msgid "Then you can select if Solfege should give you a new question automatically when you have solved the old."
+msgstr "Daquela, vostede poderá elixir se o Solfege debería facerlle unha nova pregunta de forma automática cando xa teña resolta a anterior."
+
+#: help/C/idtone.xml:79(para)
+msgid "In the frame below you can set some pretty self explaining options about what happens if you answer wrong."
+msgstr "No cadro de abaixo poderá estabelecer algunhas opcións que lle expliquen que é o que pasa se a súa resposta non é correcta."
+
+#: help/C/idtone.xml:82(para)
+msgid "The keyboard shortcuts can be configured from config file. You can find its location from <menuchoice><guimenu>Help</guimenu><guimenuitem>File locations</guimenuitem></menuchoice>."
+msgstr "Os atallos do teclado poden configurarse no ficheiro de configuración. Pode atopar a súa localización en <menuchoice><guimenu>Axuda</guimenu><guimenuitem>Localizacións de ficheiros</guimenuitem></menuchoice>."
+
+#: help/C/idproperty.xml:2(title)
+msgid "Multiple choice answers to music"
+msgstr "Respostas de selección múltiple para música"
+
+#: help/C/idproperty.xml:17(para)
+msgid "This page is a generic help page for all exercises written using the <literal>idproperty</literal> exercise module. Exercises will typically write more specialized help text than this."
+msgstr "Esta é unha páxina de axuda xenérica para todos os exercicios escritos que empregan o módulo de exercicios <literal>idproperty</literal>. Polo xeral, os exercicios traerán un texto de axuda máis específico ca este."
+
+#: help/C/idproperty.xml:21(para)
+msgid "The screenshot above show one example of how an exercise can look like."
+msgstr "A captura de pantalla anterior mostra un exemplo de como pode ser un exercicio."
+
+#: help/C/idproperty.xml:24(para)
+msgid "The exercise will display a question and play some music, and you have to select one answer from each column in the table of buttons. When you select the correct answer in a column, the label will turn bold, and the message \"Correct\" will be flashed in the status bar."
+msgstr "O exercicio traerá unha pregunta e reproducirá algo de música, vostede terá que seleccionar unha resposta de cada columna na táboa dos botóns. Ao seleccionar na columna a resposta correcta, a etiqueta tornarase negra e na súa barra de estado aparecerá a mensaxe \"Correcto\" ."
+
+#: help/C/idproperty.xml:29(para)
+msgid "The exercise will have a <guibutton>Repeat arpeggio</guibutton> if one or more of the questions is of a type the program can play arpeggiated."
+msgstr "O exercicio mostrará <guibutton>Repetir arpexo</guibutton> se o programa pode arpexar unha ou máis das preguntas que trae."
+
+#: help/C/identifybpm.xml:2(title)
+msgid "Beats per minute"
+msgstr "Compases por minuto"
+
+#: help/C/identifybpm.xml:13(para)
+msgid "The program will play a tempo, like a methronome. You should try to guess how many beats per minute is played. Each button represents ony tempo, and the program will only play in tempos that has a button with bold text. Right-click on buttons to change the status of a tempo."
+msgstr "O programa soará a tempo, coma un metrónomo. Vostede terá que saber cantos compases por minuto se reproduciron. Cada botón representa un tempo, o programa só tocará nos tempos que teñan un botón co texto en negra. Prema co botón dereito do rato para cambiar o estado do tempo."
+
+#: help/C/identifybpm.xml:18(para)
+msgid "Note: the rhythm depends on the <literal>gtk timeout_add</literal> function to play the rhythm, so it is not very precise."
+msgstr "Nota: o ritmo depende da función <literal>gtk timeout_add</literal> para reproducir o ritmo, así que non é moi preciso."
+
+#: help/C/identifybpm.xml:24(para)
+msgid "New tempo: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+msgstr "Tempo novo: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+
+#: help/C/idbyname-intonation.xml:2(title)
+msgid "Intonation"
+msgstr "Entoación"
+
+#: help/C/idbyname-intonation.xml:16(para)
+msgid "In this exercise, Solfege will play a interval, and you should tell how the interval is intonated. You do this by clicking on one of the buttons labeled 'too small', 'pure' or 'too large'. It is also possible that one of these three buttons are missing."
+msgstr "Neste exercicio, o Solfege reproducirá un intervalo e vostede terá que dicir cal é a entoación. Pode facer isto premendo un a un nos botóns que poñen \"demasiado baixa\", \"afinada\" ou \"demasiado aguda\". Tamén pode ocorrer que algún destes tres botóns non apareza."
+
+#: help/C/idbyname-intonation.xml:27(para) help/C/dictation.xml:37(para)
+msgid "Show: <keycombo><keycap>Alt</keycap><keycap>s</keycap></keycombo>"
+msgstr "Mostrar: <keycombo><keycap>Alt</keycap><keycap>s</keycap></keycombo>"
+
+#: help/C/idbyname-chords.xml:2(title) help/C/chord.xml:2(title)
+msgid "Identify the chord"
+msgstr "Identificar o acorde"
+
+#: help/C/idbyname-chords.xml:16(para)
+msgid "The purpose of this exercise is to identify the chord being played."
+msgstr "A finalidade deste exercicio é identificar o acorde que se está reproducindo."
+
+#: help/C/idbyname-chords.xml:17(para)
+msgid "Start the exercise by pressing <guibutton>New</guibutton>. Solfege will then play a chord, and you should identify it by clicking one of the buttons below the empty staff line."
+msgstr "Comece o exercicio premendo en <guibutton>Novo</guibutton>. Logo o Solfege reproducirá un acorde e vostede terá que identificalo nun dos botóns que hai debaixo da liña de mensaxes de estado."
+
+#: help/C/idbyname-chords.xml:19(para)
+msgid "If you guess correct, the program will display the chord on the staff line and flash the message \"Correct\" in the status bar. Then you can click the button <guibutton>New</guibutton> to get a new question."
+msgstr "Se a súa resposta foi correcta, o programa mostrará o acorde na liña de funcionalidades e a mensaxe \"Correcto\" aparecerá na barra de estado. Entón, vostede poderá premer no botón <guibutton>Novo</guibutton> para que haxa unha pregunta nova."
+
+#: help/C/idbyname-chords.xml:21(para)
+msgid "If you guess wrong the message \"Wrong\" will be displayed in the status bar."
+msgstr "Se a súa resposta é incorrecta, será a mensaxe \"Incorrecto\" a que apareza na barra de estado."
+
+#: help/C/idbyname-cadences.xml:2(title)
+msgid "Identify the cadence"
+msgstr "Identificar a candencia"
+
+#: help/C/idbyname-cadences.xml:3(para)
+msgid "Identify the cadence by clicking on the button with its name. As acknowledged in <ulink url=\"http://bugs.solfege.org/5\">bug #5</ulink> we need cadence exercises in Solfege."
+msgstr "Identifique a cadencia premendo no botón que teña o seu nome. Tal e como se recoñece en <ulink url=\"http://bugs.solfege.org/5\">bug #5</ulink> precisamos exercicios de cadencia no Solfege."
+
+#: help/C/idbyname-cadences.xml:8(para)
+msgid "In this release of Solfege, we only have one exercise with cadences in major. In this exercise, a major scale is played to establish the tonic. Maybe this is too little? Do we need a complete I-IV-V-I before the question? Or maybe it is better to write real music that ends in the cadence we want to practise? This are things we need to descide before we release 3.12.0. Comments and music can be added to <ulink url=\"http://bugs.solfege.org/5\"> bug #5</ulink>."
+msgstr "Nesta versión do Solfege, só temos un exercicio con cadencias maiores, nel reprodúcese unha escala maior para estabelecer a tónica. Será suficiente con iso? Precisamos un I-IV-V-I antes da pregunta? Ou será mellor escribir música real que remate na cadencia que queremos practicar? Estas son cousas que temos que decidir antes de lanzar a versión 3.12.0. Pódense engadir comentarios e música en <ulink url=\"http://bugs.solfege.org/5\"> bug #5</ulink>."
+
+#: help/C/harmonicinterval.xml:2(title)
+msgid "Harmonic interval"
+msgstr "Intervalo harmónico"
+
+#: help/C/harmonicinterval.xml:16(para)
+msgid "This exercise is one of the exercises you can use to practise intervals. The concept is pretty simple: You press the <guibutton>New interval</guibutton> button to play a random interval, and then you should tell what interval it was."
+msgstr "Este é un dos exercicios que pode empregar para practicar intervalos. O concepto é moi simple: presione o botón <guibutton>Intervalo novo</guibutton> para reproducir intervalos aleatorios, despois deberá dicir de que intervalo se trataba."
+
+#: help/C/harmonicinterval.xml:33(para)
+msgid "Repeat melodic: <keycombo><keycap>Alt</keycap><keycap>m</keycap></keycombo>"
+msgstr "Repetir intervalo melódico: <keycombo><keycap>Alt</keycap><keycap>m</keycap></keycombo>"
+
+#: help/C/elembuilder-harmonic-progressions.xml:2(title)
+msgid "Harmonic progression dictation"
+msgstr "Ditado de progresión harmónica"
+
+#: help/C/elembuilder-harmonic-progressions.xml:16(para)
+msgid "In this exercise, Solfege will play some music, and you must click on the buttons to build a representation of the harmonic progressions in the exercise."
+msgstr "Neste exercicio, o Solfege reproducirá música e vostede terá que premer nos botóns para facer unha representación das progresións harmónicas do exercicio."
+
+#: help/C/ear-training-test-printout-editor.xml:2(title)
+msgid "Ear training test print-out editor"
+msgstr "Editor de impresión de exercicios de adestramento auditivo"
+
+#: help/C/ear-training-test-printout-editor.xml:3(para)
+msgid "This tool is available on the <guimenu>File</guimenu> menu. Use it to create ear traing tests to print out on paper. Solfege will generate two versions of the document: one for the students to complete, and one with the correct answer already written."
+msgstr "Esta ferramenta está dispoñíbel no menú <guimenu>Ficheiro</guimenu>. Utilícea para crear probas de adestramento auditivo que logo vaia imprimir. O Solfege creará dúas versións do documento: unha para que a completen os estudantes, e outra coas solucións xa escritas."
+
+#: help/C/ear-training-test-printout-editor.xml:10(para)
+msgid "The <guibutton>Add</guibutton> button will pop up a menu with all exercises from the active learning tree that this tool can create exercises from. When writing this, the exercise modules <link linkend=\"idbyname-module\">idbyname</link>, <link linkend=\"melodicinterval-module\">melodicinterval</link> and <link linkend=\"harmonicinterval-module\">harmonicinterval</link>. From lesson files written for the <literal>idbyname</literal> module, only <link linkend=\"lfunc-chord\">chord</link>, <link linkend=\"lfunc-rvoice\">rvoice</link> and <link linkend=\"lfunc-voice\">voice</link> music objects are supported."
+msgstr "O botón <guibutton>Engadir</guibutton> fará emerxer un menú con todos os exercicios da árbore de aprendizaxe activa a partir da cal esta ferramenta pode crear exercicios. Ao escribir isto, os módulos de exercicio <link linkend=\"idbyname-module\">idbyname</link>, <link linkend=\"melodicinterval-module\">melodicinterval</link> e <link linkend=\"harmonicinterval-module\">harmonicinterval</link>. A partir do módulo <literal>idbyname</literal>, só se soportarán os obxectos de música <link linkend=\"lfunc-chord\">chord</link>, <link linkend=\"lfunc-rvoice\">rvoice</link> e <link linkend=\"lfunc-voice\">voice</link>."
+
+#: help/C/dictation.xml:2(title)
+msgid "Dictation"
+msgstr "Ditado"
+
+#: help/C/dictation.xml:10(phrase)
+msgid "Screenshot of the program running the dictation exercise."
+msgstr "Captura de pantalla do programa executando o exercicio de ditado."
+
+#: help/C/dictation.xml:19(para)
+msgid "You can let Solfege play some music for you that you are supposed to write down on paper. Click on the buttons with a quarter note pixmap to repeat smaller parts of the music. You have to click on the Show button and check your notes yourself to see if you made any mistaces."
+msgstr "Pode deixar que o Solfege lle reproduza música que vostede terá que escribir nun papel á parte. Prema nos botóns coas negras para repetir pequenas partes da música. Deberá premer no botón Mostrar e comprobar as súas notas vostede mesmo para ver se cometeu algún erro."
+
+#: help/C/dictation.xml:25(para)
+msgid "You can use this exercise to practise sight singing: When you start the exercise, press Show and then try to sing the music. Then you can use the Play the whole music button or the quarter note buttons to let the program play the music. You have to decide yourself if you think you succeded."
+msgstr "Pode utilizar este exercicio para practicar a lectura á vista: cando comece o exercicio, prema en Mostrar e trate de entoar a música. Logo, pode usar o botón \"Reproducir toda a música\" ou os botóns coas negras para que o programa reproduza a música. Terá que ser vostede mesmo quen decida se o fixo ben."
+
+#: help/C/dictation.xml:16(para)
+msgid "This exercise is called the dictation exercise, but if the necessary lesson files are written it can be used in several ways: <placeholder-1/>"
+msgstr "Este exercicio chámase exercicio de ditado, mais se os ficheiros de lección necesarios están escritos, pódese empregar de varias formas: <placeholder-1/>"
+
+#: help/C/dictation.xml:36(para)
+msgid "Play the whole music: <keycombo><keycap>Alt</keycap><keycap>p</keycap></keycombo>"
+msgstr "Reproducir toda a música: <keycombo><keycap>Alt</keycap><keycap>p</keycap></keycombo>"
+
+#: help/C/chord.xml:23(para)
+msgid "Identify the chord type."
+msgstr "Identifique o tipo de acorde."
+
+#: help/C/chord.xml:24(para)
+msgid "What is the inversion?"
+msgstr "Que inversión é esta?"
+
+#: help/C/chord.xml:25(para)
+msgid "Which tone is the highest tone in the chord?"
+msgstr "Cal é o ton máis agudo do acorde?"
+
+#: help/C/chord.xml:17(para)
+msgid "This page is a generic help page for all exercises written using the <literal>chord</literal> exercise module. These exercises can ask the user for three things: chord type, inversion and top tone. The idea is that you answer this in three steps: <placeholder-1/> It is important that you take your time, maybe sing the chord, and identify the chord type before you try to find the inversion."
+msgstr "Esta é unha páxina de axuda xenérica para todos os exercicios escritos do módulo de exercicios de <literal>acorde</literal>. Estes exercicios poden preguntarlle ao usuario tres cousas: tipo de acorde, inversión e ton máis agudo. A idea é que vostede responda en tres pasos: <placeholder-1/> É importante que lle dedique o tempo que precise, que entoe o acorde e que identifique o tipo de acorde antes de tratar de atopar a inversión."
+
+#: help/C/chord.xml:31(para)
+msgid "Please notice that is is also possible that an exercise will only ask for the chord type and inversion, or even only inversion and top tone."
+msgstr "Teña en conta que é posíbel que algún exercicio lle pregunte só polo tipo de acorde e a inversión, ou só a inversión e o ton máis agudo."
+
+#: help/C/chord-keybindings.xml:4(para)
+msgid "New chord: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+msgstr "Acorde novo: <keycombo><keycap>Alt</keycap><keycap>n</keycap></keycombo>"
+
+#: help/C/chord-keybindings.xml:6(para)
+msgid "Repeat arpeggio: <keycombo><keycap>Alt</keycap><keycap>a</keycap></keycombo>"
+msgstr "Repetir arpexo: <keycombo><keycap>Alt</keycap><keycap>a</keycap></keycombo>"
+
+#: help/C/bug-reporting.xml:2(title)
+msgid "Bugs"
+msgstr "Informe de erros"
+
+#: help/C/bug-reporting.xml:3(para)
+msgid "Report bugs to the bug tracker at <ulink url=\"http://bugs.solfege.org/\">http://bugs.solfege.org</ulink>. Alternately, you can send an email to <email>bug-solfege@gnu.org</email>. General questions and patches should be sent to <email>solfege-devel@lists.sourceforge.net</email>."
+msgstr "Envíe informes de erros ao seguimento de erros en <ulink url=\"http://bugs.solfege.org/\">http://bugs.solfege.org</ulink>. Se o prefire tamén pode mandar un correo electrónico a <email>bug-solfege@gnu.org</email>. As consultas e parches de carácter xeral deberían enviarse a <email>solfege-devel@lists.sourceforge.net</email>."
+
+#: help/C/bug-reporting.xml:9(para)
+msgid "Please make your bug reports detailed. ''I get an error message in a window when I try to start the program.'' is not usable to me. When reporting bugs:"
+msgstr "Por favor, asegúrese de que os seus informes de erros van ben detallados. Algo como \"Saíume unha xanela cunha mensaxe de erro cando tratei de iniciar o programa\" non me serve de moito. Á hora de informa de erros:"
+
+#: help/C/bug-reporting.xml:14(para)
+msgid "Tell me what version of Solfege you run. Please check if a newer release is available. If you only want to run stable releases, then you don't have to test newer development releases."
+msgstr "Dígame que versión do Solfege está executando e comprobe se hai versións novas dispoñíbeis. Se vostede só quere executar versións estábeis, non debería probar versións máis novas en desenvolvemento."
+
+#: help/C/bug-reporting.xml:15(para)
+msgid "What operating system are you running? Version?"
+msgstr "Que sistema operativo está a empregar e que versión?"
+
+#: help/C/bug-reporting.xml:16(para)
+msgid "Describe exactly what you are doing when the error happens."
+msgstr "Describa con exactitude o que estaba a realizar cando apareceu o erro."
+
+#: help/C/bug-reporting.xml:17(para)
+msgid "Send an exact copy of the error messages. They make sense to the Solfege author even if you think they look cryptic to you."
+msgstr "Envíe unha copia exacta das mensaxes de erro, xa que estas teñen sentido para o autor mesmo cando a vostede lle parecen indescifrábeis."
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
+#: help/C/bug-reporting.xml:0(None)
+msgid "translator-credits"
+msgstr ""
+"Mar Castro Pereiro para mancomun.org\n"
+"imaxin software para mancomun.org\n"
+" Ignacio Casal Quinteiro  <nacho.resa@gmail.com>\n"
+" Francisco Xosé Vázquez Grandal\n"
+" Proxecto Trasno: http://www.trasno.net"

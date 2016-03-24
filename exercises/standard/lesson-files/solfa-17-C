@@ -1,0 +1,84 @@
+# Solfege - free ear training software
+# Copyright (C) 2008, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "5960aae7-d050-4741-9687-eff5c8891f14"
+    module = idbyname
+    have_music_displayer = yes
+    at_question_start = show
+    fillnum = 9
+    random_transpose = no
+    title = _("%s syllables in C major") % "17"
+    lesson_heading = _("Find the sol-fa syllable")
+    test = "6x"
+    test_requirement = "90%"
+}
+question {
+ name = _i("solfa|Do")
+ music = voice("\key c \major c'")
+}
+question {
+ name = _i("solfa|Di")
+ music = voice("\key c \major cis'")
+}
+question {
+ name = _i("solfa|Ra")
+ music = voice("\key c \major des'")
+}
+question {
+ name = _i("solfa|Re")
+ music = voice("\key c \major d'")
+}
+question {
+ name = _i("solfa|Ri")
+ music = voice("\key c \major dis'")
+}
+question {
+ name = _i("solfa|Me")#ma
+ music = voice("\key c \major es'")
+}
+question {
+ name = _i("solfa|Mi")
+ music = voice("\key c \major e'")
+}
+question {
+ name = _i("solfa|Fa")
+ music = voice("\key c \major f'")
+}
+question {
+ name = _i("solfa|Fi")
+ music = voice("\key c \major fis'")
+}
+question {
+ name = _i("solfa|Se")
+ music = voice("\key c \major ges'")
+}
+question {
+ name = _i("solfa|Sol")
+ music = voice("\key c \major g'")
+}
+question {
+ name = _i("solfa|Si")
+ music = voice("\key c \major gis'")
+}
+question {
+ name = _i("solfa|Le")
+ music = voice("\key c \major as'")
+}
+question {
+ name = _i("solfa|La")
+ music = voice("\key c \major a'")
+}
+question {
+ name = _i("solfa|Li")
+ music = voice("\key c \major ais'")
+}
+question {
+ name = _i("solfa|Te")#ta
+ music = voice("\key c \major bes'")
+}
+question {
+ name = _i("solfa|Ti")
+ music = voice("\key c \major b'")
+}

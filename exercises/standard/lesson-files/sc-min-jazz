@@ -1,0 +1,32 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "097f9dd0-23db-11db-8682-8558e4e4f94c"
+  module = idbyname
+  random_transpose = yes
+  title = _("Jazz Modes over a Minor chord")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/modes"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question { name = maj2n  voice(maj2l) }
+question { name = mel1n  voice(mel1l) }
+question { name = blu1n  voice(blu1l) }
+question { name = pen5n  voice(pen5l) }
+question { name = har1n  voice(har1l) }
+question { name = maj3n  voice(maj3l) }
+question { name = dim1n  voice(dim1l) }
+question { name = maj6n  voice(maj6l) }
+

@@ -1,0 +1,13 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+
+header {
+    module=melodicinterval
+    ask_for_intervals_0=5, 7
+    disable_unused_intervals=yes
+    title = _("Fourths and fifths")
+    theory = "theory-intervals"
+    lesson_id = "7f576b58-e1dc-41a5-bb88-defcf2bd5a67"
+    test = "6x"
+    test_requirement = "90%"
+}

@@ -1,0 +1,24 @@
+<sect1 id='idbyname-chords'>
+<title>Identify the chord</title>
+<informalfigure id="idbyname-chord-screen1">
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/idbyname-chords.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the program.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+
+<para>The purpose of this exercise is to identify the chord being played.</para>
+<para>Start the exercise by pressing <guibutton>New</guibutton>. Solfege will then play a chord, and you should identify it by clicking one of the buttons below the empty staff line.</para>
+
+<para>If you guess correct, the program will display the chord on the staff line and flash the message "Correct" in the status bar. Then you can click the button <guibutton>New</guibutton> to get a new question.</para>
+
+<para>If you guess wrong the message "Wrong" will be displayed in the status
+bar.</para>
+
+</sect1>

@@ -1,0 +1,11 @@
+# GNU Solfege
+# Copyright (C) 2005, 2006, 2011 Tom Cato Amundsen
+
+header {
+    lesson_id = "1b3b7f95-108a-4bda-b3b0-6a29da71b6fb"
+    module=rhythm
+    rhythm_elements=0, 1, 2, 3, 5, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21
+    title = _("Rhythms (difficult)")
+    bpm=66
+    not_start_with_rest=yes
+}

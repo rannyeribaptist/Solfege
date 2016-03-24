@@ -1,0 +1,85 @@
+<sect1 id='idtone'>
+<title>Identify tone</title>
+<informalfigure id="idtone-screen1">
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/idtone.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the program.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+
+<para>
+This is a combined tone memory and interval exercise. Some people believe this
+kind of exercise can give you perfect pitch (absolute pitch), but I don't
+believe so.
+</para>
+
+<para>The basics are: the program play a tone and you must identify it by
+comparing it with the last tone played for you.
+</para>
+
+<para>To get you started the program will play one tone and display its name on
+the status bar. You identify the tones by clicking on the piano keyboard or
+using the keyboard shortcuts that are the letters written on each key.
+</para>
+
+<para>Right click on the piano keyboard to hear a note without actually
+guessing it. (Some will call that cheating....)</para>
+
+<para>Solfege have a set of exercises that you can find by clicking
+“Identify tone” on the front page. You should start with the first
+exercise, and move to the next each time you can practise from some
+minutes and still have quite a good score, for example 96% correct.</para>
+
+<sect2 id='idtone-manual-conf'>
+<title>Manual configuration</title>
+
+<para>You can configure this exercise as you like if you select select
+“Configure yourself” front the default front page.</para>
+
+<para>There are several ways you can use this exercise. Personally, I have not used this exercise very much, and the sections below are only suggestions. 
+</para>
+
+<sect3 id='idtone-note-by-note'>
+<title>Note by note</title>
+<para>
+Start with only the notes c-d-e at weight 1. When your score is at least 96%
+correct, you add the tone f and continue. Add one new tone until you practise
+with all 12 tones. Doing this is the same as using the predefined exercises and
+following the instructions in the start of this chapter.
+</para>
+</sect3>
+
+<sect3 id='idtone-heavy-a'>
+<title>Heavy A</title>
+
+<para>Configure with the tone a at weight 11 (or higher) and the rest of the tones at weight 1. This way the program will play the tone a very often, so you will remember the tone, and then you use a as a reference tone to identify the other tones. When you have practised a while, you can reduce the weight of a to make the exercise harder.</para>
+</sect3>
+
+<sect3 id='idtone-config'>
+<title>Config</title>
+
+<para>If run from “Configure yourself”, on the top of the config page you tell
+the program how important the different tones are. If you for example give the
+tone a 11 points and the rest 1 point each, then (11+11*1)/11*100 = 50% of the
+random tones will be an a.</para>
+
+<para>Below that you select what octaves the random tones can be from.</para>
+
+<para>Then you can select if Solfege should give you a new question
+automatically when you have solved the old.</para>
+
+<para>In the frame below you can set some pretty self explaining options about
+what happens if you answer wrong.</para>
+
+<para>The keyboard shortcuts can be configured from the 
+<link linkend='preferences-window'>preferences window</link>.
+</para>
+</sect3>
+</sect2>
+</sect1>

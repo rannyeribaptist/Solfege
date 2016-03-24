@@ -1,0 +1,22 @@
+<sect2>
+<title>Configuration</title>
+<para>
+ On the config page of the exercise, there is a combo box where you can
+ select different ways to answer the question. Currently there is a piano,
+ guitar, bass and a few types of accordion in addition to the default
+ buttons interface. Below is a screenshot showing the piano interface.
+</para>
+<informalfigure>
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/id-interval-piano.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the program practising intervals using the buttons interface.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+
+</sect2>

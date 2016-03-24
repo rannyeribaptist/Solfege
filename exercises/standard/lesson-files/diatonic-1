@@ -1,0 +1,35 @@
+# Solfege - free ear training software
+# Copyright (C) 2001, 2002, 2003, 2004, 2005  Giovanni Chierico
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "ccb077bd-0b00-4998-9a74-b9ce3da2351f"
+    module = idproperty
+    flavour = "chord"
+    title = _("Diatonic chords")
+}
+
+##################################################
+question {
+ name = _i("chord|maj7")
+ chord("c' e' g' b'")
+}
+
+##################################################
+question {
+ name = _i("chord|m7")
+ chord("c' ees' g' bes'")
+}
+
+##################################################
+question {
+ name = _i("chord|7")
+ chord("c' e' g' bes'")
+}
+
+##################################################
+question {
+ name = _i("chord|m7b5")
+ chord("c' ees' ges' bes'")
+}
+

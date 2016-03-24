@@ -1,0 +1,29 @@
+<sect1 id='melodicinterval'>
+<title>Melodic interval</title>
+<informalfigure>
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/melodicinterval-buttons.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the program practising intervals using the buttons interface.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+
+<para>This exercise creates random intervals and you should try to identify them.</para>
+
+<para>If you are using the buttons interface, then you can right-click on
+the buttons to hear the interval they represent.</para>
+
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+    href="interval-config-help.xml"/>
+
+<!--
+<sect2>
+<title>Config</title>
+<para>You can give detailed instructions on what intervals and how many of them to be asked. The statistics are only recorded when you practise only one interval.</para>
+</sect2>-->
+</sect1>

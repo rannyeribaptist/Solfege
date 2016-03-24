@@ -1,0 +1,31 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "0c201240-23db-11db-8682-8558e4e4f94s"
+  module = idbyname
+  random_transpose = yes
+  title = _("Hungarian Scale and its modes - recognize structure")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/hun"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 180/4
+
+question { name = hun1s  voice(hun1la) }
+question { name = hun2s  voice(hun2la) }
+question { name = hun3s  voice(hun3la) }
+question { name = hun4s  voice(hun4la) }
+question { name = hun5s  voice(hun5la) }
+question { name = hun6s  voice(hun6la) }
+question { name = hun7s  voice(hun7la) }
+

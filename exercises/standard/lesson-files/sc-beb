@@ -1,0 +1,29 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "098bf9e0-23db-11db-8682-8558e4e4f94b"
+  module = idbyname
+  random_transpose = yes
+  title = _("Bebop Scales")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 5
+  filldir = horiz
+  help = "scales"
+  theory = "scales/beb"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question { name = beb1n  voice(beb1l) }
+question { name = beb2n  voice(beb2l) }
+question { name = beb3n  voice(beb3l) }
+question { name = beb4n  voice(beb4l) }
+question { name = beb5n  voice(beb5l) }
+

@@ -1,0 +1,119 @@
+\input texinfo
+@setfilename AUTHORS.info
+@settitle AUTHORS
+@node Top, , , (dir)
+@chapter AUTHORS - who wrote what on GNU Solfege?
+
+@itemize @bullet
+
+@item Davide Bonetti
+
+Scale lesson files and a document about scales.
+
+@item Tom Eykens
+
+Updated nl.po and translated the user's manual.
+
+@item @email{etienne.bourrez@@free.fr, Etienne Bourrez}
+
+Translated the users manual and fr.po
+
+@item @email{linux@@thibaut-cousin.net, Thibaut Cousin}
+
+Spec file for SuSE 8.2.
+
+@item @email{M.K.Becker@@t-online.de, Michael Becker}
+
+Two lessonfiles: volkslieder1 and volkslieder2
+
+@item @email{olitech@@ifrance.com, Olivier Ahn}
+
+Small update to fr.po
+
+@item @email{danton67@@mailandnews.com, Daniel Tonda Castillo}
+
+Updated @file{es.po} file and added @file{es_MX.po}. Compiled binaries
+for RedHat 8.0. Testing and bugreporting.
+
+@item David Asorey Álvares and @email{die@@die.com.fr, Diego Duchowney}
+
+Spannish translations.
+
+@item @email{david@@coent.freeserve.co.uk, David Coe}
+
+Rpm spec file cleanup. Made it more portable and let us junk
+create_fileslist.py.
+
+@item @email{dpetrou@@ece.cmu.edu, David Petrou}
+
+Testing and portability fixes for FreeBSD
+
+@item @email{mike@@lic145.kiev.ua, Michael Shigorin}
+
+Russian translations.
+
+@item @email{keld@@dkuug.dk, Keld Simonsen}
+
+Danish translations.
+
+@item Steve Lee
+
+Ported @file{winmidi.c} to gcc.
+
+@item @email{jcl@@cs.brown.edu, Joe Lee}
+
+Wrote @file{winsynth.py} and @file{winmidi.c} that talk to the
+soundcard on MS Windows.
+
+@item @email{freddy@@dusktilldawn.nl, F(r)eddy SpierenBU(r)G}
+
+Dutch translations.
+
+@item @email{fchecconi@@libero.it, Fabio Checconi}
+
+The dsp code are borrowed from Fabio Checconi's GPL'ed guituner
+program. The @file{fft.c} file was originally written by
+@email{richard@@tartarus.org, Richard Boulton} and
+@email{suckfish@@ihug.co.nz, Ralph Loader}, but almost
+completely rewritten by Checconi.
+
+@item @email{chierico@@writeme.com, Giovanni Chierico}
+
+Some lessonfiles.
+
+@item @email{orloff@@in2p3.fr, Jean Orloff}
+
+French translations.
+
+@item @email{macolori@@tin.it, Mauro Colorio}
+
+Italian translations.
+
+@item @email{Oliver.Vollmer@@epost.de, Oliver Vollmer}
+
+Toolbar icons, testing, comments, lots of bug reports and feedback,
+german translations. He made the first rpm spec file and has
+helped to improve it.
+
+@item GNU Lilypond authors
+
+The pixmaps used to display music is generated from the feta font
+used by GNU Lilypond, copyright Han-Wen Nienhuys, Jan Nieuwenhuizen
+and others. Lilypond is the GNU project music typesetter, if you want high
+quality music typesetting, check it out at
+@uref{http://www.lilypond.org}. Only the generated pixmaps for the font
+are included in GNU Solfege, you should check the source tarball for
+GNU Lilypond for the source code. This because GNU Solfege only use
+a few of the fonts and I had to to some manual tweaking to use
+the fonts. I got permission to do this from Han-Wen Nienhuys.
+
+@item Jan Baumgart (Folkwang Universitaet der Kuenste)
+
+The solmisation exercise module.
+
+@item @email{tca@@gnu.org, Tom Cato Amundsen}
+
+Main author.
+@end itemize
+@bye
+

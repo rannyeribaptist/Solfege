@@ -1,0 +1,67 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "4f24b890-d6cc-11da-8948-7c9a86d4310c"
+  module = idbyname
+  random_transpose = yes
+  title = _("Melodic Minor Scale and its modes - patterns")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/mel"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question { name = mel1n  set = 0 voice(mel1lp0) }
+question { name = mel1n  set = 1 voice(mel1lp1) }
+question { name = mel1n  set = 2 voice(mel1lp2) }
+question { name = mel1n  set = 3 voice(mel1lp3) }
+question { name = mel1n  set = 4 voice(mel1lp4) }
+
+question { name = mel2n  set = 0 voice(mel2lp0) }
+question { name = mel2n  set = 1 voice(mel2lp1) }
+question { name = mel2n  set = 2 voice(mel2lp2) }
+question { name = mel2n  set = 3 voice(mel2lp3) }
+question { name = mel2n  set = 4 voice(mel2lp4) }
+
+question { name = mel3n  set = 0 voice(mel3lp0) }
+question { name = mel3n  set = 1 voice(mel3lp1) }
+question { name = mel3n  set = 2 voice(mel3lp2) }
+question { name = mel3n  set = 3 voice(mel3lp3) }
+question { name = mel3n  set = 4 voice(mel3lp4) }
+
+question { name = mel4n  set = 0 voice(mel4lp0) }
+question { name = mel4n  set = 1 voice(mel4lp1) }
+question { name = mel4n  set = 2 voice(mel4lp2) }
+question { name = mel4n  set = 3 voice(mel4lp3) }
+question { name = mel4n  set = 4 voice(mel4lp4) }
+
+question { name = mel5n  set = 0 voice(mel5lp0) }
+question { name = mel5n  set = 1 voice(mel5lp1) }
+question { name = mel5n  set = 2 voice(mel5lp2) }
+question { name = mel5n  set = 3 voice(mel5lp3) }
+question { name = mel5n  set = 4 voice(mel5lp4) }
+
+question { name = mel6n  set = 0 voice(mel6lp0) }
+question { name = mel6n  set = 1 voice(mel6lp1) }
+question { name = mel6n  set = 2 voice(mel6lp2) }
+question { name = mel6n  set = 3 voice(mel6lp3) }
+question { name = mel6n  set = 4 voice(mel6lp4) }
+
+question { name = mel7n  set = 0 voice(mel7lp0) }
+question { name = mel7n  set = 1 voice(mel7lp1) }
+question { name = mel7n  set = 2 voice(mel7lp2) }
+question { name = mel7n  set = 3 voice(mel7lp3) }
+question { name = mel7n  set = 4 voice(mel7lp4) }
+
+question { name = mel8n  voice(mel8l) }
+

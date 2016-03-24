@@ -1,0 +1,31 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "4f1e9e10-d6cc-11da-89a8-7c9a86d4310h"
+  module = idbyname
+  random_transpose = yes
+  title = _("Major Scale and its modes - arpeged by fourths")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/maj"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question { name = maj1n  voice(maj1lf) }
+question { name = maj2n  voice(maj2lf) }
+question { name = maj3n  voice(maj3lf) }
+question { name = maj4n  voice(maj4lf) }
+question { name = maj5n  voice(maj5lf) }
+question { name = maj6n  voice(maj6lf) }
+question { name = maj7n  voice(maj7lf) }
+

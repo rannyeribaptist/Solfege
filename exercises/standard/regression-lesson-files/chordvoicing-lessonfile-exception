@@ -1,0 +1,22 @@
+# Solfege - ear training for GNOME
+# Copyright (C) 2001, 2002, 2003, 2004, 2005  Giovanni Chierico
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "e005bd0f-bae9-4ce7-89a6-35b056404cf3"
+        module = chordvoicing
+        title = "LessonfileException: wrong musictype in 1 of 2 questions"
+}
+
+##################################################
+question {
+ name = "major 7+ 5-"
+ set=0
+ wavfile("c' e' ges' b'")
+}
+question {
+ name = "major"
+ set=0
+ chord("c' e' g")
+}
+

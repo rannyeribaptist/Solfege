@@ -1,0 +1,19 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "5007b481-f80a-4bd3-be0f-afb8fb4b19b9"
+    module = idproperty
+    flavour = "chord"
+    random_transpose = accidentals, -5, 5
+    title = _("Minor 7 and dominant 7 chords with inversions")
+}
+question { name=_i("chord|m7") inversion=0 chord("c' es' g' bes'") }
+question { name=_i("chord|m7") inversion=1 chord("es' g' bes' c''") }
+question { name=_i("chord|m7") inversion=2 chord("g' bes' c'' es''") }
+question { name=_i("chord|m7") inversion=3 chord("bes c' es' g'") }
+question { name=_i("chord|7") inversion=0 chord("c' e' g' bes'") }
+question { name=_i("chord|7") inversion=1 chord("e' g' bes' c''") }
+question { name=_i("chord|7") inversion=2 chord("g' bes' c'' e''") }
+question { name=_i("chord|7") inversion=3 chord("bes c' e' g'") }

@@ -1,0 +1,133 @@
+# Solfege - free ear training software
+# Copyright (C) 2007, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+  lesson_id = "e4a0749b-51ce-4806-8154-8311c0fb34e4"
+  title = _("Triads, easy")
+  module = singanswer
+  version = "3.9.2"
+}
+# minor second in the bottom
+question {
+  question_text = _("Sing the three tones")
+  music = voice("< c'2 des' e' >")
+  answer = voice("c'8 des' e'")
+}
+question {
+  question_text = _("Sing the three tones")
+  music = voice("< c'2 des' f' >")
+  answer = voice("c'8 des' f'")
+}
+question {
+  question_text = _("Sing the three tones")
+  music = voice("< c'2 des' fis' >")
+  answer = voice("c'8 des' fis'")
+}
+question {
+  question_text = _("Sing the three tones")
+  music = voice("< c'2 des' g' >")
+  answer = voice("c'8 des' g'")
+}
+question {
+  question_text = _("Sing the three tones")
+  music = voice("< c'2 des' gis' >")
+  answer = voice("c'8 des' gis'")
+}
+question {
+  question_text = _("Sing the three tones")
+  music = voice("< c'2 des' a' >")
+  answer = voice("c'8 des' a'")
+}
+
+# major second in the bottom
+question {
+  question_text = _("Sing the three tones")
+  music = voice("< c'2 d' e' >")
+  answer = voice("c'8 d' e'")
+}
+question {
+  question_text = _("Sing the three tones")
+  music = voice("< c'2 d' f' >")
+  answer = voice("c'8 d' f'")
+}
+question {
+  question_text = _("Sing the three tones")
+  music = voice("< c'2 d' fis' >")
+  answer = voice("c'8 d' fis'")
+}
+question {
+  question_text = _("Sing the three tones")
+  music = voice("< c'2 d' g' >")
+  answer = voice("c'8 d' g'")
+}
+question {
+  question_text = _("Sing the three tones")
+  music = voice("< c'2 d' gis' >")
+  answer = voice("c'8 d' gis'")
+}
+question {
+  question_text = _("Sing the three tones")
+  music = voice("< c'2 d' a' >")
+  answer = voice("c'8 d' a'")
+}
+
+# minor second in the top
+question {
+  question_text = _("Sing the three tones")
+  music = voice("< c'2 dis' e' >")
+  answer = voice("c'8 dis' e'")
+}
+question {
+  question_text = _("Sing the three tones")
+  music = voice("< c'2 e' f' >")
+  answer = voice("c'8 e' f'")
+}
+question {
+  question_text = _("Sing the three tones")
+  music = voice("< c'2 f' ges' >")
+  answer = voice("c'8 f' ges'")
+}
+question {
+  question_text = _("Sing the three tones")
+  music = voice("< c'2 fis' g' >")
+  answer = voice("c'8 fis' g'")
+}
+question {
+  question_text = _("Sing the three tones")
+  music = voice("< c'2 g' as' >")
+  answer = voice("c'8 g' as'")
+}
+question {
+  question_text = _("Sing the three tones")
+  music = voice("< c'2 gis' a' >")
+  answer = voice("c'8 gis' a'")
+}
+
+# major second in the top
+question {
+  question_text = _("Sing the three tones")
+  music = voice("< c'2 es' f' >")
+  answer = voice("c'8 es' f'")
+}
+question {
+  question_text = _("Sing the three tones")
+  music = voice("< c'2 e' fis' >")
+  answer = voice("c'8 e' fis'")
+}
+question {
+  question_text = _("Sing the three tones")
+  music = voice("< c'2 f' g' >")
+  answer = voice("c'8 f' g'")
+}
+question {
+  question_text = _("Sing the three tones")
+  music = voice("< c'2 fis' gis' >")
+  answer = voice("c'8 fis' gis'")
+}
+question {
+  question_text = _("Sing the three tones")
+  music = voice("< c'2 g' a' >")
+  answer = voice("c'8 g' a'")
+}
+

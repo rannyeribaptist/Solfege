@@ -1,0 +1,37 @@
+<sect1 id='about-statistics'>
+<title>About statistics</title>
+<para>Some exercises will show some statistics for different periods of time:
+<emphasis>Session</emphasis>, <emphasis>Today</emphasis>, <emphasis>Last 7
+days</emphasis> and <emphasis>Total</emphasis>. The program uses two
+different kind of tables.</para>
+
+<informalfigure>
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/statistics.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the percentages table of a statistics page.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+<para>The first table, as shown in the screenshot above, have one
+row for each question in the lesson file. 
+<emphasis>Percent</emphasis> is the percentage of the times the question have
+been answered correctly. <emphasis>Count</emphasis> is the number of times
+the question have been asked.
+</para>
+
+<para>In the second type of table, the columns have the same labels as the rows,
+but the labels are not displayed because it will make the table
+too wide. So in the screenshot above, column 1 should have the label
+<emphasis>m3↑</emphasis> and column 2 <emphasis>M3↑</emphasis>.
+
+For the questions identified by the label of each row, each
+column tell how many times the user have answered the different possible
+answers. The bold number is the number of times the correct answer have
+been give.</para>
+
+</sect1>

@@ -1,0 +1,21 @@
+# Solfege - ear training for GNOME
+# Copyright (C) 2006 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "ea58f3c8-cf54-46b3-8d41-bb60c666d019"
+    module = singanswer
+    title = "1 of 2 questions has a missing question_text variable"
+}
+
+question {
+ question_text = "Sing the third."
+ music = rvoice("c e g")
+ answer = chord("e")
+}
+
+question {
+ music = rvoice("c e g")
+ answer = chord("e")
+}
+

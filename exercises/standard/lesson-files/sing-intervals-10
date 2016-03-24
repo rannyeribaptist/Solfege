@@ -1,0 +1,13 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    module=singinterval
+    replaces = "409c99fd262f396fb64099f6d5992ff3c7a8ca0b"
+    ask_for_intervals_0=-15, -16, 15, 16
+    title = _("Tenths")
+    lesson_id = "4cc11f29-7ced-4f05-9b8b-d24a9ee00464"
+    test = "3x"
+    test_requirement = "90%"
+}

@@ -1,0 +1,45 @@
+body {
+ max-width: 35em;
+ padding-left: 3em;
+ line-height: 140%;
+}
+.warning {
+ background: yellow;
+ border: 1px solid black;
+ -moz-border-radius: 5px;
+ padding-left: 1em;
+ padding-right: 1em;
+ padding-bottom: 1em;
+}
+.fdef {
+    font-weight: bold;
+}
+.fdef  .replaceable {
+  font-weight: normal;
+}
+p.remark {
+ background: yellow;
+ padding: 1ex;
+ border: 1px dashed red;
+}
+.programlisting {
+ padding-top: 1ex;
+ padding-bottom: 1ex;
+ background: #eeeeee;
+}
+.guimenu,
+.guisubmenu,
+.guimenuitem,
+.guibutton {
+   font-weight: bold;
+}
+.guibutton, .keycap{
+  border-left: 2px solid #cccccc;
+  border-top: 2px solid #cccccc;
+  background: #bbbbbb;
+  border-right: 2px solid #888888;
+  border-bottom: 2px solid #888888;
+  -moz-border-radius: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
+}

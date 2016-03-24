@@ -1,0 +1,28 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "098f0720-7894-11db-8682-8558e4e4f94b"
+  module = idbyname
+  random_transpose = yes
+  title = _("Scales with 6 notes")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/modes"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question { name = who1n  voice(who1l) }
+question { name = aug1n  voice(aug1l) }
+question { name = aug2n  voice(aug2l) }
+question { name = blu1n  voice(blu1l) }
+

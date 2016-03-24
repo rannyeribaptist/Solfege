@@ -1,0 +1,33 @@
+<sect1 id='dictation'>
+<title>Dictation</title>
+<informalfigure id="dictation-screen1">
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/dictation.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the program running the dictation exercise.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+
+<para>This exercise is called the dictation exercise, but if the necessary
+lesson files are written it can be used in several ways:
+<itemizedlist>
+<listitem><para>You can let Solfege play some music for you that you are
+supposed to write down on paper. Click on the buttons with a quarter note
+pixmap to repeat smaller parts of the music. You have to click on the Show
+button and check your notes yourself to see if you made any
+mistakes.</para></listitem>
+
+<listitem><para>You can use this exercise to practise sight singing: When you
+start the exercise, press Show and then try to sing the music. Then you can use
+the Play the whole music button or the quarter note buttons to let the program
+play the music. You have to decide yourself if you think you
+succeeded.</para></listitem>
+</itemizedlist>
+</para>
+
+</sect1>

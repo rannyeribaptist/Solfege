@@ -1,0 +1,25 @@
+# Solfege - ear training for GNOME
+# Copyright (C) 2006  Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+element whole { label = "Whole" }
+element half { label = "Half" }
+
+header {
+    lesson_id = "f22975ed-db6c-43bc-8275-e055e5d54fbe"
+    module = elembuilder
+    title = "Bad tonic"
+    elements = auto
+}
+
+question {
+ name = "Dur"
+ elements = whole, whole, half, whole, whole, whole, half
+ music = rvoice("c d e f g a b c")
+}
+question {
+ name = "Dorian"
+ elements = whole, half, whole, whole, whole, half, whole
+ music = rvoice("d e f g a b c d")
+ tonic = chord("c SDFASDF")
+}

@@ -1,0 +1,37 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "4f2f66f0-5555-11da-89a8-7c9a86d4310c"
+  module = idbyname
+  random_transpose = yes
+  title = _("Pentatonic Major Scale and its modes")
+  questions_selectable = yes
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  at_question_start = show
+  fillnum = 5
+  filldir = horiz
+  help = "scales"
+  theory = "scales/pen"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question {set = 0  name = pen1n  voice(pen1c) }
+question {set = 0  name = pen2n  voice(pen2c) }
+question {set = 0  name = pen3n  voice(pen3c) }
+question {set = 0  name = pen4n  voice(pen4c) }
+question {set = 0  name = pen5n  voice(pen5c) }
+
+question {set = 1  name = pen1n  voice(pen1l) }
+question {set = 1  name = pen2n  voice(pen2l) }
+question {set = 1  name = pen3n  voice(pen3l) }
+question {set = 1  name = pen4n  voice(pen4l) }
+question {set = 1  name = pen5n  voice(pen5l) }
+

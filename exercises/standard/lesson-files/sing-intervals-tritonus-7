@@ -1,0 +1,13 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    module=singinterval
+    replaces = "fddc8cef4bf8e2ffbb0d915378c860f629ea8222"
+    ask_for_intervals_0=-6, -10, -11, 6, 10, 11
+    title = _("Tritone and sevenths")
+    lesson_id = "8a2fbb81-16e1-4673-8557-5c43af96253f"
+    test = "3x"
+    test_requirement = "90%"
+}

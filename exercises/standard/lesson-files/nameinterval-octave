@@ -1,0 +1,12 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "5926b68d-27f7-4c65-aa89-cb1fa8f38733"
+    module = nameinterval
+    title = _("Octaves")
+    intervals = p8, a8, d8
+    tones = "b", "f''"
+    theory = "theory-intervals"
+}

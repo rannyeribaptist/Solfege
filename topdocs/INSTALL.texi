@@ -1,0 +1,101 @@
+\input texinfo @c vim: set textwidth=72:
+@setfilename INSTALL.info
+@include topdocs/defs.texi
+@settitle INSTALL
+@node Top, , , (dir)
+
+@contents
+
+@chapter INSTALL - how to compile and install GNU Solfege @value{SOLFEGEVERSION} on a GNU like system
+
+This file contains info on how to build and install GNU Solfege.
+For run-time info, check the README file and the man page.
+
+The homepage for GNU Solfege, @uref{http://www.solfege.org},
+might also be of interest.
+
+@section Download
+
+@subsection Source code
+The latest version is available from
+@uref{http://sourceforge.net/project/showfiles.php?group_id=1465}.
+
+The source code is also available from the GNU ftp sites and their mirrors:
+@uref{ftp://alpha.gnu.org/gnu/solfege} and 
+@uref{ftp://ftp.gnu.org/gnu/solfege}.
+
+Solfege has a bzr repository at @uref{http://solfege.org/bzr}.
+
+@subsection Precompiled binaries
+
+Precompiled binaries are made available for some releases. I build
+the windows installer, a linux distribution neutral autopackage
+for i386 computers and the debian package myself. But I am
+depending on users to provide binaries for other operating systems. The
+debian package is available directly from @uref{http://www.debian.org}.
+The rest are available from Sourceforge:
+@uref{http://sourceforge.net/project/showfiles.php?group_id=1465}.
+
+@section Requirements
+
+The requirements are listed in the @file{README} file.
+
+@section Configuring and compiling
+
+@example
+./configure
+make
+su -c "make install"
+@end example
+
+should work, and will install into
+
+@example
+  /usr/local/bin
+  /usr/local/share
+  /usr/local/lib
+  /usr/local/etc/solfege
+@end example
+
+On FreeBSD you can use gmake:
+
+@example
+./configure
+gmake
+su -c "gmake install"
+@end example
+
+Use the @option{--prefix} and @option{--sysconfdir} command line options
+to install elsewhere. For example to install in your home directory:
+
+@example
+./configure --prefix=$HOME/usr --sysconfdir=$HOME/etc
+make 
+make install
+@end example
+
+If you just want to run Solfege without installing, do this:
+@example
+./configure
+make
+./solfege.py
+@end example
+
+The @command{configure} script can be given a number of options to
+enable and disable various features. Some of them are described below.
+For a complete list, type:
+
+@example
+./configure --help
+@end example
+
+@subsection @option{--disable-pygtk-test}
+Do not test for PyGTK, assume it is installed. Use this option if you know
+the package is installed, but the configure script still cannot detect
+it.
+
+@subsection @option{--disable-oss-sound}
+Use this if you are compiling on an OS that don't have the OSS.
+The default is @option{--enable-oss-sound}.
+
+@bye

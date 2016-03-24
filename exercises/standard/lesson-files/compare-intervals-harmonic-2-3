@@ -1,0 +1,13 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+
+header {
+    module=compareintervals
+    title = _("Seconds and thirds")
+    theory = "theory-intervals"
+    lesson_id = "6a329978-af6d-41ab-942a-f6e9da0c0948"
+    first_interval_type = harmonic
+    last_interval_type = harmonic
+    first_interval = 1, 2, 3, 4
+    last_interval = 1, 2, 3, 4
+}

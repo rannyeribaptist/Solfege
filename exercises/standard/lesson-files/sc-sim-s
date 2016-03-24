@@ -1,0 +1,29 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "4f294c70-d6cc-11da-89a8-7c9a86d4310s"
+  module = idbyname
+  random_transpose = yes
+  title = _("Symmetric scales - recognize structure")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 5
+  filldir = horiz
+  help = "scales"
+  theory = "scales/sim"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 180/4
+
+question { name = dim1s  voice(dim1la) }
+question { name = dim2s  voice(dim2la) }
+question { name = who1s  voice(who1la) }
+question { name = aug1s  voice(aug1la) }
+question { name = aug2s  voice(aug2la) }
+

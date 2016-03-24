@@ -1,0 +1,36 @@
+NAME
+   lessonfile_editor - lesson file editor for GNU Solfege
+
+SYNOPSIS
+   lessonfile_editor [filename]
+
+DESCRIPTION
+
+   Program to edit lesson files used by GNU Solfege. This first version
+   of the program only can edit lesson files for the chord exercise.
+
+OPTIONS
+
+  The program take no options.
+
+BUGS
+
+   Sure.
+
+
+COPYRIGHT
+
+   GNU Solfege is Copyright \[char169] 1999, 2000, 2001, 2002, 2003, 2004,
+   2005 by Tom Cato Amundsen <tca\[at]gnu.org>.
+
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or (at
+   your option) any later version.
+
+
+AUTHOR
+
+   Main author of GNU Solfege and this manual page is Tom Cato Amundsen
+   <tca\[at]gnu.org>. For more details, read the AUTHORS file from the
+   source tarball.

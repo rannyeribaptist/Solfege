@@ -1,0 +1,7 @@
+﻿# Solfege - ear training for GNOME
+# Copyright (C) 2006  Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+element I { label = "label-I" }
+element II { label = "label-II" }
+

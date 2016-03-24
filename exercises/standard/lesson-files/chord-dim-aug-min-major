@@ -1,0 +1,15 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "aa89469c-171c-47f4-8432-2036856536a4"
+    module = idbyname
+    random_transpose = accidentals, -5, 5
+    title = _("Minor, major, diminished and augmented chords")
+    lesson_heading = _("Identify the chord")
+    test = "3x"
+    test_requirement = "90%"
+}
+include("chord-min-major")
+include("chord-dim-aug")

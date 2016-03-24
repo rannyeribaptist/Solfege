@@ -1,0 +1,12 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    module=singinterval
+    ask_for_intervals_0=-5, -7, -12, 5, 7, 12
+    title = _("Fourths, fifths and octave")
+    lesson_id = "779138f6-050a-45d9-8477-d82b5bde0c94"
+    test = "3x"
+    test_requirement = "90%"
+}

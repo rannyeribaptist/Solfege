@@ -1,0 +1,31 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "06b00310-23db-11db-8682-8558e4e4f94q"
+  module = idbyname
+  random_transpose = yes
+  title = _("Neapolitan Scale and its modes - recognize grade")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/nea"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question { name = "I"    voice(nea1l) }
+question { name = "II"   voice(nea2l) }
+question { name = "III"  voice(nea3l) }
+question { name = "IV"   voice(nea4l) }
+question { name = "V"    voice(nea5l) }
+question { name = "VI"   voice(nea6l) }
+question { name = "VII"  voice(nea7l) }
+

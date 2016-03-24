@@ -1,0 +1,32 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "4f24b890-d6cc-11da-89a8-7c9a86d4310q"
+  module = idbyname
+  random_transpose = yes
+  title = _("Melodic Minor Scale and its modes - recognize grade")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/mel"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question { name = "I"    voice(mel1l) }
+question { name = "II"   voice(mel2l) }
+question { name = "III"  voice(mel3l) }
+question { name = "IV"   voice(mel4l) }
+question { name = "V"    voice(mel5l) }
+question { name = "VI"   voice(mel6l) }
+question { name = "VII"  voice(mel7l) }
+question { name = mel8n  voice(mel8l) }
+

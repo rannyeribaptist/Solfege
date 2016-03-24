@@ -1,0 +1,75 @@
+# Solfege - free ear training software
+# Copyright (C) 2008, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "38e95ae5-aa8d-4265-ab48-b9c3913eddf1"
+    replaces = "17d6378c798d02c57819d7614b197de040dd264c"
+    module = idbyname
+    help = "idbyname-cadences"
+    have_music_displayer = yes
+    stafflines = 2
+    music_displayer_stafflines = 2
+    fillnum = 2
+    random_transpose = accidentals, -5, 5
+    title = _("Cadences")
+    #lesson_heading = _("Identify the chord")
+    test = "6x"
+    test_requirement = "90%"
+}
+
+# The music that is played before the question to establish
+# the tonic.
+t = "c16 d e f g a b c'"
+
+question {
+ # Perfect because:
+ # * V and I are root position chords
+ # * soprano voice ends on the tonic note
+ name = _("Perfect authentic cadence")
+ music = music("""\staff { %s <b'4 g' d' g> <c'' g' e' c> }""" % t)
+ vmusic = music("""
+ \staff { <b' g'> <c'' g'> }
+ \staff { \clef bass <d' g> <e' c> }
+ """)
+}
+
+question {
+ # Imperfect cadence permit inversions, or let the soprano voice end on
+ # another tone than the tonic.
+ # This is imperfect because V6 and not V
+ name = _("Imperfect authentic cadence")
+ music = music("""\staff { %s <d'4 g d b,> <c' g e c> }""" % t)
+ vmusic = music("""
+ \staff {            <g d'> <g c'>  }
+ \staff { \clef bass <b, d> <c e> }
+ """)
+}
+
+question {
+ name = _("Plagal cadence")
+ music = music("""\staff{ %s <c''4 a' f' f> <c'' g' e' c> }""" % t)
+ vmusic = music("""
+ \staff{ <c'' a'> <c'' g'> }
+ \staff{ \clef bass <f' f> <e' c>
+ """)
+}
+
+question {
+ name = _("Deceptive cadence")
+ music = music("""\staff { %s <b'4 g' d' g> <c'' e' c' a> }""" % t)
+ vmusic = music("""
+ \staff {            <b' g'> <c'' e'> }
+ \staff { \clef bass <d' g>  <c' a>   }
+ """)
+}
+
+question {
+ # Half cadence is any cadence that ends on V.
+ name = _("Half cadence")
+ music = music("""\staff { %s <g'4 e' c' c> <g' d' b g> }""" % t)
+ vmusic = music("""
+ \staff {            <g' e'> <g' d'> }
+ \staff { \clef bass <c' c>  <b g>   }
+ """)
+}

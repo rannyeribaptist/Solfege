@@ -1,0 +1,45 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2011  Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+include("include/interval-elements")
+
+include("include/sc-master")
+
+header {
+  lesson_id = "e413101c-93c0-4567-4668-17abf6d70749"
+  module = elembuilder
+  title = _("Bebop Scales - enter structure")
+  lesson_heading = _("Enter the structure of the mode in number of half-tones")
+  elements = auto
+  have_music_displayer = yes
+  questions_selectable = yes
+  have_repeat_slowly_button = yes
+  random_transpose = yes
+  help = "scales"
+  theory = "scales/beb"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+
+question { name = beb1n
+    elements = int2, int2, int1, int2, int1, int1, int2, int1
+    voice(beb1ca)
+}
+question { name = beb2n
+    elements = int2, int2, int1, int2, int2, int1, int1, int1
+    voice(beb2ca)
+}
+question { name = beb3n
+    elements = int2, int1, int1, int1, int2, int2, int1, int2
+    voice(beb3ca)
+}
+question { name = beb4n
+    elements = int2, int1, int2, int2, int1, int1, int2, int1
+    voice(beb4ca)
+}
+question { name = beb5n
+    elements = int1, int2, int2, int1, int1, int1, int2, int2
+    voice(beb5ca)
+}
+

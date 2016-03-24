@@ -1,0 +1,66 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "4f1e9e10-d6cc-114a-89a8-7c9a86d4310c"
+  module = idbyname
+  random_transpose = yes
+  title = _("Major Scale and its modes - patterns")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/maj"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question { name = maj1n  set = 0 voice(maj1lp0) }
+question { name = maj1n  set = 1 voice(maj1lp1) }
+question { name = maj1n  set = 2 voice(maj1lp2) }
+question { name = maj1n  set = 3 voice(maj1lp3) }
+question { name = maj1n  set = 4 voice(maj1lp4) }
+
+question { name = maj2n  set = 0 voice(maj2lp0) }
+question { name = maj2n  set = 1 voice(maj2lp1) }
+question { name = maj2n  set = 2 voice(maj2lp2) }
+question { name = maj2n  set = 3 voice(maj2lp3) }
+question { name = maj2n  set = 4 voice(maj2lp4) }
+
+question { name = maj3n  set = 0 voice(maj3lp0) }
+question { name = maj3n  set = 1 voice(maj3lp1) }
+question { name = maj3n  set = 2 voice(maj3lp2) }
+question { name = maj3n  set = 3 voice(maj3lp3) }
+question { name = maj3n  set = 4 voice(maj3lp4) }
+
+question { name = maj4n  set = 0 voice(maj4lp0) }
+question { name = maj4n  set = 1 voice(maj4lp1) }
+question { name = maj4n  set = 2 voice(maj4lp2) }
+question { name = maj4n  set = 3 voice(maj4lp3) }
+question { name = maj4n  set = 4 voice(maj4lp4) }
+
+question { name = maj5n  set = 0 voice(maj5lp0) }
+question { name = maj5n  set = 1 voice(maj5lp1) }
+question { name = maj5n  set = 2 voice(maj5lp2) }
+question { name = maj5n  set = 3 voice(maj5lp3) }
+question { name = maj5n  set = 4 voice(maj5lp4) }
+
+question { name = maj6n  set = 0 voice(maj6lp0) }
+question { name = maj6n  set = 1 voice(maj6lp1) }
+question { name = maj6n  set = 2 voice(maj6lp2) }
+question { name = maj6n  set = 3 voice(maj6lp3) }
+question { name = maj6n  set = 4 voice(maj6lp4) }
+
+question { name = maj7n  set = 0 voice(maj7lp0) }
+question { name = maj7n  set = 1 voice(maj7lp1) }
+question { name = maj7n  set = 2 voice(maj7lp2) }
+question { name = maj7n  set = 3 voice(maj7lp3) }
+question { name = maj7n  set = 4 voice(maj7lp4) }
+
+

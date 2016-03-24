@@ -1,0 +1,37 @@
+﻿# -*- coding: utf-8 -*-
+# Solfege - free ear training software
+# Copyright (C) 2011 Piotr Komorowski
+# License is GPL, see file COPYING
+#
+# lesson file written by Piotr A. Komorowski
+# piotr-komorowski@wp.pl
+
+header {
+    replaces = "1c869d7d8384f66b7f33d024e908943f57d0805c"
+    module = idbyname
+    have_music_displayer = yes
+    version ="3.19.8"
+    test = "4x"
+    test_requirement = "90%"
+    random_transpose = accidentals, -5, 5
+    title = _("Dominant 7 chord with inversions")
+    fillnum = 2
+}
+question {
+	name= _("root position")
+	music = chord("c' e' g' bes'")
+}
+question {
+	name = _("%i. inversion") % 1
+	music = chord("e' g' bes' c''")
+}
+question {
+	name = _("%i. inversion") % 2
+	music = chord("g' bes' c'' e''")
+}
+
+question {
+	name = _("%i. inversion") % 3
+	music = chord("bes c' e' g'")
+}
+

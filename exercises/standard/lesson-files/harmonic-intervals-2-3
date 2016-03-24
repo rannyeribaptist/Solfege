@@ -1,0 +1,13 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    module=harmonicinterval
+    intervals=1, 2, 3, 4
+    title = _("Seconds and thirds")
+    theory = "theory-intervals"
+    lesson_id = "e2dd4da5-6014-4be1-84aa-956ec8501973"
+    test = "3x"
+    test_requirement = "90%"
+}

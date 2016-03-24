@@ -1,0 +1,20 @@
+<sect1 id='singinterval'>
+<title>Sing interval</title>
+<informalfigure>
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/singinterval.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the sing interval exercise.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+<para>In this exercise, Solfege will display one or more intervals, and you should sing them. Unfortunately, it is not yet possible to sing into a microphone and let Solfege decide if you sing correct, so you have to decide yourself if you are correct or wrong.</para>
+<sect2 id='singinterval-config'>
+<title>Config</title>
+<para>The program will try to make a question where all tones are within the range the user can sing, as configured in the <link linkend='preferences-window'>preferences window</link>. Sometimes, it is not possible to keep the question within this range, for example when the exercise is configured to create many intervals where all intervals go upwards.</para>
+</sect2>
+</sect1>

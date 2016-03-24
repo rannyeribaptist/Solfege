@@ -1,0 +1,72 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2011  Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+include("include/mma-grooves")
+
+header {
+    lesson_id = "69ec8ca8-e914-4316-afca-bde813f76c84"
+    module = elembuilder
+    title = _("Harmonic prog with MMA")
+    lesson_heading = _("Enter the harmonic progression")
+    elements = auto
+    have_music_displayer = no
+}
+
+question {
+    name = rnc("I-II-V-I")
+    elements = "I", "II", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+Chord-Piano Voicing Mode=Optimal Rmove=10 Range=9
+1   C
+2   Dm
+3   G
+4   C
+""")
+}
+question {
+    name = rnc("I-IV-V-I")
+    elements = "I", "IV", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+1   C
+2   F
+3   G
+4   C
+""")
+}
+question {
+    name = rnc("I-V-III-I")
+    elements = "I", "V", "III", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+1   C
+2   G
+3   Em
+4   C
+""")
+}
+question {
+    name = rnc("I-V-IV-I")
+    elements = "I", "V", "IV", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+1   C
+2   G
+3   F
+4   C
+""")
+}
+question {
+    name = rnc("I-VI-V-I")
+    elements = "I", "VI", "V", "I"
+    music = mma(nrandom(grooves), """
+Tempo 120
+1   C
+2   Am
+3   G
+4   C
+""")
+}
+

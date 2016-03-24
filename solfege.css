@@ -1,0 +1,31 @@
+/* Solfege - ear training for GNOME
+  Copyright (C) 2000, 2001, 2002, 2003, 2004, 2006, 2013  Tom Cato Amundsen
+  License is GPL, see file COPYING
+*/
+
+
+#ProgressionNameLabel, #Feedback { font: "Sans 18" }
+#ProgressionLabelNumber { font: "Sans 12" }
+#BoldText { font: Bold }
+
+#StatisticsH1, #Heading1 { font: Sans 18 }
+#StatisticsH2, #Heading2 { font: Sans 14 }
+
+#BpmInactiveLabel { font: Sans 12 }
+#BpmActiveLabel { font: Sans Bold 12 }
+
+#DIALOGWARNING2 { background: red; }
+#DIALOGWARNING  { background: yellow; }
+
+#DEBUGWARNING {
+  background: red;
+  font: Sans Bold 24;
+}
+
+#FlashBarLabel { font: Sans 16 }
+
+#IntervalButtonsWidget GtkButton
+ {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}

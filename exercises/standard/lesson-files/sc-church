@@ -1,0 +1,33 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "098f0720-23db-6518-8682-8558e4e4f94b"
+  module = idbyname
+  random_transpose = yes
+  title = _("Church Tones")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/modes"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question { name = maj1n  voice(maj1l) }
+question { name = maj2n  voice(maj2l) }
+question { name = maj3n  voice(maj3l) }
+question { name = maj4n  voice(maj4l) }
+question { name = maj5n  voice(maj5l) }
+question { name = maj6n  voice(maj6l) }
+question { name = maj7n  voice(maj7l) }
+question { name = mel8n  voice(mel8l) }
+question { name = har1n  voice(har1l) }
+

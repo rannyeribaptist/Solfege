@@ -1,0 +1,18 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "b4e535fe-4ad9-4514-94fa-e9f468bdfd42"
+    module = idbyname
+    help = "idbyname-chords"
+    have_music_displayer = yes
+    fillnum = 2
+        random_transpose = accidentals, -5, 5
+        title = _("Minor 7 and dominant 7 chords")
+        lesson_heading = _("Identify the chord")
+        test = "6x"
+        test_requirement = "90%"
+}
+question { name=_i("chord|m7") chord("c' es' g' bes'") }
+question { name=_i("chord|7") chord("c' e' g' bes'") }

@@ -1,0 +1,27 @@
+<sect1 id='profile-manager'>
+<title>Profile Manager</title>
+<informalfigure>
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/profile-manager.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+<para>The profile manager let multiple Solfege users share a login on your
+operating system. The profiles will share the config file, but they will
+have separate statistics and test results.
+</para>
+
+<para>The profile manager will display at program startup if
+more than one profile exists. You can also access the profile manager
+by selecting <guimenuitem>Profile Manager</guimenuitem> from the
+<guimenu>File</guimenu>.
+</para>
+
+<para>Check <emphasis>Don't ask at startup</emphasis> if you don't
+want to see the profile manager at startup. It will then remember
+the last profile selected when you close the profile manager and
+start the program with that profile.</para>
+</sect1>

@@ -1,0 +1,12 @@
+# GNU Solfege
+# Copyright (C) 2005, 2010, 2011 Tom Cato Amundsen
+
+header {
+    module=compareintervals
+    title = _("Fourths and fifths")
+    theory = "theory-intervals"
+    first_interval_type = melodic
+    last_interval_type = melodic
+    first_interval = 5, 7
+    last_interval = 5, 7
+}

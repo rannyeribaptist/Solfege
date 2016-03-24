@@ -1,0 +1,18 @@
+# Solfege - free ear training software
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "a447519f-bdd9-462b-a984-7bbd9d0d51a1"
+    module = idbyname
+    help = "idbyname-chords"
+    have_music_displayer = yes
+    fillnum = 2
+        random_transpose = accidentals, -5, 5
+        title = _("7b9 and maj79 chords")
+        lesson_heading = _("Identify the chord")
+        test = "6x"
+        test_requirement = "90%"
+}
+question { name = _i("chord|7b9") chord("c' e' g' bes' des''") }
+question { name = _i("chord|maj79") chord("c' e' g' b' d''") }

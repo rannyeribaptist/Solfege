@@ -1,0 +1,12 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    module=singinterval
+    ask_for_intervals_0=-10, -11, 10, 11
+    title = _("Sevenths")
+    lesson_id = "70eddcc5-6207-459d-9361-f6d44e489173"
+    test = "3x"
+    test_requirement = "90%"
+}

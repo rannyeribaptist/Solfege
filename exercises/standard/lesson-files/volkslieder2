@@ -1,0 +1,160 @@
+# -*- coding: iso-8859-1 -*-
+# Solfege - free ear training software
+# Copyright (C) 2003, 2004, 2005 Michael Becker
+# License is GPL, see file COPYING
+#
+# lesson file written by Michael Becker
+# M.K.Becker@t-online.de
+#
+# 0 Alle Vögel sind schon da - Heinrich Hoffmann von Fallersleben
+# 1 Alles neu macht der Mai - Hermann Adam von Kamp
+# 2 Ännchen von Tharau - Friedrich Silcher
+# 3 Ich hatt einen Kameraden - Friedrich Silcher
+# 4 Glück auf, der Steiger kommt - Volksweise aus Westfalen
+# 5 Wie lieblich schallt - Friedrich Silcher
+# 6 Es war ein König in Thule - Carl Friedrich Zelter
+# 7 Der Mond ist aufgegangen - Joh. Abraham Peter Schulz
+# 8 In einem kühlen Grunde - Friedrich Glück
+# 9 Ich weisß nicht, was soll es bedeuten - Friedrich Silcher
+
+header {
+  module = dictation
+  title = "Volkslieder 2"
+  version = "3.19.7"
+}
+
+question {
+  name = "Alle Voegel sind schon da"
+  tempo = 120/4
+  breakpoints = 4/1, 8/1
+  music = rvoice("""
+		\time 4/4
+		\key d \major
+		d'4. fis8 a4 d4 | b [d8 b] a2 | g4. a8 fis4 d | e2 d4 r |
+		a' a g g | fis [a8 fis] e2 | a4 a g g | fis [a8 fis] e2 |
+		d4. fis8 a4 d4 | b [d8 b] a2 | g4. a8 fis4 d | e2 d4 r |
+  """)
+}
+
+question {
+  name = "Alles neu macht der Mai"
+  tempo = 120/4
+  breakpoints = 4/2, 8/2, 12/2
+  music = rvoice("""
+		\time 2/4
+		\key g \major
+		[d'8 b] b4 | [c8 a] a4 | [g8 a] [b c] | [d d] d4 |
+		[d8 b] b4 | [c8 a] a4 | [g8 b] [d d] | g,4 r |
+		[a8 a] [a a] | [a b] c4 | [b8 b] [b b] | [b c] d4 |
+		[d8 b] b4 | [c8 a] a4 | [g8 b] [d d] | g,4 r |
+  """)
+}
+
+question {
+  name = "Aennchen von Tharau"
+  tempo = 150/3
+  breakpoints = 12/4, 24/4, 36/4
+  music = rvoice("""
+		\time 3/4
+		\key bes \major
+		f'4. g8 f4 | f bes bes | c4. d8 c4 | bes2 r4 |
+		a a a | c4. bes8 a4 | g4. a8 g4 | f2 r4 |
+		f f g | a f g | a a bes | c2. |
+		bes4 c d | es4. d8 c4 | bes c a | bes2. |
+  """)
+}
+
+question {
+  name = "Ich hatt einen Kameraden"
+  tempo = 80/4
+  breakpoints = 4/1, 8/1
+  music = rvoice("""
+        \partial 4
+		\time 4/4
+		\key g \major
+		 d'4 | g [b8 b] b4 a | g2 d4 [g8 a] | b4 d d c | b2 r4 [g8 a] |
+		 b4 b b a | b4. c8 d4 [c8 b] | a4 a a g | a4. b8 c4 d |
+		 b b a [a8 b] | g4 r a2 | b4 d a [a8 b] | g2 r4
+  """)
+}
+
+question {
+  name = "Glueck auf, der Steiger kommt"
+  tempo = 120/4
+  breakpoints = 15/4, 31/4
+  music = rvoice("""
+		\time 4/4
+		\key g \major
+		g'2 fis4 a | g2 r | b a4 c | b2 r4 [g8 a] |
+		b4 b b [a8 b] | c4 [a8. a16] a4 [a8 b] | c4 e e [d8 c] | d4 [b8. b16] b4 a |
+		g2 a | b4 e d c | b2 a2 | g2 r |
+  """)
+}
+
+question {
+  name = "Wie lieblich schallt"
+  tempo =120/4
+  breakpoints = 12/4, 18/4, 30/4
+  music = rvoice("""
+        \partial 8
+		\time 6/8
+		\key f \major
+		c'8 | [f g a] g4 c,8 | [g' a bes] a4 c8 | c4 a8 [c bes a] | g4. r8 [r c] | c4 a8 [c bes a] | g4. r8 r c,8|
+		bes'4 bes8 a4 f8 | d'4 d8 c4 bes8 | a4 a8 g4 g8 | f4. r8 r bes | a4 a8 g4 g8 | f4. r8 r
+  """)
+}
+
+question {
+  name = "Es war ein Koenig in Thule"
+  tempo = 100/4
+  breakpoints = 24/4
+  music = rvoice("""
+        \partial 4
+		\time 6/4
+		\key c \minor
+		g'4 | c2 c4 g4. g8 g4 | as2. es2 es4 | f2 g4 as2 f4 | g2. r4 r g |
+		c2 c4 bes2 bes4 | es,2. f2 [f8 f] | g2 as4 f2 g4 | c,1. |
+  """)
+}
+
+question {
+  name = "Der Mond ist aufgegangen"
+  tempo = 100/4
+  breakpoints = 6/1
+  music = rvoice("""
+        \partial 4
+		\time 4/4
+		\key f
+		\major
+		f'4 | g f bes a | g2 f4 a | a a d c | bes2 a4 a | a a bes a | g2 r4 f |
+		g f bes a | g2 f4 a | a a d c | bes2 a4 a | a a bes a | g g f r |
+  """)
+}
+question {
+  name = "In einem kuehlen Grunde"
+  tempo = 90/4
+  breakpoints = 12/4, 24/4
+  music = rvoice("""
+        \partial 8
+		\time 6/8
+		\key f \major
+		c'8 | a'4 a8 [a g a] | bes4 g8 e4 c8 | f4 f8 [f e f] | g4. r8 r g |
+		g4 g8 [g a bes] | c4. d,4 g8 | f4 f8 [g f g] | a4. r8 r a |
+		[a g g] [g a bes] | c4 f8 [d bes g] | f4 f8 a4 g8 | f4. r8 r
+  """)
+}
+
+question {
+  name = "Ich weiss nicht, was soll es bedeuten"
+  tempo = 80/4
+  breakpoints = 12/4, 24/4, 36/4
+  music = rvoice("""
+        \partial 8
+		\time 6/8
+		\key c \major
+		g'8 | [g8. a16 g8] [c b a] | g4. f4 f8 | e4 e8 [d c d] | e4. r8 r g |
+		[g8. a16 g8] [c b a] | g4. f4 f8 | e4 e8 [g f d] | c4. r8 r e |
+		[d8. e16 d8] [g d d] | b'4. a4 a8 | g4 g8 [fis g a] | g4. r8 r g8 |
+		[g8. a16 g8] [c b a] | g4 e'8 d4 d8 | c4 c8 [b a b] | c4. r8 r
+  """)
+}

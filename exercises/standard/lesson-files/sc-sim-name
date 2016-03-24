@@ -1,0 +1,37 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "4f294c70-5555-11da-89a8-7c9a86d4310c"
+  module = idbyname
+  random_transpose = yes
+  title = _("Symmetric scales")
+  questions_selectable = yes
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  at_question_start = show
+  fillnum = 5
+  filldir = horiz
+  help = "scales"
+  theory = "scales/sim"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question {set = 0  name = dim1n  voice(dim1c) }
+question {set = 0  name = dim2n  voice(dim2c) }
+question {set = 0  name = who1n  voice(who1c) }
+question {set = 0  name = aug1n  voice(aug1c) }
+question {set = 0  name = aug2n  voice(aug2c) }
+
+question {set = 1  name = dim1n  voice(dim1l) }
+question {set = 1  name = dim2n  voice(dim2l) }
+question {set = 1  name = who1n  voice(who1l) }
+question {set = 1  name = aug1n  voice(aug1l) }
+question {set = 1  name = aug2n  voice(aug2l) }
+

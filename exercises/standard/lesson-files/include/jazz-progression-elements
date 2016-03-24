@@ -1,0 +1,37 @@
+# Solfege - ear training for GNOME
+# Copyright (C) 2006  Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+element progI { label = rnc("I") }
+element progIm7 { label = rnc("Im7") } 
+element progImaj7 { label = rnc("Imaj7") }
+
+element progII { label = rnc("II") }
+element progIIm7 { label = rnc("IIm7") }
+element progIIm7b5 { label = rnc("IIm7b5") }
+element progII7 { label = rnc("II7") }
+
+element progbIIImaj7 { label = rnc("bIIImaj7") }
+
+element progIII { label = rnc("III") }
+element progIIIm7 { label = rnc("III7") }
+element progIII7 { label = rnc("III7") }
+
+element progIV { label = rnc("IV") }
+element progIVm7 { label = rnc("IVm7") }
+element progIVmaj7 { label = rnc("IVmaj7")}
+element progIV_6 { label = progressionlabel("IV(6)") }
+
+element progV { label = rnc("V") }
+element progV7 { label = rnc("V7") }
+element progVm7 { label = rnc("Vm7") }
+element progVts { label = pangomarkup("""<span font_family="serif"><span size="xx-large">Vts</span></span>""") }
+element progVtsParen { label = pangomarkup("""<span font_family="serif"><span size="xx-large">[Vts]</span></span>""") }
+element progV_6 { label = progressionlabel("V(6)") }
+element progV9 { label = rnc("V9") }
+element progV13 { label = rnc("V13") }
+
+element progVI { label = rnc("VI") }
+element progVIm7 { label = rnc("VIm7") }
+element progVI7 { label = rnc("VI7") }
+

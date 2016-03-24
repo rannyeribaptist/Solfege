@@ -1,0 +1,9 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+
+header {
+    module = melodicinterval
+    title = _("Melodic intervals")
+    theory = "theory-intervals"
+    lesson_id = "f62929dc-7122-4173-aad1-4d4eef8779af"
+}

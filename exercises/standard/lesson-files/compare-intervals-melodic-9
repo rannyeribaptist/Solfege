@@ -1,0 +1,13 @@
+# GNU Solfege
+# Copyright (C) 2005, 2010, 2011 Tom Cato Amundsen
+
+header {
+    lesson_id = "76286c1d-bf61-4712-acb4-4bbfdc9431f4"
+    module=compareintervals
+    title = _("Ninths")
+    theory = "theory-intervals"
+    first_interval_type = melodic
+    last_interval_type = melodic
+    first_interval = 13, 14
+    last_interval = 13, 14
+}

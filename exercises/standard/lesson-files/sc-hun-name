@@ -1,0 +1,41 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "0c201240-5555-11db-8682-8558e4e4f94b"
+  module = idbyname
+  random_transpose = yes
+  title = _("Hungarian Scale and its modes")
+  questions_selectable = yes
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  at_question_start = show
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/hun"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question {set = 0  name = hun1n  voice(hun1c) }
+question {set = 0  name = hun2n  voice(hun2c) }
+question {set = 0  name = hun3n  voice(hun3c) }
+question {set = 0  name = hun4n  voice(hun4c) }
+question {set = 0  name = hun5n  voice(hun5c) }
+question {set = 0  name = hun6n  voice(hun6c) }
+question {set = 0  name = hun7n  voice(hun7c) }
+
+question {set = 1  name = hun1n  voice(hun1l) }
+question {set = 1  name = hun2n  voice(hun2l) }
+question {set = 1  name = hun3n  voice(hun3l) }
+question {set = 1  name = hun4n  voice(hun4l) }
+question {set = 1  name = hun5n  voice(hun5l) }
+question {set = 1  name = hun6n  voice(hun6l) }
+question {set = 1  name = hun7n  voice(hun7l) }
+

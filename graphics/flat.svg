@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   id="svg610"
+   sodipodi:version="0.34"
+   width="600pt"
+   height="600pt"
+   xml:space="preserve"
+   sodipodi:docbase="/home/tom/src/solfege/graphics/"
+   sodipodi:docname="/home/tom/src/solfege/graphics/tool-acc-flat.svg"><defs
+   id="defs612" /><sodipodi:namedview
+   id="base" /><path
+   style="fill:#3a0039;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;"
+   d="M 321.7742 84.67743 L 358.0645 84.67743 L 345.9678 653.2258 L 312.0968 653.2258 L 321.7742 84.67743 z "
+   id="path616" /><path
+   style="fill:#3a0039;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;"
+   d="M 345.9678 653.2258 C 402.4194 608.0645 675.8065 405.645 546.7742 321.7741 C 484.6774 280.6451 408.0645 382.258 348.3871 425.8065 C 352.5202 434.0726 330.5985 459.968 348.4344 446.9381 C 381.5279 416.7644 447.2494 349.9876 493.4067 397.946 C 567.3595 472.2709 418.7815 581.2248 345.5425 631.943 C 334.5171 639.2139 346.0686 644.9597 345.9678 653.2258 z "
+   id="path617"
+   sodipodi:nodetypes="ccccssc" /></svg>

@@ -1,0 +1,8 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+
+header {
+    module = idtone
+    title = _("Id tone")
+    lesson_id = "04e54228-23eb-4ced-9513-388b12692c95"
+}

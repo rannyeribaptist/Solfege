@@ -1,0 +1,12 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    module=singinterval
+    ask_for_intervals_0=-13, -14, 13, 14
+    title = _("Ninths")
+    lesson_id = "ab66859d-a64e-4d5c-8bb7-f0576f2d6f47"
+    test = "3x"
+    test_requirement = "90%"
+}

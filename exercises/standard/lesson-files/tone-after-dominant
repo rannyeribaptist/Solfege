@@ -1,0 +1,16 @@
+﻿# GNU Solfege
+# Copyright (C) 2011 Tom Cato Amundsen
+
+header {
+    module=toneincontext
+    lesson_description = _("Find the last played tone's step in the final dominant chord.")
+    title = _("Configure yourself")
+}
+
+# We are in custom_mode since header.tones are not defind. The user
+# get a list of checkboxes and can select which cadences to select from.
+cadence {
+  name = _("Dominant 7")
+  music = "\staff\relative g'{ <a f c f,> <a f c f,> <bes f d bes> <g e bes c,> }"
+}
+

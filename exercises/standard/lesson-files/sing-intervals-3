@@ -1,0 +1,12 @@
+# GNU Solfege
+# Copyright (C) 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    module=singinterval
+    ask_for_intervals_0=-3, -4, 3, 4
+    title = _("Thirds")
+    lesson_id = "fdb83f01-1403-4c8f-9289-0ec0e8fe7d44"
+    test = "3x"
+    test_requirement = "90%"
+}

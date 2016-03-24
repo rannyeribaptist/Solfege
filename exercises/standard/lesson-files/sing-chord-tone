@@ -1,0 +1,15 @@
+# Solfege - free ear training software
+# Copyright (C) 2004, 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "5ecce551-8f6f-4056-a4ce-b03d5085d6bb"
+    module = singanswer
+    version = "2.1.6"
+    title = "Sing a chord tone"
+    have_music_displayer = yes
+}
+
+include("sing-the-root")
+include("sing-the-third")
+include("sing-the-fifth")

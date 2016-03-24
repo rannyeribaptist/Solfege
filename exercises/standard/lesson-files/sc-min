@@ -1,0 +1,42 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+# this lesson file created by Davide Bonetti
+
+include("include/sc-master")
+
+header {
+    lesson_id = "097f9dd0-23db-11db-8682-8558e4e4f94b"
+  module = idbyname
+  random_transpose = yes
+  title = _("More Scales used over a Minor chord")
+  have_repeat_slowly_button = yes
+  have_music_displayer = yes
+  fillnum = 4
+  filldir = horiz
+  help = "scales"
+  theory = "scales/modes"
+  test = sc_test
+  test_requirement = sc_test_requirement
+}
+tempo = 240/4
+
+question { name = maj2n  voice(maj2l) }
+question { name = maj3n  voice(maj3l) }
+question { name = maj6n  voice(maj6l) }
+question { name = mel1n  voice(mel1l) }
+question { name = mel2n  voice(mel2l) }
+question { name = mel8n  voice(mel8l) }
+question { name = har1n  voice(har1l) }
+question { name = har4n  voice(har4l) }
+question { name = ham4n  voice(ham4l) }
+question { name = nea1n  voice(nea1l) }
+question { name = nem1n  voice(nem1l) }
+question { name = nem4n  voice(nem4l) }
+question { name = dha4n  voice(dha4l) }
+question { name = hun6n  voice(hun6l) }
+question { name = beb3n  voice(beb3l) }
+question { name = beb4n  voice(beb4l) }
+question { name = pen5n  voice(pen5l) }
+question { name = blu1n  voice(blu1l) }
+

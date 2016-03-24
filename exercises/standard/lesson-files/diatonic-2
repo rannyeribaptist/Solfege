@@ -1,0 +1,108 @@
+# Solfege - free ear training software
+# Copyright (C) 2001, 2002, 2003, 2004, 2005  Giovanni Chierico
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "de9be08c-ca53-40e3-814f-ac68d11c2e3f"
+    module = idproperty
+    flavour = "chord"
+    title = _("Diatonic chords & inversions")
+}
+
+##################################################
+question {
+ name = _i("chord|maj7")
+ inversion = 0
+ chord("c' e' g' b'")
+}
+
+question {
+ name = _i("chord|maj7")
+ inversion = 1
+ chord("e c' g' b'")
+}
+
+question {
+ name = _i("chord|maj7")
+ inversion = 2
+ chord("g c' e' b'")
+}
+
+question {
+ name = _i("chord|maj7")
+ inversion = 3
+ chord("b c' e' g'")
+}
+##################################################
+question {
+ name = _i("chord|m7")
+ inversion = 0
+ chord("c' ees' g' bes'")
+}
+
+question {
+ name = _i("chord|m7")
+ inversion = 1
+ chord("ees c' g' bes'")
+}
+
+question {
+ name = _i("chord|m7")
+ inversion = 2
+ chord("g c' ees' bes'")
+}
+
+question {
+ name = _i("chord|m7")
+ inversion = 3
+ chord("bes c' ees' g'")
+}
+##################################################
+question {
+ name = _i("chord|7")
+ inversion = 0
+ chord("c' e' g' bes'")
+}
+
+question {
+ name = _i("chord|7")
+ inversion = 1
+ chord("e c' g' bes'")
+}
+
+question {
+ name = _i("chord|7")
+ inversion = 2
+ chord("g c' e' bes'")
+}
+
+question {
+ name = _i("chord|7")
+ inversion = 3
+ chord("bes c' e' g'")
+}
+##################################################
+question {
+ name = _i("chord|m7b5")
+ inversion = 0
+ chord("c' ees' ges' bes'")
+}
+
+question {
+ name = _i("chord|m7b5")
+ inversion = 1
+ chord("ees c' ges' bes'")
+}
+
+question {
+ name = _i("chord|m7b5")
+ inversion = 2
+ chord("ges c' ees' bes'")
+}
+
+question {
+ name = _i("chord|m7b5")
+ inversion = 3
+ chord("bes c' ees' ges'")
+}
+

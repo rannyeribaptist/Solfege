@@ -1,0 +1,3 @@
+﻿import not_in_standard
+
+var = not_in_standard.a

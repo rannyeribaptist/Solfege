@@ -1,0 +1,5 @@
+Run this scripts from the toplevel sourcedir like this:
+
+  ./test/musicparser.py
+
+

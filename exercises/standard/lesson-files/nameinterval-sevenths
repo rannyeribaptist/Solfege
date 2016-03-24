@@ -1,0 +1,12 @@
+# Solfege - free ear training software
+# Copyright (C) 2006, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "babe370b-87b8-465f-9dd5-1b87a2ed8d01"
+    module = nameinterval
+    title = _("Sevenths")
+    intervals = m7, M7
+    tones = "b", "f''"
+    theory = "theory-intervals"
+}

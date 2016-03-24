@@ -1,0 +1,20 @@
+<sect1 id='elembuilder'>
+<title>Harmonic progression dictation</title>
+<informalfigure id="elembuilder-progressions-screen1">
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/elembuilder-harmonic-progressions.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the program.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+
+<para>In this exercise, Solfege will play some music, and you must click on the
+buttons to build a representation of the harmonic progressions in the exercise.
+</para>
+
+</sect1>

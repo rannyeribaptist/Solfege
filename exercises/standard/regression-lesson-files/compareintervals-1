@@ -1,0 +1,12 @@
+# GNU Solfege
+# Copyright (C) 2005 Tom Cato Amundsen
+
+header {
+    module=compareintervals
+    title = "Melodic thirds up and down"
+    first_interval_type = melodic
+    last_interval_type = melodic
+    first_interval = 3, 4, -3, -4
+    last_interval = 3, 4, -3, -4
+    lesson_id = "0789cdba-eb69-4fc6-8430-11cb903e2b2e"
+}

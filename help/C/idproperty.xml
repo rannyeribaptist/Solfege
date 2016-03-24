@@ -1,0 +1,31 @@
+<sect1 id='idproperty'>
+<title>Multiple choice answers to music</title>
+
+<informalfigure id="idproperty-screen1">
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="figures/chord.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase>Screenshot of the program.</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</informalfigure>
+
+<para>This page is a generic help page for all exercises written using the
+<literal>idproperty</literal> exercise module. Exercises will typically
+write more specialized help text than this.</para>
+
+<para>The screenshot above show one example of how an exercise can look
+like.</para>
+
+<para>The exercise will display a question and play some music, and you have to
+select one answer from each column in the table of buttons. When you select the
+correct answer in a column, the label will turn bold, and the message "Correct"
+will be flashed in the status bar.</para>
+
+<para>The exercise will have a <guibutton>Repeat arpeggio</guibutton> if one or
+more of the questions is of a type the program can play arpeggiated.</para>
+</sect1>

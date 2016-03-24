@@ -1,0 +1,23 @@
+<ui>
+ <menubar name='Menubar'>
+    <menu action='FileMenu'>
+      <menuitem action='FrontPage' />
+      <menuitem action='TestsPage' />
+      <menuitem action='RecentExercises' />
+      <menuitem action='RecentTests' />
+      <menuitem action='UserExercises' />
+      <menuitem action='Search' />
+      <separator/>
+      <menu action='FrontPagesMenu'/>
+      <separator/>
+      <menuitem action='TreeEditor'/>
+      <menuitem action='ExportTrainingSet'/>
+      <menuitem action='EditPractiseSheet'/>
+      <separator/>
+      <menuitem action='ProfileManager'/>
+      <menuitem action='OpenPreferencesWindow'/>
+      <menuitem action='AppQuit' />
+    </menu>
+    <placeholder name='HelpPlaceHolder' />
+  </menubar>
+</ui>

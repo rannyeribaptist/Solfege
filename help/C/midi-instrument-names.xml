@@ -1,0 +1,81 @@
+<sect1 id='midi-instrument-names'>
+<title>Midi instrument names</title>
+<programlisting>
+         acoustic grand          contrabass      lead 7 (fifths)
+        bright acoustic     tremolo strings   lead 8 (bass+lead)
+         electric grand   pizzicato strings      pad 1 (new age)
+             honky-tonk  orchestral strings         pad 2 (warm)
+       electric piano 1             timpani    pad 3 (polysynth)
+       electric piano 2   string ensemble 1        pad 4 (choir)
+            harpsichord   string ensemble 2        pad 5 (bowed)
+                   clav      synthstrings 1     pad 6 (metallic)
+                celesta      synthstrings 2         pad 7 (halo)
+           glockenspiel          choir aahs        pad 8 (sweep)
+              music box          voice oohs          fx 1 (rain)
+             vibraphone         synth voice    fx 2 (soundtrack)
+                marimba       orchestra hit       fx 3 (crystal)
+              xylophone             trumpet    fx 4 (atmosphere)
+          tubular bells            trombone    fx 5 (brightness)
+               dulcimer                tuba       fx 6 (goblins)
+          drawbar organ       muted trumpet        fx 7 (echoes)
+       percussive organ         french horn        fx 8 (sci-fi)
+             rock organ       brass section                sitar
+           church organ        synthbrass 1                banjo
+             reed organ        synthbrass 2             shamisen
+              accordion         soprano sax                 koto
+              harmonica            alto sax              kalimba
+             concertina           tenor sax              bagpipe
+acoustic guitar (nylon)        baritone sax               fiddle
+acoustic guitar (steel)                oboe               shanai
+ electric guitar (jazz)        english horn          tinkle bell
+electric guitar (clean)             bassoon                agogo
+electric guitar (muted)            clarinet          steel drums
+      overdriven guitar             piccolo            woodblock
+       distorted guitar               flute           taiko drum
+       guitar harmonics            recorder          melodic tom
+          acoustic bass           pan flute           synth drum
+ electric bass (finger)        blown bottle       reverse cymbal
+   electric bass (pick)          skakuhachi    guitar fret noise
+          fretless bass             whistle         breath noise
+            slap bass 1             ocarina             seashore
+            slap bass 2     lead 1 (square)           bird tweet
+           synth bass 1   lead 2 (sawtooth)       telephone ring
+           synth bass 2   lead 3 (calliope)           helicopter
+                 violin      lead 4 (chiff)             applause
+                  viola    lead 5 (charang)              gunshot
+                  cello      lead 6 (voice)
+</programlisting>
+<sect2 id='percussion-instrument-names'>
+<title>Percussion instrument names</title>
+<para>
+The first column is the integer value for the instrument. The second
+column tell the name of the note you should enter in the <xref
+linkend='lfunc-rhythm' endterm='lfunc-rhythm'/> music object.</para>
+<programlisting>
+35 b,,   Acoustic Bass Drum   59 b     Ride Cymbal 2
+36 c,    Bass Drum 1          60 c'    Hi Bongo
+37 cis,  Side Stick           61 cis'  Low Bongo
+38 d,    Acoustic Snare       62 d'    Mute Hi Conga
+39 dis,  Hand Clap            63 dis'  Open High Conga
+40 e,    Electric Snare       64 e'    Low Conga
+41 f,    Low Floor Tom        65 f'    High Timbale
+42 fis,  Closed Hi Hat        66 fis'  Low Timbale
+43 g,    High Floor Tom       67 g'    High Agogo
+44 gis,  Pedal Hi Hat         68 gis'  Agogo Low
+45 a,    Low Tom              69 a'    Cabasa
+46 ais,  Open HiHat           70 ais'  Maracas
+47 b,    Low-Mid Tom          71 b'    Short Whistle
+48 c     Hi-Mid Tom           72 c''   Long Whistle
+49 cis   Crash Cymbal 1       73 cis'' Short Guiro
+50 d     High Tom             74 d''   Long Guiro
+51 dis   Ride Cymbal 1        75 dis'' Claves
+52 e     Chinese Cymbal       76 e''   Hi Wood Block
+53 f     Ride Bell            77 f''   Low Wood Block
+54 fis   Tambourine           78 fis'' Mute Cuica
+55 g     Splash Cymbal        79 g''   Open Cuica
+56 gis   Cowbell              80 gis'' Mute Triangle
+57 a     Crash Cymbal 2       81 a''   Open Triangle
+58 ais   Vibraslap
+</programlisting>
+</sect2>
+</sect1>

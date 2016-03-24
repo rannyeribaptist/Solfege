@@ -1,0 +1,77 @@
+# Solfege - free ear training software
+# Copyright (C) 2007, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+  lesson_id = "af9728a3-4df6-4f79-928b-84ac970fd47b"
+  title = _("Intervals smaller than an octave")
+  module = singanswer
+  version = "3.9.2"
+}
+
+question {
+  question_text = _("Sing the two tones")
+  music = voice("< c'2 des' >")
+  answer = voice("c'8 des'")
+}
+
+question {
+  question_text = _("Sing the two tones")
+  music = voice("< c'2 d' >")
+  answer = voice("c'8 d'")
+}
+
+question {
+  question_text = _("Sing the two tones")
+  music = voice("< c'2 es' >")
+  answer = voice("c'8 es'")
+}
+
+question {
+  question_text = _("Sing the two tones")
+  music = voice("< c'2 e' >")
+  answer = voice("c'8 e'")
+}
+
+question {
+  question_text = _("Sing the two tones")
+  music = voice("< c'2 f' >")
+  answer = voice("c'8 f'")
+}
+
+question {
+  question_text = _("Sing the two tones")
+  music = voice("< c'2 ges' >")
+  answer = voice("c'8 ges'")
+}
+
+question {
+  question_text = _("Sing the two tones")
+  music = voice("< c'2 g' >")
+  answer = voice("c'8 g'")
+}
+
+question {
+  question_text = _("Sing the two tones")
+  music = voice("< c'2 as' >")
+  answer = voice("c'8 as'")
+}
+
+question {
+  question_text = _("Sing the two tones")
+  music = voice("< c'2 a' >")
+  answer = voice("c'8 a'")
+}
+
+question {
+  question_text = _("Sing the two tones")
+  music = voice("< c'2 bes' >")
+  answer = voice("c'8 bes'")
+}
+
+question {
+  question_text = _("Sing the two tones")
+  music = voice("< c'2 b' >")
+  answer = voice("c'8 b'")
+}
+

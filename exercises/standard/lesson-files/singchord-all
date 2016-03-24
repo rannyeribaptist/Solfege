@@ -1,0 +1,16 @@
+# Solfege - free ear training software
+# Copyright (C) 2001, 2004, 2005, 2011 Tom Cato Amundsen
+# License is GPL, see file COPYING
+
+header {
+    lesson_id = "021ad72a-f64e-435c-8c57-2f523e5b4dda"
+        module = singchord
+        title = _("All the questions from the singchord exercises")
+}
+
+include("singchord-1")
+include("singchord-2")
+include("singchord-3")
+include("singchord-4")
+include("singchord-5")
+include("singchord-6")
