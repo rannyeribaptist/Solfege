@@ -738,5 +738,3 @@ class MainWin(Gtk.Window, cfg.ConfigUtils):
     def new_practisesheet_editor(self, widget):
         dlg = PractiseSheetDialog()
         dlg.show_all()
-
-
