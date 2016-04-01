@@ -45,6 +45,7 @@ class QstatusDefs:
     QSTATUS_TYPE_WRONG = 7
     QSTATUS_TYPE_SOLVED = 8
 
+#Aparently, this file creates the exercises
 class Teacher(cfg.ConfigUtils, QstatusDefs):
     def __init__(self, exname):
         cfg.ConfigUtils.__init__(self, exname)
@@ -1014,4 +1015,3 @@ class LessonbasedGui(Gui):
             self.g_display_music.show()
         else:
             self.g_display_music.hide()
-
