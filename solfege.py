@@ -38,15 +38,12 @@ if sys.platform == 'win32':
             if os.path.exists(os.path.join(filesystem.get_home_dir(), ".solfege")):
                 shutil.copytree(os.path.join(filesystem.get_home_dir(), ".solfege"),
                                 filesystem.app_data())
-
             else:
                 os.mkdir(filesystem.app_data())
-                
         if not os.path.exists(filesystem.rcfile()):
             if os.path.exists(os.path.join(filesystem.get_home_dir(), ".solfegerc")):
                 shutil.copy(os.path.join(filesystem.get_home_dir(), ".solfegerc"),
                             filesystem.rcfile())
-
     except (IOError, os.error), e:
         print "Migration failed:", e
 
