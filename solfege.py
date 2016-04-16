@@ -44,6 +44,7 @@ if sys.platform == 'win32':
             if os.path.exists(os.path.join(filesystem.get_home_dir(), ".solfegerc")):
                 shutil.copy(os.path.join(filesystem.get_home_dir(), ".solfegerc"),
                             filesystem.rcfile())
+                            
     except (IOError, os.error), e:
         print "Migration failed:", e
 
