@@ -36,6 +36,7 @@ if sys.platform == 'win32':
     
     try:
         if not os.path.exists(filesystem.app_data()):
+            
             if os.path.exists(os.path.join(filesystem.get_home_dir( ), ".solfege")):
                 shutil.copytree(os.path.join(filesystem.get_home_dir( ), ".solfege"),
                                 filesystem.app_data())
