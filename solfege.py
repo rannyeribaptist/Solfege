@@ -33,17 +33,22 @@ from solfege import filesystem
 
 if sys.platform == 'win32':
     # Migration added in solfege 3.9.0.
+    
     try:
         if not os.path.exists(filesystem.app_data()):
-            if os.path.exists(os.path.join(filesystem.get_home_dir(), ".solfege")):
-                shutil.copytree(os.path.join(filesystem.get_home_dir(), ".solfege"),
+            if os.path.exists(os.path.join(filesystem.get_home_dir( ), ".solfege")):
+                shutil.copytree(os.path.join(filesystem.get_home_dir( ), ".solfege"),
                                 filesystem.app_data())
+           
             else:
                 os.mkdir(filesystem.app_data())
+        
         if not os.path.exists(filesystem.rcfile()):
-            if os.path.exists(os.path.join(filesystem.get_home_dir(), ".solfegerc")):
-                shutil.copy(os.path.join(filesystem.get_home_dir(), ".solfegerc"),
+            
+            if os.path.exists(os.path.join(filesystem.get_home_dir( ), ".solfegerc")):
+                shutil.copy(os.path.join(filesystem.get_home_dir( ), ".solfegerc"),
                             filesystem.rcfile())
+   
     except (IOError, os.error), e:
         print "Migration failed:", e
 
@@ -55,5 +60,6 @@ presetup.presetup("default.config", None, filesystem.rcfile())
 
 from solfege import i18n
 i18n.setup(".", cfg.get_string("app/lc_messages"))
+
 import solfege.startup
-solfege.startup.start_app(".")
+solfege.startup.start_app(". ")
