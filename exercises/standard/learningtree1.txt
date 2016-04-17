@@ -2,6 +2,110 @@ FileHeader(1,
  Page(_(u'Default front page'), [
   Column([
    LinkList(_(u'_Intervals'), [
+    Page(_(u'Ascending melodic intervals'), [
+     Column([
+      LinkList(_(u'Ascending melodic intervals'), [
+       u'solfege:lesson-files/melodic-intervals-up-2',
+       u'solfege:lesson-files/melodic-intervals-up-3',
+       u'solfege:lesson-files/melodic-intervals-up-4-5',
+       u'solfege:lesson-files/melodic-intervals-up-6',
+       u'solfege:lesson-files/melodic-intervals-up-7',
+       u'solfege:lesson-files/melodic-intervals-up-9',
+       u'solfege:lesson-files/melodic-intervals-up-10',
+       u'solfege:lesson-files/melodic-intervals-up-tritonus-7',
+       u'solfege:lesson-files/melodic-intervals-up-4-5-8',
+       u'solfege:lesson-files/melodic-intervals-up-2-3',
+       u'solfege:lesson-files/melodic-intervals-up-6-7',
+       u'solfege:lesson-files/melodic-intervals-up-7-9',
+       u'solfege:lesson-files/melodic-intervals-up-2-to-8',
+       u'solfege:lesson-files/melodic-intervals-up',
+       u'solfege:lesson-files/melodic-intervals-up-2-to-15',
+       ]),
+      ]),
+     ]),
+    Page(_(u'Descending melodic intervals'), [
+     Column([
+      LinkList(_(u'Descending melodic intervals'), [
+       u'solfege:lesson-files/melodic-intervals-down-2',
+       u'solfege:lesson-files/melodic-intervals-down-3',
+       u'solfege:lesson-files/melodic-intervals-down-4-5',
+       u'solfege:lesson-files/melodic-intervals-down-6',
+       u'solfege:lesson-files/melodic-intervals-down-7',
+       u'solfege:lesson-files/melodic-intervals-down-9',
+       u'solfege:lesson-files/melodic-intervals-down-10',
+       u'solfege:lesson-files/melodic-intervals-down-tritonus-7',
+       u'solfege:lesson-files/melodic-intervals-down-4-5-8',
+       u'solfege:lesson-files/melodic-intervals-down-2-3',
+       u'solfege:lesson-files/melodic-intervals-down-6-7',
+       u'solfege:lesson-files/melodic-intervals-down-7-9',
+       u'solfege:lesson-files/melodic-intervals-down-2-to-8',
+       u'solfege:lesson-files/melodic-intervals-down',
+       u'solfege:lesson-files/melodic-intervals-down-2-to-15',
+       ]),
+      ]),
+     ]),
+    Page(_(u'Melodic intervals'), [
+     Column([
+      LinkList(_(u'Melodic intervals'), [
+       u'solfege:lesson-files/melodic-intervals-2',
+       u'solfege:lesson-files/melodic-intervals-3',
+       u'solfege:lesson-files/melodic-intervals-4-5',
+       u'solfege:lesson-files/melodic-intervals-6',
+       u'solfege:lesson-files/melodic-intervals-7',
+       u'solfege:lesson-files/melodic-intervals-9',
+       u'solfege:lesson-files/melodic-intervals-10',
+       u'solfege:lesson-files/melodic-intervals-tritonus-7',
+       u'solfege:lesson-files/melodic-intervals-4-5-8',
+       u'solfege:lesson-files/melodic-intervals-2-3',
+       u'solfege:lesson-files/melodic-intervals-6-7',
+       u'solfege:lesson-files/melodic-intervals-7-9',
+       u'solfege:lesson-files/melodic-intervals-2-to-8',
+       u'solfege:lesson-files/melodic-intervals',
+       u'solfege:lesson-files/melodic-intervals-2-to-15',
+       ]),
+      ]),
+     ]),
+    Page(_(u'Harmonic intervals'), [
+     Column([
+      LinkList(_(u'Harmonic intervals'), [
+       u'solfege:lesson-files/harmonic-intervals-2',
+       u'solfege:lesson-files/harmonic-intervals-3',
+       u'solfege:lesson-files/harmonic-intervals-4-5',
+       u'solfege:lesson-files/harmonic-intervals-6',
+       u'solfege:lesson-files/harmonic-intervals-7',
+       u'solfege:lesson-files/harmonic-intervals-9',
+       u'solfege:lesson-files/harmonic-intervals-10',
+       u'solfege:lesson-files/harmonic-intervals-tritonus-7',
+       u'solfege:lesson-files/harmonic-intervals-4-5-8',
+       u'solfege:lesson-files/harmonic-intervals-2-3',
+       u'solfege:lesson-files/harmonic-intervals-6-7',
+       u'solfege:lesson-files/harmonic-intervals-7-9',
+       u'solfege:lesson-files/harmonic-intervals-2-to-8',
+       u'solfege:lesson-files/harmonic-intervals',
+       u'solfege:lesson-files/harmonic-intervals-2-to-15',
+       ]),
+      ]),
+     ]),
+    Page(_(u'Sing intervals'), [
+     Column([
+      LinkList(_(u'Sing intervals'), [
+       u'solfege:lesson-files/sing-intervals-2',
+       u'solfege:lesson-files/sing-intervals-3',
+       u'solfege:lesson-files/sing-intervals-4-5',
+       u'solfege:lesson-files/sing-intervals-6',
+       u'solfege:lesson-files/sing-intervals-7',
+       u'solfege:lesson-files/sing-intervals-9',
+       u'solfege:lesson-files/sing-intervals-10',
+       u'solfege:lesson-files/sing-intervals-tritonus-7',
+       u'solfege:lesson-files/sing-intervals-4-5-8',
+       u'solfege:lesson-files/sing-intervals-2-3',
+       u'solfege:lesson-files/sing-intervals-6-7',
+       u'solfege:lesson-files/sing-intervals-7-9',
+       u'solfege:lesson-files/sing-intervals-2-to-8',
+       u'solfege:lesson-files/sing-intervals',
+       ]),
+      ]),
+     ]),
     Page(_(u'Compare intervals'), [
      Column([
       LinkList(_(u'Harmonic'), [
@@ -42,6 +146,25 @@ FileHeader(1,
      ]),
     ]),
    LinkList(_(u'Rhythm'), [
+    Page(_(u'Rhythm'), [
+     Column([
+      LinkList(_(u'Rhythm'), [
+       u'solfege:lesson-files/rhythm-easy',
+       u'solfege:lesson-files/rhythm-mid',
+       u'solfege:lesson-files/rhythm-all',
+       u'solfege:lesson-files/rhythm-ternary',
+       ]),
+      ]),
+     ]),
+    Page(_(u'Tap generated rhythm'), [
+     Column([
+      LinkList(_(u'Tap generated rhythm'), [
+       u'solfege:lesson-files/tapping-easy',
+       u'solfege:lesson-files/tapping-mid',
+       u'solfege:lesson-files/tapping-all',
+       ]),
+      ]),
+     ]),
     Page(_(u'Rhythm dictation'), [
      Column([
       LinkList(_(u'Rhythm dictation'), [
@@ -100,13 +223,68 @@ FileHeader(1,
        u'solfege:lesson-files/solfa-17-C',
        u'solfege:lesson-files/solfa-7',
        u'solfege:lesson-files/solfa-17',
-       u'solfege:lesson-files/solmisation',
        ]),
       ]),
      ]),
     ]),
    ]),
   Column([
+   LinkList(_(u'Chords'), [
+    Page(_(u'Chords in root position'), [
+     Column([
+      LinkList(_(u'Chords in root position'), [
+       u'solfege:lesson-files/chord-min-major',
+       u'solfege:lesson-files/chord-m7-7',
+       u'solfege:lesson-files/chord-dim-aug',
+       u'solfege:lesson-files/chord-m9-9',
+       u'solfege:lesson-files/chord-7b9-maj79',
+       u'solfege:lesson-files/chord-maj7-m7b5-dim7',
+       u'solfege:lesson-files/chord-m9-9-7b9-maj79',
+       u'solfege:lesson-files/altered-1',
+       u'solfege:lesson-files/chord-m7-7-maj7-m7b5-dim7',
+       u'solfege:lesson-files/chord-dim-aug-min-major',
+       u'solfege:lesson-files/chord-all-root',
+       ]),
+      ]),
+     ]),
+    Page(_(u'Inversions of chords'), [
+     Column([
+      LinkList(_(u'Inversions of chords'), [
+       u'solfege:lesson-files/diatonic-2',
+       u'solfege:lesson-files/altered-2',
+       u'solfege:lesson-files/chord-min-major-inv',
+       u'solfege:lesson-files/chord-7-inv',
+       u'solfege:lesson-files/chord-min-major-7',
+       u'solfege:lesson-files/chord-min-major-close-open',
+       u'solfege:lesson-files/chord-m7-7-inv',
+       ]),
+      ]),
+     ]),
+    Page(_(u'Sing chord'), [
+     Column([
+      LinkList(_(u'Sing chord'), [
+       u'solfege:lesson-files/singchord-1',
+       u'solfege:lesson-files/singchord-2',
+       u'solfege:lesson-files/singchord-3',
+       u'solfege:lesson-files/singchord-4',
+       u'solfege:lesson-files/singchord-5',
+       u'solfege:lesson-files/singchord-6',
+       u'solfege:lesson-files/singchord-all',
+       ]),
+      ]),
+     ]),
+    Page(_(u'Sing chord tone'), [
+     Column([
+      LinkList(_(u'Sing chord tone'), [
+       u'solfege:lesson-files/sing-the-root',
+       u'solfege:lesson-files/sing-the-third',
+       u'solfege:lesson-files/sing-the-fifth',
+       u'solfege:lesson-files/sing-the-seventh',
+       u'solfege:lesson-files/sing-the-seventh-inv',
+       ]),
+      ]),
+     ]),
+    ]),
    LinkList(_(u'Scales'), [
     Page(_(u'Practise'), [
      Column([
@@ -293,6 +471,19 @@ FileHeader(1,
      ]),
     ]),
    LinkList(_(u'Misc'), [
+    Page(_(u'Intonation (require CSound)'), [
+     Column([
+      LinkList(_(u'Intonation (require CSound)'), [
+       u'solfege:lesson-files/csound-fifth-0.97',
+       u'solfege:lesson-files/csound-fifth-0.98',
+       u'solfege:lesson-files/csound-fifth-0.99',
+       u'solfege:lesson-files/csound-fifth-0.995',
+       u'solfege:lesson-files/csound-fifth-0.996',
+       u'solfege:lesson-files/csound-fifth-0.997',
+       u'solfege:lesson-files/csound-fifth-0.998',
+       ]),
+      ]),
+     ]),
     Page(_(u'Dictation'), [
      Column([
       LinkList(_(u'Dictation'), [
@@ -301,6 +492,7 @@ FileHeader(1,
        u'solfege:lesson-files/jsb-inventions',
        u'solfege:lesson-files/barnesanger',
        u'solfege:lesson-files/polish-folk-songs',
+       u'solfege:lesson-files/solmisation',
        ]),
       ]),
      ]),
@@ -317,6 +509,29 @@ FileHeader(1,
        u'solfege:lesson-files/id-tone-cde-10',
        u'solfege:lesson-files/id-tone-cde-11',
        u'solfege:lesson-files/id-tone-cde-12',
+       ]),
+      ]),
+     ]),
+    Page(_(u'Misc exercises'), [
+     Column([
+      LinkList(_(u'Misc exercises'), [
+       u'solfege:lesson-files/twelvetone',
+       u'solfege:lesson-files/bpm',
+       ]),
+      ]),
+     ]),
+    Page(_(u'Configure yourself'), [
+     Column([
+      LinkList(_(u'Configure yourself'), [
+       u'solfege:lesson-files/harmonic-intervals-self-config',
+       u'solfege:lesson-files/melodic-intervals-self-config',
+       u'solfege:lesson-files/sing-intervals-self-config',
+       u'solfege:lesson-files/compare-intervals',
+       u'solfege:lesson-files/id-tone',
+       u'solfege:lesson-files/rhythm-self-config-binary',
+       u'solfege:lesson-files/rhythm-self-config-ternary',
+       u'solfege:lesson-files/rhythmtapping2-self-config-binary',
+       u'solfege:lesson-files/rhythmtapping2-self-config-ternary',
        ]),
       ]),
      ]),
@@ -340,10 +555,51 @@ FileHeader(1,
        ]),
       ]),
      ]),
+    Page(_(u'Hear tones'), [
+     Column([
+      LinkList(_(u'Hear tones'), [
+       u'solfege:lesson-files/hear-tones-2',
+       u'solfege:lesson-files/hear-tones-1',
+       u'solfege:lesson-files/hear-tones-3',
+       u'solfege:lesson-files/hear-tones-4',
+       u'solfege:lesson-files/hear-tones-5',
+       u'solfege:lesson-files/hear-tones-6',
+       u'solfege:lesson-files/hear-tones-triads-easy',
+       u'solfege:lesson-files/hear-tones-triads',
+       u'solfege:lesson-files/hear-tones-triads-difficult',
+       ]),
+      ]),
+     ]),
     Page(_(u'Cadences'), [
      Column([
       LinkList(_(u'Cadences'), [
        u'solfege:lesson-files/cadense-1',
+       ]),
+      ]),
+     ]),
+    Page(_(u'Tone in context'), [
+     Column([
+      LinkList(_(u'Tone in context - cadence major'), [
+       u'solfege:lesson-files/toneincontext-major-f4',
+       u'solfege:lesson-files/toneincontext-major-l4',
+       u'solfege:lesson-files/toneincontext-major',
+       u'solfege:lesson-files/toneincontext-major-cr-f6',
+       u'solfege:lesson-files/toneincontext-major-cr-l6',
+       u'solfege:lesson-files/toneincontext-major-cr',
+       u'solfege:lesson-files/toneincontext',
+       ]),
+      LinkList(_(u'Tone in dominant chord'), [
+       u'solfege:lesson-files/tone-after-dominant',
+       ]),
+      ]),
+     Column([
+      LinkList(_(u'Tone in context - cadence minor'), [
+       u'solfege:lesson-files/toneincontext-minor-f4',
+       u'solfege:lesson-files/toneincontext-minor-l4',
+       u'solfege:lesson-files/toneincontext-minor',
+       u'solfege:lesson-files/toneincontext-minor-cr-f6',
+       u'solfege:lesson-files/toneincontext-minor-cr-l6',
+       u'solfege:lesson-files/toneincontext-minor',
        ]),
       ]),
      ]),
