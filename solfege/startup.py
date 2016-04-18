@@ -207,4 +207,3 @@ def start_app(datadir):
         Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
     GObject.timeout_add(1, start_gui, datadir)
     Gtk.main()
-

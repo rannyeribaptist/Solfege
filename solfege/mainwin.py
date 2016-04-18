@@ -208,61 +208,89 @@ class MainWin(Gtk.Window, cfg.ConfigUtils):
           ('FileMenu', None, _('_File')),
           ('AppQuit', 'gtk-quit', None, None, None, self.quit_program),
         ])
+
         self.m_action_groups['NotExit'].add_actions([
+
           ('TheoryMenu', None, _('The_ory')),
+
           ('FrontPagesMenu', None, _('Sele_ct Front Page')),
+
           ('TheoryIntervals', None, _('_Intervals'), None, None,
             lambda o: solfege.app.handle_href('theory-intervals.html')),
+
           ('TreeEditor', None, _('_Edit Front Page'), None, None,
             self.do_tree_editor),
+
           ('ExportTrainingSet', None, _(u'E_xport Exercises to Audio Files…'), None, None,
             self.new_training_set_editor),
+
           ('EditPractiseSheet', None, _(u'Ear Training Test Pri_ntout…'), None, None,
             self.new_practisesheet_editor),
+
           ('ProfileManager', None, _("Profile _Manager"), None, None,
             self.open_profile_manager),
+
           ('OpenPreferencesWindow', 'gtk-preferences', None, '<ctrl>F12', None,
             self.open_preferences_window),
+
           ('HelpMenu', None, _('_Help')),
+
           ('Search', 'gtk-search', _('_Search Exercises'), '<ctrl>F', None,
               self.on_search_all_exercises),
+
           ('FrontPage', None, _('_Front Page'), 'F5', None,
               lambda w: self.display_frontpage()),
+
           ('TestsPage', None, _('_Tests Page'), 'F6', None,
               lambda w: self.display_testpage()),
+
           ('RecentExercises', None, _('_Recent Exercises'), 'F7', None,
               self.display_recent_exercises),
+
           ('RecentTests', None, _('_Recent Tests'), 'F8', None,
               self.display_recent_tests),
+
           ('UserExercises', None, _('_User Exercises'), 'F9', None,
               self.display_user_exercises),
+
           ('SetupPyAlsa', None, _("Download and compile ALSA modules"), None, None, self.setup_pyalsa),
+
           ('HelpHelp', 'gtk-help', _('_Help on the current exercise'), 'F1', None,
             lambda o: solfege.app.please_help_me()),
+
           ('HelpTheory', None, _('_Music theory on the current exercise'), 'F3', None, lambda o: solfege.app.show_exercise_theory()),
+
           ('HelpIndex', None, _('_User manual'), None, None,
             lambda o: solfege.app.handle_href('index.html')),
+
           ('HelpShowPathInfo', None, _('_File locations'), None,
             None, self.show_path_info),
+
           ('HelpOnline', None, _('_Mailing lists, web page etc.'), None, None,
             lambda o: solfege.app.handle_href('online-resources.html')),
+
           ('HelpDonate', None, _('_Donate'), None, None,
             lambda o: solfege.app.handle_href('http://www.solfege.org/donate/')),
+
           ('HelpReportingBugs', None, _('Reporting _bugs'), None, None,
             lambda o: solfege.app.handle_href('bug-reporting.html')),
+
           ('HelpAbout', 'gtk-about', None, None, None, self.show_about_window),
+
           ('ShowBugReports', None, _('_See your bug reports'), None, None,
             self.show_bug_reports),
         ])
 
         self.g_ui_manager.add_ui_from_file("ui.xml")
-
         self.add_accel_group(self.g_ui_manager.get_accel_group())
+
         hdlbox = Gtk.HandleBox()
         hdlbox.show()
         hdlbox.add(self.g_ui_manager.get_widget('/Menubar'))
         self._vbox.pack_start(hdlbox, False, False, 0)
+
         self.m_help_on_current_merge_id = None
+
     def create_frontpage_menu(self):
         """
         Create, or update if already existing, the submenu that let the
@@ -465,52 +493,64 @@ class MainWin(Gtk.Window, cfg.ConfigUtils):
         Open a front page editor editing the current front page.
         """
         fpeditor.Editor.edit_file(self.get_string("app/frontpage"))
+
     def post_constructor(self):
         self.m_frontpage_merge_id = None
         self.create_frontpage_menu()
         self.g_ui_manager.add_ui_from_file("help-menu.xml")
+
         if sys.platform != 'linux2':
             self.g_ui_manager.get_widget('/Menubar/HelpMenu/SetupPyAlsa').hide()
+
         if solfege.app.m_sound_init_exception is not None:
             if solfege.splash_win:
                 solfege.splash_win.destroy()
                 solfege.splash_win = None
             solfege.app.display_sound_init_error_message(solfege.app.m_sound_init_exception)
         # MIGRATION 3.9.0
+
         if sys.platform == "win32" \
             and os.path.exists(os.path.join(filesystem.get_home_dir(), "lessonfiles")) \
             and not os.path.exists(filesystem.user_lessonfiles()):
                 if solfege.splash_win:
                     solfege.splash_win.hide()
+
                 do_move = gu.dialog_yesno(_('In Solfege 3.9.0, the location where Solfege look for lesson files you have created was changed. The files has to be moved from "%(old)s" and into the folder "%(gnu)s" in your "%(doc)s" folder.\nMay I move the files automatically for you now?' % {
                     'doc':  os.path.split(os.path.split(filesystem.user_data())[0])[1],
                     'gnu':  os.path.join(filesystem.appname, 'lessonfiles'),
                     'old': os.path.join(filesystem.get_home_dir(), "lessonfiles"),
                   }), parent=self)
+
                 if do_move:
                     try:
                         os.makedirs(filesystem.user_data())
                         shutil.copytree(os.path.join(filesystem.get_home_dir(), "lessonfiles"),
                                         os.path.join(filesystem.user_data(), "lessonfiles"))
+
                     except (OSError, shutil.Error), e:
                         gu.dialog_ok(_("Error while copying directory:\n%s" % e))
+
                     else:
                         gu.dialog_ok(_("Files copied. The old files has been left behind. Please delete them when you have verified that all files was copied correctly."))
 
                 if solfege.splash_win:
                     solfege.splash_win.show()
+
         # MIGRATION 3.9.3 when we added langenviron.bat and in 3.11
         # we migrated to langenviron.txt because we does not use cmd.exe
+
         if sys.platform == 'win32' and winlang.win32_get_langenviron() != self.get_string('app/lc_messages'):
             gu.dialog_ok(_("Migrated old language setup. You might have to restart the program all translated messages to show up."))
             winlang.win32_put_langenviron(self.get_string('app/lc_messages'))
         # MIGRATION 3.11.1: earlier editors would create new learning trees
         # below app_data() instead of user_data().
+
         if (sys.platform == "win32" and
             os.path.exists(os.path.join(filesystem.app_data(),
                                         "learningtrees"))):
             if not os.path.exists(os.path.join(filesystem.user_data(), "learningtrees")):
                 os.makedirs(os.path.join(filesystem.user_data(), "learningtrees"))
+
             for fn in os.listdir(os.path.join(filesystem.app_data(), "learningtrees")):
                 if not os.path.exists(os.path.join(filesystem.user_data(), "learningtrees", fn)):
                     shutil.move(os.path.join(filesystem.app_data(), "learningtrees", fn),
@@ -519,17 +559,22 @@ class MainWin(Gtk.Window, cfg.ConfigUtils):
                     # We add the .bak exstention if the file already exists.
                     shutil.move(os.path.join(filesystem.app_data(), "learningtrees", fn),
                             os.path.join(filesystem.user_data(), "learningtrees", u"%s.bak" % fn))
+
                 os.rmdir(os.path.join(os.path.join(filesystem.app_data(), "learningtrees")))
+
         item = self.g_ui_manager.get_widget("/Menubar/FileMenu/FrontPagesMenu")
         item.connect('activate', lambda s: self.create_frontpage_menu())
+
         try:
             i18n.locale_setup_failed
             print >> sys.stderr, "\n".join(textwrap.wrap("Translations are disabled because your locale settings are broken. This is not a bug in GNU Solfege, so don't report it. The README file distributed with the program has some more details."))
         except AttributeError:
             pass
+
         for filename in lessonfile.infocache.frontpage.iter_old_format_files():
             gu.dialog_ok(_("Cannot load front page file"), None,
                 _(u"The file «%s» is saved in an old file format. The file can be converted by editing and saving it with an older version of Solfege. Versions from 3.16.0 to 3.20.4 should do the job.") % filename)
+
     def activate_exercise(self, module, urlobj=None):
         self.show_view(module)
         # We need this test because not all exercises use a notebook.
