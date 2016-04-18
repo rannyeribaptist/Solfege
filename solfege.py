@@ -37,8 +37,8 @@ if sys.platform == 'win32':
     try:
         if not os.path.exists(filesystem.app_data()):
             
-            if os.path.exists(os.path.join(filesystem.get_home_dir( ), ".solfege")):
-                shutil.copytree(os.path.join(filesystem.get_home_dir( ), ".solfege"),
+            if os.path.exists(os.path.join(filesystem.get_home_dir(), ".solfege")):
+                shutil.copytree(os.path.join(filesystem.get_home_dir(), ".solfege"),
                                 filesystem.app_data())
            
             else:
@@ -46,8 +46,8 @@ if sys.platform == 'win32':
         
         if not os.path.exists(filesystem.rcfile()):
             
-            if os.path.exists(os.path.join(filesystem.get_home_dir( ), ".solfegerc")):
-                shutil.copy(os.path.join(filesystem.get_home_dir( ), ".solfegerc"),
+            if os.path.exists(os.path.join(filesystem.get_home_dir(), ".solfegerc")):
+                shutil.copy(os.path.join(filesystem.get_home_dir(), ".solfegerc"),
                             filesystem.rcfile())
    
     except (IOError, os.error), e:
@@ -63,4 +63,4 @@ from solfege import i18n
 i18n.setup(".", cfg.get_string("app/lc_messages"))
 
 import solfege.startup
-solfege.startup.start_app(". ")
+solfege.startup.start_app(".")
