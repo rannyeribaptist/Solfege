@@ -110,20 +110,24 @@ def parse_file_into_dict(dictionary, filename):
         comment_m = comment_re.match(line)
         if comment_m:
             pass
+        
         elif section_m:
             section = section_m.groups()[0]
+            
             if section not in dictionary:
                 dictionary[section] = {}
+        
         elif value_m:
             assert section
             dictionary[section][value_m.groups()[0]] = value_m.groups()[1]
+        
         elif not line.strip():
             pass
+        
         else:
             raise CfgParseException(filename, lineno)
     f.close()
     return dictionary
-
 
 def sync():
     dump(data, _user_filename)
@@ -147,7 +151,9 @@ def set_string(key, val):
         val = val.decode("utf-8")
     oldval = get_string(key)
     data[section][k] = val
+    
     if key in _watches and (oldval != get_string(key)):
+        
         if key in _blocked_watches and _blocked_watches[key] > 0:
             return
         for cb in _watches[key].values():
@@ -160,6 +166,7 @@ def set_int(key, val):
     oldval = get_string(key)
     data[section][k] = str(val)
     if key in _watches and (oldval != get_string(key)):
+        
         if key in _blocked_watches and _blocked_watches[key] > 0:
             return
         for cb in _watches[key].values():
@@ -172,6 +179,7 @@ def set_float(key, val):
     oldval = get_string(key)
     data[section][k] = str(val)
     if key in _watches and (oldval != get_string(key)):
+        
         if key in  _blocked_watches and _blocked_watches[key] > 0:
             return
         for cb in _watches[key].values():
@@ -181,12 +189,12 @@ def set_bool(key, val):
     _maybe_create_key(key)
     if val:
         set_string(key, "true")
+    
     else:
         set_string(key, "false")
 
 def set_list(key, val):
     set_string(key, str(val))
-
 ########################
 ## get_XXX functions ##
 ########################
@@ -194,6 +202,7 @@ def set_list(key, val):
 def get_string(key):
     if len(key.split("=")) == 2:
         key, default = key.split("=")
+    
     else:
         default = ""
     section, k = split(key)
@@ -205,11 +214,13 @@ def get_string(key):
 def get_int(key):
     if len(key.split("=")) == 2:
         key, default = key.split("=")
+    
     else:
         default = 0
     section, k = split(key)
     try:
         # UGH win32 fix
+        
         if not data[section][k]:
             return 0
         return int(float(data[section][k]))
@@ -219,6 +230,7 @@ def get_int(key):
 def get_float(key):
     if len(key.split("=")) == 2:
         key, default = key.split("=")
+    
     else:
         default = 0
     section, k = split(key)
@@ -230,6 +242,7 @@ def get_float(key):
 def get_list(key):
     if len(key.split("=")) == 2:
         key, default = key.split("=")
+    
     else:
         default = []
     section, k = split(key)
@@ -241,21 +254,27 @@ def get_list(key):
 def get_bool(key):
     if get_string(key) == 'true':
         return 1
+    
     elif get_string(key) == 'false':
         return 0
+    
     else:
         return 0
 
 #####################################
+
 def del_key(key):
     section, k = split(key)
     #FIXME watches
     if section not in data:
         return
+    
     if k not in data[section]:
         return
+    
     del data[section][k]
     if not data[section]:
+
         del data[section]
 
 def del_section(section):
@@ -263,6 +282,7 @@ def del_section(section):
     if section not in data:
         # Trying to delete a deleted section
         return
+    
     del data[section]
 
 ######################################
@@ -300,8 +320,10 @@ def reread_data():
     _blocked_watches = {}
     if _app_defaults_filename:
         data = parse_file_into_dict({}, _app_defaults_filename)
+    
     if _system_filename:
         data = parse_file_into_dict(data, _system_filename)
+    
     if _user_filename and os.path.isfile(_user_filename):
         data = parse_file_into_dict(data, _user_filename)
 
@@ -310,6 +332,7 @@ class CfgParseException(Exception):
         Exception.__init__(self)
         self.m_filename = filename
         self.m_lineno = lineno
+    
     def __str__(self):
         return "CfgParseException: Failed to parse line %(lineno)i of the file '%(filename)s'" % {'lineno': self.m_lineno, 'filename': self.m_filename}
 
@@ -337,10 +360,13 @@ def initialise(app_defaults_filename, system_filename, user_filename):
             print "was released. Fix the file yourself, or reinstall Solfege."
             print "-" * 60
             raise
+    
     else:
         data = {}
+    
     if system_filename and os.path.isfile(system_filename):
         data = parse_file_into_dict(data, system_filename)
+    
     if os.path.isfile(user_filename):
         data = parse_file_into_dict(data, user_filename)
 
@@ -348,6 +374,7 @@ def initialise(app_defaults_filename, system_filename, user_filename):
 class ConfigUtils(object):
     def __init__(self, exname):
         self.m_exname = exname
+    
     def block_watch(self, name):
         """
         Stop functions watching a name being called. You have to call the
@@ -357,11 +384,13 @@ class ConfigUtils(object):
         if name not in _blocked_watches:
             _blocked_watches[name] = 0
         _blocked_watches[name] += 1
+    
     def unblock_watch(self, name):
         name = self._expand_name(name)
         assert name in _blocked_watches
         assert _blocked_watches[name] > 0
         _blocked_watches[name] -= 1
+    
     def add_watch(self, name, callback):
         global _watch_counter
         name = self._expand_name(name)
@@ -370,54 +399,76 @@ class ConfigUtils(object):
         _watches[name][_watch_counter] = callback
         _watch_counter += 1
         return _watch_counter - 1
+    
     def remove_watch(self, name, watch_id):
         name = self._expand_name(name)
         if name in _watches:
+            
             if watch_id in _watches[name]:
+                
                 del _watches[name][watch_id]
                 if _watches[name] == {}:
+                    
                     del _watches[name]
+            
             else:
                 logging.warning("cfg.remove_watch: id don't exist: %s", watch_id)
+        
         else:
             logging.warning("cfg.remove_watch: name is not watched: %s", name)
+    
     def _expand_name(self, name):
         if name.count("/") == 0:
             return "%s/%s" % (self.m_exname, name)
         return name
+    
     ######
     # set
     ######
+    
     def set_string(self, name, val):
         set_string(self._expand_name(name), val)
+    
     def set_int(self, name, val):
         set_int(self._expand_name(name), val)
+    
     def set_float(self, name, val):
         set_float(self._expand_name(name), val)
+    
     def set_bool(self, name, val):
         set_bool(self._expand_name(name), val)
+    
     def set_list(self, name, val):
         set_list(self._expand_name(name), val)
+    
     ######
     # get
     ######
+    
     def _get(self, func, name, default=""):
         return func(self._expand_name(name)+default)
+    
     def get_string(self, name):
         r = self._get(get_string, name)
         if r is None:
             return ""
+        
         else:
             return r
+    
     def get_int(self, name):
         return self._get(get_int, name)
+    
     def get_int_with_default(self, name, default):
         assert type(default) is type(0)
         return self.get_int(name+"=%i" % default)
+    
     def get_float(self, name):
         return self._get(get_float, name)
+    
     def get_bool(self, name):
         return self._get(get_bool, name)
+    
     def get_list(self, name):
         try:
             if '=' in name:
@@ -425,5 +476,3 @@ class ConfigUtils(object):
             return eval(self._get(get_string, name, "=[]"))
         except SyntaxError:
             return []
-
-
