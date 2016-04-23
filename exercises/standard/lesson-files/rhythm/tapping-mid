@@ -2,9 +2,9 @@
 # Copyright (C) 2005, 2006, 2011 Tom Cato Amundsen
 
 header {
-    lesson_id = "eab6a7ac-e45d-4d79-88c8-a7f8023930bb"
-    module=rhythm
-    rhythm_elements=0, 1, 2, 3, 5, 4, 6, 7, newline
+    lesson_id = "4a66cfee-e289-43fa-8ce3-f56cd5da7c73"
+    module=rhythmtapping2
+    rhythm_elements=0, 1, 2, 3, 4, 5, 6, 7
     title = _("Rhythms")
     bpm=66
     not_start_with_rest=yes

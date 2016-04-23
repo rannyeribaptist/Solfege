@@ -1,4 +1,4 @@
-FileHeader(1, 
+FileHeader(1,
  Page(_(u'Default front page'), [
   Column([
    LinkList(_(u'_Intervals'), [
@@ -45,19 +45,28 @@ FileHeader(1,
     Page(_(u'Rhythm dictation'), [
      Column([
       LinkList(_(u'Rhythm dictation'), [
-       u'solfege:lesson-files/rhythmdict-1',
+       u'solfege:lesson-files/rhythm/rhythmdict-1',
        ]),
       LinkList(_(u'Generated rhythms'), [
-       u'solfege:lesson-files/rhythmdict-gen-1',
-       u'solfege:lesson-files/rhythmdict-gen-2',
-       u'solfege:lesson-files/rhythmdict-gen-3_4-1',
-       u'solfege:lesson-files/rhythmdict-gen-3_4-2',
-       u'solfege:lesson-files/rhythmdict-gen-3_4-3',
-       u'solfege:lesson-files/rhythmdict-gen-6_8-1',
-       u'solfege:lesson-files/rhythmdict-gen-6_8-2',
+       u'solfege:lesson-files/rhythm/rhythmdict-gen-1',
+       u'solfege:lesson-files/rhythm/rhythmdict-gen-2',
+       u'solfege:lesson-files/rhythm/rhythmdict-gen-3_4-1',
+       u'solfege:lesson-files/rhythm/rhythmdict-gen-3_4-2',
+       u'solfege:lesson-files/rhythm/rhythmdict-gen-3_4-3',
+       u'solfege:lesson-files/rhythm/rhythmdict-gen-6_8-1',
+       u'solfege:lesson-files/rhythm/rhythmdict-gen-6_8-2',
        ]),
       ]),
      ]),
+     Page(_(u'Tap generated rhythm'), [
+      Column([
+       LinkList(_(u'Tap generated rhythm'), [
+        u'solfege:lesson-files/rhythm/tapping-easy',
+        u'solfege:lesson-files/rhythm/tapping-mid',
+        u'solfege:lesson-files/rhythm/tapping-all',
+        ]),
+       ]),
+      ]),
     ]),
    LinkList(_(u'The_ory'), [
     Page(_(u'Name intervals'), [
@@ -296,54 +305,54 @@ FileHeader(1,
     Page(_(u'Dictation'), [
      Column([
       LinkList(_(u'Dictation'), [
-       u'solfege:lesson-files/volkslieder1',
-       u'solfege:lesson-files/volkslieder2',
-       u'solfege:lesson-files/jsb-inventions',
-       u'solfege:lesson-files/barnesanger',
-       u'solfege:lesson-files/polish-folk-songs',
+       u'solfege:lesson-files/dictation/volkslieder1',
+       u'solfege:lesson-files/dictation/volkslieder2',
+       u'solfege:lesson-files/dictation/jsb-inventions',
+       u'solfege:lesson-files/dictation/barnesanger',
+       u'solfege:lesson-files/dictation/polish-folk-songs',
        ]),
       ]),
      ]),
     Page(_(u'Identify tone'), [
      Column([
       LinkList(_(u'Identify tone'), [
-       u'solfege:lesson-files/id-tone-cde-3',
-       u'solfege:lesson-files/id-tone-cde-4',
-       u'solfege:lesson-files/id-tone-cde-5',
-       u'solfege:lesson-files/id-tone-cde-6',
-       u'solfege:lesson-files/id-tone-cde-7',
-       u'solfege:lesson-files/id-tone-cde-8',
-       u'solfege:lesson-files/id-tone-cde-9',
-       u'solfege:lesson-files/id-tone-cde-10',
-       u'solfege:lesson-files/id-tone-cde-11',
-       u'solfege:lesson-files/id-tone-cde-12',
+       u'solfege:lesson-files/tone/identify/id-tone-cde-3',
+       u'solfege:lesson-files/tone/identify/id-tone-cde-4',
+       u'solfege:lesson-files/tone/ientify/id-tone-cde-5',
+       u'solfege:lesson-files/tone/identify/id-tone-cde-6',
+       u'solfege:lesson-files/tone/identify/id-tone-cde-7',
+       u'solfege:lesson-files/tone/identify/id-tone-cde-8',
+       u'solfege:lesson-files/tone/identify/id-tone-cde-9',
+       u'solfege:lesson-files/tone/identify/id-tone-cde-10',
+       u'solfege:lesson-files/tone/identify/id-tone-cde-11',
+       u'solfege:lesson-files/tone/identify/id-tone-cde-12',
        ]),
       ]),
      ]),
     Page(_(u'Harmonic progressions'), [
      Column([
       LinkList(_(u'Harmonic progressions'), [
-       u'solfege:lesson-files/progression-1',
-       u'solfege:lesson-files/progression-2',
-       u'solfege:lesson-files/three-prog-root',
+       u'solfege:lesson-files/HarmonicProgressions/progression-1',
+       u'solfege:lesson-files/HarmonicProgressions/progression-2',
+       u'solfege:lesson-files/HarmonicProgressions/three-prog-root',
        ]),
       LinkList(_(u'These progressions require MMA'), [
-       u'solfege:lesson-files/mma-1',
-       u'solfege:lesson-files/mma-2',
-       u'solfege:lesson-files/mma-3',
-       u'solfege:lesson-files/mma-4-C',
-       u'solfege:lesson-files/mma-4-natural-minor',
-       u'solfege:lesson-files/mma-4-harmonic-minor',
-       u'solfege:lesson-files/mma-7-C',
-       u'solfege:lesson-files/mma-7-natural-minor',
-       u'solfege:lesson-files/mma-7-harmonic-minor',
+       u'solfege:lesson-files/HarmonicProgressions/mma/mma-1',
+       u'solfege:lesson-files/HarmonicProgressions/mma/mma-2',
+       u'solfege:lesson-files/HarmonicProgressions/mma/mma-3',
+       u'solfege:lesson-files/HarmonicProgressions/mma/mma-4-C',
+       u'solfege:lesson-files/HarmonicProgressions/mma/mma-4-natural-minor',
+       u'solfege:lesson-files/HarmonicProgressions/mma/mma-4-harmonic-minor',
+       u'solfege:lesson-files/HarmonicProgressions/mma/mma-7-C',
+       u'solfege:lesson-files/HarmonicProgressions/mma/mma-7-natural-minor',
+       u'solfege:lesson-files/HarmonicProgressions/mma/mma-7-harmonic-minor',
        ]),
       ]),
      ]),
     Page(_(u'Cadences'), [
      Column([
       LinkList(_(u'Cadences'), [
-       u'solfege:lesson-files/cadense-1',
+       u'solfege:lesson-files/cadense/cadense-1',
        ]),
       ]),
      ]),

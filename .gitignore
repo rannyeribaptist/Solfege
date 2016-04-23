@@ -6,3 +6,6 @@
 
 # Ignore all .pyc files
 /solfege/*.pyc
+/solfege/mpd/*.pyc
+/solfege/soundcard/*.pyc
+/solfege/exercises/*.pyc

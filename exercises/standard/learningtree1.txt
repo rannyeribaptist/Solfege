@@ -1,4 +1,4 @@
-FileHeader(1, 
+FileHeader(1,
  Page(_(u'Default front page'), [
   Column([
    LinkList(_(u'_Intervals'), [
