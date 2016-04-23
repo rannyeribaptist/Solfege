@@ -15,7 +15,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-
 import os
 import sys
 import urllib
@@ -31,7 +30,6 @@ try:
     import pyalsa
 except ImportError:
     pyalsa = None
-
 
 def download():
     pdir = os.path.expanduser("~")
@@ -66,16 +64,20 @@ ________________________________________________________________________________
     m.set_default_response(Gtk.ResponseType.YES)
     ret = m.run()
     m.destroy()
+    
     if ret in (Gtk.ResponseType.CANCEL, Gtk.ResponseType.DELETE_EVENT):
         return
     logwin = gu.LogWindow(solfege.win)
+    
     def progress_callback(count, size, total):
         if total == -1:
             total = 'unknown'
         logwin.write("Downloading %s of %s bytes\n" % (count * size, total))
     try:
+        
         if not os.path.exists(bz2abs):
             urllib.urlretrieve(url, bz2abs, progress_callback)
+    
     except IOError, e:
         logwin.write(str(e).decode(sys.getfilesystemencoding(), 'replace'))
         logwin.write("\nFailed to download alsa Python modules.")
@@ -83,6 +85,7 @@ ________________________________________________________________________________
         return
     try:
         logwin.popen(["tar", "xjf", bz2], cwd=pdir)
+    
     except OSError, e:
         logwin.write("\nExtracting %s failed.\n" % bz2)
         logwin.write("Make sure tar and bz2 is installed.\n")
@@ -92,10 +95,12 @@ ________________________________________________________________________________
     try:
         ret = logwin.popen(["python", "setup.py", "build"],
             cwd=os.path.join(pdir, "pyalsa-%s" % pyalsa_ver))
+       
         if ret != 0:
             logwin.write("\nRunning the python interpreter failed.\nCould not build ALSA python module.")
             logwin.run_finished()
             return
+    
     except OSError, e:
         logwin.write("\nRunning the python interpreter failed.\nCould not build ALSA python module.")
         logwin.run_finished()
@@ -119,4 +124,3 @@ ________________________________________________________________________________
     logwin.write("")
 
     logwin.run_finished()
-
