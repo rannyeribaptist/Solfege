@@ -37,6 +37,7 @@ def _i(s):
     ns = _(s)
     if ns == s:
         return "%s" %(s.split('|')[-1])
+
     else:
         return "%s" % ns
 
@@ -45,17 +46,21 @@ def langs():
     for k in ('LANGUAGE', 'LC_ALL', 'LC_MESSAGES', 'LANG'):
         if k in os.environ:
             v = os.environ.get(k)
+
             if v:
                 ret = v.split(':')
             break
+
     if 'C' not in ret:
         ret.append('C')
     retval = []
     for l in ret:
         s = locale.normalize(l)
+
         if len(s) >= 5 and s[2] == '_':
             retval.append(s[:5])
             retval.append(s[:2])
+
         else:
             retval.append(s)
     return retval
@@ -87,23 +92,29 @@ def setup(prefix, config_locale=None):
         __builtin__.__dict__['ungettext'] = _nop
         return
     varlist = ('LANGUAGE', 'LC_MESSAGES')
+
     if not config_locale:
         config_locale = 'system default'
+
     if (config_locale != 'system default') and (sys.platform != 'win32'):
         for n in varlist:
             os.environ[n] = config_locale
     # FIXME can we remove this whole if block, not that set run
     # locale.setlocale(locale.LC_ALL, '') at program start??
+
     if (sys.platform == 'win32') and (config_locale == 'system default'):
         envar = None
         for varname in varlist:
+
             if varname in os.environ:
                 envar = varname
                 break
+
         if not envar:
             # We have to set the value ourselves if we don't have
             # a environment variable set.
             s = locale.getdefaultlocale()[0]
+
             if s:
                 s = locale.normalize(s)
                 os.environ['LANGUAGE'] = s
@@ -119,5 +130,3 @@ def setup(prefix, config_locale=None):
     # plurals usage:
     # i =  'some integer value'
     # ungettext("%i car", "%i cars", i) % i
-
-
