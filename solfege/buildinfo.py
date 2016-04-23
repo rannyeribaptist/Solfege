@@ -32,14 +32,11 @@ def is_release():
     return (version_info['revision_id'] == REVISION_ID and
             'bzr-checkout' not in VERSION_STRING)
 
-
 def get_bzr_revision_info_list():
     return (u"branch_nick: %s" % version_info['branch_nick'],
             u"revno: %s" % version_info['revno'],
             u"revision_id: %s" % (version_info['revision_id']).decode("ascii"),
             u"clean: %s" % version_info['clean'])
 
-
 def get_bzr_revision_info_pmwiki():
     return u"[[<<]]".join(get_bzr_revision_info_list())
-
