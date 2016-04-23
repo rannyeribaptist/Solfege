@@ -32,6 +32,7 @@ MSWIN: app_data() => %APPDATA%\GNU Solfege
        rcfile() => app_data()\solfegerc
        user_data() => MyDocuments\GNU Solfege
        user_lessonfiles() => user_data()/lessonfiles
+
 Linux: app_data() => ~/.solfege
        rcfile() => ~/.solfegerc
        user_data() => app_data()
@@ -49,6 +50,7 @@ Example locations:
 import locale
 import os
 import sys
+
 if sys.platform == 'win32':
     from solfege import winreg
 # This name will be used as folder name on MS Windows, to create one
@@ -62,19 +64,24 @@ def _get_home_dir():
         path2 = os.environ["HOME"]
     except KeyError:
         path2 = ""
+  
     try:
         path3 = os.environ["USERPROFILE"]
     except KeyError:
         path3 = ""
 
     if not os.path.exists(path1):
+        
         if not os.path.exists(path2):
+          
             if not os.path.exists(path3):
                 return os.getcwdu()
+          
             else: return path3
+        
         else: return path2
+    
     else: return path1
-
 
 def win32_program_files_folder():
     """
@@ -82,7 +89,6 @@ def win32_program_files_folder():
     """
     return winreg._get_reg_value(winreg._winreg.HKEY_LOCAL_MACHINE,
         r"SOFTWARE\Microsoft\Windows\CurrentVersion", r"ProgramFilesDir")
-
 
 def _win32_unicode_decode(s):
     enc = sys.getfilesystemencoding()
@@ -96,14 +102,13 @@ def _win32_unicode_decode(s):
         except UnicodeDecodeError:
             return s.decode("iso-8859-1")
 
-
 def get_home_dir():
     if sys.platform == 'win32':
         return _win32_unicode_decode(_get_home_dir())
+  
     else:
         # linux user names can only be ascii chars.
         return _get_home_dir().decode("iso-8859-1")
-
 
 #FIXME remove??
 def expanduser(s):
@@ -114,11 +119,12 @@ def user_data():
     Return the full path name of a directory where solfege  by default will suggest to
     place the directories trainingsets/ eartrainingtests/
     """
+
     if sys.platform == "win32":
         return os.path.join(winreg._get_reg_user_value(winreg.SHELL_FOLDERS, 'Personal'), appname)
+
     else:
         return os.path.expanduser(u"~/.solfege")
-
 
 def user_lessonfiles():
     """
@@ -128,9 +134,9 @@ def user_lessonfiles():
     """
     if sys.platform == "win32":
         return os.path.join(user_data(), u"lessonfiles")
+
     else:
         return os.path.expanduser(u"~/lessonfiles")
-
 
 def rcfile():
     """
@@ -138,6 +144,7 @@ def rcfile():
     """
     if sys.platform == "win32":
         return os.path.join(winreg.get_appdata(), appname, "solfegerc")
+
     else:
         return os.path.expanduser("~/.solfegerc")
 
@@ -146,8 +153,9 @@ def app_data():
     Return the full path name of the directory that will store files
     created by the program. For example statistics and test results.
     """
+
     if sys.platform == "win32":
         return os.path.join(winreg.get_appdata(), appname)
+
     else:
         return os.path.expanduser("~/.solfege")
-
