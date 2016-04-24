@@ -25,6 +25,7 @@ from solfege import soundcard
 
 MAX_VOLUME = 127.0
 class MidiInstrumentMenu(Gtk.Menu):
+
     def __init__(self, callback):
         Gtk.Menu.__init__(self)
         self.m_callback = callback
@@ -40,11 +41,13 @@ class MidiInstrumentMenu(Gtk.Menu):
             submenu.append(item)
             item.show()
         self.show()
+
     def on_activate(self, menuitem, instrument):
         self.m_callback(instrument)
 
 
 class nInstrumentSelector(Gtk.VBox, cfg.ConfigUtils):
+
     def __init__(self, exname, name, sizegroup):
         Gtk.VBox.__init__(self)
         cfg.ConfigUtils.__dict__['__init__'](self, exname)
@@ -58,6 +61,7 @@ class nInstrumentSelector(Gtk.VBox, cfg.ConfigUtils):
         hbox.pack_start(self.g_button, True, True, 0)
         g = Gtk.VolumeButton()
         g.props.value = self.get_int('%s_volume' % name) / MAX_VOLUME
+
         def ff(volumebutton, value):
             self.set_int('%s_volume' % name, int(value * MAX_VOLUME))
         g.connect('value-changed', ff)
@@ -72,17 +76,20 @@ class nInstrumentSelector(Gtk.VBox, cfg.ConfigUtils):
 
     def on_btnclick(self, *argv):
         self.g_menu.popup(None, None, None, None, 1, 0)
+
     def on_instrument_selected(self, instrument=None):
         self.set_int(self.m_name, instrument)
         self.g_button.get_children()[0].set_text(soundcard.instrument_names[instrument])
         self.m_instrument = instrument
         self.play_selected_instrument()
+
     def play_selected_instrument(self, _o=None):
         t = mpd.Track()
         t.set_patch(self.m_instrument)
         t.set_volume(self.get_int('%s_volume' % self.m_name))
         t.note(4, 60)
         soundcard.synth.play_track(t)
+
     def show(self):
         self.show_all()
 
@@ -100,6 +107,7 @@ def FramedInstrumentSelector(title, exname, varname, sizegroup):
 
 
 class InstrumentConfigurator(Gtk.VBox, cfg.ConfigUtils):
+
     def __init__(self, exname, num, labeltext):
         Gtk.VBox.__init__(self)
         #cfg.ConfigUtils.__init__(self, exname)
@@ -122,18 +130,21 @@ class InstrumentConfigurator(Gtk.VBox, cfg.ConfigUtils):
             self.g_instrsel_middle = FramedInstrumentSelector(_("Middle:"),
                                             exname, 'middle_instrument', sizegroup)
             hbox.pack_start(self.g_instrsel_middle, False, False, 0)
+
         else:
             self.g_instrsel_middle = None
         self.g_instrsel_low = FramedInstrumentSelector(_("Lowest:"),
                                                 exname, 'lowest_instrument', sizegroup)
         hbox.pack_start(self.g_instrsel_low, False, False, 0)
         self.update_instrument_override()
+
     def update(self):
         self.update_instrument_override()
         self.g_instrsel_high.update()
         if self.m_num == 3:
             self.g_instrsel_middle.update()
         self.g_instrsel_low.update()
+
     def update_instrument_override(self, _o=None):
         self.g_override_default_instrument_checkbutton.set_active(
                 self.get_bool('override_default_instrument'))
@@ -144,6 +155,7 @@ class InstrumentConfigurator(Gtk.VBox, cfg.ConfigUtils):
         if self.g_instrsel_middle:
             self.g_instrsel_middle.set_sensitive(
                self.g_override_default_instrument_checkbutton.get_active())
+
     def show(self):
         self.show_all()
 
