@@ -24,6 +24,7 @@ from solfege import gu
 from solfege import reportbug
 
 class TracebackWindow(Gtk.Dialog):
+
     def __init__(self, show_gtk_warnings):
         Gtk.Dialog.__init__(self)
         self.m_show_gtk_warnings = show_gtk_warnings
@@ -54,6 +55,7 @@ class TracebackWindow(Gtk.Dialog):
         self.g_close = Gtk.Button(stock='gtk-close')
         self.action_area.pack_start(self.g_close, True, True, 0)
         self.g_close.connect('clicked', lambda w: self.hide())
+
     def do_report(self, *v):
         yesno = gu.dialog_yesno(_(
             "Automatic bug reports are often mostly useless because "
@@ -73,16 +75,21 @@ class TracebackWindow(Gtk.Dialog):
                              b.get_end_iter(), False))
         while 1:
             ret = d.run()
+
             if ret in (Gtk.ResponseType.REJECT, Gtk.ResponseType.DELETE_EVENT):
                 break
+
             elif ret == reportbug.RESPONSE_SEND:
                 self.m_send_exception = d.send_bugreport()
                 break
+
         if self.m_send_exception != 'Nothing':
+
             if self.m_send_exception:
                 m = Gtk.MessageDialog(self, Gtk.DialogFlags.MODAL,
                     Gtk.MessageType.ERROR, Gtk.ButtonsType.CLOSE,
                     "Sending bugreport failed:\n%s" % self.m_send_exception)
+
             else:
                 m = Gtk.MessageDialog(self, Gtk.DialogFlags.MODAL,
                     Gtk.MessageType.INFO, Gtk.ButtonsType.CLOSE,
@@ -90,6 +97,7 @@ class TracebackWindow(Gtk.Dialog):
             m.run()
             m.destroy()
         d.destroy()
+
     def write(self, txt):
         if ("DeprecationWarning:" in txt) or \
            (not self.m_show_gtk_warnings and (
@@ -100,12 +108,15 @@ class TracebackWindow(Gtk.Dialog):
             )):
             return
         sys.stdout.write(txt)
+
         if txt.strip():
             self.show_all()
         buffer = self.g_text.get_buffer()
         buffer.insert(buffer.get_end_iter(), txt)
         self.set_focus(self.g_close)
+
     def flush(self, *v):
         pass
+
     def close(self, *v):
         pass

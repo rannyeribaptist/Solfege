@@ -21,6 +21,7 @@ import random
 from solfege import cfg
 
 class Random(object):
+
     def __init__(self, choices):
         #TODO add assert that all choices are unique
         self.m_choices = choices
@@ -28,10 +29,12 @@ class Random(object):
         # The number of randoms generated
         self.m_count = 0
         self.m_last_choices = []
+
     def reset(self):
         self.m_last_choices = []
         self.m_choice_count = len(self.m_choices) * [0]
         self.m_count = 0
+
     def get_random_by_random_data(self, available_choices):
         not_selected_factor = 2
         data = []
@@ -48,9 +51,11 @@ class Random(object):
         # big chance to be asked as the question that has been asked
         # fewest times.
         for v in data:
+
             if v[1] == 0.0:
                 v[2] = maxval * not_selected_factor
         return data
+
     def random_by_random(self, available_choices):
         """
         Select by random, but make it more likely that choices that
@@ -66,9 +71,11 @@ class Random(object):
             v.append(f)
         selectval = data[-1][3] * random.random()
         for v in data:
+
             if selectval < v[3]:
                 return v[0]
         return data[-1][0]
+
     def random_by_random2(self, available_choices):
         """
         Select by random, but make it more likely that choices that
@@ -78,8 +85,10 @@ class Random(object):
         if self.m_count == 0:
             return random.choice(available_choices)
         data = self.get_random_by_random_data(available_choices)
+
         if self.m_last_choices:
             data[self.m_last_choices[-1]][2] *= 0.5
+
         if len(self.m_last_choices) >= 2 and self.m_last_choices[-1] == self.m_last_choices[-2]:
             data[self.m_last_choices[-1]][2] *= 0.5
         f = 0.0
@@ -88,9 +97,11 @@ class Random(object):
             v.append(f)
         selectval = data[-1][3] * random.random()
         for v in data:
+
             if selectval < v[3]:
                 return v[0]
         return data[-1][0]
+
     def random_by_selection(self, available_choices):
         """
         The smallest randomness value is 1
@@ -100,11 +111,14 @@ class Random(object):
         v = []
         if self.m_count > len(self.m_choices):
             for k in available_choices:
+
                 if self.m_choice_count[k] / self.m_count < 1 / (len(self.m_choices) * self.get_float("app/randomness")):
                     v.append(k)
+
             if v:
                 return random.choice(v)
         return random.choice(self.m_choices)
+
     def add(self, idx):
         self.m_choice_count[idx] += 1
         self.m_count += 1

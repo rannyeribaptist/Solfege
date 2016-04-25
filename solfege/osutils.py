@@ -54,6 +54,7 @@ class OsUtilsException(Exception):
     pass
 
 class RunningExecutableFailed(OsUtilsException):
+
     def __init__(self, cmd):
         OsUtilsException.__init__(self,
           _("Running the command %s failed.") % cmd)
@@ -63,12 +64,14 @@ class ExecutableDoesNotExist(OsUtilsException):
     We should raise this exception if os.system fails and returns
     anything else than 0.
     """
+
     def __init__(self, cmd):
         OsUtilsException.__init__(self,
           _("The executable '%s' does not exist.") % cmd)
 
 
 class BinaryBaseException(OsUtilsException):
+
     def __init__(self, binary, exception):
         OsUtilsException.__init__(self)
         self.msg2 = _("Tried `%(bin)s`:\n\n\t%(exception)s\n\n"
@@ -80,17 +83,20 @@ class BinaryBaseException(OsUtilsException):
                  sys.getfilesystemencoding(), 'replace')}
 
 class BinaryForProgramException(BinaryBaseException):
+
     def __init__(self, program_name, binary, exception):
         BinaryBaseException.__init__(self, binary, exception)
         self.msg1 = _("Failed to execute a binary for %s") % program_name
 
 class BinaryForMediaPlayerException(BinaryBaseException):
+
     def __init__(self, typeid, binary, exception):
         BinaryBaseException.__init__(self, binary, exception)
         self.msg1 = _("Failed to execute media player for %s files") % typeid.upper()
 
 class BinaryForMediaConvertorException(BinaryBaseException):
     r = re.compile("app/(?P<from>[a-z0-9]+)_to_(?P<to>[a-z0-9]+)_cmd")
+
     def __init__(self, varname, binary, exception):
         BinaryBaseException.__init__(self, binary, exception)
         m = self.r.match(varname)
@@ -114,8 +120,10 @@ if sys.version_info < (2, 6):
         We define this class because Popen.kill was added in Python 2.6,
         and we want to run with 2.5 too.
         """
+
         def __init__(self, *args, **kwargs):
             subprocess.Popen.__init__(self, *args, **kwargs)
+
         def kill(self):
             if sys.platform == 'win32':
                 # http://code.activestate.com/recipes/347462/
@@ -123,9 +131,11 @@ if sys.version_info < (2, 6):
                 handle = ctypes.windll.kernel32.OpenProcess(PROCESS_TERMINATE, False, self.pid)
                 ctypes.windll.kernel32.TerminateProcess(handle, -1)
                 ctypes.windll.kernel32.CloseHandle(handle)
+
             else:
                 os.kill(self.pid, signal.SIGKILL)
                 self.wait()
+
 else:
     Popen = subprocess.Popen
 
@@ -153,6 +163,7 @@ class PopenSingleton(object):
         if PopenSingleton.__instance is not None:
             PopenSingleton.__instance.kill()
             PopenSingleton.__instance = None
+
         if PopenSingleton.__instance is None:
             # Create and remember instance
             PopenSingleton.__instance = PopenSingleton.__impl(*args, **kwargs)
@@ -167,7 +178,6 @@ class PopenSingleton(object):
     def __setattr__(self, attr, value):
         """ Delegate access to implementation """
         return setattr(self.__instance, attr, value)
-
 
 def find_progs(execs):
     """
@@ -186,7 +196,6 @@ def find_progs(execs):
                 retval.add(ex)
     return retval
 
-
 def find_mma_executables(ignore_drives):
     """
     Return a set of command lines that we think will run MMA.
@@ -195,19 +204,24 @@ def find_mma_executables(ignore_drives):
     """
     if sys.platform != 'win32':
         return find_progs(("mma",))
+
     else:
         retval = set()
         for drive in get_drives():
+
             if drive.upper() in ignore_drives:
                 continue
             try:
                 for dirname in os.listdir(drive):
+
                     if dirname.lower().startswith('mma'):
                         dir = os.path.join(drive, dirname)
                         mma_py = os.path.join(drive, dirname, "mma.py")
+
                         if os.path.exists(mma_py):
                             retval.add(mma_py)
                         mma_bat = os.path.join(drive, dirname, "mma.bat")
+
                         if os.path.exists(mma_bat):
                             retval.add(mma_bat)
             except WindowsError:
@@ -228,6 +242,7 @@ def find_csound_executables():
     if sys.platform == 'win32':
         fn = os.path.join(filesystem.win32_program_files_folder(),
             "csound", "bin", "csound.exe")
+
         if os.path.exists(fn):
             retval.add(fn)
     return retval

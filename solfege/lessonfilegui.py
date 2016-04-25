@@ -22,14 +22,17 @@ from __future__ import absolute_import
 ############################
 # Python Standard Library
 ############################
+
 import warnings
 
 ###################
+
 from gi.repository import Gtk
 
 ###################
 # Solfege modules
 ###################
+
 from solfege import gu
 from solfege import frontpage
 from solfege import lessonfile
@@ -73,6 +76,7 @@ def new_labelobject(label):
         # in case some modules are wrong.
         l = Gtk.Label(label=_i(label))
         l.show()
+
     else:
         if isinstance(label, tuple):
             # I think only old code
@@ -81,18 +85,24 @@ def new_labelobject(label):
             warnings.warn("lessonfilegui.new_labelobject: label is a tuple.",
                           DeprecationWarning)
             labeltype, labeldata = label
+
         else:
             labeltype = label.m_labeltype
             labeldata = label.m_labeldata
+
         if labeltype == 'progressionlabel':
             l = gu.HarmonicProgressionLabel(labeldata)
             l.show_all()
+
         else:
             l = Gtk.Label()
+
             if labeltype == 'rnc':
                 l.set_markup(rn_markup(labeldata))
+
             elif labeltype == 'chordname':
                 l.set_markup(chordname_markup(labeldata))
+
             elif labeltype == 'plabel':
                 l.set_markup("""<span font_family="serif"><span size="xx-large">%s</span><span size="small">%s</span><span size="x-large">%s</span></span>""" % labeldata)
 
@@ -117,9 +127,11 @@ class LabelObjectBox(gu.AlignedHBox):
         for i, k in enumerate(v):
             if k in lf.m_elements:
                 l = new_labelobject(lf.m_elements[k]['label'])
+
             else:
                 l = Gtk.Label(label=k)
             self.pack_start(l, False, False)
+
             if i != len(v) - 1:
                 l = Gtk.Label(label="-")
                 self.pack_start(l, False, False)
@@ -128,11 +140,13 @@ class LabelObjectBox(gu.AlignedHBox):
 
 
 class ExercisesMenuAddIn(object):
+
     def create_learning_tree_menu(self):
         """
         Create and return a Gtk.Menu object that has submenus that
         let us select all lessons on the learning tree.
         """
+
         def create_menu(page):
             menu = Gtk.Menu()
             for column in page:
@@ -143,11 +157,13 @@ class ExercisesMenuAddIn(object):
                             item = Gtk.MenuItem(link.m_name)
                             menu.append(item)
                             item.set_submenu(create_menu(link))
+
                         else:
                             assert isinstance(link, unicode)
                             # This will also alert us if the file is not
                             # found or not parsable:
                             try:
+
                                 if lessonfile.infocache.get(link, 'module') not in ('melodicinterval', 'harmonicinterval', 'idbyname'):
                                     continue
                             except lessonfile.infocache.InfoCacheException:
@@ -158,6 +174,7 @@ class ExercisesMenuAddIn(object):
                             # to catch these with a more generic algorithm, but
                             # then we would have to parse all the files, and that
                             # would be too slow.
+
                             if link in (
                                     # melodic-interval-self-config
                                     "f62929dc-7122-4173-aad1-4d4eef8779af",
@@ -182,6 +199,7 @@ class ExercisesMenuAddIn(object):
         menu.show_all()
         self._menu_hide_stuff(menu)
         return menu
+
     def _menu_hide_stuff(self, menu):
         """
         Hide the menu if it has no menu items, or all menu items are hidden.
@@ -190,6 +208,7 @@ class ExercisesMenuAddIn(object):
             assert isinstance(sub, Gtk.MenuItem)
             if sub.get_submenu():
                 self._menu_hide_stuff(sub.get_submenu())
+
                 if not [c for c in sub.get_submenu().get_children() if c.get_property('visible')]:
                     sub.hide()
 

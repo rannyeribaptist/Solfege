@@ -57,7 +57,6 @@ from gi.repository import Gtk
 from gi.repository import GObject
 from gi.repository import Gdk
 
-
 if options.debug or options.debug_level:
     # We import all exercise modules here even though it is not necessary
     # since the modules are loaded one by one when needed. But by importing
@@ -66,6 +65,7 @@ if options.debug or options.debug_level:
 
     handler = logging.StreamHandler()
     logging.getLogger().addHandler(handler)
+
     if options.debug_level:
         options.debug = True
     level = {'debug': logging.DEBUG,
@@ -74,14 +74,16 @@ if options.debug or options.debug_level:
              'error': logging.ERROR,
              'critical': logging.CRITICAL}.get(options.debug_level, logging.DEBUG)
     logging.getLogger().setLevel(level)
+
 else:
     handler = logging.handlers.MemoryHandler(1)
     logging.getLogger().addHandler(handler)
 
-
 if options.version:
+
     if buildinfo.is_release():
         rev_info = ""
+
     else:
         rev_info = buildinfo.version_info
     print (u"""GNU Solfege %s
@@ -111,23 +113,28 @@ def do_profiles():
     return (os.path.isdir(os.path.join(filesystem.app_data(), 'profiles'))
            and os.listdir(os.path.join(filesystem.app_data(), 'profiles')))
 
-
 def start_gui(datadir):
     if not options.profile:
+
         if cfg.get_bool("app/noprofilemanager"):
             options.profile = cfg.get_string("app/last_profile")
+
         elif do_profiles():
+
             if solfege.splash_win:
                 solfege.splash_win.hide()
             p = ProfileManager(cfg.get_string("app/last_profile"))
             ret = p.run()
+
             if ret == Gtk.ResponseType.ACCEPT:
                 options.profile = p.get_profile()
                 cfg.set_string("app/last_profile", "" if not options.profile else options.profile)
+
             elif ret in (Gtk.ResponseType.CLOSE, Gtk.ResponseType.DELETE_EVENT):
                 Gtk.main_quit()
                 return
             p.destroy()
+
             if solfege.splash_win:
                 solfege.splash_win.show()
 
@@ -138,6 +145,7 @@ def start_gui(datadir):
     def f(s):
         if solfege.splash_win:
             solfege.splash_win.show_progress(s)
+
     if solfege.splash_win:
         solfege.splash_win.show_progress(_("Opening statistics database"))
     try:
@@ -156,6 +164,7 @@ def start_gui(datadir):
     w.post_constructor()
     solfege.win.load_frontpage()
     w.show()
+
     if solfege.splash_win:
         solfege.splash_win.destroy()
         solfege.splash_win = None
@@ -163,17 +172,24 @@ def start_gui(datadir):
     def ef(t, value, traceback):
         if options.debug:
             msg = "ehooked:" + str(value)
+
         else:
             msg = str(value)
+
         if issubclass(t, lessonfile.LessonfileException):
             w.display_error_message(msg, str(t))
+
         elif issubclass(t, osutils.ExecutableDoesNotExist):
+
             if len(value.args) > 1:
                 w.display_error_message2(value.args[0], "\n".join(value.args[1:]))
+
             else:
                 w.display_error_message(msg, str(t))
+
         else:
             sys.__excepthook__(t, msg, traceback)
+
     if not options.disable_exception_handler:
         sys.excepthook = ef
     print time.time() - start_time
@@ -181,6 +197,7 @@ def start_gui(datadir):
     # second the first time the user searches all lesson files using
     # Ctrl-F.
     lessonfile.infocache.parse_all_files(True)
+
     if options.screenshots:
         make_screenshots.make_screenshots()
 
@@ -192,6 +209,7 @@ def start_app(datadir):
         Gdk.flush()
         while Gtk.events_pending():
             Gtk.main_iteration()
+
     else:
         solfege.splash_win = splash_win = None
     style_provider = Gtk.CssProvider()

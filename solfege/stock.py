@@ -23,6 +23,7 @@ from gi.repository import Gtk
 from gi.repository import GdkPixbuf
 
 class BaseIconFactory(Gtk.IconFactory):
+
     def __init__(self, widget, datadir):
         Gtk.IconFactory.__init__(self)
         self.datadir = datadir
@@ -40,6 +41,7 @@ class EditorIconFactory(BaseIconFactory):
     """
     This class is used by lessonfile_editor.py
     """
+
     def __init__(self, widget, datadir):
         BaseIconFactory.__init__(self, widget, datadir)
         icons = {'solfege-icon': "graphics/solfege.svg",
@@ -54,6 +56,7 @@ class EditorIconFactory(BaseIconFactory):
 
 
 class SolfegeIconFactory(BaseIconFactory):
+
     def __init__(self, widget, datadir):
         BaseIconFactory.__init__(self, widget, datadir)
         icon_list = ['happyface', 'sadface',

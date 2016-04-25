@@ -136,18 +136,24 @@ def _get_random_bytes(n):
         loose_counter = 0
         while len(buf) != n:
             buf += reader(n)
+
             if loose_counter > 10:
                 break
             loose_counter += 1
     d = n-len(buf)
+
     if d>0:
         buf += '\0'*d
+
     if n==16:
         fmt = _fmt_16
+
     elif n==6:
         fmt = _fmt_6
+
     elif n==2:
         fmt = _fmt_2
+
     else:
         fmt = ">%sB" % n
     return _pack(fmt,*tuple(map(_randomize_byte,_unpack(fmt,buf))))
@@ -191,11 +197,13 @@ def _get_mac_address():
         s = m.group(1)
         return map(_decode_hex,s.split(":"))
     m = r.search(_backtick("ifconfig"))
+
     if m:
         s = m.group(1)
         return map(_decode_hex,s.split(":"))
     r = re.compile("Physical Address.*: (..:..:..:..:..:..)")
     m = r.search(_backtick("ipconfig /all"))
+
     if m:
         s = m.group(1)
         return map(_decode_hex,s.split(":"))
@@ -228,12 +236,16 @@ def _set_common_suffix():
         _static_time_buf = _get_random_bytes(6)
         # I don't know how to set the multicast bit
         # so I am leaving that out
+
     else:
         suf = _get_mac_address()
+
         if _common_suffix_method == USE_SHA:
             suf = _get_6bytes(suf)
+
         if suf:
             _static_time_buf = _pack(_fmt_6,*suf)
+
         else:
             _static_time_buf = _get_random_bytes(6)
             # I don't know how to set the multicast bit
@@ -279,16 +291,20 @@ def _get_clock():
             _static_clock_seq = _unpack(">H",_get_random_bytes(2))[0] & 0x1FFF
             _static_last_sec = sec - 1
             _static_last_msec = msec
+
         if sec < _static_last_sec or ((sec == _static_last_sec) and (msec < _static_last_msec)):
             _static_clock_seq = (_static_clock_seq+1) & 0x1FFF
             _static_adjustment = 0
             _static_last_sec = sec
             _static_last_msec = msec
+
         elif sec == _static_last_sec and msec == _static_last_msec:
             if _static_adjustment >= _MAX_ADJUSTMENT:
                 try_again = True
+
             else:
                 _static_adjustment += 1
+
         else:
             _static_adjustment = 0
             _static_last_sec = sec
@@ -301,6 +317,7 @@ def _get_clock():
 def _uuid_generate():
     if _get_random_reader():
         return _uuid_generate_random()
+
     else:
         return _uuid_generate_time()
 
@@ -387,14 +404,17 @@ if _libuuid:
     generate = libuuid_generate
     generate_random = libuuid_generate_random
     generate_time = libuuid_generate_time
+
 else:
     try:
+
         if linux_generate():
             generate = linux_generate
             generate_random = linux_generate
             generate_time = linux_generate
     except:
         pass
+
     if not generate:
         generate = py_generate
         generate_random = py_generate_random
@@ -405,10 +425,13 @@ if __name__ == '__main__':
     gen = generate
     opts,args = getopt.getopt(sys.argv[1:],"rth",["help"])
     for o,v in opts:
+
         if o == "-t":
             gen = generate_time
+
         elif o == "-r":
             gen = generate_random
+
         else:
             print "usage: uuid.py [-r|-t]"
             print "generate a random-based UUID (-r, default), or a time-based one (-t)"

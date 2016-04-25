@@ -26,12 +26,14 @@ import solfege.parsetree as pt
 from solfege.dataparser import Question
 
 class LfMod(object):
+
     def __init__(self, builtins=None):
         if not builtins:
             builtins = {}
         self.m_builtins = builtins
         self.m_globals = builtins.copy()
         self.m_blocklists = {}
+
     def dump(self):
         import pprint
         print "Globals:"
@@ -41,6 +43,7 @@ class LfMod(object):
         print "--------"
 
 translation_re = re.compile("(?P<varname>\w+)\[(?P<lang>[\w_+]+)\]")
+
 def do_assignment(mod, statement, local_namespace, global_namespace, in_header,
         included):
     """
@@ -51,24 +54,33 @@ def do_assignment(mod, statement, local_namespace, global_namespace, in_header,
     """
     if isinstance(statement.right, pt.Program):
         local_namespace[unicode(statement.left)] = parse_tree_interpreter(statement.right, mod.m_builtins)
+
     else:
         m = translation_re.match(unicode(statement.left))
+
         if m:
+
             if m.group('varname') not in local_namespace:
                 print "FIXME: correct exception aka LessonfileException"
                 raise Exception("Define the C-locale variable before adding translations")
+
             if in_header and included:
+
                 if m.group('varname') in local_namespace:
                     return
             local_namespace[m.group('varname')] = \
                 local_namespace[m.group('varname')].add_translation(
                     m.group('lang'),
                     statement.right.evaluate(local_namespace, global_namespace))
+
         else:
             if in_header:
+
                 if included:
+
                     if unicode(statement.left) in local_namespace:
                         return
+
                 if in_header and statement.left == 'module':
                     local_namespace[unicode(statement.left)] = unicode(statement.right)
                     return
@@ -79,6 +91,7 @@ def do_module(block, mod, included=False):
     assert isinstance(mod, LfMod)
     assert isinstance(block, pt.Program)
     for statement in block:
+
         if isinstance(statement, pt.Assignment):
             # On the module top level, the local namespace it the
             # global namespace
@@ -87,15 +100,21 @@ def do_module(block, mod, included=False):
             except pt.ParseTreeException, e:
                 e.m_nonwrapped_text = block._lexer.get_err_context(e.m_tokenpos)
                 raise
+
         elif isinstance(statement, (pt.Block, pt.NamedBlock)):
             blocks = mod.m_blocklists.setdefault(statement.m_blocktype, [])
+
             if statement.m_blocktype == 'question':
                 blocks.append(Question())
+
             elif statement.m_blocktype == 'header':
+
                 if not blocks:
                     blocks.append({})
+
             else:
                 blocks.append({})
+
             if isinstance(statement, pt.NamedBlock):
                 mod.m_globals[statement.m_name] = blocks[-1]
                 # Named blocks need to know their name. It is not enough
@@ -110,6 +129,7 @@ def do_module(block, mod, included=False):
                 except pt.ParseTreeException, e:
                     e.m_nonwrapped_text = block._lexer.get_err_context(e.m_tokenpos)
                     raise
+
         elif isinstance(statement, pt.IncludeStatement):
             do_module(statement.m_inctree, mod, included=True)
     return mod

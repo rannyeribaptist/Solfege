@@ -34,13 +34,17 @@ def label_from_key(statistics, key):
         v = eval(key)
     except Exception:
         v = key
+
     else:
         if isinstance(v, (int, float, long)):
             v = key
+
     if not v:
         l = Gtk.Label(label=key)
+
     elif hasattr(statistics, 'm_key_is_list'):
         l = lessonfilegui.LabelObjectBox(statistics.m_t.m_P, v)
+
     else:
         l = lessonfilegui.new_labelobject(statistics.key_to_pretty_name(v))
     l.set_alignment(0.0, 0.5)
@@ -48,13 +52,16 @@ def label_from_key(statistics, key):
 
 
 class SimpleTable(Gtk.VBox):
+
     def __init__(self, heading, statistics):
         Gtk.VBox.__init__(self)
         self.m_heading = heading
         self.m_data = []
         self.m_statistics = statistics
+
     def add_row(self, cell1, cell2):
         self.m_data.append((cell1, cell2))
+
     def create(self):
         table = Gtk.Table()
         label = Gtk.Label()
@@ -75,6 +82,7 @@ class SimpleTable(Gtk.VBox):
         self.show_all()
 
 class MatrixTable(Gtk.VBox):
+
     def __init__(self, heading, st_data, st):
         """
         st_data is the statistics data we want displayled
@@ -111,6 +119,7 @@ class MatrixTable(Gtk.VBox):
 
 
 class PercentagesTable(Gtk.Frame):
+
     def __init__(self, statistics):
         Gtk.Frame.__init__(self)
         table = Gtk.Table()
@@ -163,6 +172,7 @@ class PercentagesTable(Gtk.Frame):
             box.set_border_width(gu.PAD_SMALL)
         self.update(statistics)
         self.show_all()
+
     def update(self, statistics):
         for box in self.boxdict.values():
             for o in box.get_children():
@@ -174,6 +184,7 @@ class PercentagesTable(Gtk.Frame):
             num_guess = statistics.get_num_guess(seconds)
             if num_guess == 0:
                 self.m_totals[sk+'percent'].set_text("-")
+
             else:
                 self.m_totals[sk+'percent'].set_text(u"%.0f%%" %
                    (statistics.get_num_correct(seconds) / num_guess * 100))
@@ -186,8 +197,10 @@ class PercentagesTable(Gtk.Frame):
                        ('last7', 60*60*24*7),
                        ('total', -1)):
                 num_guess = statistics.get_num_guess_for_key(seconds, k)
+
                 if num_guess == 0:
                     self.boxdict[sk+'percent'].pack_start(Gtk.Label("-"), True, True, 0)
+
                 else:
                     self.boxdict[sk+'percent'].pack_start(
                         Gtk.Label("%.0f%%" % (statistics.get_num_correct_for_key(seconds, k) / num_guess * 100)), False, False, 0)
@@ -196,6 +209,7 @@ class PercentagesTable(Gtk.Frame):
 
 
 class StatisticsViewer(Gtk.ScrolledWindow):
+
     def __init__(self, statistics, heading):
         Gtk.ScrolledWindow.__init__(self)
         self.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.AUTOMATIC)
@@ -220,6 +234,7 @@ class StatisticsViewer(Gtk.ScrolledWindow):
         self.g_tables.show()
         self.vbox.pack_start(self.g_tables, True, True, 0)
         self.show_all()
+
     def update(self):
         self.clear()
         self.g_settings_button.set_sensitive(solfege.db.get_session_count(
@@ -234,12 +249,14 @@ class StatisticsViewer(Gtk.ScrolledWindow):
         c = 0
         for time, f, result in self.m_statistics.iter_test_results():
             t = datetime.datetime.fromtimestamp(time)
+
             if self.m_statistics.m_t.m_P.header.statistics_matrices == 'enabled':
                 m = MatrixTable(_(u"Test dated %(date)s: %(percent).1f%%") % {
                     'date': t.strftime("%x %X"),
                     'percent': f}, result, self.m_statistics)
                 m.show()
                 self.g_tables.pack_start(m, False, False, 0)
+
             else:
                 num_x_per_question = lessonfile.parse_test_def(self.m_statistics.m_t.m_P.header.test)[0]
                 b = SimpleTable(_(u"Test dated %(date)s: %(percent).1f%%") % {
@@ -252,6 +269,7 @@ class StatisticsViewer(Gtk.ScrolledWindow):
                     # the possibility that that result[key1][key2] == None
                     # A user has reported that this can happen, but I don't know
                     # what could insert a None into the database.
+
                     if count is None:
                         count = 0
                     b.add_row(k, "%.1f%%" % (100 * count / num_x_per_question))
@@ -259,13 +277,16 @@ class StatisticsViewer(Gtk.ScrolledWindow):
                 self.g_tables.pack_start(b, False, False, 0)
             # Don't show too many test results.
             c += 1
+
             if c == display_max_num_tests:
                 break
+
     def create_matrices_expander(self):
         expander = Gtk.Expander()
         expander.connect_after('activate', self.on_expander_activate)
         vbox = Gtk.VBox(False, 0)
         expander.add(vbox)
+
         if self.m_statistics.m_t.m_P.header.statistics_matrices == 'enabled':
             expander.set_expanded(True)
             for heading, seconds in ((_("Session"), 0),
@@ -276,15 +297,18 @@ class StatisticsViewer(Gtk.ScrolledWindow):
                                     self.m_statistics.get_statistics(seconds),
                                     self.m_statistics)
                 vbox.pack_start(table, False, False, 0)
+
         else:
             expander.set_expanded(False)
         expander.show_all()
         return expander
+
     def on_expander_activate(self, expander):
         self.m_statistics.m_t.m_P.header['statistics_matrices'] = {
             True: 'enabled',
             False: 'hidden'}[expander.get_expanded()]
         self.update()
+
     def clear(self):
         #UGH why cant we just destroy the children of g_tables??!!
         #for c in self.g_tables.children():
@@ -294,7 +318,9 @@ class StatisticsViewer(Gtk.ScrolledWindow):
         self.g_tables.set_spacing(gu.hig.SPACE_LARGE)
         self.g_tables.show()
         self.vbox.pack_start(self.g_tables, True, True, 0)
+
     def on_delete_statistics(self, widget):
+
         class Dlg(Gtk.MessageDialog):
             def __init__(self, first, last, count):
                 Gtk.MessageDialog.__init__(self, None, Gtk.DialogFlags.MODAL,

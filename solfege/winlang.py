@@ -33,6 +33,7 @@ def win32_put_langenviron(lang):
     print >> langfile, "# rem Created by GNU Solfege %s" % buildinfo.VERSION_STRING
     if lang:
         print >> langfile, lang
+
     else:
         print >> langfile, "# System default language. Not setting variable."
     langfile.close()
@@ -46,9 +47,11 @@ def win32_get_langenviron():
     assert sys.platform == 'win32'
     fn = os.path.join(filesystem.app_data(), "langenviron.txt")
     lang = None
+
     if os.path.isfile(fn):
         try:
             for line in open(fn, 'r').readlines():
+
                 if not line.startswith("#"):
                     lang = line.strip()
         except IOError, e:
@@ -58,10 +61,13 @@ def win32_get_langenviron():
                 print "IOError reading %s:" % fn, e
             except Exception:
                 pass
+
     else:
         lang = _pre_3_11_win32_get_langenviron()
+
     if lang:
         return lang
+
     else:
         return "system default"
 
@@ -85,6 +91,7 @@ def _pre_3_11_win32_get_langenviron():
         r = re.compile("set LANGUAGE=(?P<lang>.*)")
         for line in s.split("\n"):
             m = r.match(line)
+
             if m:
                 return m.groups()[0]
     return None

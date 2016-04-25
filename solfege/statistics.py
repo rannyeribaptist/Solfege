@@ -74,15 +74,19 @@ class DB(object):
             # We make a backup of the statistics file since Solfege 3.21.2 will
             # delete the statistics for the elembuilder exercise.
             bk_filename = u"%s.pre-3.21.2.backup" % statistics_filename
+
             if os.path.exists(statistics_filename) and not os.path.exists(bk_filename):
                 shutil.copyfile(statistics_filename, bk_filename)
             head, tail = os.path.split(statistics_filename)
+
             if not os.path.exists(head):
                 os.makedirs(head)
         self.conn = sqlite3.connect(statistics_filename)
         # Solfege 3.15.0-3.15.2
+
         if self.drop_if_has_uuid_column():
             db_ver = 3
+
         elif self.sanity_check():
             db_ver = 3
         try:
@@ -90,15 +94,18 @@ class DB(object):
         except self.VariableUndefinedError:
             # We did not set database_version to 2, ever...
             db_ver = 1
+
         if db_ver < 2:
             # upgrade_to_version_2() should have deleted the tests table,
             # but unfortunately it did not. So we cannot test for that
             # table to check if we are at version 1. But
             self.upgrade_to_version_2()
+
         if db_ver < 3:
             self.upgrade_to_version_3()
         self.set_variable("database_version", 3)
         self.conn.commit()
+
     def insert_file(self, filename):
         assert lessonfile.is_uri(filename) or os.path.isabs(filename)
         self.conn.execute("insert into lessonfiles "
@@ -107,18 +114,23 @@ class DB(object):
                 (filename, hash_of_lessonfile(filename)))
         return self.get_fileid(filename)
     @staticmethod
+
     def get_noprofile_statistics_filename():
         return os.path.join(filesystem.app_data(), "statistics.sqlite")
+
     def get_statistics_filename(self):
         if self.m_profile:
             return os.path.join(filesystem.app_data(), "profiles", self.m_profile, "statistics.sqlite")
+
         else:
             return self.get_noprofile_statistics_filename()
+
     def reset_database(self):
         self.conn.close()
         os.remove(self.get_statistics_filename())
         self.conn = sqlite3.connect(self.get_statistics_filename())
         self.create_tables()
+
     def remove_tables(self):
         """
         Remove the tables if they exist.
@@ -130,6 +142,7 @@ class DB(object):
         # Current Solfege does not use this table, but we did until
         # the 3.17.0 release. So we remove it if it exists.
         self.conn.execute("drop table if exists tests")
+
     def create_tables(self):
         self.conn.execute(
             "create table if not exists lessonfiles ( "
@@ -152,6 +165,7 @@ class DB(object):
             "(fileid int, timestamp int, sessiontype int, "
             "unique (fileid, timestamp))")
         self.set_variable("database_version", 3)
+
     def drop_if_has_uuid_column(self):
         """
         Drop the database and return True if the lessonfiles table
@@ -167,12 +181,14 @@ class DB(object):
             self.remove_tables()
             self.create_tables()
             return True
+
     def _get_table_names(self):
         """
         Return a set of all table names in the database.
         """
         tables = self.conn.execute('select name from sqlite_master where type="table";').fetchall()
         return set([x[0] for x in tables])
+
     def sanity_check(self):
         """
         The content of the tables 'sessions', 'sessioninfo' and 'lessonfiles'
@@ -190,14 +206,17 @@ class DB(object):
             if t not in tables:
                 missing_table = True
                 break    
+
         else:
             missing_table = False
         # This is a sanity check. If one of the tables are missing, then
         # we cannot trust anything, so lets just drop and recreate the database.
+
         if missing_table:
             self.remove_tables()
             self.create_tables()
             return True
+
     def get_fileid(self, filename):
         assert lessonfile.is_uri(filename) or os.path.isabs(filename), filename
         row = self.conn.execute(
@@ -206,8 +225,10 @@ class DB(object):
                 (filename,)).fetchone()
         if row:
             return row[0]
+
         else:
             raise self.FileNotInDB(filename)
+
     def get_session_count(self, fileid):
         """
         Return an int telling the number of practise sessions we have
@@ -215,6 +236,7 @@ class DB(object):
         """
         count = self.conn.execute("select count(distinct timestamp) from sessions where fileid=?", (fileid,)).fetchone()[0]
         return count if count is not None else 0
+
     def get_first_timestamp(self, fileid):
         """
         Return the timestamp (as a python datetime object) of the first
@@ -223,6 +245,7 @@ class DB(object):
         """
         return self.conn.execute("select min(timestamp) from sessions where fileid=?",
                           (fileid,)).fetchone()[0]
+
     def get_last_timestamp(self, fileid):
         """
         Return the timestamp (as a python datetime object) of the last
@@ -231,12 +254,14 @@ class DB(object):
         """
         return self.conn.execute("select max(timestamp) from sessions where fileid=?",
                           (fileid,)).fetchone()[0]
+
     def delete_statistics(self, filename):
         fileid = self.get_fileid(filename)
         cursor = self.conn.cursor()
         cursor.execute("delete from sessions where fileid=?", (fileid,))
         cursor.execute("delete from sessioninfo where fileid=?", (fileid,))
         self.conn.commit()
+
     def upgrade_to_version_3(self):
         try:
             if self.get_variable("database_version") >= 3:
@@ -244,11 +269,13 @@ class DB(object):
         except self.VariableUndefinedError:
             pass
         for fn in lessonfile.infocache.iter_parse_all_files():
+
             if lessonfile.infocache.get(fn, 'module') == 'elembuilder':
                 try:
                     self.delete_statistics(fn)
                 except self.FileNotInDB:
                     pass
+
     def upgrade_to_version_2(self):
         """
         After releasing 3.16.0 I found that having separate tests and
@@ -264,6 +291,7 @@ class DB(object):
         # This should not happen, but the database_version variable was
         # not set at the same time as we changed this behaviour, so lets just
         # return if the table does not exist.
+
         if 'test' not in self._get_table_names():
             return
         # Insert all tests into sessioninfo
@@ -309,15 +337,19 @@ class DB(object):
                 "order by -timestamp",
                 (fileid,)).fetchone():
                 module = lessonfile.infocache.get(filename, "module")
+
                 if module == 'melodicinterval':
                     parserclass = lessonfile.IntervalsLessonfile
+
                 else:
                     parserclass = None
+
                 if parserclass:
                     p = parserclass()
                     p.parse_file(filename)
                     self.cache_new_test_result(filename, timestamp,
                         p.get_test_requirement(), p.get_test_num_questions())
+
     def cache_new_test_result(self, filename, timestamp,
                               required, num_questions):
         """
@@ -336,10 +368,13 @@ class DB(object):
         # see the point in saving tests where no questions where answered.
         if not count_total:
             return
+
         if count_total < num_questions:
             count_total = num_questions
+
         if count_total:
             test_result = count_correct * 1.0 / count_total
+
         else:
             test_result = 0.0
         self.conn.execute("update lessonfiles "
@@ -348,6 +383,7 @@ class DB(object):
              test_result >= required,
              fileid,))
         self.conn.commit()
+
     def get_test_status(self, filename):
         """
         Return a tuple saying if the test was passed or not, and the result:
@@ -363,6 +399,7 @@ class DB(object):
             return row
         except self.FileNotInDB:
             return None, None
+
     def validate_stored_statistics(self, filename):
         """
         Insert the filename and hash of the file into the lessonfiles
@@ -382,23 +419,29 @@ class DB(object):
         row = cursor.execute("select hash, fileid from lessonfiles "
             "where filename=?", (filename,)).fetchone()
         cur_lessonfile_hash_value = hash_of_lessonfile(filename)
+
         if not row:
             # Ususally the filename exists in the database, but when running
             # the test suite, it does not, so we have the code here to add it.
             self.insert_file(filename)
             self.conn.commit()
+
         else:
             hashvalue, fileid = row
+
             if hashvalue != cur_lessonfile_hash_value:
                 replaces = solfege.lessonfile.infocache.get(filename, 'replaces')
+
                 if not isinstance(replaces, list):
                     replaces = [replaces]
+
                 if not hashvalue in replaces:
                     solfege.db.delete_statistics(filename)
                     cursor.execute("update lessonfiles "
                         "set hash=?, test_passed=?, test_result=0.0 where fileid=?",
                         (cur_lessonfile_hash_value, None, fileid))
                     self.conn.commit()
+
     def get_statistics_info(self):
         """
         Return information about the data installed.
@@ -416,6 +459,7 @@ class DB(object):
         return {'exercises': different_ex,
                 'practise_count': session_count,
                 'test_count': test_count}
+
     def _recent(self, count, sessiontype):
         """
         sessiontype 0 == normal statistics
@@ -430,13 +474,17 @@ class DB(object):
             filename = self.conn.execute('select filename from lessonfiles where fileid=?', (fileid,)).fetchone()[0]
             if filename not in filenames:
                 filenames.append(filename)
+
             if len(filenames) == count:
                 break
         return filenames
+
     def recent(self, count):
         return self._recent(count, 0)
+
     def recent_tests(self, count):
         return self._recent(count, 1)
+
     def set_variable(self, name, value):
         """
         raise DB.VariableTypeError if the type we set is different from
@@ -445,21 +493,27 @@ class DB(object):
         row = self.conn.execute('select type, value from variables where variable_name=?', (name,)).fetchone()
         if row:
             saved_type = self.int_type_dict[row[0]]
+
         else:
             saved_type = type(value)
+
         if saved_type != type(value):
             raise DB.VariableTypeError()
+
         if type(value) not in self.type_int_dict:
             raise DB.VariableTypeError()
+
         if not row:
             self.conn.execute("insert into variables "
                     "(variable_name, type, value) "
                     "values (?, ?, ?)",
                     (name, self.type_int_dict[type(value)], unicode(value)))
+
         else:
             self.conn.execute("update variables "
                 "set value=? where variable_name=?",
                 (unicode(value), name))
+
     def get_variable(self, name):
         cursor = self.conn.execute('select type, value from variables where variable_name=?', (name,))
         try:
@@ -467,6 +521,7 @@ class DB(object):
         except TypeError:
             raise self.VariableUndefinedError()
         return self.int_type_dict[type](value)
+
     def del_variable(self, name):
         """
         Delete the variable, raise DB.VariableUndefinedError if the variable
@@ -480,10 +535,12 @@ class DB(object):
 
 
 class AbstractStatistics(object):
+
     def __init__(self, teacher):
         self.m_t = teacher
         self.m_timestamp = None
         self.m_test_mode = False
+
     def int_if_int(self, s):
         """
         Return an int if the can be converted to an int.
@@ -493,6 +550,7 @@ class AbstractStatistics(object):
             return int(s)
         except ValueError:
             return s
+
     def get_keys(self, all_keys=False):
         """
         Return the keys for all questions that have been answered correctly.
@@ -507,15 +565,18 @@ class AbstractStatistics(object):
             c = set()
             for colname in "answerkey", "guessed":
                 c1 = list(solfege.db.conn.execute("select distinct(%s) from sessions where fileid=?" % colname, (fileid,)))
+
                 if c1:
                     [c.add(x[0]) for x in c1]
             c = list(c)
+
         else:
             c = solfege.db.conn.execute("select distinct(answerkey) from sessions where fileid=? and answerkey=guessed", (fileid,))
             c = [x[0] for x in list(c)]
         v = [self.int_if_int(x) for x in c]
         v.sort()
         return [unicode(x) for x in v]
+
     def get_statistics(self, seconds):
         """
         return a dict with statistics more recent than 'seconds' seconds.
@@ -533,8 +594,10 @@ class AbstractStatistics(object):
             return {}
         if seconds == -1:
             q = solfege.db.conn.execute("select answerkey, guessed, sum(count) from sessions where fileid=? group by answerkey, guessed", (fileid,))
+
         elif seconds == 0:
             q = solfege.db.conn.execute("select answerkey, guessed, sum(count) from sessions where fileid=? and timestamp=? group by answerkey, guessed", (fileid, self.m_timestamp))
+
         else:
             q = solfege.db.conn.execute("select answerkey, guessed, sum(count) from sessions where fileid=? and timestamp>? group by answerkey, guessed", (fileid, self.m_timestamp - seconds))
         ret = {}
@@ -542,11 +605,13 @@ class AbstractStatistics(object):
             ret.setdefault(answer, {})
             ret[answer][guess] = count
         return ret
+
     def reset_session(self):
         """
         Start a new practise session.
         """
         self.m_timestamp = int(time.time())
+
     def reset_custom_mode_session(self, filename):
         """
         Exercises that show statistics in custom_mode should call this
@@ -556,8 +621,10 @@ class AbstractStatistics(object):
         fileid = solfege.db.get_fileid(filename)
         solfege.db.conn.execute("delete from sessions "
                           "where fileid=? and timestamp=1", (fileid,))
+
     def enter_test_mode(self):
         self.m_test_mode = True
+
     def exit_test_mode(self):
         """
         If the user cancels a test, the answers give will be recorded.
@@ -570,6 +637,7 @@ class AbstractStatistics(object):
                 self.m_t.m_P.get_test_requirement(),
                 self.m_t.m_P.get_test_num_questions())
         self.reset_session()
+
     def _add(self, question, answer):
         """
         Register that for the question 'question' the user answered 'answer'.
@@ -580,6 +648,7 @@ class AbstractStatistics(object):
         # strings by sqlite before storing then in the database.
         if isinstance(question, tuple):
             question = str(question)
+
         if isinstance(answer, tuple):
             answer = str(answer)
         cursor = solfege.db.conn.cursor()
@@ -588,6 +657,7 @@ class AbstractStatistics(object):
         # We don't add the session to the "sessioninfo" table before we have
         # an answer to store, to avoid empty sessions because users start
         # an exercise and the descides it was the wrong exercise.
+
         if not cursor.execute("select * from sessioninfo where fileid=? and timestamp=?", (fileid, self.m_timestamp)).fetchone():
             cursor.execute("insert into sessioninfo"
                     "(fileid, timestamp, sessiontype) "
@@ -598,6 +668,7 @@ class AbstractStatistics(object):
                 "select count from sessions where fileid=? and timestamp=? "
                 "and answerkey=? and guessed=?",
                 (fileid, self.m_timestamp, unicode(question), unicode(answer))).fetchone()
+
         if not row:
             cursor.execute(
                 "insert into sessions "
@@ -605,6 +676,7 @@ class AbstractStatistics(object):
                 "values(?, ?, ?, ?, ?)",
                 (fileid, self.m_timestamp,
                  unicode(question), unicode(answer), 1))
+
         else:
             assert cursor.fetchone() is None
             cursor.execute(
@@ -613,15 +685,19 @@ class AbstractStatistics(object):
                 (row[0] + 1, fileid,
                  self.m_timestamp, unicode(question), unicode(answer)))
         solfege.db.conn.commit()
+
     def add_wrong(self, question, answer):
         self._add(question, answer)
+
     def add_correct(self, answer):
         self._add(answer, answer)
+
     def get_last_test_result(self):
         """
         Return the test result of the last test ran for this lesson file.
         """
         return solfege.db.last_test_result(self.m_t.m_P.m_filename)
+
     def get_percentage_correct(self):
         """Will return a 0 <= value <= 100.0 that say how many percent is
         correct in this session.
@@ -631,10 +707,12 @@ class AbstractStatistics(object):
         num_asked = solfege.db.conn.execute("select sum(count) from sessions where timestamp=? and  fileid=?", (self.m_timestamp, fileid)).fetchone()[0]
         if not num_correct:
             num_correct = 0
+
         if not num_asked:
             num_asked = 0
             return 0
         return 100.0 * num_correct / num_asked
+
     def get_num_correct_for_key(self, seconds, key):
         """
         Return the number of correct answers for the given key 'key' the
@@ -646,13 +724,17 @@ class AbstractStatistics(object):
         fileid = solfege.db.get_fileid(self.m_t.m_P.m_filename)
         if seconds == -1:
             ret = solfege.db.conn.execute("select sum(count) from sessions where answerkey=? and guessed=? and fileid=?", (key, key, fileid)).fetchone()[0]
+
         elif seconds == 0:
             ret = solfege.db.conn.execute("select sum(count) from sessions where answerkey=? and guessed=? and timestamp=? and fileid=?", (key, key, self.m_timestamp, fileid)).fetchone()[0]
+
         else:
             ret = solfege.db.conn.execute("select sum(count) from sessions where answerkey=? and guessed=? and timestamp>? and fileid=?", (key, key, self.m_timestamp - seconds, fileid)).fetchone()[0]
+
         if ret:
             return ret
         return 0
+
     def get_num_guess_for_key(self, seconds, key):
         """
         See get_num_correct_for_key docstring.
@@ -660,35 +742,47 @@ class AbstractStatistics(object):
         fileid = solfege.db.get_fileid(self.m_t.m_P.m_filename)
         if seconds == -1:
             ret = solfege.db.conn.execute("select sum(count) from sessions where answerkey=? and fileid=?", (key, fileid)).fetchone()[0]
+
         elif seconds == 0:
             ret = solfege.db.conn.execute("select sum(count) from sessions where answerkey=? and timestamp=? and fileid=?", (key, self.m_timestamp, fileid)).fetchone()[0]
+
         else:
             ret = solfege.db.conn.execute("select sum(count) from sessions where answerkey=? and timestamp>? and fileid=?", (key, self.m_timestamp - seconds, fileid)).fetchone()[0]
+
         if ret:
             return ret
         return 0
+
     def get_num_guess(self, seconds):
         fileid = solfege.db.get_fileid(self.m_t.m_P.m_filename)
         if seconds == -1:
             ret = solfege.db.conn.execute("select sum(count) from sessions where fileid=?", (fileid,)).fetchone()[0]
+
         elif seconds == 0:
             ret = solfege.db.conn.execute("select sum(count) from sessions where timestamp=? and fileid=?", (self.m_timestamp, fileid,)).fetchone()[0]
+
         else:
             ret = solfege.db.conn.execute("select sum(count) from sessions where timestamp>? and fileid=?", (self.m_timestamp - seconds, fileid)).fetchone()[0]
+
         if ret:
             return ret
         return 0
+
     def get_num_correct(self, seconds):
         fileid = solfege.db.get_fileid(self.m_t.m_P.m_filename)
         if seconds == -1:
             ret = solfege.db.conn.execute("select sum(count) from sessions where fileid=? and answerkey=guessed", (fileid,)).fetchone()[0]
+
         elif seconds == 0:
             ret = solfege.db.conn.execute("select sum(count) from sessions where timestamp=? and fileid=? and answerkey=guessed", (self.m_timestamp, fileid,)).fetchone()[0]
+
         else:
             ret = solfege.db.conn.execute("select sum(count) from sessions where timestamp>? and fileid=? and answerkey=guessed", (self.m_timestamp - seconds, fileid,)).fetchone()[0]
+
         if ret:
             return ret
         return 0
+
     def iter_test_results(self):
         """
         Iterate test results for the associated lesson file, newest
@@ -713,7 +807,9 @@ class AbstractStatistics(object):
 
 
 class LessonStatistics(AbstractStatistics):
+
     def key_to_pretty_name(self, key):
+
         def ff(x):
             try:
                 t = eval(x)
@@ -723,17 +819,20 @@ class LessonStatistics(AbstractStatistics):
                 return x
             return x
         for question in self.m_t.m_P.m_questions:
+
             if question.name.cval == key:
                 return ff(question.name)
         return ff(key)
 
 class IntervalStatistics(AbstractStatistics):
+
     def get_keys(self, all_keys=False):
         # FIXME we have to check that all keys are integers, and filter
         # out those that are not. I don't know how, but I ended up with
         # the key None inserted into the database. Without that bug this
         # whole method would be unnecessary and AbstractStatistics.get_keys
         # would be enough.
+
         def isinteger(s):
             try:
                 int(s)
@@ -742,14 +841,17 @@ class IntervalStatistics(AbstractStatistics):
                 return False
         v = AbstractStatistics.get_keys(self, all_keys)
         return [x for x in v if isinteger(x)]
+
     def key_to_pretty_name(self, key):
         return utils.int_to_intervalname(int(key), 1, 1)
 
 class HarmonicIntervalStatistics(IntervalStatistics):
+
     def key_to_pretty_name(self, key):
         return utils.int_to_intervalname(int(key), 1, 0)
 
 class IdToneStatistics(LessonStatistics):
+
     def key_to_pretty_name(self, key):
         return mpd.MusicalPitch.new_from_notename(key).get_user_notename()
 

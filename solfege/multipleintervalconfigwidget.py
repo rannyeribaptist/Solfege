@@ -31,6 +31,7 @@ class IntervalCheckBox(Gtk.HBox):
         'value-changed': (GObject.SIGNAL_RUN_FIRST, None,
                       (str,))
     }
+
     def __init__(self):
         Gtk.HBox.__init__(self)
         self.checkbox_dict = {}
@@ -40,8 +41,10 @@ class IntervalCheckBox(Gtk.HBox):
             c.connect('toggled', self.on_toggle)
             c.show()
             self.pack_start(c, True, True, 0)
+
     def on_toggle(self, _o):
         self.emit('value-changed', self.get_value())
+
     def get_value(self):
         """
         Return a list with the integer value for the intervals
@@ -49,6 +52,7 @@ class IntervalCheckBox(Gtk.HBox):
         """
         return [x for x in self.checkbox_dict.keys() \
                 if self.checkbox_dict[x].get_active()]
+
     def set_value(self, v):
         """
         Set the state of the intervals.
@@ -61,6 +65,7 @@ class IntervalCheckBox(Gtk.HBox):
 
 
 class nIntervalCheckBox(IntervalCheckBox, cfg.ConfigUtils):
+
     def __init__(self, exname, varname):
         IntervalCheckBox.__init__(self)
         cfg.ConfigUtils.__init__(self, exname)
@@ -71,8 +76,10 @@ class nIntervalCheckBox(IntervalCheckBox, cfg.ConfigUtils):
             self.set_list(varname, intervals)
         self.set_value(intervals)
         self.add_watch(self.m_varname, self._watch_cb)
+
     def _watch_cb(self, name):
         self.set_value(self.get_list(self.m_varname))
+
     def on_toggle(self, _o):
         IntervalCheckBox.on_toggle(self, _o)
         self.set_list(self.m_varname, self.get_value())
@@ -84,6 +91,7 @@ class MultipleIntervalConfigWidget(Gtk.VBox, cfg.ConfigUtils):
     where you select what intervals to use for exercises where you
     select one or more intervals.
     """
+
     def __init__(self, exname):
         Gtk.VBox.__init__(self)
         cfg.ConfigUtils.__init__(self, exname)
@@ -128,6 +136,7 @@ class MultipleIntervalConfigWidget(Gtk.VBox, cfg.ConfigUtils):
                   % (self.g_int_sel_spin.get_value_as_int()-1))
         for x in range(1, mpd.interval.max_interval + 1):
             self.g_interval_chk[x] = c = Gtk.ToggleButton(mpd.interval.short_name[x])
+
             if x in V:
                 c.set_active(True)
             c.show()
@@ -142,52 +151,63 @@ class MultipleIntervalConfigWidget(Gtk.VBox, cfg.ConfigUtils):
         v.reverse()
         for x in v:
             self.g_interval_chk[x] = c = Gtk.ToggleButton(mpd.interval.short_name[-x])
+
             if x in V:
                 c.set_active(True)
             c.show()
             c.connect('clicked', self.on_interval_chk_clicked, x)
             table.attach(c, -x, -x+1, 1, 2)
         table.show_all()
+
         if self.g_num_int_spin.get_value_as_int() == 1:
             self.g_all_int_button.set_sensitive(False)
         gu.bButton(self, _("Reset to default values"), self.reset_to_default,
                   False, False)
         self._watch_interval(self.get_int('cur_edit_interval')-1)
+
     def reset_to_default(self, _o):
         self.set_int('cur_edit_interval', 1)
         self.set_int('number_of_intervals', 1)
         self.set_list('ask_for_intervals_0', range(-12, 0)+range(1, 13))
+
     def configure_all_like_active_interval(self, _o):
         v = self.get_list('ask_for_intervals_%i' \
                                % (self.g_int_sel_spin.get_value_as_int()-1))
         for i in range(self.get_int('number_of_intervals')):
             self.set_string('ask_for_intervals_%i' % i, str(v))
+
     def on_interval_chk_clicked(self, widget, interval):
         if self.m_ignore_iclick:
             return
         i = self.g_int_sel_spin.get_value_as_int() - 1
         v = self.get_list('ask_for_intervals_%i' % i)
+
         if widget.get_active():
             if not interval in v:
                 v.append(interval)
+
         else:
             if interval in v:
                 del v[v.index(interval)]
         self.set_list('ask_for_intervals_%i' % i, v)
+
     def on_num_int_spin(self, _o):
         adj = Gtk.Adjustment(self.get_int('cur_edit_interval'), 1,
                   self.get_int('number_of_intervals'), 1, self.MAX_INT)
         self.g_int_sel_spin.set_adjustment(adj)
         self.g_int_sel_spin.update()
+
     def on_int_sel_spin(self, spin):
         self._watch_interval(spin.get_value_as_int()-1)
         self.update_togglebuttons(spin.get_value_as_int()-1)
+
     def update_togglebuttons(self, i):
         self.m_ignore_iclick = 1
         v = self.get_list('ask_for_intervals_%i' % i)
         for i in range(mpd.interval.min_interval, 0)+range(1, mpd.interval.max_interval + 1):
             self.g_interval_chk[i].set_active(i in v)
         self.m_ignore_iclick = 0
+
     def _watch_interval(self, i):
         """
         Add a watch for the correct ask_for_intervals_%i variable.
@@ -196,11 +216,13 @@ class MultipleIntervalConfigWidget(Gtk.VBox, cfg.ConfigUtils):
         """
         if self._watched_interval == i:
             return
+
         if self._watched_interval is not None:
             self.remove_watch('ask_for_intervals_%i' % self._watched_interval,
                           self._watched_interval_id)
         self._watched_interval = i
         self._watched_interval_id = self.add_watch('ask_for_intervals_%i' % i,
                                                   self._interval_watch_cb)
+
     def _interval_watch_cb(self, name):
         self.update_togglebuttons(self._watched_interval)

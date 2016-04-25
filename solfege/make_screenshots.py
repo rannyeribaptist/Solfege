@@ -18,7 +18,6 @@ def compress(fn):
     run("pngnq -n 16 -f %s" % fn)
     run("mv %s-nq8.png %s" % (f, fn))
 
-
 def screenshot(windowtitle, lang, fn):
     while Gtk.events_pending():
         Gtk.main_iteration()
@@ -31,14 +30,12 @@ def screenshot(windowtitle, lang, fn):
     os.system(cmd.encode("utf-8"))
     compress(fn)
 
-
 def do_profile_manager(lang):
     p = ChangeProfileDialog(solfege.app.m_options.profile)
     p.show()
     pid = hex(p.vbox.get_parent_window().xid)
     screenshot(pid, lang, "profile-manager.png")
     p.destroy()
-
 
 def do_practise_sheet(lang):
     dlg = PractiseSheetDialog()
@@ -58,7 +55,6 @@ def do_training_set(lang):
     screenshot(pid, lang, "trainingset-editor.png")
     dlg.do_closing_stuff()
     dlg.destroy()
-
 
 def do_preferences_window(lang):
     solfege.win.open_preferences_window(None)
@@ -130,7 +126,6 @@ def do_exercises(lang, xid):
     solfege.app.practise_lessonfile(u"solfege:lesson-files/toneincontext-major-f4")
     screenshot(xid, lang, "toneincontext.png")
 
-
 def make_screenshots():
     if not (os.path.exists("configure.ac")
             and os.path.exists("help/C/solfege.xml.in")
@@ -140,13 +135,16 @@ def make_screenshots():
         solfege.win.quit_program()
         return
     lang = os.environ['LANGUAGE'].split(":")[0]
+
     if not os.path.exists(os.path.join("help", lang)):
         lang = lang.split("_")[0]
+
     if not os.path.exists(os.path.join("help", lang)):
         print "Unknown language"
         solfege.win.quit_program()
         return
     xid = hex(solfege.win.get_view().get_parent_window().xid)
+
     if not os.path.exists("help/%s/figures" % lang):
         os.makedirs("help/%s/figures" % lang)
     do_profile_manager(lang)

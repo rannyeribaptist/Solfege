@@ -32,6 +32,7 @@ from solfege import utils
 RESPONSE_SEND = 1011
 
 class ReportBugWindow(Gtk.Dialog):
+
     def __init__(self, parent, error_text):
         Gtk.Dialog.__init__(self, _("Make bug report"), parent,
                 buttons=(Gtk.STOCK_CANCEL, Gtk.ResponseType.REJECT))
@@ -64,6 +65,7 @@ class ReportBugWindow(Gtk.Dialog):
         label.set_mnemonic_widget(self.g_tw)
         self.vbox.pack_start(self.g_tw, True, True, 0)
         self.show_all()
+
     def send_bugreport(self):
         """
         Return None if successful. Return the urllib2 execption if failure.

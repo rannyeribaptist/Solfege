@@ -48,25 +48,31 @@ def _tr(s):
     return _(s) if s else s
 
 class NameIt(object):
+
     def __init__(self, name, lilycode):
         self.m_name = name
         self.m_lilycode = lilycode
 
 class Section(list):
+
     def __init__(self, section_title, line_len):
         self.m_title = section_title
         self.m_line_len = line_len
 
 class BaseSheetWriter(object):
     lilyout = 'lilyout'
+
     def __init__(self, title):
         self.m_title = title
         self.m_data = []
+
     def create_outdir(self, directory):
         if not os.path.exists(directory):
             os.mkdir(directory)
+
         if not os.path.exists(os.path.join(directory, self.lilyout)):
             os.mkdir(os.path.join(directory, self.lilyout))
+
     def new_section(self, section_title, line_len):
         """
         Return a list where we can append questions.
@@ -74,10 +80,12 @@ class BaseSheetWriter(object):
         v = Section(section_title, line_len)
         self.m_data.append(v)
         return v
+
     def set_title(self, s):
         self.m_title = s
 
 class HtmlSheetWriter(BaseSheetWriter):
+
     def _write(self, k, directory, filename, logger):
         assert k in ('question', 'answer')
         f = codecs.open(os.path.join(directory, filename), 'w', 'utf-8')
@@ -93,6 +101,7 @@ class HtmlSheetWriter(BaseSheetWriter):
             first_row = True
             for idx, question_dict in enumerate(section):
                 if idx % section.m_line_len == 0:
+
                     if not first_row:
                         print >> f, "</tr>"
                         first_row = False
@@ -100,8 +109,10 @@ class HtmlSheetWriter(BaseSheetWriter):
                 print >> f, "<td class='lilycode'>"
                 # each question is in a table too
                 print >> f, "<table><tr><td>"
+
                 if r"\score" in question_dict[k]['music']:
                     print >> f, "<lilypond>"
+
                 else:
                     print >> f, "<lilypond fragment relative>"
                 print >> f, question_dict[k]['music']
@@ -119,7 +130,9 @@ class HtmlSheetWriter(BaseSheetWriter):
         # so the user have to set the full path to the python script in the
         # preferences window. Then use the same Python interpreter as
         # Solfege itself to run lilypond-book.py
+
         if sys.platform == 'win32':
+
             if not os.path.exists(cfg.get_string("programs/lilypond-book")):
                 # We to the strerror trick to get the translation for free.
                 raise osutils.BinaryForProgramException("lilypond-book",
@@ -132,10 +145,12 @@ class HtmlSheetWriter(BaseSheetWriter):
             while 1:
                 p.poll()
                 # returncode != None means that the process has finished
+
                 if p.returncode != None:
                     break
                 while 1:
                     s = p.stdout.readline()
+
                     if not s:
                         break
                     logger.write(s)
@@ -147,6 +162,7 @@ class HtmlSheetWriter(BaseSheetWriter):
         f = open(os.path.join(directory, 'README.txt'), 'w')
         print >> f, "\n".join(textwrap.wrap("The files answers.html and questions.html in this directory are temporaty files. The HTML files you are looking for are lilyout%(sep)sanswers.html and lilyout%(sep)squestions.html" % {'sep': os.path.sep}))
         f.close()
+
     def write_to(self, directory, logger):
         self.create_outdir(directory)
         f = open(os.path.join(directory, self.lilyout, 'style.css'), 'w')
@@ -157,10 +173,12 @@ class HtmlSheetWriter(BaseSheetWriter):
         self._write('answer', directory, 'answers.html', logger)
 
 class LatexSheetWriter(BaseSheetWriter):
+
     def write_to(self, directory, logger):
         self.create_outdir(directory)
         self._write('question', directory, 'questions.tex', logger)
         self._write('answer', directory, 'answers.tex', logger)
+
     def _write(self, k, directory, filename, logger):
         assert k in ('question', 'answer')
         f = open(os.path.join(directory, filename), 'w')
@@ -170,6 +188,7 @@ class LatexSheetWriter(BaseSheetWriter):
         print >> f, r"\usepackage[margin=1.0cm]{geometry}"
         print >> f, r"\begin{document}"
         print >> f, r"\maketitle"
+
         def finish_table(scores, answers):
             for idx, score in enumerate(scores):
                 print >> f, score
@@ -178,6 +197,7 @@ class LatexSheetWriter(BaseSheetWriter):
             print >> f, r"\\"
             for idx, answer in enumerate(answers):
                 print >> f, answer
+
                 if idx != len(scores) - 1:
                     print >> f, "&"
             print >> f, r"\\"
@@ -185,17 +205,22 @@ class LatexSheetWriter(BaseSheetWriter):
             print >> f, r"\section{%s}" % _tr(section.m_title)
             first_row = True
             for idx, question_dict in enumerate(section):
+
                 if idx % section.m_line_len == 0:
+
                     if first_row:
                         print >> f, r"\begin{tabular}{%s}" % ('c' * section.m_line_len)
                         first_row = False
+
                     else:
                         finish_table(scores, answers)
                     scores = []
                     answers = []
+
                 if r"\score" in question_dict[k]['music']:
                     scores.append("\n".join((r"\begin{lilypond}",
                                 question_dict[k]['music'], r"\end{lilypond}")))
+
                 else:
                     scores.append("\n".join((r"\begin[fragment]{lilypond}",
                                 question_dict[k]['music'], r"\end{lilypond}")))
@@ -207,7 +232,9 @@ class LatexSheetWriter(BaseSheetWriter):
         # Duplicate of the code in HtmlSheetWriter._write
         args = [cfg.get_string("programs/lilypond-book"),
                 "--out", self.lilyout, filename]
+
         if sys.platform == 'win32':
+
             if not os.path.exists(cfg.get_string("programs/lilypond-book")):
                 # We to the strerror trick to get the translation for free.
                 raise osutils.BinaryForProgramException("lilypond-book",
@@ -220,10 +247,12 @@ class LatexSheetWriter(BaseSheetWriter):
             while 1:
                 p.poll()
                 # returncode != None means that the process has finished
+
                 if p.returncode != None:
                     break
                 while 1:
                     s = p.stdout.readline()
+
                     if not s:
                         break
                     logger.write(s)
@@ -241,12 +270,14 @@ class LatexSheetWriter(BaseSheetWriter):
             while 1:
                 p.poll()
                 # returncode != None means that the process has finished
+
                 if p.returncode != None:
                     break
                 while 1:
                     while Gtk.events_pending():
                         Gtk.main_iteration()
                     s = p.stdout.readline()
+
                     if not s:
                         break
                     logger.write(s)
@@ -297,6 +328,7 @@ class PractiseSheetDialog(Gtk.Window, gu.EditorDialogBase, lessonfilegui.Exercis
     ok_music_types = (lessonfile.Chord, lessonfile.Voice, lessonfile.Rvoice)
     ok_modules = ('idbyname', 'harmonicinterval', 'melodicinterval')
     savedir = os.path.join(filesystem.user_data(), "eartrainingtests")
+
     def __init__(self, filename=None):
         logging.debug("PractiseSheetDialog.__init__")
         Gtk.Window.__init__(self)
@@ -345,6 +377,7 @@ class PractiseSheetDialog(Gtk.Window, gu.EditorDialogBase, lessonfilegui.Exercis
         vbox.pack_start(scrolled_window, True, True, 0)
         #
         renderer = Gtk.CellRendererText()
+
         def mark_invalid(column, cell_renderer, liststore, iter, user_data=None):
             filename = liststore.get(iter, self.STORE_FILENAME)[0]
             if not filename:
@@ -396,6 +429,7 @@ class PractiseSheetDialog(Gtk.Window, gu.EditorDialogBase, lessonfilegui.Exercis
         if filename:
             self.load_file(filename)
         self.add_to_instance_dict()
+
     def view_lesson(self, idx):
         self.g_qtype.handler_block(self.g_qtype_event_handler)
         self.g_intervals.handler_block(self.g_intervals_event_handler)
@@ -408,6 +442,7 @@ class PractiseSheetDialog(Gtk.Window, gu.EditorDialogBase, lessonfilegui.Exercis
             self.g_lesson_title.set_text("")
             self.g_count.set_value(1)
             self.g_line_len.set_value(1)
+
         else:
             try:
                 module = lessonfile.infocache.get(self.m_sections[idx]['filename'], 'module')
@@ -417,6 +452,7 @@ class PractiseSheetDialog(Gtk.Window, gu.EditorDialogBase, lessonfilegui.Exercis
             if module == 'harmonicinterval':
                 self.g_intervals_box.show()
                 self.g_intervals.set_value(self.m_sections[idx]['intervals'])
+
             else:
                 self.g_intervals_box.hide()
             self.g_lesson_title.set_text(_tr(self.m_sections[idx]['title']))
@@ -428,27 +464,34 @@ class PractiseSheetDialog(Gtk.Window, gu.EditorDialogBase, lessonfilegui.Exercis
         self.g_line_len.handler_unblock(self.g_line_len_event_handler)
         self.g_count.handler_unblock(self.g_count_event_handler)
         self.g_lesson_title.handler_unblock(self.g_lesson_title_event_handle)
+
     def on_add_lesson_clicked(self, button):
         menu = self.create_learning_tree_menu()
         menu.popup(None, None, None, None, 1, 0)
+
     def on_remove_lesson_clicked(self, button):
         path, column = self.g_treeview.get_cursor()
         if path is not None:
             iter = self.g_liststore.get_iter(path)
             self.g_liststore.remove(iter)
             del self.m_sections[path[0]]
+
     def on_randomize(self, widget):
         for section in self.m_sections:
             section['questions'] = []
         self.generate_questions()
+
     def on_create_sheet(self, widget):
         self.generate_questions()
         if not self.m_exported_to:
             self.m_exported_to = self.select_empty_directory(_("Select where to export the files"))
+
         if not self.m_exported_to:
             return
+
         if self.g_html_radio.get_active():
             writer = HtmlSheetWriter(self.g_title.get_text())
+
         else:
             writer = LatexSheetWriter(self.g_title.get_text())
         iter = self.g_liststore.get_iter_first()
@@ -462,25 +505,30 @@ class PractiseSheetDialog(Gtk.Window, gu.EditorDialogBase, lessonfilegui.Exercis
         except osutils.BinaryForProgramException, e:
             solfege.win.display_error_message2(e.msg1, e.msg2)
         ww.run_finished()
+
     def on_intervals_changed(self, widget, value):
         self.m_changed = True
         idx = self.g_treeview.get_cursor()[0][0]
         self._delete_questions(idx)
         self.m_sections[idx]['intervals'] = value
+
     def on_lesson_title_changed(self, widget):
         self.m_changed = True
         path = self.g_treeview.get_cursor()[0]
         iter = self.g_liststore.get_iter(path)
         self.m_sections[path[0]]['title'] = widget.get_text()
         self.g_liststore.set(iter, self.STORE_TITLE, widget.get_text())
+
     def on_spin_changed(self, widget, varname):
         self.m_changed = True
         idx = self.g_treeview.get_cursor()[0][0]
         if varname == 'count':
+
             if len(self.m_sections[idx]['questions']) > widget.get_value_as_int():
                 self.m_sections[idx]['questions'] = \
                     self.m_sections[idx]['questions'][:widget.get_value_as_int()]
         self.m_sections[idx][varname] = widget.get_value_as_int()
+
     def on_select_exercise(self, menuitem, filename):
         module = lessonfile.infocache.get(filename, 'module')
         if module not in self.ok_modules:
@@ -488,13 +536,17 @@ class PractiseSheetDialog(Gtk.Window, gu.EditorDialogBase, lessonfilegui.Exercis
             return
         p = lessonfile.LessonfileCommon()
         p.parse_file(lessonfile.uri_expand(filename))
+
         if module == 'idbyname':
             self._add_idbyname_lesson(p, filename)
+
         elif module == 'harmonicinterval':
             self._add_harmonicinterval_lesson(p, filename)
+
         elif module == 'melodicinterval':
             self._add_melodicinterval_lesson(p, filename)
         self.g_treeview.set_cursor((len(self.m_sections)-1,))
+
     def _add_idbyname_lesson(self, p, filename):
         """
         p is a lessonfile.LessonfileCommon parser that has parsed the file.
@@ -502,22 +554,29 @@ class PractiseSheetDialog(Gtk.Window, gu.EditorDialogBase, lessonfilegui.Exercis
         not_ok = len([q.music for q in p.m_questions if not isinstance(q.music, self.ok_music_types)])
         ok = len([q.music for q in p.m_questions if isinstance(q.music, self.ok_music_types)])
         if not_ok > 0:
+
             if ok > 0:
                 do_add = gu.dialog_yesno(_("Not all music types are supported. This file contain %(ok)i supported questions and %(not_ok)i that are not supported. The unsupported questions will be ignored. Add any way?" % locals()))
+
             else:
                 gu.dialog_ok(_("Could not add the lesson file. It has no questions with a music object with supported music type."))
                 do_add = False
+
         else:
             do_add = True
+
         if do_add:
             self.m_changed = True
             self._add_common(filename)
+
     def _add_melodicinterval_lesson(self, p, filename):
         self._add_common(filename)
         self.m_sections[-1]['intervals'] = p.header.ask_for_intervals_0
+
     def _add_harmonicinterval_lesson(self, p, filename):
         self._add_common(filename)
         self.m_sections[-1]['intervals'] = p.header.intervals
+
     def _add_common(self, filename):
         self.m_changed = True
         self.m_sections.append({
@@ -529,6 +588,7 @@ class PractiseSheetDialog(Gtk.Window, gu.EditorDialogBase, lessonfilegui.Exercis
             'questions': [],
         })
         self.g_liststore.append((_(self.m_sections[-1]['title']), filename))
+
     def generate_questions(self):
         """
         Delete any extra questions and then add new random questions
@@ -543,24 +603,30 @@ class PractiseSheetDialog(Gtk.Window, gu.EditorDialogBase, lessonfilegui.Exercis
                 for question_dict in solfege.app.sheet_gen_questions(
                         count, section):
                     section['questions'].append(question_dict)
+
     def _delete_questions(self, idx):
         """
         Delete the generated questions for exercise idx in self.m_sections.
         """
         self.m_sections[idx]['questions'] = []
+
     def on_show_help(self, widget):
         solfege.app.handle_href("ear-training-test-printout-editor.html")
+
     def on_tv_cursor_changed(self, treeview, *v):
         if self.g_treeview.get_cursor()[0] is None:
             return
         self.view_lesson(self.g_treeview.get_cursor()[0][0])
+
     def on_tv_unselect_all(self, treeview, *v):
         self.view_lesson(None)
+
     def on_qtype_changed(self, widget):
         self.m_changed = True
         idx = self.g_treeview.get_cursor()[0][0]
         self._delete_questions(idx)
         self.m_sections[idx]['qtype'] = widget.get_active()
+
     def load_file(self, filename):
         tree = et.ElementTree()
         tree.parse(filename)
@@ -571,13 +637,17 @@ class PractiseSheetDialog(Gtk.Window, gu.EditorDialogBase, lessonfilegui.Exercis
             raise e
         # section.find('text').text will be none if it was not set
         # when saved, and we need a string.
+
         if tree.find("title").text:
             self.g_title.set_text(tree.find("title").text)
+
         else:
             self.g_title.set_text("")
         sheet = tree.find("sheet")
+
         if tree.find('output_format').text == 'latex':
             self.g_latex_radio.set_active(True)
+
         else:
             self.g_latex_radio.set_active(False)
         self.g_liststore.clear()
@@ -588,17 +658,22 @@ class PractiseSheetDialog(Gtk.Window, gu.EditorDialogBase, lessonfilegui.Exercis
             # It seems that the elementtree parser will return str if
             # there are no non-ascii chars in the filename. So lets
             # make unicode of it if it is str
+
             if isinstance(lessonfilename, str):
                 lessonfilename = unicode(lessonfilename)
             d['filename'] = lessonfilename
             # section.find('text').text will be none if it was not set
             # when saved, and d['title'] need to be a string
+
             if section.find('title').text:
                 d['title'] = section.find('title').text
+
             else:
                 d['title'] = ""
+
             if section.find('intervals') != None:
                 d['intervals'] = eval(section.find('intervals').text, {}, {})
+
             else:
                 if lessonfile.infocache.get(lessonfilename, 'module') == 'harmonicinterval':
                     d['intervals'] = []
@@ -623,10 +698,12 @@ class PractiseSheetDialog(Gtk.Window, gu.EditorDialogBase, lessonfilegui.Exercis
                 self.g_liststore.append((_(u"«%s» not found") % str(e), None))
             self.g_treeview.set_cursor((0,))
         self.m_filename = filename
+
     def save(self):
         assert self.m_filename
         if self.g_latex_radio.get_active():
             format = "latex"
+
         else:
             format = "html"
         doc = et.Element("sheet", fileformat_version=self.current_fileformat_version,
@@ -640,6 +717,7 @@ class PractiseSheetDialog(Gtk.Window, gu.EditorDialogBase, lessonfilegui.Exercis
             et.SubElement(s, "title").text = sect['title']
             et.SubElement(s, "filename").text = sect['filename']
             # only the harmonic and melodic intervals have this variable:
+
             if 'intervals' in sect:
                 et.SubElement(s, 'intervals').text = "%s" % sect['intervals']
             # We do save 'count' because this variable say how many questions
@@ -663,6 +741,7 @@ class PractiseSheetDialog(Gtk.Window, gu.EditorDialogBase, lessonfilegui.Exercis
         tree.write(f, encoding="utf-8")
         f.close()
         self.m_changed = False
+
     def setup_toolbar(self):
         self.g_toolbar = Gtk.Toolbar()
         self.g_actiongroup.add_actions([

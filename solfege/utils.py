@@ -35,11 +35,14 @@ def mangle_email(email):
 def int_to_intervalname(i, shortname=None, updown=None):
     if shortname:
         n = mpd.interval.short_name[abs(i)]
+
     else:
         n = mpd.Interval.new_from_int(abs(i)).get_name()
+
     if updown:
         if i > 0:
             n = "%s%s" % (n, u"\u2191")
+
         elif i < 0:
             n = "%s%s" % (n, u"\u2193")
     return n
@@ -68,6 +71,7 @@ def random_interval(tonika, lowest, highest, irange):
     for i in irange:
         if lowest <= tonika + i <= highest:
             v.append(i)
+
     if not v:
         return None
     return random.choice(v)
@@ -101,6 +105,7 @@ def random_tonika_and_interval(lowest, highest, irange):
     # then, using that interval, make a list of possible tonikas
     tl = []
     for t in range(lowest, highest + 1):
+
         if lowest <= t + interval <= highest:
             tl.append(t)
     tonika = mpd.MusicalPitch.new_from_int(random.choice(tl))
@@ -128,6 +133,7 @@ def random_interval_in_key(first, lowest, highest, irange, tonic, keytype):
     for i in irange:
         if (first + i).semitone_pitch() in tones:
             intervals.append(i)
+
     if intervals:
         return random.choice(intervals)
 
@@ -166,6 +172,7 @@ def random_tonic_and_interval_in_key(lowest, highest, irange, tonic, keytype):
     possible_intervals = []
     for i in irange:
         for tone in all_tones:
+
             if tone + i in all_tones:
                 possible_intervals.append(i)
                 break
@@ -176,6 +183,7 @@ def random_tonic_and_interval_in_key(lowest, highest, irange, tonic, keytype):
     interval = random.choice(possible_intervals)
     solutions = []
     for tone in all_tones:
+
         if (tone + interval in all_tones
             and lowest <= tone <= highest
             and lowest <= tone + interval <= highest):
@@ -210,6 +218,7 @@ def pitches_in_key(tonic, keytype, lowest, highest):
 def un_escape_url_string(s):
     r = re.compile("(%([0-9A-F][0-9A-F]))")
     m = r.search(s)
+
     def f(m):
         return chr(eval("0x%s" % m.groups()[1]))
     return r.sub(f, s)
@@ -230,6 +239,7 @@ def freq_to_notename_cent(freq):
     if e > freq:
         while e > freq:
             e = e / 2
+
     else:
         while e < freq/2:
             e = e * 2
@@ -238,6 +248,7 @@ def freq_to_notename_cent(freq):
     i = int(v)
     cent = (v-i) * 100
     n = ('a', 'ais', 'b', 'c', 'cis', 'd', 'dis', 'e', 'f', 'fis', 'g', 'gis')
+
     if cent > 50:
         return n[(i+1) % 12], cent-100
     return n[int(v)], (v-int(v)) * 100
@@ -252,21 +263,27 @@ def compare_version_strings(A, B):
     """
     if A == B == "":
         return 0
+
     elif A == "":
         return -1
+
     elif B == "":
         return 1
     av = map(lambda s: int(s), A.split("."))
     bv = map(lambda s: int(s), B.split("."))
     x = 0
     while len(av) > x < len(bv):
+
         if av[x] > bv[x]:
             return 1
+
         elif av[x] < bv[x]:
             return -1
         x = x + 1
+
     if len(av) > len(bv):
         return 1
+
     elif len(av) < len(bv):
         return -1
     return 0
@@ -306,6 +323,7 @@ def new_2_tracks():
         instr_low_volume = cfg.get_int('config/lowest_instrument_volume')
         instr_high = cfg.get_int('config/highest_instrument')
         instr_high_volume = cfg.get_int('config/highest_instrument_volume')
+
     else:
         instr_low = instr_high = cfg.get_int('config/preferred_instrument')
         instr_low_volume = instr_high_volume = cfg.get_int('config/preferred_instrument_volume')
@@ -326,6 +344,7 @@ def new_3_tracks():
         instr_middle_volume = cfg.get_int('config/middle_instrument_volume')
         instr_high = cfg.get_int('config/highest_instrument')
         instr_high_volume = cfg.get_int('config/highest_instrument_volume')
+
     else:
         instr_low = instr_middle = instr_high = cfg.get_int('config/preferred_instrument')
         instr_low_volume = instr_middle_volume = instr_high_volume = cfg.get_int('config/preferred_instrument_volume')
@@ -355,6 +374,7 @@ def play_music(music, tempo, patch, volume, start=None, end=None):
     if type(tempo) == type(0):
         bpm = tempo
         nl = 4
+
     else:
         bpm, nl = tempo
     score = mpd.parser.parse_to_score_object(music)

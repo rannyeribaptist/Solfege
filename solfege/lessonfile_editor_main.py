@@ -42,6 +42,7 @@ Gtk.stock_add([('solfege-notehead', _("Add noteheads"), 0, 0, ''),
 app_version = "0.1.4"
 
 class HelpWindow(Gtk.Window):
+
     def __init__(self, parent):
         Gtk.Window.__init__(self)
         self.set_title(_("GNU Solfege lesson file editor") )
@@ -62,10 +63,13 @@ class HelpWindow(Gtk.Window):
         bbox.pack_start(b, True, True, 0)
         self.show_all()
         self.set_focus(b)
+
     def source(self, html):
         self.g_htmlwidget.source(html)
+
     def delete_cb(self, *v):
         self.g_parent.g_help_window = None
+
     def close_cb(self, w):
         self.g_parent.g_help_window = None
         self.destroy()
@@ -153,6 +157,7 @@ def fix_actions(actions, instance):
     return retval
 
 class EditorLessonfile(object):
+
     def __init__(self):
         self.m_filename = None
         self.m_changed = False
@@ -164,6 +169,7 @@ class EditorLessonfile(object):
 
 
 class MainWin(Gtk.Window):
+
     def __init__(self, datadir):
         Gtk.Window.__init__(self)
         self.icons = stock.EditorIconFactory(self, datadir)
@@ -183,6 +189,7 @@ class MainWin(Gtk.Window):
         self.toplevel_vbox.pack_start(self.vbox, True, True, 0)
         self.create_mainwin_ui()
         self.show_all()
+
     def create_mainwin_ui(self):
         qbox = gu.hig_dlg_vbox()
         self.g_notebook.append_page(qbox, Gtk.Label(label=_("Questions")))
@@ -224,17 +231,20 @@ class MainWin(Gtk.Window):
         #self.g_statusbar = Gtk.Statusbar()
         #self.toplevel_vbox.pack_start(self.g_statusbar, False)
         self.update_appwin()
+
     def proceed_if_changed(self):
         if not self.m_P.m_changed:
             return True
         dialog = Gtk.MessageDialog(self, Gtk.DialogFlags.MODAL, Gtk.MessageType.QUESTION,
               Gtk.ButtonsType.YES_NO, _("You have unsaved data. Proceed anyway?"))
         dialog.hide()
+
         if dialog.run() == Gtk.ResponseType.YES:
             dialog.destroy()
             return True
         dialog.destroy()
         return False
+
     def update_appwin(self):
         self.update_score()
         self.set_navinfo()
@@ -243,21 +253,25 @@ class MainWin(Gtk.Window):
         {'chord': self.g_content_chord,
          'chordvoicing': self.g_content_chord_voicing,
          'idbyname': self.g_content_idbyname}[self.m_P.header.module].set_active(True)
+
     def set_navinfo(self):
         if self.m_P.m_filename:
             self.set_title(self.m_P.m_filename)
+
         else:
             self.set_title(_("No file"))
         self.g_navinfo.set_text(_("question %(idx)i of %(count)i") % {
             'idx': self.m_P._idx + 1,
             'count': len(self.m_P.m_questions)})
         self.g_question_name.set_text(self.m_P.m_questions[self.m_P._idx].name)
+
     def load_file(self, filename):
         self.m_P = lessonfile.ChordLessonfile(filename)
         self.m_P.m_changed = False
         if self.m_P.m_questions:
             self.m_P._idx = 0
             self.set_navinfo()
+
         else:
             # Do a little trick to make an empty question
             self.m_P.m_questions = [dataparser.Question()]
@@ -273,6 +287,7 @@ class MainWin(Gtk.Window):
                 dialog.destroy()
                 self.m_P = EditorLessonfile()
         self.update_appwin()
+
     def file_open_cb(self, *v):
         dialog = Gtk.FileChooserDialog(_("Open..."), self,
                                    Gtk.FileChooserAction.OPEN,
@@ -291,14 +306,18 @@ class MainWin(Gtk.Window):
                             {'filename': filename, 'msg': e})
                 m.run()
                 m.destroy()
+
             else:
                 dialog.destroy()
+
         else:
             dialog.destroy()
+
     def file_new_cb(self, action, v=None):
         if self.proceed_if_changed():
             self.m_P = EditorLessonfile()
             self.update_appwin()
+
     def file_save_as_cb(self, *v):
         self.store_data_from_ui()
         dialog = Gtk.FileChooserDialog(_("Save as..."), self,
@@ -311,6 +330,7 @@ class MainWin(Gtk.Window):
             self.m_P.m_filename = gu.decode_filename(dialog.get_filename())
             self.save_file()
         dialog.destroy()
+
     def file_save_cb(self, *v):
         self.store_data_from_ui()
         if self.m_P.m_filename is None:
@@ -323,9 +343,11 @@ class MainWin(Gtk.Window):
             if dialog.run() == Gtk.ResponseType.OK:
                 self.m_P.m_filename = gu.decode_filename(dialog.get_filename())
             dialog.destroy()
+
         if self.m_P.m_filename:
             self.update_appwin()
             self.save_file()
+
     def save_file(self):
         if not self.m_P.m_filename:
             raise Exception("No filename. Cannot save.")
@@ -333,11 +355,14 @@ class MainWin(Gtk.Window):
         ofile.write("# Creator: GNU Solfege lesson file editor %s\n\n"
                     % app_version)
         ofile.write("header {\n    module = %s\n" % self.m_P.header.module)
+
         if type(self.m_P.header.random_transpose) == list:
             ofile.write("    random_transpose = %s, %s, %s\n" % (self.m_P.header.random_transpose[0],
                             self.m_P.header.random_transpose[1], self.m_P.header.random_transpose[2]))
+
         else:
             ofile.write("    random_transpose = yes\n")
+
         if self.m_P.header.lesson_id:
             ofile.write('    lesson_id = "%s"\n' % self.m_P.header.lesson_id)
         ofile.write('    title = "%s"\n}\n' % self.m_P.header.title)
@@ -352,6 +377,7 @@ class MainWin(Gtk.Window):
     def quit_cb(self, *v):
         if self.proceed_if_changed():
             Gtk.main_quit()
+
     def help_cb(self, *v):
         if not self.g_help_window:
             self.g_help_window = HelpWindow(self)
@@ -367,29 +393,36 @@ edit your hand written lesson files with this program.</p>
 </html>
 """ % app_version)
             self.g_help_window.show()
+
         else:
             self.g_help_window.present()
+
     def about_cb(self, *v):
         dialog = Gtk.MessageDialog(self, Gtk.DialogFlags.MODAL, Gtk.MessageType.INFO,
             Gtk.ButtonsType.CLOSE, "GNU Solfege lesson file editor %s\nCopyright (C) 2004, 2005 Tom Cato Amundsen <tca@gnu.org>" % app_version)
         dialog.run()
         dialog.destroy()
+
     def goto_first_question_cb(self, *v):
         self.store_data_from_ui()
         self.m_P._idx = 0
         self.update_appwin()
+
     def go_back_question_cb(self, *v):
         self.store_data_from_ui()
         self.m_P._idx = max(0, self.m_P._idx - 1)
         self.update_appwin()
+
     def go_forward_question_cb(self, *v):
         self.store_data_from_ui()
         self.m_P._idx = min(self.m_P._idx + 1, len(self.m_P.m_questions) - 1)
         self.update_appwin()
+
     def goto_last_question_cb(self, *v):
         self.store_data_from_ui()
         self.m_P._idx = len(self.m_P.m_questions) - 1
         self.update_appwin()
+
     def new_question_cb(self, *v):
         self.store_data_from_ui()
         self.m_P.m_questions.append(dataparser.Question())
@@ -397,20 +430,28 @@ edit your hand written lesson files with this program.</p>
         self.m_P.m_questions[-1].name = ""
         self.m_P._idx = len(self.m_P.m_questions) - 1
         self.update_appwin()
+
     def select_cursor_2flat_cb(self, *v):
         self.g_displayer.set_cursor("-2")
+
     def select_cursor_flat_cb(self, *v):
         self.g_displayer.set_cursor(-1)
+
     def select_cursor_natural_cb(self, *v):
         self.g_displayer.set_cursor(0)
+
     def select_cursor_sharp_cb(self, *v):
         self.g_displayer.set_cursor("1")
+
     def select_cursor_2sharp_cb(self, *v):
         self.g_displayer.set_cursor("2")
+
     def select_cursor_erase_cb(self, *v):
         self.g_displayer.set_cursor("erase")
+
     def select_cursor_notehead_cb(self, *v):
         self.g_displayer.set_cursor("notehead")
+
     def update_score(self):
         """
         Set m_chord_tones based on the data in the lesson file.
@@ -427,33 +468,43 @@ edit your hand written lesson files with this program.</p>
             for n in self.m_chord_tones.values():
                 s += " " + n.get_octave_notename()
             self.g_displayer.display("\staff{ < %s >}\staff{\clef bass}" % s, "20-tight")
+
         else:
             self.g_displayer.display("\staff{ }\staff{\clef bass}", "20-tight")
         self.g_displayer.set_size_request(400, -1)
+
     def store_data_from_ui(self):
         self.m_P.m_questions[self.m_P._idx].name = self.g_question_name.get_text()
         self.m_P.header.title = self.g_title.get_text()
         self.m_P.header.random_transpose = eval(self.g_random_transpose.get_text())
         if self.g_content_chord.get_active():
             self.m_P.header.module = 'chord'
+
         if self.g_content_chord_voicing.get_active():
             self.m_P.header.module = 'chordvoicing'
+
         if self.g_content_idbyname.get_active():
             self.m_P.header.module = 'idbyname'
+
     def on_displayer_clicked(self, ed, steps):
         self.m_P.m_changed = True
         notename = ("c", "d", "e", "f", "g", "a", "b")[6-(steps % 7)]
         n = mpd.MusicalPitch.new_from_notename(notename)
         n.m_octave_i = 1-(steps // 7)
         if self.g_displayer.m_cursor == 'notehead':
+
             if n.steps() not in self.m_chord_tones:
                 self.m_chord_tones[n.steps()] = n
+
         elif self.g_displayer.m_cursor == 'erase':
+
             if n.steps() in self.m_chord_tones:
                 del self.m_chord_tones[n.steps()]
+
         else:
             if n.steps() not in self.m_chord_tones:
                 return
+
             else:
                 self.m_chord_tones[n.steps()].m_accidental_i = int(self.g_displayer.m_cursor)
         v = self.m_chord_tones.values()
@@ -463,8 +514,10 @@ edit your hand written lesson files with this program.</p>
         self.update_score()
 
 class UIManagerMainWin(MainWin):
+
     def __init__(self, datadir):
         MainWin.__init__(self, datadir)
+
     def create_menu_and_toolbar(self):
         self.window_ag = Gtk.ActionGroup('WindowActions')
         self.lessonfile_ag = Gtk.ActionGroup('LessonfileActions')

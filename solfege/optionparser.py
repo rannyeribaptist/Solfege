@@ -20,6 +20,7 @@ import optparse
 import sys
 
 class SolfegeOptionParser(optparse.OptionParser):
+    
     def __init__(self):
         optparse.OptionParser.__init__(self)
         self.add_option('-v', '--version', action='store_true', dest='version')
@@ -53,10 +54,12 @@ class SolfegeOptionParser(optparse.OptionParser):
         self.add_option('--make-screenshots', action='store_true',
             dest='screenshots',
             help=_("Create or update the screenshots for the user manual. Intended for developers of this program."))
+    
     def print_help(self, outfile=None):
         if outfile is None:
             outfile = sys.stdout
         encoding = outfile.encoding
+    
         if not encoding:
             encoding = "iso-8859-1"
         outfile.write(self.format_help().encode(encoding, 'replace'))

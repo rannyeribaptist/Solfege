@@ -28,6 +28,7 @@ from solfege import i18n
 def presetup(app_defaults_filename, system_filename, user_filename):
     if not os.path.exists(filesystem.app_data()):
         os.makedirs(filesystem.app_data())
+
     if not os.path.exists(filesystem.user_data()):
         os.makedirs(filesystem.user_data())
     try:
@@ -54,13 +55,16 @@ def presetup(app_defaults_filename, system_filename, user_filename):
         m.add_buttons(Gtk.STOCK_QUIT, 11)
         m.set_default_response(11)
         ret = m.run()
+
         if ret == 10:
             os.rename(user_filename, renamed_fn)
             m.destroy()
             cfg.initialise(app_defaults_filename, system_filename, user_filename)
+
         else:
             sys.exit(1)
     # MIGRATION from 2.9.2 to 2.9.3
+
     if cfg.get_string("app/lc_messages") == 'C (english)':
         cfg.set_string("app/lc_messages", "C")
 

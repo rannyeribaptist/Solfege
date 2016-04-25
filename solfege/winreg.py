@@ -12,10 +12,12 @@ SHELL_FOLDERS = r'Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folde
 HKCU = _winreg.HKEY_CURRENT_USER
 
 # helper functions
+
 def _substenv(m):
     return os.environ.get(m.group(1), m.group(0))
 
 _env_rx = None
+
 def expandvars(s):
     """Expand environment variables of form %var%.
 
@@ -26,6 +28,7 @@ def expandvars(s):
 
     if '%' not in s:
         return s
+
     if _env_rx is None:
         _env_rx = re.compile(r'%([^|<>=^%]+)%')
     return _env_rx.sub(_substenv, s)
@@ -42,10 +45,12 @@ def _get_reg_value(key, subkey, name):
         ret = _winreg.QueryValueEx(key, name)
     except WindowsError:
         return None
+
     else:
         key.Close()
         if ret[1] == _winreg.REG_EXPAND_SZ:
             return expandvars(ret[0])
+
         else:
             return ret[0]
 

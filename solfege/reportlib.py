@@ -19,6 +19,7 @@ from __future__ import absolute_import
 import codecs
 
 class Heading(object):
+
     def __init__(self, level, text):
         """
         1 is top level heading, 2 is below that.
@@ -33,6 +34,7 @@ class Paragraph(unicode):
     pass
 
 class Table(list):
+
     def append_row(self, *cells):
         self.append(cells)
 
@@ -40,12 +42,14 @@ class TableRow(list):
     pass
 
 class ReportWriterCommon(object):
+
     def __init__(self, report, filename):
         self.m_outfile = codecs.open(filename, "w", "utf-8")
         self.write_report(report)
         self.m_outfile.close()
 
 class HtmlReport(ReportWriterCommon):
+
     def write_report(self, report):
         print >> self.m_outfile, """<html>
 <head>
@@ -61,17 +65,21 @@ th { text-align: left; border-bottom: 1px solid black}
                  'Table': self.write_table,
                 }[elem.__class__.__name__](elem)
         print >> self.m_outfile, "</body>\n</html>"
+
     def write_heading(self, heading):
         print >> self.m_outfile, "<h%(level)i>%(str)s</h%(level)i>" % {
             'level': heading.m_level,
             'str': heading.m_text}
+
     def write_paragraph(self, paragraph):
         print >> self.m_outfile, "<p>%s</p>" % paragraph
+
     def write_table(self, table):
         print >> self.m_outfile, "<table border='0'>"
         for row in table:
             self.write_tablerow(row)
         print >> self.m_outfile, "</table>"
+
     def write_tablerow(self, row):
         print >> self.m_outfile, "<tr>"
         for t in row:
@@ -79,6 +87,7 @@ th { text-align: left; border-bottom: 1px solid black}
         print >> self.m_outfile, "</tr>"
 
 class LatexReport(ReportWriterCommon):
+
     def write_report(self, report):
         print >> self.m_outfile, r"\documentclass{article}"
         print >> self.m_outfile, r"\begin{document}"
@@ -88,12 +97,16 @@ class LatexReport(ReportWriterCommon):
                  'Table': self.write_table,
             }[elem.__class__.__name__](elem)
         print >> self.m_outfile, r"\end{document}"
+
     def write_heading(self, heading):
         print >> self.m_outfile, r"\section{%s}" % heading.m_text
+
     def write_paragraph(self, paragraph):
         print >> self.m_outfile, paragraph
+
     def write_table(self, t):
         pass
+
     def write_tablerow(self, t):
         pass
 
